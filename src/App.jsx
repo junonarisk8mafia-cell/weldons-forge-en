@@ -35,12 +35,12 @@ function getQuestions(qStageId){
 
 const FB = "https://docs.google.com/forms/d/e/1FAIpQLSdw5Us-3pXujhPo3DNGjkCO5AC_2Ww2w6_QQla9tQUeS7A60g/viewform";
 const F  = "'Courier New',monospace";
-const MAX_Q = 10;
+const MAX_Q = 20;
 
 // ============================================================
-// 敵キャラ（軽量SVG版）
+// 敵キャラ（センター配置・C案名前・爆発対応）
 // ============================================================
-function Enemy({st, hit, hp, maxHP}){
+function Enemy({st, hit, hp, maxHP, exploding}){
   const pct = Math.max(0,(hp/maxHP)*100);
   const hc  = pct>50?"#4CAF50":pct>25?"#FF9800":"#F44336";
   const ec  = {
@@ -50,13 +50,30 @@ function Enemy({st, hit, hp, maxHP}){
     "5":["#4A148C","#CE93D8"],
   };
   const [bg,ac] = ec[String(st?.id)]||["#555","#aaa"];
+  // HP残量で震えアニメ
+  const shakeStyle = pct<=20&&pct>0 ? {animation:"shake 0.5s infinite"} : {};
+  // 爆発スタイル
+  const explodeStyle = exploding ? {animation:"explode 0.8s ease forwards"} : {};
+
   return(
-    <svg width="130" height="148" viewBox="0 0 130 148" style={{imageRendering:"pixelated",transform:hit?"translateX(-8px)":"translateX(0)",transition:"transform .15s"}}>
-      <ellipse cx="65" cy="141" rx="28" ry="5" fill="#000" opacity="0.3"/>
-      <rect x="15" y="5" width="100" height="10" rx="2" fill="#222"/>
-      <rect x="15" y="5" width={pct} height="10" rx="2" fill={hc}/>
-      <text x="65" y="13" textAnchor="middle" fill="white" fontSize="7" fontFamily="monospace">{Math.round(hp)}HP</text>
-      <text x="65" y="28" textAnchor="middle" fill={ac} fontSize="8" fontWeight="bold" fontFamily="monospace">{st?.enemy}</text>
+    <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
+      {/* C案：名前エリア別枠 */}
+      <div style={{
+        background:`${ac}22`,border:`2px solid ${ac}`,
+        borderRadius:8,padding:"5px 16px",
+        color:ac,fontSize:13,fontWeight:900,
+        fontFamily:"'Courier New',monospace",
+        textShadow:`0 0 10px ${ac}`,
+        letterSpacing:2,
+      }}>{st?.enemy}</div>
+      {/* HPバー */}
+      <div style={{width:160,background:"#1A1A2E",borderRadius:4,height:14,border:`1px solid ${ac}40`,overflow:"hidden",position:"relative"}}>
+        <div style={{width:`${pct}%`,height:"100%",background:hc,transition:"width .4s ease"}}/>
+        <div style={{position:"absolute",inset:0,display:"flex",alignItems:"center",justifyContent:"center",color:"white",fontSize:10,fontWeight:700,fontFamily:"monospace"}}>{Math.round(hp)} / {maxHP} HP</div>
+      </div>
+      {/* モンスター本体 */}
+      <svg width="150" height="120" viewBox="0 0 130 110" style={{imageRendering:"pixelated",transform:hit?"translateX(-10px)":"translateX(0)",transition:"transform .15s",...shakeStyle,...explodeStyle}}>
+      <ellipse cx="65" cy="105" rx="28" ry="5" fill="#000" opacity="0.3"/>
       <rect x="30" y="38" width="70" height="80" rx="6" fill={`${bg}CC`}/>
       <rect x="33" y="41" width="64" height="74" rx="5" fill={bg}/>
       <rect x="42" y="56" width="16" height="12" rx="2" fill={ac}/>
@@ -71,6 +88,7 @@ function Enemy({st, hit, hp, maxHP}){
       <rect x="60" y="20" width="10" height="14" rx="2" fill={ac} opacity="0.8"/>
       {st?.id==="5"&&<ellipse cx="65" cy="88" rx="50" ry="55" fill={ac} opacity="0.05"><animate attributeName="rx" dur="2s" repeatCount="indefinite" values="50;56;50"/></ellipse>}
     </svg>
+    </div>
   );
 }
 
@@ -84,9 +102,16 @@ function HPBar({v, max}){
 
 const css=`
   @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-  @keyframes dmg{0%{opacity:1;transform:translateY(0) scale(1.3)}100%{opacity:0;transform:translateY(-35px) scale(0.8)}}
+  @keyframes dmg{0%{opacity:1;transform:translateY(0) scale(1.3)}100%{opacity:0;transform:translateY(-40px) scale(0.8)}}
   @keyframes cursor{0%,40%{opacity:1}60%,100%{opacity:0}}
   @keyframes twinkle{0%,100%{opacity:0.2}50%{opacity:0.8}}
+  @keyframes redflash{0%{background:rgba(220,38,38,0)}20%{background:rgba(220,38,38,0.55)}100%{background:rgba(220,38,38,0)}}
+  @keyframes whiteflash{0%{background:rgba(255,255,255,0)}20%{background:rgba(255,255,255,0.7)}100%{background:rgba(255,255,255,0)}}
+  @keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-10px)}40%{transform:translateX(10px)}60%{transform:translateX(-8px)}80%{transform:translateX(8px)}}
+  @keyframes explode{0%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:0.7}100%{transform:scale(3);opacity:0}}
+  @keyframes victory{0%{transform:scale(0.5) rotate(-5deg);opacity:0}60%{transform:scale(1.2) rotate(2deg)}100%{transform:scale(1) rotate(0);opacity:1}}
+  @keyframes spark{0%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(-60px) scale(0);opacity:0}}
+  @keyframes gameover{0%{opacity:0;transform:scale(0.5)}60%{transform:scale(1.1)}100%{opacity:1;transform:scale(1)}}
 `;
 
 // ============================================================
@@ -119,6 +144,12 @@ export default function App(){
   // STAGE2分岐管理
   const [stage2Cleared,  setStage2Cleared]  = useState(false);
   const [clearedBranch,  setClearedBranch]  = useState(null);
+  // 演出state
+  const [flash,    setFlash]    = useState(null);  // 'red'|'white'|null
+  const [gameOver, setGameOver] = useState(false);
+  const [victory,  setVictory]  = useState(false);
+  const [exploding,setExploding]= useState(false);
+  const [wrongAns, setWrongAns] = useState([]);    // 間違えた問題リスト
 
   const lv  = getLv(xp);
   const nxt = getNxt(xp);
@@ -132,31 +163,67 @@ export default function App(){
 
   // ── バトル開始 ──
   function startBattle(st){
-    const pool = [...getQuestions(st.qStageId)].sort(()=>Math.random()-0.5).slice(0,MAX_Q);
+    const pool = [...getQuestions(st.qStageId)].sort(()=>Math.random()-0.5).slice(0,20);
     if(pool.length===0){ alert("問題データが見つかりません（qStageId:"+st.qStageId+"）"); return; }
     setSelSt(st); setQs(pool); setQi(0); setSel(null); setAns([]);
     setEarned(0); setScore(0); setMood("smile");
-    setEHP(st.enemyHP); setPHP(lv.hp);
+    setEHP(100); setPHP(100);
     setShowOpts(true); setShowMsg(false);
+    setGameOver(false); setVictory(false);
+    setExploding(false); setFlash(null);
+    setWrongAns([]);
     SFX.start(); setSc("battle");
   }
 
   // ── 回答処理 ──
   function doAnswer(idx){
-    if(sel!==null) return;
+    if(sel!==null||gameOver||victory) return;
     setSel(idx);
     const q=qs[qi], ok=idx===q.a;
-    const dv=ok?Math.floor(15+Math.random()*25):0;
-    const pv=ok?0:Math.floor(8+Math.random()*12);
     setShowOpts(false);
     if(ok){
+      // 正解：モンスターに10ダメージ
       setMood("happy"); setBounce(true); SFX.correct();
-      setTimeout(()=>{ setEHit(true); SFX.attack(); setDmg({val:`-${dv}`,t:"e"}); setEHP(h=>Math.max(0,h-dv)); setTimeout(()=>{ setEHit(false); setDmg(null); },600); },200);
+      setFlash("white");
+      setTimeout(()=>setFlash(null),400);
+      setTimeout(()=>{
+        setEHit(true); SFX.attack();
+        setDmg({val:"-10",t:"e"});
+        setEHP(h=>{
+          const next=Math.max(0,h-10);
+          if(next<=0){
+            // 勝利！
+            setTimeout(()=>{
+              setExploding(true);
+              SFX.levelup();
+              setTimeout(()=>setVictory(true),800);
+            },200);
+          }
+          return next;
+        });
+        setTimeout(()=>{ setEHit(false); setDmg(null); },600);
+      },200);
       setScore(s=>s+1); setEarned(v=>v+q.xp);
       setMsg("✅ 正解！ "+q.cat+"の知識でダメージ！\n\n"+q.exp);
     }else{
+      // 不正解：プレイヤーに20ダメージ
       setMood("hurt"); SFX.wrong();
-      setTimeout(()=>{ setWHit(true); SFX.hurt(); setDmg({val:`-${pv}`,t:"p"}); setPHP(h=>Math.max(0,h-pv)); setTimeout(()=>{ setWHit(false); setDmg(null); },600); },200);
+      setFlash("red");
+      setTimeout(()=>setFlash(null),500);
+      setTimeout(()=>{
+        setWHit(true); SFX.hurt();
+        setDmg({val:"-20",t:"p"});
+        setPHP(h=>{
+          const next=Math.max(0,h-20);
+          if(next<=0){
+            // GAME OVER
+            setTimeout(()=>setGameOver(true),600);
+          }
+          return next;
+        });
+        setTimeout(()=>{ setWHit(false); setDmg(null); },600);
+      },200);
+      setWrongAns(p=>[...p,{q:q.q,correct:q.opts[q.a],exp:q.exp,cat:q.cat}]);
       setMsg("❌ 不正解！ 敵の攻撃を受けた！\n正解："+q.opts[q.a]+"\n\n"+q.exp);
     }
     setAns(p=>[...p,{ok,exp:q.exp,cat:q.cat,xp:q.xp}]);
@@ -184,6 +251,74 @@ export default function App(){
   }
 
   const q   = qs[qi];
+
+  // ── GAME OVER画面 ──
+  if(sc==="battle"&&gameOver) return(
+    <div style={{minHeight:"100vh",background:"#0A0000",fontFamily:F,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:20,position:"relative"}}>
+      <style>{css}</style>
+      <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at center,#3D0000 0%,#0A0000 70%)"}}/>
+      <div style={{animation:"gameover 0.8s cubic-bezier(.34,1.56,.64,1) forwards",textAlign:"center",zIndex:1}}>
+        <div style={{fontSize:60,marginBottom:8}}>💀</div>
+        <div style={{fontSize:42,fontWeight:900,color:"#DC2626",textShadow:"0 0 30px #DC2626,0 0 60px #991B1B",letterSpacing:4}}>GAME OVER</div>
+        <div style={{color:"#F87171",fontSize:12,marginTop:8,marginBottom:20}}>プレイヤーのHPが0になった...</div>
+        {/* WELDONの励まし */}
+        <div style={{background:"rgba(255,255,255,0.08)",border:"2px solid #DC2626",borderRadius:12,padding:"14px 18px",maxWidth:300,margin:"0 auto 20px"}}>
+          <div style={{color:"#FFE500",fontSize:11,fontWeight:700,marginBottom:6}}>🔥 WELDONより</div>
+          <div style={{color:"#F1F5F9",fontSize:13,lineHeight:1.8}}>心配するな！<br/>きっとうまく行く！<br/>もう一度挑戦しよう！</div>
+        </div>
+        {/* 間違えた問題おさらい */}
+        {wrongAns.length>0&&(
+          <div style={{background:"rgba(0,0,0,0.5)",border:"1px solid #475569",borderRadius:12,padding:12,maxWidth:320,margin:"0 auto 20px",maxHeight:220,overflowY:"auto"}}>
+            <div style={{color:"#FFE500",fontSize:10,fontWeight:700,marginBottom:8}}>📖 間違えた問題のおさらい</div>
+            {wrongAns.map((w,i)=>(
+              <div key={i} style={{background:"rgba(220,38,38,0.1)",border:"1px solid #DC2626",borderRadius:8,padding:"8px 10px",marginBottom:6,textAlign:"left"}}>
+                <div style={{color:"#FCA5A5",fontSize:9,marginBottom:3}}>{w.cat}</div>
+                <div style={{color:"#F1F5F9",fontSize:10,marginBottom:3,lineHeight:1.5}}>{w.q}</div>
+                <div style={{color:"#4ADE80",fontSize:10,fontWeight:700}}>✓ 正解：{w.correct}</div>
+                <div style={{color:"#94A3B8",fontSize:9,marginTop:2,lineHeight:1.5}}>{w.exp}</div>
+              </div>
+            ))}
+          </div>
+        )}
+        <div style={{display:"flex",gap:10,justifyContent:"center"}}>
+          <button onClick={()=>startBattle(selSt)} style={{background:"linear-gradient(135deg,#DC2626,#991B1B)",border:"none",borderRadius:12,padding:"13px 28px",color:"white",fontSize:14,fontWeight:700,cursor:"pointer",fontFamily:F,boxShadow:"0 4px 20px rgba(220,38,38,0.5)"}}>🔥 もう一度！</button>
+          <button onClick={()=>{setGameOver(false);setSc("title");}} style={{background:"rgba(255,255,255,0.1)",border:"1px solid #475569",borderRadius:12,padding:"13px 20px",color:"#94A3B8",fontSize:13,cursor:"pointer",fontFamily:F}}>🏠 タイトル</button>
+        </div>
+      </div>
+    </div>
+  );
+
+  // ── 勝利画面 ──
+  if(sc==="battle"&&victory) return(
+    <div style={{minHeight:"100vh",background:"#0A1A0A",fontFamily:F,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",padding:20,position:"relative",overflow:"hidden"}}>
+      <style>{css}</style>
+      <div style={{position:"absolute",inset:0,background:"radial-gradient(ellipse at center,#14532D 0%,#0A1A0A 70%)"}}/>
+      {/* 火花エフェクト */}
+      {[...Array(8)].map((_,i)=>(
+        <div key={i} style={{position:"absolute",left:`${10+i*12}%`,top:"60%",fontSize:16,animation:`spark ${0.6+i*0.15}s ${i*0.1}s ease forwards`}}>⚡</div>
+      ))}
+      <div style={{animation:"victory 0.9s cubic-bezier(.34,1.56,.64,1) forwards",textAlign:"center",zIndex:1}}>
+        <div style={{fontSize:50,marginBottom:8}}>🎊</div>
+        <div style={{fontSize:38,fontWeight:900,color:"#FFE500",textShadow:"0 0 30px #FFE500,0 0 60px #D97706",letterSpacing:3}}>VICTORY!</div>
+        <div style={{color:"#4ADE80",fontSize:13,marginTop:6,marginBottom:16}}>{selSt?.enemy}を撃破！！</div>
+        <div style={{background:"rgba(255,229,0,0.1)",border:"2px solid #FFE500",borderRadius:12,padding:"12px 20px",marginBottom:20}}>
+          <div style={{color:"#FFE500",fontSize:22,fontWeight:900}}>+{earned} XP 獲得！</div>
+          <div style={{color:"#94A3B8",fontSize:10,marginTop:2}}>正解数：{score} / {qi+1}問</div>
+        </div>
+        <div style={{display:"flex",gap:10,justifyContent:"center"}}>
+          <button onClick={()=>{
+            const pl=getLv(xp),nx=xp+earned,nl=getLv(nx);
+            setXp(nx);setVictory(false);
+            const isBranch=STAGE2_BRANCHES.some(b=>b.id===selSt?.id);
+            if(isBranch&&score>=6&&!stage2Cleared){setStage2Cleared(true);setClearedBranch(selSt.id);}
+            if(nl.level>pl.level){setPrevLv(pl);SFX.levelup();SFX.evolve();setTimeout(()=>setSc("lvlup"),200);}
+            else setSc("result");
+          }} style={{background:"linear-gradient(135deg,#FFE500,#D97706)",border:"none",borderRadius:12,padding:"13px 28px",color:"#1E293B",fontSize:14,fontWeight:900,cursor:"pointer",fontFamily:F,boxShadow:"0 4px 20px rgba(255,229,0,0.4)"}}>🏆 結果を見る！</button>
+          <button onClick={()=>{setVictory(false);setSc("title");}} style={{background:"rgba(255,255,255,0.1)",border:"1px solid #475569",borderRadius:12,padding:"13px 20px",color:"#94A3B8",fontSize:13,cursor:"pointer",fontFamily:F}}>🏠 タイトル</button>
+        </div>
+      </div>
+    </div>
+  );
   const stC = selSt?.color||"#E85D04";
 
   // ============================================================
@@ -319,21 +454,24 @@ export default function App(){
       <style>{css}</style>
       {/* スキャンライン */}
       <div style={{position:"absolute",inset:0,backgroundImage:"repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)",pointerEvents:"none",zIndex:20}}/>
+      {/* フラッシュオーバーレイ */}
+      {flash==="red"&&<div style={{position:"fixed",inset:0,zIndex:50,pointerEvents:"none",animation:"redflash 0.5s ease forwards"}}/>}
+      {flash==="white"&&<div style={{position:"fixed",inset:0,zIndex:50,pointerEvents:"none",animation:"whiteflash 0.4s ease forwards"}}/>}
 
       {/* ヘッダー */}
       <div style={{background:"#1E293B",borderBottom:"2px solid #334155",padding:"7px 12px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <button onClick={()=>setSc("title")} style={{background:"none",border:"1px solid #475569",borderRadius:6,color:"#94A3B8",padding:"4px 10px",cursor:"pointer",fontSize:10,fontFamily:F}}>← 逃げる</button>
         <div style={{color:stC,fontSize:9,fontWeight:700}}>{selSt?.label}</div>
-        <div style={{color:"#FFE500",fontSize:10,fontWeight:700}}>XP:{xp+earned} | {qi+1}/{MAX_Q}</div>
+        <div style={{color:"#FFE500",fontSize:10,fontWeight:700}}>XP:{xp+earned} | {qi+1}/20</div>
       </div>
 
       {/* バトルフィールド（暗め） */}
       <div style={{background:"linear-gradient(180deg,#1E293B 0%,#0F172A 60%,#1E293B 100%)",padding:"12px 10px",flex:1,display:"flex",flexDirection:"column"}}>
 
         {/* 敵 */}
-        <div style={{display:"flex",justifyContent:"flex-end",marginBottom:7,minHeight:148,position:"relative"}}>
-          <div style={{position:"relative"}}>
-            <Enemy st={selSt} hit={eHit} hp={eHP} maxHP={selSt?.enemyHP||100}/>
+        <div style={{display:"flex",justifyContent:"center",marginBottom:7,minHeight:180,position:"relative"}}>
+          <div style={{position:"relative",display:"flex",flexDirection:"column",alignItems:"center"}}>
+            <Enemy st={selSt} hit={eHit} hp={eHP} maxHP={100} exploding={exploding}/>
             {dmg?.t==="e"&&<div style={{position:"absolute",top:"15%",left:"50%",transform:"translateX(-50%)",color:"#FF6B00",fontSize:22,fontWeight:900,textShadow:"0 0 10px #FF6B00",animation:"dmg .8s ease forwards",zIndex:10}}>{dmg.val}</div>}
           </div>
         </div>
@@ -378,7 +516,7 @@ export default function App(){
               <HPBar v={pHP} max={lv.hp}/>
               <div style={{display:"flex",justifyContent:"space-between",marginTop:3}}>
                 <span style={{color:"#64748B",fontSize:7}}>問</span>
-                <span style={{color:"#FFE500",fontSize:7}}>{qi+1}/{MAX_Q}</span>
+                <span style={{color:"#FFE500",fontSize:7}}>{qi+1}/20</span>
               </div>
             </div>
           </div>
