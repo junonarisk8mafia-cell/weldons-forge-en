@@ -676,42 +676,7 @@ export default function App(){
       </div>
 
       {/* 次のSTAGEへボタン */}
-      {(()=>{
-        // 次に挑戦できるSTAGEを探す
-        const allStages=[
-          ...MAIN_STAGES,
-          ...STAGE2_BRANCHES,
-        ];
-        // 現在のSTAGEの次を探す
-        const currentId=String(selSt?.id);
-        const nextMap={"1":"2A","2A":3,"2B":3,"2C":3,3:4,4:5};
-        const nextId=nextMap[currentId];
-        const nextSt=[...MAIN_STAGES,...STAGE2_BRANCHES].find(s=>s.id===nextId||s.id===String(nextId));
-        // 次のSTAGEが解放済みか判定
-        const isNextOk=nextSt&&(
-          nextId===3?(stage2Cleared&&xp>=550):
-          nextId==="2A"||nextId==="2B"||nextId==="2C"?xp>=200:
-          nextSt.unlockXP?xp>=nextSt.unlockXP:false
-        );
-        if(!nextSt) return null;
-        return(
-          <button onClick={()=>isNextOk?startBattle(nextSt):setSc("title")} style={{
-            width:"100%",
-            background:isNextOk?"linear-gradient(135deg,#16A34A,#15803D)":"#F1F5F9",
-            border:isNextOk?"none":"2px solid #E2E8F0",
-            borderRadius:12,padding:"13px 0",
-            color:isNextOk?"white":"#94A3B8",
-            fontSize:13,fontWeight:700,cursor:"pointer",fontFamily:F,
-            marginBottom:8,
-            boxShadow:isNextOk?"0 4px 14px rgba(22,163,74,0.4)":"none",
-          }}>
-            {isNextOk
-              ? "⬆️ 次のSTAGEへ！（"+nextSt.label+"）"
-              : "🔒 次のSTAGE："+nextSt.label+"（まだ解放されていません）"
-            }
-          </button>
-        );
-      })()}
+
 
       <a href={FB} target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",border:"1px solid #CBD5E1",borderRadius:10,padding:"10px 0",color:"#64748B",fontSize:10,fontFamily:F,textDecoration:"none",background:"white"}}>📝 フィードバックを送る（アプリ改善にご協力ください）</a>
     </div>
