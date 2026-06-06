@@ -192,7 +192,7 @@ export function LevelUpEvent({lv, prevLv, onNext}){
           animation:"float 2s ease-in-out infinite",
         }}/>
         <div style={{animation:"evolve 0.9s cubic-bezier(.34,1.56,.64,1) forwards"}}>
-          <PixelWeldon size={160} mood="happy" bounce={true} col={lv.wCol} level={lv.level}/>
+          <img src="/weldon-smile.png" width={160} height={160} alt="WELDON" style={{objectFit:"contain",animation:"float 2s ease-in-out infinite"}}/>
         </div>
       </div>
 
