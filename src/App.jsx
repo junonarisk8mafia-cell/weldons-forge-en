@@ -238,7 +238,7 @@ export default function App(){
     if(qi+1>=MAX_Q){
       // STAGE2分岐の合格判定（60%以上）
       const isBranch = STAGE2_BRANCHES.some(b=>b.id===selSt?.id);
-      if(isBranch && score>=MAX_Q*0.6 && !stage2Cleared){
+      if(isBranch && !stage2Cleared){
         setStage2Cleared(true); setClearedBranch(selSt.id);
       }
       const pl=getLv(xp), nx=xp+earned, nl=getLv(nx);
@@ -308,11 +308,22 @@ export default function App(){
         <div style={{display:"flex",gap:10,justifyContent:"center"}}>
           <button onClick={()=>{
             const pl=getLv(xp),nx=xp+earned,nl=getLv(nx);
-            setXp(nx);setVictory(false);
+            // STAGE2分岐クリア判定（先にstateを更新）
             const isBranch=STAGE2_BRANCHES.some(b=>b.id===selSt?.id);
-            if(isBranch&&score>=6&&!stage2Cleared){setStage2Cleared(true);setClearedBranch(selSt.id);}
-            if(nl.level>pl.level){setPrevLv(pl);SFX.levelup();SFX.evolve();setTimeout(()=>setSc("lvlup"),200);}
-            else setSc("result");
+            if(isBranch&&!stage2Cleared){
+              setStage2Cleared(true);
+              setClearedBranch(selSt.id);
+            }
+            setXp(nx);
+            setVictory(false);
+            if(nl.level>pl.level){
+              setPrevLv(pl);
+              SFX.levelup();
+              SFX.evolve();
+              setTimeout(()=>setSc("lvlup"),200);
+            } else {
+              setSc("result");
+            }
           }} style={{background:"linear-gradient(135deg,#FFE500,#D97706)",border:"none",borderRadius:12,padding:"13px 28px",color:"#1E293B",fontSize:14,fontWeight:900,cursor:"pointer",fontFamily:F,boxShadow:"0 4px 20px rgba(255,229,0,0.4)"}}>🏆 結果を見る！</button>
           <button onClick={()=>{setVictory(false);setSc("title");}} style={{background:"rgba(255,255,255,0.1)",border:"1px solid #475569",borderRadius:12,padding:"13px 20px",color:"#94A3B8",fontSize:13,cursor:"pointer",fontFamily:F}}>🏠 タイトル</button>
         </div>
@@ -367,10 +378,71 @@ export default function App(){
         {/* ── クイズタブ ── */}
         {tab==="quiz"&&(
           <div style={{display:"flex",flexDirection:"column",gap:8}}>
-            <div style={{background:"#FFF7ED",border:"1px solid #FED7AA",borderRadius:10,padding:"9px 12px",marginBottom:2}}>
-              <div style={{color:"#C2410C",fontSize:10,fontWeight:700}}>💡 各ステージ20問からランダム10問出題</div>
-              <div style={{color:"#92400E",fontSize:9,marginTop:1}}>XPを稼いで次のSTAGEを解放しよう！</div>
+            {/* ── ゲームの進め方 ── */}
+            <div style={{background:"#FFF7ED",border:"1px solid #FED7AA",borderRadius:10,padding:"10px 12px",marginBottom:2}}>
+              <div style={{color:"#C2410C",fontSize:11,fontWeight:700,marginBottom:5}}>🎮 ゲームの進め方</div>
+              {[
+                {icon:"⚡",text:"問題に正解するとXPがもらえる！"},
+                {icon:"📈",text:"XPが貯まると次のSTAGEが解放される！"},
+                {icon:"🔀",text:"STAGE2はAW・ボイラー・水中から1つクリアでOK！"},
+                {icon:"🏆",text:"10問正解でモンスターを撃破→勝利！"},
+                {icon:"💀",text:"5回間違えるとゲームオーバー。諦めないで！"},
+              ].map((r,i)=>(
+                <div key={i} style={{display:"flex",gap:6,marginBottom:3,alignItems:"flex-start"}}>
+                  <span style={{fontSize:11,flexShrink:0}}>{r.icon}</span>
+                  <div style={{color:"#92400E",fontSize:10,lineHeight:1.5}}>{r.text}</div>
+                </div>
+              ))}
             </div>
+
+            {/* ── WELDONのプッシュメッセージ ── */}
+            {(()=>{
+              const nxtLv=getNxt(xp);
+              const remain=nxtLv?nxtLv.minXP-xp:0;
+              const pct=nxtLv?Math.round(((xp-lv.minXP)/(nxtLv.minXP-lv.minXP))*100):100;
+              let msg="",color="#16A34A",bg="#F0FDF4",border="#86EFAC";
+              if(!nxtLv){
+                msg="🏆 最高レベル到達！伝説の溶接エンジニア！";
+              } else if(remain<=30){
+                msg=`🔥 あと${remain}XPでレベルアップ！もう一息！`;
+                color="#DC2626";bg="#FEF2F2";border="#FCA5A5";
+              } else if(remain<=80){
+                msg=`⚡ レベルアップまであと${remain}XP！もうすこし！`;
+                color="#D97706";bg="#FFF7ED";border="#FED7AA";
+              } else if(!stage2Cleared&&xp>=200){
+                msg="🔀 STAGE2に挑もう！どれか1つクリアでSTAGE3へ！";
+                color="#1D4ED8";bg="#EFF6FF";border="#BFDBFE";
+              } else if(xp<200){
+                msg=`📈 STAGE2解放まであと${200-xp}XP！STAGE1を繰り返そう！`;
+                color="#7C3AED";bg="#F5F3FF";border="#DDD6FE";
+              } else if(stage2Cleared&&xp<550){
+                msg=`👑 STAGE3解放まであと${550-xp}XP！もう少し！`;
+                color="#D97706";bg="#FFF7ED";border="#FED7AA";
+              } else {
+                msg=`💪 今のレベル：${lv.name}（XP:${xp}）調子いいぞ！`;
+              }
+              return(
+                <div style={{background:bg,border:`1px solid ${border}`,borderRadius:10,padding:"9px 12px",display:"flex",gap:8,alignItems:"center"}}>
+                  <div style={{fontSize:28,flexShrink:0}}>
+                    <svg width="36" height="40" viewBox="0 0 100 110" style={{imageRendering:"pixelated"}}>
+                      <rect x="32" y="48" width="36" height="42" rx="3" fill={lv.wCol||"#E74C3C"}/>
+                      <rect x="36" y="57" width="10" height="8" rx="1" fill="white"/>
+                      <rect x="54" y="57" width="10" height="8" rx="1" fill="white"/>
+                      <rect x="38" y="59" width="6" height="5" rx="1" fill="#5B7FDB"/>
+                      <rect x="56" y="59" width="6" height="5" rx="1" fill="#5B7FDB"/>
+                      <path d="M40,69 Q50,76 60,69" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                  <div style={{flex:1}}>
+                    <div style={{color,fontSize:11,fontWeight:700,lineHeight:1.6}}>{msg}</div>
+                    {nxtLv&&<div style={{marginTop:4,background:"rgba(0,0,0,0.08)",borderRadius:4,height:6,overflow:"hidden"}}>
+                      <div style={{width:`${pct}%`,height:"100%",background:color,transition:"width .8s ease"}}/>
+                    </div>}
+                    {nxtLv&&<div style={{color,fontSize:9,marginTop:2}}>次のLv「{nxtLv.name}」まで {remain} XP</div>}
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* STAGE 1 */}
             {MAIN_STAGES.filter(s=>s.id===1).map(s=>{
@@ -380,7 +452,9 @@ export default function App(){
                   <div style={{width:42,height:42,borderRadius:10,background:ok?`${s.color}15`:"#F1F5F9",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{ok?s.icon:"🔒"}</div>
                   <div style={{flex:1,textAlign:"left"}}>
                     <div style={{color:ok?s.color:"#94A3B8",fontSize:10,fontWeight:700}}>{s.label}</div>
-                    <div style={{color:"#64748B",fontSize:9,marginTop:1}}>{ok?`${s.enemy}に挑む！`:`XP ${s.unlockXP}以上で解放`}</div>
+                    <div style={{color:"#64748B",fontSize:9,marginTop:1}}>
+                      {ok?`${s.enemy}に挑む！ 正解で+XP`:`XP ${s.unlockXP}以上で解放（あと${s.unlockXP-xp}XP）`}
+                    </div>
                   </div>
                   {ok&&<span style={{color:s.color,fontSize:16,fontWeight:900}}>▶</span>}
                 </button>
@@ -401,7 +475,9 @@ export default function App(){
                     <span style={{fontSize:16}}>{ok?b.icon:"🔒"}</span>
                     <div style={{flex:1,textAlign:"left"}}>
                       <div style={{color:ok?b.color:"#94A3B8",fontSize:10,fontWeight:700}}>{b.label}</div>
-                      <div style={{color:"#64748B",fontSize:9,marginTop:1}}>{isCleared?"✅ 合格済み！":ok?`${b.enemy}に挑む！`:`XP 200以上で解放`}</div>
+                      <div style={{color:"#64748B",fontSize:9,marginTop:1}}>
+                        {isCleared?"✅ 合格済み！":ok?`${b.enemy}に挑む！`:xp>=200?`解放済み！`:`XP 200以上で解放（あと${200-xp}XP）`}
+                      </div>
                     </div>
                     {ok&&<span style={{color:isCleared?"#16A34A":b.color,fontSize:13}}>{isCleared?"✓":"▶"}</span>}
                   </button>
@@ -417,8 +493,13 @@ export default function App(){
                   <div style={{width:42,height:42,borderRadius:10,background:ok?`${s.color}15`:"#F1F5F9",display:"flex",alignItems:"center",justifyContent:"center",fontSize:20}}>{ok?s.icon:"🔒"}</div>
                   <div style={{flex:1,textAlign:"left"}}>
                     <div style={{color:ok?s.color:"#94A3B8",fontSize:10,fontWeight:700}}>{s.label}</div>
-                    <div style={{color:"#64748B",fontSize:9,marginTop:1}}>
-                      {ok?`${s.enemy}に挑む！`:s.id===3?"STAGE 2クリア＋XP "+s.unlockXP+"以上で解放":"XP "+s.unlockXP+"以上で解放"}
+                    <div style={{color:"#64748B",fontSize:9,marginTop:1,lineHeight:1.5}}>
+                      {ok ? `${s.enemy}に挑む！ 正解で+XP` :
+                       s.id===3 ? (
+                         !stage2Cleared ? "🔒 先にSTAGE2をクリアしよう！" :
+                         `✅ STAGE2クリア済み！あと${Math.max(0,s.unlockXP-xp)}XPで解放！`
+                       ) : `🔒 あと${Math.max(0,s.unlockXP-xp)}XPで解放！`
+                      }
                     </div>
                   </div>
                   {ok&&<span style={{color:s.color,fontSize:16,fontWeight:900}}>▶</span>}
@@ -589,10 +670,48 @@ export default function App(){
       </div>
 
       {/* ボタン */}
-      <div style={{display:"flex",gap:8,marginBottom:10}}>
+      <div style={{display:"flex",gap:8,marginBottom:8}}>
         <button onClick={()=>startBattle(selSt)} style={{flex:1,background:`linear-gradient(135deg,${stC},${stC}CC)`,border:"none",borderRadius:12,padding:"13px 0",color:"white",fontSize:13,fontWeight:700,cursor:"pointer",fontFamily:F,boxShadow:`0 4px 14px ${stC}40`}}>🔥 もう一戦</button>
         <button onClick={()=>setSc("title")} style={{flex:1,background:"white",border:"2px solid #CBD5E1",borderRadius:12,padding:"13px 0",color:"#64748B",fontSize:13,cursor:"pointer",fontFamily:F}}>🏠 タイトル</button>
       </div>
+
+      {/* 次のSTAGEへボタン */}
+      {(()=>{
+        // 次に挑戦できるSTAGEを探す
+        const allStages=[
+          ...MAIN_STAGES,
+          ...STAGE2_BRANCHES,
+        ];
+        // 現在のSTAGEの次を探す
+        const currentId=selSt?.id;
+        const nextMap={1:2A,"2A":3,"2B":3,"2C":3,3:4,4:5};
+        const nextId=nextMap[currentId];
+        const nextSt=[...MAIN_STAGES,...STAGE2_BRANCHES].find(s=>s.id===nextId||s.id===String(nextId));
+        // 次のSTAGEが解放済みか判定
+        const isNextOk=nextSt&&(
+          nextId===3?(stage2Cleared&&xp>=550):
+          nextId===2A||nextId===2B||nextId===2C?xp>=200:
+          nextSt.unlockXP?xp>=nextSt.unlockXP:false
+        );
+        if(!nextSt) return null;
+        return(
+          <button onClick={()=>isNextOk?startBattle(nextSt):setSc("title")} style={{
+            width:"100%",
+            background:isNextOk?"linear-gradient(135deg,#16A34A,#15803D)":"#F1F5F9",
+            border:isNextOk?"none":"2px solid #E2E8F0",
+            borderRadius:12,padding:"13px 0",
+            color:isNextOk?"white":"#94A3B8",
+            fontSize:13,fontWeight:700,cursor:"pointer",fontFamily:F,
+            marginBottom:8,
+            boxShadow:isNextOk?"0 4px 14px rgba(22,163,74,0.4)":"none",
+          }}>
+            {isNextOk
+              ? "⬆️ 次のSTAGEへ！（"+nextSt.label+"）"
+              : "🔒 次のSTAGE："+nextSt.label+"（まだ解放されていません）"
+            }
+          </button>
+        );
+      })()}
 
       <a href={FB} target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",border:"1px solid #CBD5E1",borderRadius:10,padding:"10px 0",color:"#64748B",fontSize:10,fontFamily:F,textDecoration:"none",background:"white"}}>📝 フィードバックを送る（アプリ改善にご協力ください）</a>
     </div>
