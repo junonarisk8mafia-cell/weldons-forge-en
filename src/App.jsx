@@ -683,14 +683,14 @@ export default function App(){
           ...STAGE2_BRANCHES,
         ];
         // 現在のSTAGEの次を探す
-        const currentId=selSt?.id;
-        const nextMap={1:2A,"2A":3,"2B":3,"2C":3,3:4,4:5};
+        const currentId=String(selSt?.id);
+        const nextMap={"1":"2A","2A":3,"2B":3,"2C":3,3:4,4:5};
         const nextId=nextMap[currentId];
         const nextSt=[...MAIN_STAGES,...STAGE2_BRANCHES].find(s=>s.id===nextId||s.id===String(nextId));
         // 次のSTAGEが解放済みか判定
         const isNextOk=nextSt&&(
           nextId===3?(stage2Cleared&&xp>=550):
-          nextId===2A||nextId===2B||nextId===2C?xp>=200:
+          nextId==="2A"||nextId==="2B"||nextId==="2C"?xp>=200:
           nextSt.unlockXP?xp>=nextSt.unlockXP:false
         );
         if(!nextSt) return null;
