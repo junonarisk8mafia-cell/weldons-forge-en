@@ -22,19 +22,31 @@ function WeldonImg({size=110, mood="smile", bounce=false, hit=false}){
     mood==="surprised"? WELDON_IMGS.surprised :
                         WELDON_IMGS.normal;
   return(
-    <img
-      src={src}
-      width={size}
-      height={size}
-      alt="WELDON"
-      style={{
-        objectFit:"contain",
-        transform: bounce?"translateY(-10px)": hit?"translateX(8px) scale(0.95)":"translateY(0)",
-        transition:"transform .15s ease",
-        filter: hit?"brightness(0.7) sepia(1) saturate(5) hue-rotate(-30deg)":"none",
-        imageRendering:"auto",
-      }}
-    />
+    <div style={{position:"relative",display:"inline-block",lineHeight:0}}>
+      {/* スポットライト */}
+      <div style={{
+        position:"absolute",bottom:-4,left:"50%",transform:"translateX(-50%)",
+        width:size*0.85,height:size*0.28,
+        background:"radial-gradient(ellipse, rgba(255,255,255,0.25) 0%, transparent 70%)",
+        borderRadius:"50%",pointerEvents:"none",
+      }}/>
+      <img
+        src={src}
+        width={size}
+        height={size}
+        alt="WELDON"
+        style={{
+          objectFit:"contain",
+          borderRadius:"50%",
+          transform: bounce?"translateY(-10px)": hit?"translateX(8px) scale(0.95)":"translateY(0)",
+          transition:"transform .15s ease",
+          filter: hit
+            ?"brightness(0.7) sepia(1) saturate(5) hue-rotate(-30deg)"
+            :"drop-shadow(0 0 10px rgba(255,255,255,0.65)) drop-shadow(0 4px 12px rgba(0,0,0,0.45))",
+          imageRendering:"auto",
+        }}
+      />
+    </div>
   );
 }
 import { TreeScreen, CostScreen } from "./Tree";  // ツリー+コスト
@@ -291,7 +303,9 @@ export default function App(){
       <div style={{animation:"gameover 0.8s cubic-bezier(.34,1.56,.64,1) forwards",textAlign:"center",zIndex:1}}>
         <div style={{fontSize:60,marginBottom:8}}>💀</div>
         <div style={{fontSize:42,fontWeight:900,color:"#DC2626",textShadow:"0 0 30px #DC2626,0 0 60px #991B1B",letterSpacing:4}}>GAME OVER</div>
-        <div style={{color:"#F87171",fontSize:12,marginTop:8,marginBottom:20}}>プレイヤーのHPが0になった...</div>
+        <div style={{color:"#F87171",fontSize:12,marginTop:8,marginBottom:16}}>プレイヤーのHPが0になった...</div>
+        {/* WELDONの表情 */}
+        <div style={{marginBottom:14}}><WeldonImg size={108} mood="neutral"/></div>
         {/* WELDONの励まし */}
         <div style={{background:"rgba(255,255,255,0.08)",border:"2px solid #DC2626",borderRadius:12,padding:"14px 18px",maxWidth:300,margin:"0 auto 20px"}}>
           <div style={{color:"#FFE500",fontSize:11,fontWeight:700,marginBottom:6}}>🔥 WELDONより</div>
@@ -378,7 +392,7 @@ export default function App(){
       {/* ヘッダー（暗め） */}
       <div style={{width:"100%",background:"linear-gradient(135deg,#1E293B,#0F172A)",padding:"20px 16px 24px",textAlign:"center"}}>
         <div style={{animation:"bounce 1.5s ease-in-out infinite",display:"inline-block"}}>
-          <WeldonImg size={110} mood="smile"/>
+          <WeldonImg size={132} mood="smile"/>
         </div>
         <div style={{marginTop:6}}>
           <div style={{fontSize:9,letterSpacing:6,color:"#E85D04"}}>WELDON'S</div>
@@ -617,7 +631,7 @@ export default function App(){
           <div style={{background:"white",border:"3px solid #334155",borderRadius:6,padding:"7px 9px",width:92,flexShrink:0,boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
             <div style={{color:"#475569",fontSize:7,fontWeight:700,marginBottom:3,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{lv.name}</div>
             <div style={{position:"relative"}}>
-              <WeldonImg size={66} mood={mood} bounce={bounce} hit={wHit}/>
+              <WeldonImg size={79} mood={mood} bounce={bounce} hit={wHit}/>
               {dmg?.t==="p"&&<div style={{position:"absolute",top:0,left:"50%",transform:"translateX(-50%)",color:"#DC2626",fontSize:16,fontWeight:900,animation:"dmg .8s ease forwards",zIndex:10}}>{dmg.val}</div>}
             </div>
             <div style={{marginTop:2}}>
@@ -671,7 +685,7 @@ export default function App(){
           </div>
         )}
         <div style={{display:"flex",justifyContent:"center",marginTop:10}}>
-          <WeldonImg size={85} mood={score>=MAX_Q*0.7?"happy":"neutral"}/>
+          <WeldonImg size={102} mood={score>=MAX_Q*0.7?"happy":"neutral"}/>
         </div>
       </div>
 

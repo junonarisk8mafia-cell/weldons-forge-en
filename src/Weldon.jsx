@@ -40,7 +40,7 @@ export function PixelWeldon({size=100, mood="smile", bounce=false, hit=false, co
       imageRendering:"pixelated",
       transform: bounce?"translateY(-9px)": hit?"translateX(7px)":"translateY(0)",
       transition:"transform .15s ease",
-      filter:`drop-shadow(0 4px 2px rgba(0,0,0,0.45)) drop-shadow(0 0 ${level*3}px ${col}55)`,
+      filter:`drop-shadow(0 0 8px rgba(255,255,255,0.6)) drop-shadow(0 4px 2px rgba(0,0,0,0.45)) drop-shadow(0 0 ${level*3}px ${col}55)`,
       overflow:"visible",
     }}>
 
@@ -63,6 +63,11 @@ export function PixelWeldon({size=100, mood="smile", bounce=false, hit=false, co
 
       {/* ── 影 ── */}
       <ellipse cx="50" cy="111" rx="22" ry="4" fill="#000" opacity="0.35"/>
+      {/* ── スポットライト ── */}
+      <ellipse cx="50" cy="113" rx="30" ry="7" fill="white" opacity="0.12">
+        <animate attributeName="opacity" dur="2s" repeatCount="indefinite" values="0.08;0.18;0.08"/>
+        <animate attributeName="rx" dur="2s" repeatCount="indefinite" values="28;33;28"/>
+      </ellipse>
 
       {/* ── 足（コイルケーブル） ── */}
       <rect x="36" y="91" width="4" height="14" fill="#1C1C1C"/>
@@ -112,15 +117,31 @@ export function PixelWeldon({size=100, mood="smile", bounce=false, hit=false, co
       <rect x="78" y="2"  width="6"  height="12" rx="2" fill="#7F8C8D"/>
 
       {/* ── アーク火花 ── */}
-      <rect x="82" y="2" width="3" height="3" fill="#FFE500" opacity="0.9">
-        <animate attributeName="opacity" dur="0.2s" repeatCount="indefinite" values="0.9;0.1;0.9"/>
-      </rect>
-      <rect x="86" y="0" width="2" height="2" fill="#00D4FF" opacity="0.8">
-        <animate attributeName="opacity" dur="0.15s" repeatCount="indefinite" values="0.8;0;0.8"/>
-      </rect>
-      <rect x="84" y="6" width="2" height="2" fill="#FFE500" opacity="0.7">
-        <animate attributeName="opacity" dur="0.18s" repeatCount="indefinite" values="0;0.7;0"/>
-      </rect>
+      {[
+        {x:82,y:2,w:3,h:3,c:"#FFE500",d:"0.20s",v:"0.9;0.1;0.9"},
+        {x:86,y:0,w:2,h:2,c:"#00D4FF",d:"0.15s",v:"0.8;0;0.8"},
+        {x:84,y:6,w:2,h:2,c:"#FFE500",d:"0.18s",v:"0;0.7;0"},
+        {x:89,y:3,w:2,h:2,c:"#FFFFFF",d:"0.12s",v:"0;0.95;0"},
+        {x:91,y:7,w:1,h:3,c:"#00D4FF",d:"0.22s",v:"0.7;0;0.7"},
+        {x:80,y:5,w:2,h:1,c:"#FFE500",d:"0.16s",v:"0.5;0;0.5"},
+        {x:87,y:9,w:2,h:2,c:"#FFFFFF",d:"0.14s",v:"0;0.6;0"},
+        {x:93,y:1,w:1,h:1,c:"#FFE500",d:"0.10s",v:"0.8;0;0.8"},
+      ].map((s,i)=>(
+        <rect key={i} x={s.x} y={s.y} width={s.w} height={s.h} fill={s.c}>
+          <animate attributeName="opacity" dur={s.d} repeatCount="indefinite" values={s.v}/>
+        </rect>
+      ))}
+      {/* 放射スパーク線 */}
+      {[
+        {x1:83,y1:5,x2:92,y2:-3,d:"0.17s"},
+        {x1:83,y1:5,x2:95,y2:5, d:"0.21s"},
+        {x1:83,y1:5,x2:91,y2:13,d:"0.13s"},
+        {x1:83,y1:5,x2:78,y2:0, d:"0.19s"},
+      ].map((l,i)=>(
+        <line key={i} x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2} stroke="#FFE500" strokeWidth="0.6">
+          <animate attributeName="opacity" dur={l.d} repeatCount="indefinite" values="0.7;0;0.7"/>
+        </line>
+      ))}
 
       {/* ── 腕 ── */}
       <rect x="14" y="58" width="18" height="5" rx="2" fill="#2C2C2C"/>
@@ -192,7 +213,9 @@ export function LevelUpEvent({lv, prevLv, onNext}){
           animation:"float 2s ease-in-out infinite",
         }}/>
         <div style={{animation:"evolve 0.9s cubic-bezier(.34,1.56,.64,1) forwards"}}>
-          <img src="/weldon-smile.png" width={160} height={160} alt="WELDON" style={{objectFit:"contain",animation:"float 2s ease-in-out infinite"}}/>
+          <div style={{animation:"float 2s ease-in-out infinite"}}>
+            <PixelWeldon size={180} mood="happy" bounce={false} col={lv.wCol} level={lv.level}/>
+          </div>
         </div>
       </div>
 
