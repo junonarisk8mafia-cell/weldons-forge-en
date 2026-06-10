@@ -1,3 +1,5 @@
+import React from "react";
+
 // ============================================================
 // WELDON'S FORGE - WELDONキャラクター
 // レベルに応じて外見・色・エフェクトが変化
@@ -186,19 +188,43 @@ export function PixelWeldon({size=100, mood="smile", bounce=false, hit=false, co
 export function LevelUpEvent({lv, prevLv, onNext}){
   const F = "'Courier New',monospace";
   const css=`
-    @keyframes evolve{0%{transform:scale(0.4) rotate(-15deg);opacity:0}60%{transform:scale(1.25) rotate(4deg);opacity:1}100%{transform:scale(1) rotate(0deg);opacity:1}}
+    @keyframes evolve{0%{transform:scale(0.4) rotate(-15deg);opacity:0}60%{transform:scale(1.5) rotate(4deg);opacity:1}80%{transform:scale(1.25) rotate(-2deg)}100%{transform:scale(1.35) rotate(0deg);opacity:1}}
     @keyframes glow{0%,100%{text-shadow:0 0 15px #FFE500}50%{text-shadow:0 0 40px #FFE500,0 0 80px #FF6B00}}
     @keyframes sparkle{0%,100%{opacity:0;transform:scale(0)}50%{opacity:1;transform:scale(1)}}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    @keyframes goldflash{0%{opacity:1}100%{opacity:0}}
+    @keyframes lvuptext{0%{transform:scale(0) rotate(-20deg);opacity:0}45%{transform:scale(1.4) rotate(6deg);opacity:1}65%{transform:scale(0.9) rotate(-3deg)}80%{transform:scale(1.15) rotate(2deg)}100%{transform:scale(1) rotate(0deg);opacity:1}}
+    @keyframes spark{0%{transform:translate(0,0) scale(1);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+    @keyframes fireflicker{0%,100%{opacity:0.7;transform:translateY(0) scale(1)}50%{opacity:1;transform:translateY(-8px) scale(1.15)}}
   `;
   const stars = [
     {x:"8%",y:"12%",d:"0s"},{x:"92%",y:"18%",d:"0.2s"},{x:"15%",y:"75%",d:"0.4s"},
     {x:"85%",y:"70%",d:"0.1s"},{x:"50%",y:"8%",d:"0.3s"},{x:"25%",y:"40%",d:"0.5s"},
     {x:"75%",y:"45%",d:"0.15s"},{x:"5%",y:"50%",d:"0.35s"},
   ];
+
+  // バイブレーション演出
+  React.useEffect(()=>{
+    if(navigator.vibrate) navigator.vibrate([60,40,60,40,140]);
+  },[]);
+
+  // 溶接スパーク（黄色い火花）
+  const sparks = Array.from({length:18},(_,i)=>{
+    const ang = (i/18)*Math.PI*2;
+    const dist = 60+Math.random()*60;
+    return {
+      dx:`${Math.cos(ang)*dist}px`, dy:`${Math.sin(ang)*dist}px`,
+      d:`${0.5+Math.random()*0.6}s`, delay:`${Math.random()*0.4}s`,
+      size:2+Math.random()*3,
+    };
+  });
+
   return(
     <div style={{minHeight:"100vh",background:"linear-gradient(160deg,#0F172A 0%,#1E0A3C 50%,#0F172A 100%)",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",fontFamily:F,padding:20,textAlign:"center",position:"relative",overflow:"hidden"}}>
       <style>{css}</style>
+
+      {/* 画面全体 金色フラッシュ */}
+      <div style={{position:"fixed",inset:0,zIndex:60,pointerEvents:"none",background:"radial-gradient(circle, #FFF7CC 0%, #FFD700 40%, #FF8C00 100%)",animation:"goldflash 0.8s ease forwards"}}/>
 
       {/* 背景の星 */}
       {stars.map((s,i)=>(
@@ -206,12 +232,34 @@ export function LevelUpEvent({lv, prevLv, onNext}){
       ))}
 
       {/* 変身エフェクト枠 */}
-      <div style={{position:"relative",marginBottom:16}}>
+      <div style={{position:"relative",marginBottom:24}}>
         <div style={{
-          position:"absolute",inset:-20,borderRadius:"50%",
-          background:`radial-gradient(circle, ${lv.color}40 0%, transparent 70%)`,
+          position:"absolute",inset:-30,borderRadius:"50%",
+          background:`radial-gradient(circle, ${lv.color}55 0%, transparent 70%)`,
           animation:"float 2s ease-in-out infinite",
         }}/>
+
+        {/* 溶接スパーク（黄色い火花が散る） */}
+        {sparks.map((s,i)=>(
+          <div key={i} style={{
+            position:"absolute",left:"50%",top:"35%",
+            width:s.size,height:s.size,borderRadius:"50%",background:"#FFE500",
+            boxShadow:"0 0 6px 2px #FFA500",
+            "--dx":s.dx,"--dy":s.dy,
+            animation:`spark ${s.d} ${s.delay} ease-out infinite`,
+          }}/>
+        ))}
+
+        {/* 進化時の炎パーティクル */}
+        {[-50,-25,0,25,50].map((x,i)=>(
+          <div key={i} style={{
+            position:"absolute",left:`calc(50% + ${x}px)`,bottom:"-10px",
+            fontSize:22+Math.abs(x)/4,
+            animation:`fireflicker ${0.4+i*0.1}s ease-in-out infinite`,
+            animationDelay:`${i*0.07}s`,
+          }}>🔥</div>
+        ))}
+
         <div style={{animation:"evolve 0.9s cubic-bezier(.34,1.56,.64,1) forwards"}}>
           <div style={{animation:"float 2s ease-in-out infinite"}}>
             <PixelWeldon size={180} mood="happy" bounce={false} col={lv.wCol} level={lv.level}/>
@@ -220,9 +268,9 @@ export function LevelUpEvent({lv, prevLv, onNext}){
       </div>
 
       {/* テキスト */}
-      <div style={{animation:"glow 1.5s infinite",marginBottom:8}}>
-        <div style={{fontSize:11,color:"#FFE500",letterSpacing:6,marginBottom:6}}>★ LEVEL UP! ★</div>
-        <div style={{fontSize:52,fontWeight:900,color:"#FFE500"}}>Lv.{lv.level}</div>
+      <div style={{animation:"lvuptext 1s cubic-bezier(.34,1.56,.64,1) forwards",marginBottom:8}}>
+        <div style={{fontSize:14,color:"#FFE500",letterSpacing:6,marginBottom:6,animation:"glow 1.5s infinite"}}>★★★ LEVEL UP! ★★★</div>
+        <div style={{fontSize:60,fontWeight:900,color:"#FFE500",animation:"glow 1.5s infinite"}}>Lv.{lv.level}</div>
         <div style={{fontSize:20,color:lv.color,fontWeight:700,marginTop:4}}>{lv.name}</div>
       </div>
 

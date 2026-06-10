@@ -42,7 +42,7 @@ function WeldonImg({size=110, mood="smile", bounce=false, hit=false}){
           transition:"transform .15s ease",
           filter: hit
             ?"brightness(0.7) sepia(1) saturate(5) hue-rotate(-30deg)"
-            :"drop-shadow(0 0 10px rgba(255,255,255,0.65)) drop-shadow(0 4px 12px rgba(0,0,0,0.45))",
+            :"drop-shadow(0 0 14px rgba(255,255,255,0.9)) drop-shadow(0 0 26px rgba(255,255,255,0.5)) drop-shadow(0 4px 12px rgba(0,0,0,0.45))",
           imageRendering:"auto",
         }}
       />
@@ -666,9 +666,9 @@ function Enemy({st, hit, hp, maxHP, exploding}){
 
 function HPBar({v, max}){
   const p = Math.min(100,(v/max)*100);
-  const c = p>50?"#4CAF50":p>25?"#FF9800":"#F44336";
-  return <div style={{background:"#E2E8F0",borderRadius:4,height:8,border:"1px solid #CBD5E1",overflow:"hidden"}}>
-    <div style={{width:`${p}%`,height:"100%",background:c,transition:"width .4s ease"}}/>
+  const c = p>50?"linear-gradient(90deg,#22C55E,#86EFAC)":p>25?"linear-gradient(90deg,#F59E0B,#FDE68A)":"linear-gradient(90deg,#DC2626,#FCA5A5)";
+  return <div style={{background:"#E2E8F0",borderRadius:4,height:9,border:"1px solid #CBD5E1",overflow:"hidden",boxShadow:"inset 0 1px 2px rgba(0,0,0,0.15)"}}>
+    <div style={{width:`${p}%`,height:"100%",background:c,transition:"width .4s ease",boxShadow:"0 0 6px rgba(255,255,255,0.6) inset"}}/>
   </div>;
 }
 
@@ -1159,10 +1159,10 @@ export default function App(){
           </div>
 
           {/* プレイヤーステータス */}
-          <div style={{background:"white",border:"3px solid #334155",borderRadius:6,padding:"7px 9px",width:92,flexShrink:0,boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
+          <div style={{background:"white",border:"3px solid #334155",borderRadius:6,padding:"8px 10px",width:120,flexShrink:0,boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
             <div style={{color:"#475569",fontSize:7,fontWeight:700,marginBottom:3,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{lv.name}</div>
             <div style={{position:"relative"}}>
-              <WeldonImg size={79} mood={mood} bounce={bounce} hit={wHit}/>
+              <WeldonImg size={102} mood={mood} bounce={bounce} hit={wHit}/>
               {dmg?.t==="p"&&<div style={{position:"absolute",top:0,left:"50%",transform:"translateX(-50%)",color:"#DC2626",fontSize:16,fontWeight:900,animation:"dmg .8s ease forwards",zIndex:10}}>{dmg.val}</div>}
             </div>
             <div style={{marginTop:2}}>
