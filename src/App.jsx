@@ -667,7 +667,7 @@ function Enemy({st, hit, hp, maxHP, exploding}){
 function HPBar({v, max}){
   const p = Math.min(100,(v/max)*100);
   const c = p>50?"linear-gradient(90deg,#22C55E,#86EFAC)":p>25?"linear-gradient(90deg,#F59E0B,#FDE68A)":"linear-gradient(90deg,#DC2626,#FCA5A5)";
-  return <div style={{background:"#E2E8F0",borderRadius:4,height:9,border:"1px solid #CBD5E1",overflow:"hidden",boxShadow:"inset 0 1px 2px rgba(0,0,0,0.15)"}}>
+  return <div style={{background:"#E2E8F0",borderRadius:4,height:11,border:"1px solid #CBD5E1",overflow:"hidden",boxShadow:"inset 0 1px 2px rgba(0,0,0,0.15)"}}>
     <div style={{width:`${p}%`,height:"100%",background:c,transition:"width .4s ease",boxShadow:"0 0 6px rgba(255,255,255,0.6) inset"}}/>
   </div>;
 }
@@ -1159,21 +1159,21 @@ export default function App(){
           </div>
 
           {/* プレイヤーステータス */}
-          <div style={{background:"white",border:"3px solid #334155",borderRadius:6,padding:"8px 10px",width:120,flexShrink:0,boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
-            <div style={{color:"#475569",fontSize:7,fontWeight:700,marginBottom:3,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{lv.name}</div>
-            <div style={{position:"relative"}}>
-              <WeldonImg size={102} mood={mood} bounce={bounce} hit={wHit}/>
-              {dmg?.t==="p"&&<div style={{position:"absolute",top:0,left:"50%",transform:"translateX(-50%)",color:"#DC2626",fontSize:16,fontWeight:900,animation:"dmg .8s ease forwards",zIndex:10}}>{dmg.val}</div>}
+          <div style={{background:"white",border:"3px solid #334155",borderRadius:6,padding:"5px 6px",width:168,flexShrink:0,boxShadow:"0 2px 8px rgba(0,0,0,0.1)"}}>
+            <div style={{color:"#475569",fontSize:8,fontWeight:700,marginBottom:1,overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis"}}>{lv.name}</div>
+            <div style={{position:"relative",display:"flex",justifyContent:"center"}}>
+              <WeldonImg size={148} mood={mood} bounce={bounce} hit={wHit}/>
+              {dmg?.t==="p"&&<div style={{position:"absolute",top:0,left:"50%",transform:"translateX(-50%)",color:"#DC2626",fontSize:18,fontWeight:900,animation:"dmg .8s ease forwards",zIndex:10}}>{dmg.val}</div>}
             </div>
-            <div style={{marginTop:2}}>
+            <div style={{marginTop:1}}>
               <div style={{display:"flex",justifyContent:"space-between",marginBottom:2}}>
-                <span style={{color:"#64748B",fontSize:7}}>HP</span>
-                <span style={{color:"#16A34A",fontSize:7}}>{pHP}</span>
+                <span style={{color:"#64748B",fontSize:9}}>HP</span>
+                <span style={{color:"#16A34A",fontSize:9,fontWeight:700}}>{pHP}</span>
               </div>
               <HPBar v={pHP} max={lv.hp}/>
               <div style={{display:"flex",justifyContent:"space-between",marginTop:3}}>
-                <span style={{color:"#64748B",fontSize:7}}>問</span>
-                <span style={{color:"#FFE500",fontSize:7}}>{qi+1}/20</span>
+                <span style={{color:"#64748B",fontSize:9}}>問</span>
+                <span style={{color:"#FFE500",fontSize:9,fontWeight:700}}>{qi+1}/20</span>
               </div>
             </div>
           </div>
