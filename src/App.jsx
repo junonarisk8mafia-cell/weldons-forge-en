@@ -1252,6 +1252,9 @@ export default function App(){
       </div>
 
       {/* 次のSTAGEへボタン */}
+      <button onClick={()=>setSc("title")} style={{width:"100%",background:"linear-gradient(135deg,#059669,#047857)",border:"none",borderRadius:12,padding:"13px 0",color:"white",fontSize:13,fontWeight:700,cursor:"pointer",fontFamily:F,boxShadow:"0 4px 14px rgba(5,150,105,0.4)",marginBottom:8}}>
+        ⚔️ 次のステージへ
+      </button>
 
 
       <a href={FB} target="_blank" rel="noopener noreferrer" style={{display:"block",textAlign:"center",border:"1px solid #CBD5E1",borderRadius:10,padding:"10px 0",color:"#64748B",fontSize:10,fontFamily:F,textDecoration:"none",background:"white"}}>📝 フィードバックを送る（アプリ改善にご協力ください）</a>
