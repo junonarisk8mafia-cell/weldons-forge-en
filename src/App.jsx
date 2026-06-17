@@ -145,21 +145,164 @@ function shuffle(arr) {
 
 // ── WELDON SVG CHARACTER ────────────────────────────────────
 function WeldonSVG({ size = 80 }) {
+  const aspect = 120 / 100
+  const h = Math.round(size * aspect)
   return (
-    <svg width={size} height={size} viewBox="0 0 80 80"
-      style={{ filter:'drop-shadow(0 0 8px #ff660088)' }}>
-      <ellipse cx="40" cy="52" rx="13" ry="20" fill="#CC2200"/>
-      <rect x="28" y="20" width="24" height="18" rx="4" fill="#AA1100"/>
-      <rect x="33" y="12" width="14" height="10" rx="3" fill="#880000"/>
-      <path d="M26 64 Q20 70 22 76" stroke="#777" strokeWidth="3" fill="none" strokeLinecap="round"/>
-      <path d="M54 64 Q60 70 58 76" stroke="#777" strokeWidth="3" fill="none" strokeLinecap="round"/>
-      <circle cx="35" cy="31" r="4" fill="#fff"/>
-      <circle cx="45" cy="31" r="4" fill="#fff"/>
-      <circle cx="36" cy="32" r="2.5" fill="#111"/>
-      <circle cx="46" cy="32" r="2.5" fill="#111"/>
-      <path d="M36 10 Q40 2 44 10" stroke="#FFB800" strokeWidth="2.5" fill="none" strokeLinecap="round"/>
-      <path d="M34 8 Q40 -2 46 8" stroke="#FF6600" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.6"/>
-      <path d="M34 40 Q40 46 46 40" stroke="#ff9966" strokeWidth="2" fill="none" strokeLinecap="round"/>
+    <svg width={size} height={h} viewBox="0 0 100 120"
+      style={{
+        filter:'drop-shadow(0 0 14px #FF660099) drop-shadow(0 0 4px #FFB80066)',
+        animation:'wf-bob 3s ease-in-out infinite',
+      }}>
+      <defs>
+        {/* Visor glow gradient */}
+        <radialGradient id="wf-visor-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%"   stopColor="#FFB800" stopOpacity="0.9"/>
+          <stop offset="60%"  stopColor="#FF6600" stopOpacity="0.6"/>
+          <stop offset="100%" stopColor="#CC2200" stopOpacity="0"/>
+        </radialGradient>
+        {/* Chest plate gradient */}
+        <linearGradient id="wf-chest-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stopColor="#3a3a4e"/>
+          <stop offset="100%" stopColor="#1a1a26"/>
+        </linearGradient>
+        {/* Arc flame gradient */}
+        <radialGradient id="wf-arc-grad" cx="50%" cy="80%" r="60%">
+          <stop offset="0%"   stopColor="#ffffff"/>
+          <stop offset="30%"  stopColor="#FFE066"/>
+          <stop offset="70%"  stopColor="#FF6600"/>
+          <stop offset="100%" stopColor="#CC220000"/>
+        </radialGradient>
+        {/* Armor edge highlight */}
+        <linearGradient id="wf-armor-hi" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stopColor="#555566"/>
+          <stop offset="40%"  stopColor="#888899"/>
+          <stop offset="100%" stopColor="#2a2a3a"/>
+        </linearGradient>
+      </defs>
+
+      {/* ── LEGS ── */}
+      {/* Left leg */}
+      <path d="M36 88 L34 108 L30 110 L28 108 L30 88Z" fill="#222233" stroke="#3a3a4e" strokeWidth="0.5"/>
+      <path d="M30 108 L28 108 L26 112 L34 112 L34 110Z" fill="#1a1a28"/>
+      {/* Right leg */}
+      <path d="M64 88 L66 108 L70 110 L72 108 L70 88Z" fill="#222233" stroke="#3a3a4e" strokeWidth="0.5"/>
+      <path d="M70 108 L72 108 L74 112 L66 112 L66 110Z" fill="#1a1a28"/>
+      {/* Knee guards */}
+      <rect x="27" y="98" width="8" height="5" rx="1.5" fill="#3a3a4e"/>
+      <rect x="65" y="98" width="8" height="5" rx="1.5" fill="#3a3a4e"/>
+      {/* Knee highlight */}
+      <rect x="28" y="98.5" width="6" height="1.5" rx="0.5" fill="#666677" opacity="0.7"/>
+      <rect x="66" y="98.5" width="6" height="1.5" rx="0.5" fill="#666677" opacity="0.7"/>
+
+      {/* ── TORSO ── */}
+      {/* Main body — tapered hero shape */}
+      <path d="M28 60 L24 88 L76 88 L72 60 L68 46 L32 46Z" fill="url(#wf-chest-grad)" stroke="#3a3a4e" strokeWidth="0.8"/>
+      {/* Chest plate center panel */}
+      <path d="M38 50 L36 82 L64 82 L62 50Z" fill="#252535" stroke="#444455" strokeWidth="0.6"/>
+      {/* Chest plate highlight line */}
+      <line x1="39" y1="51" x2="37" y2="81" stroke="#555566" strokeWidth="1" opacity="0.6"/>
+      {/* "WF" engraved text */}
+      <text x="50" y="68" textAnchor="middle" fontFamily="monospace" fontWeight="900"
+        fontSize="9" fill="#FF6600" opacity="0.85" letterSpacing="1"
+        style={{ filter:'url(#wf-visor-glow)' }}>WF</text>
+      {/* WF glow behind text */}
+      <text x="50" y="68" textAnchor="middle" fontFamily="monospace" fontWeight="900"
+        fontSize="9" fill="#FF660033" letterSpacing="1" stroke="#FF660022" strokeWidth="3">WF</text>
+      {/* Shoulder pauldrons */}
+      <path d="M28 60 L20 52 L16 58 L20 66 L28 68Z" fill="#2a2a3a" stroke="#444455" strokeWidth="0.7"/>
+      <path d="M72 60 L80 52 L84 58 L80 66 L72 68Z" fill="#2a2a3a" stroke="#444455" strokeWidth="0.7"/>
+      {/* Pauldron highlight */}
+      <path d="M20 52 L28 60" stroke="#666677" strokeWidth="1" opacity="0.5"/>
+      <path d="M80 52 L72 60" stroke="#666677" strokeWidth="1" opacity="0.5"/>
+      {/* Belt / waist armor */}
+      <rect x="30" y="82" width="40" height="6" rx="1" fill="#1e1e2e" stroke="#3a3a4e" strokeWidth="0.6"/>
+      <rect x="46" y="83" width="8" height="4" rx="1" fill="#FF6600" opacity="0.6"/>
+
+      {/* ── LEFT ARM (shield side — hanging) ── */}
+      <path d="M20 66 L14 72 L12 84 L18 86 L22 74 L28 68Z" fill="#252535" stroke="#3a3a4e" strokeWidth="0.6"/>
+      {/* Forearm plate */}
+      <path d="M13 76 L18 86 L22 84 L17 74Z" fill="#2a2a3a"/>
+      {/* Shield bracer glint */}
+      <line x1="14" y1="78" x2="18" y2="84" stroke="#666677" strokeWidth="0.8" opacity="0.5"/>
+
+      {/* ── RIGHT ARM (torch arm — raised) ── */}
+      {/* Upper arm */}
+      <path d="M72 60 L84 48 L88 38 L82 34 L76 44 L68 56Z" fill="#252535" stroke="#3a3a4e" strokeWidth="0.6"/>
+      {/* Forearm */}
+      <path d="M88 38 L92 26 L86 22 L82 34Z" fill="#2a2a3a" stroke="#3a3a4e" strokeWidth="0.6"/>
+      {/* Forearm armor ridge */}
+      <line x1="89" y1="36" x2="87" y2="24" stroke="#555566" strokeWidth="1" opacity="0.6"/>
+      {/* Gauntlet */}
+      <path d="M87 24 L85 16 L89 14 L93 18 L92 26Z" fill="#1e1e2e" stroke="#444455" strokeWidth="0.7"/>
+      {/* Torch handle */}
+      <rect x="83" y="6" width="5" height="14" rx="2" fill="#333344" stroke="#555566" strokeWidth="0.5"
+        transform="rotate(-20 86 13)"/>
+      {/* Torch grip wrap lines */}
+      <line x1="81" y1="15" x2="85" y2="8"  stroke="#444455" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-20 86 13)"/>
+      <line x1="82" y1="12" x2="86" y2="5"  stroke="#444455" strokeWidth="1.2" strokeLinecap="round" transform="rotate(-20 86 13)"/>
+
+      {/* ── ARC FLAME at torch tip ── */}
+      {/* Outer glow halo */}
+      <ellipse cx="80" cy="4" rx="10" ry="10" fill="#FF660022"/>
+      <ellipse cx="80" cy="4" rx="7"  ry="7"  fill="#FF880033"/>
+      {/* Main flame body */}
+      <path d="M78 8 Q76 2 80 -2 Q82 -5 81 -1 Q85 -6 82 2 Q86 -2 84 4 Q82 8 80 8 Q78 8 78 8Z"
+        fill="url(#wf-arc-grad)" opacity="0.95"/>
+      {/* Bright white core */}
+      <ellipse cx="80" cy="3" rx="2.5" ry="3.5" fill="#ffffff" opacity="0.9"/>
+      <ellipse cx="80" cy="2" rx="1.2" ry="2"   fill="#ffffff"/>
+      {/* Arc sputter lines */}
+      <line x1="80" y1="3" x2="72" y2="-4" stroke="#FFE066" strokeWidth="1"   opacity="0.8" strokeLinecap="round"/>
+      <line x1="80" y1="3" x2="88" y2="-2" stroke="#FFB800" strokeWidth="0.8" opacity="0.7" strokeLinecap="round"/>
+      <line x1="80" y1="3" x2="74" y2="10" stroke="#FF6600" strokeWidth="0.8" opacity="0.6" strokeLinecap="round"/>
+      <line x1="80" y1="3" x2="87" y2="8"  stroke="#FFB800" strokeWidth="0.7" opacity="0.5" strokeLinecap="round"/>
+      {/* Spark dots */}
+      <circle cx="71" cy="-3" r="1.2" fill="#FFE066" opacity="0.9"/>
+      <circle cx="88" cy="-1" r="1.0" fill="#ffffff"  opacity="0.85"/>
+      <circle cx="90" cy="7"  r="0.8" fill="#FFB800"  opacity="0.8"/>
+      <circle cx="73" cy="11" r="0.9" fill="#FF6600"  opacity="0.75"/>
+      <circle cx="84" cy="-7" r="0.7" fill="#FFE066"  opacity="0.7"/>
+      <circle cx="76" cy="-7" r="1.0" fill="#ffffff"  opacity="0.65"/>
+
+      {/* ── HELMET ── */}
+      {/* Neck */}
+      <rect x="38" y="38" width="24" height="12" rx="2" fill="#222233" stroke="#3a3a4e" strokeWidth="0.6"/>
+      <rect x="42" y="39" width="16" height="2"  rx="1" fill="#333344" opacity="0.7"/>
+      {/* Main helmet shell */}
+      <path d="M26 36 L28 18 Q30 8 50 6 Q70 8 72 18 L74 36 L70 40 L30 40Z"
+        fill="#2a2a3a" stroke="#444455" strokeWidth="1"/>
+      {/* Helmet top ridge / crest */}
+      <path d="M42 6 L40 2 L50 0 L60 2 L58 6Z" fill="#333344" stroke="#555566" strokeWidth="0.5"/>
+      {/* Crest glow line */}
+      <line x1="50" y1="0" x2="50" y2="6" stroke="#FF660066" strokeWidth="1.5"/>
+      {/* Side angular cheek guards */}
+      <path d="M26 36 L22 30 L24 22 L28 18" fill="#222233" stroke="#3a3a4e" strokeWidth="0.7"/>
+      <path d="M74 36 L78 30 L76 22 L72 18" fill="#222233" stroke="#3a3a4e" strokeWidth="0.7"/>
+      {/* Helmet highlight — left bevel */}
+      <path d="M28 18 L26 36" stroke="#666677" strokeWidth="1.5" opacity="0.4"/>
+      {/* Helmet highlight — top arc */}
+      <path d="M35 8 Q50 4 65 8" stroke="#888899" strokeWidth="1" fill="none" opacity="0.35"/>
+
+      {/* ── VISOR ── */}
+      {/* Visor slot — angular futuristic shape */}
+      <path d="M30 28 L32 22 L68 22 L70 28 L66 34 L34 34Z" fill="#0d0d18" stroke="#FF660055" strokeWidth="0.8"/>
+      {/* Visor glow fill */}
+      <path d="M31 28 L33 23 L67 23 L69 28 L65 33 L35 33Z" fill="url(#wf-visor-glow)" opacity="0.35"/>
+      {/* Horizontal visor scan line */}
+      <line x1="32" y1="28" x2="68" y2="28" stroke="#FF660044" strokeWidth="0.6"/>
+      {/* Glowing eyes behind visor */}
+      <ellipse cx="41" cy="28" rx="5.5" ry="3.5" fill="#FF6600" opacity="0.75"/>
+      <ellipse cx="59" cy="28" rx="5.5" ry="3.5" fill="#FF6600" opacity="0.75"/>
+      <ellipse cx="41" cy="28" rx="3"   ry="2"   fill="#FFB800" opacity="0.9"/>
+      <ellipse cx="59" cy="28" rx="3"   ry="2"   fill="#FFB800" opacity="0.9"/>
+      <ellipse cx="41" cy="28" rx="1.2" ry="0.9" fill="#ffffff"  opacity="0.8"/>
+      <ellipse cx="59" cy="28" rx="1.2" ry="0.9" fill="#ffffff"  opacity="0.8"/>
+      {/* Visor outer edge chrome */}
+      <path d="M30 28 L32 22 L68 22 L70 28 L66 34 L34 34Z"
+        fill="none" stroke="url(#wf-armor-hi)" strokeWidth="1.2" opacity="0.6"/>
+
+      {/* ── GROUND SHADOW ── */}
+      <ellipse cx="50" cy="116" rx="22" ry="3" fill="#FF660011"/>
     </svg>
   )
 }
