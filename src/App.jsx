@@ -1912,116 +1912,187 @@ function appendBattleRecord(record) {
 }
 
 function HistoryTab() {
-  const [log, setLog] = useState(() => loadBattleLog())
+  const [log,        setLog]        = useState(() => loadBattleLog())
+  const [confirming, setConfirming] = useState(false)
+
+  const STAGE_COLORS = ['#E85D04','#1565C0','#D97706','#059669','#7C3AED','#DC2626']
 
   function clearHistory() {
     localStorage.removeItem(LS_KEY)
     setLog([])
+    setConfirming(false)
   }
 
   const total   = log.length
   const wins    = log.filter(r => r.result === 'victory').length
   const winRate = total ? Math.round((wins / total) * 100) : 0
+  const totalXP = log.reduce((sum, r) => sum + (r.xpEarned || 0), 0)
 
   function fmtDate(iso) {
     try {
       const d = new Date(iso)
-      return d.toLocaleDateString(undefined, { month:'short', day:'numeric' }) +
-             ' ' + d.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit' })
+      return d.toLocaleDateString('en-US', { month:'short', day:'numeric' })
     } catch { return '—' }
   }
 
+  const winCol = winRate >= 70 ? '#22c55e' : winRate >= 40 ? '#f59e0b' : '#ef4444'
+
   return (
-    <div style={{ padding:16, fontFamily:'monospace', background:'#111',
-      minHeight:'100vh', paddingBottom:70 }}>
+    <div style={{ padding:16, fontFamily:"'Share Tech Mono',monospace",
+      background:'#0d0d0d', minHeight:'100vh', paddingBottom:80 }}>
 
       {/* Header */}
-      <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:4 }}>📜 BATTLE HISTORY</div>
-      <div style={{ color:'#444', fontSize:'0.65rem', marginBottom:14 }}>
-        Your record fighting through the Forge
+      <div style={{ display:'flex', alignItems:'baseline', gap:8, marginBottom:16 }}>
+        <div style={{ color:'#FF6600', fontFamily:"'Orbitron',monospace",
+          fontWeight:'900', fontSize:'0.9rem', letterSpacing:'0.06em' }}>
+          📜 BATTLE HISTORY
+        </div>
+        <div style={{ color:'#333', fontSize:'0.58rem' }}>{total} records</div>
       </div>
 
       {/* Stats bar */}
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:16 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:20 }}>
         {[
-          { label:'BATTLES', value: total, color:'#FF6600' },
-          { label:'WINS',    value: wins,  color:'#22c55e' },
-          { label:'WIN RATE',value: `${winRate}%`,
-            color: winRate >= 70 ? '#22c55e' : winRate >= 40 ? '#f59e0b' : '#ef4444' },
+          { label:'BATTLES',   value: total,         color:'#FF6600', sub: null },
+          { label:'WIN RATE',  value: `${winRate}%`, color: winCol,   sub: `${wins}W / ${total-wins}L` },
+          { label:'TOTAL XP',  value: `+${totalXP}`, color:'#FFB800', sub: null },
         ].map(s => (
-          <div key={s.label} style={{ background:'#141414', border:'1px solid #1e1e1e',
-            borderRadius:8, padding:'10px 8px', textAlign:'center' }}>
-            <div style={{ color:s.color, fontSize:'1.3rem', fontWeight:'bold' }}>{s.value}</div>
-            <div style={{ color:'#444', fontSize:'0.56rem', letterSpacing:'0.04em' }}>{s.label}</div>
+          <div key={s.label} style={{
+            background:'#141414', border:'1px solid #1e1e1e',
+            borderRadius:10, padding:'12px 8px', textAlign:'center',
+            boxShadow:`0 0 16px ${s.color}11`,
+          }}>
+            <div style={{ color:s.color, fontSize:'1.1rem', fontWeight:'900',
+              fontFamily:"'Orbitron',monospace", letterSpacing:'0.02em',
+              textShadow:`0 0 10px ${s.color}66` }}>
+              {s.value}
+            </div>
+            {s.sub && (
+              <div style={{ color:'#444', fontSize:'0.5rem', marginTop:1 }}>{s.sub}</div>
+            )}
+            <div style={{ color:'#383838', fontSize:'0.52rem', letterSpacing:'0.06em', marginTop:3 }}>
+              {s.label}
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Record list */}
+      {/* Empty state */}
       {log.length === 0 ? (
-        <div style={{ color:'#333', fontSize:'0.75rem', textAlign:'center',
-          padding:'48px 0', lineHeight:2 }}>
-          No battles yet.<br/>
-          <span style={{ color:'#444' }}>Start a stage to build your record.</span>
+        <div style={{ textAlign:'center', padding:'40px 0 32px' }}>
+          <div style={{ marginBottom:16, opacity:0.35 }}>
+            <WeldonSVG size={80}/>
+          </div>
+          <div style={{ color:'#333', fontSize:'0.78rem', lineHeight:2 }}>
+            No battles yet.<br/>
+            <span style={{ color:'#3a3a3a' }}>Start fighting to build your record.</span>
+          </div>
         </div>
       ) : (
         log.map((r, i) => {
-          const won     = r.result === 'victory'
-          const stage   = QUIZ_STAGES.find(s => s.stageId === r.stageId)
-          const icon    = stage ? stage.icon : '⚔️'
+          const won       = r.result === 'victory'
+          const stage     = QUIZ_STAGES.find(s => s.stageId === r.stageId)
+          const icon      = r.stageIcon || (stage ? stage.icon : '⚔️')
+          const stageCol  = STAGE_COLORS[(r.stageId - 1)] || '#FF6600'
+          const accuracy  = r.accuracy != null ? r.accuracy
+                          : (r.correct + r.miss) > 0
+                            ? Math.round(r.correct / (r.correct + r.miss) * 100) : 0
+          const accCol    = accuracy >= 80 ? '#22c55e' : accuracy >= 50 ? '#f59e0b' : '#ef4444'
+
           return (
             <div key={i} style={{
-              display:'flex', alignItems:'center', gap:10,
               background:'#141414',
               border:`1px solid ${won ? '#22c55e18' : '#ef444418'}`,
-              borderRadius:8, padding:'10px 12px', marginBottom:7,
+              borderLeft:`3px solid ${won ? '#22c55e' : '#ef4444'}`,
+              borderRadius:8, padding:'10px 12px', marginBottom:8,
             }}>
-              <span style={{ fontSize:'1.4rem', flexShrink:0 }}>{icon}</span>
-              <div style={{ flex:1, minWidth:0 }}>
-                <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:2 }}>
-                  <span style={{ color: won ? '#22c55e' : '#ef4444',
-                    fontWeight:'bold', fontSize:'0.78rem' }}>
-                    {won ? '✓ VICTORY' : '✗ DEFEAT'}
-                  </span>
-                  <span style={{ color:'#333', fontSize:'0.62rem' }}>
-                    STAGE {r.stageId}
-                  </span>
+              {/* Top row: icon + stage name + result badge + date */}
+              <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:6 }}>
+                <span style={{ fontSize:'1.3rem', flexShrink:0, lineHeight:1 }}>{icon}</span>
+                <div style={{ flex:1, minWidth:0 }}>
+                  <div style={{ color: stageCol, fontSize:'0.65rem', fontWeight:'700',
+                    letterSpacing:'0.04em', whiteSpace:'nowrap',
+                    overflow:'hidden', textOverflow:'ellipsis' }}>
+                    {r.stageName}
+                  </div>
+                  <div style={{ color:'#333', fontSize:'0.54rem' }}>STAGE {r.stageId}</div>
                 </div>
-                <div style={{ color:'#666', fontSize:'0.62rem', whiteSpace:'nowrap',
-                  overflow:'hidden', textOverflow:'ellipsis' }}>
-                  {r.stageName}
+                <div style={{ flexShrink:0, display:'flex', flexDirection:'column', alignItems:'flex-end', gap:2 }}>
+                  <div style={{
+                    fontSize:'0.58rem', fontFamily:"'Orbitron',monospace", fontWeight:'900',
+                    letterSpacing:'0.04em', padding:'2px 7px', borderRadius:4,
+                    background: won ? '#22c55e22' : '#ef444422',
+                    color: won ? '#22c55e' : '#ef4444',
+                    border: `1px solid ${won ? '#22c55e44' : '#ef444444'}`,
+                  }}>
+                    {won ? '✓ VICTORY' : '✗ DEFEAT'}
+                  </div>
+                  <div style={{ color:'#383838', fontSize:'0.52rem' }}>{fmtDate(r.date)}</div>
                 </div>
               </div>
-              <div style={{ textAlign:'right', flexShrink:0 }}>
-                <div style={{ fontSize:'0.68rem', marginBottom:2 }}>
-                  <span style={{ color:'#22c55e' }}>✓{r.correct}</span>
-                  <span style={{ color:'#444' }}> / </span>
-                  <span style={{ color:'#ef4444' }}>✗{r.miss}</span>
-                </div>
+
+              {/* Bottom row: stats chips */}
+              <div style={{ display:'flex', gap:6, flexWrap:'wrap' }}>
+                <span style={{ fontSize:'0.58rem', color:'#22c55e',
+                  background:'#22c55e11', border:'1px solid #22c55e22',
+                  borderRadius:4, padding:'2px 6px' }}>✓{r.correct}</span>
+                <span style={{ fontSize:'0.58rem', color:'#ef4444',
+                  background:'#ef444411', border:'1px solid #ef444422',
+                  borderRadius:4, padding:'2px 6px' }}>✗{r.miss}</span>
+                <span style={{ fontSize:'0.58rem', color: accCol,
+                  background:`${accCol}11`, border:`1px solid ${accCol}22`,
+                  borderRadius:4, padding:'2px 6px' }}>{accuracy}%</span>
                 {r.xpEarned > 0 && (
-                  <div style={{ color:'#FFB800', fontSize:'0.6rem' }}>+{r.xpEarned} XP</div>
+                  <span style={{ fontSize:'0.58rem', color:'#FFB800',
+                    background:'#FFB80011', border:'1px solid #FFB80022',
+                    borderRadius:4, padding:'2px 6px' }}>+{r.xpEarned} XP</span>
                 )}
-                <div style={{ color:'#333', fontSize:'0.56rem', marginTop:2 }}>
-                  {fmtDate(r.date)}
-                </div>
               </div>
             </div>
           )
         })
       )}
 
-      {/* Clear button */}
+      {/* Clear button + confirmation */}
       {log.length > 0 && (
-        <button onClick={clearHistory}
-          style={{ width:'100%', marginTop:8, padding:'11px',
-            background:'none', border:'1px solid #2a2a2a', borderRadius:8,
-            color:'#444', cursor:'pointer', fontFamily:'monospace', fontSize:'0.72rem',
-            transition:'all 0.15s',
-          }}
-          onMouseEnter={e => { e.target.style.borderColor='#ef4444'; e.target.style.color='#ef4444' }}
-          onMouseLeave={e => { e.target.style.borderColor='#2a2a2a'; e.target.style.color='#444' }}>
-          🗑 Clear History
-        </button>
+        <div style={{ marginTop:16 }}>
+          {confirming ? (
+            <div style={{ background:'#1a0808', border:'1px solid #ef444433',
+              borderRadius:10, padding:'14px', textAlign:'center' }}>
+              <div style={{ color:'#fca5a5', fontSize:'0.72rem', marginBottom:12,
+                fontFamily:"'Share Tech Mono',monospace" }}>
+                Delete all {total} battle records? This cannot be undone.
+              </div>
+              <div style={{ display:'flex', gap:8 }}>
+                <button onClick={clearHistory} style={{
+                  flex:1, padding:'10px', background:'#ef4444', border:'none',
+                  borderRadius:8, color:'#fff', cursor:'pointer',
+                  fontFamily:"'Orbitron',monospace", fontSize:'0.68rem', fontWeight:'bold',
+                }}>
+                  YES, DELETE
+                </button>
+                <button onClick={() => setConfirming(false)} style={{
+                  flex:1, padding:'10px', background:'none',
+                  border:'1px solid #333', borderRadius:8,
+                  color:'#666', cursor:'pointer', fontFamily:'monospace', fontSize:'0.72rem',
+                }}>
+                  Cancel
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button onClick={() => setConfirming(true)} style={{
+              width:'100%', padding:'11px', background:'none',
+              border:'1px solid #222', borderRadius:8,
+              color:'#3a3a3a', cursor:'pointer', fontFamily:'monospace', fontSize:'0.7rem',
+              transition:'all 0.15s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor='#ef444466'; e.currentTarget.style.color='#ef4444' }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor='#222'; e.currentTarget.style.color='#3a3a3a' }}>
+              🗑 Clear History
+            </button>
+          )}
+        </div>
       )}
     </div>
   )
@@ -2129,10 +2200,12 @@ export default function App() {
         appendBattleRecord({
           stageId:   QUIZ_STAGES[si].stageId,
           stageName: QUIZ_STAGES[si].label.replace(/^STAGE \d+ — /,''),
+          stageIcon: QUIZ_STAGES[si].icon,
           result:    'victory',
           correct:   nc,
           miss,
           xpEarned:  sessionXP + q.xp,
+          accuracy:  Math.round(nc / (nc + miss) * 100),
           date:      new Date().toISOString(),
         })
         setStageProgress(prev => {
@@ -2161,10 +2234,12 @@ export default function App() {
         appendBattleRecord({
           stageId:   QUIZ_STAGES[si].stageId,
           stageName: QUIZ_STAGES[si].label.replace(/^STAGE \d+ — /,''),
+          stageIcon: QUIZ_STAGES[si].icon,
           result:    'defeat',
           correct,
           miss:      ns,
           xpEarned:  sessionXP,
+          accuracy:  (correct + ns) > 0 ? Math.round(correct / (correct + ns) * 100) : 0,
           date:      new Date().toISOString(),
         })
         setStageProgress(prev => {
