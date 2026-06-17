@@ -50,6 +50,33 @@ const MONSTERS = [
     @keyframes wf-star-a     { 0%{transform:translate(0,0)scale(1.2);opacity:1} 100%{transform:translate(-28px,-80px)scale(0);opacity:0} }
     @keyframes wf-star-b     { 0%{transform:translate(0,0)scale(1.2);opacity:1} 100%{transform:translate(22px,-90px)scale(0);opacity:0} }
     @keyframes wf-star-c     { 0%{transform:translate(0,0)scale(1.2);opacity:1} 100%{transform:translate(6px,-70px)scale(0);opacity:0} }
+    /* ── ember/spark particles for title screen ── */
+    @keyframes wf-ember-1 { 0%{transform:translate(0,0)scale(1);opacity:1} 100%{transform:translate(-18px,-130px)scale(0);opacity:0} }
+    @keyframes wf-ember-2 { 0%{transform:translate(0,0)scale(1.2);opacity:0.9} 100%{transform:translate(22px,-110px)scale(0);opacity:0} }
+    @keyframes wf-ember-3 { 0%{transform:translate(0,0)scale(0.8);opacity:1} 100%{transform:translate(-8px,-150px)scale(0);opacity:0} }
+    @keyframes wf-ember-4 { 0%{transform:translate(0,0)scale(1.1);opacity:0.85} 100%{transform:translate(14px,-95px)scale(0);opacity:0} }
+    @keyframes wf-ember-5 { 0%{transform:translate(0,0)scale(0.9);opacity:1} 100%{transform:translate(-24px,-120px)scale(0);opacity:0} }
+    @keyframes wf-ember-6 { 0%{transform:translate(0,0)scale(1.3);opacity:0.8} 100%{transform:translate(30px,-140px)scale(0);opacity:0} }
+    @keyframes wf-ember-7 { 0%{transform:translate(0,0)scale(0.7);opacity:1} 100%{transform:translate(-10px,-100px)scale(0);opacity:0} }
+    @keyframes wf-ember-8 { 0%{transform:translate(0,0)scale(1);opacity:0.9} 100%{transform:translate(18px,-125px)scale(0);opacity:0} }
+    /* ── button border glow ── */
+    @keyframes wf-btn-glow { 0%,100%{box-shadow:0 0 10px #FF660088,0 0 20px #FF660044,0 4px 16px #FF660044} 50%{box-shadow:0 0 24px #FF6600DD,0 0 48px #FF660099,0 0 80px #FF660044,0 4px 16px #FF660044} }
+    /* ── screen shake (applied to body) ── */
+    @keyframes wf-body-shake { 0%,100%{transform:translateX(0)} 10%{transform:translateX(-8px) translateY(3px)} 20%{transform:translateX(8px) translateY(-3px)} 30%{transform:translateX(-10px) translateY(2px)} 40%{transform:translateX(10px) translateY(-2px)} 55%{transform:translateX(-6px) translateY(1px)} 70%{transform:translateX(6px) translateY(-1px)} 85%{transform:translateX(-2px)} }
+    /* ── full-screen red damage flash ── */
+    @keyframes wf-red-flash { 0%{opacity:0.65} 100%{opacity:0} }
+    /* ── big damage float ── */
+    @keyframes wf-dmg-float { 0%{opacity:1;transform:translateY(0) translateX(-50%) scale(1)} 20%{transform:translateY(-10px) translateX(-50%) scale(1.2)} 100%{opacity:0;transform:translateY(-70px) translateX(-50%) scale(0.8)} }
+    /* ── confetti squares ── */
+    @keyframes wf-conf-1 { 0%{transform:translate(0,0)rotate(0deg);opacity:1} 100%{transform:translate(-40px,110vh)rotate(700deg);opacity:0} }
+    @keyframes wf-conf-2 { 0%{transform:translate(0,0)rotate(45deg);opacity:1} 100%{transform:translate(50px,110vh)rotate(-540deg);opacity:0} }
+    @keyframes wf-conf-3 { 0%{transform:translate(0,0)rotate(90deg);opacity:1} 100%{transform:translate(-25px,110vh)rotate(600deg);opacity:0} }
+    @keyframes wf-conf-4 { 0%{transform:translate(0,0)rotate(135deg);opacity:1} 100%{transform:translate(60px,110vh)rotate(-720deg);opacity:0} }
+    @keyframes wf-conf-5 { 0%{transform:translate(0,0)rotate(180deg);opacity:1} 100%{transform:translate(-55px,110vh)rotate(480deg);opacity:0} }
+    /* ── trophy bounce ── */
+    @keyframes wf-trophy-bounce { 0%,100%{transform:translateY(0) scale(1)} 25%{transform:translateY(-22px) scale(1.12)} 50%{transform:translateY(-8px) scale(1.06)} 75%{transform:translateY(-18px) scale(1.1)} }
+    /* ── skull shake ── */
+    @keyframes wf-skull-shake { 0%,100%{transform:translateX(0) rotate(0deg)} 10%{transform:translateX(-6px) rotate(-4deg)} 20%{transform:translateX(6px) rotate(4deg)} 30%{transform:translateX(-7px) rotate(-3deg)} 40%{transform:translateX(7px) rotate(3deg)} 55%{transform:translateX(-4px) rotate(-2deg)} 70%{transform:translateX(4px) rotate(2deg)} 85%{transform:translateX(-2px) rotate(-1deg)} }
     /* ── CSS utility classes ── */
     .wf-correct-btn { animation: wf-bounce-in 0.35s ease forwards !important; }
     .wf-shine-btn   { position:relative; overflow:hidden; }
@@ -60,6 +87,8 @@ const MONSTERS = [
       transform:skewX(-18deg); pointer-events:none;
     }
     .wf-shine-btn:hover::after { animation:wf-shine 0.52s ease forwards; }
+    .wf-answer-btn { transition: all 0.15s !important; }
+    .wf-answer-btn:not([disabled]):hover { transform:scale(1.025) !important; box-shadow:0 0 12px #FF660055 !important; border-color:#FF660088 !important; background:#252525 !important; }
     .wf-locked-card { position:relative; overflow:hidden; }
     .wf-locked-card::after {
       content:''; position:absolute; inset:0; pointer-events:none;
@@ -140,63 +169,155 @@ function HPBar({ cur, max, label }) {
   const pct  = Math.max(0, Math.min(100, (cur / max) * 100))
   const col  = pct > 60 ? '#22c55e' : pct > 30 ? '#f59e0b' : '#ef4444'
   const low  = pct <= 30
+  const gradFill = pct > 60
+    ? `linear-gradient(90deg,#16a34a,#22c55e,#4ade80)`
+    : pct > 30
+    ? `linear-gradient(90deg,#b45309,#f59e0b,#fcd34d)`
+    : `linear-gradient(90deg,#991b1b,#ef4444,#fca5a5)`
   const fill = low
-    ? { background:`repeating-linear-gradient(45deg,${col},${col} 5px,${col}99 5px,${col}99 10px)`,
-        animation:'wf-stripe 0.4s linear infinite' }
-    : { background: col }
+    ? { background:`repeating-linear-gradient(45deg,${col},${col} 6px,${col}88 6px,${col}88 12px)`,
+        animation:'wf-stripe 0.35s linear infinite' }
+    : { background: gradFill }
   return (
     <div>
       <div style={{ display:'flex', justifyContent:'space-between',
-        fontSize:'0.65rem', fontFamily:"'Share Tech Mono',monospace", color:'#888', marginBottom:3 }}>
+        fontSize:'0.65rem', fontFamily:"'Share Tech Mono',monospace", color:'#888', marginBottom:4 }}>
         <span>{label}</span>
         <span style={{ color:col, fontFamily:"'Orbitron',monospace", fontSize:'0.6rem' }}>{cur}/{max} HP</span>
       </div>
-      <div style={{ height:10, background:'#333', borderRadius:5, overflow:'hidden' }}>
-        <div style={{ height:'100%', width:`${pct}%`, borderRadius:5,
-          transition:'width 0.4s ease', boxShadow:`0 0 6px ${col}88`, ...fill }}/>
+      <div style={{ height:16, background:'#2a2a2a', borderRadius:8, overflow:'hidden',
+        boxShadow:'inset 0 2px 4px #00000066' }}>
+        <div style={{ height:'100%', width:`${pct}%`, borderRadius:8,
+          transition:'width 0.4s ease', boxShadow:`0 0 10px ${col}99`, ...fill }}/>
       </div>
     </div>
   )
 }
 
 // ── TITLE SCREEN ────────────────────────────────────────────
+const EMBER_CONFIGS = [
+  { left:'12%', top:'70%', size:5, color:'#FF6600', anim:'wf-ember-1 2.4s 0.0s ease-in infinite' },
+  { left:'28%', top:'75%', size:4, color:'#FFB800', anim:'wf-ember-2 2.8s 0.4s ease-in infinite' },
+  { left:'45%', top:'80%', size:6, color:'#FF4400', anim:'wf-ember-3 2.2s 0.8s ease-in infinite' },
+  { left:'62%', top:'72%', size:4, color:'#FF6600', anim:'wf-ember-4 3.0s 0.2s ease-in infinite' },
+  { left:'78%', top:'78%', size:5, color:'#FFB800', anim:'wf-ember-5 2.6s 0.6s ease-in infinite' },
+  { left:'20%', top:'65%', size:3, color:'#FF8800', anim:'wf-ember-6 2.1s 1.0s ease-in infinite' },
+  { left:'55%', top:'68%', size:4, color:'#FF4400', anim:'wf-ember-7 2.9s 0.3s ease-in infinite' },
+  { left:'85%', top:'65%', size:6, color:'#FF6600', anim:'wf-ember-8 2.3s 0.7s ease-in infinite' },
+  { left:'38%', top:'82%', size:3, color:'#FFB800', anim:'wf-ember-1 3.1s 1.2s ease-in infinite' },
+  { left:'70%', top:'60%', size:4, color:'#FF8800', anim:'wf-ember-3 2.5s 0.9s ease-in infinite' },
+]
+
+const SUBTITLE_FULL = 'Japanese Welding RPG Quiz · Foreign Trainees in Japan'
+
 function TitleScreen({ onStart, totalXP }) {
   const S = styles
+  const [typed, setTyped] = useState('')
+  const [btnHover, setBtnHover] = useState(false)
+
+  useEffect(() => {
+    let i = 0
+    setTyped('')
+    const t = setInterval(() => {
+      i++
+      setTyped(SUBTITLE_FULL.slice(0, i))
+      if (i >= SUBTITLE_FULL.length) clearInterval(t)
+    }, 42)
+    return () => clearInterval(t)
+  }, [])
+
   return (
-    <div style={{ ...S.page, justifyContent:'center', alignItems:'center', textAlign:'center' }}>
-      <div style={{ animation:'wf-bob 2.2s ease-in-out infinite' }}>
-        <WeldonSVG size={100}/>
-      </div>
+    <div style={{
+      minHeight:'100vh', background:'#0a0a0a', display:'flex',
+      flexDirection:'column', justifyContent:'center', alignItems:'center',
+      textAlign:'center', padding:'20px 16px', position:'relative', overflow:'hidden',
+      fontFamily:"'Share Tech Mono',monospace",
+    }}>
+      {/* Ember particles */}
+      {EMBER_CONFIGS.map((e, i) => (
+        <div key={i} style={{
+          position:'absolute', left:e.left, top:e.top,
+          width:e.size, height:e.size, borderRadius:'50%',
+          background:e.color, boxShadow:`0 0 ${e.size*2}px ${e.color}`,
+          animation:e.anim, pointerEvents:'none', zIndex:1,
+        }}/>
+      ))}
+
+      {/* Radial glow behind title */}
       <div style={{
-        color:'#FF6600', fontSize:'1.9rem', fontWeight:'900',
-        fontFamily:"'Orbitron',monospace",
-        letterSpacing:'0.08em', marginTop:14,
-        animation:'wf-pulse-glow 2s ease-in-out infinite',
-      }}>
-        WELDON'S FORGE
-      </div>
-      <div style={{ color:'#FFB800', fontSize:'0.72rem', fontFamily:"'Orbitron',monospace",
-        letterSpacing:'0.18em', marginBottom:6, marginTop:4 }}>
-        ⚡ ENGLISH EDITION ⚡
-      </div>
-      <div style={{ color:'#555', fontSize:'0.7rem', maxWidth:260, marginBottom:32,
-        fontFamily:"'Share Tech Mono',monospace", lineHeight:1.6 }}>
-        Japanese Welding RPG Quiz<br/>for Foreign Trainees in Japan
-      </div>
-      <button onClick={onStart} className="wf-shine-btn"
-        style={{ ...S.btnPrimary, fontFamily:"'Orbitron',monospace",
-          fontSize:'0.95rem', padding:'14px 40px', letterSpacing:'0.1em' }}>
-        ⚡ START BATTLE
-      </button>
-      {totalXP > 0 && (
-        <div style={{ color:'#555', fontSize:'0.68rem', marginTop:14,
-          fontFamily:"'Share Tech Mono',monospace" }}>
-          Total XP: <span style={{ color:'#FFB800', fontFamily:"'Orbitron',monospace" }}>{totalXP}</span>
+        position:'absolute', top:'30%', left:'50%', transform:'translate(-50%,-50%)',
+        width:300, height:200,
+        background:'radial-gradient(ellipse, #FF660022 0%, transparent 70%)',
+        pointerEvents:'none', zIndex:1,
+      }}/>
+
+      <div style={{ position:'relative', zIndex:2 }}>
+        <div style={{ animation:'wf-bob 2.2s ease-in-out infinite' }}>
+          <WeldonSVG size={110}/>
         </div>
-      )}
-      <div style={{ color:'#2e2e2e', fontSize:'0.6rem', marginTop:20, maxWidth:260,
-        lineHeight:1.6, fontFamily:"'Share Tech Mono',monospace" }}>
-        Answer {WINS} correctly to win · {MISSES} misses = GAME OVER
+
+        {/* Main title — metallic orange gradient text */}
+        <div style={{
+          fontSize:'3.2rem', fontWeight:'900',
+          fontFamily:"'Orbitron',monospace",
+          letterSpacing:'0.06em', marginTop:16,
+          background:'linear-gradient(180deg, #FFB800 0%, #FF6600 40%, #CC2200 80%, #FF6600 100%)',
+          WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent',
+          backgroundClip:'text',
+          filter:'drop-shadow(0 0 12px #FF660088)',
+          animation:'wf-pulse-glow 2s ease-in-out infinite',
+          lineHeight:1.05,
+        }}>
+          WELDON'S<br/>FORGE
+        </div>
+
+        <div style={{ color:'#FFB800', fontSize:'0.75rem', fontFamily:"'Orbitron',monospace",
+          letterSpacing:'0.22em', marginBottom:8, marginTop:8,
+          textShadow:'0 0 10px #FFB80088' }}>
+          ⚡ ENGLISH EDITION ⚡
+        </div>
+
+        {/* Typewriter subtitle */}
+        <div style={{ color:'#666', fontSize:'0.68rem', maxWidth:280, marginBottom:36,
+          fontFamily:"'Share Tech Mono',monospace", lineHeight:1.7,
+          minHeight:'2.4em', textAlign:'center' }}>
+          {typed}<span style={{ animation:'wf-pulse-glow 0.8s ease-in-out infinite',
+            color:'#FF6600', fontSize:'0.8rem' }}>|</span>
+        </div>
+
+        {/* Glowing START BATTLE button */}
+        <button
+          onClick={onStart}
+          onMouseEnter={() => setBtnHover(true)}
+          onMouseLeave={() => setBtnHover(false)}
+          className="wf-shine-btn"
+          style={{
+            background: btnHover
+              ? 'linear-gradient(135deg,#FF8800,#FF3300)'
+              : 'linear-gradient(135deg,#FF6600,#CC2200)',
+            color:'#fff', border:'2px solid #FF880066', borderRadius:10,
+            padding:'16px 52px', fontWeight:'900',
+            cursor:'pointer', fontFamily:"'Orbitron',monospace",
+            fontSize:'1.05rem', letterSpacing:'0.14em',
+            animation:'wf-btn-glow 1.8s ease-in-out infinite',
+            transform: btnHover ? 'scale(1.05)' : 'scale(1)',
+            transition:'transform 0.15s, background 0.15s',
+            position:'relative',
+          }}>
+          ⚡ START BATTLE
+        </button>
+
+        {totalXP > 0 && (
+          <div style={{ color:'#444', fontSize:'0.68rem', marginTop:16,
+            fontFamily:"'Share Tech Mono',monospace" }}>
+            Total XP: <span style={{ color:'#FFB800', fontFamily:"'Orbitron',monospace",
+              textShadow:'0 0 8px #FFB80066' }}>{totalXP}</span>
+          </div>
+        )}
+        <div style={{ color:'#222', fontSize:'0.6rem', marginTop:18, maxWidth:260,
+          lineHeight:1.7, fontFamily:"'Share Tech Mono',monospace" }}>
+          Answer {WINS} correctly to win · {MISSES} misses = GAME OVER
+        </div>
       </div>
     </div>
   )
@@ -592,9 +713,18 @@ function Battle({
   if (!q) return null
   const OPTS = ['A','B','C','D']
 
+  // Body shake on player damage
+  useEffect(() => {
+    if (playerShake) {
+      document.body.style.animation = 'wf-body-shake 0.4s ease'
+      const t = setTimeout(() => { document.body.style.animation = '' }, 420)
+      return () => clearTimeout(t)
+    }
+  }, [playerShake])
+
   function optStyle(i) {
     const base = {
-      width:'100%', padding:'10px 14px', marginBottom:8,
+      width:'100%', padding:'11px 14px', marginBottom:8,
       background:'#1e1e1e', border:'1px solid #333',
       borderRadius:8, color:'#ddd', textAlign:'left',
       cursor: done ? 'default' : 'pointer',
@@ -602,12 +732,12 @@ function Battle({
       transition:'all 0.15s',
     }
     if (!done) return base
-    if (i === q.a)              return { ...base, background:'#0f2a0f', border:'1px solid #22c55e', color:'#86efac' }
-    if (i === sel && sel!==q.a) return { ...base, background:'#2a0f0f', border:'1px solid #ef4444', color:'#fca5a5' }
+    if (i === q.a)              return { ...base, background:'#0f2a0f', border:'1px solid #22c55e', color:'#86efac', boxShadow:'0 0 12px #22c55e44' }
+    if (i === sel && sel!==q.a) return { ...base, background:'#2a0f0f', border:'1px solid #ef4444', color:'#fca5a5', boxShadow:'0 0 12px #ef444444' }
     return { ...base, opacity:0.35 }
   }
 
-  const bg = bgFlash === 'correct' ? '#0a200a' : bgFlash === 'wrong' ? '#200a0a' : '#111'
+  const bg = bgFlash === 'correct' ? '#0a200a' : bgFlash === 'wrong' ? '#1a0505' : '#111'
 
   const monAnimStyle = monsterAnim === 'shake' ? 'wf-mshake 0.38s ease'
                      : monsterAnim === 'death' ? 'wf-mdeath 0.65s ease forwards'
@@ -619,6 +749,11 @@ function Battle({
     <div style={{ background:bg, minHeight:'100vh', fontFamily:'monospace',
       transition:'background 0.3s', paddingBottom:70 }}>
 
+      {/* Full-screen red flash on player damage */}
+      {bgFlash === 'wrong' && !pending && (
+        <div style={{ position:'fixed', inset:0, background:'#cc0000',
+          animation:'wf-red-flash 0.4s ease forwards', pointerEvents:'none', zIndex:490 }}/>
+      )}
       {/* Victory green flash overlay */}
       {pending === 'victory' && (
         <div style={{ position:'fixed', inset:0, background:'#00ff0055',
@@ -645,11 +780,12 @@ function Battle({
           <HPBar cur={pHP} max={P_HP} label="⚡ WELDON (YOU)"/>
           {floatPlayer && (
             <div key={floatPlayer.k} style={{
-              position:'absolute', top:'0%', right:'8px',
-              color:'#fca5a5', fontWeight:'bold', fontSize:'0.9rem',
-              fontFamily:'monospace', pointerEvents:'none',
-              animation:'wf-float 0.75s ease forwards',
-              textShadow:'0 0 10px #ef4444', whiteSpace:'nowrap',
+              position:'absolute', top:'50%', left:'50%',
+              color:'#ff4444', fontWeight:'900', fontSize:'2rem',
+              fontFamily:"'Orbitron',monospace", pointerEvents:'none',
+              animation:'wf-dmg-float 0.9s ease forwards',
+              textShadow:'0 0 20px #ef4444, 0 0 40px #cc000099', whiteSpace:'nowrap',
+              zIndex:50,
             }}>{floatPlayer.text}</div>
           )}
         </div>
@@ -658,11 +794,11 @@ function Battle({
           <HPBar cur={mHP} max={M_HP} label={mon.name}/>
           {floatMonster && (
             <div key={floatMonster.k} style={{
-              position:'absolute', top:'0%', right:'8px',
-              color:'#86efac', fontWeight:'bold', fontSize:'0.9rem',
-              fontFamily:'monospace', pointerEvents:'none',
-              animation:'wf-float 0.75s ease forwards',
-              textShadow:'0 0 10px #22c55e', whiteSpace:'nowrap',
+              position:'absolute', top:'10%', right:'12px',
+              color:'#4ade80', fontWeight:'900', fontSize:'1.2rem',
+              fontFamily:"'Orbitron',monospace", pointerEvents:'none',
+              animation:'wf-float 0.8s ease forwards',
+              textShadow:'0 0 16px #22c55e, 0 0 32px #22c55e66', whiteSpace:'nowrap',
             }}>{floatMonster.text}</div>
           )}
         </div>
@@ -707,20 +843,23 @@ function Battle({
         </div>
 
         {/* Question */}
-        <div style={{ background:'#1a1a1a', borderRadius:10, padding:'12px 14px', marginBottom:10 }}>
-          <div style={{ fontSize:'0.58rem', color:'#555', marginBottom:6,
-            fontFamily:"'Share Tech Mono',monospace" }}>
-            [{q.cat}]&nbsp;&nbsp;+{q.xp} XP if correct
+        <div style={{ background:'#161616', borderRadius:10, padding:'12px 14px', marginBottom:10,
+          borderLeft:'4px solid #FF6600', border:'1px solid #2a2a2a',
+          borderLeftWidth:4, borderLeftColor:'#FF6600', borderLeftStyle:'solid' }}>
+          <div style={{ fontSize:'0.58rem', color:'#FF660099', marginBottom:6,
+            fontFamily:"'Share Tech Mono',monospace", letterSpacing:'0.06em' }}>
+            [{q.cat}]&nbsp;&nbsp;<span style={{ color:'#FFB80088' }}>+{q.xp} XP if correct</span>
           </div>
-          <div style={{ color:'#efefef', fontSize:'0.82rem', lineHeight:1.55, marginBottom:12,
+          <div style={{ color:'#f0f0f0', fontSize:'0.84rem', lineHeight:1.6, marginBottom:14,
             fontFamily:"'Share Tech Mono',monospace" }}>
             {q.q}
           </div>
           {q.opts.map((opt, i) => (
             <button key={i}
-              className={done && i === q.a ? 'wf-correct-btn' : ''}
+              className={`wf-answer-btn${done && i === q.a ? ' wf-correct-btn' : ''}`}
               onClick={() => !done && onAnswer(i)} style={optStyle(i)}>
-              <span style={{ color:'#FF6600', fontWeight:'bold', marginRight:8 }}>{OPTS[i]}.</span>
+              <span style={{ color:'#FF6600', fontWeight:'bold', marginRight:8,
+                fontFamily:"'Orbitron',monospace", fontSize:'0.7rem' }}>{OPTS[i]}.</span>
               {opt}
             </button>
           ))}
@@ -787,19 +926,32 @@ function Victory({ stage, si, sessionXP, correct, miss, onContinue, onReview }) 
         <div style={{ position:'fixed', inset:0, background:'#00ff0066',
           animation:'wf-vflash 0.95s ease forwards', pointerEvents:'none', zIndex:100 }}/>
       )}
-      {/* Star particles */}
+      {/* Confetti explosion */}
       {[
-        { top:'18%', left:'18%', anim:'wf-star-a 1.1s 0.1s ease forwards' },
-        { top:'12%', left:'72%', anim:'wf-star-b 1.0s 0.2s ease forwards' },
-        { top:'30%', left:'88%', anim:'wf-star-c 0.9s 0.05s ease forwards' },
-        { top:'22%', left:'44%', anim:'wf-star-a 1.2s 0.3s ease forwards' },
-        { top:'15%', left:'58%', anim:'wf-star-b 0.95s 0.15s ease forwards' },
-        { top:'35%', left:'28%', anim:'wf-star-c 1.0s 0.25s ease forwards' },
-      ].map((s, idx) => (
-        <div key={idx} style={{ position:'fixed', top:s.top, left:s.left,
-          fontSize:'1.4rem', animation:s.anim, pointerEvents:'none', zIndex:50 }}>⭐</div>
+        { left:'10%', top:'5%',  color:'#FF6600', size:10, anim:'wf-conf-1 2.2s 0.0s ease-out forwards' },
+        { left:'22%', top:'8%',  color:'#FFB800', size:8,  anim:'wf-conf-2 2.5s 0.1s ease-out forwards' },
+        { left:'35%', top:'3%',  color:'#22c55e', size:12, anim:'wf-conf-3 2.0s 0.2s ease-out forwards' },
+        { left:'50%', top:'6%',  color:'#FF4400', size:9,  anim:'wf-conf-4 2.3s 0.05s ease-out forwards' },
+        { left:'63%', top:'4%',  color:'#FFB800', size:11, anim:'wf-conf-5 2.1s 0.3s ease-out forwards' },
+        { left:'75%', top:'7%',  color:'#22c55e', size:8,  anim:'wf-conf-1 2.4s 0.15s ease-out forwards' },
+        { left:'88%', top:'2%',  color:'#FF6600', size:10, anim:'wf-conf-2 2.6s 0.25s ease-out forwards' },
+        { left:'18%', top:'12%', color:'#4ade80', size:7,  anim:'wf-conf-3 1.9s 0.4s ease-out forwards' },
+        { left:'42%', top:'10%', color:'#FFB800', size:9,  anim:'wf-conf-4 2.2s 0.35s ease-out forwards' },
+        { left:'68%', top:'11%', color:'#FF6600', size:11, anim:'wf-conf-5 2.0s 0.1s ease-out forwards' },
+        { left:'82%', top:'9%',  color:'#22c55e', size:8,  anim:'wf-conf-1 2.5s 0.45s ease-out forwards' },
+        { left:'5%',  top:'14%', color:'#FFB800', size:10, anim:'wf-conf-2 2.3s 0.2s ease-out forwards' },
+        { left:'56%', top:'13%', color:'#FF4400', size:7,  anim:'wf-conf-3 2.1s 0.5s ease-out forwards' },
+        { left:'30%', top:'1%',  color:'#4ade80', size:12, anim:'wf-conf-4 2.4s 0.0s ease-out forwards' },
+        { left:'92%', top:'15%', color:'#FFB800', size:9,  anim:'wf-conf-5 2.2s 0.3s ease-out forwards' },
+      ].map((c, idx) => (
+        <div key={idx} style={{
+          position:'fixed', left:c.left, top:c.top,
+          width:c.size, height:c.size, background:c.color,
+          borderRadius:2, animation:c.anim, pointerEvents:'none', zIndex:50,
+          boxShadow:`0 0 ${c.size}px ${c.color}88`,
+        }}/>
       ))}
-      <div style={{ fontSize:72, marginBottom:8 }}>💥</div>
+      <div style={{ fontSize:80, marginBottom:8, animation:'wf-trophy-bounce 1.4s ease-in-out infinite' }}>🏆</div>
       <div style={{ color:'#22c55e', fontSize:'1.9rem', fontWeight:'900',
         fontFamily:"'Orbitron',monospace", letterSpacing:'0.08em',
         textShadow:'0 0 20px #22c55e88,0 0 40px #22c55e44', marginBottom:4 }}>VICTORY!</div>
@@ -885,8 +1037,26 @@ function Defeat({ si, correct, miss, onRetry, onQuit, onReview }) {
         <div style={{ position:'fixed', inset:0, background:'#330000',
           animation:'wf-doverlay 0.6s ease forwards', pointerEvents:'none', zIndex:100 }}/>
       )}
+      {/* Screen cracks overlay */}
+      <div style={{ position:'fixed', inset:0, pointerEvents:'none', zIndex:90, overflow:'hidden' }}>
+        <svg width="100%" height="100%" viewBox="0 0 480 900" preserveAspectRatio="xMidYMid slice"
+          style={{ opacity:0.25 }}>
+          <line x1="240" y1="0"   x2="80"  y2="300" stroke="#ff4444" strokeWidth="2"/>
+          <line x1="80"  y1="300" x2="160" y2="500" stroke="#ff4444" strokeWidth="1.5"/>
+          <line x1="160" y1="500" x2="40"  y2="900" stroke="#ff4444" strokeWidth="1"/>
+          <line x1="240" y1="0"   x2="380" y2="250" stroke="#ff6666" strokeWidth="1.5"/>
+          <line x1="380" y1="250" x2="320" y2="450" stroke="#ff6666" strokeWidth="1"/>
+          <line x1="320" y1="450" x2="440" y2="700" stroke="#ff6666" strokeWidth="0.8"/>
+          <line x1="120" y1="0"   x2="200" y2="200" stroke="#ff4444" strokeWidth="1"/>
+          <line x1="200" y1="200" x2="100" y2="380" stroke="#ff4444" strokeWidth="0.8"/>
+          <line x1="360" y1="0"   x2="280" y2="180" stroke="#ff6666" strokeWidth="1"/>
+          <line x1="280" y1="180" x2="400" y2="360" stroke="#ff6666" strokeWidth="0.7"/>
+          <line x1="80"  y1="300" x2="20"  y2="420" stroke="#ff4444" strokeWidth="1"/>
+          <line x1="380" y1="250" x2="460" y2="350" stroke="#ff6666" strokeWidth="0.8"/>
+        </svg>
+      </div>
       <div style={{ position:'relative', zIndex:1, display:'contents' }}>
-        <div style={{ fontSize:64, marginBottom:8 }}>💀</div>
+        <div style={{ fontSize:72, marginBottom:8, animation:'wf-skull-shake 0.6s ease' }}>💀</div>
         <div style={{ color:'#ef4444', fontSize:'1.9rem', fontWeight:'900',
           fontFamily:"'Orbitron',monospace", letterSpacing:'0.08em',
           textShadow:'0 0 20px #ef444488,0 0 40px #ef444433', marginBottom:4 }}>GAME OVER</div>
