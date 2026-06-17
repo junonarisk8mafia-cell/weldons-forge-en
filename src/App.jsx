@@ -96,8 +96,12 @@ const MONSTERS = [
       background-size:100% 40px;
       animation:wf-scanln 3s linear infinite;
     }
+    .wf-hp-ribs::after {
+      content:''; position:absolute; inset:0; pointer-events:none; border-radius:8px;
+      background:repeating-linear-gradient(90deg,transparent,transparent 7px,rgba(0,0,0,0.18) 7px,rgba(0,0,0,0.18) 8px);
+    }
     * { box-sizing:border-box; }
-    body { background:#111; margin:0; }
+    body { background:#0d0d0d; margin:0; }
   `
   document.head.appendChild(s)
 })()
@@ -328,10 +332,11 @@ function HPBar({ cur, max, label }) {
         <span>{label}</span>
         <span style={{ color:col, fontFamily:"'Orbitron',monospace", fontSize:'0.6rem' }}>{cur}/{max} HP</span>
       </div>
-      <div style={{ height:16, background:'#2a2a2a', borderRadius:8, overflow:'hidden',
-        boxShadow:'inset 0 2px 4px #00000066' }}>
+      <div style={{ height:16, background:'#1e1e1e', borderRadius:8, overflow:'hidden',
+        boxShadow:'inset 0 2px 4px #00000088', position:'relative' }}>
         <div style={{ height:'100%', width:`${pct}%`, borderRadius:8,
           transition:'width 0.4s ease', boxShadow:`0 0 10px ${col}99`, ...fill }}/>
+        <div className="wf-hp-ribs" style={{ position:'absolute', inset:0, pointerEvents:'none' }}/>
       </div>
     </div>
   )
@@ -371,7 +376,7 @@ function TitleScreen({ onStart, totalXP }) {
 
   return (
     <div style={{
-      minHeight:'100vh', background:'#0a0a0a', display:'flex',
+      minHeight:'100vh', background:'#080808', display:'flex',
       flexDirection:'column', justifyContent:'center', alignItems:'center',
       textAlign:'center', padding:'20px 16px', position:'relative', overflow:'hidden',
       fontFamily:"'Share Tech Mono',monospace",
@@ -519,8 +524,8 @@ function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack }) {
               onMouseLeave={() => setHovered(null)}
               disabled={locked}
               style={{
-                background: locked ? '#181818' : '#1e1e1e',
-                border:`1px solid ${locked ? '#2a2a2a' : isHov ? st.color : st.color+'88'}`,
+                background: locked ? '#111' : '#161616',
+                border:`1px solid ${locked ? '#1e1e1e' : isHov ? st.color : st.color+'44'}`,
                 borderRadius:10, padding:'12px 10px 10px', textAlign:'center',
                 cursor: locked ? 'not-allowed' : 'pointer',
                 opacity: locked ? 0.45 : 1,
@@ -588,248 +593,498 @@ function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack }) {
 }
 
 // ── SVG MONSTERS ─────────────────────────────────────────────
-function MonsterKinshi() { // Stage 1 — bureaucratic demon, red/orange
+function MonsterKinshi() {
   return (
     <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="k1-eye" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FFE066"/>
+          <stop offset="60%" stopColor="#FF6600"/>
+          <stop offset="100%" stopColor="#CC2200" stopOpacity="0"/>
+        </radialGradient>
+        <radialGradient id="k1-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#E85D04" stopOpacity="0.4"/>
+          <stop offset="100%" stopColor="#E85D04" stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="60" cy="60" rx="52" ry="52" fill="url(#k1-glow)"/>
+      {/* Tattered paper cape — back layer */}
+      <path d="M28 56 L20 62 L18 72 L14 78 L18 84 L15 92 L24 90 L22 80 L26 84 L30 80 L28 90 L36 90 L34 80 L38 56Z" fill="#f0e8cc" opacity="0.88"/>
+      <path d="M92 56 L100 62 L102 72 L106 78 L102 84 L105 92 L96 90 L98 80 L94 84 L90 80 L92 90 L84 90 L86 80 L82 56Z" fill="#f0e8cc" opacity="0.88"/>
+      {[64,68,72,76,80,84].map(y => <line key={y}   x1="20" y1={y} x2="34" y2={y} stroke="#ccc0a0" strokeWidth="0.6" opacity="0.6"/>)}
+      {[64,68,72,76,80,84].map(y => <line key={y+'r'} x1="86" y1={y} x2="100" y2={y} stroke="#ccc0a0" strokeWidth="0.6" opacity="0.6"/>)}
       {/* Body */}
-      <ellipse cx="60" cy="72" rx="22" ry="28" fill="#8B1A00"/>
-      {/* Head */}
-      <ellipse cx="60" cy="40" rx="20" ry="20" fill="#B22000"/>
-      {/* Horns */}
-      <polygon points="44,26 38,8 50,22" fill="#CC3300"/>
-      <polygon points="76,26 82,8 70,22" fill="#CC3300"/>
-      {/* Eyes — angry slants */}
-      <ellipse cx="52" cy="37" rx="5" ry="4" fill="#FF0000"/>
-      <ellipse cx="68" cy="37" rx="5" ry="4" fill="#FF0000"/>
-      <ellipse cx="52" cy="38" rx="2.5" ry="2" fill="#111"/>
-      <ellipse cx="68" cy="38" rx="2.5" ry="2" fill="#111"/>
-      {/* Angry brow lines */}
-      <line x1="47" y1="32" x2="57" y2="35" stroke="#FF4400" strokeWidth="2.5" strokeLinecap="round"/>
-      <line x1="73" y1="32" x2="63" y2="35" stroke="#FF4400" strokeWidth="2.5" strokeLinecap="round"/>
-      {/* Mouth */}
-      <path d="M52 48 Q60 44 68 48" stroke="#FF4400" strokeWidth="2" fill="none" strokeLinecap="round"/>
-      {/* Arms */}
-      <path d="M38 65 Q22 58 18 70" stroke="#8B1A00" strokeWidth="7" fill="none" strokeLinecap="round"/>
-      <path d="M82 65 Q98 58 102 70" stroke="#8B1A00" strokeWidth="7" fill="none" strokeLinecap="round"/>
-      {/* Stamp in right hand */}
-      <rect x="96" y="62" width="18" height="12" rx="2" fill="#CC0000"/>
-      <rect x="98" y="74" width="14" height="5" rx="1" fill="#AA0000"/>
-      {/* 禁止 circle on stamp */}
-      <circle cx="105" cy="68" r="4" fill="none" stroke="#FF6600" strokeWidth="1.5"/>
-      <line x1="102" y1="65" x2="108" y2="71" stroke="#FF6600" strokeWidth="1.5"/>
-      {/* Legs */}
-      <rect x="50" y="96" width="9" height="16" rx="3" fill="#701500"/>
-      <rect x="61" y="96" width="9" height="16" rx="3" fill="#701500"/>
-      {/* Glow */}
-      <ellipse cx="60" cy="115" rx="20" ry="4" fill="#FF330033"/>
-    </svg>
-  )
-}
-
-function MonsterGuraindaa() { // Stage 2 — grinder golem, blue/steel
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      {/* Body — steel box */}
-      <rect x="34" y="54" width="52" height="44" rx="4" fill="#1A3A5C"/>
-      <rect x="38" y="58" width="44" height="36" rx="3" fill="#1E4C7A"/>
-      {/* Rivet details */}
-      <circle cx="42" cy="62" r="2" fill="#4A8CC4"/>
-      <circle cx="78" cy="62" r="2" fill="#4A8CC4"/>
-      <circle cx="42" cy="88" r="2" fill="#4A8CC4"/>
-      <circle cx="78" cy="88" r="2" fill="#4A8CC4"/>
-      {/* Head — hexagonal */}
-      <polygon points="60,10 78,20 78,40 60,50 42,40 42,20" fill="#1A3A5C"/>
-      <polygon points="60,14 75,22 75,38 60,46 45,38 45,22" fill="#1E4C7A"/>
-      {/* Eye — single cyclops grinder wheel */}
-      <circle cx="60" cy="30" r="11" fill="#0A1E35"/>
-      <circle cx="60" cy="30" r="9" fill="none" stroke="#4A8CC4" strokeWidth="2"/>
-      <circle cx="60" cy="30" r="5" fill="#2A6BAA"/>
-      <circle cx="60" cy="30" r="2" fill="#88CCFF"/>
-      {/* Grinder teeth on eye */}
-      {[0,45,90,135,180,225,270,315].map(a=>{
-        const r=10, x=60+r*Math.cos(a*Math.PI/180), y=30+r*Math.sin(a*Math.PI/180)
-        return <rect key={a} x={x-1.5} y={y-1.5} width="3" height="3" rx="0.5" fill="#4A8CC4"
-          transform={`rotate(${a},${x},${y})`}/>
-      })}
-      {/* Arms — angle grinder arms */}
-      <rect x="6" y="58" width="28" height="8" rx="3" fill="#1A3A5C"/>
-      <rect x="4" y="60" width="10" height="4" rx="2" fill="#4A8CC4"/>
-      <circle cx="34" cy="62" r="7" fill="#1A3A5C"/>
-      <circle cx="34" cy="62" r="5" fill="none" stroke="#4A8CC4" strokeWidth="2"/>
-      <rect x="86" y="58" width="28" height="8" rx="3" fill="#1A3A5C"/>
-      <rect x="106" y="60" width="10" height="4" rx="2" fill="#4A8CC4"/>
-      <circle cx="86" cy="62" r="7" fill="#1A3A5C"/>
-      <circle cx="86" cy="62" r="5" fill="none" stroke="#4A8CC4" strokeWidth="2"/>
-      {/* Legs */}
-      <rect x="40" y="98" width="14" height="16" rx="3" fill="#1A3A5C"/>
-      <rect x="66" y="98" width="14" height="16" rx="3" fill="#1A3A5C"/>
-      {/* Sparks */}
-      <line x1="30" y1="62" x2="22" y2="55" stroke="#88CCFF" strokeWidth="1.5" opacity="0.8"/>
-      <line x1="30" y1="64" x2="20" y2="66" stroke="#88CCFF" strokeWidth="1" opacity="0.6"/>
-      <ellipse cx="60" cy="116" rx="20" ry="4" fill="#1E4C7A44"/>
-    </svg>
-  )
-}
-
-function MonsterGatagata() { // Stage 3 — wobbly ghost, amber/yellow
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      {/* Ghost body — wobbly bead shape */}
-      <path d="M30 110 Q25 90 28 70 Q20 50 30 35 Q40 15 60 12 Q80 15 90 35 Q100 50 92 70 Q95 90 90 110 Q82 102 75 108 Q68 102 60 108 Q52 102 45 108 Q38 102 30 110Z"
-        fill="#D97706" opacity="0.72"/>
-      {/* Bead ripple lines across body */}
-      <path d="M32 60 Q60 54 88 60" stroke="#FCD34D" strokeWidth="2.5" fill="none" opacity="0.6" strokeLinecap="round"/>
-      <path d="M30 73 Q60 67 90 73" stroke="#FCD34D" strokeWidth="2" fill="none" opacity="0.5" strokeLinecap="round"/>
-      <path d="M31 86 Q60 80 89 86" stroke="#FCD34D" strokeWidth="1.5" fill="none" opacity="0.4" strokeLinecap="round"/>
-      {/* Hollow eyes */}
-      <ellipse cx="46" cy="40" rx="7" ry="9" fill="#1a0a00" opacity="0.9"/>
-      <ellipse cx="74" cy="40" rx="7" ry="9" fill="#1a0a00" opacity="0.9"/>
-      <ellipse cx="46" cy="41" rx="3.5" ry="5" fill="#FF9500" opacity="0.7"/>
-      <ellipse cx="74" cy="41" rx="3.5" ry="5" fill="#FF9500" opacity="0.7"/>
-      {/* Jagged mouth */}
-      <path d="M46 56 L50 52 L54 56 L58 52 L62 56 L66 52 L70 56 L74 52 L74 58 L46 58Z"
-        fill="#1a0a00" opacity="0.8"/>
-      {/* Sparks around ghost */}
-      <line x1="18" y1="35" x2="24" y2="28" stroke="#FCD34D" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="14" y1="42" x2="22" y2="40" stroke="#FF9500" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="102" y1="35" x2="96" y2="28" stroke="#FCD34D" strokeWidth="2" strokeLinecap="round"/>
-      <line x1="106" y1="42" x2="98" y2="40" stroke="#FF9500" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="20" y1="55" x2="26" y2="50" stroke="#FCD34D" strokeWidth="1.5" strokeLinecap="round"/>
-      <line x1="100" y1="55" x2="94" y2="50" stroke="#FCD34D" strokeWidth="1.5" strokeLinecap="round"/>
-      {/* Top wisp */}
-      <path d="M60 12 Q56 2 60 0 Q64 2 60 12" fill="#FCD34D" opacity="0.6"/>
-      <ellipse cx="60" cy="116" rx="20" ry="4" fill="#D9770633"/>
-    </svg>
-  )
-}
-
-function MonsterKaisaki() { // Stage 4 — armored knight, green/silver
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      {/* Legs */}
-      <rect x="42" y="90" width="14" height="22" rx="3" fill="#2D4A2D"/>
-      <rect x="64" y="90" width="14" height="22" rx="3" fill="#2D4A2D"/>
-      <rect x="40" y="102" width="18" height="6" rx="2" fill="#3D6B3D"/>
-      <rect x="62" y="102" width="18" height="6" rx="2" fill="#3D6B3D"/>
-      {/* Body armor */}
-      <rect x="30" y="50" width="60" height="44" rx="5" fill="#2D4A2D"/>
-      <rect x="34" y="54" width="52" height="36" rx="4" fill="#3D6B3D"/>
-      {/* Chest plate — V-groove symbol */}
-      <polygon points="60,58 72,68 60,78 48,68" fill="#2D4A2D" stroke="#86efac" strokeWidth="1.5"/>
-      <line x1="60" y1="58" x2="60" y2="78" stroke="#86efac" strokeWidth="1" opacity="0.6"/>
-      {/* Shoulder pauldrons */}
-      <ellipse cx="30" cy="58" rx="12" ry="8" fill="#3D6B3D"/>
-      <ellipse cx="90" cy="58" rx="12" ry="8" fill="#3D6B3D"/>
-      {/* Helmet */}
-      <rect x="36" y="16" width="48" height="38" rx="8" fill="#2D4A2D"/>
-      <rect x="40" y="20" width="40" height="30" rx="6" fill="#3D6B3D"/>
-      {/* Visor slit */}
-      <rect x="40" y="34" width="40" height="7" rx="2" fill="#0D1F0D"/>
-      <line x1="42" y1="37" x2="78" y2="37" stroke="#86efac" strokeWidth="1.5" opacity="0.8"/>
-      {/* Eyes behind visor */}
-      <ellipse cx="51" cy="37" rx="4" ry="2.5" fill="#22c55e" opacity="0.9"/>
-      <ellipse cx="69" cy="37" rx="4" ry="2.5" fill="#22c55e" opacity="0.9"/>
-      {/* Groove sword (right arm) */}
-      <rect x="92" y="30" width="7" height="58" rx="2" fill="#888"/>
-      <polygon points="95.5,18 88,30 103,30" fill="#AAA"/>
-      {/* V-groove bevel on sword */}
-      <path d="M92 40 L99 52 L92 64 L99 76" stroke="#22c55e" strokeWidth="1.5" fill="none" opacity="0.8"/>
-      {/* Welding shield (left arm) */}
-      <rect x="4" y="52" width="22" height="30" rx="4" fill="#1A3A1A"/>
-      <rect x="6" y="54" width="18" height="26" rx="3" fill="#2D4A2D"/>
-      <ellipse cx="15" cy="67" rx="6" ry="8" fill="#0a1f0a" stroke="#22c55e" strokeWidth="1.5"/>
-      <ellipse cx="15" cy="67" rx="3" ry="4" fill="#22c55e" opacity="0.4"/>
-      <ellipse cx="60" cy="116" rx="22" ry="4" fill="#3D6B3D44"/>
-    </svg>
-  )
-}
-
-function MonsterBuroohoru() { // Stage 5 — porous void beast, purple/dark
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      {/* Main body — dark amorphous */}
-      <ellipse cx="60" cy="68" rx="34" ry="38" fill="#2D1A4A"/>
-      <ellipse cx="60" cy="35" rx="24" ry="22" fill="#3B2260"/>
-      {/* Porosity holes scattered across body */}
-      <circle cx="46" cy="60" r="7" fill="#0D0D1A"/>
-      <circle cx="74" cy="55" r="9" fill="#0D0D1A"/>
-      <circle cx="52" cy="82" r="6" fill="#0D0D1A"/>
-      <circle cx="72" cy="78" r="5" fill="#0D0D1A"/>
-      <circle cx="60" cy="68" r="4" fill="#0D0D1A"/>
-      <circle cx="40" cy="75" r="4" fill="#0D0D1A"/>
-      <circle cx="80" cy="90" r="3.5" fill="#0D0D1A"/>
-      {/* Void glow inside holes */}
-      <circle cx="46" cy="60" r="4" fill="#7C3AED" opacity="0.4"/>
-      <circle cx="74" cy="55" r="5" fill="#7C3AED" opacity="0.4"/>
-      <circle cx="52" cy="82" r="3" fill="#9333EA" opacity="0.35"/>
-      <circle cx="72" cy="78" r="2.5" fill="#7C3AED" opacity="0.35"/>
-      {/* Eyes — glowing purple voids */}
-      <circle cx="50" cy="30" r="8" fill="#0D0D1A"/>
-      <circle cx="70" cy="30" r="8" fill="#0D0D1A"/>
-      <circle cx="50" cy="30" r="5" fill="#7C3AED" opacity="0.8"/>
-      <circle cx="70" cy="30" r="5" fill="#7C3AED" opacity="0.8"/>
-      <circle cx="50" cy="30" r="2" fill="#D8B4FE"/>
-      <circle cx="70" cy="30" r="2" fill="#D8B4FE"/>
-      {/* Ragged maw */}
-      <path d="M44 46 Q60 38 76 46" stroke="#D8B4FE" strokeWidth="1.5" fill="none" opacity="0.7"/>
-      <path d="M44 46 L48 52 L52 46 L56 52 L60 46 L64 52 L68 46 L72 52 L76 46"
-        stroke="#9333EA" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
-      {/* Void tendrils */}
-      <path d="M30 70 Q18 60 14 72" stroke="#7C3AED" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.7"/>
-      <path d="M90 70 Q102 60 106 72" stroke="#7C3AED" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.7"/>
-      <path d="M38 94 Q28 102 26 110" stroke="#7C3AED" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.6"/>
-      <path d="M82 94 Q92 102 94 110" stroke="#7C3AED" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.6"/>
-      {/* Aura */}
-      <ellipse cx="60" cy="116" rx="22" ry="4" fill="#7C3AED33"/>
-    </svg>
-  )
-}
-
-function MonsterShikaku() { // Stage 6 — certification dragon, red/gold
-  return (
-    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-      {/* Tail */}
-      <path d="M80 95 Q100 100 112 90 Q118 82 108 78" stroke="#8B0000" strokeWidth="8" fill="none" strokeLinecap="round"/>
-      <path d="M108 78 Q114 72 110 68" stroke="#8B0000" strokeWidth="6" fill="none" strokeLinecap="round"/>
-      {/* Body */}
-      <ellipse cx="58" cy="72" rx="28" ry="32" fill="#8B0000"/>
-      <ellipse cx="58" cy="72" rx="22" ry="26" fill="#A31515"/>
-      {/* Scroll-scale texture on body */}
-      <path d="M38 62 Q58 56 78 62" stroke="#CC2200" strokeWidth="1.5" fill="none" opacity="0.6"/>
-      <path d="M36 72 Q58 66 80 72" stroke="#CC2200" strokeWidth="1.5" fill="none" opacity="0.6"/>
-      <path d="M38 82 Q58 76 78 82" stroke="#CC2200" strokeWidth="1.5" fill="none" opacity="0.5"/>
-      {/* Wings — scroll-shaped */}
-      <path d="M30 55 Q10 38 6 20 Q12 16 18 22 Q14 36 30 48" fill="#6B0000" opacity="0.9"/>
-      <path d="M30 55 Q16 42 14 26 Q18 22 22 26 Q20 38 30 48" fill="#8B0000"/>
-      <path d="M86 55 Q106 38 114 20 Q108 16 102 22 Q106 36 90 48" fill="#6B0000" opacity="0.9"/>
-      <path d="M86 55 Q100 42 102 26 Q98 22 94 26 Q96 38 86 48" fill="#8B0000"/>
+      <path d="M34 56 L30 96 L90 96 L86 56 L74 48 L46 48Z" fill="#8B2200"/>
+      <path d="M38 60 L35 92 L85 92 L82 60 L72 53 L48 53Z" fill="#A82A00"/>
+      <line x1="60" y1="54" x2="58" y2="90" stroke="#7B1A00" strokeWidth="1.5" opacity="0.7"/>
+      <line x1="48" y1="56" x2="46" y2="90" stroke="#7B1A00" strokeWidth="1" opacity="0.5"/>
+      <line x1="72" y1="56" x2="74" y2="90" stroke="#7B1A00" strokeWidth="1" opacity="0.5"/>
+      {/* Right arm — raised, holding stamp */}
+      <path d="M82 62 Q98 52 104 40" stroke="#8B2200" strokeWidth="9" fill="none" strokeLinecap="round"/>
+      <path d="M82 62 Q98 52 104 40" stroke="#AA2800" strokeWidth="6" fill="none" strokeLinecap="round"/>
+      <rect x="100" y="22" width="14" height="20" rx="2" fill="#CC0000"/>
+      <rect x="102" y="42" width="10" height="6" rx="1" fill="#AA0000"/>
+      <circle cx="107" cy="30" r="8" fill="#EE0000"/>
+      <circle cx="107" cy="30" r="7" fill="none" stroke="#fff" strokeWidth="2.5"/>
+      <line x1="102" y1="25" x2="112" y2="35" stroke="#fff" strokeWidth="2.5"/>
+      <circle cx="107" cy="30" r="9" fill="none" stroke="#FF440044" strokeWidth="3"/>
+      {/* Left arm — claw */}
+      <path d="M38 62 Q22 70 16 80" stroke="#8B2200" strokeWidth="9" fill="none" strokeLinecap="round"/>
+      <path d="M38 62 Q22 70 16 80" stroke="#AA2800" strokeWidth="6" fill="none" strokeLinecap="round"/>
+      <path d="M16 80 L10 76 M16 80 L12 86 M16 80 L20 86" stroke="#CC4400" strokeWidth="2" strokeLinecap="round"/>
       {/* Neck */}
-      <rect x="46" y="28" width="24" height="24" rx="6" fill="#8B0000"/>
+      <rect x="46" y="40" width="28" height="12" rx="3" fill="#8B2200"/>
       {/* Head */}
-      <ellipse cx="58" cy="22" rx="22" ry="18" fill="#A31515"/>
-      {/* Horns — scroll rolls */}
-      <path d="M42 10 Q36 2 42 0 Q48 2 44 10" fill="#FFB800"/>
-      <path d="M74 10 Q80 2 74 0 Q68 2 76 10" fill="#FFB800"/>
-      {/* Eyes — stamp red */}
-      <ellipse cx="50" cy="20" rx="6" ry="5" fill="#0D0000"/>
-      <ellipse cx="66" cy="20" rx="6" ry="5" fill="#0D0000"/>
-      <ellipse cx="50" cy="20" rx="3.5" ry="3" fill="#FF0000"/>
-      <ellipse cx="66" cy="20" rx="3.5" ry="3" fill="#FF0000"/>
-      <circle cx="50" cy="20" r="1.5" fill="#FFB800"/>
-      <circle cx="66" cy="20" r="1.5" fill="#FFB800"/>
+      <path d="M26 34 Q28 10 60 8 Q92 10 94 34 L90 48 L30 48Z" fill="#C42C00"/>
+      <path d="M30 36 Q32 14 60 12 Q88 14 90 36 L87 46 L33 46Z" fill="#D93300"/>
+      {/* Horns */}
+      <polygon points="40,30 30,2 52,24" fill="#E85D04"/>
+      <polygon points="40,30 30,2 52,24" fill="none" stroke="#FF8844" strokeWidth="0.8" opacity="0.6"/>
+      <polygon points="80,30 90,2 68,24" fill="#E85D04"/>
+      <polygon points="80,30 90,2 68,24" fill="none" stroke="#FF8844" strokeWidth="0.8" opacity="0.6"/>
+      <polygon points="50,24 44,10 58,22" fill="#CC4400"/>
+      <polygon points="70,24 76,10 62,22" fill="#CC4400"/>
+      {/* Eyes */}
+      <ellipse cx="46" cy="30" rx="9" ry="7" fill="#E85D0433"/>
+      <ellipse cx="74" cy="30" rx="9" ry="7" fill="#E85D0433"/>
+      <ellipse cx="46" cy="30" rx="7" ry="5" fill="url(#k1-eye)"/>
+      <ellipse cx="74" cy="30" rx="7" ry="5" fill="url(#k1-eye)"/>
+      <ellipse cx="46" cy="30" rx="3" ry="2.2" fill="#FFE066" opacity="0.9"/>
+      <ellipse cx="74" cy="30" rx="3" ry="2.2" fill="#FFE066" opacity="0.9"/>
+      <ellipse cx="46" cy="30" rx="1" ry="2" fill="#220000"/>
+      <ellipse cx="74" cy="30" rx="1" ry="2" fill="#220000"/>
+      <path d="M36 24 L50 28" stroke="#5C0000" strokeWidth="3" strokeLinecap="round"/>
+      <path d="M84 24 L70 28" stroke="#5C0000" strokeWidth="3" strokeLinecap="round"/>
+      {/* Grin */}
+      <path d="M38 40 Q60 50 82 40 L80 46 Q60 56 40 46Z" fill="#1a0000"/>
+      {[42,48,54,60,66,72,78].map(x => <rect key={x} x={x} y={40} width="3.5" height="5" rx="0.5" fill="#fff" opacity="0.9"/>)}
+      {/* Legs */}
+      <rect x="42" y="93" width="13" height="20" rx="3" fill="#6B1800"/>
+      <rect x="65" y="93" width="13" height="20" rx="3" fill="#6B1800"/>
+      <rect x="40" y="109" width="17" height="5" rx="2" fill="#8B2200"/>
+      <rect x="63" y="109" width="17" height="5" rx="2" fill="#8B2200"/>
+      <ellipse cx="60" cy="116" rx="26" ry="3.5" fill="#E85D0420"/>
+    </svg>
+  )
+}
+
+function MonsterGuraindaa() {
+  const discTeeth = (cx, cy, r, n, fill) =>
+    Array.from({length: n}, (_, i) => {
+      const a = (i / n) * Math.PI * 2
+      const x = cx + r * Math.cos(a)
+      const y = cy + r * Math.sin(a)
+      return <rect key={i} x={x-2} y={y-2} width="4" height="4" rx="0.5" fill={fill}
+        transform={`rotate(${(i/n)*360},${x},${y})`}/>
+    })
+  return (
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="k2-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#1565C0" stopOpacity="0.4"/>
+          <stop offset="100%" stopColor="#1565C0" stopOpacity="0"/>
+        </radialGradient>
+        <linearGradient id="k2-metal" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#2A6BAA"/>
+          <stop offset="100%" stopColor="#0D3060"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="60" cy="60" rx="52" ry="52" fill="url(#k2-glow)"/>
+      {/* Legs */}
+      <rect x="38" y="92" width="16" height="22" rx="3" fill="#0D3060"/>
+      <rect x="66" y="92" width="16" height="22" rx="3" fill="#0D3060"/>
+      <rect x="36" y="104" width="20" height="6" rx="2" fill="#1565C0"/>
+      <rect x="64" y="104" width="20" height="6" rx="2" fill="#1565C0"/>
+      <circle cx="46" cy="96" r="1.5" fill="#4A8CC4"/>
+      <circle cx="74" cy="96" r="1.5" fill="#4A8CC4"/>
+      {/* Disc torso */}
+      <ellipse cx="60" cy="90" rx="26" ry="7" fill="#1A3A5C"/>
+      <ellipse cx="60" cy="90" rx="24" ry="6" fill="url(#k2-metal)"/>
+      {discTeeth(60, 90, 25, 16, '#4A8CC4')}
+      <ellipse cx="60" cy="78" rx="24" ry="7" fill="#1A3A5C"/>
+      <ellipse cx="60" cy="78" rx="22" ry="6" fill="url(#k2-metal)"/>
+      {discTeeth(60, 78, 23, 14, '#4A8CC4')}
+      <ellipse cx="60" cy="66" rx="26" ry="7" fill="#1A3A5C"/>
+      <ellipse cx="60" cy="66" rx="24" ry="6" fill="url(#k2-metal)"/>
+      {discTeeth(60, 66, 25, 16, '#5A9CD4')}
+      <ellipse cx="60" cy="54" rx="28" ry="8" fill="#1A3A5C"/>
+      <ellipse cx="60" cy="54" rx="26" ry="7" fill="url(#k2-metal)"/>
+      {discTeeth(60, 54, 27, 18, '#5A9CD4')}
+      <circle cx="60" cy="90" r="4" fill="#0A1E35"/>
+      <circle cx="60" cy="90" r="2.5" fill="#4A8CC4"/>
+      <circle cx="60" cy="78" r="4" fill="#0A1E35"/>
+      <circle cx="60" cy="78" r="2.5" fill="#4A8CC4"/>
+      <circle cx="60" cy="66" r="4" fill="#0A1E35"/>
+      <circle cx="60" cy="66" r="2.5" fill="#4A8CC4"/>
+      <circle cx="60" cy="54" r="5" fill="#0A1E35"/>
+      <circle cx="60" cy="54" r="3" fill="#4A8CC4"/>
+      {/* Shoulder grinding wheels */}
+      <circle cx="28" cy="58" r="14" fill="#1A3A5C"/>
+      <circle cx="28" cy="58" r="12" fill="url(#k2-metal)"/>
+      {discTeeth(28, 58, 13, 10, '#4A8CC4')}
+      <circle cx="28" cy="58" r="5" fill="#0A1E35"/>
+      <circle cx="28" cy="58" r="3" fill="#88CCFF"/>
+      <circle cx="92" cy="58" r="14" fill="#1A3A5C"/>
+      <circle cx="92" cy="58" r="12" fill="url(#k2-metal)"/>
+      {discTeeth(92, 58, 13, 10, '#4A8CC4')}
+      <circle cx="92" cy="58" r="5" fill="#0A1E35"/>
+      <circle cx="92" cy="58" r="3" fill="#88CCFF"/>
+      {/* Arms */}
+      <rect x="6" y="54" width="22" height="9" rx="4" fill="#0D3060"/>
+      <rect x="8" y="56" width="18" height="5" rx="2" fill="#1565C0"/>
+      <circle cx="8" cy="58" r="5" fill="#0D3060"/>
+      <circle cx="8" cy="58" r="3.5" fill="#1565C0" stroke="#4A8CC4" strokeWidth="1"/>
+      <rect x="92" y="54" width="22" height="9" rx="4" fill="#0D3060"/>
+      <rect x="92" y="56" width="18" height="5" rx="2" fill="#1565C0"/>
+      <circle cx="112" cy="58" r="5" fill="#0D3060"/>
+      <circle cx="112" cy="58" r="3.5" fill="#1565C0" stroke="#4A8CC4" strokeWidth="1"/>
+      {/* Head — large grinding wheel */}
+      <circle cx="60" cy="28" r="22" fill="#1A3A5C"/>
+      <circle cx="60" cy="28" r="20" fill="url(#k2-metal)"/>
+      {discTeeth(60, 28, 21, 18, '#5A9CD4')}
+      <circle cx="60" cy="28" r="8" fill="#0A1E35"/>
+      <circle cx="60" cy="28" r="6" fill="#1565C0" stroke="#4A8CC4" strokeWidth="1.5"/>
+      {/* Spark eyes */}
+      <ellipse cx="52" cy="26" rx="4" ry="3" fill="#0A1E35"/>
+      <ellipse cx="68" cy="26" rx="4" ry="3" fill="#0A1E35"/>
+      <ellipse cx="52" cy="26" rx="3" ry="2" fill="#88CCFF"/>
+      <ellipse cx="68" cy="26" rx="3" ry="2" fill="#88CCFF"/>
+      <ellipse cx="52" cy="26" rx="1.5" ry="1" fill="#fff"/>
+      <ellipse cx="68" cy="26" rx="1.5" ry="1" fill="#fff"/>
+      <line x1="48" y1="24" x2="40" y2="18" stroke="#88CCFF" strokeWidth="1.5" opacity="0.9"/>
+      <line x1="48" y1="26" x2="38" y2="24" stroke="#4A8CC4" strokeWidth="1" opacity="0.8"/>
+      <line x1="50" y1="23" x2="44" y2="14" stroke="#fff" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="72" y1="24" x2="80" y2="18" stroke="#88CCFF" strokeWidth="1.5" opacity="0.9"/>
+      <line x1="72" y1="26" x2="82" y2="24" stroke="#4A8CC4" strokeWidth="1" opacity="0.8"/>
+      <line x1="70" y1="23" x2="76" y2="14" stroke="#fff" strokeWidth="0.8" opacity="0.7"/>
+      <circle cx="40" cy="18" r="1.2" fill="#88CCFF" opacity="0.9"/>
+      <circle cx="38" cy="24" r="0.9" fill="#fff" opacity="0.8"/>
+      <circle cx="80" cy="18" r="1.2" fill="#88CCFF" opacity="0.9"/>
+      <circle cx="82" cy="24" r="0.9" fill="#fff" opacity="0.8"/>
+      {/* Grill mouth */}
+      <rect x="48" y="32" width="24" height="9" rx="2" fill="#0A1E35"/>
+      {[34,36.5,39].map(y => <rect key={y} x="49" y={y} width="22" height="1.5" rx="0.5" fill="#4A8CC4" opacity="0.7"/>)}
+      <ellipse cx="60" cy="116" rx="26" ry="3.5" fill="#1565C020"/>
+    </svg>
+  )
+}
+
+function MonsterGatagata() {
+  return (
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="k3-body" cx="50%" cy="40%" r="55%">
+          <stop offset="0%" stopColor="#FCD34D" stopOpacity="0.6"/>
+          <stop offset="60%" stopColor="#D97706" stopOpacity="0.45"/>
+          <stop offset="100%" stopColor="#92400E" stopOpacity="0.1"/>
+        </radialGradient>
+        <radialGradient id="k3-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#D97706" stopOpacity="0.35"/>
+          <stop offset="100%" stopColor="#D97706" stopOpacity="0"/>
+        </radialGradient>
+        <radialGradient id="k3-eye" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FF9500" stopOpacity="0.9"/>
+          <stop offset="100%" stopColor="#D97706" stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="60" cy="60" rx="52" ry="52" fill="url(#k3-glow)"/>
+      {/* Ghost body — wobbly like bad weld bead */}
+      <path d="M22 108 Q18 88 20 68 Q14 50 18 34 Q24 14 42 8 Q60 4 78 8 Q96 14 102 34 Q106 50 100 68 Q102 88 98 108 Q88 98 80 104 Q72 98 64 106 Q56 98 48 106 Q40 98 32 104 Q24 98 22 108Z"
+        fill="#D97706" opacity="0.15"/>
+      <path d="M24 106 Q19 86 22 66 Q16 48 22 32 Q28 12 46 8 Q60 5 74 8 Q92 12 98 32 Q104 48 98 66 Q101 86 96 106 Q88 96 80 102 Q72 96 64 104 Q56 96 48 104 Q40 96 32 102 Q26 96 24 106Z"
+        fill="url(#k3-body)"/>
+      {/* Weld-bead ripple lines */}
+      <path d="M26 55 Q34 48 44 52 Q52 56 60 50 Q68 44 78 50 Q86 54 94 50" stroke="#FCD34D" strokeWidth="2.5" fill="none" opacity="0.5" strokeLinecap="round"/>
+      <path d="M24 68 Q32 61 44 65 Q54 69 62 63 Q70 57 82 63 Q90 67 96 62" stroke="#FCD34D" strokeWidth="2" fill="none" opacity="0.4" strokeLinecap="round"/>
+      <path d="M25 81 Q35 74 46 78 Q56 82 64 76 Q72 70 84 76 Q92 80 96 75" stroke="#FCD34D" strokeWidth="1.5" fill="none" opacity="0.35" strokeLinecap="round"/>
+      {/* Spatter lumps */}
+      <circle cx="20" cy="58" r="6" fill="#D97706" opacity="0.4"/>
+      <circle cx="100" cy="62" r="7" fill="#D97706" opacity="0.4"/>
+      <circle cx="18" cy="74" r="5" fill="#D97706" opacity="0.3"/>
+      <circle cx="102" cy="78" r="5" fill="#D97706" opacity="0.3"/>
+      {/* Wavy arms */}
+      <path d="M24 68 Q10 60 6 54 Q2 48 8 44 Q12 40 16 46" stroke="#D97706" strokeWidth="7" fill="none" strokeLinecap="round" opacity="0.7"/>
+      <path d="M16 46 L10 42 M16 46 L12 52 M16 46 L20 40" stroke="#FCD34D" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
+      <path d="M96 68 Q110 60 114 54 Q118 48 112 44 Q108 40 104 46" stroke="#D97706" strokeWidth="7" fill="none" strokeLinecap="round" opacity="0.7"/>
+      <path d="M104 46 L110 42 M104 46 L108 52 M104 46 L100 40" stroke="#FCD34D" strokeWidth="1.5" strokeLinecap="round" opacity="0.8"/>
+      {/* Hollow eye sockets */}
+      <ellipse cx="44" cy="36" rx="10" ry="12" fill="#1a0800" opacity="0.92"/>
+      <ellipse cx="76" cy="36" rx="10" ry="12" fill="#1a0800" opacity="0.92"/>
+      <ellipse cx="44" cy="37" rx="6" ry="8" fill="url(#k3-eye)"/>
+      <ellipse cx="76" cy="37" rx="6" ry="8" fill="url(#k3-eye)"/>
+      <ellipse cx="44" cy="38" rx="3" ry="4.5" fill="#FF9500" opacity="0.6"/>
+      <ellipse cx="76" cy="38" rx="3" ry="4.5" fill="#FF9500" opacity="0.6"/>
+      <ellipse cx="44" cy="38" rx="1.5" ry="2.5" fill="#050200"/>
+      <ellipse cx="76" cy="38" rx="1.5" ry="2.5" fill="#050200"/>
+      {/* Jagged mouth */}
+      <path d="M38 58 L42 52 L46 58 L50 52 L54 58 L58 52 L62 58 L66 52 L70 58 L74 52 L78 58 L78 64 L38 64Z" fill="#1a0800" opacity="0.9"/>
+      <path d="M40 62 Q50 58 60 62 Q70 58 76 62" stroke="#FF9500" strokeWidth="1" fill="none" opacity="0.6"/>
+      {/* Floating sparks */}
+      {[{x:14,y:30,r:1.8,c:'#FCD34D'},{x:8,y:42,r:1.2,c:'#FF9500'},{x:106,y:32,r:1.8,c:'#FCD34D'},{x:112,y:44,r:1.2,c:'#FF9500'},{x:18,y:18,r:1.4,c:'#FFE066'},{x:102,y:20,r:1.4,c:'#FFE066'},{x:30,y:10,r:1.0,c:'#FCD34D'},{x:90,y:12,r:1.0,c:'#FCD34D'},{x:60,y:4,r:1.5,c:'#FFB800'}].map((s,i) => <circle key={i} cx={s.x} cy={s.y} r={s.r} fill={s.c} opacity="0.85"/>)}
+      <line x1="14" y1="30" x2="20" y2="24" stroke="#FCD34D" strokeWidth="1.2" opacity="0.7"/>
+      <line x1="106" y1="32" x2="100" y2="26" stroke="#FCD34D" strokeWidth="1.2" opacity="0.7"/>
+      {/* Top wisps */}
+      <path d="M52 6 Q48 -4 52 -6 Q56 -4 52 6" fill="#FCD34D" opacity="0.5"/>
+      <path d="M68 6 Q72 -4 74 -2 Q72 4 68 6" fill="#FCD34D" opacity="0.45"/>
+      <ellipse cx="60" cy="114" rx="26" ry="3.5" fill="#D9770618"/>
+    </svg>
+  )
+}
+
+function MonsterKaisaki() {
+  return (
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="k4-armor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#3D6B3D"/>
+          <stop offset="100%" stopColor="#1A3A1A"/>
+        </linearGradient>
+        <radialGradient id="k4-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#059669" stopOpacity="0.35"/>
+          <stop offset="100%" stopColor="#059669" stopOpacity="0"/>
+        </radialGradient>
+        <radialGradient id="k4-eye" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#4ade80"/>
+          <stop offset="100%" stopColor="#059669" stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="60" cy="60" rx="52" ry="52" fill="url(#k4-glow)"/>
+      {/* Legs with greaves */}
+      <rect x="40" y="90" width="14" height="24" rx="2" fill="#1A3A1A"/>
+      <rect x="66" y="90" width="14" height="24" rx="2" fill="#1A3A1A"/>
+      <rect x="39" y="92" width="16" height="20" rx="2" fill="url(#k4-armor)" stroke="#22c55e" strokeWidth="0.7" opacity="0.7"/>
+      <rect x="65" y="92" width="16" height="20" rx="2" fill="url(#k4-armor)" stroke="#22c55e" strokeWidth="0.7" opacity="0.7"/>
+      <path d="M38 100 L56 100 L56 106 L47 110 L38 106Z" fill="#2D4A2D" stroke="#22c55e" strokeWidth="0.8"/>
+      <path d="M64 100 L82 100 L82 106 L73 110 L64 106Z" fill="#2D4A2D" stroke="#22c55e" strokeWidth="0.8"/>
+      <line x1="39" y1="92" x2="55" y2="92" stroke="#22c55e" strokeWidth="0.8" opacity="0.7"/>
+      <line x1="65" y1="92" x2="81" y2="92" stroke="#22c55e" strokeWidth="0.8" opacity="0.7"/>
+      {/* Body armor */}
+      <path d="M28 50 L24 90 L96 90 L92 50 L80 42 L40 42Z" fill="#1A3A1A"/>
+      <path d="M32 53 L29 87 L91 87 L88 53 L78 46 L42 46Z" fill="url(#k4-armor)"/>
+      {/* V-groove chest symbol */}
+      <path d="M60 52 L46 76 L60 80 L74 76 Z" fill="#1A3A1A" stroke="#22c55e" strokeWidth="1.5"/>
+      <line x1="60" y1="52" x2="60" y2="80" stroke="#22c55e" strokeWidth="1" opacity="0.6"/>
+      <path d="M32 53 L29 87" stroke="#22c55e" strokeWidth="1" opacity="0.5"/>
+      <path d="M88 53 L91 87" stroke="#22c55e" strokeWidth="1" opacity="0.5"/>
+      <path d="M32 53 L42 46 L78 46 L88 53" stroke="#22c55e" strokeWidth="1" fill="none" opacity="0.4"/>
+      {/* Shoulder pauldrons */}
+      <path d="M28 50 L18 44 L14 56 L22 62 L32 58Z" fill="#2D4A2D" stroke="#22c55e" strokeWidth="1"/>
+      <path d="M92 50 L102 44 L106 56 L98 62 L88 58Z" fill="#2D4A2D" stroke="#22c55e" strokeWidth="1"/>
+      {/* Shield */}
+      <path d="M4 52 L8 46 L24 46 L28 52 L26 72 L16 80 L6 72Z" fill="#1A3A1A" stroke="#22c55e" strokeWidth="1.2"/>
+      <path d="M6 54 L10 49 L22 49 L26 54 L24 70 L16 77 L8 70Z" fill="#2D4A2D"/>
+      <polygon points="16,56 10,70 22,70" fill="none" stroke="#22c55e" strokeWidth="1.5"/>
+      <line x1="16" y1="56" x2="16" y2="70" stroke="#059669" strokeWidth="1" opacity="0.6"/>
+      <path d="M6 54 L10 49 L22 49 L26 54" stroke="#22c55e" strokeWidth="1" fill="none" opacity="0.6"/>
+      {/* Torch-lance (right arm raised) */}
+      <path d="M92 54 L104 38 L108 28" stroke="#2D4A2D" strokeWidth="10" fill="none" strokeLinecap="round"/>
+      <path d="M92 54 L104 38 L108 28" stroke="#3D6B3D" strokeWidth="7" fill="none" strokeLinecap="round"/>
+      <rect x="104" y="4" width="6" height="28" rx="2" fill="#2D4A2D" transform="rotate(15 107 18)"/>
+      <rect x="105" y="5" width="4" height="26" rx="1" fill="#3D6B3D" transform="rotate(15 107 18)"/>
+      <path d="M108 10 L112 6 L116 10 L114 18 L110 18Z" fill="#888" transform="rotate(15 112 12)"/>
+      <path d="M110 6 Q106 -2 112 -6 Q116 -2 114 4" fill="#22c55e" opacity="0.9" transform="rotate(15 112 0)"/>
+      <ellipse cx="111" cy="4" rx="2" ry="3" fill="#86efac" opacity="0.8" transform="rotate(15 111 4)"/>
+      <ellipse cx="111" cy="3" rx="1" ry="1.5" fill="#fff" opacity="0.9" transform="rotate(15 111 3)"/>
+      <circle cx="106" cy="2" r="1.2" fill="#4ade80" opacity="0.9"/>
+      <circle cx="118" cy="8" r="1" fill="#86efac" opacity="0.8"/>
+      <circle cx="104" cy="10" r="0.8" fill="#22c55e" opacity="0.7"/>
+      {/* Helmet */}
+      <path d="M26 38 L28 16 Q32 4 60 2 Q88 4 92 16 L94 38 L88 44 L32 44Z" fill="#1A3A1A"/>
+      <path d="M30 38 L32 18 Q36 8 60 6 Q84 8 88 18 L90 38 L85 42 L35 42Z" fill="url(#k4-armor)"/>
+      <path d="M52 2 L50 -2 L60 -4 L70 -2 L68 2" fill="#2D4A2D" stroke="#22c55e" strokeWidth="0.8"/>
+      {/* V-groove visor */}
+      <path d="M32 28 L60 38 L88 28 L84 24 L60 34 L36 24Z" fill="#0a1f0a"/>
+      <path d="M36 26 L60 35 L84 26" stroke="#22c55e" strokeWidth="1.5" fill="none" opacity="0.9"/>
+      <ellipse cx="46" cy="28" rx="5" ry="3" fill="url(#k4-eye)" opacity="0.9"/>
+      <ellipse cx="74" cy="28" rx="5" ry="3" fill="url(#k4-eye)" opacity="0.9"/>
+      <ellipse cx="46" cy="28" rx="2.5" ry="1.5" fill="#4ade80"/>
+      <ellipse cx="74" cy="28" rx="2.5" ry="1.5" fill="#4ade80"/>
+      <path d="M26 38 L22 30 L24 18 L28 16" fill="#1A3A1A" stroke="#22c55e" strokeWidth="0.7" opacity="0.5"/>
+      <path d="M94 38 L98 30 L96 18 L92 16" fill="#1A3A1A" stroke="#22c55e" strokeWidth="0.7" opacity="0.5"/>
+      <path d="M30 38 L32 18" stroke="#22c55e" strokeWidth="1" opacity="0.4"/>
+      <path d="M90 38 L88 18" stroke="#22c55e" strokeWidth="1" opacity="0.4"/>
+      <ellipse cx="60" cy="116" rx="26" ry="3.5" fill="#05966920"/>
+    </svg>
+  )
+}
+
+function MonsterBuroohoru() {
+  return (
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="k5-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#7C3AED" stopOpacity="0.45"/>
+          <stop offset="100%" stopColor="#7C3AED" stopOpacity="0"/>
+        </radialGradient>
+        <radialGradient id="k5-void" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#DDD6FE"/>
+          <stop offset="40%" stopColor="#7C3AED"/>
+          <stop offset="100%" stopColor="#0D0D1A" stopOpacity="0"/>
+        </radialGradient>
+        <radialGradient id="k5-void2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#C4B5FD"/>
+          <stop offset="50%" stopColor="#6D28D9"/>
+          <stop offset="100%" stopColor="#0D0D1A" stopOpacity="0"/>
+        </radialGradient>
+      </defs>
+      <ellipse cx="60" cy="60" rx="54" ry="54" fill="url(#k5-glow)"/>
+      {/* Tentacle arms */}
+      <path d="M26 72 Q14 64 8 56 Q4 48 10 42 Q14 38 18 44 Q16 50 22 56 Q28 62 26 72Z" fill="#4C1D95" stroke="#7C3AED" strokeWidth="0.8"/>
+      <path d="M18 44 L12 40 M18 44 L14 50 M18 44 L22 38" stroke="#9333EA" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M94 72 Q106 64 112 56 Q116 48 110 42 Q106 38 102 44 Q104 50 98 56 Q92 62 94 72Z" fill="#4C1D95" stroke="#7C3AED" strokeWidth="0.8"/>
+      <path d="M102 44 L108 40 M102 44 L106 50 M102 44 L98 38" stroke="#9333EA" strokeWidth="1.5" strokeLinecap="round"/>
+      {/* Lower tentacles */}
+      <path d="M34 98 Q22 104 18 114" stroke="#4C1D95" strokeWidth="5" fill="none" strokeLinecap="round"/>
+      <path d="M18 114 L14 110 M18 114 L16 118" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round"/>
+      <path d="M86 98 Q98 104 102 114" stroke="#4C1D95" strokeWidth="5" fill="none" strokeLinecap="round"/>
+      <path d="M102 114 L106 110 M102 114 L104 118" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round"/>
+      {/* Main body */}
+      <path d="M20 80 Q14 58 20 40 Q28 14 60 10 Q92 14 100 40 Q106 58 100 80 Q96 100 80 108 Q60 116 40 108 Q24 100 20 80Z" fill="#2D1A4A"/>
+      <path d="M24 78 Q18 58 24 42 Q32 18 60 14 Q88 18 96 42 Q102 58 96 78 Q92 96 76 104 Q60 112 44 104 Q28 96 24 78Z" fill="#3B2260"/>
+      {/* Void holes */}
+      <circle cx="44" cy="44" r="12" fill="#0D0D1A"/>
+      <circle cx="44" cy="44" r="9" fill="#1a0a2e"/>
+      <circle cx="44" cy="44" r="6" fill="url(#k5-void)"/>
+      <circle cx="44" cy="44" r="2.5" fill="#DDD6FE" opacity="0.9"/>
+      <circle cx="76" cy="40" r="11" fill="#0D0D1A"/>
+      <circle cx="76" cy="40" r="8" fill="#1a0a2e"/>
+      <circle cx="76" cy="40" r="5.5" fill="url(#k5-void2)"/>
+      <circle cx="76" cy="40" r="2" fill="#C4B5FD" opacity="0.9"/>
+      <circle cx="36" cy="68" r="9" fill="#0D0D1A"/>
+      <circle cx="36" cy="68" r="6.5" fill="#1a0a2e"/>
+      <circle cx="36" cy="68" r="4" fill="url(#k5-void)"/>
+      <circle cx="36" cy="68" r="1.5" fill="#DDD6FE" opacity="0.85"/>
+      <circle cx="66" cy="64" r="10" fill="#0D0D1A"/>
+      <circle cx="66" cy="64" r="7.5" fill="#1a0a2e"/>
+      <circle cx="66" cy="64" r="5" fill="url(#k5-void2)"/>
+      <circle cx="66" cy="64" r="2" fill="#C4B5FD" opacity="0.9"/>
+      <circle cx="42" cy="88" r="8" fill="#0D0D1A"/>
+      <circle cx="42" cy="88" r="5.5" fill="#1a0a2e"/>
+      <circle cx="42" cy="88" r="3.5" fill="url(#k5-void)"/>
+      <circle cx="42" cy="88" r="1.5" fill="#DDD6FE" opacity="0.8"/>
+      <circle cx="76" cy="84" r="7" fill="#0D0D1A"/>
+      <circle cx="76" cy="84" r="5" fill="#1a0a2e"/>
+      <circle cx="76" cy="84" r="3" fill="url(#k5-void2)"/>
+      <circle cx="76" cy="84" r="1.2" fill="#C4B5FD" opacity="0.8"/>
+      <circle cx="58" cy="28" r="6" fill="#0D0D1A"/>
+      <circle cx="58" cy="28" r="4" fill="#1a0a2e"/>
+      <circle cx="58" cy="28" r="2.5" fill="url(#k5-void)"/>
+      <circle cx="58" cy="28" r="1" fill="#DDD6FE" opacity="0.75"/>
+      {/* Eyes */}
+      <circle cx="48" cy="32" r="9" fill="#0D0D1A"/>
+      <circle cx="72" cy="32" r="9" fill="#0D0D1A"/>
+      <circle cx="48" cy="32" r="6.5" fill="#7C3AED" opacity="0.85"/>
+      <circle cx="72" cy="32" r="6.5" fill="#7C3AED" opacity="0.85"/>
+      <circle cx="48" cy="32" r="3.5" fill="#D8B4FE"/>
+      <circle cx="72" cy="32" r="3.5" fill="#D8B4FE"/>
+      <circle cx="48" cy="31" r="1.5" fill="#fff" opacity="0.9"/>
+      <circle cx="72" cy="31" r="1.5" fill="#fff" opacity="0.9"/>
+      <circle cx="48" cy="32" r="11" fill="none" stroke="#7C3AED" strokeWidth="1.5" opacity="0.4"/>
+      <circle cx="72" cy="32" r="11" fill="none" stroke="#7C3AED" strokeWidth="1.5" opacity="0.4"/>
+      {/* Ragged maw */}
+      <path d="M40 50 Q60 42 80 50 L78 56 L74 50 L70 57 L66 50 L62 57 L58 50 L54 57 L50 50 L46 57 L42 50Z" fill="#0D0D1A" opacity="0.95"/>
+      <path d="M40 50 Q60 44 80 50" stroke="#9333EA" strokeWidth="1" fill="none" opacity="0.7"/>
+      <path d="M44 53 Q60 48 76 53" stroke="#7C3AED" strokeWidth="1" fill="none" opacity="0.5"/>
+      {/* Void particles */}
+      {[{x:18,y:50},{x:102,y:46},{x:16,y:70},{x:104,y:68},{x:26,y:30},{x:96,y:28}].map((p,i) => <circle key={i} cx={p.x} cy={p.y} r="2" fill="#7C3AED" opacity="0.6"/>)}
+      <ellipse cx="60" cy="116" rx="26" ry="3.5" fill="#7C3AED22"/>
+    </svg>
+  )
+}
+
+function MonsterShikaku() {
+  return (
+    <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="k6-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#DC2626" stopOpacity="0.4"/>
+          <stop offset="100%" stopColor="#DC2626" stopOpacity="0"/>
+        </radialGradient>
+        <linearGradient id="k6-scale" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#B91C1C"/>
+          <stop offset="100%" stopColor="#7F1D1D"/>
+        </linearGradient>
+        <linearGradient id="k6-scroll" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fef3c7"/>
+          <stop offset="100%" stopColor="#fde68a"/>
+        </linearGradient>
+      </defs>
+      <ellipse cx="60" cy="64" rx="54" ry="50" fill="url(#k6-glow)"/>
+      {/* Tail */}
+      <path d="M86 96 Q104 100 114 90 Q120 82 112 76 Q108 72 104 78 Q108 84 102 88 Q94 92 86 96Z" fill="#9B1C1C" stroke="#DC2626" strokeWidth="0.5"/>
+      <circle cx="108" cy="82" r="3" fill="none" stroke="#FFB800" strokeWidth="1" opacity="0.7"/>
+      {/* Wings — scroll wings */}
+      <path d="M28 58 Q10 44 4 24 Q8 18 14 22 Q12 38 28 48" fill="#7F1D1D" opacity="0.9"/>
+      <path d="M28 58 Q14 46 12 28 Q16 22 20 28 Q18 40 28 48" fill="#9B1C1C"/>
+      <ellipse cx="6" cy="23" rx="4" ry="5" fill="url(#k6-scroll)" opacity="0.9"/>
+      <ellipse cx="6" cy="23" rx="2.5" ry="3.5" fill="#fde68a"/>
+      {[20,22,24].map(y => <line key={y} x1="4" y1={y} x2="8" y2={y} stroke="#92400E" strokeWidth="0.8" opacity="0.6"/>)}
+      <path d="M92 58 Q110 44 116 24 Q112 18 106 22 Q108 38 92 48" fill="#7F1D1D" opacity="0.9"/>
+      <path d="M92 58 Q106 46 108 28 Q104 22 100 28 Q102 40 92 48" fill="#9B1C1C"/>
+      <ellipse cx="114" cy="23" rx="4" ry="5" fill="url(#k6-scroll)" opacity="0.9"/>
+      <ellipse cx="114" cy="23" rx="2.5" ry="3.5" fill="#fde68a"/>
+      {[20,22,24].map(y => <line key={y} x1="112" y1={y} x2="116" y2={y} stroke="#92400E" strokeWidth="0.8" opacity="0.6"/>)}
+      {/* Body */}
+      <path d="M32 58 L28 96 L92 96 L88 58 L76 50 L44 50Z" fill="#9B1C1C"/>
+      <path d="M36 61 L33 93 L87 93 L84 61 L74 54 L46 54Z" fill="url(#k6-scale)"/>
+      {/* Scale texture */}
+      {[[44,62],[56,62],[68,62],[38,72],[50,72],[62,72],[74,72],[44,82],[56,82],[68,82]].map(([x,y],i) => <path key={i} d={`M${x} ${y} Q${x+6} ${y+7} ${x+12} ${y}`} fill="none" stroke="#DC2626" strokeWidth="1.2" opacity="0.5"/>)}
+      {/* Gold stamp marks */}
+      {[[48,68],[72,70],[60,82],[42,80],[78,80]].map(([x,y],i) => <circle key={i} cx={x} cy={y} r="2.5" fill="none" stroke="#FFB800" strokeWidth="1" opacity="0.6"/>)}
+      {/* Certification stamp claw */}
+      <path d="M32 66 Q16 60 10 72" stroke="#9B1C1C" strokeWidth="8" fill="none" strokeLinecap="round"/>
+      <circle cx="10" cy="72" r="10" fill="#FFB800"/>
+      <circle cx="10" cy="72" r="8" fill="#F59E0B"/>
+      <text x="6" y="76" fontSize="9" fontWeight="bold" fill="#7F1D1D" fontFamily="monospace">認</text>
+      <circle cx="10" cy="72" r="9" fill="none" stroke="#DC2626" strokeWidth="1" opacity="0.6"/>
+      {/* Right claw */}
+      <path d="M88 66 Q102 58 108 50" stroke="#9B1C1C" strokeWidth="7" fill="none" strokeLinecap="round"/>
+      <path d="M108 50 L112 44 M108 50 L114 52 M108 50 L110 58" stroke="#DC2626" strokeWidth="2" strokeLinecap="round"/>
+      {/* Neck */}
+      <rect x="44" y="34" width="32" height="20" rx="4" fill="#9B1C1C"/>
+      <rect x="47" y="36" width="26" height="16" rx="3" fill="#B91C1C"/>
+      {/* Head */}
+      <path d="M24 26 Q28 4 60 2 Q92 4 96 26 L92 42 L28 42Z" fill="#B91C1C"/>
+      <path d="M28 26 Q32 8 60 6 Q88 8 92 26 L89 40 L31 40Z" fill="#DC2626"/>
+      {/* Head scales */}
+      {[[36,16],[48,16],[60,16],[72,16],[42,26],[54,26],[66,26]].map(([x,y],i) => <path key={i} d={`M${x} ${y} Q${x+5} ${y+6} ${x+10} ${y}`} fill="none" stroke="#9B1C1C" strokeWidth="1" opacity="0.6"/>)}
+      {/* Crown of rolled certificates */}
+      {[{cx:38,cy:8,rx:5,ry:7},{cx:50,cy:4,rx:4,ry:6},{cx:60,cy:2,rx:5,ry:7},{cx:70,cy:4,rx:4,ry:6},{cx:82,cy:8,rx:5,ry:7}].map((s,i) => (
+        <g key={i}>
+          <ellipse cx={s.cx} cy={s.cy} rx={s.rx} ry={s.ry} fill="url(#k6-scroll)"/>
+          <ellipse cx={s.cx} cy={s.cy} rx={s.rx-1.5} ry={s.ry-1.5} fill="#fde68a"/>
+          <line x1={s.cx-s.rx+1} y1={s.cy-1} x2={s.cx+s.rx-1} y2={s.cy-1} stroke="#92400E" strokeWidth="0.6" opacity="0.6"/>
+          <line x1={s.cx-s.rx+1} y1={s.cy+1} x2={s.cx+s.rx-1} y2={s.cy+1} stroke="#92400E" strokeWidth="0.6" opacity="0.5"/>
+          <circle cx={s.cx} cy={s.cy} r="1" fill="#DC2626" opacity="0.5"/>
+        </g>
+      ))}
+      {/* Eyes */}
+      <ellipse cx="44" cy="22" rx="7" ry="5.5" fill="#0D0000"/>
+      <ellipse cx="76" cy="22" rx="7" ry="5.5" fill="#0D0000"/>
+      <ellipse cx="44" cy="22" rx="4.5" ry="3.5" fill="#FF0000"/>
+      <ellipse cx="76" cy="22" rx="4.5" ry="3.5" fill="#FF0000"/>
+      <circle cx="44" cy="22" r="2" fill="#FFB800"/>
+      <circle cx="76" cy="22" r="2" fill="#FFB800"/>
+      <circle cx="44" cy="21" r="1" fill="#fff" opacity="0.7"/>
+      <circle cx="76" cy="21" r="1" fill="#fff" opacity="0.7"/>
+      <path d="M36 17 L50 21" stroke="#7F1D1D" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M84 17 L70 21" stroke="#7F1D1D" strokeWidth="2.5" strokeLinecap="round"/>
       {/* Snout */}
-      <ellipse cx="58" cy="30" rx="10" ry="6" fill="#8B0000"/>
-      {/* Nostrils */}
-      <circle cx="54" cy="30" r="2" fill="#600000"/>
-      <circle cx="62" cy="30" r="2" fill="#600000"/>
-      {/* Certification stamp in claw */}
-      <path d="M28 75 Q14 68 10 80" stroke="#8B0000" strokeWidth="7" fill="none" strokeLinecap="round"/>
-      <circle cx="10" cy="80" r="8" fill="#FFB800"/>
-      <text x="6" y="84" fontSize="8" fontWeight="bold" fill="#8B0000" fontFamily="monospace">認</text>
+      <path d="M44 32 Q60 38 76 32 L74 36 Q60 42 46 36Z" fill="#9B1C1C"/>
+      <circle cx="54" cy="35" r="2" fill="#7F1D1D"/>
+      <circle cx="66" cy="35" r="2" fill="#7F1D1D"/>
       {/* Fire breath */}
-      <path d="M58 34 Q50 44 44 50" stroke="#FF6600" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.8"/>
-      <path d="M58 34 Q66 44 72 52" stroke="#FFB800" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.7"/>
-      <ellipse cx="58" cy="116" rx="22" ry="4" fill="#8B000033"/>
+      <path d="M50 38 Q44 50 40 60 Q36 68 42 72" stroke="#FF6600" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.85"/>
+      <path d="M60 40 Q56 52 54 64 Q52 72 56 76" stroke="#FFB800" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.8"/>
+      <path d="M70 38 Q76 50 78 62 Q80 70 76 74" stroke="#FF6600" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.75"/>
+      <circle cx="42" cy="72" r="4" fill="#FF4400" opacity="0.6"/>
+      <circle cx="56" cy="76" r="3" fill="#FF8800" opacity="0.6"/>
+      <circle cx="76" cy="74" r="3.5" fill="#FF4400" opacity="0.55"/>
+      {/* Kanji in fire */}
+      <text x="38" y="66" fontSize="6" fill="#FFE066" fontFamily="monospace" opacity="0.8">合</text>
+      <text x="52" y="70" fontSize="6" fill="#FFE066" fontFamily="monospace" opacity="0.7">格</text>
+      <text x="66" y="68" fontSize="6" fill="#FFE066" fontFamily="monospace" opacity="0.75">証</text>
+      <ellipse cx="60" cy="116" rx="26" ry="3.5" fill="#DC262622"/>
     </svg>
   )
 }
@@ -868,7 +1123,7 @@ function Battle({
   function optStyle(i) {
     const base = {
       width:'100%', padding:'11px 14px', marginBottom:8,
-      background:'#1e1e1e', border:'1px solid #333',
+      background:'#141414', border:'1px solid #252525',
       borderRadius:8, color:'#ddd', textAlign:'left',
       cursor: done ? 'default' : 'pointer',
       fontSize:'0.76rem', fontFamily:'monospace', lineHeight:1.4,
@@ -880,7 +1135,7 @@ function Battle({
     return { ...base, opacity:0.35 }
   }
 
-  const bg = bgFlash === 'correct' ? '#0a200a' : bgFlash === 'wrong' ? '#1a0505' : '#111'
+  const bg = bgFlash === 'correct' ? '#081a08' : bgFlash === 'wrong' ? '#160404' : '#0d0d0d'
 
   const monAnimStyle = monsterAnim === 'shake' ? 'wf-mshake 0.38s ease'
                      : monsterAnim === 'death' ? 'wf-mdeath 0.65s ease forwards'
@@ -910,7 +1165,7 @@ function Battle({
 
       {/* Sticky HP bars — always visible at top */}
       <div style={{ position:'sticky', top:0, zIndex:20,
-        background: bg === '#111' ? '#111' : bg,
+        background: bg === '#0d0d0d' ? '#0d0d0d' : bg,
         borderBottom:'1px solid #222', padding:'8px 12px 8px',
         transition:'background 0.3s' }}>
         {/* Player HP */}
@@ -968,8 +1223,15 @@ function Battle({
 
       {/* Monster SVG display */}
       <div style={{ padding:'8px 12px', position:'relative' }}>
-        <div style={{ background:'#1a1a1a', borderRadius:10, padding:'8px 14px',
+        <div style={{ background:'#111', borderRadius:10, padding:'8px 14px',
           marginBottom:10, position:'relative', overflow:'hidden' }}>
+          <div style={{
+            position:'absolute', top:'50%', left:'50%',
+            transform:'translate(-50%,-50%)',
+            width:180, height:180, borderRadius:'50%',
+            background:`radial-gradient(ellipse, ${mon.color}22 0%, transparent 70%)`,
+            pointerEvents:'none',
+          }}/>
           <div key={qi} style={{
             textAlign:'center', margin:'6px 0 2px',
             animation: monAnimStyle !== 'none' ? monAnimStyle : 'wf-mon-entry 0.4s ease',
@@ -986,7 +1248,7 @@ function Battle({
         </div>
 
         {/* Question */}
-        <div style={{ background:'#161616', borderRadius:10, padding:'12px 14px', marginBottom:10,
+        <div style={{ background:'#111', borderRadius:10, padding:'12px 14px', marginBottom:10,
           borderLeft:'4px solid #FF6600', border:'1px solid #2a2a2a',
           borderLeftWidth:4, borderLeftColor:'#FF6600', borderLeftStyle:'solid' }}>
           <div style={{ fontSize:'0.58rem', color:'#FF660099', marginBottom:6,
@@ -1011,7 +1273,7 @@ function Battle({
         {/* Explanation */}
         {done && (
           <div style={{
-            background: sel===q.a ? '#0a1f0a' : '#1f0a0a',
+            background: sel===q.a ? '#081808' : '#180808',
             border:`1px solid ${sel===q.a ? '#22c55e' : '#ef4444'}`,
             borderRadius:10, padding:'12px 14px',
           }}>
@@ -1063,7 +1325,7 @@ function Victory({ stage, si, sessionXP, correct, miss, onContinue, onReview }) 
     return () => clearInterval(timer)
   }, [sessionXP])
   return (
-    <div style={{ ...styles.page, background:'#0a180a', justifyContent:'center',
+    <div style={{ ...styles.page, background:'#060e06', justifyContent:'center',
       alignItems:'center', textAlign:'center', position:'relative', overflow:'hidden' }}>
       {flash && (
         <div style={{ position:'fixed', inset:0, background:'#00ff0066',
@@ -1116,7 +1378,7 @@ function Victory({ stage, si, sessionXP, correct, miss, onContinue, onReview }) 
       </div>
 
       {/* Stats card */}
-      <div style={{ background:'#0f1f0f', border:'1px solid #22c55e33',
+      <div style={{ background:'#0a140a', border:'1px solid #22c55e22',
         borderRadius:12, padding:'14px 24px', marginBottom:16, width:'100%', maxWidth:280 }}>
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10, marginBottom:12 }}>
           {[
@@ -1174,7 +1436,7 @@ function Defeat({ si, correct, miss, onRetry, onQuit, onReview }) {
     return () => clearTimeout(t)
   }, [])
   return (
-    <div style={{ ...styles.page, background:'#180a0a', justifyContent:'center',
+    <div style={{ ...styles.page, background:'#0e0606', justifyContent:'center',
       alignItems:'center', textAlign:'center', position:'relative', overflow:'hidden' }}>
       {overlay && (
         <div style={{ position:'fixed', inset:0, background:'#330000',
@@ -1209,7 +1471,7 @@ function Defeat({ si, correct, miss, onRetry, onQuit, onReview }) {
         </div>
 
         {/* Survival stats */}
-        <div style={{ background:'#2a0808', border:'1px solid #ef444433',
+        <div style={{ background:'#180404', border:'1px solid #ef444422',
           borderRadius:10, padding:'12px 20px', marginBottom:16, width:'100%', maxWidth:260 }}>
           <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:8 }}>
             <div style={{ textAlign:'center' }}>
@@ -1289,11 +1551,11 @@ function SymbolTab() {
     },
   ]
   return (
-    <div style={{ padding:16, fontFamily:'monospace', background:'#111', minHeight:'100vh', paddingBottom:70 }}>
+    <div style={{ padding:16, fontFamily:'monospace', background:'#0d0d0d', minHeight:'100vh', paddingBottom:70 }}>
       <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:12 }}>📐 JIS WELDING SYMBOLS</div>
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginBottom:16 }}>
         {syms.map(s => (
-          <div key={s.sym} style={{ background:'#1a1a1a', border:'1px solid #2a2a2a',
+          <div key={s.sym} style={{ background:'#141414', border:'1px solid #1e1e1e',
             borderRadius:8, padding:'10px', textAlign:'center' }}>
             <div style={{ fontSize:'1.6rem', marginBottom:4 }}>{s.sym}</div>
             <div style={{ color:'#FF6600', fontSize:'0.68rem', fontWeight:'bold' }}>{s.name}</div>
@@ -1304,7 +1566,7 @@ function SymbolTab() {
         ))}
       </div>
       {rules.map(r => (
-        <div key={r.title} style={{ background:'#1a1a1a', border:'1px solid #FF660033',
+        <div key={r.title} style={{ background:'#141414', border:'1px solid #FF660022',
           borderRadius:8, padding:'12px 14px', marginBottom:8 }}>
           <div style={{ color:'#FF6600', fontSize:'0.7rem', fontWeight:'bold', marginBottom:6 }}>{r.title}</div>
           <pre style={{ color:'#bbb', fontSize:'0.66rem', whiteSpace:'pre-wrap',
@@ -1347,7 +1609,7 @@ function CalcTab() {
   const lab = { color:'#777', fontSize:'0.7rem', flex:1 }
 
   return (
-    <div style={{ padding:16, fontFamily:'monospace', background:'#111', minHeight:'100vh', paddingBottom:70 }}>
+    <div style={{ padding:16, fontFamily:'monospace', background:'#0d0d0d', minHeight:'100vh', paddingBottom:70 }}>
       <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:16 }}>🔢 WELDING CALCULATORS</div>
 
       {/* Heat Input */}
@@ -1472,7 +1734,7 @@ function CareerTab() {
       note:'The absolute pinnacle of welding careers in Japan.' },
   ]
   return (
-    <div style={{ padding:16, fontFamily:'monospace', background:'#111', minHeight:'100vh', paddingBottom:70 }}>
+    <div style={{ padding:16, fontFamily:'monospace', background:'#0d0d0d', minHeight:'100vh', paddingBottom:70 }}>
       <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:4 }}>🗺️ CAREER ROADMAP</div>
       <div style={{ color:'#444', fontSize:'0.65rem', marginBottom:16 }}>
         Japanese Welding Career Path — Entry to Legend
@@ -1480,7 +1742,7 @@ function CareerTab() {
       {path.map((s, i) => (
         <div key={i}>
           {i > 0 && <div style={{ width:2, height:12, background:'#2a2a2a', marginLeft:20, marginBottom:0 }}/>}
-          <div style={{ background:'#1a1a1a', border:`1px solid ${s.color}33`,
+          <div style={{ background:'#141414', border:`1px solid ${s.color}22`,
             borderRadius:10, padding:'12px 14px', marginBottom:0 }}>
             <div style={{ display:'flex', alignItems:'flex-start', gap:10, marginBottom:8 }}>
               <span style={{ fontSize:'1.6rem' }}>{s.icon}</span>
@@ -1517,7 +1779,7 @@ function CareerTab() {
 function ReviewScreen({ history, onBack }) {
   const OPTS = ['A','B','C','D']
   return (
-    <div style={{ minHeight:'100vh', background:'#111', fontFamily:'monospace',
+    <div style={{ minHeight:'100vh', background:'#0d0d0d', fontFamily:'monospace',
       padding:'14px 12px', paddingBottom:70 }}>
 
       <div style={{ display:'flex', alignItems:'center', gap:12, marginBottom:16 }}>
@@ -1535,8 +1797,8 @@ function ReviewScreen({ history, onBack }) {
         const { question: q, selected, wasCorrect } = item
         return (
           <div key={i} style={{
-            background:'#1a1a1a',
-            border:`1px solid ${wasCorrect ? '#22c55e33' : '#ef444433'}`,
+            background:'#141414',
+            border:`1px solid ${wasCorrect ? '#22c55e22' : '#ef444422'}`,
             borderRadius:10, padding:'12px 14px', marginBottom:12,
           }}>
             {/* Result indicator + question */}
@@ -1606,7 +1868,7 @@ function ReviewScreen({ history, onBack }) {
 
             {/* Explanation */}
             <div style={{
-              background:'#141414', borderRadius:6,
+              background:'#0f0f0f', borderRadius:6,
               padding:'8px 10px', fontSize:'0.68rem',
               color:'#999', lineHeight:1.55,
             }}>
@@ -1687,7 +1949,7 @@ function HistoryTab() {
           { label:'WIN RATE',value: `${winRate}%`,
             color: winRate >= 70 ? '#22c55e' : winRate >= 40 ? '#f59e0b' : '#ef4444' },
         ].map(s => (
-          <div key={s.label} style={{ background:'#1a1a1a', border:'1px solid #2a2a2a',
+          <div key={s.label} style={{ background:'#141414', border:'1px solid #1e1e1e',
             borderRadius:8, padding:'10px 8px', textAlign:'center' }}>
             <div style={{ color:s.color, fontSize:'1.3rem', fontWeight:'bold' }}>{s.value}</div>
             <div style={{ color:'#444', fontSize:'0.56rem', letterSpacing:'0.04em' }}>{s.label}</div>
@@ -1710,8 +1972,8 @@ function HistoryTab() {
           return (
             <div key={i} style={{
               display:'flex', alignItems:'center', gap:10,
-              background:'#1a1a1a',
-              border:`1px solid ${won ? '#22c55e22' : '#ef444422'}`,
+              background:'#141414',
+              border:`1px solid ${won ? '#22c55e18' : '#ef444418'}`,
               borderRadius:8, padding:'10px 12px', marginBottom:7,
             }}>
               <span style={{ fontSize:'1.4rem', flexShrink:0 }}>{icon}</span>
@@ -1769,29 +2031,31 @@ function HistoryTab() {
 const F_BODY    = "'Share Tech Mono', monospace"
 const F_TITLE   = "'Orbitron', 'Share Tech Mono', monospace"
 
+const STEEL_GRID = "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='none'/%3E%3Cpath d='M0 0h1v40H0zM39 0h1v40h-1zM0 0h40v1H0zM0 39h40v1H0z' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E\")"
+
 const styles = {
   page: {
     minHeight:'100vh',
-    background:"#111 url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M0 0h28v28H0z' fill='none'/%3E%3Cpath d='M0 0h1v28H0zM27 0h1v28h-1zM0 0h28v1H0zM0 27h28v1H0z' fill='rgba(255,102,0,0.04)'/%3E%3C/svg%3E\")",
-    backgroundSize:'28px 28px',
+    background:`#0d0d0d ${STEEL_GRID}`,
+    backgroundSize:'40px 40px',
     display:'flex', flexDirection:'column',
     padding:'20px 16px', fontFamily:F_BODY,
   },
   btnPrimary: {
-    background:'linear-gradient(135deg,#FF6600,#CC2200)',
-    color:'#fff', border:'none', borderRadius:8,
+    background:'linear-gradient(135deg,#FF7722,#FF6600 40%,#CC2200)',
+    color:'#e8e8e8', border:'none', borderRadius:8,
     padding:'12px 28px', fontWeight:'bold',
     cursor:'pointer', fontFamily:F_BODY,
     letterSpacing:'0.05em', fontSize:'0.9rem',
     boxShadow:'0 4px 16px #FF660044',
   },
   btnGhost: {
-    background:'none', border:'1px solid #333', color:'#666',
+    background:'none', border:'1px solid #2a2a2a', color:'#555',
     borderRadius:6, padding:'6px 12px', cursor:'pointer',
     fontFamily:F_BODY, fontSize:'0.7rem',
   },
   card: {
-    background:'#1a1a1a', border:'1px solid #2a2a2a',
+    background:'#141414', border:'1px solid #1e1e1e',
     borderRadius:10, padding:'14px', marginBottom:12,
   },
   cardTitle: {
@@ -1962,7 +2226,7 @@ export default function App() {
   }
 
   return (
-    <div style={{ maxWidth:480, margin:'0 auto', background:'#111', minHeight:'100vh' }}>
+    <div style={{ maxWidth:480, margin:'0 auto', background:'#0d0d0d', minHeight:'100vh' }}>
       {/* Content */}
       <div style={{ paddingBottom:58 }}>
         {tab==='battle'  && battleContent()}
@@ -1975,14 +2239,14 @@ export default function App() {
       {/* Bottom Nav */}
       <div style={{
         position:'fixed', bottom:0, left:'50%', transform:'translateX(-50%)',
-        width:'100%', maxWidth:480, background:'#141414',
-        borderTop:'1px solid #282828', display:'flex', zIndex:200,
+        width:'100%', maxWidth:480, background:'#0a0a0a',
+        borderTop:'1px solid #1e1e1e', display:'flex', zIndex:200,
       }}>
         {TABS.map(t=>(
           <button key={t.id} onClick={()=>setTab(t.id)} style={{
             flex:1, padding:'9px 0 7px', border:'none',
-            background: tab===t.id ? '#1e1e1e' : 'transparent',
-            borderTop: `2px solid ${tab===t.id ? '#FF6600' : 'transparent'}`,
+            background: tab===t.id ? '#141414' : 'transparent',
+            borderTop: `3px solid ${tab===t.id ? '#FF6600' : 'transparent'}`,
             color: tab===t.id ? '#FF6600' : '#444',
             cursor:'pointer', fontFamily:'monospace',
             display:'flex', flexDirection:'column', alignItems:'center', gap:2,
