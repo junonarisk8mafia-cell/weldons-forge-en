@@ -3,7 +3,7 @@
 // App.jsx — Complete game for foreign welding trainees in Japan
 // ============================================================
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { QUIZ_STAGES } from './questions_en.js'
 
 // ── CONSTANTS ───────────────────────────────────────────────
@@ -101,7 +101,23 @@ const MONSTERS = [
       background:repeating-linear-gradient(90deg,transparent,transparent 7px,rgba(0,0,0,0.18) 7px,rgba(0,0,0,0.18) 8px);
     }
     * { box-sizing:border-box; }
-    body { background:#0d0d0d; margin:0; }
+    html, body {
+      background:#0d0d0d; margin:0;
+      overscroll-behavior:none;
+      -webkit-overflow-scrolling:touch;
+    }
+    button, a, [role="button"] {
+      -webkit-tap-highlight-color:transparent;
+      touch-action:manipulation;
+    }
+    input, textarea, select { font-size:16px !important; }
+    /* ── safe-area nav spacer ── */
+    .wf-nav-safe { padding-bottom:env(safe-area-inset-bottom); }
+    /* ── small screen overrides (≤380px) ── */
+    @media (max-width:380px) {
+      .wf-pad   { padding-left:8px !important; padding-right:8px !important; }
+      .wf-mon-wrap svg { max-height:100px; width:auto; }
+    }
   `
   document.head.appendChild(s)
 })()
@@ -406,7 +422,7 @@ function TitleScreen({ onStart, totalXP }) {
 
         {/* Main title — metallic orange gradient text */}
         <div style={{
-          fontSize:'3.2rem', fontWeight:'900',
+          fontSize:'clamp(2rem, 8vw, 3.2rem)', fontWeight:'900',
           fontFamily:"'Orbitron',monospace",
           letterSpacing:'0.06em', marginTop:16,
           background:'linear-gradient(180deg, #FFB800 0%, #FF6600 40%, #CC2200 80%, #FF6600 100%)',
@@ -1111,6 +1127,8 @@ function Battle({
   if (!q) return null
   const OPTS = ['A','B','C','D']
 
+  const questionRef = useRef(null)
+
   // Body shake on player damage
   useEffect(() => {
     if (playerShake) {
@@ -1120,14 +1138,23 @@ function Battle({
     }
   }, [playerShake])
 
+  // Smooth scroll to question when a new question loads
+  useEffect(() => {
+    if (questionRef.current) {
+      questionRef.current.scrollIntoView({ behavior:'smooth', block:'nearest' })
+    }
+  }, [qi])
+
   function optStyle(i) {
     const base = {
-      width:'100%', padding:'11px 14px', marginBottom:8,
+      width:'100%', padding:'14px 16px', marginBottom:8,
       background:'#141414', border:'1px solid #252525',
-      borderRadius:8, color:'#ddd', textAlign:'left',
+      borderRadius:8, color:'#e8e8e8', textAlign:'left',
       cursor: done ? 'default' : 'pointer',
-      fontSize:'0.76rem', fontFamily:'monospace', lineHeight:1.4,
-      transition:'all 0.15s',
+      fontSize:'clamp(0.75rem, 3.2vw, 0.82rem)', fontFamily:'monospace', lineHeight:1.5,
+      transition:'all 0.15s', minHeight:48,
+      wordWrap:'break-word', touchAction:'manipulation',
+      WebkitTapHighlightColor:'transparent',
     }
     if (!done) return base
     if (i === q.a)              return { ...base, background:'#0f2a0f', border:'1px solid #22c55e', color:'#86efac', boxShadow:'0 0 12px #22c55e44' }
@@ -1232,14 +1259,14 @@ function Battle({
             background:`radial-gradient(ellipse, ${mon.color}22 0%, transparent 70%)`,
             pointerEvents:'none',
           }}/>
-          <div key={qi} style={{
+          <div key={qi} className="wf-mon-wrap" style={{
             textAlign:'center', margin:'6px 0 2px',
             animation: monAnimStyle !== 'none' ? monAnimStyle : 'wf-mon-entry 0.4s ease',
             opacity: 0.4 + (mHP/M_HP)*0.6,
             filter: `brightness(${0.5 + (mHP/M_HP)*0.6}) saturate(${0.6 + (mHP/M_HP)*0.5})`,
           }}>
             {(() => { const SVG = MONSTER_SVGS[si] || MONSTER_SVGS[0]; return <SVG/> })()}
-            <div style={{ color:mon.color, fontSize:'0.68rem', fontWeight:'700',
+            <div style={{ color:mon.color, fontSize:'clamp(0.7rem, 3vw, 0.85rem)', fontWeight:'700',
               fontFamily:"'Orbitron',monospace",
               letterSpacing:'0.06em', textShadow:`0 0 8px ${mon.color}88`, marginTop:2 }}>
               {mon.name}
@@ -1248,14 +1275,14 @@ function Battle({
         </div>
 
         {/* Question */}
-        <div style={{ background:'#111', borderRadius:10, padding:'12px 14px', marginBottom:10,
+        <div ref={questionRef} style={{ background:'#111', borderRadius:10, padding:'12px 14px', marginBottom:10,
           borderLeft:'4px solid #FF6600', border:'1px solid #2a2a2a',
           borderLeftWidth:4, borderLeftColor:'#FF6600', borderLeftStyle:'solid' }}>
           <div style={{ fontSize:'0.58rem', color:'#FF660099', marginBottom:6,
             fontFamily:"'Share Tech Mono',monospace", letterSpacing:'0.06em' }}>
             [{q.cat}]&nbsp;&nbsp;<span style={{ color:'#FFB80088' }}>+{q.xp} XP if correct</span>
           </div>
-          <div style={{ color:'#f0f0f0', fontSize:'0.84rem', lineHeight:1.6, marginBottom:14,
+          <div style={{ color:'#f0f0f0', fontSize:'clamp(0.8rem, 3.5vw, 0.9rem)', lineHeight:1.6, marginBottom:14,
             fontFamily:"'Share Tech Mono',monospace" }}>
             {q.q}
           </div>
@@ -2119,11 +2146,15 @@ const styles = {
     cursor:'pointer', fontFamily:F_BODY,
     letterSpacing:'0.05em', fontSize:'0.9rem',
     boxShadow:'0 4px 16px #FF660044',
+    minHeight:48, touchAction:'manipulation',
+    WebkitTapHighlightColor:'transparent',
   },
   btnGhost: {
     background:'none', border:'1px solid #2a2a2a', color:'#555',
     borderRadius:6, padding:'6px 12px', cursor:'pointer',
     fontFamily:F_BODY, fontSize:'0.7rem',
+    minHeight:48, touchAction:'manipulation',
+    WebkitTapHighlightColor:'transparent',
   },
   card: {
     background:'#141414', border:'1px solid #1e1e1e',
@@ -2301,9 +2332,10 @@ export default function App() {
   }
 
   return (
-    <div style={{ maxWidth:480, margin:'0 auto', background:'#0d0d0d', minHeight:'100vh' }}>
+    <div style={{ maxWidth:480, margin:'0 auto', background:'#0d0d0d', minHeight:'100vh',
+      touchAction:'manipulation', overscrollBehavior:'none' }}>
       {/* Content */}
-      <div style={{ paddingBottom:58 }}>
+      <div style={{ paddingBottom:'calc(64px + env(safe-area-inset-bottom))' }}>
         {tab==='battle'  && battleContent()}
         {tab==='symbol'  && <SymbolTab/>}
         {tab==='calc'    && <CalcTab/>}
@@ -2312,14 +2344,14 @@ export default function App() {
       </div>
 
       {/* Bottom Nav */}
-      <div style={{
+      <div className="wf-nav-safe" style={{
         position:'fixed', bottom:0, left:'50%', transform:'translateX(-50%)',
         width:'100%', maxWidth:480, background:'#0a0a0a',
         borderTop:'1px solid #1e1e1e', display:'flex', zIndex:200,
       }}>
         {TABS.map(t=>(
           <button key={t.id} onClick={()=>setTab(t.id)} style={{
-            flex:1, padding:'9px 0 7px', border:'none',
+            flex:1, padding:'10px 0 8px', border:'none', minHeight:56,
             background: tab===t.id ? '#141414' : 'transparent',
             borderTop: `3px solid ${tab===t.id ? '#FF6600' : 'transparent'}`,
             color: tab===t.id ? '#FF6600' : '#444',
