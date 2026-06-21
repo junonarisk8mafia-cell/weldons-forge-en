@@ -1802,6 +1802,427 @@ function CareerTab() {
   )
 }
 
+// ── WEAVE TAB ────────────────────────────────────────────────
+const WV_W = 340
+const WV_H = 260
+
+const WV_POS = {
+  flat:       { label:'Flat',       jp:'下向き', color:'#FF6600' },
+  vertical:   { label:'Vertical',   jp:'立向き', color:'#1565C0' },
+  horizontal: { label:'Horizontal', jp:'横向き', color:'#22c55e' },
+  overhead:   { label:'Overhead',   jp:'上向き', color:'#DC2626' },
+  all:        { label:'All Positions', jp:'全姿勢', color:'#FFB800' },
+}
+
+function triWave(u) {
+  const f = u - Math.floor(u)
+  return f < 0.5 ? (4 * f - 1) : (3 - 4 * f)
+}
+
+function genStringer(W, H) {
+  const pts = []
+  const y = H * 0.5
+  const n = 80
+  for (let i = 0; i <= n; i++) pts.push({ x: 20 + (W - 40) * (i / n), y })
+  return pts
+}
+
+function genZigzagWave(W, H, amp, period, n = 140) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20, xEnd = W - 20
+  for (let i = 0; i <= n; i++) {
+    const x = xStart + (xEnd - xStart) * (i / n)
+    pts.push({ x, y: baseY - amp * triWave((x - xStart) / period) })
+  }
+  return pts
+}
+
+function genZigzagVertical(W, H, amp = 35, period = 50, n = 140) {
+  const pts = []
+  const baseX = W * 0.5
+  const yStart = H - 20, yEnd = 20
+  const span = yStart - yEnd
+  for (let i = 0; i <= n; i++) {
+    const t = i / n
+    const y = yStart - span * t
+    pts.push({ x: baseX + amp * triWave((span * t) / period), y })
+  }
+  return pts
+}
+
+function genScallop(W, H, radius, bulgeSign, n = 160) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20, xEnd = W - 20
+  const span = xEnd - xStart
+  const period = radius * 2
+  for (let i = 0; i <= n; i++) {
+    const x = xStart + span * (i / n)
+    const frac = ((x - xStart) % period) / period
+    pts.push({ x, y: baseY + bulgeSign * radius * Math.sin(Math.PI * frac) })
+  }
+  return pts
+}
+
+function genCircular(W, H, radius = 20, spacing = 26) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20 + radius
+  const xEnd = W - 20 - radius
+  const count = Math.max(1, Math.round((xEnd - xStart) / spacing) + 1)
+  const samples = 24
+  for (let c = 0; c < count; c++) {
+    const cx = xStart + c * spacing
+    for (let i = 0; i <= samples; i++) {
+      const angle = Math.PI + (i / samples) * 2 * Math.PI
+      pts.push({ x: cx + radius * Math.cos(angle), y: baseY + radius * Math.sin(angle) })
+    }
+  }
+  return pts
+}
+
+function genFigure8(W, H, amp = 15, spacing = 35) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20 + amp
+  const xEnd = W - 20 - amp
+  const count = Math.max(1, Math.round((xEnd - xStart) / spacing) + 1)
+  const samples = 40
+  for (let c = 0; c < count; c++) {
+    const cx = xStart + c * spacing
+    for (let i = 0; i <= samples; i++) {
+      const t = (i / samples) * 2 * Math.PI
+      pts.push({ x: cx + amp * Math.sin(t), y: baseY + amp * Math.sin(t) * Math.cos(t) })
+    }
+  }
+  return pts
+}
+
+function genCVertical(W, H, radius, bulgeSign, n = 160) {
+  const pts = []
+  const baseX = W * 0.5
+  const yStart = H - 20, yEnd = 20
+  const span = yStart - yEnd
+  const period = radius * 2
+  for (let i = 0; i <= n; i++) {
+    const t = i / n
+    const y = yStart - span * t
+    const frac = ((span * t) % period) / period
+    pts.push({ x: baseX + bulgeSign * radius * Math.sin(Math.PI * frac), y })
+  }
+  return pts
+}
+
+const WEAVE_PATTERNS = [
+  { id:'stringer',          icon:'➖', name:'Stringer Bead',        posKey:'all',        posLabel:'All Positions',         posJp:'全姿勢',
+    difficulty:1, description:'Straight, steady line — the foundation of every weld.', tip:"Keep travel speed constant; don't let the line wander.",
+    path:(W,H)=>genStringer(W,H) },
+  { id:'zigzag-flat',       icon:'〜', name:'Zigzag Triangle',      posKey:'flat',       posLabel:'Flat',                  posJp:'下向き',
+    difficulty:2, description:'Sharp triangular zigzag for wide flat-position beads.', tip:'Pause briefly at each tip to avoid undercut.',
+    path:(W,H)=>genZigzagWave(W,H,40,60) },
+  { id:'semicircle-flat',   icon:'◐', name:'Semicircle (Half-Moon)',posKey:'flat',       posLabel:'Flat',                  posJp:'下向き',
+    difficulty:2, description:'Half-moon scallops rolling forward along the joint.', tip:'Keep each half-moon the same size for a uniform bead.',
+    path:(W,H)=>genScallop(W,H,25,-1) },
+  { id:'circular',          icon:'◯', name:'Circular Weave',       posKey:'flat',       posLabel:'Flat',                  posJp:'下向き',
+    difficulty:3, description:'Overlapping circles — used for wide flat fill passes.', tip:'Overlap each loop by about half to avoid gaps.',
+    path:(W,H)=>genCircular(W,H) },
+  { id:'figure8',           icon:'∞', name:'Figure-8 Weave',       posKey:'flat',       posLabel:'Flat',                  posJp:'下向き',
+    difficulty:3, description:'Figure-8 loops for wide, even flat-position cap passes.', tip:'Cross the center of each 8 at the same point every time.',
+    path:(W,H)=>genFigure8(W,H) },
+  { id:'sawtooth',          icon:'⋀', name:'Sawtooth Weave',       posKey:'horizontal', posLabel:'Horizontal',            posJp:'横向き',
+    difficulty:3, description:'Sharp sawtooth pattern to fight gravity on horizontal joints.', tip:'Push slightly harder on the upper tooth to prevent sagging.',
+    path:(W,H)=>genZigzagWave(W,H,35,50) },
+  { id:'small-weave',       icon:'≈', name:'Small Weave',          posKey:'horizontal', posLabel:'Horizontal / Overhead', posJp:'横向き・上向き',
+    difficulty:2, description:'Tight, narrow weave for horizontal and overhead control.', tip:'Keep amplitude small — this is about precision, not size.',
+    path:(W,H)=>genZigzagWave(W,H,15,30) },
+  { id:'cshape-vertical',   icon:'C',  name:'C-Shape',              posKey:'vertical',   posLabel:'Vertical',              posJp:'立向き',
+    difficulty:3, description:'C-curves opening left, climbing the vertical joint.', tip:'Whip up and slightly out, then drop back in.',
+    path:(W,H)=>genCVertical(W,H,22,1) },
+  { id:'zigzag-vertical',   icon:'〜', name:'Zigzag Triangle',      posKey:'vertical',   posLabel:'Vertical',              posJp:'立向き',
+    difficulty:4, description:'Sharp zigzag climbing a vertical joint against gravity.', tip:'Slow down at the outer tips to fill the corners.',
+    path:(W,H)=>genZigzagVertical(W,H) },
+  { id:'semicircle-overhead',icon:'◑', name:'Semicircle (Half-Moon)',posKey:'overhead',  posLabel:'Overhead',              posJp:'上向き',
+    difficulty:4, description:'Inverted half-moons for overhead position control.', tip:'Keep arc length short — gravity works against you here.',
+    path:(W,H)=>genScallop(W,H,25,1) },
+  { id:'cshape-overhead',   icon:'Ɔ',  name:'C-Shape',              posKey:'overhead',   posLabel:'Overhead',              posJp:'上向き',
+    difficulty:4, description:'C-curves opening downward overhead — the hardest weave.', tip:'Move fast through the top of the curve to avoid drips.',
+    path:(W,H)=>genScallop(W,H,22,-1) },
+  { id:'free',              icon:'✎',  name:'Free Practice',        posKey:'all',        posLabel:'All Positions',         posJp:'全姿勢',
+    difficulty:5, description:'No guide — trace anything you like to warm up.', tip:'Use this to practice your own rhythm and control.',
+    path:()=>[] },
+]
+
+function wvStars(n) {
+  return '★★★★★'.slice(0, n) + '☆☆☆☆☆'.slice(0, 5 - n)
+}
+
+function wvDistance(userPts, guidePts) {
+  let totalA = 0
+  for (const p of userPts) {
+    let minD = Infinity
+    for (const g of guidePts) {
+      const d = Math.hypot(p.x - g.x, p.y - g.y)
+      if (d < minD) minD = d
+    }
+    totalA += minD
+  }
+  let totalB = 0
+  for (const g of guidePts) {
+    let minD = Infinity
+    for (const p of userPts) {
+      const d = Math.hypot(p.x - g.x, p.y - g.y)
+      if (d < minD) minD = d
+    }
+    totalB += minD
+  }
+  const avgA = userPts.length ? totalA / userPts.length : Infinity
+  const avgB = guidePts.length ? totalB / guidePts.length : Infinity
+  return (avgA + avgB) / 2
+}
+
+function WeaveTab() {
+  const [selIdx,    setSelIdx]    = useState(0)
+  const [phase,     setPhase]     = useState('demo')   // demo | ready | tracing | scored
+  const [accuracy,  setAccuracy]  = useState(null)
+  const canvasRef     = useRef(null)
+  const guidePtsRef   = useRef([])
+  const userPtsRef    = useRef([])
+  const isDrawingRef  = useRef(false)
+  const animRef       = useRef(null)
+
+  const pattern = WEAVE_PATTERNS[selIdx]
+  const pos = WV_POS[pattern.posKey]
+
+  function render(guideUpTo) {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    ctx.clearRect(0, 0, WV_W, WV_H)
+    const guide = guidePtsRef.current
+    const upTo  = guideUpTo == null ? guide.length : guideUpTo
+    if (guide.length > 1 && upTo > 1) {
+      ctx.beginPath()
+      ctx.moveTo(guide[0].x, guide[0].y)
+      for (let i = 1; i < upTo && i < guide.length; i++) ctx.lineTo(guide[i].x, guide[i].y)
+      ctx.strokeStyle = '#FF6600'
+      ctx.lineWidth = 3
+      ctx.lineCap = 'round'
+      ctx.lineJoin = 'round'
+      ctx.shadowColor = '#FF6600'
+      ctx.shadowBlur = 8
+      ctx.stroke()
+      ctx.shadowBlur = 0
+    }
+    const user = userPtsRef.current
+    if (user.length > 1) {
+      ctx.beginPath()
+      ctx.moveTo(user[0].x, user[0].y)
+      for (let i = 1; i < user.length; i++) ctx.lineTo(user[i].x, user[i].y)
+      ctx.strokeStyle = '#22d3ee'
+      ctx.lineWidth = 3
+      ctx.lineCap = 'round'
+      ctx.lineJoin = 'round'
+      ctx.shadowColor = '#22d3ee'
+      ctx.shadowBlur = 6
+      ctx.stroke()
+      ctx.shadowBlur = 0
+    }
+  }
+
+  function playDemo() {
+    cancelAnimationFrame(animRef.current)
+    userPtsRef.current = []
+    setAccuracy(null)
+    const guide = guidePtsRef.current
+    if (guide.length === 0) {
+      render()
+      setPhase('tracing')
+      return
+    }
+    setPhase('demo')
+    const start = performance.now()
+    const duration = 2000
+    const step = (now) => {
+      const progress = Math.min(1, (now - start) / duration)
+      render(Math.max(2, Math.floor(progress * guide.length)))
+      if (progress < 1) {
+        animRef.current = requestAnimationFrame(step)
+      } else {
+        render(guide.length)
+        setPhase('ready')
+      }
+    }
+    animRef.current = requestAnimationFrame(step)
+  }
+
+  useEffect(() => {
+    guidePtsRef.current = pattern.path(WV_W, WV_H)
+    playDemo()
+    return () => cancelAnimationFrame(animRef.current)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selIdx])
+
+  function startTrace() {
+    cancelAnimationFrame(animRef.current)
+    userPtsRef.current = []
+    setAccuracy(null)
+    setPhase('tracing')
+    render(guidePtsRef.current.length)
+  }
+
+  function getPos(e) {
+    const canvas = canvasRef.current
+    const rect = canvas.getBoundingClientRect()
+    return {
+      x: (e.clientX - rect.left) * (WV_W / rect.width),
+      y: (e.clientY - rect.top)  * (WV_H / rect.height),
+    }
+  }
+
+  function onPointerDown(e) {
+    if (phase !== 'tracing') return
+    e.preventDefault()
+    canvasRef.current.setPointerCapture?.(e.pointerId)
+    isDrawingRef.current = true
+    userPtsRef.current = [getPos(e)]
+    render(guidePtsRef.current.length)
+  }
+  function onPointerMove(e) {
+    if (!isDrawingRef.current) return
+    e.preventDefault()
+    userPtsRef.current.push(getPos(e))
+    render(guidePtsRef.current.length)
+    if (guidePtsRef.current.length && userPtsRef.current.length % 4 === 0) {
+      const d = wvDistance(userPtsRef.current, guidePtsRef.current)
+      setAccuracy(Math.max(0, Math.min(100, Math.round(100 * (1 - d / 60)))))
+    }
+  }
+  function onPointerUp(e) {
+    if (!isDrawingRef.current) return
+    isDrawingRef.current = false
+    const guide = guidePtsRef.current
+    const user  = userPtsRef.current
+    if (guide.length === 0) {
+      setAccuracy(null)
+    } else if (user.length < 2) {
+      setAccuracy(0)
+    } else {
+      const d = wvDistance(user, guide)
+      setAccuracy(Math.max(0, Math.min(100, Math.round(100 * (1 - d / 60)))))
+    }
+    setPhase('scored')
+  }
+
+  const isFree    = pattern.id === 'free'
+  const cleared   = accuracy !== null && accuracy > 70
+  const S = styles
+
+  return (
+    <div style={{ padding:16, fontFamily:F_BODY, background:'#0d0d0d', minHeight:'100vh', paddingBottom:70 }}>
+      <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:12 }}>〰️ WEAVE PATTERN TRAINER</div>
+
+      {/* Pattern selector grid */}
+      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:6, marginBottom:14 }}>
+        {WEAVE_PATTERNS.map((p, i) => {
+          const ppos = WV_POS[p.posKey]
+          const active = i === selIdx
+          return (
+            <button key={p.id} onClick={() => setSelIdx(i)} style={{
+              background: active ? `${ppos.color}1a` : '#141414',
+              border:`1px solid ${active ? ppos.color : '#1e1e1e'}`,
+              borderRadius:8, padding:'8px 4px 7px', cursor:'pointer',
+              fontFamily:F_BODY, textAlign:'center', minHeight:64,
+              touchAction:'manipulation', WebkitTapHighlightColor:'transparent',
+            }}>
+              <div style={{ fontSize:'1.1rem', color:ppos.color, lineHeight:1 }}>{p.icon}</div>
+              <div style={{ color: active ? ppos.color : '#999', fontSize:'0.56rem', fontWeight:'bold',
+                lineHeight:1.25, marginTop:3 }}>{p.name}</div>
+              <div style={{ color:'#555', fontSize:'0.5rem', marginTop:1 }}>{p.posLabel}</div>
+              <div style={{ color:ppos.color, fontSize:'0.5rem', letterSpacing:'-0.5px', marginTop:1 }}>
+                {wvStars(p.difficulty)}
+              </div>
+            </button>
+          )
+        })}
+      </div>
+
+      {/* Pattern info */}
+      <div style={{ color:'#888', fontSize:'0.66rem', lineHeight:1.4, marginBottom:10 }}>
+        {pattern.description}
+      </div>
+
+      {/* Canvas */}
+      <div style={{ background:'#111', border:`1px solid ${pos.color}33`, borderRadius:10,
+        padding:8, marginBottom:10 }}>
+        <canvas
+          ref={canvasRef}
+          width={WV_W} height={WV_H}
+          style={{ width:'100%', height:300, display:'block', borderRadius:6,
+            background:'#0a0a0a', touchAction:'none', cursor: phase==='tracing' ? 'crosshair' : 'default' }}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onPointerCancel={onPointerUp}
+        />
+      </div>
+
+      {/* Live accuracy meter */}
+      {accuracy !== null && (
+        <div style={{ marginBottom:10 }}>
+          <div style={{ display:'flex', justifyContent:'space-between', fontSize:'0.62rem', color:'#666', marginBottom:4 }}>
+            <span>ACCURACY</span>
+            <span style={{ color: accuracy>70 ? '#22c55e' : accuracy>40 ? '#f59e0b' : '#ef4444', fontWeight:'bold' }}>{accuracy}%</span>
+          </div>
+          <div style={{ height:10, background:'#1e1e1e', borderRadius:6, overflow:'hidden' }}>
+            <div style={{ height:'100%', width:`${accuracy}%`, borderRadius:6, transition:'width 0.15s',
+              background: accuracy>70 ? '#22c55e' : accuracy>40 ? '#f59e0b' : '#ef4444' }}/>
+          </div>
+        </div>
+      )}
+
+      {/* Controls */}
+      <div style={{ display:'flex', gap:8, marginBottom:12 }}>
+        <button onClick={playDemo} disabled={isFree} style={{
+          ...S.btnPrimary, flex:1, opacity: isFree ? 0.4 : 1,
+          cursor: isFree ? 'not-allowed' : 'pointer' }}>▶ DEMO</button>
+        <button onClick={startTrace} style={{ ...S.btnPrimary, flex:1,
+          background:'linear-gradient(135deg,#22d3ee,#0891b2)' }}>✏ TRY</button>
+      </div>
+
+      {/* Score card */}
+      {phase === 'scored' && (
+        <div style={{ background:'#141414', border:`1px solid ${isFree ? '#444' : cleared ? '#22c55e' : '#ef4444'}66`,
+          borderRadius:10, padding:'14px', marginBottom:12, textAlign:'center' }}>
+          {isFree ? (
+            <div style={{ color:'#FFB800', fontWeight:'bold', fontSize:'0.85rem' }}>✓ Nice freehand practice!</div>
+          ) : (
+            <>
+              <div style={{ color:'#888', fontSize:'0.62rem', marginBottom:2 }}>RESULT</div>
+              <div style={{ fontSize:'1.8rem', fontWeight:'900', fontFamily:F_TITLE,
+                color: cleared ? '#22c55e' : '#ef4444' }}>{accuracy}%</div>
+              <div style={{ color: cleared ? '#22c55e' : '#ef4444', fontWeight:'bold', fontSize:'0.78rem', marginBottom:8 }}>
+                {cleared ? '✓ CLEAR' : '✗ TRY AGAIN'}
+              </div>
+            </>
+          )}
+          <div style={{ color:'#777', fontSize:'0.64rem', lineHeight:1.4, fontStyle:'italic' }}>
+            💡 {pattern.tip}
+          </div>
+        </div>
+      )}
+
+      {/* Position indicator */}
+      <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:8,
+        background:`${pos.color}14`, border:`1px solid ${pos.color}44`, borderRadius:8, padding:'8px 12px' }}>
+        <span style={{ width:8, height:8, borderRadius:'50%', background:pos.color, boxShadow:`0 0 8px ${pos.color}` }}/>
+        <span style={{ color:pos.color, fontWeight:'bold', fontSize:'0.7rem' }}>{pattern.posJp}</span>
+        <span style={{ color:'#555', fontSize:'0.62rem' }}>{pattern.posLabel}</span>
+      </div>
+    </div>
+  )
+}
+
 // ── REVIEW SCREEN ────────────────────────────────────────────
 function ReviewScreen({ history, onBack }) {
   const OPTS = ['A','B','C','D']
@@ -2298,6 +2719,7 @@ export default function App() {
     { id:'battle',  icon:'⚔️', label:'BATTLE'  },
     { id:'symbol',  icon:'📐', label:'SYMBOLS' },
     { id:'calc',    icon:'🔢', label:'CALC'    },
+    { id:'weave',   icon:'〰️', label:'WEAVE'   },
     { id:'career',  icon:'🗺️', label:'CAREER'  },
     { id:'history', icon:'📜', label:'HISTORY' },
   ]
@@ -2339,6 +2761,7 @@ export default function App() {
         {tab==='battle'  && battleContent()}
         {tab==='symbol'  && <SymbolTab/>}
         {tab==='calc'    && <CalcTab/>}
+        {tab==='weave'   && <WeaveTab/>}
         {tab==='career'  && <CareerTab/>}
         {tab==='history' && <HistoryTab/>}
       </div>
