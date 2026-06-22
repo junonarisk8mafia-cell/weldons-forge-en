@@ -1914,6 +1914,57 @@ function genCVertical(W, H, radius, bulgeSign, n = 160) {
   return pts
 }
 
+function genUShapeVertical(W, H, amp = 26, period = 70, n = 180) {
+  const pts = []
+  const baseX = W * 0.5
+  const yStart = H - 20, yEnd = 20
+  const span = yStart - yEnd
+  for (let i = 0; i <= n; i++) {
+    const t = i / n
+    const y = yStart - span * t
+    const cyclePos = (span * t) / period
+    const cycleIdx = Math.floor(cyclePos)
+    const frac = cyclePos - cycleIdx
+    const side = cycleIdx % 2 === 0 ? 1 : -1
+    const shaped = Math.sin(Math.PI * frac)
+    pts.push({ x: baseX + side * amp * shaped, y })
+  }
+  return pts
+}
+
+function genLadder(W, H, amp = 28, period = 46, rung = 0.12, n = 300) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20, xEnd = W - 20
+  for (let i = 0; i <= n; i++) {
+    const x = xStart + (xEnd - xStart) * (i / n)
+    const frac = ((x - xStart) % period) / period
+    let y
+    if (frac < rung)              y = baseY - amp * (frac / rung)
+    else if (frac < 0.5)          y = baseY - amp
+    else if (frac < 0.5 + rung)   y = baseY - amp + amp * ((frac - 0.5) / rung)
+    else                          y = baseY
+    pts.push({ x, y })
+  }
+  return pts
+}
+
+function genWhip(W, H, radius = 14, spacing = 11) {
+  const pts = []
+  const baseY = H * 0.5
+  const xStart = 20 + radius, xEnd = W - 20 - radius
+  const count = Math.max(2, Math.round((xEnd - xStart) / spacing) + 1)
+  const samples = 22
+  for (let c = 0; c < count; c++) {
+    const cx = xStart + c * spacing
+    for (let i = 0; i <= samples; i++) {
+      const angle = Math.PI + (i / samples) * 2 * Math.PI
+      pts.push({ x: cx + radius * Math.cos(angle), y: baseY + radius * Math.sin(angle) })
+    }
+  }
+  return pts
+}
+
 const WEAVE_PATTERNS = [
   { id:'stringer',          icon:'➖', name:'Stringer Bead',        posKey:'all',        posLabel:'All Positions',         posJp:'全姿勢',
     difficulty:1, description:'Straight, steady line — the foundation of every weld.', tip:"Keep travel speed constant; don't let the line wander.",
@@ -1948,6 +1999,18 @@ const WEAVE_PATTERNS = [
   { id:'cshape-overhead',   icon:'Ɔ',  name:'C-Shape',              posKey:'overhead',   posLabel:'Overhead',              posJp:'上向き',
     difficulty:4, description:'C-curves opening downward overhead — the hardest weave.', tip:'Move fast through the top of the curve to avoid drips.',
     path:(W,H)=>genScallop(W,H,22,-1) },
+  { id:'vertical-triangle', icon:'▲',  name:'Vertical Triangle',     posKey:'vertical',   posLabel:'Vertical',              posJp:'立向き',
+    difficulty:4, description:'Triangle weave going upward — essential for vertical-up groove welding.', tip:'Pause at each side to ensure sidewall fusion, move quickly through center.',
+    path:(W,H)=>genZigzagVertical(W,H,40,60) },
+  { id:'ushape-vertical',   icon:'U',  name:'U-Shape / J-Shape',     posKey:'vertical',   posLabel:'Vertical / Pipe',       posJp:'立向き・パイプ',
+    difficulty:3, description:'U-shape weave for pipe and vertical groove welding, deep penetration.', tip:'Slight pause at each side prevents undercut, crucial for pipe root passes.',
+    path:(W,H)=>genUShapeVertical(W,H) },
+  { id:'ladder',            icon:'#',  name:'Ladder',                 posKey:'vertical',   posLabel:'Vertical',              posJp:'立向き',
+    difficulty:3, description:'Ladder pattern for building up vertical welds systematically.', tip:'Keep rung spacing consistent — Japanese inspectors measure bead uniformity.',
+    path:(W,H)=>genLadder(W,H) },
+  { id:'whip',              icon:'≡',  name:'Whip / In-Line',         posKey:'flat',       posLabel:'Flat / TIG',            posJp:'下向き・TIG',
+    difficulty:4, description:'TIG-style stacked dimes — forward then slight pullback, repeat.', tip:'This is how TIG welders achieve the beautiful stack-of-dimes bead seen in aerospace work.',
+    path:(W,H)=>genWhip(W,H) },
   { id:'free',              icon:'✎',  name:'Free Practice',        posKey:'all',        posLabel:'All Positions',         posJp:'全姿勢',
     difficulty:5, description:'No guide — trace anything you like to warm up.', tip:'Use this to practice your own rhythm and control.',
     path:()=>[] },
@@ -1981,10 +2044,17 @@ function wvDistance(userPts, guidePts) {
   return (avgA + avgB) / 2
 }
 
+const WV_SPEEDS = [
+  { id:'slow',   label:'🐢 SLOW (6s)',   ms:6000 },
+  { id:'normal', label:'▶ NORMAL (4s)', ms:4000 },
+  { id:'fast',   label:'⚡ FAST (2s)',   ms:2000 },
+]
+
 function WeaveTab() {
   const [selIdx,    setSelIdx]    = useState(0)
   const [phase,     setPhase]     = useState('demo')   // demo | ready | tracing | scored
   const [accuracy,  setAccuracy]  = useState(null)
+  const [speedId,   setSpeedId]   = useState('slow')
   const canvasRef     = useRef(null)
   const guidePtsRef   = useRef([])
   const userPtsRef    = useRef([])
@@ -2042,7 +2112,7 @@ function WeaveTab() {
     }
     setPhase('demo')
     const start = performance.now()
-    const duration = 2000
+    const duration = WV_SPEEDS.find(s => s.id === speedId).ms
     const step = (now) => {
       const progress = Math.min(1, (now - start) / duration)
       render(Math.max(2, Math.floor(progress * guide.length)))
@@ -2061,7 +2131,7 @@ function WeaveTab() {
     playDemo()
     return () => cancelAnimationFrame(animRef.current)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selIdx])
+  }, [selIdx, speedId])
 
   function startTrace() {
     cancelAnimationFrame(animRef.current)
@@ -2123,7 +2193,7 @@ function WeaveTab() {
       <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:12 }}>〰️ WEAVE PATTERN TRAINER</div>
 
       {/* Pattern selector grid */}
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:6, marginBottom:14 }}>
+      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr 1fr', gap:6, marginBottom:14 }}>
         {WEAVE_PATTERNS.map((p, i) => {
           const ppos = WV_POS[p.posKey]
           const active = i === selIdx
@@ -2165,6 +2235,22 @@ function WeaveTab() {
           onPointerUp={onPointerUp}
           onPointerCancel={onPointerUp}
         />
+      </div>
+
+      {/* Demo speed control */}
+      <div style={{ display:'flex', gap:6, marginBottom:10 }}>
+        {WV_SPEEDS.map(s => {
+          const active = speedId === s.id
+          return (
+            <button key={s.id} onClick={() => setSpeedId(s.id)} style={{
+              ...S.btnGhost, flex:1, minHeight:36, padding:'6px 4px', fontSize:'0.62rem',
+              borderColor: active ? '#FF6600' : '#2a2a2a',
+              color: active ? '#FF6600' : '#555',
+              background: active ? '#FF660014' : 'none',
+              fontWeight: active ? 'bold' : 'normal',
+            }}>{s.label}</button>
+          )
+        })}
       </div>
 
       {/* Live accuracy meter */}
