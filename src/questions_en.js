@@ -89,7 +89,7 @@ export const QUIZ_STAGES = [
           "Body Belt Safety Training — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)"
         ],
         a: 1, xp: 15,
-        exp: "Since February 2022, Japanese law requires Full Harness Safety Training (フルハーネス特別教育) for working at heights of 2 meters or more. 1-day course, approx ¥10,000. Traditional body belts (胴ベルト) are now restricted — full harness is mandatory. 🇯🇵 TIP: Japanese sites do a daily 'KY' (危険予知 / kiken-yochi / hazard identification) activity every morning. Height work is always flagged in KY — showing you understand フルハーネス demonstrates safety awareness that supervisors respect."
+        exp: "Since January 2022, Japanese law requires Full Harness Safety Training (フルハーネス特別教育) for working at heights of 2 meters or more. 1-day course, approx ¥10,000. Traditional body belts (胴ベルト) are now restricted — full harness is mandatory. 🇯🇵 TIP: Japanese sites do a daily 'KY' (危険予知 / kiken-yochi / hazard identification) activity every morning. Height work is always flagged in KY — showing you understand フルハーネス demonstrates safety awareness that supervisors respect."
       },
       {
         id: 7, cat: "Legal Permits",
@@ -129,7 +129,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 10, cat: "Safety",
-        q: "What is 'Sanso-keppitsu' (酸素欠乏 / さんそけっぴつ) and why is it dangerous for welders?",
+        q: "What is 'Sanso-ketsubo' (酸素欠乏 / さんそけつぼう) and why is it dangerous for welders?",
         opts: [
           "Excess oxygen — causes fire risk",
           "Oxygen deficiency — shielding gas can displace oxygen in enclosed spaces, causing loss of consciousness and death",
@@ -137,7 +137,7 @@ export const QUIZ_STAGES = [
           "A type of welding defect"
         ],
         a: 1, xp: 20,
-        exp: "Sanso-keppitsu (酸素欠乏) = Oxygen Deficiency. In confined spaces (tanks, holds, enclosed rooms), shielding gas (CO₂, Argon) can push out oxygen. Below 18% O₂ = danger. Below 16% = blackout. Measure oxygen levels BEFORE entering any enclosed welding area. 🇯🇵 TIP: CO₂ is 1.5× heavier than air and Argon is 1.4× heavier — they sink and pool invisibly at the bottom. A worker who collapses inside a tank from oxygen deficiency must NOT be rescued by someone entering without breathing equipment — Japan has had multiple deaths this way. Call 119 and wait for specialist rescue."
+        exp: "Sanso-ketsubo (酸素欠乏) = Oxygen Deficiency. In confined spaces (tanks, holds, enclosed rooms), shielding gas (CO₂, Argon) can push out oxygen. Below 18% O₂ = danger. Below 16% = blackout. Measure oxygen levels BEFORE entering any enclosed welding area. 🇯🇵 TIP: CO₂ is 1.5× heavier than air and Argon is 1.4× heavier — they sink and pool invisibly at the bottom. A worker who collapses inside a tank from oxygen deficiency must NOT be rescued by someone entering without breathing equipment — Japan has had multiple deaths this way. Call 119 and wait for specialist rescue."
       },
       {
         id: 11, cat: "Safety",
@@ -185,7 +185,7 @@ export const QUIZ_STAGES = [
           "The brand of shielding gas"
         ],
         a: 1, xp: 25,
-        exp: "Before entering any enclosed space in Japan, you MUST measure oxygen concentration (酸素濃度) — must be above 18%. Also check for CO, hydrogen, and other hazardous gases. Set up forced ventilation. In Japan, this is covered by the Oxygen Deficiency Hazard Work Certification (酸素欠乏危険作業特別教育). 🇯🇵 TIP: The 酸欠資格 (sanso-keppitsu shikaku / oxygen deficiency cert) is a 1-day course (~¥8,000–12,000) that is often overlooked by foreign workers. If you work in shipbuilding, tank fabrication, or any enclosed steel structure, this certificate is essential and expected."
+        exp: "Before entering any enclosed space in Japan, you MUST measure oxygen concentration (酸素濃度) — must be above 18%. Also check for CO, hydrogen, and other hazardous gases. Set up forced ventilation. In Japan, this is covered by the Oxygen Deficiency Hazard Work Certification (酸素欠乏危険作業特別教育). 🇯🇵 TIP: The 酸欠資格 (sanso-ketsubo shikaku / oxygen deficiency cert) is a 1-day course (~¥8,000–12,000) that is often overlooked by foreign workers. If you work in shipbuilding, tank fabrication, or any enclosed steel structure, this certificate is essential and expected."
       },
       {
         id: 15, cat: "Safety",
@@ -254,14 +254,14 @@ export const QUIZ_STAGES = [
           "21% oxygen exactly — room air percentage is the minimum",
           "10% oxygen — humans can work briefly at this level",
           "15% oxygen or above — normal breathing is possible",
-          "18% oxygen or above — below this is 'Sanso-keppitsu' (酸素欠乏) danger zone"
+          "18% oxygen or above — below this is 'Sanso-ketsubo' (酸素欠乏) danger zone"
         ],
         a: 3, xp: 20,
-        exp: "Japanese law (酸素欠乏危険作業特別教育) defines 酸素欠乏 (Sanso-keppitsu / oxygen deficiency) as O₂ below 18%. At 16% = confusion and weakness. At 12% = unconsciousness. At 6% = death within minutes. ALWAYS measure O₂ before entry. CO₂ and Argon shielding gas are heavier than air and accumulate in tanks, pits, and low spaces. 🇯🇵 TIP: In Japanese shipyards, the oxygen meter reading is recorded in the 作業前点検表 (pre-work inspection sheet) before every confined space entry — your supervisor will ask to see it."
+        exp: "Japanese law (酸素欠乏危険作業特別教育) defines 酸素欠乏 (Sanso-ketsubo / oxygen deficiency) as O₂ below 18%. At 16% = confusion and weakness. At 12% = unconsciousness. At 6% = death within minutes. ALWAYS measure O₂ before entry. CO₂ and Argon shielding gas are heavier than air and accumulate in tanks, pits, and low spaces. 🇯🇵 TIP: In Japanese shipyards, the oxygen meter reading is recorded in the 作業前点検表 (pre-work inspection sheet) before every confined space entry — your supervisor will ask to see it."
       },
       {
         id: 22, cat: "Confined Space Safety",
-        q: "You are assigned 酸素欠乏危険作業 (Sanso-keppitsu kiken-sagyo / oxygen deficiency hazard work). What is the legally required minimum team setup?",
+        q: "You are assigned 酸素欠乏危険作業 (Sanso-ketsubo kiken-sagyo / oxygen deficiency hazard work). What is the legally required minimum team setup?",
         opts: [
           "At least one worker INSIDE plus a designated 監視人 (Kanshi-nin / standby monitor) OUTSIDE who watches and can call for help",
           "One worker inside is fine as long as a radio check-in is done every 30 minutes",
@@ -731,7 +731,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 213, cat: "Slang",
-        q: "For stainless steel welding, your supervisor says 'Uragas wo shire!' (裏ガスをしろ！) [u-ra-ga-su wo shi-ro]. What do you need to set up?",
+        q: "For stainless steel welding, your supervisor says 'Ura-gasu wo shiro!' (裏ガスをしろ！) [u-ra-ga-su wo shi-ro]. What do you need to set up?",
         opts: [
           "Double the shielding gas flow on the front",
           "Back purging — shield the back side of the stainless steel weld with inert gas (Argon) to prevent oxidation",
@@ -1432,13 +1432,13 @@ export const QUIZ_STAGES = [
         id: 508, cat: "Certifications",
         q: "What TWO licenses are required to work as an 'Underwater Welder' (水中溶接士 / すいちゅうようせつし) in Japan?",
         opts: [
-          "Diving License (潜水士 / Senzo-shi) + Welding qualification (JIS or equivalent). Both are mandatory — you cannot legally dive AND weld without both",
+          "Diving License (潜水士 / Sensui-shi) + Welding qualification (JIS or equivalent). Both are mandatory — you cannot legally dive AND weld without both",
           "Any two safety training certificates",
           "JIS Certification + Driver's License",
           "Boiler Welder + Arc Welding Safety Training only"
         ],
         a: 0, xp: 25,
-        exp: "Underwater Welder = Senzoushi (潜水士) national diving license + welding qualification (JIS specialist grade recommended). The diving license requires written exam only (no practical) — pass rate ~75%. The welding skill must then be applied in a completely different environment. Very rare combination. Annual income: ¥7–10 million. Top saturation divers: ¥10–15 million. 🇯🇵 TIP: In Japan, underwater welding work (水中溶接 / suichuu-yosetsu) is concentrated in ports (港湾 / kouwan), offshore structures, and dam repairs. Employers who hire underwater welders typically pay relocation and living expenses, plus hazard pay. The community of qualified underwater welders in Japan is very small — once known, you will be called. Building a reputation for reliability and safety-consciousness is more valuable than any single credential in this field."
+        exp: "Underwater Welder = Sensui-shi (潜水士) national diving license + welding qualification (JIS specialist grade recommended). The diving license requires written exam only (no practical) — pass rate ~75%. The welding skill must then be applied in a completely different environment. Very rare combination. Annual income: ¥7–10 million. Top saturation divers: ¥10–15 million. 🇯🇵 TIP: In Japan, underwater welding work (水中溶接 / suichuu-yosetsu) is concentrated in ports (港湾 / kouwan), offshore structures, and dam repairs. Employers who hire underwater welders typically pay relocation and living expenses, plus hazard pay. The community of qualified underwater welders in Japan is very small — once known, you will be called. Building a reputation for reliability and safety-consciousness is more valuable than any single credential in this field."
       },
       {
         id: 509, cat: "Certifications",
@@ -1483,10 +1483,10 @@ export const QUIZ_STAGES = [
           "4 atmospheres — 1 atm (surface) + 3 atm (from 30m = 3 × 10m)",
           "1 atmosphere (just atmospheric pressure)",
           "2 atmospheres",
-          "3 atmospheres — 1 atm (surface) + 3 atm (from 30m water) — WRONG calculation"
+          "3 atmospheres — 1 atm (surface) + 3 atm (from 30m water)"
         ],
         a: 0, xp: 25,
-        exp: "Water pressure: Every 10m depth adds ~1 atmosphere. At 30m: 1 atm (atmospheric pressure at surface) + 3 atm (from 30m of water) = 4 atm absolute. This pressure affects diving: gas consumption increases, nitrogen narcosis risk increases, decompression stops become mandatory. Underwater welders must understand this math. 🇯🇵 TIP: Japan has very specific diving operations safety regulations (高気圧作業安全衛生規則 / Koukiatsu-sagyou-anzen-eisei-kisoku) that cover decompression tables, air supply rates, and supervisor responsibilities. The diving supervisor (潜水監督員 / senzo-kantoku-in) is legally responsible for every diver's safety. Unlike some countries, Japanese law takes 'bend' (減圧症 / gengenchou) prevention extremely seriously — no shortcuts."
+        exp: "Water pressure: Every 10m depth adds ~1 atmosphere. At 30m: 1 atm (atmospheric pressure at surface) + 3 atm (from 30m of water) = 4 atm absolute. This pressure affects diving: gas consumption increases, nitrogen narcosis risk increases, decompression stops become mandatory. Underwater welders must understand this math. 🇯🇵 TIP: Japan has very specific diving operations safety regulations (高気圧作業安全衛生規則 / Koukiatsu-sagyou-anzen-eisei-kisoku) that cover decompression tables, air supply rates, and supervisor responsibilities. The diving supervisor (潜水監督員 / sensui-kantoku-in) is legally responsible for every diver's safety. Unlike some countries, Japanese law takes 'bend' (減圧症 / gengenchou) prevention extremely seriously — no shortcuts."
       },
       {
         id: 513, cat: "Physics",

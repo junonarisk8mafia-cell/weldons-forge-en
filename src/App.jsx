@@ -163,6 +163,13 @@ function shuffle(arr) {
   return a
 }
 
+// Returns a copy of the question with its opts shuffled and `a` remapped
+// to point at the correct option's new position.
+function shuffleQuestionOpts(q) {
+  const order = shuffle(q.opts.map((_, i) => i))
+  return { ...q, opts: order.map(i => q.opts[i]), a: order.indexOf(q.a) }
+}
+
 // ── WELDON SVG CHARACTER ────────────────────────────────────
 function WeldonSVG({ size = 80 }) {
   const aspect = 120 / 100
@@ -2699,7 +2706,7 @@ export default function App() {
 
   function startStage(idx) {
     setSi(idx)
-    setQs(shuffle(QUIZ_STAGES[idx].questions))
+    setQs(shuffle(QUIZ_STAGES[idx].questions).map(shuffleQuestionOpts))
     setQi(0); setPHP(P_HP); setMHP(M_HP)
     setCorrect(0); setMiss(0); setSessionXP(0)
     setSel(null); setDone(false)
@@ -2796,7 +2803,7 @@ export default function App() {
     if (pending) { setScreen(pending); return }
     const next = qi + 1
     if (next >= qs.length) {
-      setQs(shuffle(QUIZ_STAGES[si].questions)); setQi(0)
+      setQs(shuffle(QUIZ_STAGES[si].questions).map(shuffleQuestionOpts)); setQi(0)
     } else { setQi(next) }
     setSel(null); setDone(false)
   }
