@@ -6,6 +6,7 @@
 import { useState, useEffect, useRef } from "react";
 import { QUIZ_STAGES } from "./questions_en.js";
 import { recordAnswer } from "./stats_en.js";
+import { localizeQ } from "./localize_en.js";
 
 const PASS = 0.6;
 
@@ -15,7 +16,7 @@ QUIZ_STAGES.forEach(s => s.questions.forEach(q => ALL_Q.push(q)));
 const shuffle = a => [...a].sort(() => Math.random() - 0.5);
 const fmt = sec => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`;
 
-export function MockScreen({ onExit }) {
+export function MockScreen({ onExit, lang }) {
   const [phase, setPhase] = useState("setup"); // setup | exam | result
   const [qs, setQs] = useState([]);
   const [ans, setAns] = useState([]);
@@ -29,7 +30,7 @@ export function MockScreen({ onExit }) {
   useEffect(() => () => clearInterval(timer.current), []);
 
   function start(n, minutes) {
-    const pool = shuffle(ALL_Q).slice(0, Math.min(n, ALL_Q.length));
+    const pool = shuffle(ALL_Q).slice(0, Math.min(n, ALL_Q.length)).map(q => localizeQ(q, lang));
     setQs(pool); setAns(new Array(pool.length).fill(null));
     setCur(0); setLimit(minutes * 60); setLeft(minutes * 60); setPhase("exam");
     clearInterval(timer.current);

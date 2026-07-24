@@ -192,10 +192,11 @@ const SAFETY = [
 const orb = "'Orbitron',monospace";
 const mono = "'Share Tech Mono',monospace";
 
-export function LearnTab() {
+export function LearnTab({ lang: langProp, onPickLang }) {
   const [mode, setMode] = useState("terms"); // terms | safety
-  const [lang, setLang] = useState(loadLang());
-  function pickLang(l) { setLang(l); saveLang(l); }
+  const [langLocal, setLangLocal] = useState(loadLang());
+  const lang = langProp || langLocal;
+  function pickLang(l) { if (onPickLang) onPickLang(l); else { setLangLocal(l); saveLang(l); } }
 
   return (
     <div style={{ padding: 16, fontFamily: mono, background: "#0d0d0d", minHeight: "100vh", paddingBottom: 90 }}>

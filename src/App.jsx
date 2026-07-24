@@ -9,6 +9,8 @@ import { CalcDrill } from './CalcDrill.jsx'
 import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStudiedToday, getStreak } from './stats_en.js'
 import { MockScreen } from './Mock_en.jsx'
 import { LearnTab } from './Learn_en.jsx'
+import { loadLang, saveLang, LANGS } from './i18n_en.js'
+import { localizeQ } from './localize_en.js'
 
 // ── CONSTANTS ───────────────────────────────────────────────
 const P_HP   = 100   // player max HP
@@ -514,7 +516,7 @@ function TitleScreen({ onStart, totalXP }) {
 }
 
 // ── STAGE SELECT ────────────────────────────────────────────
-function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack, onMock }) {
+function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack, onMock, lang, onPickLang }) {
   const S = styles
   const [hovered,   setHovered]   = useState(null)
   const [displayXP, setDisplayXP] = useState(0)
@@ -548,6 +550,21 @@ function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack, onMock 
             textShadow:'0 0 12px #FFB80088' }}>{displayXP}</div>
         </div>
       </div>
+
+      {/* Language switch — questions & explanations */}
+      {onPickLang && (
+        <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:12 }}>
+          <span style={{ color:'#444', fontSize:'0.56rem', fontFamily:"'Share Tech Mono',monospace" }}>🌐 LANG</span>
+          {LANGS.map(L => (
+            <button key={L.id} onClick={()=>onPickLang(L.id)} style={{
+              padding:'4px 10px', borderRadius:6, cursor:'pointer', fontFamily:"'Share Tech Mono',monospace",
+              fontSize:'0.6rem', fontWeight:'bold',
+              border:`1px solid ${lang===L.id ? '#FF6600' : '#2a2a2a'}`,
+              background: lang===L.id ? '#FF6600' : 'transparent', color: lang===L.id ? '#fff' : '#777',
+            }}>{L.label}</button>
+          ))}
+        </div>
+      )}
 
       {/* Mock exam entry */}
       <button onClick={onMock} style={{
@@ -2868,10 +2885,12 @@ export default function App() {
   const [floatKey,    setFloatKey]    = useState(0)
   const [history,       setHistory]       = useState([])
   const [stageProgress, setStageProgress] = useState(() => loadProgress())
+  const [lang,          setLang]          = useState(() => loadLang())
+  function pickLang(l) { setLang(l); saveLang(l) }
 
   function startStage(idx) {
     setSi(idx)
-    setQs(shuffle(QUIZ_STAGES[idx].questions).map(shuffleQuestionOpts))
+    setQs(shuffle(QUIZ_STAGES[idx].questions).map(q => shuffleQuestionOpts(localizeQ(q, lang))))
     setQi(0); setPHP(P_HP); setMHP(M_HP)
     setCorrect(0); setMiss(0); setSessionXP(0)
     setSel(null); setDone(false)
@@ -2970,7 +2989,7 @@ export default function App() {
     if (pending) { setScreen(pending); return }
     const next = qi + 1
     if (next >= qs.length) {
-      setQs(shuffle(QUIZ_STAGES[si].questions).map(shuffleQuestionOpts)); setQi(0)
+      setQs(shuffle(QUIZ_STAGES[si].questions).map(q => shuffleQuestionOpts(localizeQ(q, lang)))); setQi(0)
     } else { setQi(next) }
     setSel(null); setDone(false)
   }
@@ -2991,9 +3010,9 @@ export default function App() {
     if (screen==='stage-select')
       return <StageSelect stages={QUIZ_STAGES} totalXP={totalXP} stageProgress={stageProgress}
                onSelect={startStage} onBack={()=>setScreen('title')}
-               onMock={()=>setScreen('mock')}/>
+               onMock={()=>setScreen('mock')} lang={lang} onPickLang={pickLang}/>
     if (screen==='mock')
-      return <MockScreen onExit={()=>setScreen('stage-select')}/>
+      return <MockScreen onExit={()=>setScreen('stage-select')} lang={lang}/>
     if (screen==='battle' && qs.length)
       return <Battle stage={QUIZ_STAGES[si]} si={si} qs={qs} qi={qi}
                pHP={pHP} mHP={mHP} correct={correct} miss={miss}
@@ -3023,7 +3042,7 @@ export default function App() {
       {/* Content */}
       <div style={{ paddingBottom:'calc(64px + env(safe-area-inset-bottom))' }}>
         {tab==='battle'  && battleContent()}
-        {tab==='learn'   && <LearnTab/>}
+        {tab==='learn'   && <LearnTab lang={lang} onPickLang={pickLang}/>}
         {tab==='symbol'  && <SymbolTab/>}
         {tab==='calc'    && <CalcTab/>}
         {tab==='weave'   && <WeaveTab/>}
