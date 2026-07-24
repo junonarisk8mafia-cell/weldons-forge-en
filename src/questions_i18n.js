@@ -556,4 +556,224 @@ export const Q_I18N = {
       exp: "Mengelas material mengandung krom (baja tahan karat SUS304/316, baja krom-moli) menghasilkan asap krom heksavalen (六価クロム / Cr⁶⁺) — karsinogen manusia yang terkonfirmasi (発がん性物質). Hukum Jepang (特化則 第38条の20) mewajibkan: 1) Respirator debu kelas DS2 atau lebih tinggi. 2) Ventilasi buang lokal wajib. 3) Catatan pengawasan kesehatan harus disimpan. 4) Pekerja harus diberi tahu risiko kanker secara tertulis. 🇯🇵 TIPS: Di Jepang, catatan paparan 六価クロム harus disimpan 30 tahun — salah satu zat paling ketat diatur dalam pekerjaan las. Jangan pernah mengelas baja tahan karat tanpa respirator yang benar.",
     },
   },
+  101: {
+    vi: {
+      q: "Đàn anh nói 'Guraindaa kakete' (グラインダーかけて) và 'Kaatto shite' (カットして) về cùng một máy đĩa 'Guraindaa' (グラインダー). Khác biệt chính giữa hai lệnh này là gì?",
+      opts: [
+        "Không khác — cả hai đều cùng một thao tác với máy mài",
+        "'Kakete' nghĩa là mài/làm nhẵn bề mặt bằng đĩa mài; 'kaatto shite' nghĩa là cắt xuyên vật liệu bằng đĩa cắt — đĩa khác nhau, việc khác nhau trên cùng thân máy",
+        "'Kakete' chỉ dùng cho thép không gỉ, 'kaatto shite' chỉ cho thép carbon",
+        "'Kakete' nghĩa là bật máy mài, 'kaatto shite' nghĩa là tắt",
+      ],
+      exp: "Guraindaa (グラインダー) = Máy mài góc, dụng cụ phổ biến nhất trên công trường hàn Nhật — nhưng CÙNG thân máy lắp đĩa khác nhau cho việc khác nhau. 'Kakete' (かけて) = làm nhẵn/mài bằng đĩa mài hoặc đĩa nhám. 'Kaatto shite' (カットして) = cắt xuyên bằng đĩa cắt. Dùng sai đĩa cho việc (ví dụ mài bằng đĩa cắt mỏng) rất nguy hiểm và có thể làm vỡ đĩa. 🇯🇵 MẸO: Luôn xác nhận đĩa nào đang lắp trước khi bắt đầu — 'guraindaa kakete' không bao giờ nghĩa là cắt. Nhớ: cần An toàn Đá mài (自由研削といし特別教育) trước khi dùng cả hai loại đĩa.",
+    },
+    id: {
+      q: "Senior berkata 'Guraindaa kakete' (グラインダーかけて) dan 'Kaatto shite' (カットして) tentang alat cakram 'Guraindaa' (グラインダー) yang sama. Apa perbedaan utama kedua perintah ini?",
+      opts: [
+        "Tidak ada beda — keduanya tindakan yang sama dengan gerinda",
+        "'Kakete' berarti menggerinda/menghaluskan permukaan dengan cakram gerinda; 'kaatto shite' berarti memotong material dengan cakram potong — cakram beda, pekerjaan beda pada bodi alat yang sama",
+        "'Kakete' hanya untuk baja tahan karat, 'kaatto shite' hanya untuk baja karbon",
+        "'Kakete' berarti menyalakan gerinda, 'kaatto shite' berarti mematikannya",
+      ],
+      exp: "Guraindaa (グラインダー) = Gerinda sudut, alat paling umum di lokasi las Jepang — tapi bodi yang SAMA memakai cakram berbeda untuk pekerjaan berbeda. 'Kakete' (かけて) = menghaluskan/menggerinda dengan cakram gerinda atau flap. 'Kaatto shite' (カットして) = memotong dengan cakram potong. Memakai cakram salah untuk tugas (mis. menggerinda dengan cakram potong tipis) berbahaya dan bisa memecahkan cakram. 🇯🇵 TIPS: Selalu pastikan cakram mana yang terpasang sebelum mulai — 'guraindaa kakete' tak pernah berarti memotong. Ingat: perlu Keselamatan Batu Gerinda (自由研削といし特別教育) sebelum memakai kedua jenis cakram.",
+    },
+  },
+  102: {
+    vi: {
+      q: "Trước khi hàn, bạn cần làm sạch một rãnh rất hẹp. Giám sát đưa bạn một 'Bo-gura' (棒グラ). Nó là gì?",
+      opts: [
+        "Một thanh đo kim loại",
+        "Một máy mài góc lớn cho bề mặt phẳng",
+        "Máy mài bút / máy mài thanh — hình que, dùng cho chỗ hẹp và hoàn thiện rãnh nơi máy mài đĩa không vừa",
+        "Một đoạn nối dài của súng hàn",
+      ],
+      exp: "Bo-gura (棒グラ) = 棒式グラインダー = máy mài bút/máy mài thanh. Chữ 棒 (bo) nghĩa 'hình que'. Lý tưởng để làm sạch rãnh (開先 / kaisaki), góc hẹp và mối nối hẹp nơi máy mài đĩa lớn không tới được. Dùng hằng ngày ở xưởng đóng tàu và nhà máy. 🇯🇵 MẸO: Khi giám sát đưa Bo-gura, chỉ vào rãnh và nói 'kaisaki kirei ni shite' (開先きれいにして / làm sạch rãnh cho đẹp), họ mong một bề mặt nhẵn, sạch vảy. Làm kỹ — kaisaki bẩn = rỗ khí về sau.",
+    },
+    id: {
+      q: "Sebelum mengelas, Anda perlu membersihkan alur yang sangat sempit. Supervisor memberi Anda 'Bo-gura' (棒グラ). Apa itu?",
+      opts: [
+        "Batang ukur logam",
+        "Gerinda sudut besar untuk permukaan datar",
+        "Die grinder / pencil grinder — berbentuk batang, untuk ruang sempit dan finishing alur di mana gerinda cakram tak muat",
+        "Perpanjangan gun las",
+      ],
+      exp: "Bo-gura (棒グラ) = 棒式グラインダー = die grinder atau pencil grinder. 棒 (bo) berarti 'berbentuk batang'. Cocok untuk membersihkan alur (開先 / kaisaki), sudut sempit, dan sambungan sempit di mana gerinda cakram besar tak menjangkau. Dipakai harian di galangan dan pabrik. 🇯🇵 TIPS: Saat supervisor memberi Bo-gura, menunjuk alur dan berkata 'kaisaki kirei ni shite' (開先きれいにして / bersihkan alurnya rapi), mereka mengharapkan permukaan halus bebas kerak. Kerjakan dengan teliti — kaisaki kotor = porositas nanti.",
+    },
+  },
+  103: {
+    vi: {
+      q: "Sau khi hàn que, tổ trưởng nói 'Chippaa!' (チッパー) và chỉ vào mối hàn. Bạn nên cầm gì?",
+      opts: [
+        "Súng hàn — để thêm kim loại",
+        "Chỉ một bàn chải sắt",
+        "Máy mài góc",
+        "Máy đục hơi — để gõ bỏ xỉ khỏi đường hàn trước lượt tiếp theo",
+      ],
+      exp: "Chippaa (チッパー) = Máy đục hơi / súng đục. Dụng cụ khí nén gõ nhanh lên bề mặt hàn để bỏ xỉ (ノロ / Noro). Nhanh hơn nhiều búa đục tay. Ở xưởng đóng tàu và nhà máy Nhật, bỏ xỉ trước lượt tiếp theo là BẮT BUỘC — bỏ qua gây khuyết tật lẫn xỉ. 🇯🇵 MẸO: Luôn đeo kính an toàn khi đục — mảnh xỉ nóng bắn tốc độ cao. Ở Nhật, 'đục = nhắm mắt' là không được phép. Xỉ bắn vào mắt là một trong những chấn thương hàn phổ biến nhất ở nhà máy Nhật.",
+    },
+    id: {
+      q: "Setelah las busur (stick), mandor berkata 'Chippaa!' (チッパー) dan menunjuk las. Apa yang harus Anda ambil?",
+      opts: [
+        "Gun las — untuk menambah logam",
+        "Hanya sikat kawat",
+        "Gerinda sudut",
+        "Air chipper — untuk merontokkan terak dari jalur las sebelum pass berikutnya",
+      ],
+      exp: "Chippaa (チッパー) = Air chipper / gun pengetuk. Alat pneumatik yang memukul cepat permukaan las untuk membuang terak (ノロ / Noro). Jauh lebih cepat dari palu ketuk manual. Di galangan dan pabrik Jepang, membuang terak sebelum pass berikutnya WAJIB — melewatkannya menyebabkan cacat inklusi terak. 🇯🇵 TIPS: Selalu pakai kacamata pengaman saat mengetuk — pecahan terak panas terbang cepat. Di Jepang, 'mengetuk = mata tertutup' tidak diperbolehkan. Terak terbang ke mata adalah salah satu cedera las paling umum di pabrik Jepang.",
+    },
+  },
+  104: {
+    vi: {
+      q: "Khác biệt giữa 'Chippaa' (チッパー) và 'Chippingu-hanmaa' (チッピングハンマー) là gì?",
+      opts: [
+        "Chippaa = dụng cụ khí nén. Chippingu-hanmaa = búa tay. Cả hai bỏ xỉ, nhưng máy đục hơi nhanh hơn",
+        "Chippingu-hanmaa để cắt thép, Chippaa để đánh bóng",
+        "Chippaa chỉ dùng cho hàn TIG",
+        "Chúng là cùng một dụng cụ",
+      ],
+      exp: "Chippaa (チッパー) = Máy đục hơi — khí nén, nhanh, dùng bỏ xỉ nặng trong sản xuất. Chippingu-hanmaa (チッピングハンマー) = búa đục tay — dùng khi không có dụng cụ hơi hoặc cho lượng xỉ nhỏ. Cả hai đều cần kỹ thuật để không làm hỏng đường hàn. 🇯🇵 MẸO: Một cú đục sắc, chính xác ở góc 30–45° so với bề mặt đường hàn sẽ bỏ xỉ hiệu quả mà không khoét kim loại. Người mới thường gõ quá mạnh và quá vuông góc — hãy tập trên phế liệu trước.",
+    },
+    id: {
+      q: "Apa perbedaan 'Chippaa' (チッパー) dan 'Chippingu-hanmaa' (チッピングハンマー)?",
+      opts: [
+        "Chippaa = alat bertenaga udara (pneumatik). Chippingu-hanmaa = palu manual. Keduanya membuang terak, tapi air chipper lebih cepat",
+        "Chippingu-hanmaa untuk memotong baja, Chippaa untuk memoles",
+        "Chippaa hanya untuk las TIG",
+        "Keduanya alat yang persis sama",
+      ],
+      exp: "Chippaa (チッパー) = Air chipper — pneumatik, cepat, untuk membuang terak berat pada las produksi. Chippingu-hanmaa (チッピングハンマー) = palu ketuk manual — dipakai saat alat udara tak ada atau untuk terak sedikit. Keduanya perlu teknik agar tak merusak jalur las. 🇯🇵 TIPS: Ketukan tajam dan presisi pada sudut 30–45° terhadap permukaan jalur membuang terak efisien tanpa menggerus logam. Pekerja baru cenderung memukul terlalu keras dan terlalu tegak lurus — berlatihlah pada besi bekas dulu.",
+    },
+  },
+  105: {
+    vi: {
+      q: "Giám sát nói 'Chippu' (チップ) trong súng cần thay. Đầu tiếp điện (contact tip) làm gì?",
+      opts: [
+        "Làm mát súng khi hàn nặng",
+        "Truyền dòng điện cho dây hàn VÀ dẫn dây đến điểm hàn",
+        "Nối súng với bộ cấp dây",
+        "Điều khiển dòng khí bảo vệ",
+      ],
+      exp: "Chippu (チップ) = Đầu tiếp điện. HAI nhiệm vụ: 1) Truyền dòng điện từ súng sang dây hàn. 2) Dẫn dây theo đúng đường đến hồ quang. Đầu mòn hoặc nghẹt văng gây hồ quang không ổn định, đường hàn xấu và kẹt dây. Thay thường xuyên — rẻ và quan trọng. 🇯🇵 MẸO: Thợ Nhật nói 'chippu ga buru-buru shiteru' (チップがぶるぶるしてる / đầu tip đang rung/không ổn) để mô tả hồ quang chập chờn. Thường là đầu mòn — thay ngay. Mang sẵn vài đầu tip (チップ) trong túi tạp dề là chuyện thường.",
+    },
+    id: {
+      q: "Supervisor berkata 'Chippu' (チップ) di gun perlu diganti. Apa fungsi contact tip?",
+      opts: [
+        "Mendinginkan gun saat las berat",
+        "Menyalurkan arus listrik ke kawat las DAN memandu kawat ke titik las",
+        "Menghubungkan gun ke pengumpan kawat",
+        "Mengatur aliran gas pelindung",
+      ],
+      exp: "Chippu (チップ) = Contact tip. DUA tugas: 1) Menyalurkan arus listrik dari gun ke kawat las. 2) Memandu kawat melalui jalur benar ke busur. Tip aus atau tersumbat percikan menyebabkan busur tak stabil, bentuk jalur buruk, dan masalah pengumpanan kawat. Ganti berkala — murah dan penting. 🇯🇵 TIPS: Tukang las Jepang berkata 'chippu ga buru-buru shiteru' (チップがぶるぶるしてる / tip bergetar/tak stabil) untuk busur yang berkedip tak menentu. Biasanya tip aus — segera ganti. Membawa cadangan tip (チップ) di saku celemek adalah praktik standar.",
+    },
+  },
+  106: {
+    vi: {
+      q: "Vai trò của 'Nozuru' (ノズル) trong súng hàn bán tự động là gì?",
+      opts: [
+        "Dẫn dây hàn tới vật hàn",
+        "Nối súng với cáp nguồn",
+        "Hướng và định hình dòng khí bảo vệ quanh bể hàn — phần ngoài cùng của súng",
+        "Làm mát đầu tiếp điện",
+      ],
+      exp: "Nozuru (ノズル) = Chụp khí (nozzle). Phần ngoài cùng của súng. Nó dẫn khí bảo vệ (CO₂, Argon hoặc khí trộn) từ thân súng quanh hồ quang và bể hàn. Chụp khí bị nghẹt hoặc bám văng làm hạn chế dòng khí và gây rỗ khí (ブローホール). Vệ sinh thường xuyên bằng chất chống văng. 🇯🇵 MẸO: Cách vệ sinh đúng ở Nhật: xịt chất chống văng trước, rồi gõ mạnh chụp khí vào bề mặt cứng (không phải vào mối hàn!). Thợ giàu kinh nghiệm làm tự động mỗi vài mét hàn — hãy tạo thói quen.",
+    },
+    id: {
+      q: "Apa peran 'Nozuru' (ノズル) pada gun las semi-otomatis?",
+      opts: [
+        "Memandu kawat las ke benda kerja",
+        "Menghubungkan gun ke kabel daya",
+        "Mengarahkan dan membentuk aliran gas pelindung di sekitar kolam las — bagian terluar gun",
+        "Mendinginkan contact tip",
+      ],
+      exp: "Nozuru (ノズル) = Nozzle. Bagian terluar gun. Menyalurkan gas pelindung (CO₂, Argon, atau gas campuran) dari bodi gun ke sekitar busur dan kolam las. Nozzle tersumbat atau berlapis percikan membatasi aliran gas dan menyebabkan porositas (ブローホール). Bersihkan berkala dengan semprotan anti-percikan. 🇯🇵 TIPS: Cara membersihkan nozzle tersumbat di lokasi Jepang: semprot anti-percikan dulu, lalu ketukkan nozzle kuat ke permukaan keras (bukan ke las!). Tukang berpengalaman melakukannya otomatis tiap beberapa meter las — jadikan kebiasaan.",
+    },
+  },
+  107: {
+    vi: {
+      q: "Bạn thấy nhiều rỗ khí trong mối hàn. Đàn anh kiểm tra súng và tháo một 'Orifisu' (オリフィス) bị nghẹt. Vì sao orifice nghẹt gây rỗ khí?",
+      opts: [
+        "Nó làm ống lót nghẹt vì mạt dây",
+        "Nó làm quá nhiệt đầu tiếp điện",
+        "Nó làm chậm tốc độ cấp dây",
+        "Không có orifice hoạt động, khí bảo vệ trở nên rối và hút không khí xung quanh — nitơ và oxy làm nhiễm bể hàn",
+      ],
+      exp: "Orifisu (オリフィス) = Bộ khuếch tán khí / orifice. Nằm giữa thân súng và chụp khí. Nó tán đều khí bảo vệ thành dòng chảy êm (tầng). Nếu nghẹt, khí rối hút không khí (nitơ + oxy) gây rỗ khí (ブローホール) trong mối hàn. Nguyên nhân rỗ khí bí ẩn mà người mới hay bỏ sót. 🇯🇵 MẸO: Khi rỗ khí đột ngột xuất hiện mà không rõ nguyên nhân, thợ Nhật kỳ cựu tháo rời toàn bộ súng (chippu → nozuru → orifisu) và vệ sinh từng phần. Orifice thường là thủ phạm ẩn — một hạt văng nhỏ bịt một lỗ của nó.",
+    },
+    id: {
+      q: "Anda melihat banyak porositas di las. Senior memeriksa gun dan melepas 'Orifisu' (オリフィス) yang tersumbat. Mengapa orifice tersumbat menyebabkan porositas?",
+      opts: [
+        "Membuat liner tersumbat serpihan kawat",
+        "Membuat contact tip terlalu panas",
+        "Memperlambat kecepatan umpan kawat",
+        "Tanpa orifice yang berfungsi, gas pelindung menjadi turbulen dan menarik udara sekitar — nitrogen dan oksigen mencemari kolam las",
+      ],
+      exp: "Orifisu (オリフィス) = Gas diffuser / orifice. Terletak antara bodi gun dan nozzle. Menyebarkan gas pelindung merata jadi aliran halus (laminar). Jika tersumbat, turbulensi gas menyedot udara atmosfer (nitrogen + oksigen), menyebabkan pori gas (ブローホール) di las. Penyebab porositas misterius yang sering diabaikan pemula. 🇯🇵 TIPS: Saat porositas tiba-tiba muncul dan penyebabnya tak jelas, tukang las Jepang berpengalaman membongkar gun sepenuhnya (chippu → nozuru → orifisu) dan membersihkan tiap bagian. Orifice sering jadi biang tersembunyi — sebutir kecil percikan menyumbat salah satu lubangnya.",
+    },
+  },
+  108: {
+    vi: {
+      q: "'Rainaa' (ライナー) bên trong súng hàn bán tự động là gì?",
+      opts: [
+        "Ống bên trong dẫn dây hàn VÀ khí bảo vệ từ bộ cấp qua cáp súng đến đầu tiếp điện",
+        "Đường nước làm mát bên trong súng",
+        "Vỏ cao su ngoài bảo vệ cáp súng",
+        "Ống cách điện tách chụp khí khỏi thân",
+      ],
+      exp: "Rainaa (ライナー) = Ống lót / ống dẫn. Chạy suốt chiều dài cáp súng. Nó dẫn dây hàn êm từ bộ cấp đến đầu tiếp điện VÀ mang khí bảo vệ. Ống lót bị gập, bẩn hoặc mòn gây kẹt dây (バードネスティング), cấp dây không đều và hồ quang không ổn định. Thay khi cấp dây trở nên khó. 🇯🇵 MẸO: 'Baadonesutingu' (バードネスティング / tổ chim) là từ Nhật chỉ dây rối thành cục ở con lăn do ống lót nghẹt. Khi xảy ra giữa chừng, hồ quang dừng đột ngột với tiếng 'pop'. Học cách xử nhanh: nhả áp con lăn, kéo dây lại, gỡ rối, cấp lại.",
+    },
+    id: {
+      q: "Apa itu 'Rainaa' (ライナー) di dalam gun las semi-otomatis?",
+      opts: [
+        "Tabung internal yang memandu kawat las DAN gas pelindung dari pengumpan lewat kabel gun ke contact tip",
+        "Saluran air pendingin di dalam gun",
+        "Selongsong karet luar pelindung kabel gun",
+        "Selongsong isolasi yang memisahkan nozzle dari bodi",
+      ],
+      exp: "Rainaa (ライナー) = Liner / tabung konduit. Membentang sepanjang kabel gun. Memandu kawat las mulus dari pengumpan ke contact tip DAN membawa gas pelindung. Liner tertekuk, kotor, atau aus menyebabkan kawat macet (バードネスティング), umpan tak konsisten, dan busur tak stabil. Ganti bila pengumpanan kawat mulai kasar. 🇯🇵 TIPS: 'Baadonesutingu' (バードネスティング / sarang burung) adalah istilah Jepang untuk kawat kusut menggumpal di drive roll akibat liner tersumbat. Saat terjadi di tengah las, busur berhenti tiba-tiba dengan bunyi 'pop'. Pelajari cara membereskannya cepat: lepas tekanan drive roll, tarik kawat mundur, urai kusutnya, umpan ulang.",
+    },
+  },
+  109: {
+    vi: {
+      q: "Ở xưởng đóng tàu Nhật, một 'Sokyuki' (走行機) hoặc 'Kyarijji' (キャリッジ) được đặt trên mối nối dài. Nó làm gì?",
+      opts: [
+        "Một cần cẩu nâng tấm thép",
+        "Một xe hàn có động cơ tự di chuyển súng hàn dọc mối nối với tốc độ không đổi",
+        "Một máy mài để làm sạch mối hàn",
+        "Một hệ thống súng cắt khí",
+      ],
+      exp: "Sokyuki (走行機) / Kyarijji (キャリッジ) = Xe hàn. Xe có động cơ mang súng hàn bán tự động chạy dọc mối nối thẳng với tốc độ đặt trước, không đổi. Thợ đặt thông số (điện áp, tốc độ dây, tốc độ chạy) và giám sát. Phổ biến cho mối hàn thẳng dài trên vỏ tàu, kết cấu thép và thành bồn. 🇯🇵 MẸO: Thợ dùng sokyuki phải theo dõi hồ quang liên tục và chỉnh góc súng bằng tay nếu xe lệch. Ngủ gật khi 'giám sát' sokyuki là lỗi thường gặp của người mới — khuyết tật kéo dài vài mét sẽ phải hatsuri (ハツリ / khoét ra và làm lại) toàn bộ.",
+    },
+    id: {
+      q: "Di galangan Jepang, 'Sokyuki' (走行機) atau 'Kyarijji' (キャリッジ) dipasang pada sambungan panjang. Apa fungsinya?",
+      opts: [
+        "Crane untuk mengangkat pelat baja",
+        "Kereta las bermotor yang menggerakkan gun las otomatis sepanjang sambungan dengan kecepatan konstan",
+        "Mesin gerinda untuk membersihkan las",
+        "Sistem gun potong gas",
+      ],
+      exp: "Sokyuki (走行機) / Kyarijji (キャリッジ) = Kereta las. Troli bermotor yang membawa gun las semi-otomatis sepanjang sambungan lurus dengan kecepatan tetap. Tukang mengatur parameter (tegangan, kecepatan kawat, kecepatan jalan) dan memantau. Umum untuk las lurus panjang pada lambung kapal, struktur baja, dan dinding tangki. 🇯🇵 TIPS: Tukang yang memakai sokyuki wajib memantau busur terus-menerus dan mengoreksi sudut gun secara manual bila kereta melenceng. Tertidur saat 'memantau' sokyuki adalah kesalahan umum pekerja baru — cacat sepanjang beberapa meter harus di-hatsuri (ハツリ / dikorek dan diulang) seluruhnya.",
+    },
+  },
+  110: {
+    vi: {
+      q: "Bạn mượn một 'Yosetsu-men' (溶接面) cho hàn MAG 180A, nhưng kính ghi Số #8 — vốn đúng cho hàn TIG dòng thấp. Bạn nên làm gì?",
+      opts: [
+        "Cứ dùng — số che sáng chỉ ảnh hưởng nhận màu, không phải an toàn mắt",
+        "Dùng, nhưng chỉ cho mối đính ngắn dưới 10 giây",
+        "Không dùng cho việc này — Số #8 quá sáng cho hàn MAG 180A và có nguy cơ đau mắt hàn (電気性眼炎); mượn mũ có kính Số #10–11",
+        "Dùng, nhưng bù bằng cách đứng xa hồ quang hơn",
+      ],
+      exp: "Yosetsu-men (溶接面) = Mũ hàn. Số che sáng (遮光番号) chỉ độ tối của kính và phải khớp dòng điện và phương pháp: Số #8 có thể hợp TIG dòng thấp, nhưng cho MAG/bán tự động 100–200A, JIS khuyến nghị Số #10–11. Kính quá sáng cho lọt nhiều tia UV/IR có hại, gây đau mắt hàn (電気性眼炎) dù phơi nhiễm ngắn hay đứng xa — cả hai cách chữa cháy đều không an toàn. 🇯🇵 MẸO: Khi mượn mũ hàn ở Nhật, luôn kiểm tra số che sáng ghi trên khung kính — đừng đoán. Công trường Nhật thường có nhiều mũ với độ che khác nhau cho các phương pháp khác nhau; lẫn lộn là lỗi phổ biến và nguy hiểm.",
+    },
+    id: {
+      q: "Anda meminjam 'Yosetsu-men' (溶接面) untuk las MAG 180A, tapi lensanya bertanda Shade #8 — yang tepat untuk las TIG amper rendah. Apa yang harus dilakukan?",
+      opts: [
+        "Pakai saja — nomor shade hanya soal persepsi warna, bukan keselamatan mata",
+        "Pakai, tapi hanya untuk las titik pendek di bawah 10 detik",
+        "Jangan pakai untuk pekerjaan ini — Shade #8 terlalu terang untuk las MAG 180A dan berisiko mata las (電気性眼炎); pinjam topeng ber-Shade #10–11",
+        "Pakai, tapi kompensasi dengan berdiri lebih jauh dari busur",
+      ],
+      exp: "Yosetsu-men (溶接面) = Topeng las. Nomor shade (遮光番号) menunjukkan kegelapan lensa dan harus cocok dengan amper serta proses: Shade #8 mungkin cocok untuk TIG amper rendah, tapi untuk MAG/semi-otomatis 100–200A, JIS menyarankan Shade #10–11. Lensa terlalu terang meloloskan lebih banyak radiasi UV/IR berbahaya, berisiko mata las (電気性眼炎) meski paparan singkat atau jarak jauh — kedua akal-akalan itu tak aman. 🇯🇵 TIPS: Saat meminjam topeng las di lokasi Jepang, selalu periksa nomor shade tertulis di pemegang lensa — jangan menebak. Lokasi Jepang sering punya beberapa topeng dengan shade berbeda untuk proses berbeda; tertukar adalah kesalahan umum dan berbahaya.",
+    },
+  },
 };
