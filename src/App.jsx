@@ -5,6 +5,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { QUIZ_STAGES } from './questions_en.js'
+import { CalcDrill } from './CalcDrill.jsx'
+import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats } from './stats_en.js'
+import { MockScreen } from './Mock_en.jsx'
 
 // ── CONSTANTS ───────────────────────────────────────────────
 const P_HP   = 100   // player max HP
@@ -495,7 +498,7 @@ function TitleScreen({ onStart, totalXP }) {
 }
 
 // ── STAGE SELECT ────────────────────────────────────────────
-function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack }) {
+function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack, onMock }) {
   const S = styles
   const [hovered,   setHovered]   = useState(null)
   const [displayXP, setDisplayXP] = useState(0)
@@ -529,6 +532,20 @@ function StageSelect({ stages, totalXP, stageProgress, onSelect, onBack }) {
             textShadow:'0 0 12px #FFB80088' }}>{displayXP}</div>
         </div>
       </div>
+
+      {/* Mock exam entry */}
+      <button onClick={onMock} style={{
+        width:'100%', display:'flex', alignItems:'center', gap:10, marginBottom:12,
+        background:'linear-gradient(120deg,#1a1005,#141414)', border:'1px solid #FF660055',
+        borderRadius:12, padding:'12px 14px', cursor:'pointer', fontFamily:"'Share Tech Mono',monospace",
+      }}>
+        <span style={{ fontSize:'1.4rem' }}>🎯</span>
+        <span style={{ flex:1, textAlign:'left' }}>
+          <span style={{ display:'block', color:'#FF6600', fontFamily:"'Orbitron',monospace", fontWeight:'900', fontSize:'0.72rem', letterSpacing:'0.04em' }}>MOCK EXAM</span>
+          <span style={{ display:'block', color:'#777', fontSize:'0.56rem', marginTop:2 }}>Timed test · all stages · pass 60%</span>
+        </span>
+        <span style={{ color:'#FF6600', fontSize:'1rem' }}>▶</span>
+      </button>
 
       <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
         {stages.map((st, i) => {
@@ -1613,6 +1630,7 @@ function SymbolTab() {
 
 // ── CALC TAB ─────────────────────────────────────────────────
 function CalcTab() {
+  const [calcMode, setCalcMode] = useState('calc') // 'calc' | 'drill'
   const [E,  setE]  = useState('28')
   const [I,  setI]  = useState('180')
   const [v,  setV]  = useState('30')
@@ -1644,7 +1662,21 @@ function CalcTab() {
 
   return (
     <div style={{ padding:16, fontFamily:'monospace', background:'#0d0d0d', minHeight:'100vh', paddingBottom:70 }}>
-      <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:16 }}>🔢 WELDING CALCULATORS</div>
+      <div style={{ color:'#FF6600', fontWeight:'bold', marginBottom:12 }}>🔢 WELDING CALCULATORS</div>
+
+      {/* Calculators / Drill toggle */}
+      <div style={{ display:'flex', gap:6, background:'#141414', border:'1px solid #2a2a2a', borderRadius:8, padding:4, marginBottom:14 }}>
+        {[['calc','🧮 Calculators'],['drill','🎯 Practice Drill']].map(([id,l])=>(
+          <button key={id} onClick={()=>setCalcMode(id)} style={{
+            flex:1, padding:'8px 4px', border:'none', borderRadius:6, cursor:'pointer', fontFamily:'monospace',
+            fontSize:'0.72rem', fontWeight:'bold',
+            background: calcMode===id ? '#FF6600' : 'transparent',
+            color: calcMode===id ? '#fff' : '#777',
+          }}>{l}</button>
+        ))}
+      </div>
+
+      {calcMode==='drill' ? <CalcDrill/> : (<>
 
       {/* Heat Input */}
       <div style={styles.card}>
@@ -1712,6 +1744,8 @@ function CalcTab() {
           </span>
         </div>
       </div>
+
+      </>)}
     </div>
   )
 }
@@ -2452,11 +2486,34 @@ function appendBattleRecord(record) {
   saveBattleLog(log)
 }
 
-function HistoryTab() {
+function HistoryTab({ onPractice }) {
   const [log,        setLog]        = useState(() => loadBattleLog())
   const [confirming, setConfirming] = useState(false)
+  const [tick,       setTick]       = useState(0) // refresh after reset
 
   const STAGE_COLORS = ['#E85D04','#1565C0','#D97706','#059669','#7C3AED','#DC2626']
+
+  // ── Weak Points analysis (per-question stats) ──
+  const catStats = getCatStats()
+  const summary  = getSummary()
+  const wrongIds = getWrongIds()
+  const accCol = a => a >= 0.8 ? '#22c55e' : a >= 0.6 ? '#f59e0b' : a >= 0.4 ? '#fb923c' : '#ef4444'
+  const pct = n => Math.round(n * 100)
+
+  // id -> stage index, to jump to the weakest area
+  const Q_STAGE = {}
+  QUIZ_STAGES.forEach((s, idx) => s.questions.forEach(q => { Q_STAGE[q.id] = idx }))
+  function practiceWeakest() {
+    const counts = {}
+    wrongIds.forEach(id => { const st = Q_STAGE[id]; if (st != null) counts[st] = (counts[st] || 0) + 1 })
+    let best = null, max = -1
+    Object.keys(counts).forEach(k => { if (counts[k] > max) { max = counts[k]; best = +k } })
+    if (best == null) best = 0
+    onPractice && onPractice(best)
+  }
+  function resetStats() {
+    if (window.confirm('Reset your weak-point stats? This cannot be undone.')) { clearStats(); setTick(t => t + 1) }
+  }
 
   function clearHistory() {
     localStorage.removeItem(LS_KEY)
@@ -2517,6 +2574,60 @@ function HistoryTab() {
           </div>
         ))}
       </div>
+
+      {/* ── WEAK POINTS ── */}
+      {summary.total > 0 && (
+        <div style={{ marginBottom:22 }}>
+          <div style={{ color:'#FF6600', fontFamily:"'Orbitron',monospace", fontWeight:'900',
+            fontSize:'0.78rem', letterSpacing:'0.05em', marginBottom:10 }}>🎯 WEAK POINTS</div>
+
+          {/* summary */}
+          <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:12 }}>
+            {[
+              { l:'ANSWERED', v:summary.total,               c:'#FF6600' },
+              { l:'ACCURACY', v:`${pct(summary.acc)}%`,      c:accCol(summary.acc) },
+              { l:'TO REVIEW',v:summary.wrongCount,          c:'#ef4444' },
+            ].map(s => (
+              <div key={s.l} style={{ background:'#141414', border:'1px solid #1e1e1e', borderRadius:10, padding:'10px 6px', textAlign:'center' }}>
+                <div style={{ color:s.c, fontSize:'1.05rem', fontWeight:'900', fontFamily:"'Orbitron',monospace" }}>{s.v}</div>
+                <div style={{ color:'#383838', fontSize:'0.5rem', letterSpacing:'0.06em', marginTop:3 }}>{s.l}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* practice weakest */}
+          <button onClick={practiceWeakest} disabled={summary.wrongCount === 0} style={{
+            width:'100%', padding:'12px', border:'none', borderRadius:10, marginBottom:14,
+            background: summary.wrongCount > 0 ? '#FF6600' : '#2a2a2a',
+            color:'#fff', fontFamily:"'Orbitron',monospace", fontWeight:'bold', fontSize:'0.72rem',
+            cursor: summary.wrongCount > 0 ? 'pointer' : 'default', letterSpacing:'0.04em',
+          }}>🔥 PRACTICE MY WEAKEST AREA</button>
+
+          {/* category heat bars */}
+          <div style={{ color:'#555', fontSize:'0.58rem', fontWeight:'bold', marginBottom:7, letterSpacing:'0.04em' }}>ACCURACY BY CATEGORY (weakest first)</div>
+          <div style={{ display:'flex', flexDirection:'column', gap:7 }}>
+            {catStats.map(s => (
+              <div key={s.cat}>
+                <div style={{ display:'flex', justifyContent:'space-between', fontSize:'0.62rem', marginBottom:3 }}>
+                  <span style={{ color:'#bbb' }}>{s.cat}</span>
+                  <span style={{ color:accCol(s.acc), fontWeight:'bold' }}>{pct(s.acc)}% <span style={{ color:'#555', fontWeight:'normal' }}>({s.correct}/{s.total})</span></span>
+                </div>
+                <div style={{ background:'#1e1e1e', borderRadius:4, height:7, overflow:'hidden' }}>
+                  <div style={{ width:`${pct(s.acc)}%`, height:'100%', background:accCol(s.acc), transition:'width .4s' }}/>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button onClick={resetStats} style={{
+            marginTop:14, width:'100%', padding:'8px', borderRadius:8,
+            border:'1px solid #2a2a2a', background:'transparent', color:'#555',
+            fontFamily:'monospace', fontSize:'0.6rem', cursor:'pointer',
+          }}>reset weak-point stats</button>
+
+          <div style={{ height:1, background:'#1a1a1a', margin:'20px 0 4px' }}/>
+        </div>
+      )}
 
       {/* Empty state */}
       {log.length === 0 ? (
@@ -2723,6 +2834,7 @@ export default function App() {
     setSel(optIdx); setDone(true)
 
     const wasCorrect = optIdx === q.a
+    recordAnswer({ id: q.id, cat: q.cat, ok: wasCorrect })
     const k = floatKey + 1
     setFloatKey(k)
     setHistory(h => [...h, { question: q, selected: optIdx, wasCorrect }])
@@ -2814,7 +2926,7 @@ export default function App() {
     { id:'calc',    icon:'🔢', label:'CALC'    },
     { id:'weave',   icon:'〰️', label:'WEAVE'   },
     { id:'career',  icon:'🗺️', label:'CAREER'  },
-    { id:'history', icon:'📜', label:'HISTORY' },
+    { id:'history', icon:'📊', label:'STATS'   },
   ]
 
   function battleContent() {
@@ -2822,7 +2934,10 @@ export default function App() {
       return <TitleScreen onStart={()=>setScreen('stage-select')} totalXP={totalXP}/>
     if (screen==='stage-select')
       return <StageSelect stages={QUIZ_STAGES} totalXP={totalXP} stageProgress={stageProgress}
-               onSelect={startStage} onBack={()=>setScreen('title')}/>
+               onSelect={startStage} onBack={()=>setScreen('title')}
+               onMock={()=>setScreen('mock')}/>
+    if (screen==='mock')
+      return <MockScreen onExit={()=>setScreen('stage-select')}/>
     if (screen==='battle' && qs.length)
       return <Battle stage={QUIZ_STAGES[si]} si={si} qs={qs} qi={qi}
                pHP={pHP} mHP={mHP} correct={correct} miss={miss}
@@ -2856,7 +2971,7 @@ export default function App() {
         {tab==='calc'    && <CalcTab/>}
         {tab==='weave'   && <WeaveTab/>}
         {tab==='career'  && <CareerTab/>}
-        {tab==='history' && <HistoryTab/>}
+        {tab==='history' && <HistoryTab onPractice={(idx)=>{ setTab('battle'); startStage(idx) }}/>}
       </div>
 
       {/* Bottom Nav */}
