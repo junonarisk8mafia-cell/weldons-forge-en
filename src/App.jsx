@@ -6,8 +6,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { QUIZ_STAGES } from './questions_en.js'
 import { CalcDrill } from './CalcDrill.jsx'
-import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats } from './stats_en.js'
+import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStudiedToday, getStreak } from './stats_en.js'
 import { MockScreen } from './Mock_en.jsx'
+import { LearnTab } from './Learn_en.jsx'
 
 // ── CONSTANTS ───────────────────────────────────────────────
 const P_HP   = 100   // player max HP
@@ -388,6 +389,7 @@ function TitleScreen({ onStart, totalXP }) {
   const S = styles
   const [typed, setTyped] = useState('')
   const [btnHover, setBtnHover] = useState(false)
+  const streak = getStreak()
 
   useEffect(() => {
     let i = 0
@@ -480,6 +482,20 @@ function TitleScreen({ onStart, totalXP }) {
           }}>
           ⚡ START BATTLE
         </button>
+
+        {/* Daily streak */}
+        {streak.streak > 0 && (
+          <div style={{ marginTop:18, display:'inline-flex', alignItems:'center', gap:8,
+            background: streak.studiedToday ? '#1a1005' : '#141414',
+            border:`1px solid ${streak.studiedToday ? '#FF660066' : '#2a2a2a'}`,
+            borderRadius:20, padding:'6px 14px', fontFamily:"'Share Tech Mono',monospace" }}>
+            <span style={{ fontSize:'0.95rem', filter: streak.studiedToday ? 'none' : 'grayscale(0.7)' }}>🔥</span>
+            <span style={{ color:'#FF6600', fontFamily:"'Orbitron',monospace", fontWeight:900, fontSize:'0.82rem' }}>{streak.streak}</span>
+            <span style={{ color:'#888', fontSize:'0.58rem' }}>
+              day streak{streak.studiedToday ? '' : ' · study today to keep it!'}
+            </span>
+          </div>
+        )}
 
         {totalXP > 0 && (
           <div style={{ color:'#444', fontSize:'0.68rem', marginTop:16,
@@ -1807,6 +1823,44 @@ function CareerTab() {
       <div style={{ color:'#444', fontSize:'0.65rem', marginBottom:16 }}>
         Japanese Welding Career Path — Entry to Legend
       </div>
+
+      {/* ── VISA / STATUS ROUTE — stay longer, earn more ── */}
+      <div style={{ background:'linear-gradient(160deg,#0a1420,#141414)', border:'1px solid #1565C055',
+        borderRadius:12, padding:'14px', marginBottom:20 }}>
+        <div style={{ color:'#38BDF8', fontFamily:"'Orbitron',monospace", fontWeight:900,
+          fontSize:'0.74rem', letterSpacing:'0.04em' }}>🛂 VISA &amp; STATUS ROUTE</div>
+        <div style={{ color:'#7a8a99', fontSize:'0.6rem', lineHeight:1.6, margin:'4px 0 12px' }}>
+          How to stay in Japan longer and earn more. Your welding certs + the right visa status = a long career.
+        </div>
+        {[
+          { c:'#888', tag:'NOW', jp:'技能実習', rj:'Ginō Jisshū', en:'Technical Intern',
+            d:'Up to ~5 years, training-based. Learn the trade and pass your JIS certs here.' },
+          { c:'#FF6600', tag:'STEP 1', jp:'特定技能1号', rj:'Tokutei Ginō 1-gō', en:'Specified Skilled Worker (i)',
+            d:'Up to 5 more years. You can change employer within welding. TIP: finish Technical Intern (ii) with a good record → skill & Japanese tests are WAIVED when moving up.' },
+          { c:'#22c55e', tag:'STEP 2', jp:'特定技能2号', rj:'Tokutei Ginō 2-gō', en:'Specified Skilled Worker (ii)',
+            d:'Renewable with no fixed limit, and you can bring your family. Welding is covered under Construction and Shipbuilding fields. A real long-term future.' },
+        ].map((s, i) => (
+          <div key={i} style={{ display:'flex', gap:10, marginBottom: i<2?12:0 }}>
+            <div style={{ display:'flex', flexDirection:'column', alignItems:'center' }}>
+              <div style={{ width:10, height:10, borderRadius:'50%', background:s.c, marginTop:3, boxShadow:`0 0 8px ${s.c}` }}/>
+              {i<2 && <div style={{ width:2, flex:1, background:'#2a2a2a', marginTop:2 }}/>}
+            </div>
+            <div style={{ flex:1 }}>
+              <div style={{ display:'flex', alignItems:'center', gap:6, flexWrap:'wrap' }}>
+                <span style={{ color:s.c, fontSize:'0.54rem', fontWeight:'bold', background:`${s.c}22`, padding:'1px 6px', borderRadius:4 }}>{s.tag}</span>
+                <span style={{ color:'#eee', fontSize:'0.74rem', fontWeight:'bold' }}>{s.jp}</span>
+                <span style={{ color:'#22c55e', fontSize:'0.58rem', fontStyle:'italic' }}>{s.rj}</span>
+              </div>
+              <div style={{ color:'#888', fontSize:'0.58rem', marginTop:1 }}>{s.en}</div>
+              <div style={{ color:'#9aa', fontSize:'0.62rem', lineHeight:1.5, marginTop:4 }}>{s.d}</div>
+            </div>
+          </div>
+        ))}
+        <div style={{ color:'#556', fontSize:'0.54rem', lineHeight:1.5, marginTop:12, fontStyle:'italic' }}>
+          Immigration rules change — always confirm current requirements with the Immigration Services Agency / your supervising organization (監理団体).
+        </div>
+      </div>
+
       {path.map((s, i) => (
         <div key={i}>
           {i > 0 && <div style={{ width:2, height:12, background:'#2a2a2a', marginLeft:20, marginBottom:0 }}/>}
@@ -2835,6 +2889,7 @@ export default function App() {
 
     const wasCorrect = optIdx === q.a
     recordAnswer({ id: q.id, cat: q.cat, ok: wasCorrect })
+    markStudiedToday()
     const k = floatKey + 1
     setFloatKey(k)
     setHistory(h => [...h, { question: q, selected: optIdx, wasCorrect }])
@@ -2922,8 +2977,9 @@ export default function App() {
 
   const TABS = [
     { id:'battle',  icon:'⚔️', label:'BATTLE'  },
-    { id:'symbol',  icon:'📐', label:'SYMBOLS' },
+    { id:'learn',   icon:'📚', label:'LEARN'   },
     { id:'calc',    icon:'🔢', label:'CALC'    },
+    { id:'symbol',  icon:'📐', label:'SYMBOLS' },
     { id:'weave',   icon:'〰️', label:'WEAVE'   },
     { id:'career',  icon:'🗺️', label:'CAREER'  },
     { id:'history', icon:'📊', label:'STATS'   },
@@ -2967,6 +3023,7 @@ export default function App() {
       {/* Content */}
       <div style={{ paddingBottom:'calc(64px + env(safe-area-inset-bottom))' }}>
         {tab==='battle'  && battleContent()}
+        {tab==='learn'   && <LearnTab/>}
         {tab==='symbol'  && <SymbolTab/>}
         {tab==='calc'    && <CalcTab/>}
         {tab==='weave'   && <WeaveTab/>}
