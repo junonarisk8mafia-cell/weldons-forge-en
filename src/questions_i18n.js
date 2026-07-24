@@ -226,4 +226,202 @@ export const Q_I18N = {
       exp: "Sanso-ketsubo (酸素欠乏) = Kekurangan Oksigen. Di ruang tertutup (tangki, palka, ruang tertutup), gas pelindung (CO₂, Argon) bisa mendorong keluar oksigen. Di bawah 18% O₂ = bahaya. Di bawah 16% = pingsan. Ukur kadar oksigen SEBELUM masuk area las tertutup mana pun. 🇯🇵 TIPS: CO₂ 1,5× dan Argon 1,4× lebih berat dari udara — keduanya turun dan menumpuk tak terlihat di dasar. Pekerja yang pingsan dalam tangki karena kekurangan oksigen TIDAK boleh ditolong oleh orang yang masuk tanpa alat bantu napas — Jepang punya banyak kematian seperti ini. Hubungi 119 dan tunggu tim penyelamat khusus.",
     },
   },
+  11: {
+    vi: {
+      q: "'Yosetsu-hyumu' (溶接ヒューム) là gì và bạn cần PPE nào?",
+      opts: [
+        "Tiếng ồn hàn — chỉ cần bảo vệ tai",
+        "Tia lửa hàn — chỉ cần găng tay da",
+        "Khói hàn — hạt kim loại nhỏ trong khói; cần khẩu trang chống bụi (防じんマスク) đạt chuẩn cho khói hàn",
+        "Khí bảo vệ — chỉ CO₂ nguy hiểm",
+      ],
+      exp: "Khói hàn (溶接ヒューム) chứa hạt kim loại mịn gồm mangan, crom và các hợp chất khác. Phơi nhiễm lâu dài gây bệnh phổi (じん肺). Luật Nhật yêu cầu khẩu trang chống bụi (防じんマスク) đạt chuẩn cho khói hàn. Luôn thông gió khu làm việc. 🇯🇵 MẸO: Từ 2021, luật Nhật (溶接ヒューム規制) xếp khói hàn là chất hóa học đặc định. Chủ lao động phải cung cấp khám sức khỏe (健康診断) và lưu hồ sơ phơi nhiễm. Nếu công ty không làm, họ vi phạm luật — bạn có quyền yêu cầu.",
+    },
+    id: {
+      q: "Apa itu 'Yosetsu-hyumu' (溶接ヒューム) dan APD apa yang Anda perlukan?",
+      opts: [
+        "Kebisingan las — hanya perlu pelindung telinga",
+        "Percikan las — hanya perlu sarung tangan kulit",
+        "Asap las — partikel logam halus dalam asap; perlu respirator debu (防じんマスク) berperingkat asap las",
+        "Gas pelindung — hanya CO₂ yang berbahaya",
+      ],
+      exp: "Asap las (溶接ヒューム) mengandung partikel logam halus termasuk mangan, krom, dan senyawa lain. Paparan jangka panjang menyebabkan penyakit paru (じん肺). Hukum Jepang mewajibkan respirator debu (防じんマスク) berperingkat untuk asap las. Selalu beri ventilasi area kerja. 🇯🇵 TIPS: Sejak 2021, hukum Jepang (溶接ヒューム規制) menggolongkan asap las sebagai bahan kimia tertentu. Pemberi kerja wajib menyediakan pemeriksaan kesehatan (健康診断) dan menyimpan catatan paparan. Jika perusahaan tidak, mereka melanggar hukum — Anda berhak memintanya.",
+    },
+  },
+  12: {
+    vi: {
+      q: "Kính mũ hàn số che sáng (遮光番号) nào được khuyến nghị cho hàn bán tự động khoảng 150A?",
+      opts: [
+        "Số #3–4 — mức kính râm thường",
+        "Số #16 trở lên — bảo vệ tối đa",
+        "Số #1 — kính gần như trong suốt",
+        "Số #10–11 — chuẩn cho hàn hồ quang 100–200A",
+      ],
+      exp: "Với hàn hồ quang 100–200A, JIS khuyến nghị số che sáng #10–11 (遮光番号10〜11). Dòng càng cao, số càng lớn. Mũ hàn không có kính che đúng có thể gây tổn thương mắt nghiêm trọng (đau mắt hàn / 電気性眼炎). Không bao giờ nhìn hồ quang mà không bảo vệ đúng. 🇯🇵 MẸO: Triệu chứng đau mắt hàn (電気性眼炎) xuất hiện 6–12 giờ SAU khi phơi nhiễm — trên công trường gọi là '目がやける'. Nếu sáng hôm sau mắt cộm hoặc đau, đi khám mắt ngay. Chữa sớm rất đơn giản.",
+    },
+    id: {
+      q: "Nomor shade lensa topeng las (遮光番号) berapa yang disarankan untuk las semi-otomatis sekitar 150A?",
+      opts: [
+        "Shade #3–4 — setara kacamata hitam biasa",
+        "Shade #16 atau lebih — perlindungan maksimum",
+        "Shade #1 — lensa hampir bening",
+        "Shade #10–11 — standar untuk las busur 100–200A",
+      ],
+      exp: "Untuk las busur 100–200A, JIS menyarankan shade #10–11 (遮光番号10〜11). Semakin tinggi arus, semakin tinggi shade. Topeng las tanpa kaca shade yang benar bisa merusak mata serius (mata las / 電気性眼炎). Jangan pernah melihat busur tanpa pelindung tepat. 🇯🇵 TIPS: Gejala mata las (電気性眼炎) muncul 6–12 jam SETELAH paparan — di lokasi disebut '目がやける'. Jika pagi berikutnya mata terasa berpasir atau nyeri, segera ke dokter mata. Pengobatan mudah bila cepat ditangani.",
+    },
+  },
+  13: {
+    vi: {
+      q: "Một thợ hàn bị điện giật. Hành động ĐẦU TIÊN là gì?",
+      opts: [
+        "TẮT nguồn trước — rồi di chuyển nạn nhân an toàn — rồi gọi cứu trợ",
+        "Đeo găng cao su khô rồi kéo nạn nhân ra khi nguồn vẫn bật",
+        "Đổ nước lên nạn nhân ngay",
+        "Kéo nạn nhân ra bằng tay trần",
+      ],
+      exp: "Sơ cứu điện giật: 1) CẮT NGUỒN — tắt máy hoặc cầu dao. 2) KHÔNG chạm nạn nhân khi còn điện — bạn cũng sẽ bị giật. 3) Đưa nạn nhân đến nơi an toàn. 4) Gọi 119 (cấp cứu Nhật). 5) Hô hấp nhân tạo nếu được đào tạo. Tay ướt hoặc nền ướt làm tăng mạnh nguy cơ điện giật. 🇯🇵 MẸO: Số cấp cứu Nhật là 119 (cứu hỏa/cứu thương), không phải 911. Khi gọi: 'Jiko desu, hito ga taoreteimasu' (事故です、人が倒れています) = 'Có tai nạn, có người ngã'. Cho địa chỉ và số điện thoại của bạn.",
+    },
+    id: {
+      q: "Seorang tukang las tersengat listrik. Tindakan PERTAMA apa yang harus dilakukan?",
+      opts: [
+        "MATIKAN sumber daya dulu — lalu pindahkan korban dengan aman — lalu panggil bantuan",
+        "Pakai sarung tangan karet kering lalu tarik korban saat daya masih menyala",
+        "Siram korban dengan air segera",
+        "Tarik korban dengan tangan telanjang",
+      ],
+      exp: "Pertolongan pertama sengatan listrik: 1) PUTUS DAYA — matikan mesin atau breaker. 2) JANGAN sentuh korban saat daya menyala — Anda akan ikut tersengat. 3) Pindahkan korban ke tempat aman. 4) Hubungi 119 (darurat Jepang). 5) Lakukan CPR bila terlatih. Tangan atau lantai basah sangat menaikkan risiko sengatan. 🇯🇵 TIPS: Nomor darurat Jepang 119 (pemadam/ambulans), bukan 911. Saat menelepon: 'Jiko desu, hito ga taoreteimasu' (事故です、人が倒れています) = 'Ada kecelakaan, seseorang pingsan'. Sebutkan alamat dan nomor telepon Anda.",
+    },
+  },
+  14: {
+    vi: {
+      q: "Trước khi hàn trong bồn hoặc không gian kín, bạn phải kiểm tra ĐẦU TIÊN điều gì?",
+      opts: [
+        "Kích cỡ cuộn dây hàn",
+        "Nồng độ oxy (酸素濃度) VÀ mức khí độc hại — rồi đảm bảo thông gió",
+        "Số sê-ri của máy hàn",
+        "Nhãn hiệu khí bảo vệ",
+      ],
+      exp: "Trước khi vào bất kỳ không gian kín nào ở Nhật, bạn PHẢI đo nồng độ oxy (酸素濃度) — phải trên 18%. Cũng kiểm tra CO, hydro và các khí nguy hiểm khác. Bố trí thông gió cưỡng bức. Ở Nhật, điều này thuộc Chứng chỉ Công việc Nguy hiểm Thiếu Oxy (酸素欠乏危険作業特別教育). 🇯🇵 MẸO: Chứng chỉ 酸欠 (sanso-ketsubo) là khóa 1 ngày (~¥8.000–12.000) thường bị bỏ qua. Nếu làm ở đóng tàu, chế tạo bồn, hay kết cấu thép kín, chứng chỉ này là thiết yếu và được mong đợi.",
+    },
+    id: {
+      q: "Sebelum mengelas di dalam tangki atau ruang tertutup, apa yang HARUS diperiksa PERTAMA?",
+      opts: [
+        "Ukuran gulungan kawat",
+        "Konsentrasi oksigen (酸素濃度) DAN kadar gas berbahaya — lalu pastikan ventilasi",
+        "Nomor seri mesin las",
+        "Merek gas pelindung",
+      ],
+      exp: "Sebelum masuk ruang tertutup mana pun di Jepang, Anda WAJIB mengukur konsentrasi oksigen (酸素濃度) — harus di atas 18%. Periksa juga CO, hidrogen, dan gas berbahaya lain. Siapkan ventilasi paksa. Di Jepang, ini tercakup dalam Sertifikat Kerja Bahaya Kekurangan Oksigen (酸素欠乏危険作業特別教育). 🇯🇵 TIPS: Sertifikat 酸欠 (sanso-ketsubo) adalah kursus 1 hari (~¥8.000–12.000) yang sering diabaikan. Jika Anda bekerja di galangan kapal, fabrikasi tangki, atau struktur baja tertutup, sertifikat ini penting dan diharapkan.",
+    },
+  },
+  15: {
+    vi: {
+      q: "Giày an toàn (安全靴) của bạn có dấu JIS bên trong, nhưng ghi 'JIS T 8147' thay vì 'JIS T 8101'. Bạn nên làm gì?",
+      opts: [
+        "Xin giám sát đổi sang đôi có dấu JIS T 8113",
+        "Cứ mang bình thường — cả JIS T 8101 và JIS T 8147 đều là giày mũi thép, nên đôi nào cũng được",
+        "Từ chối — JIS T 8147 là chuẩn cho kính bảo hộ, không phải giày, nên đôi này không phải giày an toàn được chứng nhận đúng",
+        "Chỉ mang khi mài, không bao giờ khi hàn",
+      ],
+      exp: "JIS T 8101 là chuẩn cho giày an toàn (安全靴). JIS T 8147 thực ra là chuẩn cho kính bảo hộ (保護めがね), còn JIS T 8113 là găng tay hàn — không cái nào là chuẩn giày. Giày đóng dấu sai số JIS thì không được chứng nhận đúng, dù trông giống hệt. Nhiều giày giả/nhãn sai lọt qua nếu bạn không kiểm tra số. 🇯🇵 MẸO: Khi mua, tìm đúng 'JIS T 8101' trên nhãn. Giày rẻ không có dấu JIS đúng sẽ bị từ chối ở cổng vào — hãy đầu tư đôi tốt từ Workman (ワークマン) hoặc Midori Anzen (ミドリ安全).",
+    },
+    id: {
+      q: "Sepatu safety (安全靴) Anda ada tanda JIS di dalam, tapi tertulis 'JIS T 8147' bukan 'JIS T 8101'. Apa yang harus dilakukan?",
+      opts: [
+        "Minta supervisor mengganti dengan yang bertanda JIS T 8113",
+        "Pakai saja — JIS T 8101 dan JIS T 8147 sama-sama sepatu ujung baja, jadi mana pun boleh",
+        "Tolak — JIS T 8147 adalah standar kacamata pelindung, bukan alas kaki, jadi sepatu ini bukan sepatu safety bersertifikat yang benar",
+        "Pakai hanya untuk menggerinda, jangan untuk mengelas",
+      ],
+      exp: "JIS T 8101 adalah standar sepatu safety (安全靴). JIS T 8147 sebenarnya untuk kacamata pelindung (保護めがね), dan JIS T 8113 untuk sarung tangan las — tak satu pun standar alas kaki. Sepatu bertanda nomor JIS salah tidak bersertifikat benar, meski terlihat identik. Banyak sepatu palsu/salah label lolos jika Anda tidak memeriksa nomornya. 🇯🇵 TIPS: Saat membeli, cari khusus 'JIS T 8101' pada label. Sepatu murah tanpa tanda JIS yang benar akan ditolak di gerbang — investasikan sepasang bagus dari Workman (ワークマン) atau Midori Anzen (ミドリ安全).",
+    },
+  },
+  16: {
+    vi: {
+      q: "Chứng chỉ nào thường KHÔNG bắt buộc trên một công trường hàn tiêu chuẩn ở Nhật?",
+      opts: [
+        "An toàn Điện hạ áp (低圧電気取扱特別教育)",
+        "An toàn Hàn hồ quang (アーク溶接特別教育)",
+        "An toàn Đá mài (自由研削といし特別教育)",
+        "Bằng lái xe để vận hành thiết bị hàn",
+      ],
+      exp: "Bằng lái xe thông thường KHÔNG cho phép bạn vận hành thiết bị hàn, cẩu hay xe nâng trên công trường Nhật. Mỗi thiết bị có yêu cầu đào tạo an toàn/giấy phép riêng theo luật lao động Nhật. 🇯🇵 MẸO: Việc thực thi luật tại công trường qua 定期自主検査 (tự kiểm tra định kỳ) và thanh tra ngẫu nhiên của cơ quan lao động (労働基準監督署). Nếu bị phát hiện vận hành thiết bị mà không có chứng chỉ đúng, cả bạn LẪN chủ lao động đều bị phạt — không chỉ là cảnh cáo.",
+    },
+    id: {
+      q: "Sertifikat mana yang biasanya TIDAK diwajibkan di lokasi pengelasan standar di Jepang?",
+      opts: [
+        "Keselamatan Listrik Tegangan Rendah (低圧電気取扱特別教育)",
+        "Keselamatan Las Busur (アーク溶接特別教育)",
+        "Keselamatan Batu Gerinda (自由研削といし特別教育)",
+        "SIM untuk mengoperasikan peralatan las",
+      ],
+      exp: "SIM biasa TIDAK memenuhi syarat untuk mengoperasikan peralatan las, crane, atau forklift di lokasi kerja Jepang. Setiap peralatan punya syarat pelatihan/lisensi keselamatan tersendiri menurut hukum ketenagakerjaan Jepang. 🇯🇵 TIPS: Penegakan hukum di lokasi lewat 定期自主検査 (inspeksi mandiri berkala) dan audit acak kantor standar tenaga kerja (労働基準監督署). Jika ketahuan mengoperasikan alat tanpa sertifikat yang benar, Anda DAN pemberi kerja kena sanksi hukum — bukan sekadar peringatan.",
+    },
+  },
+  17: {
+    vi: {
+      q: "Phát biểu nào về thông gió khi hàn ở Nhật là KHÔNG đúng?",
+      opts: [
+        "Mở một cửa sổ gần đó luôn đủ để thông gió cho mọi việc hàn trong nhà, bất kể kích thước phòng",
+        "Từ sửa đổi luật 2021, thiết bị hút khói không còn là tùy chọn ở khu vực kín",
+        "Hút cục bộ (局所排気装置) thu khói tại nguồn và là cách hiệu quả nhất",
+        "Trong không gian kín, thông gió cưỡng bức là bắt buộc theo luật trước và trong khi hàn",
+      ],
+      exp: "Mở cửa sổ KHÔNG tự động là đủ — mức thông gió tùy vào kích thước phòng, hướng gió, lượng khói hàn và mức độ kín. Một cửa sổ có thể vô dụng trong nhà xưởng lớn không có gió lùa, hoặc trong bồn kín không có cửa sổ. Luật Nhật yêu cầu hiệu suất thông gió đo được thực tế (hút cục bộ hoặc cưỡng bức), không chỉ 'có mở cửa sổ'. 🇯🇵 MẸO: Bộ hút khói gắn ngay súng hàn gọi là thiết bị '溶接ヒューム対策'. Từ thay đổi luật 2021, dùng nó không còn là tùy chọn ở khu kín — giám sát sẽ ngăn bạn hàn nếu thiếu.",
+    },
+    id: {
+      q: "Pernyataan mana tentang ventilasi las di Jepang yang TIDAK benar?",
+      opts: [
+        "Membuka jendela di dekatnya selalu cukup untuk ventilasi kerja las dalam ruangan apa pun, tanpa memandang ukuran ruang",
+        "Sejak revisi hukum 2021, alat penyedot asap tidak lagi opsional di area tertutup",
+        "Ventilasi buang lokal (局所排気装置) menangkap asap di sumbernya dan paling efektif",
+        "Di ruang tertutup, ventilasi paksa wajib secara hukum sebelum dan selama pengelasan",
+      ],
+      exp: "Membuka jendela TIDAK otomatis cukup — kecukupan ventilasi bergantung pada ukuran ruang, arah aliran udara, jumlah asap las, dan apakah ruang tertutup. Satu jendela bisa tak berguna di hanggar besar tanpa angin silang, atau di tangki tertutup tanpa jendela. Hukum Jepang mensyaratkan kinerja ventilasi terukur nyata (buang lokal atau paksa), bukan sekadar 'jendela terbuka'. 🇯🇵 TIPS: Penyedot asap yang menempel langsung pada gun las disebut alat '溶接ヒューム対策'. Sejak perubahan hukum 2021, pemakaiannya tidak lagi opsional di area tertutup — supervisor akan menghentikan Anda mengelas tanpanya.",
+    },
+  },
+  18: {
+    vi: {
+      q: "Bạn sắp hàn trên đầu (kachiage) và với lấy tạp dề da 'Maekake' (前掛け), nhưng nó biến mất. Đồng nghiệp đưa 'Ude-kabaa' (腕カバー / ống tay) và nói nó che cùng mối nguy. Anh ấy đúng không?",
+      opts: [
+        "Đúng — ude-kabaa và maekake che cùng vùng, nên chỉ một cái là đủ",
+        "Không — ude-kabaa chỉ che cẳng tay, còn maekake che thân và chân khỏi văng và nhiệt bức xạ. Chúng bổ sung, không thay thế nhau",
+        "Không — ude-kabaa chỉ dùng khi mài, không bao giờ khi hàn",
+        "Đúng, nhưng chỉ khi ude-kabaa cùng loại da với maekake",
+      ],
+      exp: "Maekake (前掛け) = tạp dề da che thân và chân. Ude-kabaa (腕カバー) = ống tay chỉ che cẳng tay. Chúng bảo vệ các vùng cơ thể KHÁC nhau khỏi cùng mối nguy (văng, tia lửa, nhiệt bức xạ) — cái này không thay cái kia. Để bảo vệ toàn thân khi hàn trên đầu (kachiage), cần cả hai. 🇯🇵 MẸO: Tạp dề da tốt ở cửa hàng vật tư hàn (溶接用品店) dùng được 3–5 năm. Khi mua, chọn da dày (牛革 / da bò là tốt nhất) và móc cài bằng thép, không phải nhựa — nhựa chảy vì văng.",
+    },
+    id: {
+      q: "Anda hendak mengelas overhead (kachiage) dan meraih celemek kulit 'Maekake' (前掛け), tapi hilang. Rekan menawarkan 'Ude-kabaa' (腕カバー / pelindung lengan), katanya menutup bahaya yang sama. Benarkah?",
+      opts: [
+        "Ya — ude-kabaa dan maekake melindungi area sama, jadi salah satu saja cukup",
+        "Tidak — ude-kabaa hanya menutup lengan bawah, sedangkan maekake menutup badan dan kaki dari percikan dan panas radiasi. Keduanya saling melengkapi, bukan pengganti",
+        "Tidak — ude-kabaa hanya untuk menggerinda, tak pernah untuk mengelas",
+        "Ya, tapi hanya jika ude-kabaa dari kulit sekelas maekake",
+      ],
+      exp: "Maekake (前掛け) = celemek kulit yang menutup badan dan kaki. Ude-kabaa (腕カバー) = pelindung lengan yang hanya menutup lengan bawah. Keduanya melindungi area tubuh BERBEDA dari bahaya sama (percikan, bunga api, panas radiasi) — satu tidak menggantikan yang lain. Untuk perlindungan seluruh tubuh saat las overhead (kachiage), keduanya diperlukan. 🇯🇵 TIPS: Celemek kulit berkualitas di toko perlengkapan las (溶接用品店) tahan 3–5 tahun. Saat membeli, pastikan kulitnya tebal (牛革 / kulit sapi terbaik) dan kait pengencangnya baja, bukan plastik — plastik meleleh kena percikan.",
+    },
+  },
+  19: {
+    vi: {
+      q: "Với chứng chỉ 'Tamakake' (玉掛け), phạm vi công việc khác nhau thế nào giữa bản 'tokubetsu-kyoiku' (特別教育) và 'gino-koshu' (技能講習)?",
+      opts: [
+        "Gino-koshu bao dưới 1 tấn, tokubetsu-kyoiku bao từ 1 tấn trở lên",
+        "Cả hai bao mọi tải trọng — không khác",
+        "Tokubetsu-kyoiku chỉ bao tải dưới 1 tấn. Gino-koshu bao từ 1 tấn trở lên (mọi tải)",
+        "Tokubetsu-kyoiku chỉ dành cho lao động chính thức",
+      ],
+      exp: "Chứng chỉ móc tải Tamakake (玉掛け): Tokubetsu-kyoiku (特別教育) = chỉ tải dưới 1 tấn (1–2 ngày, ~¥12.000–15.000). Gino-koshu (技能講習) = tải từ 1 tấn trở lên, bao mọi tải (3 ngày, ~¥20.000–40.000). Hầu hết công trường cần bản Gino-koshu. 🇯🇵 MẸO: Bài thi thực hành Tamakake Gino-koshu gồm buộc khối thép và ra hiệu tay cho người vận hành cẩu. Học 4 tín hiệu tay cơ bản (nâng, hạ, trái, phải) trước ngày thi — trung tâm mong bạn thực hiện tự tin.",
+    },
+    id: {
+      q: "Untuk sertifikat 'Tamakake' (玉掛け), apa beda cakupan kerja antara versi 'tokubetsu-kyoiku' (特別教育) dan 'gino-koshu' (技能講習)?",
+      opts: [
+        "Gino-koshu mencakup di bawah 1 ton, tokubetsu-kyoiku 1 ton ke atas",
+        "Keduanya mencakup semua berat — tidak ada beda",
+        "Tokubetsu-kyoiku hanya mencakup beban di bawah 1 ton. Gino-koshu mencakup 1 ton ke atas (semua berat)",
+        "Tokubetsu-kyoiku hanya untuk pekerja tetap",
+      ],
+      exp: "Sertifikat rigging Tamakake (玉掛け): Tokubetsu-kyoiku (特別教育) = hanya beban di bawah 1 ton (1–2 hari, ~¥12.000–15.000). Gino-koshu (技能講習) = beban 1 ton ke atas, mencakup semua berat (3 hari, ~¥20.000–40.000). Kebanyakan lokasi membutuhkan versi Gino-koshu. 🇯🇵 TIPS: Ujian praktik Tamakake Gino-koshu mencakup mengikat balok baja dan memberi aba-aba tangan ke operator crane. Pelajari 4 aba-aba dasar (naik, turun, kiri, kanan) sebelum hari ujian — pusat pelatihan mengharapkan Anda memperagakannya dengan percaya diri.",
+    },
+  },
 };
