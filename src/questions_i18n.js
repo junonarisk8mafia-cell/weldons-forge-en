@@ -424,4 +424,136 @@ export const Q_I18N = {
       exp: "Sertifikat rigging Tamakake (玉掛け): Tokubetsu-kyoiku (特別教育) = hanya beban di bawah 1 ton (1–2 hari, ~¥12.000–15.000). Gino-koshu (技能講習) = beban 1 ton ke atas, mencakup semua berat (3 hari, ~¥20.000–40.000). Kebanyakan lokasi membutuhkan versi Gino-koshu. 🇯🇵 TIPS: Ujian praktik Tamakake Gino-koshu mencakup mengikat balok baja dan memberi aba-aba tangan ke operator crane. Pelajari 4 aba-aba dasar (naik, turun, kiri, kanan) sebelum hari ujian — pusat pelatihan mengharapkan Anda memperagakannya dengan percaya diri.",
     },
   },
+  20: {
+    vi: {
+      q: "Tổng chi phí và thời gian gần đúng để lấy gói giấy phép hàn cơ bản ở Nhật là bao nhiêu? (Hàn hồ quang + Đá mài + Điện hạ áp)",
+      opts: [
+        "Khoảng 5 ngày / tổng ¥42.000–72.000 — sau đó bạn được phép hàn, mài và thao tác bảng điện hợp pháp",
+        "1 năm / tổng ¥200.000",
+        "1 ngày / tổng ¥5.000",
+        "3 tháng / tổng ¥500.000",
+      ],
+      exp: "Gói giấy phép hàn cơ bản: Hàn hồ quang (3 ngày, ¥20.000–40.000) + Đá mài (1 ngày, ¥10.000) + Điện hạ áp (1 ngày, ¥12.000–22.000) = khoảng 5 ngày và tổng ¥42.000–72.000. Sau đó bạn được phép hàn, mài và xử lý bảng điện ở Nhật. 🇯🇵 MẸO: Một số chủ lao động trả tiền các khóa này — hãy hỏi 'shikaku shutoku no hiyou wa kaisha ga haraimasu ka?' (資格取得の費用は会社が払いますか？). Trong thị trường lao động khan hiếm, nhiều nơi sẽ đồng ý.",
+    },
+    id: {
+      q: "Berapa perkiraan total biaya dan waktu untuk paket izin las dasar di Jepang? (Las Busur + Batu Gerinda + Listrik Tegangan Rendah)",
+      opts: [
+        "Sekitar 5 hari / total ¥42.000–72.000 — lalu Anda boleh mengelas, menggerinda, dan mengoperasikan panel daya secara legal",
+        "1 tahun / total ¥200.000",
+        "1 hari / total ¥5.000",
+        "3 bulan / total ¥500.000",
+      ],
+      exp: "Paket izin las dasar: Las Busur (3 hari, ¥20.000–40.000) + Batu Gerinda (1 hari, ¥10.000) + Listrik Tegangan Rendah (1 hari, ¥12.000–22.000) = sekitar 5 hari dan total ¥42.000–72.000. Setelah itu Anda legal untuk mengelas, menggerinda, dan menangani panel daya di Jepang. 🇯🇵 TIPS: Beberapa pemberi kerja membayar kursus ini — tanyakan 'shikaku shutoku no hiyou wa kaisha ga haraimasu ka?' (資格取得の費用は会社が払いますか？). Di pasar tenaga kerja ketat, banyak yang akan setuju.",
+    },
+  },
+  21: {
+    vi: {
+      q: "Trước khi vào bồn để hàn, luật Nhật yêu cầu đo nồng độ oxy (酸素濃度). Mức an toàn TỐI THIỂU là bao nhiêu?",
+      opts: [
+        "Đúng 21% oxy — bằng không khí phòng là mức tối thiểu",
+        "10% oxy — người có thể làm việc ngắn ở mức này",
+        "15% oxy trở lên — có thể thở bình thường",
+        "18% oxy trở lên — dưới mức này là vùng nguy hiểm 'Sanso-ketsubo' (酸素欠乏)",
+      ],
+      exp: "Luật Nhật (酸素欠乏危険作業特別教育) định nghĩa 酸素欠乏 (thiếu oxy) là O₂ dưới 18%. Ở 16% = lú lẫn và yếu. Ở 12% = bất tỉnh. Ở 6% = tử vong trong vài phút. LUÔN đo O₂ trước khi vào. Khí bảo vệ CO₂ và Argon nặng hơn không khí và tích tụ ở bồn, hố, chỗ thấp. 🇯🇵 MẸO: Ở xưởng đóng tàu Nhật, số đo oxy được ghi vào 作業前点検表 (bảng kiểm tra trước làm việc) trước mỗi lần vào không gian kín — giám sát sẽ yêu cầu xem.",
+    },
+    id: {
+      q: "Sebelum masuk tangki untuk mengelas, hukum Jepang mewajibkan mengukur konsentrasi oksigen (酸素濃度). Berapa level aman MINIMUM?",
+      opts: [
+        "Tepat 21% oksigen — persentase udara ruangan adalah minimum",
+        "10% oksigen — manusia bisa bekerja sebentar di level ini",
+        "15% oksigen ke atas — pernapasan normal masih mungkin",
+        "18% oksigen ke atas — di bawah ini adalah zona bahaya 'Sanso-ketsubo' (酸素欠乏)",
+      ],
+      exp: "Hukum Jepang (酸素欠乏危険作業特別教育) mendefinisikan 酸素欠乏 (kekurangan oksigen) sebagai O₂ di bawah 18%. Pada 16% = bingung dan lemah. Pada 12% = pingsan. Pada 6% = kematian dalam beberapa menit. SELALU ukur O₂ sebelum masuk. Gas pelindung CO₂ dan Argon lebih berat dari udara dan menumpuk di tangki, lubang, dan tempat rendah. 🇯🇵 TIPS: Di galangan Jepang, angka meter oksigen dicatat di 作業前点検表 (lembar inspeksi pra-kerja) sebelum tiap masuk ruang tertutup — supervisor akan meminta melihatnya.",
+    },
+  },
+  22: {
+    vi: {
+      q: "Bạn được giao 酸素欠乏危険作業 (công việc nguy hiểm thiếu oxy). Cấu hình đội tối thiểu theo luật là gì?",
+      opts: [
+        "Ít nhất một người BÊN TRONG cộng một 監視人 (Kanshi-nin / người giám sát) BÊN NGOÀI theo dõi và có thể gọi cứu trợ",
+        "Một người bên trong là ổn miễn là báo cáo qua bộ đàm mỗi 30 phút",
+        "Một thợ hàn làm một mình là ổn — tiết kiệm thời gian",
+        "Chỉ hai thợ hàn bên trong không gian kín",
+      ],
+      exp: "Luật Nhật (労働安全衛生規則 第585条) yêu cầu một 監視人 (Kanshi-nin) đứng BÊN NGOÀI không gian kín suốt thời gian làm công việc thiếu oxy. Người giám sát theo dõi thợ, canh giờ, giữ thông tin liên lạc khẩn cấp và sẵn sàng gọi 119. KHÔNG BAO GIỜ vào không gian kín một mình — đây là quy tắc bất di bất dịch. 🇯🇵 MẸO: 監視人 phải ở vị trí và không được rời đi làm việc khác — đây là yêu cầu pháp lý nghiêm ngặt, không chỉ là khuyến nghị.",
+    },
+    id: {
+      q: "Anda ditugaskan 酸素欠乏危険作業 (kerja bahaya kekurangan oksigen). Susunan tim minimum yang diwajibkan hukum?",
+      opts: [
+        "Minimal satu pekerja DI DALAM plus seorang 監視人 (Kanshi-nin / pemantau siaga) DI LUAR yang mengawasi dan bisa memanggil bantuan",
+        "Satu pekerja di dalam cukup asalkan lapor radio tiap 30 menit",
+        "Satu tukang las bekerja sendiri boleh — menghemat waktu",
+        "Dua tukang las di dalam ruang tertutup saja",
+      ],
+      exp: "Hukum Jepang (労働安全衛生規則 第585条) mewajibkan seorang 監視人 (Kanshi-nin) ditempatkan DI LUAR ruang tertutup setiap saat selama kerja bahaya kekurangan oksigen. Pemantau mengawasi pekerja, memantau waktu, memegang informasi kontak darurat, dan siap menelepon 119. JANGAN PERNAH masuk ruang tertutup sendirian — ini aturan mutlak. 🇯🇵 TIPS: 監視人 harus tetap di posnya dan tidak boleh pergi mengerjakan hal lain — ini syarat hukum ketat, bukan sekadar anjuran.",
+    },
+  },
+  23: {
+    vi: {
+      q: "Khí bảo vệ CO₂ đã được dùng để hàn trong bồn cả buổi sáng. Sau bữa trưa, một thợ hàn mới muốn vào. Điều gì phải xảy ra ĐẦU TIÊN?",
+      opts: [
+        "Mở nắp bồn và chờ 5 phút — thông gió tự động",
+        "Đo lại nồng độ oxy VÀ mức khí độc bằng máy đo đã hiệu chuẩn, rồi chạy thông gió cưỡng bức trước khi vào",
+        "Thợ hàn trước xác nhận bằng miệng là an toàn",
+        "Xem giờ — nếu quá 1 tiếng thì vào an toàn",
+      ],
+      exp: "CO₂ nặng hơn không khí (mật độ 1,5×) và vẫn tụ dưới đáy bồn ngay cả sau nhiều giờ. Xác nhận bằng miệng là vô giá trị — mức khí phải được đo lại bằng 酸素濃度計 (máy đo oxy) VÀ máy đo CO đã hiệu chuẩn trước MỖI lần vào. Bầu không khí phải được thổi sạch chủ động bằng quạt thông gió cưỡng bức. 🇯🇵 MẸO: Công trường Nhật dùng thuật ngữ '空気確認' (kuki-kakunin / xác nhận không khí) như bước kiểm tra bắt buộc trước khi vào. Đừng bỏ qua dù bạn nghĩ chỗ đó 'rõ ràng đã thoáng'.",
+    },
+    id: {
+      q: "Gas pelindung CO₂ dipakai mengelas dalam tangki sepanjang pagi. Setelah makan siang, tukang las baru ingin masuk. Apa yang harus terjadi PERTAMA?",
+      opts: [
+        "Buka palka tangki dan tunggu 5 menit — ventilasi otomatis",
+        "Ukur ulang konsentrasi oksigen DAN kadar gas berbahaya dengan meter terkalibrasi, lalu jalankan ventilasi paksa sebelum masuk",
+        "Tukang las sebelumnya mengonfirmasi secara lisan bahwa aman",
+        "Cek waktu — jika sudah lebih 1 jam, masuk aman",
+      ],
+      exp: "CO₂ lebih berat dari udara (densitas 1,5×) dan tetap menumpuk di dasar tangki bahkan setelah berjam-jam. Konfirmasi lisan tidak berarti — kadar gas harus diukur ulang dengan 酸素濃度計 (meter oksigen) DAN meter CO terkalibrasi sebelum SETIAP masuk. Atmosfer harus dibersihkan aktif dengan kipas ventilasi paksa. 🇯🇵 TIPS: Lokasi Jepang memakai istilah '空気確認' (kuki-kakunin / konfirmasi udara) sebagai langkah checklist wajib sebelum masuk. Jangan pernah melewatkannya meski Anda pikir ruang itu 'jelas sudah berangin'.",
+    },
+  },
+  24: {
+    vi: {
+      q: "Theo JIS T 8001 và luật Nhật, tổ hợp PPE nào là TỐI THIỂU bắt buộc để hàn hồ quang trên công trường Nhật?",
+      opts: [
+        "Chỉ mũ hàn + găng da + giày an toàn — áo khoác là tùy chọn khi khô ráo",
+        "Chỉ mũ hàn — mặt và mắt là mối nguy chính",
+        "Mũ hàn + găng da (革手袋) + giày an toàn (安全靴 / JIS T 8101) + áo chống cháy hoặc tạp dề da",
+        "Kính an toàn thường + găng cotton mỏng là đủ cho mối hàn ngắn",
+      ],
+      exp: "PPE hàn tối thiểu theo JIS/luật Nhật: 1) Mũ hàn 溶接面 với số che sáng đúng (JIS T 8141). 2) Găng da hàn 革手袋 (JIS T 8113). 3) Giày mũi thép 安全靴 (JIS T 8101). 4) Áo chống cháy hoặc tạp dề da 前掛け chống văng. 5) Khẩu trang chống bụi 防じんマスク cho khói hàn. 🇯🇵 MẸO: Trên công trường Nhật, kiểm tra trang phục (服装点検) làm ở buổi họp an toàn sáng (朝礼 / chōrei) — đến mà thiếu PPE đúng thì không được bắt đầu làm việc hôm đó.",
+    },
+    id: {
+      q: "Menurut JIS T 8001 dan hukum Jepang, kombinasi APD mana yang MINIMUM wajib untuk las busur di lokasi kerja Jepang?",
+      opts: [
+        "Hanya topeng las + sarung tangan kulit + sepatu safety — jaket opsional saat kondisi kering",
+        "Hanya topeng las — wajah dan mata adalah bahaya utama",
+        "Topeng las + sarung tangan kulit (革手袋) + sepatu safety (安全靴 / JIS T 8101) + jaket tahan api atau celemek kulit",
+        "Kacamata pengaman biasa + sarung tangan katun tipis cukup untuk las pendek",
+      ],
+      exp: "APD las minimum menurut JIS/hukum Jepang: 1) Topeng las 溶接面 dengan shade tepat (JIS T 8141). 2) Sarung tangan las kulit 革手袋 (JIS T 8113). 3) Sepatu ujung baja 安全靴 (JIS T 8101). 4) Jaket tahan api atau celemek kulit 前掛け untuk percikan. 5) Respirator debu 防じんマスク untuk asap las. 🇯🇵 TIPS: Di lokasi Jepang, inspeksi pakaian (服装点検) dilakukan pada rapat keselamatan pagi (朝礼 / chōrei) — datang tanpa APD yang benar berarti tidak boleh mulai bekerja hari itu.",
+    },
+  },
+  25: {
+    vi: {
+      q: "Khi hàn thép không gỉ (dây/que chứa crom), cần PPE BỔ SUNG nào ngoài PPE hàn tiêu chuẩn ở Nhật?",
+      opts: [
+        "Khẩu trang là tùy chọn miễn là quạt thông gió đang chạy",
+        "Không cần thêm PPE — thép không gỉ an toàn hơn thép carbon",
+        "Khẩu trang chống bụi loại DS1 tiêu chuẩn là đủ — giống thép carbon",
+        "Khẩu trang cấp cao hơn cho crom hóa trị sáu (六価クロム) — cụ thể là 防じんマスク cấp DS2 trở lên",
+      ],
+      exp: "Hàn vật liệu chứa crom (thép không gỉ SUS304/316, thép crom-molypden) tạo khói crom hóa trị sáu (六価クロム / Cr⁶⁺) — chất gây ung thư đã xác nhận (発がん性物質). Luật Nhật (特化則 第38条の20) yêu cầu: 1) Khẩu trang chống bụi cấp DS2 trở lên. 2) Bắt buộc hút cục bộ. 3) Phải lưu hồ sơ theo dõi sức khỏe. 4) Phải thông báo bằng văn bản cho công nhân về nguy cơ ung thư. 🇯🇵 MẸO: Ở Nhật, hồ sơ phơi nhiễm 六価クロム phải lưu 30 năm — một trong những chất bị quản lý nghiêm nhất trong nghề hàn. Không bao giờ hàn thép không gỉ mà thiếu khẩu trang đúng.",
+    },
+    id: {
+      q: "Saat mengelas baja tahan karat (kawat/elektroda mengandung krom), APD TAMBAHAN apa yang diperlukan di luar APD las standar di Jepang?",
+      opts: [
+        "Respirator opsional asalkan kipas ventilasi menyala",
+        "Tidak perlu APD tambahan — baja tahan karat lebih aman dari baja karbon",
+        "Respirator debu kelas DS1 standar cukup — sama seperti baja karbon",
+        "Respirator kelas lebih tinggi untuk krom heksavalen (六価クロム) — khususnya 防じんマスク kelas DS2 atau lebih tinggi",
+      ],
+      exp: "Mengelas material mengandung krom (baja tahan karat SUS304/316, baja krom-moli) menghasilkan asap krom heksavalen (六価クロム / Cr⁶⁺) — karsinogen manusia yang terkonfirmasi (発がん性物質). Hukum Jepang (特化則 第38条の20) mewajibkan: 1) Respirator debu kelas DS2 atau lebih tinggi. 2) Ventilasi buang lokal wajib. 3) Catatan pengawasan kesehatan harus disimpan. 4) Pekerja harus diberi tahu risiko kanker secara tertulis. 🇯🇵 TIPS: Di Jepang, catatan paparan 六価クロム harus disimpan 30 tahun — salah satu zat paling ketat diatur dalam pekerjaan las. Jangan pernah mengelas baja tahan karat tanpa respirator yang benar.",
+    },
+  },
 };
