@@ -1216,4 +1216,224 @@ export const Q_I18N = {
       exp: "Uranami (裏波) = back bead. Saat root pass menembus penuh sambungan dan membentuk jalur bersih dan rata di SISI BELAKANG. Ini tanda penetrasi akar sempurna — sangat dihargai, terutama las pipa dan bejana tekan. Sulit dicapai: perlu root gap, arus, dan kecepatan yang tepat. 🇯🇵 TIPS: 'Uranami' yang indah adalah kebanggaan tukang las Jepang. Dalam ujian sertifikasi JIS las pipa, sisi belakang (back bead) diperiksa secara visual dan dengan radiografi (RT). Uranami tak rata, terlalu cembung, atau cekung (melorot) bisa gagal — latih pengendalian kolam akar.",
     },
   },
+  211: {
+    vi: {
+      q: "Trong lần thăm công trường, người kiểm tra chỉ vào mối nối và nói 'Mechigai ga aru!' (目違いがある！). Vấn đề là gì?",
+      opts: [
+        "Hỗn hợp khí bảo vệ sai",
+        "Dùng sai phương pháp hàn",
+        "Đường hàn quá cao",
+        "Lệch mép — hai mép tấm ở mối nối không bằng nhau; một bên cao hơn bên kia",
+      ],
+      exp: "Mechigai (目違い) = lệch mép / không khớp. Hai tấm hàn với nhau không cùng độ cao — một mép cao hơn. Điều này tạo phân bố ứng suất không đều và có thể dẫn đến khuyết tật. Tiêu chuẩn JIS quy định độ lệch tối đa cho phép tùy chiều dày tấm. Khắc phục bằng kẹp trước khi hàn. 🇯🇵 MẸO: JIS B 8270 quy định giới hạn mechigai cho bình áp lực. Với kết cấu thép, áp dụng JIS G 3353 và quy chuẩn xây dựng. Trên công trường, quy tắc nhanh: mechigai không vượt 10% chiều dày tấm. Người kiểm tra mang thước thẳng và thước khe — họ sẽ kiểm trước khi chứng kiến bất kỳ lượt chân nào.",
+    },
+    id: {
+      q: "Saat kunjungan lokasi, inspektor menunjuk sambungan dan berkata 'Mechigai ga aru!' (目違いがある！). Apa masalahnya?",
+      opts: [
+        "Campuran gas pelindung salah",
+        "Proses las yang salah dipakai",
+        "Jalur las terlalu tinggi",
+        "Misalignment — kedua tepi pelat di sambungan tidak rata; satu lebih tinggi dari yang lain",
+      ],
+      exp: "Mechigai (目違い) = misalignment / tidak sejajar. Kedua pelat yang dilas tidak sama tinggi — satu tepi lebih tinggi. Ini menciptakan distribusi tegangan tak merata dan bisa menimbulkan cacat. Standar JIS menentukan misalignment maksimum sesuai tebal pelat. Perbaiki dengan klem sebelum mengelas. 🇯🇵 TIPS: JIS B 8270 menetapkan batas mechigai untuk bejana tekan. Untuk baja struktur, berlaku JIS G 3353 dan kode bangunan. Di lokasi, aturan cepat: mechigai tak boleh melebihi 10% tebal pelat. Inspektor membawa penggaris lurus dan gap gauge — mereka memeriksanya sebelum menyaksikan root pass mana pun.",
+    },
+  },
+  212: {
+    vi: {
+      q: "Tổ trưởng kiểm tra mối nối tấm mỏng và nói 'Yoochi shita!' (溶落ちした！). Sai ở đâu?",
+      opts: [
+        "Thủng — hồ quang nóng chảy xuyên hoàn toàn kim loại nền, tạo lỗ trên tấm",
+        "Đường hàn quá hẹp",
+        "Mối hàn hoàn thành hoàn hảo",
+        "Chưa bỏ xỉ",
+      ],
+      exp: "Yoochi (溶落ち) = thủng / chảy xuyên. Hồ quang quá nóng, quá chậm, hoặc khe hở chân quá rộng — kim loại nền chảy xuyên hoàn toàn, để lại lỗ. Hay gặp với tấm mỏng hoặc khe chân rộng. Phòng ngừa: giảm dòng, tăng tốc độ, dùng thanh lót đáy (裏当て金), hoặc giảm khe chân. 🇯🇵 MẸO: Yoochi ở lượt chân trong thi chứng chỉ JIS là trượt tự động. Nếu thấy bể hàn quá loãng và bắt đầu rớt, tăng tốc độ ngay — đừng đứng yên. Sửa lỗ yoochi cần mài ra, đính lại khe, và hàn lại — một sự xấu hổ tốn thời gian trong lúc thi.",
+    },
+    id: {
+      q: "Mandor memeriksa sambungan pelat tipis dan berkata 'Yoochi shita!' (溶落ちした！). Apa yang salah?",
+      opts: [
+        "Tembus bakar — busur meleleh menembus logam dasar sepenuhnya, membuat lubang di pelat",
+        "Jalur las terlalu sempit",
+        "Las selesai sempurna",
+        "Terak belum dibuang",
+      ],
+      exp: "Yoochi (溶落ち) = tembus bakar / melt-through. Busur terlalu panas, terlalu lambat, atau root gap terlalu lebar — logam dasar meleleh menembus sepenuhnya, meninggalkan lubang. Lebih umum pada pelat tipis atau root gap lebar. Pencegahan: turunkan arus, naikkan kecepatan jalan, pakai backing bar (裏当て金), atau perkecil root gap. 🇯🇵 TIPS: Yoochi pada root pass saat ujian sertifikasi JIS adalah kegagalan otomatis. Jika kolam terasa terlalu cair dan mulai turun, segera naikkan kecepatan — jangan diam. Memperbaiki lubang yoochi perlu digerinda keluar, tack celahnya, dan dilas ulang — hal memalukan yang memakan waktu saat ujian.",
+    },
+  },
+  213: {
+    vi: {
+      q: "Khi hàn thép không gỉ, giám sát nói 'Ura-gasu wo shiro!' (裏ガスをしろ！). Bạn cần chuẩn bị gì?",
+      opts: [
+        "Tăng gấp đôi lưu lượng khí bảo vệ ở mặt trước",
+        "Thổi khí mặt sau (back purge) — che mặt sau mối hàn inox bằng khí trơ (Argon) để ngăn ôxy hóa",
+        "Dùng khí CO₂ thay Argon",
+        "Bôi hồ thuốc lên mặt sau mối nối",
+      ],
+      exp: "Ura-gasu (裏ガス) = thổi khí mặt sau / che mặt sau. Khi hàn inox hoặc titan, mặt sau mối hàn phải được che bằng Argon hoặc Nitơ để ngăn ôxy hóa. Thiếu nó, mặt sau ôxy hóa — tạo màu cầu vồng (Tenpaa-karaa / テンパーカラー) và giảm mạnh khả năng chống ăn mòn. 🇯🇵 MẸO: Lưu lượng ura-gasu và thời gian thổi được quy định trong WPS. Lỗi thường gặp là không thổi đủ lâu trước khi bật hồ quang — oxy còn lại trong ống vẫn làm ôxy hóa mối đầu. Thổi đến khi máy đo oxy trong ống dưới 100 ppm (0,01%) cho các ứng dụng quan trọng như ống thực phẩm hoặc dược.",
+    },
+    id: {
+      q: "Saat mengelas baja tahan karat, supervisor berkata 'Ura-gasu wo shiro!' (裏ガスをしろ！). Apa yang perlu Anda siapkan?",
+      opts: [
+        "Menggandakan aliran gas pelindung di sisi depan",
+        "Back purging — melindungi sisi belakang las stainless dengan gas inert (Argon) untuk mencegah oksidasi",
+        "Memakai gas CO₂ alih-alih Argon",
+        "Mengoleskan pasta fluks ke belakang sambungan",
+      ],
+      exp: "Ura-gasu (裏ガス) = back purge / pelindung belakang. Saat mengelas stainless atau titanium, sisi belakang las harus dilindungi dengan Argon atau Nitrogen untuk mencegah oksidasi. Tanpanya, permukaan belakang teroksidasi — menimbulkan warna pelangi (Tenpaa-karaa / テンパーカラー) dan sangat menurunkan ketahanan korosi. 🇯🇵 TIPS: Laju ura-gasu dan waktu purge ditentukan dalam WPS. Kesalahan umum adalah purge kurang lama sebelum menyalakan busur — oksigen yang tersisa di pipa tetap mengoksidasi las pertama. Purge sampai meter oksigen dalam pipa membaca di bawah 100 ppm (0,01%) untuk aplikasi kritis seperti pipa food-grade atau farmasi.",
+    },
+  },
+  214: {
+    vi: {
+      q: "Bạn hàn inox không thổi khí mặt sau và giám sát thấy màu cầu vồng ở mặt sau. Anh ấy nói 'Tenpaa-karaa da!' (テンパーカラーだ！). Điều này cho thấy gì?",
+      opts: [
+        "Chất lượng hàn tuyệt vời — cầu vồng cho thấy ngấu hoàn toàn",
+        "Bình thường với inox — không cần làm gì",
+        "Màu nhiệt (heat tint) — bề mặt inox ôxy hóa ở nhiệt độ cao, giảm chống ăn mòn. Mức độ: Vàng → Xanh → Tím → Xám (tệ nhất)",
+        "Khí lót mặt sau đang hoạt động đúng",
+      ],
+      exp: "Tenpaa-karaa (テンパーカラー) = màu nhiệt / màu tôi. Trên inox: Vàng = nhẹ (chấp nhận ở một số quy chuẩn), Xanh = ôxy hóa đáng kể, Tím/Xám = nặng (chống ăn mòn rất kém). Nguyên nhân: che khí mặt sau không đủ hoặc nhiệt đầu vào quá lớn. Phải loại bỏ cơ học hoặc hóa học ở ứng dụng quan trọng về ăn mòn. 🇯🇵 MẸO: Ở nhà máy hóa chất và chế biến thực phẩm Nhật, tenpaa-karaa trên bề mặt hàn SUS là lỗi nghiêm trọng — kể cả màu vàng cũng có thể bị từ chối. Cách xử: 酸洗い (sansarai / tẩy axit) bằng hồ axit hỗn hợp hoặc đánh bóng điện. Ở công trường xây dựng, màu vàng nhạt thường chấp nhận — luôn xác nhận tiêu chí nghiệm thu với giám sát QC trước khi làm inox.",
+    },
+    id: {
+      q: "Anda mengelas stainless tanpa back purge dan supervisor melihat warna pelangi di belakang. Ia berkata 'Tenpaa-karaa da!' (テンパーカラーだ！). Apa artinya?",
+      opts: [
+        "Kualitas las bagus — pelangi menunjukkan penetrasi penuh",
+        "Normal untuk stainless — tak perlu tindakan",
+        "Heat tint — permukaan stainless teroksidasi pada suhu tinggi, menurunkan ketahanan korosi. Tingkat: Emas → Biru → Ungu → Abu (terburuk)",
+        "Gas backing bekerja dengan benar",
+      ],
+      exp: "Tenpaa-karaa (テンパーカラー) = heat tint / warna temper. Pada stainless: Emas = ringan (diterima di beberapa kode), Biru = oksidasi signifikan, Ungu/Abu = parah (ketahanan korosi sangat buruk). Penyebab: pelindung gas belakang kurang atau masukan panas berlebih. Harus dihilangkan secara mekanis atau kimiawi pada aplikasi kritis korosi. 🇯🇵 TIPS: Di pabrik kimia dan pengolahan makanan Jepang, tenpaa-karaa pada permukaan las SUS adalah kegagalan kritis — bahkan warna emas bisa ditolak. Solusinya 酸洗い (sansarai / acid pickling) dengan pasta asam campuran atau electropolishing. Di lokasi konstruksi, tint emas tipis sering diterima — selalu konfirmasi kriteria penerimaan dengan supervisor QC sebelum mengerjakan stainless.",
+    },
+  },
+  215: {
+    vi: {
+      q: "Giám sát nói 'Hatsuri shiro!' (ハツリしろ！). Bạn phải làm gì?",
+      opts: [
+        "Tăng tốc độ cấp dây",
+        "Xịt chất chống văng",
+        "Bôi thuốc lên mối nối",
+        "Khoét ra / đục ra — loại bỏ kim loại hàn lỗi bằng gouging hồ quang khí hoặc mài để hàn lại",
+      ],
+      exp: "Hatsuri (ハツリ) = khoét hoặc đục bỏ kim loại hàn. Khi mối hàn trượt kiểm tra, phần lỗi phải được loại bỏ hoàn toàn trước khi hàn lại. Cách: gouging hồ quang khí (ガウジング), mài bằng Bo-gura (棒グラ), hoặc đục. Vùng đó phải sạch đến kim loại trần trước khi hàn lại. 🇯🇵 MẸO: Gouging hồ quang khí (ガウジング) để lại bề mặt nhiễm carbon — sau khi gouging, PHẢI mài bề mặt để bỏ lớp carbon (カーボン除去 / kabon-jokyo) trước khi hàn lại. Hàn đè lên vết gouge nhiễm carbon mà không mài gây rỗ khí và lẫn tạp. Bước này người mới hay bỏ và gây trượt lặp lại.",
+    },
+    id: {
+      q: "Supervisor berkata 'Hatsuri shiro!' (ハツリしろ！). Apa yang harus Anda lakukan?",
+      opts: [
+        "Menaikkan kecepatan umpan kawat",
+        "Menyemprot anti-percikan",
+        "Mengoleskan fluks ke sambungan",
+        "Menggerinda/mengorek keluar — membuang logam las cacat dengan air arc gouging atau gerinda agar bisa dilas ulang",
+      ],
+      exp: "Hatsuri (ハツリ) = mengorek atau memahat keluar logam las. Saat las gagal inspeksi, bagian cacat harus dibuang sepenuhnya sebelum dilas ulang. Metode: air arc gouging (ガウジング), gerinda dengan Bo-gura (棒グラ), atau memahat. Area harus bersih hingga logam telanjang sebelum dilas ulang. 🇯🇵 TIPS: Air arc gouging (ガウジング) meninggalkan permukaan terkontaminasi karbon — setelah gouging, Anda HARUS menggerinda permukaan untuk membuang lapisan karbon (カーボン除去 / kabon-jokyo) sebelum dilas ulang. Mengelas di atas gouge terkontaminasi karbon tanpa menggerinda menyebabkan porositas dan inklusi. Langkah ini sering dilewati pekerja baru dan menyebabkan kegagalan berulang.",
+    },
+  },
+  216: {
+    vi: {
+      q: "Người kiểm tra nói 'Torinao-shi da!' (取り直しだ！). Điều này có nghĩa gì với thợ hàn?",
+      opts: [
+        "Làm lại — toàn bộ mối hàn (hoặc đoạn) phải bị loại bỏ và làm lại từ đầu. Câu đáng sợ nhất trên công trường Nhật",
+        "Thêm một lượt phủ nữa lên trên",
+        "Mối hàn hoàn hảo — được duyệt",
+        "Chỉ dừng và đổi cài đặt máy hàn",
+      ],
+      exp: "Torinao-shi (取り直し) = làm lại / làm mới. Mối hàn bị từ chối và phải loại bỏ hoàn toàn rồi hàn lại. Tốn thời gian, vật liệu và uy tín. Trong văn hóa chất lượng Nhật, làm lại được xem rất nghiêm túc — nó ảnh hưởng đánh giá thợ. Phòng ngừa: làm đúng ngay lần đầu. 🇯🇵 MẸO: Ở công ty Nhật, tỷ lệ làm lại (手直し / tenaoshi hoặc 取り直し) được theo dõi theo từng thợ và xem xét trong họp chất lượng hằng tháng. Tỷ lệ làm lại cao sẽ ảnh hưởng gia hạn hợp đồng. Văn hóa chất lượng Nhật truy khuyết tật về từng thợ — nổi tiếng làm sạch ngay lần đầu là uy tín quan trọng nhất bạn có thể xây.",
+    },
+    id: {
+      q: "Inspektor berkata 'Torinao-shi da!' (取り直しだ！). Apa artinya bagi tukang las?",
+      opts: [
+        "Rework — seluruh las (atau bagian) harus dibuang dan dikerjakan ulang dari awal. Kata paling ditakuti di lokasi Jepang",
+        "Tambahkan satu cover pass lagi di atas",
+        "Las sempurna — disetujui",
+        "Berhenti dan ubah setelan mesin las saja",
+      ],
+      exp: "Torinao-shi (取り直し) = rework / ulang. Las ditolak dan harus dibuang sepenuhnya lalu dilas ulang. Ini memakan waktu, material, dan reputasi. Dalam budaya mutu Jepang, rework dianggap sangat serius — memengaruhi evaluasi tukang. Pencegahan: kerjakan benar sejak awal. 🇯🇵 TIPS: Di perusahaan Jepang, tingkat rework (手直し / tenaoshi atau 取り直し) dilacak per tukang dan ditinjau dalam rapat mutu bulanan. Tingkat rework tinggi akan memengaruhi perpanjangan kontrak. Budaya mutu Jepang menelusuri cacat ke individu tukang — dikenal sebagai kerja bersih sekali jadi adalah reputasi terpenting yang bisa Anda bangun.",
+    },
+  },
+  217: {
+    vi: {
+      q: "Một thợ nói công việc cần 'Genga' (現合). Điều này nghĩa là gì?",
+      opts: [
+        "Chỉ dùng bản vẽ máy tính",
+        "Lắp khớp tại hiện trường — đo và cắt chi tiết ngay tại kết cấu thực vì bản vẽ không đủ hoặc khe hở đã thay đổi",
+        "Một loại giấy chứng nhận kiểm tra",
+        "Làm thêm giờ cuối tuần",
+      ],
+      exp: "Genga (現合) = lắp khớp tại hiện trường / lắp thực địa. Khi chi tiết không khớp bản vẽ chính xác do dung sai chế tạo hoặc thay đổi kết cấu, thợ đo khe thực tế tại chỗ và cắt/chế tạo chi tiết cho vừa. Phổ biến trong đóng tàu và xây dựng dân dụng. 🇯🇵 MẸO: Khi làm genga, LUÔN ghi lại kích thước thực đo và sửa đổi bạn đã làm. Tài liệu công trường Nhật (施工記録 / shiko-kiroku) yêu cầu theo dõi các sửa đổi tại hiện trường. Sửa đổi không ghi chép bị phát hiện khi kiểm tra gây rắc rối giấy tờ nghiêm trọng và có thể phải kiểm tra lại các mối nối liên quan.",
+    },
+    id: {
+      q: "Seorang tukang mengatakan pekerjaan butuh 'Genga' (現合). Apa artinya?",
+      opts: [
+        "Memakai gambar komputer saja",
+        "Fitting kustom di lokasi — mengukur dan memotong bagian langsung di struktur nyata karena gambar tak cukup atau celah berubah",
+        "Sejenis sertifikat inspeksi",
+        "Lembur di akhir pekan",
+      ],
+      exp: "Genga (現合) = fitting di lokasi / field fitting. Saat bagian tak cocok persis dengan gambar akibat toleransi fabrikasi atau perubahan struktur, pekerja mengukur celah aktual di lokasi dan memotong/membuat bagian agar pas. Umum di pembuatan kapal dan konstruksi sipil. 🇯🇵 TIPS: Saat mengerjakan genga, SELALU catat dimensi aktual yang Anda ukur dan modifikasi yang Anda buat. Dokumentasi lokasi Jepang (施工記録 / shiko-kiroku) mensyaratkan modifikasi lapangan dilacak. Modifikasi lapangan tak terdokumentasi yang ditemukan saat inspeksi menimbulkan masalah dokumen serius dan mungkin memerlukan inspeksi ulang sambungan terkait.",
+    },
+  },
+  218: {
+    vi: {
+      q: "'Chippingu' (チッピング) trong quy trình hàn là gì, và làm chính xác khi nào?",
+      opts: [
+        "Xịt chất chống văng trước khi hàn",
+        "Kiểm tra đường hàn tìm vết nứt sau khi hàn",
+        "Bỏ xỉ sau mỗi lượt bằng búa đục hoặc máy đục hơi — làm giữa MỖI lớp trong hàn nhiều lượt",
+        "Mài mối hàn đến chiều cao cuối",
+      ],
+      exp: "Chippingu (チッピング) = đục xỉ / bỏ xỉ. Làm sau mỗi lượt trong hàn nhiều lượt. Không bỏ xỉ giữa các lượt gây lẫn xỉ (スラグ巻き込み) — khuyết tật bên trong nghiêm trọng sẽ trượt kiểm tra NDT. Quy trình: đục → chải sắt → kiểm → hàn lượt tiếp. 🇯🇵 MẸO: Quy trình đục đúng của Nhật gọi là '打検' (dakken / gõ và kiểm) — sau khi đục, gõ nhẹ đường hàn bằng cán để nghe xỉ còn sót. Tiếng rỗng nghĩa là còn xỉ. Kiểm tra gõ nhanh này là phần thói quen chuyên nghiệp được kỳ vọng trên công trường Nhật.",
+    },
+    id: {
+      q: "Apa itu 'Chippingu' (チッピング) dalam alur kerja las, dan kapan tepatnya dilakukan?",
+      opts: [
+        "Menyemprot anti-percikan sebelum mengelas",
+        "Memeriksa jalur untuk retak setelah mengelas",
+        "Membuang terak setelah tiap pass memakai palu ketuk atau air chipper — dilakukan di antara SETIAP lapisan pada las multi-pass",
+        "Menggerinda las ke tinggi akhir",
+      ],
+      exp: "Chippingu (チッピング) = pengetukan terak / pembuangan terak. Dilakukan setelah tiap pass pada las multi-pass. Gagal membuang terak antar-pass menyebabkan inklusi terak (スラグ巻き込み) — cacat internal serius yang akan gagal inspeksi NDT. Proses: ketuk → sikat kawat → periksa → las pass berikutnya. 🇯🇵 TIPS: Alur pengetukan Jepang yang benar disebut '打検' (dakken / ketuk dan periksa) — setelah mengetuk, ketuk ringan jalur dengan gagang untuk mendengar terak yang longgar. Bunyi berongga berarti masih ada terak. Uji ketuk cepat ini bagian dari rutinitas profesional yang diharapkan di lokasi Jepang.",
+    },
+  },
+  219: {
+    vi: {
+      q: "Đàn anh nói bạn cần 'Bokae' (棒替え) sớm. Điều này nghĩa là gì — và liên quan đến phương pháp hàn nào?",
+      opts: [
+        "Đổi cuộn dây — dùng trong hàn FCAW",
+        "Chuyển sang khí bảo vệ khác — dùng trong hàn MIG/MAG",
+        "Thay đầu tiếp điện — dùng trong mọi hàn bán tự động",
+        "Đổi que hàn / thanh hàn — chỉ liên quan hàn que (SMAW / 被覆アーク溶接). KHÔNG dùng trong hàn bán tự động",
+      ],
+      exp: "Bokae (棒替え) = đổi que hàn. Trong hàn que (SMAW / 被覆アーク溶接), bạn dùng que ngắn cháy hết và phải thay. Từ này CHỈ liên quan hàn que. Ở xưởng đóng tàu và nhà máy dùng FCAW/MAG bán tự động, dây từ cuộn — không cần 'bokae'. Dùng từ này sai chỗ sẽ làm người ta bối rối! 🇯🇵 MẸO: Que hàn phải cất trong tủ khô (乾燥庫 / kanso-ko) ở 40–50°C để tránh hút ẩm. Que ẩm gây nứt hydro và rỗ khí. Trước khi dùng que đã cất, công trường Nhật yêu cầu sấy lại (再乾燥 / sai-kanso) ở nhiệt độ quy định — xem bảng dữ liệu của nhà sản xuất que về thời gian và nhiệt độ.",
+    },
+    id: {
+      q: "Senior berkata Anda perlu 'Bokae' (棒替え) segera. Apa artinya — dan relevan untuk proses las mana?",
+      opts: [
+        "Ganti gulungan kawat — dipakai di las FCAW",
+        "Beralih ke gas pelindung berbeda — dipakai di las MIG/MAG",
+        "Ganti contact tip — dipakai di semua las semi-otomatis",
+        "Ganti elektroda / batang las — relevan untuk SMAW (las busur/被覆アーク溶接) saja. TIDAK dipakai di las semi-otomatis",
+      ],
+      exp: "Bokae (棒替え) = ganti elektroda. Pada las busur (SMAW / 被覆アーク溶接), Anda memakai batang elektroda pendek yang habis terbakar dan harus diganti. Kata ini HANYA relevan untuk las busur. Di galangan dan pabrik yang memakai FCAW/MAG semi-otomatis, kawat dari gulungan — tak perlu 'bokae'. Memakai kata ini di lokasi yang salah akan membingungkan orang! 🇯🇵 TIPS: Elektroda las harus disimpan dalam lemari kering (乾燥庫 / kanso-ko) pada 40–50°C untuk mencegah penyerapan lembap. Elektroda basah menyebabkan retak hidrogen dan porositas. Sebelum memakai elektroda simpanan, lokasi Jepang mensyaratkan pengeringan ulang (再乾燥 / sai-kanso) pada suhu tertentu — periksa lembar data pabrikan elektroda untuk waktu dan suhu.",
+    },
+  },
+  220: {
+    vi: {
+      q: "Đàn anh nói dây bị 'Tobidashi!' (飛び出し！) cho việc dây 1.2mm của bạn. Theo quy tắc kinh nghiệm của Nhật, bạn nên nhắm chiều dài nhô dây (stick-out) là bao nhiêu?",
+      opts: [
+        "Khoảng 12mm — theo quy tắc stick-out = 10× đường kính dây",
+        "Khoảng 25mm — cùng một giá trị cố định bất kể đường kính dây",
+        "Khoảng 1.2mm — stick-out bằng đúng đường kính dây",
+        "Khoảng 6mm — quy tắc một nửa đường kính dây",
+      ],
+      exp: "Tobidashi (飛び出し) = chiều dài nhô dây / phần dây ra, khoảng cách từ đầu tiếp điện đến bề mặt vật. Quá dài: hồ quang bất ổn, ngấu kém, che khí hỏng. Thợ Nhật dùng quy tắc đơn giản: stick-out = 10× đường kính dây. Với dây 1.2mm, khoảng 12mm — không phải 25mm cố định bất kể cỡ dây, và không phải bằng đúng đường kính dây. 🇯🇵 MẸO: Với dây 1.6mm, nhắm khoảng 16mm stick-out theo cùng quy tắc 10×. Khi hàn trong mối chật không thấy rõ đầu tip, thợ kinh nghiệm phát triển cảm giác về trọng lượng súng và tiếng hồ quang cho biết khoảng cách đúng.",
+    },
+    id: {
+      q: "Senior berkata kawat 'Tobidashi!' (飛び出し！) untuk pekerjaan kawat 1.2mm Anda. Memakai aturan praktis Jepang, berapa panjang stick-out yang harus dituju?",
+      opts: [
+        "Sekitar 12mm — memakai aturan stick-out = 10× diameter kawat",
+        "Sekitar 25mm — nilai tetap yang sama tanpa memandang diameter kawat",
+        "Sekitar 1.2mm — stick-out harus sama persis dengan diameter kawat",
+        "Sekitar 6mm — aturan setengah diameter kawat",
+      ],
+      exp: "Tobidashi (飛び出し) = stick-out / ekstensi kawat, jarak dari contact tip ke permukaan kerja. Terlalu panjang: busur tak stabil, penetrasi buruk, kegagalan pelindung. Tukang las Jepang memakai aturan sederhana: stick-out = 10× diameter kawat. Untuk kawat 1.2mm, sekitar 12mm — bukan 25mm tetap tanpa memandang ukuran kawat, dan bukan sama dengan diameter kawat itu sendiri. 🇯🇵 TIPS: Untuk kawat 1.6mm, tuju sekitar 16mm stick-out dengan aturan 10× yang sama. Saat mengelas di sambungan sempit di mana Anda tak bisa melihat tip dengan jelas, pekerja berpengalaman mengembangkan rasa terhadap berat gun dan bunyi busur yang memberi tahu jarak yang benar.",
+    },
+  },
 };
