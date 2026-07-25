@@ -1436,4 +1436,224 @@ export const Q_I18N = {
       exp: "Tobidashi (飛び出し) = stick-out / ekstensi kawat, jarak dari contact tip ke permukaan kerja. Terlalu panjang: busur tak stabil, penetrasi buruk, kegagalan pelindung. Tukang las Jepang memakai aturan sederhana: stick-out = 10× diameter kawat. Untuk kawat 1.2mm, sekitar 12mm — bukan 25mm tetap tanpa memandang ukuran kawat, dan bukan sama dengan diameter kawat itu sendiri. 🇯🇵 TIPS: Untuk kawat 1.6mm, tuju sekitar 16mm stick-out dengan aturan 10× yang sama. Saat mengelas di sambungan sempit di mana Anda tak bisa melihat tip dengan jelas, pekerja berpengalaman mengembangkan rasa terhadap berat gun dan bunyi busur yang memberi tahu jarak yang benar.",
     },
   },
+  301: {
+    vi: {
+      q: "Phát biểu nào về 'Shitamuki-shisei' (下向き姿勢 / tư thế bằng) là KHÔNG đúng?",
+      opts: [
+        "Mã ISO là PA và mã JIS là F",
+        "Vì là tư thế dễ nhất, người kiểm tra JIS áp dụng tiêu chuẩn chất lượng đường hàn dễ dãi hơn cho mối thi tư thế bằng",
+        "Người mới thường bắt đầu luyện hàn ở tư thế này",
+        "Trọng lực kéo bể hàn xuống rãnh, giúp ngấu và hòa nhập",
+      ],
+      exp: "Shitamuki-shisei (下向き姿勢) = Tư thế bằng, 1G (rãnh) / 1F (góc), mã ISO PA. Trọng lực giúp bể hàn lắng vào mối nối, dễ học nhất — nhưng người kiểm tra JIS KHÔNG nới tiêu chuẩn cho mối tư thế bằng. Độ đều bề rộng, hòa mép và lấp hố vẫn bị soi kỹ như nhau. 🇯🇵 MẸO: Đừng cho rằng tư thế dễ = tiêu chuẩn thấp. Mối tư thế bằng cẩu thả trong thi JIS vẫn trượt — 'dễ' chỉ nói về độ khó thể chất, không phải mức chất lượng.",
+    },
+    id: {
+      q: "Pernyataan mana tentang 'Shitamuki-shisei' (下向き姿勢 / posisi datar) yang TIDAK benar?",
+      opts: [
+        "Kode ISO-nya PA dan kode JIS-nya F",
+        "Karena posisi termudah, inspektor JIS menerapkan standar kualitas jalur yang lebih longgar untuk las uji posisi datar",
+        "Semua pemula biasanya memulai latihan las di posisi ini",
+        "Gravitasi menarik kolam cair turun ke sambungan, membantu penetrasi dan fusi",
+      ],
+      exp: "Shitamuki-shisei (下向き姿勢) = Posisi datar, 1G (alur) / 1F (sudut), kode ISO PA. Gravitasi membantu kolam cair mengendap ke sambungan, menjadikannya posisi termudah dipelajari — tetapi inspektor JIS TIDAK melonggarkan standar untuk las posisi datar. Keseragaman lebar jalur, pembauran kaki, dan pengisian kawah diperiksa sama ketatnya. 🇯🇵 TIPS: Jangan anggap posisi mudah = standar rendah. Las posisi datar yang ceroboh pada uji JIS tetap gagal — 'mudah' hanya soal kesulitan fisik, bukan standar mutu.",
+    },
+  },
+  302: {
+    vi: {
+      q: "Bản vẽ ghi 'Tatemuki-shisei' (立向き姿勢) với mã ISO 'PF'. Đồng nghiệp nói nghĩa là hàn đứng-xuống. Anh ấy đúng không?",
+      opts: [
+        "Không — PF thực ra là mã cho hàn ngang, không phải đứng",
+        "Đúng — PF luôn chỉ đứng-xuống (立向下進)",
+        "Không — PF chỉ hàn đứng-LÊN (立向上進 / Tatemuki-joshin); đứng-xuống dùng mã PG",
+        "Đúng, nhưng chỉ cho mối ống; với mối tấm PF nghĩa là đứng-lên",
+      ],
+      exp: "Tatemuki-shisei (立向き姿勢) = Tư thế đứng, 3G (rãnh) / 3F (góc). Trong hàn đứng, ISO PF = đứng-LÊN (立向上進, hòa nhập và ngấu tốt hơn), còn ISO PG = đứng-XUỐNG (立向下進, nhanh hơn nhưng ngấu nông hơn). Hai mã KHÔNG thay lẫn được và sự phân biệt quan trọng cho phạm vi chứng chỉ. 🇯🇵 MẸO: Công trường Nhật mặc định đứng-LÊN (上進) vì hòa nhập và ngấu tốt hơn. Đứng-XUỐNG (下進) đôi khi dùng cho tấm mỏng trong sản xuất nhưng thường không khuyến khích cho mối kết cấu ở Nhật.",
+    },
+    id: {
+      q: "Gambar menetapkan 'Tatemuki-shisei' (立向き姿勢) dengan kode ISO 'PF'. Rekan berkata ini berarti las tegak-turun. Apakah ia benar?",
+      opts: [
+        "Tidak — PF sebenarnya kode untuk las mendatar, sama sekali bukan tegak",
+        "Ya — PF selalu merujuk tegak-turun (立向下進)",
+        "Tidak — PF merujuk las tegak-NAIK (立向上進 / Tatemuki-joshin); tegak-turun memakai kode PG",
+        "Ya, tapi hanya untuk las pipa; untuk las pelat PF berarti tegak-naik",
+      ],
+      exp: "Tatemuki-shisei (立向き姿勢) = Posisi tegak, 3G (alur) / 3F (sudut). Dalam las tegak, ISO PF = tegak-NAIK (立向上進, fusi dan penetrasi lebih baik), sedangkan ISO PG = tegak-TURUN (立向下進, lebih cepat tapi penetrasi lebih dangkal). Kedua kode TIDAK bisa dipertukarkan dan perbedaannya penting untuk cakupan sertifikasi. 🇯🇵 TIPS: Lokasi Jepang default ke tegak-NAIK (上進) karena fusi dan penetrasi lebih baik. Tegak-TURUN (下進) kadang dipakai untuk pelat tipis di produksi tapi umumnya tak dianjurkan untuk las struktur di Jepang.",
+    },
+  },
+  303: {
+    vi: {
+      q: "'Yokomuki-shisei' (横向き姿勢) là gì?",
+      opts: [
+        "Tư thế đứng — trên tường đứng",
+        "Tư thế bằng — trên đỉnh mối nối",
+        "Tư thế trần — tay giơ lên",
+        "Tư thế ngang (2G / 2F) — hàn trên mặt bên của tấm đứng, mối nối chạy ngang",
+      ],
+      exp: "Yokomuki-shisei (横向き姿勢) = Tư thế ngang. 2G (rãnh) / 2F (góc). Mối hàn chạy ngang trên mặt đứng. Trọng lực kéo bể hàn xuống (về tấm dưới). Kỹ thuật: nghiêng súng hơi lên để bù. Mã ISO: PC. 🇯🇵 MẸO: Rãnh ngang (横向き突合せ) phổ biến trong đóng tàu Nhật cho tôn mạn. Thách thức là ngăn chảy tràn dưới đường hàn ở tấm dưới. Huấn luyện viên Nhật nói 'ue o miro' (上を見ろ / nhìn mép trên) — tập trung hồ quang vào tấm trên để kim loại chảy tự nhiên xuống lấp chân dưới.",
+    },
+    id: {
+      q: "Apa itu 'Yokomuki-shisei' (横向き姿勢)?",
+      opts: [
+        "Posisi tegak — pada dinding tegak",
+        "Posisi datar — di atas sambungan",
+        "Posisi overhead — lengan ke atas",
+        "Posisi mendatar (2G / 2F) — mengelas pada sisi muka pelat tegak, sambungan berjalan mendatar",
+      ],
+      exp: "Yokomuki-shisei (横向き姿勢) = Posisi mendatar. 2G (alur) / 2F (sudut). Sambungan las berjalan mendatar pada permukaan tegak. Gravitasi menarik kolam cair ke bawah (ke pelat bawah). Teknik: miringkan gun sedikit ke atas untuk mengompensasi. Kode ISO: PC. 🇯🇵 TIPS: Alur mendatar (横向き突合せ) umum di pembuatan kapal Jepang untuk pelat lambung samping. Tantangannya mencegah overlap di bawah jalur pada pelat bawah. Pelatih Jepang berkata 'ue o miro' (上を見ろ / lihat tepi atas) — fokuskan busur pada pelat atas agar logam mengalir alami ke bawah dan mengisi kaki bawah.",
+    },
+  },
+  304: {
+    vi: {
+      q: "Giám sát đánh dấu mối nối và nói 'Kachiage da!' (かちあげだ！). Theo thuật ngữ JIS chính thức, tư thế này gọi là gì?",
+      opts: [
+        "上向き姿勢 (Uwamuki-shisei) — tư thế trần (4G / 4F)",
+        "下向き姿勢 (Shitamuki-shisei) — tư thế bằng",
+        "立向き姿勢 (Tatemuki-shisei) — tư thế đứng",
+        "横向き姿勢 (Yokomuki-shisei) — tư thế ngang",
+      ],
+      exp: "Kachiage (かちあげ) là lóng thường ngày của 上向き姿勢 (Uwamuki-shisei) = Tư thế trần. 4G (rãnh) / 4F (góc). Bạn giữ súng trên đầu và hàn mặt dưới mối nối. Tư thế khó nhất: trọng lực kéo bể hàn khỏi mối nối, văng rơi lên người. Mã ISO: PE. 🇯🇵 MẸO: Với hàn trần, thợ Nhật dùng dòng thấp hơn tư thế bằng một chút (khoảng 10–15%) để giữ bể nhỏ và dễ kiểm soát. Bể nhỏ, nhanh chống trọng lực tốt hơn bể lớn, nóng. Hỏi giám sát 'điều kiện kachiage' (かちあげの条件) trước khi bắt đầu.",
+    },
+    id: {
+      q: "Supervisor menandai sambungan dan berkata 'Kachiage da!' (かちあげだ！). Dalam terminologi JIS resmi, posisi ini disebut apa?",
+      opts: [
+        "上向き姿勢 (Uwamuki-shisei) — posisi overhead (4G / 4F)",
+        "下向き姿勢 (Shitamuki-shisei) — posisi datar",
+        "立向き姿勢 (Tatemuki-shisei) — posisi tegak",
+        "横向き姿勢 (Yokomuki-shisei) — posisi mendatar",
+      ],
+      exp: "Kachiage (かちあげ) adalah slang sehari-hari untuk 上向き姿勢 (Uwamuki-shisei) = Posisi overhead. 4G (alur) / 4F (sudut). Anda memegang gun di atas kepala dan mengelas sisi bawah sambungan. Posisi tersulit: gravitasi menarik kolam cair menjauh dari sambungan, percikan jatuh menimpa Anda. Kode ISO: PE. 🇯🇵 TIPS: Untuk las overhead, tukang las Jepang memakai arus sedikit lebih rendah dari posisi datar (sekitar 10–15% lebih rendah) agar kolam kecil dan lebih terkendali. Kolam kecil dan cepat melawan gravitasi lebih baik daripada yang besar dan panas. Tanyakan supervisor 'setelan kachiage' (かちあげの条件) sebelum mulai.",
+    },
+  },
+  305: {
+    vi: {
+      q: "Trong thi chứng chỉ JIS Nhật, mã tư thế 'F' chỉ điều gì?",
+      opts: [
+        "F = Loại mối hàn góc",
+        "F = Bằng (下向き / Shitamuki) — dùng trong mã thi như N-2F nghĩa là mối rãnh tư thế bằng",
+        "F = Lượt hoàn thiện",
+        "F = Hướng tiến (chiều hàn)",
+      ],
+      exp: "Trong mã thi chứng chỉ JIS: F = Bằng (下向き), H = Ngang (横向き), V = Đứng (立向き), O = Trần (上向き). Ví dụ: N-2F = thép thường (N), mối rãnh tấm (2), tư thế bằng (F). N-2P = thép thường (N), mối ống (P mọi tư thế). Các mã này xuất hiện trên chứng chỉ của bạn. 🇯🇵 MẸO: Khi xin việc ở Nhật, mang thẻ chứng chỉ JIS thật (資格証 / shikaku-sho) — không chỉ bản photo. Chủ muốn xem bản gốc và sẽ kiểm ngày hết hạn. Nếu sắp hết hạn, gia hạn TRƯỚC khi xin việc — chứng chỉ hết hạn bị coi như không có.",
+    },
+    id: {
+      q: "Dalam ujian sertifikasi JIS Jepang, kode posisi 'F' merujuk pada apa?",
+      opts: [
+        "F = Jenis las sudut (fillet)",
+        "F = Datar (下向き / Shitamuki) — dipakai dalam kode uji seperti N-2F yang berarti las alur posisi datar",
+        "F = Pass finishing",
+        "F = Forward (arah pengelasan)",
+      ],
+      exp: "Dalam kode uji sertifikasi JIS: F = Datar (下向き), H = Mendatar (横向き), V = Tegak (立向き), O = Overhead (上向き). Contoh: N-2F = baja lunak (N), las alur pelat (2), posisi datar (F). N-2P = baja lunak (N), las pipa (P semua posisi). Kode ini muncul pada sertifikat kualifikasi Anda. 🇯🇵 TIPS: Saat melamar kerja di Jepang, bawa kartu sertifikat JIS asli (資格証 / shikaku-sho) — bukan sekadar fotokopi. Pemberi kerja ingin melihat aslinya dan akan memeriksa tanggal kedaluwarsa. Jika hampir habis, perbarui SEBELUM melamar — sertifikat kedaluwarsa dianggap sama dengan tidak punya.",
+    },
+  },
+  306: {
+    vi: {
+      q: "Với tấm mỏng (ví dụ 2mm), có luôn cần chuẩn bị rãnh (開先 / kaisaki) trước khi hàn giáp mối 'Tsukiawase-yosetsu' (突き合わせ溶接) không?",
+      opts: [
+        "Có, nhưng chỉ với tấm inox, không bao giờ với thép carbon",
+        "Có — JIS yêu cầu vát rãnh cho mọi mối giáp mối bất kể chiều dày",
+        "Không — với tấm mỏng, mối giáp mối mép vuông (rãnh I / I形) không vát thường đủ vì đạt ngấu hoàn toàn không cần vát; chuẩn bị rãnh chủ yếu cần cho tấm DÀY",
+        "Không — tấm mỏng không bao giờ dùng giáp mối, chỉ dùng mối góc",
+      ],
+      exp: "Tsukiawase-yosetsu (突き合わせ溶接) = Mối giáp mối / mối rãnh — hai mép tấm đặt đối đầu và hàn. Với tấm DÀY, cần vát rãnh (開先 / kaisaki, ví dụ rãnh V) để hồ quang và kim loại bù chạm được chân, ngấu hoàn toàn. Nhưng với tấm MỎNG, mối giáp mối mép vuông rãnh I (I形) thường đạt ngấu hoàn toàn mà không cần vát — yêu cầu chuẩn bị rãnh tỉ lệ với chiều dày, không phải quy tắc chung cho mọi mối giáp mối. 🇯🇵 MẸO: Trong thi chứng chỉ JIS mối giáp mối, kích thước tấm thi, góc rãnh, khe chân và mặt chân đều chuẩn hóa theo mã thi — nhớ kích thước chuẩn cho mã thi của bạn (N-2F v.v.) trước ngày thi.",
+    },
+    id: {
+      q: "Untuk pelat tipis (mis. 2mm), apakah persiapan alur (開先 / kaisaki) selalu diperlukan sebelum las tumpul 'Tsukiawase-yosetsu' (突き合わせ溶接)?",
+      opts: [
+        "Ya, tapi hanya untuk pelat stainless, tak pernah baja karbon",
+        "Ya — JIS mensyaratkan bevel alur pada setiap las tumpul tanpa memandang tebal",
+        "Tidak — untuk pelat tipis, sambungan tumpul tepi persegi (I-groove / I形) tanpa bevel sering cukup karena penetrasi penuh dapat dicapai tanpa itu; persiapan alur terutama perlu untuk pelat TEBAL",
+        "Tidak — pelat tipis tak boleh pakai las tumpul, hanya las sudut",
+      ],
+      exp: "Tsukiawase-yosetsu (突き合わせ溶接) = Las tumpul / las alur — dua tepi pelat diletakkan ujung-ke-ujung dan dilas. Untuk pelat TEBAL, perlu bevel alur (開先 / kaisaki, mis. V-groove) agar busur dan pengisi mencapai akar untuk penetrasi penuh. Tapi untuk pelat TIPIS, sambungan tumpul tepi persegi I-groove (I形) sering mencapai penetrasi penuh tanpa bevel — kebutuhan persiapan alur mengikuti tebal, bukan aturan mutlak untuk setiap las tumpul. 🇯🇵 TIPS: Dalam sertifikasi JIS untuk las tumpul, ukuran pelat uji, sudut alur, root gap, dan root face semua distandardisasi per kode uji — hafalkan dimensi standar untuk kode uji Anda (N-2F dll.) sebelum hari ujian.",
+    },
+  },
+  307: {
+    vi: {
+      q: "Trên bản vẽ mối hàn góc Nhật, bạn thấy 'Suminiku-yosetsu' (すみ肉溶接) ghi '脚長 S=6'. Người kiểm tra sẽ xác minh bằng đo chiều dày cổ (のど厚) hay đo chiều dài chân?",
+      opts: [
+        "Không cái nào — mối góc chỉ kiểm bằng mắt, không đo bằng thước",
+        "Chiều dày cổ — vì chiều dài chân không đo được bằng thước hàn",
+        "Chiều dày cổ — vì đó là thứ ghi trên bản vẽ",
+        "Chiều dài chân — vì bản vẽ ghi kích thước mối góc bằng chiều dài chân (脚長), dù tính toán độ bền thực ra dùng chiều dày cổ",
+      ],
+      exp: "Suminiku-yosetsu (すみ肉溶接) = Mối hàn góc, loại phổ biến nhất trong chế tạo kết cấu. Trên bản vẽ Nhật, kích thước mối góc ghi bằng chiều dài chân (脚長 / Kyakucho, ví dụ S=6), KHÔNG phải chiều dày cổ — dù tính độ bền dùng cổ (のど厚 / Nodo-atsu) bên trong. Người kiểm tra QC Nhật đo CHIỀU DÀI CHÂN trực tiếp bằng thước hàn; nếu chân là 5.3mm khi quy định 6mm, đó là lỗi dù nhìn ổn. 🇯🇵 MẸO: Luôn kiểm chú thích chiều dài chân trên bản vẽ trước khi hàn, và tự kiểm bằng thước trước khi gọi người kiểm tra.",
+    },
+    id: {
+      q: "Pada gambar las sudut Jepang, Anda melihat 'Suminiku-yosetsu' (すみ肉溶接) ditetapkan '脚長 S=6'. Apakah inspektor memverifikasi ini dengan pengukuran tebal leher (のど厚), atau pengukuran panjang kaki?",
+      opts: [
+        "Tak keduanya — las sudut hanya diperiksa visual, tanpa pengukuran gauge",
+        "Tebal leher — karena panjang kaki tak bisa diukur secara fisik dengan alat ukur las",
+        "Tebal leher — karena itu yang tertulis pada gambar",
+        "Panjang kaki — karena gambar menetapkan ukuran fillet sebagai panjang kaki (脚長), meski perhitungan kekuatan struktur sebenarnya memakai tebal leher",
+      ],
+      exp: "Suminiku-yosetsu (すみ肉溶接) = Las sudut, jenis las paling umum dalam fabrikasi struktur. Pada gambar Jepang, ukuran las sudut ditetapkan sebagai panjang kaki (脚長 / Kyakucho, mis. S=6), BUKAN tebal leher — meski perhitungan kekuatan memakai leher (のど厚 / Nodo-atsu) secara internal. Inspektor QC Jepang mengukur PANJANG KAKI langsung dengan alat ukur las; jika fillet Anda 5.3mm padahal 6mm ditetapkan, itu cacat meski terlihat baik. 🇯🇵 TIPS: Selalu periksa callout panjang kaki pada gambar sebelum mengelas, dan periksa sendiri dengan gauge sebelum memanggil inspektor.",
+    },
+  },
+  308: {
+    vi: {
+      q: "'Kyakucho' (脚長) trong mối hàn góc là gì?",
+      opts: [
+        "Chiều dài chân — khoảng cách từ chân mối hàn đến mép mối, đo dọc theo mặt mỗi tấm",
+        "Chiều cao phần đắp trên mặt tấm",
+        "Chiều dài đường hàn từ đầu đến cuối",
+        "Độ sâu ngấu vào kim loại nền",
+      ],
+      exp: "Kyakucho (脚長) = Chiều dài chân. Chiều dài mỗi chân của tiết diện tam giác mối hàn góc. Với mối góc chân đều, hai chân bằng nhau. Ghi trên bản vẽ bằng số (ví dụ 脚長6 = chân 6mm). Dùng để kiểm tra bằng thước hàn. 🇯🇵 MẸO: Mối góc chân không đều (不等脚長) xảy ra khi góc súng không 45° — một chân dài hơn. JIS cho phép chênh nhỏ, nhưng nếu một chân ngắn hẳn (下脚短 / shita-ashi-tan), nó giảm độ bền. Nhắm chân đều bằng cách giữ góc súng 45° ở góc mối nối.",
+    },
+    id: {
+      q: "Apa itu 'Kyakucho' (脚長) pada las sudut?",
+      opts: [
+        "Panjang kaki — jarak dari akar las ke ujung las, diukur sepanjang muka tiap pelat",
+        "Tinggi penguatan las di atas permukaan pelat",
+        "Panjang jalur las dari awal ke akhir",
+        "Kedalaman penetrasi ke logam dasar",
+      ],
+      exp: "Kyakucho (脚長) = Panjang kaki. Panjang tiap kaki dari penampang segitiga las sudut. Untuk fillet kaki sama, kedua kaki berukuran sama. Ditetapkan pada gambar sebagai angka (mis. 脚長6 = kaki 6mm). Dipakai untuk inspeksi dengan alat ukur las. 🇯🇵 TIPS: Fillet kaki tak sama (不等脚長) terjadi saat sudut gun bukan 45° — satu kaki lebih panjang. JIS mengizinkan perbedaan kecil, tapi jika satu kaki jauh lebih pendek (下脚短 / shita-ashi-tan), kekuatan berkurang. Tuju kaki sama dengan menjaga sudut gun 45° di pojok sambungan.",
+    },
+  },
+  309: {
+    vi: {
+      q: "'Nodo-atsu' (のど厚) là gì và liên quan thế nào đến chiều dài chân mối hàn góc?",
+      opts: [
+        "Bề rộng đường hàn trên bề mặt",
+        "Chiều dày cổ — khoảng cách ngắn nhất qua tiết diện tam giác. Với mối góc chân đều: cổ = chân × 0.707",
+        "Độ sâu rãnh trước khi hàn",
+        "Khoảng cách từ mép này đến mép kia",
+      ],
+      exp: "Nodo-atsu (のど厚) = Chiều dày cổ. Khoảng cách ngắn nhất từ chân mối hàn đến mặt mối — đây là kích thước chịu tải dùng trong tính độ bền. Công thức: cổ = chiều dài chân × cos45° = chân × 0.707. Ví dụ: chân 6mm → cổ = 6 × 0.707 ≈ 4.24mm. Then chốt cho thiết kế kết cấu. 🇯🇵 MẸO: 'Cổ lý thuyết' (理論のど厚) giả định mặt phẳng hoàn hảo. 'Cổ thực tế' (実際のど厚) tính cả lồi hoặc lõm. Mối góc lõm (凹形 / ogata) có cổ NHỎ hơn lý thuyết và là lỗi. Mối góc hơi lồi chấp nhận được nhưng lồi quá lãng phí vật liệu.",
+    },
+    id: {
+      q: "Apa itu 'Nodo-atsu' (のど厚) dan bagaimana hubungannya dengan panjang kaki las sudut?",
+      opts: [
+        "Lebar jalur las di permukaan",
+        "Tebal leher — jarak terpendek melalui penampang segitiga. Untuk fillet kaki sama: leher = kaki × 0.707",
+        "Kedalaman alur sebelum mengelas",
+        "Jarak dari satu ujung ke ujung lain",
+      ],
+      exp: "Nodo-atsu (のど厚) = Tebal leher. Jarak terpendek dari akar las ke muka las — ini dimensi penahan beban yang dipakai dalam perhitungan kekuatan. Rumus: leher = panjang kaki × cos45° = kaki × 0.707. Contoh: kaki 6mm → leher = 6 × 0.707 ≈ 4.24mm. Krusial untuk desain struktur. 🇯🇵 TIPS: 'Leher teoretis' (理論のど厚) mengasumsikan muka rata sempurna. 'Leher aktual' (実際のど厚) memperhitungkan cembung atau cekung. Fillet cekung (凹形 / ogata) memiliki leher KURANG dari teoretis dan merupakan cacat. Fillet sedikit cembung boleh, tapi terlalu cembung memboroskan material.",
+    },
+  },
+  310: {
+    vi: {
+      q: "'Ruuto-gyappu' (ルートギャップ) là gì — và điều gì xảy ra nếu quá rộng hay quá hẹp?",
+      opts: [
+        "Khoảng cách giữa các mối đính dọc mối nối",
+        "Góc mở của rãnh — quá rộng gây thủng",
+        "Khe chân — khoảng trống giữa các mép tấm ở đáy rãnh. Quá hẹp = ngấu kém. Quá rộng = thủng",
+        "Chiều cao đắp trên tấm — phải trong quy định",
+      ],
+      exp: "Ruuto-gyappu (ルートギャップ) = Khe chân / khe mở chân. Khoảng trống được kiểm soát giữa các mép tấm ở chân rãnh. Quá hẹp (< quy định): hồ quang không tới chân, gây thiếu ngấu (溶込不良). Quá rộng (> quy định): thủng (溶落ち). Ghi trên bản vẽ — đo bằng thước khe trước khi hàn. 🇯🇵 MẸO: Công trường Nhật dùng 隙間ゲージ (sukima-geeji / bộ căn lá) hoặc thước khe chân chuyên dụng để kiểm trước mỗi mối. Dải chấp nhận thường ±0.5mm so với quy định. Đừng ước lượng bằng mắt — khe nhìn đúng thường không đúng, và chi phí chỉnh trước khi hàn thấp hơn nhiều so với hatsuri và làm lại sau.",
+    },
+    id: {
+      q: "Apa itu 'Ruuto-gyappu' (ルートギャップ) — dan apa yang terjadi jika terlalu lebar atau terlalu sempit?",
+      opts: [
+        "Jarak antar tack di sepanjang sambungan",
+        "Sudut bukaan alur — terlalu lebar menyebabkan tembus bakar",
+        "Root gap — ruang antara tepi pelat di dasar alur. Terlalu sempit = penetrasi buruk. Terlalu lebar = tembus bakar",
+        "Tinggi penguatan di atas pelat — harus sesuai spesifikasi",
+      ],
+      exp: "Ruuto-gyappu (ルートギャップ) = Root gap / bukaan akar. Ruang terkendali antara tepi pelat di akar alur. Terlalu sempit (< spek): busur tak mencapai akar, menyebabkan kurang penetrasi (溶込不良). Terlalu lebar (> spek): tembus bakar (溶落ち). Ditetapkan pada gambar — ukur dengan gap gauge sebelum mengelas. 🇯🇵 TIPS: Lokasi Jepang memakai 隙間ゲージ (sukima-geeji / set feeler gauge) atau gap gauge khusus untuk memeriksanya sebelum tiap las. Rentang yang dapat diterima biasanya ±0.5mm dari spek. Jangan mengira-ngira — celah yang tampak benar sering tidak, dan biaya menyesuaikan sebelum mengelas jauh lebih rendah daripada hatsuri dan mengulang setelahnya.",
+    },
+  },
 };
