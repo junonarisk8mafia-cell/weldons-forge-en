@@ -776,4 +776,224 @@ export const Q_I18N = {
       exp: "Yosetsu-men (溶接面) = Topeng las. Nomor shade (遮光番号) menunjukkan kegelapan lensa dan harus cocok dengan amper serta proses: Shade #8 mungkin cocok untuk TIG amper rendah, tapi untuk MAG/semi-otomatis 100–200A, JIS menyarankan Shade #10–11. Lensa terlalu terang meloloskan lebih banyak radiasi UV/IR berbahaya, berisiko mata las (電気性眼炎) meski paparan singkat atau jarak jauh — kedua akal-akalan itu tak aman. 🇯🇵 TIPS: Saat meminjam topeng las di lokasi Jepang, selalu periksa nomor shade tertulis di pemegang lensa — jangan menebak. Lokasi Jepang sering punya beberapa topeng dengan shade berbeda untuk proses berbeda; tertukar adalah kesalahan umum dan berbahaya.",
     },
   },
+  111: {
+    vi: {
+      q: "'Jido-shakko-men' (自動遮光面) là gì và vì sao nhiều thợ hàn Nhật thích nó?",
+      opts: [
+        "Tấm che mặt chỉ để mài",
+        "Mặt nạ hàn cố định tiêu chuẩn — kính luôn tối",
+        "Mũ điều khiển từ xa có camera",
+        "Mũ tự động tối — kính trong cho đến khi hồ quang bật, rồi tối tự động trong vài phần nghìn giây",
+      ],
+      exp: "Jido-shakko-men (自動遮光面) = Mũ hàn tự động tối (ADH). Kính trong khi nghỉ (thấy rõ để đặt súng) rồi tối tự động khi hồ quang bật — thời gian phản ứng dưới 1/25.000 giây. Giảm mỏi mắt, tăng độ chính xác định vị. Tiêu chuẩn ở xưởng Nhật hiện đại. 🇯🇵 MẸO: Nhiều thợ Nhật tự sắm jido-shakko-men. Hãng tốt ở Nhật: ITOCHU (伊藤忠), Kikaiya (機械屋), hoặc nhập Lincoln Electric / 3M. Dự trù ¥15.000–50.000 cho mũ chất lượng. Mũ không thương hiệu rẻ với phản ứng chậm (trên 1/3.200 giây) vẫn có thể hại mắt — hãy xem thông số.",
+    },
+    id: {
+      q: "Apa itu 'Jido-shakko-men' (自動遮光面) dan mengapa banyak tukang las Jepang menyukainya?",
+      opts: [
+        "Pelindung wajah hanya untuk menggerinda",
+        "Topeng las shade tetap standar — lensa selalu gelap",
+        "Topeng kendali jarak jauh dengan kamera",
+        "Topeng auto-darkening — lensa bening sampai busur menyala, lalu menggelap otomatis dalam milidetik",
+      ],
+      exp: "Jido-shakko-men (自動遮光面) = Topeng las auto-darkening (ADH). Lensa bening saat diam (Anda bisa melihat jelas untuk memosisikan gun) lalu menggelap otomatis saat busur mulai — waktu reaksi di bawah 1/25.000 detik. Mengurangi lelah mata, meningkatkan akurasi posisi. Standar di bengkel Jepang modern. 🇯🇵 TIPS: Banyak pekerja Jepang punya jido-shakko-men sendiri. Merek bagus di Jepang: ITOCHU (伊藤忠), Kikaiya (機械屋), atau impor Lincoln Electric / 3M. Anggarkan ¥15.000–50.000 untuk topeng berkualitas. ADH tanpa merek murah dengan reaksi lambat (di atas 1/3.200 detik) tetap bisa merusak mata — periksa spesifikasinya.",
+    },
+  },
+  112: {
+    vi: {
+      q: "'Ura-atekin' (裏当て金) dùng để làm gì trong hàn?",
+      opts: [
+        "Thanh/tấm lót đáy — đặt ở mặt sau mối nối để đỡ lượt hàn chân nóng chảy và đảm bảo ngấu hoàn toàn không thủng",
+        "Kim loại bù chỉ để lấp khe",
+        "Dụng cụ kẹp giữ các tấm với nhau",
+        "Thiết bị tiếp đất cho mạch hàn",
+      ],
+      exp: "Ura-atekin (裏当て金) = Thanh lót đáy. Đặt sau chân rãnh để đỡ bể hàn nóng chảy ở lượt đầu (lượt chân). Ngăn thủng (溶落ち / yoochi) và giúp ngấu chân hoàn toàn (完全溶込み). Phổ biến trong đóng tàu, kết cấu thép và chế tạo bình áp lực. 🇯🇵 MẸO: Trong đóng tàu Nhật, thanh lót thép thường được đính hàn cố định vĩnh viễn (永久裏当て). Với công việc cần mặt sau sạch, dùng băng lót gốm (セラミック裏当て) — nó rơi ra sau khi mối hàn nguội và không để lại gì.",
+    },
+    id: {
+      q: "Untuk apa 'Ura-atekin' (裏当て金) dipakai dalam pengelasan?",
+      opts: [
+        "Backing bar / strip penyangga — dipasang di belakang sambungan untuk menopang root pass cair dan memastikan penetrasi penuh tanpa tembus bakar",
+        "Logam pengisi hanya untuk mengisi celah",
+        "Alat penjepit untuk menahan pelat",
+        "Alat pentanahan untuk sirkuit las",
+      ],
+      exp: "Ura-atekin (裏当て金) = Backing strip / backing bar. Dipasang di belakang akar alur untuk menopang kolam las cair pada pass pertama (root). Mencegah tembus bakar (溶落ち / yoochi) dan membantu penetrasi akar penuh (完全溶込み). Umum di pembuatan kapal, baja struktur, dan bejana tekan. 🇯🇵 TIPS: Di galangan Jepang, backing baja sering di-tack permanen (永久裏当て). Untuk pekerjaan yang butuh permukaan belakang bersih, dipakai pita backing keramik (セラミック裏当て) — terlepas setelah las dingin dan tak meninggalkan apa pun.",
+    },
+  },
+  113: {
+    vi: {
+      q: "'Endo-tabu' (エンドタブ) là gì và vì sao dùng trong thi chứng chỉ và hàn sản xuất?",
+      opts: [
+        "Một biểu mẫu báo cáo điền sau khi hàn",
+        "Tấm phụ gắn ở đầu và cuối mối hàn — đưa vùng dễ khuyết tật (khởi hồ quang, nứt hố) ra ngoài mối nối thực",
+        "Một loại dây hàn lõi thuốc",
+        "Vật liệu lót chỉ cho hàn ống",
+      ],
+      exp: "Endo-tabu (エンドタブ) = Tấm chạy ra / tấm đầu cuối. Tấm thép ngắn gắn ở mỗi đầu mối nối. Điểm khởi và kết thúc hồ quang là vùng dễ khuyết tật nhất (ブローホール, クレーター割れ). Tấm đầu cuối đưa các khuyết tật này ra ngoài mối nối thực. Sau khi hàn, cắt bỏ. Bắt buộc trong thi chứng chỉ JIS. 🇯🇵 MẸO: Trong thi chứng chỉ hàn JIS, tấm đầu cuối là bắt buộc và kích thước được quy định trong tiêu chuẩn thi. Quên gắn hoặc gắn sai là trượt tự động — xem kỹ sơ đồ bố trí bài thi JIS trước kỳ thi.",
+    },
+    id: {
+      q: "Apa itu 'Endo-tabu' (エンドタブ) dan mengapa dipakai dalam ujian sertifikasi dan las produksi?",
+      opts: [
+        "Formulir laporan uji yang diisi setelah mengelas",
+        "Pelat bantu yang dipasang di awal dan akhir las — memindahkan zona rawan cacat (awal busur, retak kawah) ke luar sambungan sebenarnya",
+        "Sejenis kawat berinti fluks",
+        "Material backing hanya untuk las pipa",
+      ],
+      exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Pelat baja pendek yang dipasang di tiap ujung sambungan las. Awal dan akhir busur adalah area paling rawan cacat (ブローホール, クレーター割れ). End tab memindahkan cacat ini ke luar sambungan sebenarnya. Setelah mengelas, end tab dipotong dan dibuang. Wajib dalam ujian sertifikasi JIS. 🇯🇵 TIPS: Dalam ujian sertifikasi las JIS, end tab wajib dan dimensinya ditentukan dalam standar uji. Lupa memasang atau memasang salah adalah kegagalan otomatis — pelajari diagram setup uji JIS dengan teliti sebelum ujian.",
+    },
+  },
+  114: {
+    vi: {
+      q: "'Aasu-kurippu' (アースクリップ), còn gọi 'kẹp mát', và vì sao nó quan trọng?",
+      opts: [
+        "Kẹp để gắn que hàn",
+        "Kẹp giữ cuộn dây hàn",
+        "Kẹp mát/tiếp đất nối mạch hồi hàn với vật hàn — thiếu nó, mạch hàn không kín và dòng điện tìm đường khác (gây hỏng hóc hoặc cháy)",
+        "Kẹp an toàn để cố định cáp nguồn",
+      ],
+      exp: "Aasu-kurippu (アースクリップ) = Kẹp mát / kẹp tiếp đất. Hoàn tất mạch điện hàn bằng cách nối với vật hàn. Tiếp mát kém gây hồ quang không ổn định, văng tóe và dòng điện tìm đường nguy hiểm qua máy móc, khung sườn hoặc kết cấu. Luôn kẹp càng gần mối hàn càng tốt. 🇯🇵 MẸO: 'Aasu ga warui' (アースが悪い / mát kém) là lý do phổ biến gây hồ quang bất ổn ở Nhật. Nếu hồ quang nghe thô và văng nhiều dù điện áp/dòng đúng, kiểm tra kẹp mát trước — hàm kẹp gỉ hoặc đường mát gián tiếp qua kết cấu thép thường là thủ phạm hơn bất kỳ cài đặt máy nào.",
+    },
+    id: {
+      q: "Apa itu 'Aasu-kurippu' (アースクリップ) alias 'ground clamp' dan mengapa penting?",
+      opts: [
+        "Klip untuk memasang elektroda las",
+        "Klip yang menahan gulungan kawat las",
+        "Klip earth/ground yang menghubungkan sirkuit balik las ke benda kerja — tanpanya, sirkuit las tak lengkap dan arus mencari jalur lain (menyebabkan kerusakan atau kebakaran)",
+        "Klip pengaman untuk mengamankan kabel daya",
+      ],
+      exp: "Aasu-kurippu (アースクリップ) = Klip earth / ground clamp. Melengkapi sirkuit listrik las dengan terhubung ke benda kerja. Kontak ground buruk menyebabkan busur tak stabil, percikan, dan arus mencari jalur berbahaya lewat mesin, rangka, atau struktur. Selalu jepit sedekat mungkin dengan las. 🇯🇵 TIPS: 'Aasu ga warui' (アースが悪い / ground jelek) adalah alasan umum busur tak stabil di lokasi Jepang. Jika busur terdengar kasar dan percikan berlebihan meski tegangan/arus benar, periksa ground clamp dulu — rahang klip berkarat atau jalur ground tak langsung lewat struktur baja lebih sering jadi biang daripada setelan mesin mana pun.",
+    },
+  },
+  115: {
+    vi: {
+      q: "Giám sát bảo bạn xịt 'Supatta-boshi-zai' (スパッタ防止剤) trước khi hàn. Xịt ở đâu là an toàn và hiệu quả, và KHÔNG BAO GIỜ xịt ở đâu?",
+      opts: [
+        "Chỉ xịt lên bề mặt vật hàn sẽ được hàn — không bao giờ lên súng",
+        "Xịt lên bề mặt tiếp điện của đầu tip để dẫn điện tốt nhất",
+        "Xịt thoải mái khắp nơi kể cả thẳng vào kênh khí và orifice để bảo vệ tối đa",
+        "Xịt lên ngoài chụp khí và thân súng; KHÔNG BAO GIỜ xịt vào kênh khí/orifice hoặc lên kim loại nóng gần hồ quang đang cháy",
+      ],
+      exp: "Supatta-boshi-zai (スパッタ防止剤) = Chất chống văng, xịt lên ngoài chụp khí và thân súng để văng rơi ra dễ thay vì bám. Xịt BÊN TRONG kênh khí hoặc orifice có thể nghẹt đường khí gây rối (dẫn đến rỗ khí), và xịt gần hồ quang đang cháy hoặc lên kim loại nóng là nguy cơ cháy/khói. Một lượng nhỏ ngoài chụp khí là đủ. 🇯🇵 MẸO: Chất chống văng gốc nước được ưa dùng ở Nhật vì ít cháy. Xịt trước khi hàn, lau sạch sau — đầu tư nhỏ, tiết kiệm nhiều thời gian.",
+    },
+    id: {
+      q: "Supervisor menyuruh Anda menyemprot 'Supatta-boshi-zai' (スパッタ防止剤) sebelum mengelas. Di mana aman dan efektif menyemprotnya, dan di mana JANGAN PERNAH?",
+      opts: [
+        "Semprot hanya pada permukaan benda kerja yang akan dilas — jangan pernah pada gun",
+        "Semprot pada permukaan kontak listrik tip untuk konduktivitas terbaik",
+        "Semprot bebas di mana-mana termasuk langsung ke saluran gas dan orifice untuk perlindungan maksimum",
+        "Semprot pada eksterior nozzle dan bodi gun; JANGAN PERNAH menyemprot di dalam saluran gas/orifice atau ke logam panas dekat busur aktif",
+      ],
+      exp: "Supatta-boshi-zai (スパッタ防止剤) = Semprotan anti-percikan, disemprot pada eksterior nozzle dan bodi gun agar percikan rontok mudah alih-alih menempel. Menyemprot DI DALAM saluran gas atau orifice bisa menyumbat jalur gas dan menyebabkan turbulensi (memicu porositas), dan menyemprot dekat busur aktif atau ke logam panas adalah risiko kebakaran/asap. Sedikit di eksterior nozzle sudah cukup. 🇯🇵 TIPS: Semprotan anti-percikan berbahan air lebih disukai di lokasi Jepang karena kurang mudah terbakar. Semprot sebelum mengelas, lap bersih setelahnya — investasi kecil, hemat waktu besar.",
+    },
+  },
+  116: {
+    vi: {
+      q: "'Ondo-chooku' (温度チョーク) hoặc 'Tempu-sutikku' (テンプスティック) dùng để làm gì?",
+      opts: [
+        "Bút sáp chỉ thị nhiệt độ — chảy ở một nhiệt độ nhất định để xác minh nhiệt độ nung trước hoặc giữa các lượt trên thép",
+        "Đánh dấu vị trí hàn trên bản vẽ",
+        "Lớp phủ chống ăn mòn",
+        "Đánh dấu đường cắt trên tấm thép",
+      ],
+      exp: "Ondo-chooku (温度チョーク) = Bút sáp nhiệt độ / Tempilstick. Mỗi bút chảy ở một nhiệt độ nhất định (ví dụ 150°C, 200°C, 350°C). Đánh dấu lên thép gần mối hàn — nếu vết chảy, đã đạt nhiệt độ. Dùng để kiểm tra nhiệt độ nung trước (予熱) trước khi hàn và nhiệt độ giữa các lượt (パス間温度). 🇯🇵 MẸO: Phải đo ở mặt đối diện của tấm so với nguồn nhiệt, cách mép hàn ít nhất 75mm theo tiêu chuẩn JIS. Đo trực tiếp trên mặt bị nung cho số cao sai. Giám sát biết điều này — họ sẽ kiểm tra kỹ thuật đo của bạn.",
+    },
+    id: {
+      q: "Untuk apa 'Ondo-chooku' (温度チョーク) atau 'Tempu-sutikku' (テンプスティック) dipakai?",
+      opts: [
+        "Krayon indikator suhu — meleleh pada suhu tertentu untuk memverifikasi preheat atau suhu antar-pass pada baja",
+        "Menandai posisi las pada gambar",
+        "Pelapis anti-korosi",
+        "Menandai garis potong pada pelat baja",
+      ],
+      exp: "Ondo-chooku (温度チョーク) = Krayon suhu / Tempilstick. Tiap krayon meleleh pada suhu tertentu (mis. 150°C, 200°C, 350°C). Tandai baja dekat las — jika tanda meleleh, suhu telah tercapai. Dipakai untuk memverifikasi suhu preheat (予熱) sebelum mengelas dan suhu antar-pass (パス間温度) di antara pass. 🇯🇵 TIPS: Suhu harus diukur di sisi pelat yang berlawanan dari sumber panas, minimal 75mm dari tepi las sesuai standar JIS. Mengukur langsung di permukaan panas memberi bacaan yang keliru tinggi. Supervisor tahu ini — mereka akan memeriksa teknik pengukuran Anda.",
+    },
+  },
+  117: {
+    vi: {
+      q: "'Yosetsu-geeji' (溶接ゲージ) dùng để làm gì trên công trường Nhật?",
+      opts: [
+        "Kiểm tra áp suất bình khí",
+        "Thước hàn đa năng đo kích thước đường hàn, chiều dài chân, chiều dày cổ, độ sâu lẹm và chiều cao đắp",
+        "Cài dòng điện máy hàn",
+        "Đo chiều dài dây hàn đã dùng",
+      ],
+      exp: "Yosetsu-geeji (溶接ゲージ) = Thước hàn. Dụng cụ kiểm tra thiết yếu nhiều chức năng: đo chiều dài chân mối hàn góc (脚長), chiều dày cổ (のど厚), chiều cao đắp (余盛), độ sâu lẹm (アンダーカット) và hơn nữa. Dùng khi kiểm tra ngoại quan (VT) bởi thợ và người kiểm tra. 🇯🇵 MẸO: Ở Nhật, thợ được kỳ vọng tự kiểm tra (自主検査 / jishu-kensa) mối hàn của mình bằng thước hàn TRƯỚC khi người kiểm tra chất lượng đến. Chủ động đưa kết quả tự kiểm tra được nể trọng — chờ người kiểm tra tìm ra lỗi thì không.",
+    },
+    id: {
+      q: "Untuk apa 'Yosetsu-geeji' (溶接ゲージ) dipakai di lokasi kerja Jepang?",
+      opts: [
+        "Memeriksa tekanan tabung gas",
+        "Alat ukur las multifungsi yang mengukur ukuran jalur, panjang kaki, tebal leher, kedalaman undercut, dan tinggi penguatan las",
+        "Mengatur amper mesin las",
+        "Mengukur panjang kawat las yang terpakai",
+      ],
+      exp: "Yosetsu-geeji (溶接ゲージ) = Alat ukur las. Alat inspeksi esensial berfungsi ganda: mengukur panjang kaki las sudut (脚長), tebal leher (のど厚), tinggi penguatan las (余盛), kedalaman undercut (アンダーカット), dan lainnya. Dipakai saat inspeksi visual (VT) oleh tukang dan inspektor. 🇯🇵 TIPS: Di Jepang, tukang diharapkan memeriksa sendiri (自主検査 / jishu-kensa) lasnya dengan alat ukur SEBELUM inspektor mutu datang. Menunjukkan hasil inspeksi secara proaktif dihargai — menunggu inspektor menemukan masalah tidak.",
+    },
+  },
+  118: {
+    vi: {
+      q: "Ở Nhật, súng hàn Panasonic gọi là 'Reddo-tochi' (レッドトーチ) và súng Daihen gọi là 'Buruu-tochi' (ブルートーチ). Vì sao điều này quan trọng trên công trường?",
+      opts: [
+        "Chúng giống hệt — màu chỉ là thương hiệu",
+        "Súng đỏ hàn nhanh hơn súng xanh",
+        "Các hãng súng dùng cỡ đầu tip và chuẩn ren khác nhau — phụ tùng KHÔNG thay lẫn được. Dùng sai chip/nozzle gây hàn kém",
+        "Súng xanh cần lưu lượng khí cao hơn súng đỏ",
+      ],
+      exp: "Trên công trường Nhật: Panasonic = súng đỏ (レッドトーチ), Daihen = súng xanh (ブルートーチ). Đầu tip (チップ), chụp khí và ống lót của chúng dùng cỡ và chuẩn ren KHÁC nhau. Lắp chip súng đỏ vào súng xanh sẽ không vừa. Luôn khớp phụ tùng thay thế đúng hãng súng. 🇯🇵 MẸO: Khi đặt phụ tùng, cửa hàng vật tư hàn Nhật (溶接用品店) luôn hỏi 'đỏ hay xanh?' trước. Giữ sẵn một chip đúng hãng trong túi tạp dề. Hết chip giữa ca vì lấy nhầm túi là lỗi bực mình và ngượng.",
+    },
+    id: {
+      q: "Di Jepang, gun las Panasonic disebut 'Reddo-tochi' (レッドトーチ) dan gun Daihen disebut 'Buruu-tochi' (ブルートーチ). Mengapa ini penting di lokasi?",
+      opts: [
+        "Keduanya identik — warna hanya branding",
+        "Gun merah mengelas lebih cepat dari yang biru",
+        "Merek gun memakai ukuran contact tip dan standar ulir berbeda — suku cadang TIDAK bisa dipertukarkan. Memakai chip/nozzle salah menyebabkan las buruk",
+        "Gun biru butuh aliran gas lebih tinggi dari merah",
+      ],
+      exp: "Di lokasi kerja Jepang: Panasonic = gun merah (レッドトーチ), Daihen = gun biru (ブルートーチ). Contact tip (チップ), nozzle, dan liner-nya memakai ukuran dan standar ulir BERBEDA. Jika memasang chip gun merah ke gun biru, tak akan pas. Selalu cocokkan suku cadang pengganti dengan merek gun yang benar. 🇯🇵 TIPS: Saat memesan suku cadang, toko perlengkapan las Jepang (溶接用品店) selalu bertanya 'merah atau biru?' dulu. Simpan cadangan chip merek yang benar di saku celemek. Kehabisan chip di tengah shift karena salah ambil kantong adalah kesalahan yang menjengkelkan dan memalukan.",
+    },
+  },
+  119: {
+    vi: {
+      q: "'Furappu-disuku' (フラップディスク) là gì và khi nào dùng thay cho đĩa mài tiêu chuẩn?",
+      opts: [
+        "Nắp bảo vệ cho máy mài góc",
+        "Bánh chải sắt để bỏ gỉ",
+        "Đĩa cắt để cắt tấm thép",
+        "Đĩa nhám lá — các lá nhám chồng nhau làm nhẵn bề mặt hàn nhẹ nhàng hơn đĩa mài, để lại bề mặt đẹp hơn",
+      ],
+      exp: "Furappu-disuku (フラップディスク) = Đĩa nhám lá. Các lá nhám chồng nhau gắn trên đế. Dùng để hòa trộn và làm nhẵn bề mặt hàn, bỏ văng nhẹ và vuốt mép chân hàn — nhẹ hơn đĩa mài phẳng. Để lại bề mặt nhẵn hơn. Phổ biến trong hàn hoàn thiện và thép không gỉ. 🇯🇵 MẸO: Với thép không gỉ (SUS), luôn dùng đĩa nhám hoặc đĩa mài chuyên SUS ghi 'SUS用' hoặc 'ステン用'. Dùng đĩa từng chạm thép carbon sẽ nhiễm bẩn bề mặt SUS bằng hạt sắt, gây đốm gỉ — đây là khuyết tật chất lượng nghiêm trọng gọi là '鉄汚染' (tetsu-osen / nhiễm sắt).",
+    },
+    id: {
+      q: "Apa itu 'Furappu-disuku' (フラップディスク) dan kapan dipakai alih-alih cakram gerinda standar?",
+      opts: [
+        "Pelindung untuk gerinda sudut",
+        "Roda sikat kawat untuk membuang karat",
+        "Cakram potong untuk memotong pelat baja",
+        "Flap disc — lembaran abrasif bertumpuk yang menghaluskan permukaan las lebih lembut dari cakram gerinda, meninggalkan hasil lebih baik",
+      ],
+      exp: "Furappu-disuku (フラップディスク) = Flap disc. Lembaran abrasif bertumpuk yang menempel pada pelat penopang. Dipakai untuk membaurkan dan menghaluskan permukaan las, membuang percikan ringan, dan meratakan kaki las — lebih lembut dari cakram gerinda datar. Meninggalkan hasil permukaan lebih halus. Umum di pekerjaan las finishing dan baja tahan karat. 🇯🇵 TIPS: Untuk baja tahan karat (SUS), selalu pakai flap disc atau cakram gerinda khusus SUS bertanda 'SUS用' atau 'ステン用'. Memakai cakram yang pernah menyentuh baja karbon akan mencemari permukaan stainless dengan partikel besi, menyebabkan bintik karat — cacat mutu serius bernama '鉄汚染' (tetsu-osen / kontaminasi besi).",
+    },
+  },
+  120: {
+    vi: {
+      q: "Bạn cần chải sắt một mối hàn thép không gỉ (SUS), nhưng chỉ có 'Waiyaa-burashi' (ワイヤーブラシ) loại thép carbon. Dùng tạm một lần có được không?",
+      opts: [
+        "Không — sợi thép carbon để lại trên bề mặt inox gây '鉄汚染' (tetsu-osen / nhiễm sắt), dẫn đến đốm gỉ sau này; luôn dùng bàn chải chuyên SUS",
+        "Được, miễn là rửa bàn chải bằng nước trước",
+        "Không, nhưng chỉ vì bàn chải carbon làm xước bề mặt SUS về thẩm mỹ — không có nguy cơ ăn mòn",
+        "Được — bàn chải sắt là dùng chung; vật liệu sợi không truyền giữa các kim loại",
+      ],
+      exp: "Waiyaa-burashi (ワイヤーブラシ) = Bàn chải sắt, dùng sau hàn để bỏ xỉ nhẹ, ôxy hóa và văng mịn. Sợi thép carbon nhúng hạt sắt siêu nhỏ vào bề mặt inox, sau đó gỉ và tạo đốm gỉ thấy được — khuyết tật ăn mòn thật, không chỉ thẩm mỹ. Rửa không loại được hạt đã nhúng. Nhiều công trường Nhật giữ bộ bàn chải riêng, đánh màu cho thép carbon và inox để tránh nhiễm chéo. 🇯🇵 MẸO: Với xỉ nặng sau hàn que, dùng búa đục (チッピングハンマー) hoặc máy đục hơi (チッパー) trước, rồi mới dùng bàn chải đúng loại — không bao giờ thay loại bàn chải để tiết kiệm thời gian.",
+    },
+    id: {
+      q: "Anda perlu menyikat kawat las baja tahan karat (SUS), tapi hanya ada 'Waiyaa-burashi' (ワイヤーブラシ) berbahan baja karbon. Boleh dipakai sekali ini saja?",
+      opts: [
+        "Tidak — bulu baja karbon yang tertinggal di permukaan stainless menyebabkan '鉄汚染' (tetsu-osen / kontaminasi besi), memicu bintik karat kemudian; selalu pakai sikat khusus SUS",
+        "Boleh, asalkan sikat dibilas air dulu",
+        "Tidak, tapi hanya karena sikat karbon menggores permukaan SUS secara kosmetik — tak ada risiko korosi",
+        "Boleh — sikat kawat universal; bahan bulu tak berpindah antar logam",
+      ],
+      exp: "Waiyaa-burashi (ワイヤーブラシ) = Sikat kawat, dipakai setelah mengelas untuk membuang terak ringan, oksidasi, dan percikan halus. Bulu baja karbon menanamkan partikel besi mikroskopis ke permukaan stainless, yang lalu berkarat dan membuat bintik karat terlihat — cacat korosi nyata, bukan sekadar kosmetik. Membilas tak menghilangkan partikel yang tertanam. Banyak lokasi Jepang menyimpan set sikat terpisah berkode warna untuk baja karbon dan stainless guna mencegah kontaminasi silang. 🇯🇵 TIPS: Untuk terak berat setelah las busur, pakai palu ketuk (チッピングハンマー) atau air chipper (チッパー) dulu, lalu ikuti dengan sikat kawat yang benar — jangan pernah menukar jenis sikat demi menghemat waktu.",
+    },
+  },
 };
