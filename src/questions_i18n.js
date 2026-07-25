@@ -996,4 +996,224 @@ export const Q_I18N = {
       exp: "Waiyaa-burashi (ワイヤーブラシ) = Sikat kawat, dipakai setelah mengelas untuk membuang terak ringan, oksidasi, dan percikan halus. Bulu baja karbon menanamkan partikel besi mikroskopis ke permukaan stainless, yang lalu berkarat dan membuat bintik karat terlihat — cacat korosi nyata, bukan sekadar kosmetik. Membilas tak menghilangkan partikel yang tertanam. Banyak lokasi Jepang menyimpan set sikat terpisah berkode warna untuk baja karbon dan stainless guna mencegah kontaminasi silang. 🇯🇵 TIPS: Untuk terak berat setelah las busur, pakai palu ketuk (チッピングハンマー) atau air chipper (チッパー) dulu, lalu ikuti dengan sikat kawat yang benar — jangan pernah menukar jenis sikat demi menghemat waktu.",
     },
   },
+  201: {
+    vi: {
+      q: "Một thợ đàn anh rên 'Kachiage...' (かちあげ) và thực tập sinh cho rằng nó nghĩa là thuật ngữ chính thức 'Tatemuki-shisei' (立向き姿勢 / tư thế đứng) vì cả hai đều chống trọng lực. Thực tập sinh đúng không?",
+      opts: [
+        "Đúng — kachiage và tatemuki-shisei chỉ cùng một tư thế, chỉ khác lóng và chính thức",
+        "Không — kachiage là lóng của 上向き姿勢 (Uwamuki-shisei / tư thế trần), hàn TRÊN đầu; tatemuki-shisei là tư thế khác, hàn trên mặt đứng",
+        "Không — kachiage thực ra chỉ tư thế bằng, dễ nhất chứ không phải khó nhất",
+        "Đúng, nhưng chỉ khi hàn mối ống, không phải mối tấm",
+      ],
+      exp: "Kachiage (かちあげ) là lóng riêng cho 上向き姿勢 (Uwamuki-shisei) = tư thế TRẦN — súng giữ trên đầu, văng rơi xuống người. Tatemuki-shisei (立向き姿勢) là tư thế ĐỨNG — hàn trên tường đứng, lên hoặc xuống. Cả hai đều chống trọng lực theo cách nào đó, nhưng là các tư thế riêng với kỹ thuật khác nhau, và nhầm lóng/chính thức trên công trường gây hiểu lầm thật. 🇯🇵 MẸO: Thợ Nhật quấn khăn quanh cổ nhét vào cổ áo khi làm kachiage — văng rơi xuống gáy vừa đau vừa nguy cơ cháy. Mẹo đơn giản này phổ biến khắp công trường Nhật.",
+    },
+    id: {
+      q: "Seorang senior mengeluh 'Kachiage...' (かちあげ) dan peserta magang mengira itu berarti istilah resmi 'Tatemuki-shisei' (立向き姿勢 / posisi tegak) karena keduanya melawan gravitasi. Apakah peserta magang benar?",
+      opts: [
+        "Ya — kachiage dan tatemuki-shisei posisi sama, hanya slang vs istilah resmi",
+        "Tidak — kachiage adalah slang untuk 上向き姿勢 (Uwamuki-shisei / posisi overhead), mengelas DI ATAS kepala; tatemuki-shisei posisi berbeda, mengelas pada permukaan tegak",
+        "Tidak — kachiage sebenarnya posisi datar, yang termudah, bukan tersulit",
+        "Ya, tapi hanya saat mengelas sambungan pipa, bukan pelat",
+      ],
+      exp: "Kachiage (かちあげ) adalah slang khusus untuk 上向き姿勢 (Uwamuki-shisei) = posisi OVERHEAD — gun dipegang di atas kepala, percikan jatuh menimpa Anda. Tatemuki-shisei (立向き姿勢) adalah posisi TEGAK — mengelas pada dinding berdiri, naik atau turun. Keduanya melawan gravitasi, tapi posisi berbeda dengan teknik berbeda, dan mencampur istilah slang/resmi di lokasi menyebabkan salah paham nyata. 🇯🇵 TIPS: Tukang las Jepang melilitkan handuk di leher dan menyelipkannya ke kerah untuk kerja kachiage — percikan yang jatuh ke tengkuk menyakitkan sekaligus bahaya kebakaran. Trik sederhana ini universal di lokasi Jepang.",
+    },
+  },
+  202: {
+    vi: {
+      q: "Giám sát nói hôm nay bạn làm việc 'Moriage' (盛り上げ), theo kiểu '立向上進' (Tatemuki-joshin / đứng-lên) hoặc '立向下進' (Tatemuki-kashin / đứng-xuống). Nhật thường ưa hướng nào và vì sao?",
+      opts: [
+        "Đứng-xuống (下進) được ưa duy nhất vì loại bỏ nhu cầu kỹ thuật lấp hố",
+        "Đứng-xuống (下進) được ưa vì nhanh hơn và ngấu sâu hơn đứng-lên",
+        "Đứng-lên (上進) được ưa vì thường cho hòa nhập và ngấu tốt hơn, dù chậm hơn đứng-xuống",
+        "Không hướng nào được ưa — Nhật chỉ dùng đứng-xuống cho mọi việc moriage",
+      ],
+      exp: "Moriage (盛り上げ) = tư thế hàn đứng, chính thức là 立向き姿勢 (Tatemuki-shisei). Trong hàn đứng có hai hướng: 立向上進 (đứng-LÊN) và 立向下進 (đứng-XUỐNG). Đứng-xuống nhanh hơn nhưng ngấu nông hơn; Nhật thường ưa đứng-lên vì hòa nhập và ngấu tốt hơn dù chậm hơn, nhất là mối hàn kết cấu. 🇯🇵 MẸO: 'Moriage' là lóng công trường, không phải tiếng Nhật chuẩn — dùng nó cho thấy bạn thấm văn hóa. Nhưng trong tài liệu chính thức (họp an toàn, báo cáo kiểm tra), luôn dùng thuật ngữ chuẩn 立向き (tatemuki). Trộn lóng vào giấy tờ QC chính thức bị chê.",
+    },
+    id: {
+      q: "Supervisor mengatakan hari ini Anda mengerjakan 'Moriage' (盛り上げ), gaya '立向上進' (Tatemuki-joshin / tegak-naik) atau '立向下進' (Tatemuki-kashin / tegak-turun). Arah mana yang umumnya disukai Jepang, dan mengapa?",
+      opts: [
+        "Tegak-turun (下進) disukai secara eksklusif karena meniadakan teknik pengisian kawah",
+        "Tegak-turun (下進) disukai karena lebih cepat dan penetrasi lebih dalam dari tegak-naik",
+        "Tegak-naik (上進) disukai karena umumnya memberi fusi dan penetrasi lebih baik, meski lebih lambat dari tegak-turun",
+        "Tak ada yang disukai — Jepang hanya memakai tegak-turun untuk semua kerja moriage",
+      ],
+      exp: "Moriage (盛り上げ) = posisi las tegak, resminya 立向き姿勢 (Tatemuki-shisei). Dalam las tegak ada dua arah: 立向上進 (tegak-NAIK) dan 立向下進 (tegak-TURUN). Tegak-turun lebih cepat tapi penetrasi lebih dangkal; Jepang umumnya menyukai tegak-naik karena fusi dan penetrasi lebih baik meski lebih lambat, terutama untuk las struktur. 🇯🇵 TIPS: 'Moriage' adalah slang lokasi, bukan bahasa Jepang standar — memakainya menunjukkan Anda menyerap budaya. Namun dalam dokumentasi resmi (rapat keselamatan, laporan inspeksi), selalu pakai istilah resmi 立向き (tatemuki). Mencampur slang ke dokumen QC resmi tidak disukai.",
+    },
+  },
+  203: {
+    vi: {
+      q: "Đàn anh xem rãnh và nói 'Tenpai!' (テンパイ). Nước đi tiếp theo của bạn là gì?",
+      opts: [
+        "Làm lại lượt chân từ đầu — mọi thứ đều sai",
+        "Mối hàn xong rồi — dọn đồ về nhà",
+        "Có vết nứt — dừng và gọi người kiểm tra",
+        "Rãnh gần đầy — chỉ một lượt nữa (lượt phủ/mặt) là xong",
+      ],
+      exp: "Tenpai (テンパイ) đến từ Mạt chược Nhật — nghĩa là 'còn một quân là thắng'. Trên công trường, nghĩa là mối hàn rãnh đã đầy đến ngay dưới lượt phủ cuối. Bạn còn một lượt là xong. 🇯🇵 MẸO: Thợ Nhật thích các cách nói từ Mạt chược. Học chúng cho thấy hiểu văn hóa. Khi nghe 'tenpai', lượt phủ (仕上げパス / shiage-pasu) là tiếp theo — cẩn thận với ngoại quan đường hàn vì đây là mặt lộ mà người kiểm tra nhìn đầu tiên.",
+    },
+    id: {
+      q: "Senior memeriksa alur dan berkata 'Tenpai!' (テンパイ). Apa langkah Anda berikutnya?",
+      opts: [
+        "Mulai root pass dari awal — semuanya salah",
+        "Las selesai — berkemas dan pulang",
+        "Ada retak — berhenti dan panggil inspektor",
+        "Alur hampir penuh — tinggal satu pass lagi (cap/cover pass) dan Anda selesai",
+      ],
+      exp: "Tenpai (テンパイ) berasal dari Mahjong Jepang — artinya 'tinggal satu ubin untuk menang'. Di lokasi, artinya las alur sudah terisi sampai tepat di bawah cap pass terakhir. Anda tinggal satu pass lagi. 🇯🇵 TIPS: Pekerja Jepang suka ungkapan dari Mahjong. Mempelajarinya menunjukkan kesadaran budaya. Saat mendengar 'tenpai', cap pass (仕上げパス / shiage-pasu) berikutnya — ekstra hati-hati dengan tampilan jalur karena ini permukaan terlihat yang dinilai inspektor lebih dulu.",
+    },
+  },
+  204: {
+    vi: {
+      q: "Giám sát nhìn mối hàn tập của bạn và hét 'Mimizu!' (ミミズ). Sai ở đâu?",
+      opts: [
+        "Đường hàn của bạn ngoằn ngoèo, không đều — như con giun bò trên tấm",
+        "Lưu lượng khí quá cao",
+        "Bạn dùng sai dây",
+        "Mối hàn quá sâu — bạn hàn thủng",
+      ],
+      exp: "Mimizu (ミミズ) = con giun đất. Dùng để mô tả đường hàn ngoằn ngoèo, không đều, lượn trái phải như con giun. Do di chuyển súng không vững, tốc độ không đều, hoặc tay run. Khắc phục: tập đường hàn thẳng (stringer) đến khi thật thẳng trước khi thử đường lượn. 🇯🇵 MẸO: Huấn luyện viên Nhật hay nói 'ashi o tsukae' (足を使え / dùng chân) — nghĩa là đừng chỉ cử động tay; ổn định toàn thân và di chuyển thân mượt cho đường dài. Tì khuỷu tay vào người cải thiện độ thẳng rõ rệt.",
+    },
+    id: {
+      q: "Supervisor melihat las latihan Anda dan berteriak 'Mimizu!' (ミミズ). Apa yang salah?",
+      opts: [
+        "Jalur Anda bergoyang dan tak rata — seperti cacing merayap di pelat",
+        "Aliran gas terlalu tinggi",
+        "Anda memakai kawat yang salah",
+        "Las terlalu dalam — Anda menembus bakar",
+      ],
+      exp: "Mimizu (ミミズ) = cacing tanah. Dipakai untuk menggambarkan jalur yang bergoyang, tak rata, berkelok kiri-kanan seperti cacing. Disebabkan gerakan gun tak stabil, kecepatan tak konsisten, atau tangan gemetar. Perbaikan: latih jalur lurus (stringer) sampai benar-benar lurus sebelum mencoba jalur ayun (weave). 🇯🇵 TIPS: Pelatih las Jepang sering berkata 'ashi o tsukae' (足を使え / pakai kakimu) — artinya jangan hanya menggerakkan lengan; stabilkan seluruh tubuh dan gerakkan tubuh mulus untuk jalur panjang. Menahan siku ke tubuh sangat meningkatkan kelurusan jalur.",
+    },
+  },
+  205: {
+    vi: {
+      q: "Một thợ đàn anh nhìn đường hàn của bạn, lắc đầu và nói 'Gatagata!' (ガタガタ). Ý anh ấy là gì?",
+      opts: [
+        "Tốc độ di chuyển quá nhanh — đường hàn quá mỏng",
+        "Đường hàn không nhất quán — thô, không đều, không nhịp, không kiểm soát",
+        "Máy hàn bị hỏng",
+        "Kim loại nền có vết nứt",
+      ],
+      exp: "Gatagata (ガタガタ) = thô ráp, lạch cạch, không nhất quán. Mô tả đường hàn có bề rộng, chiều cao và vân gợn không đều — không có nhịp hay kiểm soát. Khác Mimizu (thẳng nhưng ngoằn ngoèo) — Gatagata là cả đường hàn lộn xộn. Cả hai đều là phản hồi bạn cần nghe và cải thiện. 🇯🇵 MẸO: Văn hóa hàn Nhật đề cao 職人気質 (shokunin-kishitsu / tinh thần nghệ nhân) — một shokunin thật đặt đường hàn đều tăm tắp mọi lần. Khi đàn anh nói 'gatagata', hãy nghiêm túc. Hỏi 'doko ga warui desu ka?' (どこが悪いですか？ / chỗ nào cụ thể có vấn đề?) — đàn anh Nhật nể người muốn hiểu và tiến bộ.",
+    },
+    id: {
+      q: "Seorang senior melihat jalur Anda, menggeleng, dan berkata 'Gatagata!' (ガタガタ). Apa maksudnya?",
+      opts: [
+        "Kecepatan jalan Anda terlalu cepat — jalur terlalu tipis",
+        "Jalur Anda tak konsisten — kasar, tak rata, tanpa irama, tak terkendali",
+        "Mesin las rusak",
+        "Logam dasar retak",
+      ],
+      exp: "Gatagata (ガタガタ) = kasar, berderak, tak konsisten. Menggambarkan jalur dengan lebar, tinggi, dan pola riak tak beraturan — tanpa irama atau kendali konsisten. Berbeda dari Mimizu (lurus tapi bergoyang) — Gatagata berarti seluruh jalur berantakan. Keduanya masukan yang perlu Anda dengar dan perbaiki. 🇯🇵 TIPS: Budaya las Jepang menjunjung 職人気質 (shokunin-kishitsu / jiwa pengrajin) — shokunin sejati membuat jalur seragam sempurna setiap kali. Saat senior berkata 'gatagata', tanggapi serius. Tanyakan 'doko ga warui desu ka?' (どこが悪いですか？ / bagian mana tepatnya yang bermasalah?) — senior Jepang menghargai pekerja yang ingin memahami dan berkembang.",
+    },
+  },
+  206: {
+    vi: {
+      q: "Sau khi hàn một tấm lớn, giám sát nói 'Hizumi ga deta!' (歪みが出た！). Điều gì đã xảy ra?",
+      opts: [
+        "Mối hàn đạt kiểm tra — tuyệt vời",
+        "Khí bảo vệ hết giữa chừng",
+        "Biến dạng / vênh — nhiệt hàn làm tấm kim loại cong hoặc vênh khỏi hình dạng",
+        "Xuất hiện vết nứt trong mối hàn",
+      ],
+      exp: "Hizumi (歪み) = biến dạng / vênh. Khi hàn, nhiệt mạnh làm kim loại giãn rồi co không đều khi nguội — làm vênh tấm. Càng nhiều lượt = nhiều nhiệt = nhiều biến dạng. Giải pháp: thứ tự đính hàn đúng, hàn lùi (後退法), tạo ngược trước (逆ひずみ法), và giảm nhiệt đầu vào. 🇯🇵 MẸO: Trong chế tạo Nhật, kiểm soát hizumi được coi là dấu hiệu thợ giỏi. 'Thứ tự đính' (仮付け順序) do giám sát quyết và phải tuân đúng — đính bừa của người mới là nguyên nhân số 1 gây vênh tấm lớn ở công trường Nhật.",
+    },
+    id: {
+      q: "Setelah mengelas pelat besar, supervisor berkata 'Hizumi ga deta!' (歪みが出た！). Apa yang terjadi?",
+      opts: [
+        "Las lulus inspeksi — kerja bagus",
+        "Gas pelindung habis saat mengelas",
+        "Distorsi / melengkung — panas dari pengelasan membuat pelat logam bengkok atau melengkung",
+        "Muncul retak di las",
+      ],
+      exp: "Hizumi (歪み) = distorsi / melengkung. Saat mengelas, panas hebat membuat logam memuai lalu menyusut tak merata saat mendingin — ini melengkungkan pelat. Makin banyak pass = makin panas = makin banyak distorsi. Solusi: urutan tack yang benar, las mundur (後退法), pre-setting (逆ひずみ法), dan meminimalkan masukan panas. 🇯🇵 TIPS: Dalam fabrikasi Jepang, mengendalikan hizumi dianggap tanda tukang mahir. 'Urutan tack' (仮付け順序) ditentukan supervisor dan harus diikuti persis — tack acak oleh pekerja baru adalah penyebab #1 distorsi pelat besar di lokasi Jepang.",
+    },
+  },
+  207: {
+    vi: {
+      q: "Sau khi hàn TIG một mối thép không gỉ không dùng thuốc, đàn anh vẫn nói 'Noro tore!' (ノロとれ！). Điều này có hợp lý không, và bạn thực sự nên kiểm tra gì?",
+      opts: [
+        "Có, vì 'noro' ở đây nghĩa là 'kiểm tra lưu lượng khí', không phải xỉ",
+        "Không, vì 'noro tore' chỉ áp dụng cho hàn FCAW, không bao giờ cho phương pháp khác",
+        "Có, hợp lý — hàn TIG luôn tạo xỉ nặng như hàn que, nên gõ bỏ như vậy",
+        "Không hợp trực tiếp — hàn TIG không tạo xỉ (không dùng thuốc); đàn anh có lẽ nói nhầm, hoặc ý là kiểm tra ôxít/màu nhiệt đổi màu",
+      ],
+      exp: "Noro (ノロ) = xỉ, cặn đóng vảy từ các phương pháp có THUỐC như hàn que (SMAW) hoặc lõi thuốc (FCAW). Hàn TIG (GTAW) không dùng thuốc và không tạo xỉ — nên 'noro tore' theo nghĩa đen không áp dụng. Nếu đàn anh nói vậy khi làm TIG, họ có thể dùng lỏng lẻo với nghĩa 'làm sạch bề mặt', có lẽ chỉ vảy ôxít hoặc màu nhiệt, cần xử lý khác (bàn chải inox hoặc tẩy axit), không phải gõ. 🇯🇵 MẸO: Ở một số vùng Nhật, thợ nói 'kasu' (カス) thay 'noro' cho xỉ — cùng nghĩa, khác thổ ngữ. Nhưng luôn xác nhận thứ trên bề mặt thực sự là gì trước khi cầm búa đục.",
+    },
+    id: {
+      q: "Setelah las TIG sambungan baja tahan karat tanpa fluks, senior tetap berkata 'Noro tore!' (ノロとれ！). Apakah ini masuk akal, dan apa yang sebenarnya harus Anda periksa?",
+      opts: [
+        "Ya, karena 'noro' di sini berarti 'periksa aliran gas', bukan terak",
+        "Tidak, karena 'noro tore' hanya berlaku untuk las FCAW, tak pernah proses lain",
+        "Ya, masuk akal — las TIG selalu menghasilkan terak berat seperti las busur, jadi ketuk dengan cara sama",
+        "Tidak berlaku langsung — las TIG tak menghasilkan terak (tak pakai fluks); senior mungkin salah ucap, atau maksudnya periksa oksida/perubahan warna panas",
+      ],
+      exp: "Noro (ノロ) = terak, residu berkerak dari proses berbasis FLUKS seperti las busur (SMAW) atau flux-cored (FCAW). Las TIG (GTAW) tak memakai fluks dan tak menghasilkan terak — jadi 'noro tore' secara harfiah tak berlaku. Jika senior mengatakannya saat kerja TIG, mereka mungkin memakainya longgar untuk 'bersihkan permukaan', kemungkinan merujuk kerak oksida atau heat tint, yang perlu penanganan berbeda (sikat stainless atau pickling), bukan diketuk. 🇯🇵 TIPS: Di beberapa daerah Jepang, pekerja mengucapkan 'kasu' (カス) alih-alih 'noro' untuk terak — sama, beda dialek lokasi. Tapi selalu pastikan apa yang sebenarnya ada di permukaan sebelum meraih palu ketuk.",
+    },
+  },
+  208: {
+    vi: {
+      q: "'Karitsuke' (仮付け) hoặc 'Tenzuke' (点付け) là gì và vì sao quan trọng?",
+      opts: [
+        "Hàn đính — mối hàn tạm ngắn giữ chi tiết đúng vị trí trước khi hàn đầy đủ. Chất lượng quan trọng vì khuyết tật ở mối đính làm nhiễm mối hàn cuối",
+        "Một loại hàn góc chỉ dùng ở góc",
+        "Lượt phủ cuối hoàn thành mối hàn",
+        "Một khuyết tật hàn do đặt sai vị trí",
+      ],
+      exp: "Karitsuke (仮付け) / Tenzuke (点付け) = Hàn đính. Mối hàn ngắn cách quãng giữ chi tiết đúng vị trí trước khi hàn đầy đủ. QUAN TRỌNG: khuyết tật ở mối đính (nứt, rỗ) bị hấp thụ vào mối hàn cuối và trở thành vấn đề nghiêm trọng. Đối xử với mối đính cẩn thận như mối hàn thật. Ở Nhật điều này được thực thi nghiêm. 🇯🇵 MẸO: Giám sát Nhật đôi khi thử người mới bằng cách xem cách họ đính — đính ẩu, nhanh với hố và rỗ lộ rõ báo hiệu người cẩu thả. Chiều dài đính tối thiểu, lấp hố đúng và khoảng cách đúng (指定ピッチ) đều bị kiểm. Chất lượng đính = chất lượng công việc ở Nhật.",
+    },
+    id: {
+      q: "Apa itu 'Karitsuke' (仮付け) atau 'Tenzuke' (点付け) dan mengapa penting?",
+      opts: [
+        "Tack weld — las sementara pendek yang menahan bagian pada posisi sebelum las penuh. Mutu penting karena cacat pada tack mencemari las akhir",
+        "Sejenis las sudut hanya untuk pojok",
+        "Cover pass akhir yang menyelesaikan las",
+        "Cacat las akibat pemosisian yang salah",
+      ],
+      exp: "Karitsuke (仮付け) / Tenzuke (点付け) = Tack weld. Las pendek berselang untuk menahan bagian pada posisi benar sebelum las penuh. PENTING: cacat tack (retak, porositas) terserap ke las akhir dan menjadi masalah serius. Perlakukan tack seperti las penuh. Di Jepang ini ditegakkan ketat. 🇯🇵 TIPS: Supervisor Jepang kadang menguji pekerja baru dengan mengamati cara mereka membuat karitsuke — tack ceroboh dan cepat dengan kawah serta porositas jelas menandakan pekerja ceroboh. Panjang tack minimum, pengisian kawah benar, dan jarak benar (指定ピッチ) semua diperiksa. Mutu tack = mutu kerja di Jepang.",
+    },
+  },
+  209: {
+    vi: {
+      q: "Giám sát nói 'Kaisaki wo tsukure!' (開先を作れ！). Bạn được yêu cầu làm gì?",
+      opts: [
+        "Làm một sợi dây hàn",
+        "Chuẩn bị rãnh / vát mép mối nối — cắt hoặc mài mép tấm theo một góc nhất định để ngấu đúng",
+        "Xịt chất chống văng",
+        "Vẽ ký hiệu hàn lên bản vẽ",
+      ],
+      exp: "Kaisaki (開先) = Rãnh / chuẩn bị mối nối. Mép tấm được vát hoặc tạo hình trước khi hàn để hồ quang và kim loại bù chạm được chân, đảm bảo ngấu hoàn toàn. Các loại phổ biến: chữ I (I形), chữ V (V形), chữ X (X形), chữ U (U形). Hình dạng và kích thước kaisaki được quy định trên bản vẽ. 🇯🇵 MẸO: Góc kaisaki và mặt chân (ルートフェース) phải khớp WPS chính xác. Ở Nhật, chuẩn bị rãnh được kiểm bằng 角度ゲージ (thước góc) và mặt chân đo bằng thước cặp — lệch quá dung sai phải mài lại trước khi bắt đầu hàn.",
+    },
+    id: {
+      q: "Supervisor berkata 'Kaisaki wo tsukure!' (開先を作れ！). Anda diminta melakukan apa?",
+      opts: [
+        "Membuat kawat las",
+        "Menyiapkan alur / persiapan sambungan — memotong atau menggerinda tepi pelat pada sudut tertentu untuk penetrasi yang benar",
+        "Menyemprot anti-percikan",
+        "Menggambar simbol las pada gambar",
+      ],
+      exp: "Kaisaki (開先) = Alur / persiapan sambungan. Tepi pelat yang dibevel atau dibentuk sebelum mengelas agar busur dan logam pengisi mencapai akar untuk penetrasi penuh. Jenis umum: I-groove (I形), V-groove (V形), X-groove (X形), U-groove (U形). Bentuk dan dimensi kaisaki ditentukan pada gambar. 🇯🇵 TIPS: Sudut kaisaki dan root face (ルートフェース) harus cocok persis dengan WPS. Di Jepang, persiapan alur diperiksa dengan 角度ゲージ (alat ukur sudut) dan root face diukur dengan jangka sorong — penyimpangan di luar toleransi harus digerinda ulang sebelum pengelasan dimulai.",
+    },
+  },
+  210: {
+    vi: {
+      q: "Đàn anh khen lượt chân của bạn: 'Uranami kirei da na!' (裏波きれいだな！). Bạn đã đạt được gì?",
+      opts: [
+        "Một bề mặt sạch trên đỉnh mối hàn",
+        "Một đường hàn thẳng hoàn hảo",
+        "Bọng ngược (back bead) — lượt chân ngấu xuyên hoàn toàn và tạo đường hàn sạch, đều thấy được ở mặt sau mối nối",
+        "Bỏ xỉ đúng sau khi hàn",
+      ],
+      exp: "Uranami (裏波) = bọng ngược. Khi lượt chân ngấu hoàn toàn xuyên mối nối và tạo một đường hàn sạch, đều ở MẶT SAU. Đây là dấu hiệu ngấu chân hoàn hảo — rất được coi trọng, nhất là hàn ống và bình áp lực. Khó đạt: cần đúng khe hở chân, dòng điện và tốc độ. 🇯🇵 MẸO: 'Uranami' đẹp là niềm tự hào của thợ hàn Nhật. Trong thi chứng chỉ JIS hàn ống, mặt sau (bọng ngược) được kiểm bằng mắt và bằng chụp X-quang (RT). Uranami không đều, lồi quá hoặc lõm (chảy xệ) có thể trượt — hãy luyện kiểm soát bể chân.",
+    },
+    id: {
+      q: "Senior memuji root pass Anda: 'Uranami kirei da na!' (裏波きれいだな！). Apa yang Anda capai?",
+      opts: [
+        "Permukaan bersih di atas las",
+        "Garis jalur yang lurus sempurna",
+        "Back bead — las akar menembus penuh dan membentuk jalur bersih dan rata yang terlihat di sisi belakang sambungan",
+        "Pembuangan terak yang benar setelah mengelas",
+      ],
+      exp: "Uranami (裏波) = back bead. Saat root pass menembus penuh sambungan dan membentuk jalur bersih dan rata di SISI BELAKANG. Ini tanda penetrasi akar sempurna — sangat dihargai, terutama las pipa dan bejana tekan. Sulit dicapai: perlu root gap, arus, dan kecepatan yang tepat. 🇯🇵 TIPS: 'Uranami' yang indah adalah kebanggaan tukang las Jepang. Dalam ujian sertifikasi JIS las pipa, sisi belakang (back bead) diperiksa secara visual dan dengan radiografi (RT). Uranami tak rata, terlalu cembung, atau cekung (melorot) bisa gagal — latih pengendalian kolam akar.",
+    },
+  },
 };
