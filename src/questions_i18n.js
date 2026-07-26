@@ -2536,4 +2536,224 @@ export const Q_I18N = {
       exp: "Tangga karier las Jepang: 1) Pelatihan Keselamatan Las Busur (アーク溶接特別教育) — wajib hukum sejak Hari 1. 2) JIS Grade Dasar (基本級) — sertifikasi keterampilan pertama. 3) JIS Grade Spesialis (専門級) — semua posisi. 4) AW Kentei atau Tukang Las Boiler (khusus). 5) Kualifikasi manajemen WES. 6) Tukang Las Bawah Air (elit). Tiap langkah membuka pekerjaan bergaji lebih tinggi. 🇯🇵 TIPS: Tempat kerja Jepang sangat menghormati orang yang proaktif mengejar sertifikasi tanpa diminta. Saat tukang berkata kepada supervisornya 'Jishu-teki ni shikaku wo toru tsumori desu' (自主的に資格を取るつもりです / Saya berniat mengambil sertifikasi atas inisiatif sendiri), itu sinyal budaya kuat tentang komitmen. Perusahaan sering mendukung biaya sertifikasi bagi karyawan yang termotivasi — jangan malu bertanya. Pengembangan diri (自己研鑽 / jiko-kensan) adalah sifat yang sangat dihargai dalam budaya profesional Jepang.",
     },
   },
+  511: {
+    vi: {
+      q: "Khoảng thu nhập năm gần đúng cho mỗi cấp sự nghiệp hàn Nhật là bao nhiêu?",
+      opts: [
+        "Thợ Nhật kiếm 100–200 vạn yên/năm bất kể chứng chỉ",
+        "Mọi thợ kiếm như nhau ở Nhật — không chênh lệch",
+        "An toàn Hồ quang (800 vạn) → JIS Cơ bản (600 vạn) → Thợ hàn dưới nước (200 vạn)",
+        "An toàn Hồ quang / JIS Cơ bản: 300–400 vạn → JIS Chuyên môn / AW: 400–600 vạn → Thợ hàn nồi hơi: 500–800 vạn → Thợ hàn dưới nước: 700–1.500 vạn",
+      ],
+      exp: "Thu nhập năm gần đúng trong hàn Nhật (vạn yên/năm): JIS Cơ bản 300–400, JIS Chuyên môn 400–600, AW Kentei 500–700, Thợ hàn nồi hơi thường 450–650, Thợ hàn nồi hơi Đặc biệt 600–800, Thợ hàn dưới nước 700–1.000, Lặn bão hòa + dưới nước 1.000–1.500. Kỹ năng chuyên biệt hiếm = lương cao. 🇯🇵 MẸO: Chênh lệch thu nhập giữa các cấp là thật, nhưng công ty Nhật cũng thưởng lòng trung thành (勤続年数) và độ tin cậy hằng ngày. Một thợ chứng chỉ trung bình nhưng đi làm đều, không gây lỗi chất lượng, giao tiếp tốt thường kiếm hơn thợ nhiều chứng chỉ mà khó quản. Ở Nhật, tính cách và sự nhất quán quan trọng ngang chứng chỉ trên bảng lương.",
+    },
+    id: {
+      q: "Berapa perkiraan rentang pendapatan tahunan untuk tiap tingkat karier las Jepang?",
+      opts: [
+        "Tukang las Jepang berpenghasilan ¥1–2 juta per tahun tanpa memandang sertifikasi",
+        "Semua tukang berpenghasilan sama di Jepang — tanpa variasi",
+        "Keselamatan Busur (¥8jt) → JIS Dasar (¥6jt) → Tukang Las Bawah Air (¥2jt)",
+        "Keselamatan Busur / JIS Dasar: ¥3–4jt → JIS Spesialis / AW: ¥4–6jt → Tukang Las Boiler: ¥5–8jt → Tukang Las Bawah Air: ¥7–15jt",
+      ],
+      exp: "Perkiraan pendapatan tahunan dalam las Jepang (万円/tahun): JIS Dasar 300–400万, JIS Spesialis 400–600万, AW Kentei 500–700万, Tukang Las Boiler Standar 450–650万, Tukang Las Boiler Khusus 600–800万, Tukang Las Bawah Air 700–1.000万, Penyelam Saturasi + Bawah Air 1.000–1.500万. Keterampilan khusus langka = bayaran premium. 🇯🇵 TIPS: Perbedaan pendapatan antar tingkat sertifikasi nyata, tapi perusahaan Jepang juga menghargai loyalitas (勤続年数 / kinzoku-nensuu) dan keandalan harian. Tukang dengan sertifikasi rata-rata yang datang tiap hari, tak pernah menimbulkan masalah mutu, dan berkomunikasi baik sering berpenghasilan lebih dari tukang bersertifikasi tinggi yang sulit dikelola. Di Jepang, karakter dan konsistensi sama pentingnya dengan kualifikasi pada slip gaji Anda.",
+    },
+  },
+  512: {
+    vi: {
+      q: "Áp suất nước tăng khoảng 1 atmosphere mỗi 10 mét độ sâu. Áp suất tuyệt đối ở độ sâu 30 mét là bao nhiêu?",
+      opts: [
+        "4 atmosphere — 1 atm (mặt nước) + 3 atm (từ 30m = 3 × 10m)",
+        "1 atmosphere (chỉ áp suất khí quyển)",
+        "2 atmosphere",
+        "3 atmosphere — 1 atm (mặt nước) + 3 atm (từ 30m nước)",
+      ],
+      exp: "Áp suất nước: Mỗi 10m độ sâu thêm ~1 atmosphere. Ở 30m: 1 atm (áp khí quyển ở mặt) + 3 atm (từ 30m nước) = 4 atm tuyệt đối. Áp này ảnh hưởng lặn: tiêu thụ khí tăng, nguy cơ say nitơ tăng, dừng giảm áp thành bắt buộc. Thợ hàn dưới nước phải hiểu phép tính này. 🇯🇵 MẸO: Nhật có quy định an toàn thao tác lặn rất cụ thể (高気圧作業安全衛生規則) bao gồm bảng giảm áp, tốc độ cấp khí và trách nhiệm giám sát. Người giám sát lặn (潜水監督員) chịu trách nhiệm pháp lý cho an toàn mỗi thợ lặn. Khác một số nước, luật Nhật rất nghiêm túc phòng 'bệnh giảm áp' (減圧症) — không đi tắt.",
+    },
+    id: {
+      q: "Tekanan air naik sekitar 1 atmosfer tiap 10 meter kedalaman. Berapa tekanan absolut pada kedalaman 30 meter?",
+      opts: [
+        "4 atmosfer — 1 atm (permukaan) + 3 atm (dari 30m = 3 × 10m)",
+        "1 atmosfer (hanya tekanan atmosfer)",
+        "2 atmosfer",
+        "3 atmosfer — 1 atm (permukaan) + 3 atm (dari 30m air)",
+      ],
+      exp: "Tekanan air: Tiap 10m kedalaman menambah ~1 atmosfer. Pada 30m: 1 atm (tekanan atmosfer di permukaan) + 3 atm (dari 30m air) = 4 atm absolut. Tekanan ini memengaruhi penyelaman: konsumsi gas naik, risiko narkosis nitrogen naik, henti dekompresi menjadi wajib. Tukang las bawah air harus memahami perhitungan ini. 🇯🇵 TIPS: Jepang punya regulasi keselamatan operasi penyelaman yang sangat spesifik (高気圧作業安全衛生規則) yang mencakup tabel dekompresi, laju pasokan udara, dan tanggung jawab pengawas. Pengawas penyelaman (潜水監督員 / sensui-kantoku-in) bertanggung jawab secara hukum atas keselamatan tiap penyelam. Tak seperti beberapa negara, hukum Jepang sangat serius mencegah 'penyakit dekompresi' (減圧症 / genatsushou) — tanpa jalan pintas.",
+    },
+  },
+  513: {
+    vi: {
+      q: "Công thức Nhiệt đầu vào: Q = 60 × E × I / v. E, I và v đại diện cho gì trong hàn?",
+      opts: [
+        "E = hiệu suất, I = cách điện, v = thể tích",
+        "E = điện áp hồ quang (V), I = dòng hàn (A), v = tốc độ chạy (cm/min). Kết quả Q = nhiệt đầu vào (J/cm hoặc kJ/cm)",
+        "E = đường kính que, I = nhiệt độ giữa lượt, v = tốc độ thông gió",
+        "E = độ giãn dài, I = độ bền va đập, v = độ nhớt của bể hàn",
+      ],
+      exp: "Nhiệt đầu vào Q = 60 × E × I / v. E = Điện áp (V), I = Dòng (A), v = Tốc độ chạy (cm/min). Kết quả J/cm (chia 1000 ra kJ/cm). Ví dụ: E=28V, I=180A, v=30cm/min → Q = 60×28×180/30 = 10.080 J/cm = 10,1 kJ/cm. Nhiệt đầu vào kiểm soát độ dai HAZ, tốc độ nguội và biến dạng. Quản trong WPS. 🇯🇵 MẸO: Trong công việc bình áp lực và hạt nhân Nhật, giới hạn nhiệt đầu vào (入熱量制限) được ghi vào WPS và người kiểm tra có thể hỏi 'Nyuunetsu wa WPS-nai desu ka?' (入熱はWPS内ですか？ / Nhiệt đầu vào có trong WPS không?). Thợ theo dõi điện áp, dòng và tốc độ trong khi hàn — không chỉ lúc đầu — là người luôn đậu kiểm tra. Nhiều thợ Nhật dùng sổ nhỏ ghi thông số theo từng lượt.",
+    },
+    id: {
+      q: "Rumus Masukan Panas: Q = 60 × E × I / v. Apa yang diwakili E, I, dan v dalam pengelasan?",
+      opts: [
+        "E = efisiensi, I = isolasi, v = volume",
+        "E = tegangan busur (V), I = arus las (A), v = kecepatan jalan (cm/min). Hasil Q = masukan panas (J/cm atau kJ/cm)",
+        "E = diameter elektroda, I = suhu antar-pass, v = laju ventilasi",
+        "E = perpanjangan, I = kekuatan impak, v = viskositas kolam las",
+      ],
+      exp: "Masukan Panas Q = 60 × E × I / v. E = Tegangan (V), I = Arus (A), v = Kecepatan jalan (cm/min). Hasil dalam J/cm (bagi 1000 untuk kJ/cm). Contoh: E=28V, I=180A, v=30cm/min → Q = 60×28×180/30 = 10.080 J/cm = 10,1 kJ/cm. Masukan panas mengendalikan ketangguhan HAZ, laju pendinginan, dan distorsi. Dikelola dalam WPS. 🇯🇵 TIPS: Dalam pekerjaan bejana tekan dan nuklir Jepang, batas masukan panas (入熱量制限 / nyuunetsu-ryou-seigen) tertulis dalam WPS dan inspektor las mungkin bertanya 'Nyuunetsu wa WPS-nai desu ka?' (入熱はWPS内ですか？ / Apakah masukan panas Anda dalam WPS?). Tukang yang melacak tegangan, arus, dan kecepatan jalan selama mengelas — bukan hanya di awal — adalah yang konsisten lulus inspeksi. Banyak tukang Jepang memakai buku catatan kecil untuk mencatat parameter per pass.",
+    },
+  },
+  514: {
+    vi: {
+      q: "'WPS' (Welding Procedure Specification / 溶接施工要領書) là gì và vì sao mọi việc hàn có chứng nhận ở Nhật đều cần một cái?",
+      opts: [
+        "WPS = lịch làm việc tuần cho tổ hàn",
+        "WPS = Hệ thống Bảo vệ Công nhân — kế hoạch an toàn công trường",
+        "WPS = tài liệu quy định mọi thông số hàn (phương pháp, vật liệu, dòng, điện áp, tốc độ, nung trước, PWHT) mà thợ phải theo để tạo mối hàn đạt chuẩn. Quy chuẩn yêu cầu cho mọi kết cấu hàn quan trọng",
+        "WPS = hồ sơ các mối hàn đã làm trên dự án",
+      ],
+      exp: "WPS (溶接施工要領書 / Yosetsu-shiko-yoryosho) = Bản quy định trình tự hàn. 'Công thức' cho một mối hàn: xác định phương pháp, kim loại nền, kim loại bù, nung trước, dòng, điện áp, tốc độ, xử lý nhiệt sau hàn và hơn nữa. Được PQR (hồ sơ thử chứng nhận trình tự) chống lưng. Mọi mối hàn đạt chuẩn trong bình áp lực, tòa nhà và tàu Nhật phải theo WPS đã duyệt. 🇯🇵 MẸO: Ở công trường Nhật, WPS được giữ trong tập hồ sơ chất lượng (品質書類) tại vị trí làm việc. Trước khi bắt đầu mối quan trọng, chỉ vào WPS và xác nhận với giám sát: 'Kore no WPS de yoroshii desu ka?' (これのWPSでよろしいですか？ / Theo WPS này đúng chứ?). Bước đơn giản này bảo vệ bạn về pháp lý nếu có tranh chấp chất lượng sau này. Hồ sơ giấy tờ ở Nhật là tất cả.",
+    },
+    id: {
+      q: "Apa itu 'WPS' (Welding Procedure Specification / 溶接施工要領書) dan mengapa tiap pekerjaan las terkualifikasi di Jepang memerlukannya?",
+      opts: [
+        "WPS = jadwal kerja mingguan untuk kru las",
+        "WPS = Worker Protection System — rencana keselamatan lokasi",
+        "WPS = dokumen yang menetapkan semua parameter las (proses, material, arus, tegangan, kecepatan, preheat, PWHT) yang harus diikuti tukang untuk menghasilkan las terkualifikasi. Diwajibkan kode untuk semua struktur las kritis",
+        "WPS = catatan las masa lalu yang dikerjakan pada proyek",
+      ],
+      exp: "WPS (溶接施工要領書 / Yosetsu-shiko-yoryosho) = Welding Procedure Specification. 'Resep' untuk sebuah las: mendefinisikan proses, logam dasar, logam pengisi, preheat, arus, tegangan, kecepatan, perlakuan panas pasca-las, dan lainnya. Didukung PQR (rekaman kualifikasi prosedur). Tiap las terkualifikasi di bejana tekan, bangunan, dan kapal Jepang harus mengikuti WPS yang disetujui. 🇯🇵 TIPS: Di lokasi Jepang, WPS disimpan dalam binder mutu (品質書類 / hinshitsu-shorui) di stasiun kerja. Sebelum memulai las kritis, tunjuk WPS dan konfirmasi dengan supervisor: 'Kore no WPS de yoroshii desu ka?' (これのWPSでよろしいですか？ / Apakah ini WPS yang benar untuk diikuti?). Langkah sederhana ini melindungi Anda secara hukum jika ada sengketa mutu kelak. Jejak dokumen di Jepang adalah segalanya.",
+    },
+  },
+  515: {
+    vi: {
+      q: "'Yonetsu' (予熱 / nung trước) là gì và vì sao cần cho thép cường độ cao?",
+      opts: [
+        "Một loại ủ chỉ cho inox",
+        "Làm ấm khí bảo vệ để cải thiện lưu lượng",
+        "Nung mối hàn sau khi hoàn thành — xử lý nhiệt sau hàn",
+        "Nung trước kim loại nền trước khi hàn để làm chậm tốc độ nguội — ngăn nứt nguội ở thép đương lượng carbon cao, giảm hóa cứng HAZ, thúc hydro thoát ra",
+      ],
+      exp: "Yonetsu (予熱) = Nung trước. Nung kim loại nền (và vùng lân cận) đến nhiệt độ quy định TRƯỚC khi bắt đầu hàn. Vì sao: làm chậm tốc độ nguội → ít hóa cứng HAZ → ít nguy cơ nứt nguội. Cũng giúp hydro khuếch tán thoát ra. Cần cho: thép đương lượng carbon cao (Ceq > ~0,40), tấm dày, mối nối bị kìm hãm nhiều. Nhiệt độ kiểm bằng ondo-chooku (温度チョーク). 🇯🇵 MẸO: Thợ Nhật dùng bút sáp chỉ thị nhiệt (温度チョーク, còn gọi サーモクレヨン) để xác minh nhiệt độ nung trước khi bật hồ quang. Bút chảy ở một nhiệt độ nhất định — nếu chảy trên thép, bề mặt đã đạt nhiệt đó. Luôn kiểm CẢ HAI mặt mối nối, không chỉ mặt trên. Mùa đông lạnh ngoài trời, quản lý nhiệt giữa các lượt (パス間温度管理) cũng phải kiểm đều.",
+    },
+    id: {
+      q: "Apa itu 'Yonetsu' (予熱 / preheat) dan mengapa diperlukan untuk baja kekuatan tinggi?",
+      opts: [
+        "Sejenis proses anil hanya untuk stainless",
+        "Menghangatkan gas pelindung untuk memperbaiki laju aliran",
+        "Memanaskan las setelah selesai — perlakuan panas pasca-las",
+        "Memanaskan logam dasar sebelum mengelas untuk memperlambat laju pendinginan — mencegah retak dingin pada baja ekuivalen karbon tinggi, mengurangi pengerasan di HAZ, mendorong hidrogen keluar",
+      ],
+      exp: "Yonetsu (予熱) = Preheat. Memanaskan logam dasar (dan area sekitar) ke suhu tertentu SEBELUM mulai mengelas. Mengapa: memperlambat laju pendinginan → lebih sedikit pengerasan di HAZ → lebih sedikit risiko retak dingin. Juga membantu hidrogen difusi keluar. Diperlukan untuk: baja ekuivalen karbon tinggi (Ceq > ~0,40), pelat tebal, sambungan sangat terkekang. Suhu diperiksa dengan ondo-chooku (温度チョーク). 🇯🇵 TIPS: Tukang las Jepang memakai krayon indikator suhu (温度チョーク / ondo-chooku, juga disebut サーモクレヨン / thermo-crayon) untuk memverifikasi suhu preheat sebelum menyalakan busur. Krayon meleleh pada suhu tertentu — jika meleleh di baja, permukaan telah mencapai suhu itu. Selalu periksa KEDUA sisi sambungan, bukan hanya permukaan atas. Di bulan musim dingin dingin pada lokasi luar, pemeliharaan preheat antar-pass (パス間温度管理 / pasu-kan-ondo-kanri) juga harus diperiksa rutin.",
+    },
+  },
+  516: {
+    vi: {
+      q: "Là thợ hàn nước ngoài ở Nhật, tổ hợp chứng chỉ QUAN TRỌNG NHẤT cần lấy trong tháng đầu để làm được mọi việc trên công trường là gì?",
+      opts: [
+        "An toàn Hàn hồ quang + An toàn Đá mài + An toàn Điện hạ áp + An toàn Dây đai Toàn thân — gói vận hành cơ bản (~52.000–82.000 yên, khoảng 6–7 ngày)",
+        "Chỉ WES Cấp 2 — bao mọi thứ",
+        "Bằng lái xe + Giấy phép Thợ hàn nồi hơi",
+        "Chỉ JIS Cấp chuyên môn — mọi thứ khác là tùy chọn",
+      ],
+      exp: "Gói ưu tiên tháng đầu: 1) An toàn Hàn hồ quang (3 ngày, 2–4 vạn) → được hàn. 2) An toàn Đá mài (1 ngày, 1 vạn) → được mài. 3) An toàn Điện hạ áp (1 ngày, 1,2–2,2 vạn) → thao tác bảng điện. 4) An toàn Dây đai Toàn thân (1 ngày, 1 vạn) → làm trên cao. Tổng: ~6–7 ngày, 52.000–82.000 yên. Giờ bạn được phép vận hành hợp pháp ở hầu như mọi công trường Nhật. 🇯🇵 MẸO: Ở Nhật, chứng chỉ đào tạo an toàn (特別教育修了証) phải được CẢ thợ LẪN chủ giữ. Nếu thanh tra lao động (労働基準監督官) đến và yêu cầu thợ xuất trình, thợ phải có. Nhiều thợ kinh nghiệm giữ tất cả chứng chỉ trong túi nhựa trong ở túi đồ nghề. Đây là thông lệ chuyên nghiệp bình thường ở Nhật — không lạ hay thừa.",
+    },
+    id: {
+      q: "Sebagai tukang las asing di Jepang, apa kombinasi sertifikat TERPENTING untuk didapat di bulan pertama agar sepenuhnya fungsional di lokasi mana pun?",
+      opts: [
+        "Keselamatan Las Busur + Keselamatan Batu Gerinda + Keselamatan Listrik Tegangan Rendah + Keselamatan Full Harness — paket operasional dasar (~¥52.000–82.000, sekitar 6–7 hari total)",
+        "Hanya WES Grade 2 — mencakup segalanya",
+        "SIM + Lisensi Tukang Las Boiler",
+        "Hanya JIS Grade Spesialis — semua lainnya opsional",
+      ],
+      exp: "Paket prioritas bulan pertama: 1) Keselamatan Las Busur (3 hari, ¥20–40k) → bisa mengelas. 2) Keselamatan Batu Gerinda (1 hari, ¥10k) → bisa menggerinda. 3) Keselamatan Listrik Tegangan Rendah (1 hari, ¥12–22k) → bisa mengoperasikan panel daya. 4) Keselamatan Full Harness (1 hari, ¥10k) → bisa bekerja di ketinggian. Total: ~6–7 hari, ¥52.000–82.000. Kini Anda legal beroperasi di hampir semua lokasi kerja Jepang. 🇯🇵 TIPS: Di Jepang, sertifikat pelatihan keselamatan (特別教育修了証 / tokubetsu-kyouiku-shuryo-sho) harus disimpan oleh tukang DAN pemberi kerja. Jika inspektur tenaga kerja (労働基準監督官 / rodo-kijun-kantokukan) mengunjungi lokasi dan meminta pekerja menunjukkan sertifikatnya, pekerja harus memilikinya. Banyak pekerja berpengalaman menyimpan semua sertifikat dalam map plastik bening di tas kerja. Ini praktik profesional normal di Jepang — bukan hal aneh atau berlebihan.",
+    },
+  },
+  517: {
+    vi: {
+      q: "'IIW' là gì và liên quan thế nào đến chứng chỉ hàn Nhật?",
+      opts: [
+        "IIW = một hãng máy hàn Nhật",
+        "IIW = Viện Hàn Quốc tế — cấp chứng chỉ được công nhận quốc tế (IW, IWT, IWE) tương thích hệ WES của Nhật. WES Cấp Đặc biệt ≈ IWE (Kỹ sư Hàn Quốc tế)",
+        "IIW = hiệp hội ngành Mỹ không liên quan đến Nhật",
+        "IIW = từ viết tắt Nhật cho luật an toàn hàn",
+      ],
+      exp: "IIW (International Institute of Welding) = tổ chức toàn cầu về tiêu chuẩn hàn. Cấp: IW (Thợ hàn Quốc tế), IWT (Kỹ thuật viên Hàn Quốc tế), IWE (Kỹ sư Hàn Quốc tế). WES 8103 Cấp Đặc biệt (特別級) của Nhật tương thích chuẩn IWE — người có thể xin công nhận quốc tế IIW. Giá trị với thợ Nhật làm dự án quốc tế (ngoài khơi, LNG, hạt nhân). 🇯🇵 MẸO: Nhật là thành viên tích cực của IIW (qua JWES). Nếu bạn muốn làm dự án LNG quốc tế của Nhật ở Úc, Đông Nam Á hay Trung Đông, chứng chỉ IIW (nhất là IW hoặc IWE) báo hiệu năng lực của bạn vượt biên giới. Ngành hàn Nhật coi trọng tiêu chuẩn quốc tế — và một thợ thông thạo cả JIS lẫn IIW thực sự hiếm và được coi trọng.",
+    },
+    id: {
+      q: "Apa itu 'IIW' dan bagaimana kaitannya dengan kualifikasi las Jepang?",
+      opts: [
+        "IIW = merek mesin las Jepang",
+        "IIW = International Institute of Welding — menerbitkan sertifikasi yang diakui internasional (IW, IWT, IWE) yang selaras dengan sistem WES Jepang. WES Grade Khusus ≈ IWE (International Welding Engineer)",
+        "IIW = asosiasi industri Amerika tanpa kaitan dengan Jepang",
+        "IIW = akronim Jepang untuk undang-undang keselamatan las",
+      ],
+      exp: "IIW (International Institute of Welding) = badan global untuk standar las. Menerbitkan: IW (International Welder), IWT (International Welding Technologist), IWE (International Welding Engineer). WES 8103 Grade Khusus (特別級) Jepang selaras dengan standar IWE — pemegangnya bisa mengajukan pengakuan internasional IIW. Berharga bagi tukang las Jepang yang mengerjakan proyek internasional (lepas pantai, LNG, nuklir). 🇯🇵 TIPS: Jepang adalah anggota aktif IIW (melalui JWES). Jika Anda ingin mengerjakan proyek LNG internasional Jepang di Australia, Asia Tenggara, atau Timur Tengah, sertifikasi IIW (terutama IW atau IWE) menandakan kualifikasi Anda melintasi batas negara. Industri las Jepang menanggapi standar internasional dengan serius — dan tukang yang fasih JIS maupun IIW benar-benar langka dan dihargai.",
+    },
+  },
+  518: {
+    vi: {
+      q: "'PWHT' (Xử lý nhiệt sau hàn / 溶接後熱処理) làm gì và khi nào cần ở Nhật?",
+      opts: [
+        "PWHT = kiểm tra ngoại quan cuối trước khi xuất xưởng",
+        "PWHT = làm sạch đường hàn bằng bàn chải sắt sau khi nguội",
+        "PWHT = nung toàn bộ kết cấu hàn đến nhiệt độ nhất định (ví dụ 600°C) và giữ, rồi nguội chậm — loại bỏ ứng suất dư, làm mềm HAZ cứng, giải phóng hydro. Cần cho bình áp lực, nồi hơi và kết cấu quan trọng theo quy chuẩn JIS/ASME",
+        "PWHT = sơn chống gỉ sau khi hàn",
+      ],
+      exp: "PWHT (Xử lý nhiệt sau hàn / 溶接後熱処理) = xử lý nhiệt giảm ứng suất. Kết cấu hàn hoàn thành được nung đến ~600–700°C (thép carbon), giữ một thời gian, rồi nguội chậm. Tác dụng: loại ứng suất dư (↓ biến dạng, ↓ nguy cơ nứt ăn mòn ứng suất), làm mềm HAZ cứng (↓ nguy cơ nứt nguội), giải phóng hydro. Bắt buộc cho bình nồi hơi (ボイラー), thiết bị áp lực và một số nối kết cấu. 🇯🇵 MẸO: PWHT ở Nhật do công ty xử lý nhiệt chuyên (熱処理業者) thực hiện bằng chăn điện trở kiểm soát nhiệt hoặc lò. Toàn bộ chu trình nung và nguội được ghi trên máy ghi biểu đồ nhiệt (温度記録計) — biểu đồ này thành tài liệu chất lượng vĩnh viễn. Là thợ, bạn nên biết yêu cầu PWHT trước khi hàn để không sửa hay đính hàn SAU chu trình PWHT — những cái đó sẽ vô hiệu hóa xử lý.",
+    },
+    id: {
+      q: "Apa yang dilakukan 'PWHT' (Post-Weld Heat Treatment / 溶接後熱処理) dan kapan diperlukan di Jepang?",
+      opts: [
+        "PWHT = inspeksi visual akhir yang diperlukan sebelum pengiriman",
+        "PWHT = membersihkan jalur las dengan sikat kawat setelah dingin",
+        "PWHT = memanaskan seluruh weldment ke suhu tertentu (mis. 600°C) dan menahannya, lalu mendinginkan perlahan — menghilangkan tegangan sisa, melunakkan HAZ keras, melepaskan hidrogen. Diperlukan untuk bejana tekan, boiler, dan struktur kritis oleh kode JIS/ASME",
+        "PWHT = mengoleskan cat anti-karat setelah mengelas",
+      ],
+      exp: "PWHT (Post-Weld Heat Treatment / 溶接後熱処理) = perlakuan panas pelepas tegangan. Weldment yang selesai dipanaskan ke ~600–700°C (untuk baja karbon), ditahan waktu tertentu, lalu didinginkan perlahan. Efek: tegangan sisa dihilangkan (↓ distorsi, ↓ risiko korosi tegangan), HAZ keras dilunakkan (↓ risiko retak dingin), hidrogen dilepaskan. Wajib untuk bejana boiler (ボイラー), peralatan tekan, dan sambungan struktur tertentu. 🇯🇵 TIPS: PWHT di Jepang dilakukan perusahaan perlakuan panas khusus (熱処理業者 / netsushori-gyosha) memakai selimut resistansi listrik terkontrol suhu atau tungku. Seluruh siklus pemanasan dan pendinginan direkam pada perekam grafik suhu (温度記録計 / ondo-kiroku-kei) — grafik ini menjadi dokumen mutu permanen. Sebagai tukang, Anda harus tahu persyaratan PWHT sebelum mengelas agar tak menerapkan perbaikan atau tack las SETELAH siklus PWHT — itu akan membatalkan perlakuannya.",
+    },
+  },
+  519: {
+    vi: {
+      q: "Khác biệt chính giữa làm thợ hàn ở Nhật so với các nước khác mà lao động nước ngoài nên biết là gì?",
+      opts: [
+        "Công ty Nhật không bao giờ thuê thợ hàn nước ngoài — điều đó không thể",
+        "Nhật dùng kỹ thuật hàn hoàn toàn khác không thấy ở đâu khác",
+        "Thợ Nhật làm giờ dài hơn nhưng kiếm ít hơn",
+        "Nhật có hệ chứng chỉ rất nghiêm — cả việc đơn giản (mài, vận hành cẩu) cũng cần chứng chỉ pháp lý cụ thể. Văn hóa an toàn ăn sâu. Tiêu chuẩn chất lượng cực cao. Làm lại (取り直し) tốn kém uy tín",
+      ],
+      exp: "Khác biệt chính ở Nhật: 1) Văn hóa chứng chỉ — mỗi dụng cụ/việc có yêu cầu chứng chỉ pháp lý. 2) Chú trọng chất lượng — kiểm NDT kỹ lưỡng và làm lại làm tổn hại uy tín đáng kể. 3) Giao tiếp đội — học các từ Nhật then chốt (như trong game này) là thiết yếu cho an toàn và hiệu quả. 4) Tôn trọng quy trình — tuân WPS và hướng dẫn công việc chính xác là không thương lượng. 🇯🇵 MẸO: Một trong những câu mạnh nhất bạn có thể học là 'Wakaranai toki wa, sumimasen, shitsumon shite mo ii desu ka?' (分からない時は、すみません、質問してもいいですか？ / Khi không hiểu, xin lỗi, tôi hỏi được không?). Trong văn hóa chế tạo an toàn cao của Nhật, hỏi trước khi bắt đầu được nể — giả định và gây lỗi chất lượng thì không. Đừng ngại hỏi. Cộng đồng hàn Nhật thực sự nể người cố gắng và hỏi thông minh.",
+    },
+    id: {
+      q: "Apa perbedaan utama bekerja sebagai tukang las di Jepang vs negara lain yang harus diketahui pekerja asing?",
+      opts: [
+        "Perusahaan Jepang tak pernah merekrut tukang las asing — itu tak mungkin",
+        "Jepang memakai teknik las yang sama sekali berbeda dan tak ada di tempat lain",
+        "Tukang Jepang bekerja lebih lama tapi berpenghasilan lebih sedikit",
+        "Jepang punya sistem kualifikasi berbasis sertifikat yang sangat ketat — bahkan tugas sederhana (menggerinda, mengoperasikan crane) memerlukan sertifikat legal tertentu. Budaya keselamatan tertanam dalam. Standar mutu sangat tinggi. Rework (取り直し) mahal bagi reputasi",
+      ],
+      exp: "Perbedaan utama di Jepang: 1) Budaya sertifikat — tiap alat/tugas punya syarat kualifikasi legal. 2) Fokus mutu — inspeksi NDT menyeluruh dan rework merusak reputasi Anda secara signifikan. 3) Komunikasi tim — mempelajari istilah Jepang kunci (seperti dalam gim ini) esensial untuk keselamatan dan efisiensi. 4) Menghormati proses — mengikuti WPS dan instruksi kerja dengan persis tak bisa ditawar. 🇯🇵 TIPS: Salah satu frasa paling ampuh yang bisa Anda pelajari sebagai tukang las asing di Jepang adalah 'Wakaranai toki wa, sumimasen, shitsumon shite mo ii desu ka?' (分からない時は、すみません、質問してもいいですか？ / Saat saya tak paham, maaf, boleh saya bertanya?). Dalam budaya manufaktur berkeselamatan tinggi Jepang, bertanya sebelum memulai tugas dihormati — membuat asumsi dan menimbulkan masalah mutu tidak. Jangan pernah takut bertanya. Komunitas las di Jepang benar-benar menghormati orang yang berusaha keras dan bertanya cerdas.",
+    },
+  },
+  520: {
+    vi: {
+      q: "Bạn đã thành thạo mọi nội dung trong game này. Bước TIẾP THEO để thăng tiến sự nghiệp hàn ở Nhật nên là gì?",
+      opts: [
+        "Thi thực hành JIS 専門級 (Cấp chuyên môn) cho phương pháp hàn chính, tích lũy 実務経験 (kinh nghiệm thực tế), rồi nhắm N-2P (ống mọi tư thế) và cuối cùng chứng chỉ Thợ hàn nồi hơi hoặc AW",
+        "Đăng ký ngay kỳ thi WES Cấp Đặc biệt",
+        "Nộp đơn việc hàn dưới nước mà không chuẩn bị thêm",
+        "Không còn gì để học — bạn đã là chuyên gia",
+      ],
+      exp: "Kiến thức là Bước 1. Bây giờ: 1) Thi thực hành JIS 専門級 cho FCAW hoặc SMAW. 2) Tích lũy 実務経験 (kinh nghiệm làm việc thực) — chất lượng hơn số lượng. 3) Nhắm N-2P (ống mọi tư thế) — bài thi JIS được nể nhất. 4) Tích lũy: Tamakake + Cẩu + Xe nâng. 5) Cân nhắc AW hoặc Thợ hàn nồi hơi tùy lĩnh vực. Sự nghiệp của bạn = chứng chỉ + hồ sơ chất lượng. Gambatte! (頑張れ！) 🇯🇵 MẸO: Bậc thầy hàn Nhật thường nói 'Shokunin ni naru no wa, issho no shigoto da' (職人になるのは、一生の仕事だ / Trở thành nghệ nhân là công việc cả đời). Không có đường tắt đến tinh thông — nhưng mỗi chứng chỉ bạn đạt, mỗi mối hàn chất lượng bạn làm, mỗi từ Nhật bạn học là một viên gạch cho sự nghiệp đưa bạn đi khắp thế giới. Bạn đã bắt đầu game này. Giờ hãy đi xây thứ thật.",
+    },
+    id: {
+      q: "Anda telah menguasai semua konten dalam gim ini. Apa langkah BERIKUTNYA untuk memajukan karier las Anda di Jepang?",
+      opts: [
+        "Ikuti uji praktik JIS 専門級 (Grade Spesialis) untuk proses las utama Anda, kumpulkan 実務経験 (pengalaman kerja praktik), lalu tuju N-2P (pipa semua posisi) dan akhirnya sertifikasi Tukang Las Boiler atau AW",
+        "Segera daftar ujian WES Grade Khusus",
+        "Lamar pekerjaan las bawah air tanpa persiapan lebih lanjut",
+        "Tak ada lagi yang perlu dipelajari — Anda kini ahli",
+      ],
+      exp: "Pengetahuan adalah Langkah 1. Sekarang: 1) Ikuti uji praktik JIS 専門級 untuk FCAW atau SMAW. 2) Bangun 実務経験 (jitsumukeiken = pengalaman kerja praktik) — mutu lebih penting dari kuantitas. 3) Tuju N-2P (pipa semua posisi) — uji JIS paling dihormati. 4) Kumpulkan: Tamakake + Crane + Forklift. 5) Pertimbangkan AW atau Tukang Las Boiler tergantung bidang kerja Anda. Karier Anda = sertifikasi Anda + rekam mutu Anda. Gambatte! (頑張れ！) 🇯🇵 TIPS: Para master las Jepang sering berkata 'Shokunin ni naru no wa, issho no shigoto da' (職人になるのは、一生の仕事だ / Menjadi pengrajin adalah pekerjaan seumur hidup). Tak ada jalan pintas menuju penguasaan — tapi tiap sertifikat yang Anda raih, tiap las bermutu yang Anda buat, dan tiap kata Jepang yang Anda pelajari adalah bata bagi karier yang akan membawa Anda ke mana pun di dunia. Anda memulai gim ini. Sekarang bangunlah yang nyata.",
+    },
+  },
 };
