@@ -2316,4 +2316,224 @@ export const Q_I18N = {
       exp: "Pitto (ピット) = pori gas terbuka di permukaan, terlihat saat VT sebagai kawah kecil di muka las. Buroohoru (ブローホール) = pori gas internal, sepenuhnya tertutup di dalam las dan tak terlihat mata — VT akan melewatkannya sepenuhnya. RT bisa menampakkan blowhole internal sebagai bintik gelap bulat pada film, dan tergantung geometri mungkin juga menunjukkan bukti pit permukaan. Kedua cacat berbagi penyebab akar yang sama (kelembapan, kontaminasi, kegagalan pelindung) tapi berbeda pada DI MANA gas terperangkap saat pembekuan. 🇯🇵 TIPS: Pit (ピット) pada permukaan las akhir adalah kegagalan VT otomatis dalam uji JIS Jepang. Setelah menyelesaikan pass akhir, tukang las Jepang memindai permukaan jalur dengan cermat sebelum memanggil inspektor — pencegahan berarti memastikan tak ada cat, minyak, karat, atau kelembapan pada logam dasar sebelum pass akhir.",
     },
   },
+  501: {
+    vi: {
+      q: "Một thực tập sinh mới nói rằng không có chứng chỉ 'JIS Yosetsu-gino-sha' (JIS溶接技能者) thì hàn ở Nhật là bất hợp pháp, giống như hàn mà không có chứng chỉ An toàn Hàn hồ quang. Điều này đúng không?",
+      opts: [
+        "Đúng — cả hai đều là giấy phép nhà nước bắt buộc với hiệu lực pháp lý như nhau",
+        "Không — JIS Yosetsu-gino-sha là chứng nhận kỹ năng của JWES (日本溶接協会), không phải giấy phép bắt buộc theo luật; nó được CHỦ LAO ĐỘNG YÊU CẦU rộng rãi nhưng bạn được phép hàn hợp pháp mà không có nó miễn là có chứng chỉ an toàn bắt buộc (An toàn Hàn hồ quang)",
+        "Không — JIS Yosetsu-gino-sha bắt buộc, nhưng An toàn Hàn hồ quang là tùy chọn",
+        "Đúng, nhưng chỉ với việc bình áp lực và nồi hơi, không phải chế tạo thông thường",
+      ],
+      exp: "JIS Yosetsu-gino-sha (JIS溶接技能者) do JWES (日本溶接協会) cấp và chứng minh KỸ NĂNG hàn qua thi thực hành — nhưng KHÔNG phải giấy phép nhà nước bắt buộc theo luật. Ngược lại, chứng chỉ An toàn Hàn hồ quang (アーク溶接特別教育) LÀ bắt buộc theo luật lao động trước khi chạm máy hàn. Nhầm hai cái — cho rằng chứng nhận JIS là yêu cầu pháp lý như đào tạo an toàn — là hiểu lầm phổ biến của người mới. 🇯🇵 MẸO: Khi xin việc, thẻ chứng nhận JIS (認定証 / nintei-sho) vẫn là thứ chủ hỏi đầu tiên, dù không phải yêu cầu pháp lý — đó là kỳ vọng tiêu chuẩn ngành, không phải luật.",
+    },
+    id: {
+      q: "Seorang peserta magang baru mengklaim bahwa tanpa kualifikasi 'JIS Yosetsu-gino-sha' (JIS溶接技能者), mengelas di Jepang ilegal, sama seperti mengelas tanpa sertifikat Pelatihan Keselamatan Las Busur. Apakah ini benar?",
+      opts: [
+        "Ya — keduanya lisensi pemerintah wajib secara hukum dengan bobot hukum identik",
+        "Tidak — JIS Yosetsu-gino-sha adalah sertifikasi keterampilan JWES (日本溶接協会), bukan lisensi wajib hukum; ia luas DIWAJIBKAN PEMBERI KERJA tapi Anda boleh mengelas secara legal tanpanya asalkan memegang pelatihan keselamatan wajib hukum (Pelatihan Keselamatan Las Busur)",
+        "Tidak — JIS Yosetsu-gino-sha wajib, tapi Pelatihan Keselamatan Las Busur opsional",
+        "Ya, tapi hanya untuk pekerjaan bejana tekan dan boiler, bukan fabrikasi umum",
+      ],
+      exp: "JIS Yosetsu-gino-sha (JIS溶接技能者) diterbitkan JWES (日本溶接協会 / Japan Welding Engineering Society) dan membuktikan KETERAMPILAN las lewat uji praktik — tapi ini BUKAN lisensi pemerintah wajib hukum. Sebaliknya, Sertifikat Pelatihan Keselamatan Las Busur (アーク溶接特別教育) WAJIB secara hukum ketenagakerjaan sebelum menyentuh mesin las. Mengacaukan keduanya — mengira sertifikasi JIS syarat hukum seperti pelatihan keselamatan — adalah kesalahpahaman umum di antara peserta magang baru. 🇯🇵 TIPS: Saat melamar kerja, kartu sertifikasi JIS (認定証 / nintei-sho) tetap hal pertama yang ditanyakan pemberi kerja, meski bukan syarat hukum — itu ekspektasi standar industri, bukan hukum.",
+    },
+  },
+  502: {
+    vi: {
+      q: "Một thợ chỉ có chứng chỉ JIS 'Kihon-kyu' (基本級 / Cấp cơ bản). Giám sát hỏi anh ấy có nhận việc cần hàn 2G (tư thế ngang) không. Chỉ dựa vào Cấp cơ bản, anh ấy có thể không?",
+      opts: [
+        "Không — Cấp cơ bản không cho phép hàn BẤT KỲ việc nào, kể cả tư thế bằng",
+        "Được — Cấp cơ bản tự động bao mọi tư thế một khi đậu thi tư thế bằng ban đầu",
+        "Không — Cấp cơ bản (基本級) CHỈ bao tư thế bằng (下向き / 1G); ngang, đứng, trần và ống cần chứng chỉ Senmon-kyu (専門級 / Cấp chuyên môn)",
+        "Được, nhưng chỉ khi có ít nhất 2 năm kinh nghiệm để bù",
+      ],
+      exp: "Kihon-kyu (基本級) = Cấp cơ bản, điểm khởi đầu chứng chỉ JIS, CHỈ bao tư thế bằng (下向き / 1G). Senmon-kyu (専門級) = Cấp chuyên môn, bao thêm các tư thế: ngang (2G), đứng (3G), trần (4G) và ống (P). Kinh nghiệm không thay được phạm vi chứng chỉ — việc 2G theo luật cần thi Cấp chuyên môn, bất kể thợ tự thấy kinh nghiệm thế nào. 🇯🇵 MẸO: Nhiều lao động nước ngoài bắt đầu với JIS Cấp cơ bản vì thi tư thế bằng dễ tiếp cận nhất, nhưng công trường Nhật nhanh chóng hỏi 'tate-muki dekiru?' (立向きできる？ / hàn đứng được không?) — Cấp chuyên môn mở ra nhiều cơ hội việc hơn.",
+    },
+    id: {
+      q: "Seorang tukang hanya memegang sertifikasi JIS 'Kihon-kyu' (基本級 / Grade Dasar). Supervisor bertanya apakah ia bisa mengambil pekerjaan yang butuh las 2G (posisi mendatar). Bisakah ia, hanya berdasarkan Grade Dasar?",
+      opts: [
+        "Tidak — Grade Dasar tak mengualifikasi dia untuk pekerjaan las APA PUN, termasuk posisi datar",
+        "Ya — Grade Dasar otomatis mencakup semua posisi begitu lulus uji posisi datar awal",
+        "Tidak — Grade Dasar (基本級) HANYA mencakup posisi datar (下向き / 1G); mendatar, tegak, overhead, dan pipa memerlukan sertifikasi Senmon-kyu (専門級 / Grade Spesialis)",
+        "Ya, tapi hanya jika ia punya minimal 2 tahun pengalaman untuk mengompensasi",
+      ],
+      exp: "Kihon-kyu (基本級) = Grade Dasar, titik masuk sertifikasi JIS, HANYA mencakup posisi datar (下向き / 1G). Senmon-kyu (専門級) = Grade Spesialis, yang mencakup posisi tambahan: mendatar (2G), tegak (3G), overhead (4G), dan pipa (P). Pengalaman kerja tak menggantikan cakupan sertifikasi — pekerjaan 2G secara hukum butuh uji Grade Spesialis, tak peduli seberapa berpengalaman tukang merasa. 🇯🇵 TIPS: Banyak pekerja asing mulai dengan JIS Grade Dasar karena uji posisi datar paling mudah dijangkau, tapi lokasi Jepang cepat bertanya 'tate-muki dekiru?' (立向きできる？ / bisa tegak?) — Grade Spesialis membuka jauh lebih banyak peluang kerja.",
+    },
+  },
+  503: {
+    vi: {
+      q: "Mã thi 'N-2F' nghĩa là gì trong chứng chỉ hàn JIS?",
+      opts: [
+        "N = Không rãnh, 2 = tấm dày 2mm, F = chỉ lượt cuối",
+        "N = Kim loại màu, 2 = mối hai lượt, F = phương pháp FCAW",
+        "N = Thép hợp kim niken, 2 = mối rãnh tấm, F = tư thế bằng",
+        "N = Thép mềm (軟鋼), 2 = mối rãnh tấm (厚板突合せ), F = tư thế bằng (下向き). Mối rãnh tư thế bằng cơ bản trên tấm thép mềm",
+      ],
+      exp: "Mã thi JIS N-2F: N = 軟鋼 (Nankoo = thép mềm), 2 = 厚板突合せ (mối rãnh tấm), F = 下向き (tư thế bằng). Các mã phổ biến khác: N-2H (ngang), N-2V (đứng), N-2O (trần), N-2P (ống, mọi tư thế — khó nhất). Mã cho biết chính xác bạn đã đậu thi gì. 🇯🇵 MẸO: Khi thợ Nhật giới thiệu chuyên môn, họ thường nói mã JIS: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Tôi có N-2F và N-2V). Điều này lập tức truyền đạt năng lực cho bất kỳ giám sát Nhật nào. Hãy nhớ mã của mình và dùng tự tin — nó cho thấy bạn hiểu hệ thống chứng chỉ Nhật.",
+    },
+    id: {
+      q: "Apa arti kode uji 'N-2F' dalam sertifikasi las JIS?",
+      opts: [
+        "N = Tanpa alur, 2 = tebal pelat 2mm, F = hanya pass final",
+        "N = Non-ferro, 2 = las dua pass, F = proses FCAW",
+        "N = Baja paduan nikel, 2 = las alur pelat, F = posisi datar",
+        "N = Baja lunak (軟鋼), 2 = las alur pelat (厚板突合せ), F = posisi datar (下向き). Las alur posisi datar dasar pada pelat baja lunak",
+      ],
+      exp: "Kode uji JIS N-2F: N = 軟鋼 (Nankoo = baja lunak), 2 = 厚板突合せ (las alur pelat), F = 下向き (posisi datar). Kode umum lain: N-2H (mendatar), N-2V (tegak), N-2O (overhead), N-2P (pipa, semua posisi — tersulit). Kode memberi tahu persis uji apa yang Anda lulus. 🇯🇵 TIPS: Saat tukang las Jepang memperkenalkan diri secara profesional, mereka sering menyebut kode JIS-nya: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Saya memegang N-2F dan N-2V). Ini langsung mengomunikasikan kemampuan Anda ke supervisor Jepang mana pun. Hafalkan kode Anda dan gunakan dengan percaya diri — itu menunjukkan Anda memahami sistem kualifikasi Jepang.",
+    },
+  },
+  504: {
+    vi: {
+      q: "'N-2P' trong chứng chỉ JIS là gì và vì sao được coi là danh giá nhất?",
+      opts: [
+        "N-2P = Thép mềm, ống, mọi tư thế — hàn ống cố định nằm ngang ở mọi tư thế (bằng + đứng + trần) trong một bài thi. Tỷ lệ đậu ~30%. Chuẩn vàng cho thợ Nhật",
+        "N-2P = Thi 2 tư thế thường — hơi khó hơn cơ bản",
+        "N-2P = Không phá hủy, kiểm tra 2 điểm",
+        "N-2P = Khe hẹp, quy trình 2 lượt — kỹ thuật hàn nhanh",
+      ],
+      exp: "N-2P = thép mềm (N) ống (P) mọi tư thế. Một ống cố định nằm ngang được hàn liên tục qua cả bốn tư thế: bằng ở đỉnh, đứng ở cạnh, trần ở đáy — tất cả trong một lượt. Lượt chân (初層) phải hoàn hảo để bọng ngược ngấu hoàn toàn (裏波). Được coi là chứng chỉ JIS khó và danh giá nhất. Được nể trọng rộng rãi trong ngành Nhật. 🇯🇵 MẸO: Ở Nhật, thợ có N-2P được nể thật sự trên công trường. Đàn anh có thể nói 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / người đó có N-2P) như một dấu hiệu ưu tú. Nếu đậu N-2P, ghi nó vào lịch sử làm việc (職歴) là phù hợp — nó lập tức làm bạn nổi bật trong thị trường việc hàn cạnh tranh của Nhật.",
+    },
+    id: {
+      q: "Apa itu 'N-2P' dalam sertifikasi JIS dan mengapa dianggap paling bergengsi?",
+      opts: [
+        "N-2P = Baja lunak, pipa, semua posisi — mengelas pipa tetap horizontal di semua posisi (datar + tegak + overhead) dalam satu uji. Tingkat lulus ~30%. Standar emas tukang las Jepang",
+        "N-2P = Uji 2-posisi biasa — sedikit lebih sulit dari dasar",
+        "N-2P = Non-destruktif, inspeksi 2-titik",
+        "N-2P = Celah sempit, proses 2-pass — teknik las cepat",
+      ],
+      exp: "N-2P = baja lunak (N) pipa (P) semua posisi. Pipa tetap horizontal dilas menerus melalui keempat posisi: datar di atas, tegak di sisi, overhead di bawah — semua dalam satu jalur. Root pass (初層) harus dieksekusi sempurna untuk penetrasi back bead lengkap (裏波). Dianggap sertifikasi JIS tersulit dan paling bergengsi. Dihormati luas di industri Jepang. 🇯🇵 TIPS: Di Jepang, tukang yang memegang N-2P diperlakukan dengan hormat tulus di lokasi. Pekerja senior mungkin berkata 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / orang itu memegang N-2P) sebagai tanda kehormatan. Jika Anda lulus N-2P, pantas mencantumkannya di riwayat kerja (職歴) — itu langsung membuat Anda menonjol di pasar kerja las Jepang yang kompetitif.",
+    },
+  },
+  505: {
+    vi: {
+      q: "Chứng chỉ hàn JIS hết hạn mỗi 2 năm. Điều gì xảy ra nếu bạn KHÔNG gia hạn trước khi hết hạn?",
+      opts: [
+        "Bạn nộp phạt nhỏ nhưng vẫn làm việc tiếp",
+        "Chứng chỉ trở nên VÔ HIỆU. Bạn không thể xưng có chứng chỉ JIS cho công việc. Phải thi lại để lấy lại. Chủ Nhật kiểm ngày chứng chỉ thường xuyên",
+        "Bạn tự động được ân hạn 6 tháng",
+        "Không gì cả — chứng chỉ có hiệu lực suốt đời một khi đã lấy",
+      ],
+      exp: "Chứng chỉ hàn JIS (JIS溶接技能者認証) có hiệu lực 2 năm. Trước khi hết hạn, phải hoàn thành thi gia hạn (更新試験). Nếu hết hạn, chứng chỉ không còn hiệu lực — không thể tự xưng là có chứng chỉ JIS. Ở Nhật, chủ và người kiểm tra kiểm ngày hết hạn. Gia hạn đơn giản nhưng phải làm đúng hạn. 🇯🇵 MẸO: Đặt nhắc lịch 3 tháng trước ngày hết hạn JIS (有効期限). Thi gia hạn tổ chức định kỳ — nếu bỏ lỡ cửa sổ gia hạn và để hết hạn, phải thi lại toàn bộ, không chỉ gia hạn. JWES đăng lịch thi trên website. Nhiều công ty Nhật xếp bạn vào danh sách 'không được làm mối quan trọng' ngay khi chứng chỉ hết hạn — kể cả trễ một ngày cũng quan trọng.",
+    },
+    id: {
+      q: "Sertifikasi las JIS kedaluwarsa tiap 2 tahun. Apa yang terjadi jika Anda TIDAK memperbaruinya sebelum kedaluwarsa?",
+      opts: [
+        "Anda membayar denda kecil tapi terus bekerja",
+        "Sertifikasi Anda menjadi TIDAK BERLAKU. Anda tak bisa mengklaim sertifikasi JIS untuk pekerjaan. Anda harus uji ulang untuk mendapatkannya kembali. Pemberi kerja Jepang memeriksa tanggal sertifikasi secara rutin",
+        "Anda otomatis dapat masa tenggang 6 bulan",
+        "Tak ada — sertifikasi berlaku seumur hidup begitu diperoleh",
+      ],
+      exp: "Sertifikasi las JIS (JIS溶接技能者認証) berlaku 2 tahun. Sebelum kedaluwarsa, Anda harus menyelesaikan uji pembaruan (更新試験). Jika kedaluwarsa, sertifikasi tak lagi berlaku — Anda tak bisa menyatakan diri bersertifikat JIS. Di Jepang, pemberi kerja dan inspektor memeriksa tanggal kedaluwarsa. Pembaruan mudah tapi harus tepat waktu. 🇯🇵 TIPS: Pasang pengingat kalender 3 bulan sebelum tanggal kedaluwarsa JIS (有効期限). Uji pembaruan diadakan berkala — jika Anda melewatkan jendela pembaruan dan membiarkan kedaluwarsa, Anda harus mengikuti uji penuh lagi, bukan hanya pembaruan. JWES menerbitkan tanggal uji di situs mereka. Banyak perusahaan Jepang menempatkan Anda pada daftar 'tak bisa mengerjakan las kritis' begitu sertifikat kedaluwarsa — bahkan satu hari pun penting.",
+    },
+  },
+  506: {
+    vi: {
+      q: "'AW Kentei' (AW検定) là gì và dành cho ngành nào?",
+      opts: [
+        "AW = Hàn tự động — cho người vận hành robot hàn",
+        "AW = Hàn hồ quang — chứng chỉ hàn chung cho mọi ngành",
+        "AW = Hàn kết cấu kiến trúc (建築鉄骨溶接技量検定) — chứng chỉ hàn thép kết cấu trong tòa nhà. Chỉ có hiệu lực 1 năm — phải gia hạn hằng năm",
+        "AW = Hàn nhôm — cho ứng dụng hàng không",
+      ],
+      exp: "AW Kentei (AW検定) = Chứng chỉ Hàn Kiến trúc (建築鉄骨溶接技量検定). Chuyên cho chế tạo thép kết cấu trong tòa nhà. Do Hiệp hội AW Kentei quản lý. Thi mỗi năm một lần (tháng 6–9). Hiệu lực: chỉ 1 năm — phải gia hạn mỗi năm. Gồm: hàn nhà máy, hàn hiện trường, hàn ống và người vận hành robot hàn. 🇯🇵 MẸO: AW Kentei là chuẩn cho ai xây nhà khung thép (鉄骨造) ở Nhật. Vì chỉ hiệu lực 1 năm và thi mỗi năm một lần, bỏ lỡ cửa sổ gia hạn có thể mất cả năm đủ điều kiện. Nhà thầu xây dựng Nhật giữ danh sách nghiêm ngặt thợ có AW cho mỗi dự án — thẻ AW của bạn bị kiểm trước mỗi mối quan trọng. Nếu làm xây dựng, AW Kentei quan trọng ngang JIS.",
+    },
+    id: {
+      q: "Apa itu 'AW Kentei' (AW検定) dan untuk industri apa?",
+      opts: [
+        "AW = Las Otomatis — untuk operator las robotik",
+        "AW = Las Busur — sertifikasi las umum untuk semua industri",
+        "AW = Las Arsitektur (建築鉄骨溶接技量検定) — sertifikasi untuk las baja struktur pada bangunan. Hanya berlaku 1 tahun — harus diperbarui tiap tahun",
+        "AW = Las Aluminium — untuk aplikasi kedirgantaraan",
+      ],
+      exp: "AW Kentei (AW検定) = Sertifikasi Las Arsitektur (建築鉄骨溶接技量検定). Khusus untuk fabrikasi baja struktur pada bangunan. Dikelola oleh Asosiasi AW Kentei. Uji sekali per tahun (Juni–September). Berlaku: hanya 1 tahun — harus diperbarui tiap tahun. Mencakup: las pabrik, las lapangan, las pipa, dan kategori operator las robot. 🇯🇵 TIPS: AW Kentei adalah standar bagi siapa pun yang membangun gedung rangka baja (鉄骨造) di Jepang. Karena hanya berlaku 1 tahun dan diuji setahun sekali, melewatkan jendela pembaruan bisa membuat Anda kehilangan kelayakan satu tahun penuh. Kontraktor bangunan Jepang menyimpan daftar ketat tukang bersertifikat AW untuk tiap proyek — kartu AW Anda diperiksa sebelum tiap penugasan sambungan kritis. Jika Anda bekerja di konstruksi, AW Kentei sama pentingnya dengan JIS.",
+    },
+  },
+  507: {
+    vi: {
+      q: "'Futsuu-Boilaa-Yosetsu-shi' (普通ボイラー溶接士) có thể hàn gì — và giới hạn chiều dày tấm chính là gì?",
+      opts: [
+        "Chỉ hàn hệ áp thấp dưới 0.1 MPa",
+        "Hàn mọi bộ phận nồi hơi và bình áp lực không giới hạn",
+        "Chỉ hàn ống — không hàn tấm phẳng",
+        "Chỉ hàn bộ phận nồi hơi và bình áp lực đến tấm dày 25mm. Với 25mm+ = phải có Tokubetsu-Boilaa (特別ボイラー溶接士)",
+      ],
+      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Thợ hàn nồi hơi thường. Có thể hàn bộ phận nồi hơi và bình áp lực đến tấm dày 25mm. Với tấm TRÊN 25mm, cần cấp Đặc biệt (特別). Giấy phép nhà nước — bắt buộc theo luật. Thi thực hành: mối rãnh ngang, 60 phút. NDT: cần RT + thử uốn. 🇯🇵 MẸO: Giấy phép nhà nước Thợ hàn nồi hơi (ボイラー溶接士 / thi quốc gia, không phải JWES) do Bộ Y tế, Lao động và Phúc lợi cấp và quản lý qua JISHA (中央労働災害防止協会). Là chứng chỉ quốc gia — không giống JIS. Nếu làm nồi hơi, bình áp lực hay ống nhà máy hóa chất ở Nhật, bạn sẽ cần giấy phép này. Thi cần đậu cả bài lý thuyết LẪN thực hành — bắt đầu học luật (ボイラー及び圧力容器安全規則) song song với kỹ năng thực hành.",
+    },
+    id: {
+      q: "Apa yang bisa dilas 'Futsuu-Boilaa-Yosetsu-shi' (普通ボイラー溶接士) — dan apa batasan tebal pelat kuncinya?",
+      opts: [
+        "Hanya bisa mengelas sistem tekanan rendah di bawah 0.1 MPa",
+        "Bisa mengelas semua bagian boiler dan bejana tekan tanpa batasan",
+        "Hanya bisa mengelas pipa — bukan pelat datar",
+        "Bisa mengelas bagian boiler dan bejana tekan hingga tebal pelat 25mm saja. Untuk 25mm+ = harus punya Tokubetsu-Boilaa (特別ボイラー溶接士)",
+      ],
+      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Tukang Las Boiler Standar. Bisa mengelas komponen boiler dan bejana tekan hingga tebal pelat 25mm. Untuk pelat DI ATAS 25mm, diperlukan grade Tokubetsu (特別). Lisensi nasional — wajib hukum. Uji praktik: las alur mendatar, 60 menit. NDT: RT + uji tekuk diperlukan. 🇯🇵 TIPS: Lisensi nasional Tukang Las Boiler (ボイラー溶接士 / ujian nasional, bukan JWES) diterbitkan Kementerian Kesehatan, Tenaga Kerja, dan Kesejahteraan serta dikelola melalui JISHA (中央労働災害防止協会). Ini kualifikasi nasional — tak sama dengan JIS. Jika Anda bekerja pada boiler, bejana tekan, atau pipa pabrik kimia di Jepang, Anda akan membutuhkan lisensi ini. Ujian mensyaratkan lulus uji pengetahuan tertulis DAN uji praktik — mulailah belajar hukum (ボイラー及び圧力容器安全規則) bersama keterampilan praktik Anda.",
+    },
+  },
+  508: {
+    vi: {
+      q: "Cần HAI giấy phép nào để làm 'Thợ hàn dưới nước' (水中溶接士) ở Nhật?",
+      opts: [
+        "Giấy phép Lặn (潜水士 / Sensui-shi) + Chứng chỉ hàn (JIS hoặc tương đương). Cả hai bắt buộc — không được lặn VÀ hàn hợp pháp nếu thiếu một",
+        "Bất kỳ hai chứng chỉ an toàn nào",
+        "Chứng chỉ JIS + Bằng lái xe",
+        "Chỉ Thợ hàn nồi hơi + An toàn Hàn hồ quang",
+      ],
+      exp: "Thợ hàn dưới nước = Giấy phép lặn quốc gia Sensui-shi (潜水士) + chứng chỉ hàn (khuyến nghị JIS cấp chuyên môn). Giấy phép lặn chỉ cần thi viết (không thực hành) — tỷ lệ đậu ~75%. Kỹ năng hàn rồi phải áp dụng trong môi trường hoàn toàn khác. Kết hợp rất hiếm. Thu nhập năm: 700–1.000 vạn yên. Thợ lặn bão hòa hàng đầu: 1.000–1.500 vạn yên. 🇯🇵 MẸO: Ở Nhật, việc hàn dưới nước (水中溶接) tập trung ở cảng (港湾), kết cấu ngoài khơi và sửa đập. Chủ thuê thợ hàn dưới nước thường trả chi phí di chuyển và sinh hoạt, cộng phụ cấp nguy hiểm. Cộng đồng thợ hàn dưới nước đủ điều kiện ở Nhật rất nhỏ — một khi được biết, bạn sẽ được gọi. Xây dựng uy tín về độ tin cậy và ý thức an toàn còn giá trị hơn bất kỳ bằng cấp đơn lẻ nào trong lĩnh vực này.",
+    },
+    id: {
+      q: "DUA lisensi apa yang diperlukan untuk bekerja sebagai 'Tukang Las Bawah Air' (水中溶接士) di Jepang?",
+      opts: [
+        "Lisensi Menyelam (潜水士 / Sensui-shi) + kualifikasi las (JIS atau setara). Keduanya wajib — Anda tak bisa menyelam DAN mengelas secara legal tanpa keduanya",
+        "Dua sertifikat pelatihan keselamatan apa saja",
+        "Sertifikasi JIS + SIM",
+        "Tukang Las Boiler + Pelatihan Keselamatan Las Busur saja",
+      ],
+      exp: "Tukang Las Bawah Air = Lisensi menyelam nasional Sensui-shi (潜水士) + kualifikasi las (disarankan JIS grade spesialis). Lisensi menyelam hanya butuh ujian tertulis (tanpa praktik) — tingkat lulus ~75%. Keterampilan las lalu harus diterapkan di lingkungan yang sama sekali berbeda. Kombinasi sangat langka. Pendapatan tahunan: ¥7–10 juta. Penyelam saturasi teratas: ¥10–15 juta. 🇯🇵 TIPS: Di Jepang, pekerjaan las bawah air (水中溶接) terpusat di pelabuhan (港湾), struktur lepas pantai, dan perbaikan bendungan. Pemberi kerja yang merekrut tukang las bawah air biasanya membayar relokasi dan biaya hidup, plus tunjangan bahaya. Komunitas tukang las bawah air berkualifikasi di Jepang sangat kecil — begitu dikenal, Anda akan dipanggil. Membangun reputasi keandalan dan kesadaran keselamatan lebih berharga daripada kredensial tunggal mana pun di bidang ini.",
+    },
+  },
+  509: {
+    vi: {
+      q: "'WES' trong hàn Nhật là gì, và đại diện cho cấp chứng chỉ nào?",
+      opts: [
+        "WES = Tiêu chuẩn Thiết bị Hàn — chứng chỉ cho máy hàn",
+        "WES = Welding Engineering Standard — chứng chỉ của Hiệp hội Kỹ thuật Hàn Nhật cho kỹ sư quản lý hàn (WES 8103). Cấp: 3 → 2 → 1 → Đặc biệt",
+        "WES = Western Engineering System — chứng chỉ Mỹ dùng ở Nhật",
+        "WES = Welding Examination System — chương trình đào tạo an toàn cơ bản",
+      ],
+      exp: "WES (Welding Engineering Standard) = chứng chỉ của Hiệp hội Kỹ thuật Hàn Nhật cho quản lý và kỹ sư hàn. Cấp WES 8103: Cấp 3 (基礎), Cấp 2 (giám sát), Cấp 1 (quản lý), Đặc biệt (特別級 — tương thích ISO, tương đương quốc tế). WES dành cho kỹ sư QUẢN LÝ và GIÁM SÁT hàn, không nhất thiết trực tiếp hàn. Lương cao: 70–90+ vạn yên/năm. 🇯🇵 MẸO: Nhiều thợ Nhật kinh nghiệm chuyển sang vai trò giám sát theo đuổi WES Cấp 2 hoặc 1. Vừa là thợ giỏi VỪA là kỹ sư có WES cực hiếm và được đánh giá rất cao — nghĩa là bạn hiểu công việc cả từ góc thực hành lẫn kỹ thuật. Câu 'Genba ga wakaru enjinia' (現場が分かるエンジニア / kỹ sư hiểu hiện trường) là lời khen cao nhất trong ngành chế tạo.",
+    },
+    id: {
+      q: "Apa itu 'WES' dalam las Jepang, dan tingkat kualifikasi apa yang diwakilinya?",
+      opts: [
+        "WES = Standar Peralatan Las — sertifikasi untuk mesin las",
+        "WES = Welding Engineering Standard — kualifikasi Japan Welding Engineering Society untuk insinyur manajemen las (WES 8103). Tingkat: Grade 3 → 2 → 1 → Grade Khusus",
+        "WES = Western Engineering System — sertifikasi Amerika yang dipakai di Jepang",
+        "WES = Welding Examination System — program pelatihan keselamatan dasar",
+      ],
+      exp: "WES (Welding Engineering Standard) = kualifikasi Japan Welding Engineering Society untuk manajer dan insinyur las. Tingkat WES 8103: Grade 3 (基礎), Grade 2 (level pengawas), Grade 1 (level manajer), Grade Khusus (特別級 — selaras ISO, setara internasional). WES untuk insinyur yang MENGELOLA dan MENGAWASI las, tak harus melakukan pengelasan. Gaji tinggi: ¥700.000–900.000+/tahun. 🇯🇵 TIPS: Banyak tukang las Jepang berpengalaman yang pindah ke peran pengawasan mengejar WES Grade 2 atau 1. Menjadi tukang las mahir DAN insinyur berkualifikasi WES sangat langka dan sangat dihargai — artinya Anda memahami pekerjaan dari perspektif praktik maupun rekayasa. Frasa Jepang 'Genba ga wakaru enjinia' (現場が分かるエンジニア / insinyur yang memahami lokasi kerja) adalah pujian tertinggi di industri manufaktur.",
+    },
+  },
+  510: {
+    vi: {
+      q: "Thứ tự lộ trình sự nghiệp đúng từ mới vào đến chuyên gia trong hàn Nhật là gì?",
+      opts: [
+        "Mọi chứng chỉ được lấy đồng thời trong tuần đầu",
+        "WES Đặc biệt → Thợ hàn dưới nước → Thợ hàn nồi hơi → JIS Cơ bản → An toàn Hàn hồ quang",
+        "An toàn Hàn hồ quang (Ngày 1) → JIS Cấp cơ bản → JIS Cấp chuyên môn → AW / Thợ hàn nồi hơi → WES → Thợ hàn dưới nước (đỉnh)",
+        "Thợ hàn dưới nước trước — rồi mọi thứ khác đều dễ",
+      ],
+      exp: "Thang sự nghiệp hàn Nhật: 1) An toàn Hàn hồ quang (アーク溶接特別教育) — luật yêu cầu từ Ngày 1. 2) JIS Cấp cơ bản (基本級) — chứng chỉ kỹ năng đầu tiên. 3) JIS Cấp chuyên môn (専門級) — mọi tư thế. 4) AW Kentei hoặc Thợ hàn nồi hơi (chuyên biệt). 5) Chứng chỉ quản lý WES. 6) Thợ hàn dưới nước (ưu tú). Mỗi bước mở ra việc lương cao hơn. 🇯🇵 MẸO: Nơi làm việc Nhật rất nể người chủ động theo đuổi chứng chỉ không cần được bảo. Khi thợ nói với giám sát 'Jishu-teki ni shikaku wo toru tsumori desu' (自主的に資格を取るつもりです / Tôi định tự chủ động lấy chứng chỉ), đó là tín hiệu văn hóa mạnh về sự cam kết. Công ty thường hỗ trợ chi phí chứng chỉ cho nhân viên có động lực — đừng ngại hỏi. Tự trau dồi (自己研鑽) là phẩm chất được coi trọng sâu sắc trong văn hóa nghề nghiệp Nhật.",
+    },
+    id: {
+      q: "Apa urutan jalur karier yang benar dari pemula hingga ahli dalam las Jepang?",
+      opts: [
+        "Semua sertifikasi diperoleh bersamaan di minggu pertama",
+        "WES Khusus → Tukang Las Bawah Air → Tukang Las Boiler → JIS Dasar → Pelatihan Keselamatan Las Busur",
+        "Pelatihan Keselamatan Las Busur (Hari 1) → JIS Grade Dasar → JIS Grade Spesialis → AW / Tukang Las Boiler → WES → Tukang Las Bawah Air (puncak)",
+        "Tukang Las Bawah Air dulu — lalu semua yang lain mudah",
+      ],
+      exp: "Tangga karier las Jepang: 1) Pelatihan Keselamatan Las Busur (アーク溶接特別教育) — wajib hukum sejak Hari 1. 2) JIS Grade Dasar (基本級) — sertifikasi keterampilan pertama. 3) JIS Grade Spesialis (専門級) — semua posisi. 4) AW Kentei atau Tukang Las Boiler (khusus). 5) Kualifikasi manajemen WES. 6) Tukang Las Bawah Air (elit). Tiap langkah membuka pekerjaan bergaji lebih tinggi. 🇯🇵 TIPS: Tempat kerja Jepang sangat menghormati orang yang proaktif mengejar sertifikasi tanpa diminta. Saat tukang berkata kepada supervisornya 'Jishu-teki ni shikaku wo toru tsumori desu' (自主的に資格を取るつもりです / Saya berniat mengambil sertifikasi atas inisiatif sendiri), itu sinyal budaya kuat tentang komitmen. Perusahaan sering mendukung biaya sertifikasi bagi karyawan yang termotivasi — jangan malu bertanya. Pengembangan diri (自己研鑽 / jiko-kensan) adalah sifat yang sangat dihargai dalam budaya profesional Jepang.",
+    },
+  },
 };
