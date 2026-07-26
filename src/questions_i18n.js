@@ -1876,4 +1876,224 @@ export const Q_I18N = {
       exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP). Zona fusi meluas ke SELURUH tebal pelat. Diperlukan untuk: sambungan bangunan tahan gempa (ダイアフラム), cangkang bejana tekan, dan sambungan struktur kritis. Diverifikasi dengan inspeksi RT atau UT. Berbeda dengan las penetrasi parsial (部分溶込み / PJP). 🇯🇵 TIPS: Di Jepang, las CJP pada sambungan bangunan kritis gempa (柱梁接合部) memerlukan detail sambungan pra-kualifikasi sesuai Undang-Undang Standar Bangunan (建築基準法). Jika inspektor menandai CJP Anda 不合格 (ditolak), Anda harus mengorek keluar, mengelas ulang, dan menginspeksi ulang — tak ada penerimaan sebagian. Melakukannya benar sejak awal bukan hanya efisiensi; itu kebanggaan profesional.",
     },
   },
+  401: {
+    vi: {
+      q: "Mối thi JIS của bạn có vết lẹm sâu đúng 0.3mm. Điều này có tự động trượt kiểm tra VT chứng chỉ JIS không?",
+      opts: [
+        "Không — 0.3mm luôn trong dung sai JIS chung cho lẹm ở mọi chiều dày tấm",
+        "Tùy — dung sai lẹm JIS gắn với chiều dày tấm và mã thi, nên 0.3mm có thể đạt ở tấm dày nhưng trượt ở tấm mỏng hoặc mã thi khắt khe hơn; không có một con số chung duy nhất",
+        "Có — mọi độ lẹm trên 0mm là trượt tự động theo mọi mã JIS",
+        "Không — độ lẹm không bao giờ kiểm khi VT, chỉ khi RT/UT",
+      ],
+      exp: "Andaakatto (アンダーカット) = Lẹm chân, một rãnh bị nóng chảy ở mép chân mối hàn do dòng quá cao, tốc độ quá nhanh, hoặc góc súng sai. Độ cho phép KHÔNG phải một con số chung — JIS và các quy chuẩn khác quy định độ lẹm tối đa theo chiều dày tấm/cấu kiện và mã thi cụ thể, nên lẹm 0.3mm có thể đạt ở việc này nhưng trượt ở việc khắt khe hơn. 🇯🇵 MẸO: Thợ Nhật kinh nghiệm tự VT trước khi gọi người kiểm tra, tra dung sai thực cho mã thi cụ thể thay vì đoán một con số cố định — đừng gọi người kiểm tra trừ khi đã đối chiếu với quy định.",
+    },
+    id: {
+      q: "Las uji JIS Anda menunjukkan undercut sedalam tepat 0.3mm. Apakah ini otomatis gagal inspeksi VT sertifikasi JIS?",
+      opts: [
+        "Tidak — 0.3mm selalu dalam toleransi JIS universal untuk undercut pada tebal pelat berapa pun",
+        "Tergantung — toleransi undercut JIS terkait tebal pelat dan kode uji, jadi 0.3mm bisa lulus pada material lebih tebal tapi gagal pada material tipis atau kode uji lebih ketat; tak ada satu angka universal",
+        "Ya — kedalaman undercut di atas 0mm adalah kegagalan otomatis di semua kode JIS",
+        "Tidak — kedalaman undercut tak pernah diperiksa saat VT, hanya saat RT/UT",
+      ],
+      exp: "Andaakatto (アンダーカット) = Undercut, alur yang meleleh di ujung logam dasar las akibat arus berlebih, kecepatan jalan terlalu tinggi, atau sudut gun tak tepat. Kedalaman yang diizinkan BUKAN satu angka universal — JIS dan kode lain menetapkan kedalaman undercut maksimum relatif terhadap tebal pelat/member dan kode uji tertentu, jadi undercut 0.3mm bisa lulus di satu pekerjaan dan gagal di yang lebih ketat. 🇯🇵 TIPS: Tukang las Jepang berpengalaman melakukan VT sendiri sebelum memanggil inspektor, memeriksa toleransi aktual untuk kode uji spesifiknya alih-alih mengasumsikan angka tetap — jangan pernah memanggil inspektor kecuali Anda sudah mencocokkannya dengan spesifikasi.",
+    },
+  },
+  402: {
+    vi: {
+      q: "Andaakatto (アンダーカット / lẹm) và Oobaraappu (オーバーラップ / chồng mép) hay bị người mới nhầm vì cả hai xuất hiện ở mép chân. Khác biệt CHÍNH ở nguyên nhân gốc là gì?",
+      opts: [
+        "Lẹm là lỗi phía chân; chồng mép chỉ là lỗi bọng ngược",
+        "Không khác — cả hai do đúng cùng dòng quá cao và tốc độ quá nhanh",
+        "Lẹm do dòng/tốc độ QUÁ CAO (hồ quang khoét kim loại nền); chồng mép do dòng/tốc độ QUÁ THẤP (kim loại nguội tràn lên bề mặt không hòa nhập) — nguyên nhân về cơ bản ngược nhau",
+        "Lẹm chỉ xảy ra ở inox; chồng mép chỉ ở thép carbon",
+      ],
+      exp: "Andaakatto (アンダーカット) = Lẹm: do dòng hoặc tốc độ QUÁ CAO — hồ quang khoét một rãnh vào kim loại nền ở mép trước khi bể kịp lấp. Oobaraappu (オーバーラップ) = Chồng mép: do dòng hoặc tốc độ QUÁ THẤP — kim loại nóng chảy tràn lên mặt kim loại nền nguội mà không hòa nhập. Chúng ở hai đầu đối lập của phổ nhiệt đầu vào, đều tạo điểm tập trung ứng suất ở mép nhưng từ những lỗi về cơ bản ngược nhau. 🇯🇵 MẸO: Thợ đàn anh nói 'Denryuu wa tekisetsu ni' (電流は適切に / dùng dòng thích hợp) — quá thấp cũng phiền như quá cao; cả hai hướng lỗi đều tạo khuyết tật mép, chỉ khác loại.",
+    },
+    id: {
+      q: "Andaakatto (アンダーカット / undercut) dan Oobaraappu (オーバーラップ / overlap) sering dikira sama oleh pemula karena keduanya muncul di ujung las. Apa perbedaan UTAMA pada penyebab akarnya?",
+      opts: [
+        "Undercut cacat sisi akar; overlap eksklusif cacat back-bead",
+        "Tak ada beda — keduanya disebabkan arus terlalu tinggi dan kecepatan terlalu cepat yang persis sama",
+        "Undercut disebabkan arus/kecepatan TERLALU TINGGI (busur menggerus logam dasar); overlap disebabkan arus/kecepatan TERLALU RENDAH (logam dingin menggulung di permukaan tanpa menyatu) — penyebab pada dasarnya berlawanan",
+        "Undercut hanya terjadi pada stainless; overlap hanya pada baja karbon",
+      ],
+      exp: "Andaakatto (アンダーカット) = Undercut: disebabkan arus atau kecepatan TERLALU TINGGI — busur menggerus alur ke logam dasar di ujung sebelum kolam sempat mengisinya. Oobaraappu (オーバーラップ) = Overlap: disebabkan arus atau kecepatan TERLALU RENDAH — logam cair mengalir di atas permukaan logam dasar dingin tanpa menyatu. Keduanya di ujung berlawanan dari spektrum masukan panas, sama-sama menciptakan pemusat tegangan di ujung tapi dari kesalahan las yang pada dasarnya berlawanan. 🇯🇵 TIPS: Tukang senior berkata 'Denryuu wa tekisetsu ni' (電流は適切に / gunakan arus yang tepat) — terlalu rendah sama bermasalahnya dengan terlalu tinggi; kedua arah kesalahan menciptakan cacat ujung, hanya jenis berbeda.",
+    },
+  },
+  403: {
+    vi: {
+      q: "Sau khi hàn, kiểm tra RT cho thấy các đốm tối tròn bên trong mối hàn. Giám sát nói 'Buroohoru ga aru!' (ブローホールがある！). Nguyên nhân là gì?",
+      opts: [
+        "Sai kim loại bù cho vật liệu nền",
+        "Dòng quá cao — quá nhiều nhiệt trong mối hàn",
+        "Tốc độ quá chậm — đắp quá nhiều kim loại",
+        "Khí bị kẹt (từ ẩm, gỉ, dầu, nhiễm bẩn, hoặc che khí kém) không thoát được khỏi kim loại hàn đang đông",
+      ],
+      exp: "Buroohoru (ブローホール) = Rỗ khí / lỗ khí. Khí kẹt trong kim loại hàn đã đông, hiện như đốm tối tròn trên phim RT. Nguyên nhân: ẩm trên kim loại nền, gỉ, dầu, sơn, che khí không đủ, hồ quang quá dài, kim loại bù nhiễm bẩn. Phòng ngừa: làm sạch kim loại nền, kiểm lưu lượng khí, giữ chiều dài hồ quang đúng. 🇯🇵 MẸO: Ở xưởng đóng tàu và công trường Nhật, xử lý bề mặt (下地処理 / shitaji-shori) trước khi hàn được coi rất nghiêm túc. Thợ phải mài bỏ gỉ, lau bằng acetone và xác nhận không nhiễm bẩn trước khi bật hồ quang. Nếu rỗ khí xuất hiện trên RT và truy về do bạn chuẩn bị kém, bạn sẽ phải hàn lại bằng thời gian của mình — và bạn sẽ nhớ điều đó.",
+    },
+    id: {
+      q: "Setelah mengelas, inspeksi RT menunjukkan bintik gelap bulat di dalam las. Supervisor berkata 'Buroohoru ga aru!' (ブローホールがある！). Apa penyebabnya?",
+      opts: [
+        "Logam pengisi salah untuk material dasar",
+        "Arus berlebih — terlalu banyak panas di las",
+        "Kecepatan jalan terlalu lambat — logam terlalu banyak",
+        "Gas terperangkap (dari kelembapan, karat, minyak, kontaminasi, atau pelindung buruk) yang tak bisa lepas dari logam las yang membeku",
+      ],
+      exp: "Buroohoru (ブローホール) = Blowhole / Porositas. Gas terperangkap di dalam logam las yang membeku, tampak sebagai bintik gelap bulat pada film RT. Penyebab: kelembapan pada logam dasar, karat, minyak, cat, gas pelindung kurang, busur terlalu panjang, pengisi terkontaminasi. Pencegahan: bersihkan logam dasar, periksa aliran gas, jaga panjang busur yang benar. 🇯🇵 TIPS: Di galangan dan lokasi konstruksi Jepang, persiapan logam dasar (下地処理 / shitaji-shori) sebelum mengelas ditanggapi sangat serius. Pekerja diharapkan menggerinda karat, mengelap dengan aseton, dan memastikan nol kontaminasi sebelum menyalakan busur. Jika blowhole muncul pada RT dan tertelusur ke persiapan Anda yang buruk, Anda akan diminta mengelas ulang dengan waktu Anda sendiri — dan Anda akan mengingatnya.",
+    },
+  },
+  404: {
+    vi: {
+      q: "Phim RT cho thấy các bóng tối kéo dài thành hàng dọc mối hàn. Đây là loại khuyết tật gì?",
+      opts: [
+        "Suragu-makikomi (スラグ巻き込み) — lẫn xỉ — xỉ kẹt trong mối hàn do bỏ không hết giữa các lượt",
+        "Oobaraappu (オーバーラップ) — chồng mép bề mặt",
+        "Buroohoru (ブローホール) — rỗ khí tròn",
+        "Andaakatto (アンダーカット) — rãnh lẹm bề mặt",
+      ],
+      exp: "Suragu-makikomi (スラグ巻き込み) = Lẫn xỉ. Xỉ (ノロ) từ lượt trước không được bỏ hết trước lượt kế — bị kẹt trong mối hàn. Hiện trên RT như hình tối kéo dài bất thường. Phòng ngừa: đục và chải sắt kỹ giữa MỖI lượt. Đây là lý do 'Chippingu' rất quan trọng ở Nhật. 🇯🇵 MẸO: Ở Nhật, búa đục (チッピングハンマー) được vung dứt khoát — không phải gõ nhẹ. Đàn anh nói 'Noro wa shikkari tore' (ノロはしっかり取れ / bỏ xỉ cho sạch). Nếu bạn bỏ qua vì vội và RT trả về lẫn xỉ, tổ trưởng (職長 / shokuchoo) sẽ có một cuộc nói chuyện rất thẳng với bạn.",
+    },
+    id: {
+      q: "Film RT menunjukkan bayangan gelap memanjang dalam garis di sepanjang las. Jenis cacat apa ini?",
+      opts: [
+        "Suragu-makikomi (スラグ巻き込み) — inklusi terak — terak terperangkap di dalam las akibat pembuangan tak tuntas antar-pass",
+        "Oobaraappu (オーバーラップ) — overlap permukaan",
+        "Buroohoru (ブローホール) — pori gas bulat",
+        "Andaakatto (アンダーカット) — alur permukaan",
+      ],
+      exp: "Suragu-makikomi (スラグ巻き込み) = Inklusi terak. Terak (ノロ) dari pass sebelumnya tak dibuang tuntas sebelum pass berikutnya — terperangkap di dalam las. Tampak pada RT sebagai bentuk gelap memanjang tak beraturan. Pencegahan: ketuk dan sikat kawat menyeluruh di antara SETIAP pass. Inilah mengapa 'Chippingu' sangat penting di Jepang. 🇯🇵 TIPS: Di Jepang, palu ketuk (チッピングハンマー) diayun dengan niat penuh — bukan ketukan lembut. Tukang senior berkata 'Noro wa shikkari tore' (ノロはしっかり取れ / buang terak sampai bersih). Jika Anda melewatkannya karena terburu-buru, dan RT kembali dengan inklusi terak, mandor (職長 / shokuchoo) akan berbicara sangat langsung dengan Anda.",
+    },
+  },
+  405: {
+    vi: {
+      q: "'Yuugou-furyou' (融合不良) — viết tắt LOF — là gì và vì sao nguy hiểm?",
+      opts: [
+        "Đường hàn quá hẹp",
+        "Thiếu hòa nhập — kim loại hàn đắp bên cạnh nhưng KHÔNG hòa nhập với kim loại nền hoặc lượt trước. Tạo mặt phân giới không liên kết như một vết nứt",
+        "Ôxy hóa bề mặt do che khí không đủ",
+        "Đắp quá nhiều kim loại — đắp thừa",
+      ],
+      exp: "Yuugou-furyou (融合不良) = Thiếu hòa nhập (LOF). Kim loại hàn nằm cạnh nhưng KHÔNG liên kết luyện kim với kim loại nền hoặc lượt trước. Nguyên nhân: dòng không đủ, kỹ thuật sai, nhiễm bẩn. LOF dạng phẳng (như vết nứt) và KHÔNG dễ phát hiện bằng RT như khuyết tật tròn. UT tốt hơn để phát hiện LOF. Rất nguy hiểm ở mối kết cấu. 🇯🇵 MẸO: Yuugou-furyou đặc biệt đáng sợ ở nhà máy hạt nhân và LNG Nhật vì có thể vô hình trên phim RT và không rò khi thử áp ban đầu — chỉ để hỏng thảm khốc dưới ứng suất chu kỳ nhiều năm sau. Khi người kiểm tra Nhật nói 'UT de kite' (UTで来て / mang kết quả UT về), họ nghi có LOF. Hãy xem UT rất nghiêm túc.",
+    },
+    id: {
+      q: "Apa itu 'Yuugou-furyou' (融合不良) — disingkat LOF — dan mengapa berbahaya?",
+      opts: [
+        "Jalur las terlalu sempit",
+        "Lack of Fusion — logam las diendapkan bersebelahan tapi TIDAK menyatu dengan logam dasar atau pass sebelumnya. Menciptakan antarmuka planar tak terikat yang berperilaku seperti retak",
+        "Oksidasi permukaan akibat pelindung kurang",
+        "Terlalu banyak logam las diendapkan — penguatan berlebih",
+      ],
+      exp: "Yuugou-furyou (融合不良) = Lack of Fusion (LOF). Logam las berada di sebelah tapi TIDAK terikat secara metalurgi ke logam dasar atau pass sebelumnya. Penyebab: arus kurang, teknik salah, kontaminasi. LOF bersifat planar (seperti retak) dan TIDAK semudah cacat bulat terdeteksi RT. UT lebih baik untuk mendeteksi LOF. Sangat berbahaya pada las struktur. 🇯🇵 TIPS: Yuugou-furyou terutama ditakuti di fasilitas nuklir dan LNG Jepang karena bisa tak terlihat pada film RT dan mungkin tak bocor saat uji tekan awal — hanya untuk gagal katastrofik di bawah tegangan siklik bertahun-tahun kemudian. Saat inspektor Jepang berkata 'UT de kite' (UTで来て / kembali dengan hasil UT), mereka mencurigai LOF. Tanggapi UT dengan sangat serius.",
+    },
+  },
+  406: {
+    vi: {
+      q: "Khác biệt giữa 'Teion-ware' (低温割れ) và 'Kouon-ware' (高温割れ) là gì?",
+      opts: [
+        "Teion-ware = trên 500°C, Kouon-ware = dưới 0°C",
+        "Chúng là cùng khuyết tật với tên khác nhau tùy công ty",
+        "Teion-ware (nứt nguội / nứt hydro) = hình thành HÀNG GIỜ hoặc HÀNG NGÀY sau khi hàn ở nhiệt độ phòng. Kouon-ware (nứt nóng) = hình thành ngay khi đông ở nhiệt độ cao",
+        "Teion-ware chỉ xảy ra ở inox, Kouon-ware chỉ ở thép carbon",
+      ],
+      exp: "Teion-ware (低温割れ) = Nứt nguội / nứt do hydro. Hình thành SAU khi hàn (hàng giờ đến hàng ngày) ở nhiệt độ phòng. Cần: HAZ cứng + hydro khuếch tán + ứng suất kéo. Phòng ngừa: nung trước, que ít hydro, PWHT. Kouon-ware (高温割れ) = Nứt nóng. Hình thành NGAY khi đông. Do tạp chất điểm nóng chảy thấp. Hai vấn đề rất khác cần giải pháp khác. 🇯🇵 MẸO: Ở Nhật, câu '低温割れに注意' (teion-ware ni chuui / coi chừng nứt nguội) xuất hiện trong WPS cho thép cường độ cao hoặc dày. Nếu hàn SM490 trở lên trong điều kiện lạnh ngoài trời (công trường mùa đông ở Tohoku hay Hokkaido), nung trước không phải tùy chọn — đó là nghĩa vụ an toàn nghiêm túc. Đừng bao giờ bỏ kiểm nung trước.",
+    },
+    id: {
+      q: "Apa perbedaan 'Teion-ware' (低温割れ) dan 'Kouon-ware' (高温割れ)?",
+      opts: [
+        "Teion-ware = di atas 500°C, Kouon-ware = di bawah 0°C",
+        "Keduanya cacat sama dengan nama berbeda tergantung perusahaan",
+        "Teion-ware (retak dingin / retak hidrogen) = terbentuk BERJAM-JAM atau BERHARI-HARI setelah mengelas pada suhu ruang. Kouon-ware (retak panas) = terbentuk seketika saat pembekuan pada suhu tinggi",
+        "Teion-ware hanya terjadi pada stainless, Kouon-ware hanya pada baja karbon",
+      ],
+      exp: "Teion-ware (低温割れ) = Retak dingin / retak akibat hidrogen. Terbentuk SETELAH mengelas (berjam-jam hingga berhari-hari kemudian) pada suhu ruang. Membutuhkan: HAZ keras + hidrogen difusi + tegangan tarik. Pencegahan: preheat, elektroda rendah hidrogen, PWHT. Kouon-ware (高温割れ) = Retak panas. Terbentuk SEKETIKA saat pembekuan. Disebabkan pengotor bertitik leleh rendah. Dua masalah sangat berbeda yang butuh solusi berbeda. 🇯🇵 TIPS: Di Jepang, frasa '低温割れに注意' (teion-ware ni chuui / waspadai retak dingin) muncul dalam WPS untuk baja kekuatan tinggi atau tebal. Jika mengelas SM490 atau lebih kuat di kondisi dingin luar ruangan (lokasi konstruksi musim dingin di Tohoku atau Hokkaido), preheat bukan opsional — itu kewajiban keselamatan serius. Jangan pernah melewatkan pemeriksaan preheat.",
+    },
+  },
+  407: {
+    vi: {
+      q: "Ở cuối một đường hàn, hồ quang bị cắt đột ngột không lấp hố đúng. Khuyết tật nào có thể hình thành?",
+      opts: [
+        "Andaakatto (アンダーカット)",
+        "Oobaraappu (オーバーラップ)",
+        "Buroohoru (ブローホール)",
+        "Kureetaa-ware (クレーター割れ) — vết nứt hình thành trong hố lõm ở cuối mối hàn do co ngót nhanh",
+      ],
+      exp: "Kureetaa-ware (クレーター割れ) = Nứt hố. Khi bạn dừng hồ quang đột ngột, một hố lõm còn lại. Khi nó đông và co nhanh hơn mối hàn xung quanh, vết nứt hình thành từ tâm ra ngoài. Phòng ngừa: dùng kỹ thuật lấp hố — giảm dòng từ từ và lấp đầy hố trước khi ngắt hồ quang. Đừng bao giờ chỉ dừng giữa chừng. 🇯🇵 MẸO: Trên công trường Nhật, giám sát có thể xem cuối mối hàn của bạn để kiểm kỹ thuật lấp hố. Câu 'Owari wa shikkari' (終わりはしっかり / kết thúc cho chỉn chu) rất phổ biến. Nứt hố ở cuối mối hàn bị xem là dấu hiệu vội vàng cẩu thả — nó phản ánh tính chuyên nghiệp của bạn nhiều như chính mối hàn.",
+    },
+    id: {
+      q: "Di akhir jalur las, busur diputus tiba-tiba tanpa pengisian kawah yang benar. Cacat apa yang mungkin terbentuk?",
+      opts: [
+        "Andaakatto (アンダーカット)",
+        "Oobaraappu (オーバーラップ)",
+        "Buroohoru (ブローホール)",
+        "Kureetaa-ware (クレーター割れ) — retak yang terbentuk di cekungan kawah di akhir las akibat penyusutan cepat",
+      ],
+      exp: "Kureetaa-ware (クレーター割れ) = Retak kawah. Saat Anda menghentikan busur mendadak, tersisa kawah cekung. Saat ini membeku dan menyusut lebih cepat dari las sekitarnya, retak terbentuk dari tengah ke luar. Pencegahan: pakai teknik pengisian kawah — kurangi arus bertahap dan isi kawah sebelum memutus busur. Jangan pernah hanya berhenti di tengah las. 🇯🇵 TIPS: Di lokasi Jepang, supervisor bisa mengamati akhir las Anda khusus untuk memeriksa teknik pengisian kawah. Frasa 'Owari wa shikkari' (終わりはしっかり / selesaikan dengan benar) umum. Retak kawah di akhir las dilihat sebagai tanda ketergesaan ceroboh — mencerminkan profesionalisme Anda sebanyak lasnya sendiri.",
+    },
+  },
+  408: {
+    vi: {
+      q: "Một mối hàn đạt VT (Mokushi-shiken / 目視試験) với bề mặt nhẵn hoàn hảo. Đạt VT có đảm bảo mối hàn không có rỗ khí (ブローホール) hoặc lẫn xỉ (スラグ巻き込み) bên trong không?",
+      opts: [
+        "Không — VT chỉ phát hiện khuyết tật BỀ MẶT; khuyết tật bên trong như rỗ khí và lẫn xỉ hoàn toàn vô hình với mắt và cần RT hoặc UT để phát hiện, dù bề mặt trông hoàn hảo",
+        "Có, nhưng chỉ với mối góc, không phải mối rãnh",
+        "Không, nhưng chỉ vì người kiểm VT không được đào tạo tìm rỗ khí",
+        "Có — nếu bề mặt trông hoàn hảo, bên trong đảm bảo cũng không khuyết tật",
+      ],
+      exp: "VT (Kiểm tra ngoại quan / 目視試験) là bước kiểm đầu tiên và cơ bản nhất — nhanh, miễn phí, bắt được khuyết tật bề mặt rõ như nứt, lẹm, chồng mép và vấn đề hình học. Nhưng VT KHÔNG BAO GIỜ phát hiện khuyết tật bên trong: rỗ khí (ブローホール) và lẫn xỉ (スラグ巻き込み) hình thành hoàn toàn trong kim loại hàn và vô hình với mắt dù bề mặt nhẵn thế nào. Đây chính là lý do RT và UT tồn tại như bước riêng, bắt buộc cho mối hàn quan trọng. 🇯🇵 MẸO: Người kiểm tra Nhật nói 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Ngoài đẹp nhưng trong không thấy được) — một đường hàn trông hoàn hảo không phải bằng chứng vững chắc bên trong.",
+    },
+    id: {
+      q: "Sebuah las lulus VT (Mokushi-shiken / 目視試験) dengan permukaan mulus sempurna. Apakah lulus VT menjamin las tak punya porositas (ブローホール) atau inklusi terak (スラグ巻き込み) di dalamnya?",
+      opts: [
+        "Tidak — VT hanya mendeteksi cacat PERMUKAAN; cacat internal seperti porositas dan inklusi terak sepenuhnya tak terlihat mata dan perlu RT atau UT untuk mendeteksinya, meski permukaan tampak sempurna",
+        "Ya, tapi hanya untuk las sudut, bukan las alur",
+        "Tidak, tapi hanya karena inspektor VT tak dilatih mencari porositas sama sekali",
+        "Ya — jika permukaan tampak sempurna, bagian dalam dijamin bebas cacat juga",
+      ],
+      exp: "VT (Visual Testing / 目視試験) adalah pemeriksaan pertama dan paling mendasar — cepat, gratis, menangkap cacat permukaan jelas seperti retak, undercut, overlap, dan masalah geometri. Tapi VT TIDAK PERNAH bisa mendeteksi cacat internal: porositas (ブローホール) dan inklusi terak (スラグ巻き込み) terbentuk sepenuhnya di dalam logam las dan tak terlihat mata sebagus apa pun permukaannya. Inilah persis mengapa RT dan UT ada sebagai langkah terpisah dan wajib untuk las kritis. 🇯🇵 TIPS: Inspektor Jepang berkata 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Meski luarnya indah, kami tak bisa melihat dalamnya) — jalur yang tampak sempurna bukan bukti kesehatan internal.",
+    },
+  },
+  409: {
+    vi: {
+      q: "'PT' (Shinto-tansho / 浸透探傷試験) hoạt động thế nào?",
+      opts: [
+        "Sóng âm dội lại từ khuyết tật bên trong",
+        "Chất thẩm thấu màu đỏ bôi lên bề mặt, hút vào vết nứt, rồi chất hiện (bột trắng) được bôi — khuyết tật hiện thành vết đỏ trên nền trắng",
+        "Bột sắt từ tính tụ tại vị trí khuyết tật",
+        "Tia X xuyên qua mối hàn và phơi lên phim",
+      ],
+      exp: "PT (Kiểm tra thẩm thấu / 浸透探傷試験): 1) Bôi chất thẩm thấu đỏ. 2) Chờ (thời gian thấm). 3) Bỏ phần thừa. 4) Bôi bột hiện trắng. 5) Vết nứt đã hút chất thẩm thấu sẽ 'rỉ ra' thành vết đỏ trên nền trắng. Phát hiện: chỉ vết nứt và lỗ MỞ BỀ MẶT. Dùng cho vật liệu KHÔNG TỪ TÍNH (inox, nhôm). Không phát hiện khuyết tật bên trong. 🇯🇵 MẸO: Ở nhà máy thực phẩm, dược và bán dẫn Nhật dùng nhiều inox, PT được làm sau mỗi lần sửa mối hàn. 'Thời gian thấm' (浸透時間 / shintou-jikan) then chốt — vội lau quá sớm là bỏ sót vết nứt nhỏ. Người kiểm tra thường dùng đồng hồ và sẽ từ chối kết quả nếu không đủ thời gian thấm. Kiên nhẫn và kỷ luật quy trình là tất cả trong công việc kiểm tra ở Nhật.",
+    },
+    id: {
+      q: "Bagaimana cara kerja 'PT' (Shinto-tansho / 浸透探傷試験)?",
+      opts: [
+        "Gelombang suara memantul dari cacat internal",
+        "Cairan penetran merah dioleskan ke permukaan, tertarik ke retakan, lalu developer (bubuk putih) dioleskan — cacat muncul sebagai indikasi merah di latar putih",
+        "Bubuk besi magnetik menggerombol di lokasi cacat",
+        "Sinar-X menembus las dan mengekspos film",
+      ],
+      exp: "PT (Penetrant Testing / 浸透探傷試験): 1) Oleskan cairan penetran merah. 2) Tunggu (dwell time). 3) Buang kelebihannya. 4) Oleskan bubuk developer putih. 5) Retak yang menyerap penetran akan 'merembes' sebagai tanda merah di latar putih. Mendeteksi: hanya retak dan pit TERBUKA di PERMUKAAN. Bekerja pada material NON-MAGNETIK (stainless, aluminium). Tak bisa mendeteksi cacat internal. 🇯🇵 TIPS: Di fasilitas makanan, farmasi, dan semikonduktor Jepang yang banyak memakai stainless, PT dilakukan setelah tiap perbaikan las. 'Dwell time' (浸透時間 / shintou-jikan) krusial — tergesa mengelap terlalu cepat berarti melewatkan retak halus. Inspektor sering memakai timer dan akan menolak hasil jika dwell time tak dipatuhi. Kesabaran dan disiplin proses adalah segalanya dalam pekerjaan inspeksi Jepang.",
+    },
+  },
+  410: {
+    vi: {
+      q: "Khi nào bạn dùng 'PT' (浸透探傷) thay cho 'MT' (磁粉探傷) cho thép không gỉ?",
+      opts: [
+        "PT và MT thay lẫn được — dùng cái nào cũng được",
+        "MT tốt hơn cho inox — luôn ưu tiên MT",
+        "PT phải dùng cho inox (SUS304 v.v.) vì inox austenit KHÔNG TỪ TÍNH — MT cần vật liệu từ tính mới hoạt động. PT không bị giới hạn từ tính",
+        "Không cái nào dùng được cho inox — chỉ dùng RT",
+      ],
+      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験) dùng từ trường hút bột sắt vào khuyết tật — CHỈ hoạt động trên vật liệu từ tính (ferrit). Inox austenit (SUS304, SUS316) KHÔNG TỪ TÍNH. Với inox, bạn PHẢI dùng PT (浸透探傷). Inox có hàm lượng ferrit (như SUS430) có thể cho phép MT — kiểm loại vật liệu trước. 🇯🇵 MẸO: Nhầm PT và MT trên việc hàn inox ở Nhật là lỗi nghiêm trọng sẽ bị chú ý ngay. Trước bất kỳ NDT nào, xác nhận loại vật liệu (材料確認 / zairyou-kakunin) từ chứng chỉ nhà máy (ミルシート / mirushiito). Ở Nhật, chứng chỉ nhà máy là tài liệu bắt buộc cho mọi vật liệu dùng trong mối hàn có chứng nhận. Biết đọc nó làm bạn nổi bật.",
+    },
+    id: {
+      q: "Kapan Anda memakai 'PT' (浸透探傷) alih-alih 'MT' (磁粉探傷) untuk baja tahan karat?",
+      opts: [
+        "PT dan MT bisa dipertukarkan — pakai yang mana saja",
+        "MT lebih baik untuk stainless — selalu utamakan MT",
+        "PT harus dipakai untuk stainless (SUS304 dll.) karena stainless austenitik NON-MAGNETIK — MT butuh material magnetik agar bekerja. PT tak punya batasan magnetik",
+        "Tak satu pun bekerja pada stainless — pakai RT saja",
+      ],
+      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) memakai medan magnet untuk menarik bubuk besi ke cacat — HANYA bekerja pada material magnetik (feritik). Stainless austenitik (SUS304, SUS316) NON-MAGNETIK. Untuk stainless, Anda HARUS memakai PT (浸透探傷). Stainless berkandungan ferit (seperti SUS430) mungkin memungkinkan MT — periksa jenis material dulu. 🇯🇵 TIPS: Tertukar PT dan MT pada pekerjaan las stainless di Jepang adalah kesalahan serius yang akan segera diketahui. Sebelum NDT apa pun, pastikan jenis material (材料確認 / zairyou-kakunin) dari sertifikat pabrik (ミルシート / mirushiito). Di Jepang, sertifikat pabrik adalah dokumen wajib untuk tiap material yang dipakai dalam las terkualifikasi. Bisa membacanya membuat Anda menonjol.",
+    },
+  },
 };
