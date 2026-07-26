@@ -2096,4 +2096,224 @@ export const Q_I18N = {
       exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) memakai medan magnet untuk menarik bubuk besi ke cacat — HANYA bekerja pada material magnetik (feritik). Stainless austenitik (SUS304, SUS316) NON-MAGNETIK. Untuk stainless, Anda HARUS memakai PT (浸透探傷). Stainless berkandungan ferit (seperti SUS430) mungkin memungkinkan MT — periksa jenis material dulu. 🇯🇵 TIPS: Tertukar PT dan MT pada pekerjaan las stainless di Jepang adalah kesalahan serius yang akan segera diketahui. Sebelum NDT apa pun, pastikan jenis material (材料確認 / zairyou-kakunin) dari sertifikat pabrik (ミルシート / mirushiito). Di Jepang, sertifikat pabrik adalah dokumen wajib untuk tiap material yang dipakai dalam las terkualifikasi. Bisa membacanya membuat Anda menonjol.",
     },
   },
+  411: {
+    vi: {
+      q: "'UT' (Cho-onpa-tansho / 超音波探傷試験) giỏi phát hiện gì hơn so với RT?",
+      opts: [
+        "UT tốt hơn để kiểm độ tinh khiết khí bảo vệ",
+        "UT tốt hơn để phát hiện rỗ khí tròn (ブローホール)",
+        "UT tốt hơn để phát hiện nứt bề mặt thấy được bằng mắt",
+        "UT giỏi phát hiện khuyết tật DẠNG PHẲNG — nứt, thiếu hòa nhập (融合不良), thiếu ngấu. Các khuyết tật phẳng này phản xạ sóng âm mạnh ngay cả khi RT bỏ sót",
+      ],
+      exp: "UT (Kiểm tra siêu âm) phát sóng âm tần số cao vào kim loại. Khuyết tật phẳng (nứt, đường hòa nhập, tách lớp) phản xạ âm mạnh về đầu dò — phát hiện tuyệt vời. RT (tia X) tốt hơn cho khuyết tật thể tích (rỗ tròn, xỉ). Với mối hàn quan trọng ở xưởng đóng tàu và tòa nhà Nhật, thường cần CẢ UT lẫn RT. 🇯🇵 MẸO: Ở Nhật, người vận hành UT (超音波探傷士) là chuyên gia có giấy phép quốc gia. Phán đoán của họ có thẩm quyền — nếu họ nói 'yokogiri no echo ga aru' (横切りのエコーがある / có tiếng vọng nứt ngang), công việc dừng. Đừng tranh cãi với người vận hành UT. Chứng chỉ của họ tốn nhiều năm để đạt.",
+    },
+    id: {
+      q: "'UT' (Cho-onpa-tansho / 超音波探傷試験) unggul mendeteksi apa dibanding RT?",
+      opts: [
+        "UT lebih baik untuk memeriksa kemurnian gas pelindung",
+        "UT lebih baik mendeteksi pori gas bulat (ブローホール)",
+        "UT lebih baik mendeteksi retak permukaan yang terlihat mata",
+        "UT unggul mendeteksi cacat PLANAR — retak, lack of fusion (融合不良), lack of penetration. Cacat planar ini memantulkan gelombang suara kuat bahkan saat RT melewatkannya",
+      ],
+      exp: "UT (Ultrasonic Testing) mengirim gelombang suara frekuensi tinggi ke logam. Cacat planar (retak, garis fusi, laminasi) memantulkan suara kuat kembali ke probe — deteksi sangat baik. RT (sinar-X) lebih baik untuk cacat volumetrik (pori bulat, terak). Untuk las kritis di galangan dan bangunan Jepang, sering diperlukan UT DAN RT. 🇯🇵 TIPS: Di Jepang, operator UT (超音波探傷士) adalah profesional berlisensi nasional khusus. Penilaian mereka otoritatif — jika mereka berkata 'yokogiri no echo ga aru' (横切りのエコーがある / ada eko retak melintang), pekerjaan berhenti. Jangan berdebat dengan operator UT. Sertifikasi mereka butuh bertahun-tahun untuk diraih.",
+    },
+  },
+  412: {
+    vi: {
+      q: "'RT' (Hoshasen-toka-shiken / 放射線透過試験) thường được gọi là gì trên công trường Nhật, và hàm ý an toàn là gì?",
+      opts: [
+        "Gọi là 'Rentogen' (レントゲン) — lóng Nhật cho tia X. Khi làm RT: khu vực trở thành VÙNG NGUY HIỂM PHÓNG XẠ (放射線管理区域) và TẤT CẢ người phải rời đi",
+        "Gọi là 'Rentogen' nhưng hoàn toàn an toàn — không cần sơ tán",
+        "Gọi là 'Cho-onpa' — giống kiểm tra siêu âm",
+        "Không có lo ngại an toàn với RT — mức phóng xạ rất thấp",
+      ],
+      exp: "RT được gọi là Rentogen (レントゲン) trên công trường Nhật — lóng cho tia X từ nhà vật lý Đức Röntgen. Khi làm RT: thiết lập vùng quản lý phóng xạ bắt buộc (放射線管理区域). TẤT CẢ công nhân phải sơ tán trước khi chụp. Cán bộ an toàn đặc biệt (放射線取扱主任者) quản lý quy trình. Kết quả RT được ghi vĩnh viễn lên phim — khác UT, phim là hồ sơ chất lượng vĩnh viễn. 🇯🇵 MẸO: Khi thông báo 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Chúng tôi chụp X-quang — vui lòng chờ) vang lên, MỌI người dừng ngay và di chuyển đến khu chờ chỉ định. Tiếp tục làm việc trong vùng phóng xạ là vi phạm hình sự nghiêm trọng. Điều này không thương lượng.",
+    },
+    id: {
+      q: "'RT' (Hoshasen-toka-shiken / 放射線透過試験) biasa disebut apa di lokasi Jepang, dan apa implikasi keselamatannya?",
+      opts: [
+        "Disebut 'Rentogen' (レントゲン) — slang Jepang untuk sinar-X. Saat RT: area menjadi ZONA BAHAYA RADIASI (放射線管理区域) dan SEMUA personel harus meninggalkan area",
+        "Disebut 'Rentogen' tapi benar-benar aman — tak perlu evakuasi",
+        "Disebut 'Cho-onpa' — sama dengan uji ultrasonik",
+        "Tak ada masalah keselamatan dengan RT — tingkat radiasi sangat rendah",
+      ],
+      exp: "RT disebut Rentogen (レントゲン) di lokasi Jepang — slang untuk sinar-X dari fisikawan Jerman Röntgen. Saat RT: zona pengelolaan radiasi wajib (放射線管理区域) ditetapkan. SEMUA pekerja harus evakuasi sebelum penembakan. Petugas keselamatan khusus (放射線取扱主任者) mengelola prosesnya. Hasil RT dicatat permanen pada film — tidak seperti UT, film berfungsi sebagai rekaman mutu permanen. 🇯🇵 TIPS: Saat pengumuman 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Kami menembak X-ray — harap menunggu) dibuat di lokasi, SEMUA ORANG langsung berhenti dan pindah ke area tunggu yang ditentukan. Melanjutkan kerja di zona radiasi adalah pelanggaran pidana serius. Ini tak bisa ditawar.",
+    },
+  },
+  413: {
+    vi: {
+      q: "Một mối hàn đạt VT nhưng trượt RT. Phim RT cho thấy đốm tối tròn bên trong. Đây là loại khuyết tật gì và vì sao VT không bắt được?",
+      opts: [
+        "Đắp quá cao — thấy được từ ngoài",
+        "Rỗ khí bên trong (ブローホール) — VT chỉ thấy BỀ MẶT. Rỗ khí bên trong vô hình với mắt và chỉ phát hiện bằng RT, UT hoặc phương pháp thể tích khác",
+        "Chồng mép ở mép chân — thấy được từ ngoài",
+        "Lẹm bề mặt — VT lẽ ra phải bắt được",
+      ],
+      exp: "VT (Kiểm tra ngoại quan) chỉ phát hiện khuyết tật BỀ MẶT. Khuyết tật bên trong — như rỗ khí (ブローホール), lẫn xỉ (スラグ巻き込み) và lỗi hòa nhập — hoàn toàn vô hình với mắt. Đây là lý do RT (tia X) và UT bắt buộc cho mối hàn quan trọng ở Nhật: đạt VT KHÔNG đảm bảo mối hàn vững chắc bên trong. 🇯🇵 MẸO: Đường hàn nhẵn đẹp đạt VT hoàn hảo gọi là 'kirei na bead' (きれいなビード) và được nể. Nhưng người kiểm tra Nhật cũng nói 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Ngoài đẹp nhưng trong không thấy). Đây là lý do RT và UT tồn tại — chất lượng bên trong cũng quan trọng như vậy.",
+    },
+    id: {
+      q: "Sebuah las lulus VT tapi gagal RT. Film RT menunjukkan bintik gelap bulat internal. Jenis cacat apa ini dan mengapa VT tak menangkapnya?",
+      opts: [
+        "Penguatan las terlalu tinggi — terlihat dari luar",
+        "Porositas internal (ブローホール) — VT hanya melihat PERMUKAAN. Pori gas internal tak terlihat mata dan hanya bisa dideteksi RT, UT, atau metode volumetrik lain",
+        "Overlap di ujung las — terlihat dari luar",
+        "Undercut permukaan — VT seharusnya menangkap ini",
+      ],
+      exp: "VT (Visual Testing) hanya mendeteksi cacat PERMUKAAN. Cacat internal — seperti porositas (ブローホール), inklusi terak (スラグ巻き込み), dan cacat fusi — sepenuhnya tak terlihat mata. Inilah mengapa RT (sinar-X) dan UT wajib untuk las kritis di Jepang: lulus VT TIDAK menjamin las sehat secara internal. 🇯🇵 TIPS: Jalur las yang mulus indah dan lulus VT sempurna disebut 'kirei na bead' (きれいなビード) dan dihargai. Tapi inspektor Jepang juga berkata 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Meski luarnya indah, kami tak bisa melihat dalamnya). Inilah mengapa RT dan UT ada — kualitas dalam sama pentingnya.",
+    },
+  },
+  414: {
+    vi: {
+      q: "'Lamellar Tearing' (ラメラテア) là gì và phổ biến nhất ở cấu hình mối nối nào?",
+      opts: [
+        "Nứt bề mặt do mài quá mức",
+        "Nứt nóng hình thành ngay sau khi hàn",
+        "Vết nứt dạng lớp xuyên qua chiều dày kim loại nền do ứng suất kéo kéo lên tạp chất phi kim trong thép cán. Phổ biến nhất ở mối chữ T và mối chữ thập nơi ứng suất tác dụng qua chiều dày tấm",
+        "Một loại rỗ khí riêng của hàn ống",
+      ],
+      exp: "Ramera-tea (ラメラテア) = Nứt lớp. Thép được cán ở nhà máy — tạp chất phi kim thành lớp phẳng song song mặt tấm. Khi hàn tạo ứng suất kéo XUYÊN qua chiều dày tấm (phổ biến ở mối chữ T, nối cột), các lớp này có thể tách ra. Phòng ngừa: dùng thép ít lưu huỳnh (低硫黄鋼), nung trước, hoặc thiết kế lại mối nối. 🇯🇵 MẸO: Nứt lớp đặc biệt đáng lo ở nối cột nhà cao tầng Nhật (ダイアフラム接合部). Khi kỹ sư quy định thép có đặc tính hướng Z (Z方向特性鋼) trên bản vẽ, nghĩa là họ đang phòng nứt lớp cụ thể. Là thợ hàn, nếu thấy quy cách vật liệu này, hãy biết nó được chọn có lý do — xử lý cẩn thận và tuân WPS chính xác.",
+    },
+    id: {
+      q: "Apa itu 'Lamellar Tearing' (ラメラテア) dan pada konfigurasi sambungan mana paling umum?",
+      opts: [
+        "Retak permukaan akibat penggerindaan berlebih",
+        "Retak panas yang terbentuk seketika setelah mengelas",
+        "Retak berlapis melalui tebal logam dasar akibat tegangan tarik yang menarik inklusi non-logam pada baja canai. Paling umum di sambungan T dan silang di mana tegangan bekerja melalui tebal pelat",
+        "Sejenis porositas las unik untuk las pipa",
+      ],
+      exp: "Ramera-tea (ラメラテア) = Lamellar tearing. Baja dicanai di pabrik — inklusi non-logam menjadi lapisan datar sejajar permukaan pelat. Saat pengelasan menciptakan tegangan tarik MELALUI tebal pelat (umum di sambungan T, sambungan kolom), lapisan ini bisa terbelah. Pencegahan: pakai baja rendah sulfur (低硫黄鋼), preheat, atau desain ulang sambungan. 🇯🇵 TIPS: Lamellar tearing terutama jadi perhatian di sambungan kolom gedung tinggi Jepang (ダイアフラム接合部). Saat insinyur menetapkan baja properti arah-Z (Z方向特性鋼) di gambar, artinya mereka khusus mencegah lamellar tearing. Sebagai tukang las, jika Anda melihat spesifikasi material ini, ketahui bahwa itu dipilih karena suatu alasan — tangani dengan hati-hati dan ikuti WPS dengan persis.",
+    },
+  },
+  415: {
+    vi: {
+      q: "Mối hàn của bạn trượt RT vì 'Tokekomi-furyou' (溶込不良). LOP là gì và do đâu?",
+      opts: [
+        "Ngấu quá nhiều — mối hàn thủng mặt sau",
+        "Đắp thừa trên đỉnh mối nối",
+        "Rỗ khí ở chân mối hàn",
+        "Thiếu ngấu — kim loại hàn KHÔNG ngấu đến chân mối nối. Do: dòng quá thấp, tốc độ quá nhanh, khe chân sai, góc súng sai",
+      ],
+      exp: "Tokekomi-furyou (溶込不良) = Thiếu ngấu (LOP). Hồ quang không tới chân mối nối — để lại khe không hòa nhập ở đáy. Nguyên nhân: dòng không đủ, tốc độ quá nhanh, khe chân quá nhỏ, góc que sai. Trong thi chứng chỉ JIS Nhật, thiếu ngấu chân là trượt tự động. 🇯🇵 MẸO: Trong thi thực hành JIS hàn rãnh, người kiểm tra mài và uốn mẫu — LOP ở chân sẽ nứt bung ngay khi thử uốn (曲げ試験 / mage-shiken). Không giấu được. Đây là lý do thợ Nhật luyện lượt chân đến ám ảnh. Câu 'Shosou ga inochi' (初層が命 / lượt đầu là mạng sống) phản ánh sự tôn trọng dành cho lượt chân.",
+    },
+    id: {
+      q: "Las Anda gagal inspeksi RT karena 'Tokekomi-furyou' (溶込不良). Apa itu LOP dan apa penyebabnya?",
+      opts: [
+        "Penetrasi berlebih — las tembus ke belakang",
+        "Penguatan las berlebih di atas sambungan",
+        "Porositas di akar las",
+        "Lack of Penetration — logam las TIDAK menembus ke akar sambungan. Disebabkan: arus terlalu rendah, jalan terlalu cepat, root gap salah, sudut gun salah",
+      ],
+      exp: "Tokekomi-furyou (溶込不良) = Lack of Penetration (LOP). Busur tak mencapai akar sambungan — meninggalkan celah tak menyatu di dasar. Penyebab: arus kurang, kecepatan jalan terlalu cepat, root gap terlalu kecil, sudut elektroda salah. Dalam ujian sertifikasi JIS Jepang, penetrasi akar tak lengkap adalah kegagalan otomatis. 🇯🇵 TIPS: Dalam uji praktik JIS las alur, inspektor menggerinda dan menekuk benda uji — LOP di akar akan retak terbuka seketika saat uji tekuk (曲げ試験 / mage-shiken). Tak ada yang bisa disembunyikan. Inilah mengapa tukang las Jepang berlatih root pass secara obsesif. Frasa 'Shosou ga inochi' (初層が命 / pass pertama adalah nyawa) mencerminkan betapa dihormatinya root pass.",
+    },
+  },
+  416: {
+    vi: {
+      q: "Khi nào dùng 'MT' (Jifun-tansho / 磁粉探傷試験) thay vì PT, và nó phát hiện được gì mà PT không?",
+      opts: [
+        "MT phát hiện nứt GẦN BỀ MẶT (hơi dưới bề mặt, không chỉ mở ra bề mặt) trên vật liệu TỪ TÍNH. PT chỉ phát hiện khuyết tật mở bề mặt",
+        "MT chỉ dùng cho hàn nhôm",
+        "MT hoạt động trên vật liệu không từ tính — PT không làm được",
+        "MT và PT phát hiện đúng cùng khuyết tật",
+      ],
+      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験): Tạo từ trường lên vật — khuyết tật làm gián đoạn từ trường và bột sắt tụ tại các điểm này. MT phát hiện cả khuyết tật bề mặt LẪN gần bề mặt (hơi dưới bề mặt) trên vật liệu từ tính (thép carbon, inox ferrit). PT chỉ phát hiện khuyết tật MỞ ra bề mặt. MT nhạy hơn với vật liệu từ tính — được ưa dùng ở xưởng đóng tàu Nhật cho mối thép carbon. 🇯🇵 MẸO: Ở xưởng đóng tàu Nhật (造船所), MT được làm thường quy sau mỗi lượt hàn trên khung sườn và cấu kiện kết cấu. Phương pháp MT ướt huỳnh quang (蛍光磁粉探傷) dưới đèn UV được dùng để nhạy tối đa. Nếu bạn làm ở xưởng đóng tàu và thấy ai mang đèn UV và bình xịt trắng, đến giờ MT rồi — đảm bảo vùng hàn của bạn tiếp cận được và sạch.",
+    },
+    id: {
+      q: "Kapan 'MT' (Jifun-tansho / 磁粉探傷試験) dipakai alih-alih PT, dan apa yang bisa dideteksinya yang PT tak bisa?",
+      opts: [
+        "MT bisa mendeteksi retak DEKAT-PERMUKAAN (sedikit di bawah permukaan, tak hanya terbuka ke permukaan) pada material MAGNETIK. PT hanya mendeteksi cacat yang terbuka di permukaan",
+        "MT hanya dipakai untuk las aluminium",
+        "MT bekerja pada material non-magnetik — PT tak bisa",
+        "MT dan PT mendeteksi cacat yang persis sama",
+      ],
+      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Menerapkan medan magnet ke benda kerja — cacat mengganggu medan dan bubuk besi menggerombol di titik-titik ini. MT mendeteksi cacat permukaan DAN dekat-permukaan (sedikit di bawah permukaan) pada material magnetik (baja karbon, stainless feritik). PT hanya mendeteksi cacat yang TERBUKA ke permukaan. MT lebih sensitif untuk material magnetik — disukai di galangan Jepang untuk las baja karbon. 🇯🇵 TIPS: Di galangan Jepang (造船所), MT dilakukan rutin setelah tiap pass las pada rangka lambung dan member struktur. Metode MT basah fluoresen (蛍光磁粉探傷) di bawah lampu UV dipakai untuk sensitivitas maksimum. Jika Anda bekerja di galangan dan melihat seseorang membawa lampu UV dan kaleng semprot putih, saatnya MT — pastikan area las Anda dapat diakses dan bersih.",
+    },
+  },
+  417: {
+    vi: {
+      q: "Nứt nguội (低温割れ / Teion-ware) được gọi là 'nứt do hydro'. BA điều kiện nào phải CÙNG hiện diện để nứt nguội hình thành?",
+      opts: [
+        "Thời tiết nóng + inox + thừa khí bảo vệ",
+        "Hydro khuếch tán trong mối hàn + tổ chức cứng/nhạy cảm + ứng suất kéo",
+        "Nung trước thấp + tấm dày + chỉ phương pháp FCAW",
+        "Dòng cao + tốc độ nhanh + sai dây",
+      ],
+      exp: "Nứt nguội (低温割れ) cần CẢ BA: 1) Hydro khuếch tán (từ ẩm, vật liệu nhiễm bẩn, hoặc que không phải loại ít hydro). 2) Tổ chức cứng nhạy cảm (mactenxit ở HAZ — từ thép carbon đương lượng cao hoặc nguội nhanh). 3) Ứng suất kéo (dư hoặc tác dụng). Loại bỏ BẤT KỲ một điều là nứt không thể hình thành. Giải pháp: nung trước + vật liệu ít hydro + PWHT. 🇯🇵 MẸO: Ở Nhật, que hàn cho việc kết cấu quan trọng được cất trong lò sấy que (乾燥炉 / kansou-ro) ở 300–350°C trước khi dùng, mỗi thợ chỉ lấy đủ cho một ca. Để que ngoài trời ẩm là chúng hút ẩm — và ẩm đó thành hydro khuếch tán trong mối hàn. Tổ trưởng Nhật coi việc cất que rất nghiêm túc.",
+    },
+    id: {
+      q: "Retak dingin (低温割れ / Teion-ware) disebut 'retak akibat hidrogen'. TIGA kondisi apa yang harus SEMUA ada agar retak dingin terbentuk?",
+      opts: [
+        "Cuaca panas + stainless + gas pelindung berlebih",
+        "Hidrogen difusi dalam las + mikrostruktur keras/rentan + tegangan tarik",
+        "Preheat rendah + pelat tebal + hanya proses FCAW",
+        "Arus tinggi + jalan cepat + kawat salah",
+      ],
+      exp: "Retak dingin (低温割れ) membutuhkan KETIGANYA: 1) Hidrogen difusi (dari kelembapan, material terkontaminasi, atau elektroda bukan rendah hidrogen). 2) Mikrostruktur keras rentan (martensit di HAZ — dari baja karbon ekuivalen tinggi atau pendinginan cepat). 3) Tegangan tarik (sisa atau terapan). Hilangkan SALAH SATU maka retak tak bisa terbentuk. Solusi: preheat + material rendah hidrogen + PWHT. 🇯🇵 TIPS: Di Jepang, elektroda las untuk pekerjaan struktur kritis disimpan dalam oven elektroda (乾燥炉 / kansou-ro) pada 300–350°C sebelum dipakai, dan tiap tukang mengambil hanya sesuai kebutuhan satu sesi. Membiarkan elektroda di luar pada hari lembap berarti menyerap kelembapan — dan kelembapan itu menjadi hidrogen difusi di las Anda. Mandor Jepang menanggapi penyimpanan elektroda dengan sangat serius.",
+    },
+  },
+  418: {
+    vi: {
+      q: "Một nứt nguội được phát hiện 24 giờ SAU khi hàn — mối hàn trông ổn ngay sau khi hoàn thành. Sao có thể vậy?",
+      opts: [
+        "Không thể — nứt hình thành ngay hoặc không bao giờ",
+        "Vết nứt có từ đầu nhưng người kiểm tra bỏ sót",
+        "Nứt nguội bị 'trì hoãn' — hydro khuếch tán từ từ di chuyển và tập trung ở điểm ứng suất, và nứt hình thành dần trong hàng giờ đến hàng ngày sau khi hàn. Đây là lý do thời điểm kiểm tra sau hàn quan trọng",
+        "Kim loại bị va đập và nứt do tai nạn sau khi hàn",
+      ],
+      exp: "Nứt nguội còn gọi là 'nứt trì hoãn' vì hydro khuếch tán trong kim loại hàn di chuyển chậm đến vùng ứng suất cao (HAZ, vùng tổ chức cứng) và tích tụ. Vết nứt có thể không hình thành cho đến hàng giờ — hoặc thậm chí hàng ngày — sau khi hàn. Đây là lý do quy chuẩn Nhật quy định thời điểm kiểm tra sau hàn: thường 24–48 giờ sau khi hoàn thành với mối hàn quan trọng. 🇯🇵 MẸO: Trên công trường Nhật, kế hoạch chất lượng (品質計画書) cho mối hàn thép cường độ cao có thể ghi 'hàn xong → chờ 48 giờ → kiểm MT/PT'. Nghĩa là không mài bề mặt hay bước tiếp theo cho đến khi cửa sổ kiểm tra hoàn tất. Nếu bạn hàn xong chiều thứ Năm, kiểm tra có thể đến sáng thứ Bảy mới làm. Lập kế hoạch quanh điều này là kỹ năng thực sự trong quản lý sản xuất Nhật.",
+    },
+    id: {
+      q: "Retak dingin ditemukan 24 jam SETELAH mengelas — las tampak baik segera setelah selesai. Bagaimana ini mungkin?",
+      opts: [
+        "Ini mustahil — retak terbentuk seketika atau tidak sama sekali",
+        "Retak ada sejak awal tapi inspektor melewatkannya",
+        "Retak dingin bersifat 'tertunda' — hidrogen difusi perlahan bermigrasi dan terkonsentrasi di titik tegangan, dan retak terbentuk bertahap dalam berjam-jam hingga berhari-hari setelah mengelas. Inilah mengapa waktu inspeksi pasca-las penting",
+        "Logam terbentur dan retak secara tak sengaja setelah mengelas",
+      ],
+      exp: "Retak dingin juga disebut 'retak tertunda' karena hidrogen difusi dalam logam las bermigrasi perlahan ke zona tegangan tinggi (HAZ, area mikrostruktur keras) dan menumpuk. Retak mungkin baru terbentuk berjam-jam — bahkan berhari-hari — setelah mengelas. Inilah mengapa kode Jepang menetapkan waktu inspeksi pasca-las: sering 24–48 jam setelah selesai untuk las kritis. 🇯🇵 TIPS: Di lokasi konstruksi Jepang, rencana mutu (品質計画書) untuk las baja kekuatan tinggi bisa menyatakan 'las selesai → tunggu 48 jam → inspeksi MT/PT'. Artinya tak ada penggerindaan permukaan atau pekerjaan langkah berikutnya sampai jendela inspeksi selesai. Jika Anda menyelesaikan las Kamis sore, inspeksi mungkin baru Sabtu pagi. Merencanakan seputar ini adalah keterampilan nyata dalam manajemen produksi Jepang.",
+    },
+  },
+  419: {
+    vi: {
+      q: "Trình tự NDT đúng cho một mối hàn kết cấu quan trọng ở Nhật, từ đầu đến cuối, là gì?",
+      opts: [
+        "Làm tất cả kiểm tra cùng lúc để tiết kiệm thời gian",
+        "RT → VT → PT/MT → UT",
+        "UT → MT → RT → VT",
+        "VT trước → rồi PT hoặc MT (bề mặt) → rồi RT hoặc UT (bên trong) — luôn phương pháp bề mặt trước, rồi thể tích",
+      ],
+      exp: "Trình tự NDT tiêu chuẩn: 1) VT (目視) — ngoại quan trước, luôn miễn phí và nhanh. 2) PT hoặc MT (浸透 / 磁粉) — khuyết tật bề mặt. 3) RT (放射線) hoặc UT (超音波) — khuyết tật bên trong. Logic: nếu VT hoặc PT/MT tìm ra khuyết tật nghiêm trọng, không cần tiến tới RT/UT đắt. Ở Nhật, thứ tự kiểm tra do kế hoạch chất lượng (品質計画書) kiểm soát. 🇯🇵 MẸO: Khi kỹ sư QC Nhật đưa bạn 品質計画書 (kế hoạch chất lượng), đọc kỹ. Nó ghi chính xác phương pháp NDT nào, ở giai đoạn nào, do ai, cho mỗi mối nối. Ở dự án lớn (cầu, tòa nhà, tàu), kế hoạch chất lượng là tài liệu pháp lý. Sai lệch mà không có phê duyệt bằng văn bản là không được phép — và hồ sơ (記録 / kiroku) phải đầy đủ.",
+    },
+    id: {
+      q: "Apa urutan NDT yang benar untuk las struktur kritis di Jepang, dari pertama ke terakhir?",
+      opts: [
+        "Lakukan semua uji bersamaan untuk menghemat waktu",
+        "RT → VT → PT/MT → UT",
+        "UT → MT → RT → VT",
+        "VT dulu → lalu PT atau MT (permukaan) → lalu RT atau UT (internal) — selalu metode permukaan dulu, baru volumetrik",
+      ],
+      exp: "Urutan NDT standar: 1) VT (目視) — visual dulu, selalu gratis dan cepat. 2) PT atau MT (浸透 / 磁粉) — cacat permukaan. 3) RT (放射線) atau UT (超音波) — cacat internal. Logika: jika VT atau PT/MT menemukan cacat serius, tak perlu lanjut ke RT/UT yang mahal. Di Jepang, urutan inspeksi dikendalikan rencana mutu (品質計画書). 🇯🇵 TIPS: Saat insinyur QC Jepang memberi Anda 品質計画書 (rencana mutu), baca dengan teliti. Ia menetapkan persis metode NDT mana, pada tahap apa, oleh siapa, untuk tiap sambungan las. Pada proyek besar (jembatan, gedung, kapal), rencana mutu adalah dokumen legal. Menyimpang darinya tanpa persetujuan tertulis tak diperbolehkan — dan jejak dokumen (記録 / kiroku) harus lengkap.",
+    },
+  },
+  420: {
+    vi: {
+      q: "Một mối hàn có 'Pit' (ピット) trên bề mặt, và một mối khác có 'Buroohoru' (ブローホール) xác nhận bằng RT không mở ra bề mặt. Cả hai do khí kẹt. Phương pháp kiểm tra nào bắt được CẢ HAI, và cái nào chỉ bắt MỘT?",
+      opts: [
+        "VT bắt được pit (mở bề mặt) nhưng bỏ sót rỗ khí (hoàn toàn bên trong); RT phát hiện được rỗ khí, và có thể cả pit tùy hình học — nên RT là phép kiểm đầy đủ hơn",
+        "RT không bắt được cái nào — RT chỉ phát hiện nứt, không bao giờ khuyết tật khí",
+        "VT và RT đều mù với cả hai; chỉ UT phát hiện rỗ khí",
+        "Chỉ VT bắt được cả hai — rỗ khí bề mặt lẫn bên trong cuối cùng đều làm biến dạng bề mặt",
+      ],
+      exp: "Pitto (ピット) = lỗ khí mở bề mặt, thấy khi VT như hố nhỏ trên mặt mối hàn. Buroohoru (ブローホール) = lỗ khí bên trong, hoàn toàn kín trong mối hàn và vô hình với mắt — VT sẽ bỏ sót hoàn toàn. RT có thể hiện rỗ khí bên trong thành đốm tối tròn trên phim, và tùy hình học có thể cả bằng chứng pit bề mặt. Cả hai chung nguyên nhân gốc (ẩm, nhiễm bẩn, che khí hỏng) nhưng khác ở CHỖ khí bị kẹt khi đông. 🇯🇵 MẸO: Pit (ピット) trên bề mặt mối hàn cuối là trượt VT tự động trong thi JIS Nhật. Sau khi hoàn thành lượt cuối, thợ Nhật quét mắt kỹ bề mặt đường hàn trước khi gọi người kiểm tra — phòng ngừa nghĩa là đảm bảo không sơn, dầu, gỉ hay ẩm trên kim loại nền trước lượt cuối.",
+    },
+    id: {
+      q: "Sebuah las menunjukkan 'Pit' (ピット) di permukaannya, dan las lain menunjukkan 'Buroohoru' (ブローホール) yang dikonfirmasi RT tanpa bukaan permukaan. Kedua cacat disebabkan gas terperangkap. Metode inspeksi mana yang menangkap KEDUANYA, dan mana yang hanya menangkap SATU?",
+      opts: [
+        "VT menangkap pit (terbuka di permukaan) tapi melewatkan blowhole (sepenuhnya internal); RT bisa mendeteksi blowhole, dan mungkin juga menunjukkan pit tergantung geometri — jadi RT adalah pemeriksaan yang lebih lengkap",
+        "RT tak menangkap keduanya — RT hanya bisa mendeteksi retak, tak pernah cacat terkait gas",
+        "VT dan RT sama-sama buta terhadap keduanya; hanya UT yang bisa mendeteksi pori gas",
+        "VT saja menangkap keduanya — pori gas permukaan dan internal keduanya akhirnya mengubah permukaan",
+      ],
+      exp: "Pitto (ピット) = pori gas terbuka di permukaan, terlihat saat VT sebagai kawah kecil di muka las. Buroohoru (ブローホール) = pori gas internal, sepenuhnya tertutup di dalam las dan tak terlihat mata — VT akan melewatkannya sepenuhnya. RT bisa menampakkan blowhole internal sebagai bintik gelap bulat pada film, dan tergantung geometri mungkin juga menunjukkan bukti pit permukaan. Kedua cacat berbagi penyebab akar yang sama (kelembapan, kontaminasi, kegagalan pelindung) tapi berbeda pada DI MANA gas terperangkap saat pembekuan. 🇯🇵 TIPS: Pit (ピット) pada permukaan las akhir adalah kegagalan VT otomatis dalam uji JIS Jepang. Setelah menyelesaikan pass akhir, tukang las Jepang memindai permukaan jalur dengan cermat sebelum memanggil inspektor — pencegahan berarti memastikan tak ada cat, minyak, karat, atau kelembapan pada logam dasar sebelum pass akhir.",
+    },
+  },
 };
