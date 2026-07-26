@@ -1656,4 +1656,224 @@ export const Q_I18N = {
       exp: "Ruuto-gyappu (ルートギャップ) = Root gap / bukaan akar. Ruang terkendali antara tepi pelat di akar alur. Terlalu sempit (< spek): busur tak mencapai akar, menyebabkan kurang penetrasi (溶込不良). Terlalu lebar (> spek): tembus bakar (溶落ち). Ditetapkan pada gambar — ukur dengan gap gauge sebelum mengelas. 🇯🇵 TIPS: Lokasi Jepang memakai 隙間ゲージ (sukima-geeji / set feeler gauge) atau gap gauge khusus untuk memeriksanya sebelum tiap las. Rentang yang dapat diterima biasanya ±0.5mm dari spek. Jangan mengira-ngira — celah yang tampak benar sering tidak, dan biaya menyesuaikan sebelum mengelas jauh lebih rendah daripada hatsuri dan mengulang setelahnya.",
     },
   },
+  311: {
+    vi: {
+      q: "Trên bản vẽ JIS, ký hiệu hàn đặt DƯỚI đường chuẩn. Điều này chỉ gì?",
+      opts: [
+        "Ký hiệu dưới đường nghĩa là yêu cầu hàn trần",
+        "Mối hàn ở phía đối diện với mũi tên",
+        "Mối hàn ở CẢ HAI phía",
+        "Mối hàn ở PHÍA MŨI TÊN — phía mũi tên đang chỉ tới",
+      ],
+      exp: "Quy tắc ký hiệu hàn JIS: Dưới đường chuẩn = PHÍA MŨI TÊN (矢側 / yagawa). Trên đường chuẩn = PHÍA ĐỐI DIỆN (反矢側 / hanyagawa). Đây là quy ước JIS/ISO. CẢNH BÁO: Ký hiệu AWS (Mỹ) dùng quy ước NGƯỢC lại — luôn xác nhận bản vẽ theo tiêu chuẩn nào. 🇯🇵 MẸO: Khi vào công ty Nhật mới, kiểm ô tiêu đề của bản vẽ đầu tiên bạn nhận — nó phải ghi 'JIS' hoặc 'JIS B 0021'. Nếu bản vẽ từ khách quốc tế (đóng tàu Hàn, Mỹ), xác nhận tiêu chuẩn với quản lý QC ngày đầu. Sai phía = làm lại.",
+    },
+    id: {
+      q: "Pada gambar JIS, simbol las diletakkan DI BAWAH garis referensi. Apa artinya?",
+      opts: [
+        "Simbol di bawah garis berarti las overhead diperlukan",
+        "Las berada di sisi berlawanan dari panah",
+        "Las berada di KEDUA sisi",
+        "Las di SISI PANAH — sisi yang ditunjuk panah",
+      ],
+      exp: "Aturan simbol las JIS: Di bawah garis referensi = SISI PANAH (矢側 / yagawa). Di atas garis referensi = SISI LAIN (反矢側 / hanyagawa). Ini konvensi JIS/ISO. PERINGATAN: Simbol AWS (Amerika) memakai konvensi BERLAWANAN — selalu pastikan gambar mengikuti standar mana. 🇯🇵 TIPS: Saat masuk perusahaan Jepang baru, periksa blok judul gambar pertama yang Anda terima — harus tertera 'JIS' atau 'JIS B 0021'. Jika gambar dari klien internasional (galangan Korea, Amerika), konfirmasi standar dengan manajer QC di hari pertama. Salah sisi = rework.",
+    },
+  },
+  312: {
+    vi: {
+      q: "Bản vẽ JIS có ký hiệu mối hàn góc (△) ở TRÊN VÀ DƯỚI đường chuẩn. Điều này nghĩa là gì?",
+      opts: [
+        "Hàn cả hai phía — mối góc ở cả phía mũi tên và phía đối diện của mối nối",
+        "Áp dụng mối góc cho một mối nối khác gần đó",
+        "Ký hiệu vẽ sai — bỏ qua một cái",
+        "Chỉ hàn phía mũi tên — ký hiệu thứ hai chỉ để trang trí",
+      ],
+      exp: "Khi ký hiệu hàn xuất hiện CẢ trên và dưới đường chuẩn, nghĩa là hàn CẢ HAI PHÍA. Với mối góc: mối góc hai mặt (両面すみ肉溶接). Mỗi phía có thể quy định kích thước khác nhau — đọc số riêng cho từng phía. 🇯🇵 MẸO: Trên bản vẽ kết cấu Nhật, 両面すみ肉 (mối góc hai mặt) được viết '両' trước ký hiệu hàn. Chỉ một mặt được ngầm hiểu khi không có '両'. Người mới hay bỏ sót một mặt vì quên kiểm — luôn dò toàn bộ ký hiệu trước khi bắt đầu.",
+    },
+    id: {
+      q: "Gambar JIS memiliki simbol las sudut (△) di ATAS DAN DI BAWAH garis referensi. Apa artinya?",
+      opts: [
+        "Las di kedua sisi — las sudut di sisi panah dan sisi lain sambungan",
+        "Terapkan las sudut ke sambungan lain di dekatnya",
+        "Simbol digambar salah — abaikan salah satunya",
+        "Las di sisi panah saja — simbol kedua hanya dekoratif",
+      ],
+      exp: "Saat simbol las muncul di ATAS dan DI BAWAH garis referensi, artinya las di KEDUA SISI. Untuk las sudut: las sudut dua sisi (両面すみ肉溶接). Tiap sisi bisa memiliki dimensi berbeda — baca angkanya terpisah untuk tiap sisi. 🇯🇵 TIPS: Pada gambar struktur Jepang, 両面すみ肉 (fillet dua sisi) ditulis '両' sebelum simbol las. Satu sisi saja tersirat bila '両' tak ada. Pekerja baru sering melewatkan satu sisi karena lupa memeriksanya — selalu telusuri simbol lengkap sebelum mulai.",
+    },
+  },
+  313: {
+    vi: {
+      q: "Vòng tròn (○) tại giao điểm của đường chuẩn và mũi tên trong ký hiệu hàn JIS nghĩa là gì?",
+      opts: [
+        "Không hàn — đừng hàn mối nối này",
+        "Hàn toàn chu vi (全周溶接) — hàn liên tục quanh toàn bộ chu vi mối nối",
+        "Yêu cầu hàn trần tại vị trí này",
+        "Mối hàn đã được kiểm tra và duyệt",
+      ],
+      exp: "Ký hiệu vòng tròn (○) tại giao mũi tên/đường chuẩn = Hàn toàn chu vi (全周溶接). Mối hàn quy định phải làm liên tục quanh toàn bộ chu vi mối nối. Phổ biến ở nối ống, tấm đế cột và tiết diện rỗng kết cấu. 🇯🇵 MẸO: Khi hàn 全周溶接, các vị trí khởi/dừng hồ quang phải so le, không dồn cùng một điểm — dồn khuyết tật dừng/khởi vào một chỗ tạo điểm yếu. Giám sát Nhật sẽ ghi nhận vị trí dừng/khởi của bạn. Lập trình tự trước khi bắt đầu.",
+    },
+    id: {
+      q: "Apa arti lingkaran (○) di persimpangan garis referensi dan panah dalam simbol las JIS?",
+      opts: [
+        "Nol las — jangan las sambungan ini",
+        "Las keliling (全周溶接) — las menerus di seluruh keliling sambungan",
+        "Las overhead diperlukan di lokasi ini",
+        "Las telah diperiksa dan disetujui",
+      ],
+      exp: "Simbol lingkaran (○) di pertemuan panah/garis referensi = Las keliling (全周溶接). Las yang ditentukan harus dibuat menerus di seluruh keliling sambungan. Umum pada sambungan pipa, pelat dasar kolom, dan penampang berongga struktur. 🇯🇵 TIPS: Saat mengelas 全周溶接, lokasi mulai/berhenti busur harus diselang-seling dan tidak semua di titik yang sama — memusatkan cacat berhenti/mulai di satu lokasi menciptakan titik lemah. Supervisor Jepang akan mencatat posisi berhenti/mulai Anda. Rencanakan urutannya sebelum mulai.",
+    },
+  },
+  314: {
+    vi: {
+      q: "Bản vẽ JIS có ký hiệu cờ (旗マーク) tại đường chuẩn. Điều này chỉ gì?",
+      opts: [
+        "Thợ hàn đã đạt kiểm tra chất lượng",
+        "Mối hàn cần xử lý nhiệt sau hàn",
+        "Hàn hiện trường (現場溶接) — mối này thực hiện tại công trường lắp đặt, không phải trong nhà máy",
+        "Mối nối chịu ứng suất cao — cần cẩn thận thêm",
+      ],
+      exp: "Ký hiệu cờ (旗マーク) = Ký hiệu hàn hiện trường (現場溶接記号). Mối này KHÔNG làm trong nhà máy — nó thực hiện tại công trường xây dựng/lắp đặt thực sau khi các chi tiết chế sẵn được lắp vào vị trí. Quan trọng khi lập kế hoạch: hàn hiện trường có điều kiện khó hơn (thời tiết, tư thế, tiếp cận) so với hàn nhà máy. 🇯🇵 MẸO: Hàn hiện trường (現場溶接) ở Nhật cần tài liệu kế hoạch bổ sung (施工計画書 / shiko-keikakusho). Gió, độ ẩm và nhiệt độ đều ảnh hưởng chất lượng — mưa hoặc gió mạnh (風速10m/s以上) theo luật phải dừng hàn ngoài trời. Luôn kiểm dự báo thời tiết và điều kiện công trường trước khi ra làm hàn hiện trường.",
+    },
+    id: {
+      q: "Gambar JIS memiliki simbol bendera (旗マーク) di garis referensi. Apa artinya?",
+      opts: [
+        "Tukang las telah lulus inspeksi mutu",
+        "Las memerlukan perlakuan panas pasca-las",
+        "Las lapangan (現場溶接) — las ini dikerjakan di lokasi konstruksi/pemasangan, bukan di pabrik",
+        "Sambungan las bertegangan tinggi — perlu perhatian ekstra",
+      ],
+      exp: "Tanda bendera (旗マーク) = Simbol las lapangan (現場溶接記号). Las ini TIDAK dikerjakan di pabrik — dilakukan di lokasi konstruksi/pemasangan nyata setelah bagian prafabrikasi dirakit di tempat. Penting untuk perencanaan: las lapangan berkondisi lebih menantang (cuaca, posisi, akses) daripada las pabrik. 🇯🇵 TIPS: Las lapangan (現場溶接) di Jepang memerlukan dokumen perencanaan tambahan (施工計画書 / shiko-keikakusho). Angin, kelembapan, dan suhu semua memengaruhi mutu — hujan atau angin kencang (風速10m/s以上) secara hukum mewajibkan menghentikan las luar ruangan. Selalu periksa prakiraan cuaca dan kondisi lokasi sebelum berangkat kerja las lapangan.",
+    },
+  },
+  315: {
+    vi: {
+      q: "Khác biệt QUAN TRỌNG giữa quy ước ký hiệu hàn JIS và AWS có thể gây lỗi nghiêm trọng nếu nhầm là gì?",
+      opts: [
+        "Không có khác biệt — ký hiệu JIS và AWS giống hệt",
+        "JIS dùng hệ mét, AWS dùng hệ inch — không khác gì thêm",
+        "JIS dùng nét liền, AWS dùng nét đứt cho đường chuẩn",
+        "Trong JIS: dưới đường = phía MŨI TÊN. Trong AWS: dưới đường cũng là phía mũi tên — NHƯNG logic đặt ký hiệu 'phía đối diện' bị đảo trong các diễn giải lịch sử. Luôn xác nhận dự án theo tiêu chuẩn nào",
+      ],
+      exp: "Đây là điểm then chốt. JIS/ISO và AWS dùng quy ước khác nhau cho vị trí ký hiệu phía mũi tên so với phía đối diện. Ở Nhật, MỌI bản vẽ dùng JIS (hoặc ISO) — nếu bạn quen bản vẽ AWS (dùng ở Mỹ, Úc...), xác nhận tiêu chuẩn ở đầu mỗi dự án. Đọc sai ký hiệu = hàn sai phía = làm lại hoặc hỏng kết cấu. 🇯🇵 MẸO: Xưởng đóng tàu Hàn (Hyundai, Samsung, DSME) làm việc với công ty Nhật đôi khi nộp bản vẽ chuẩn AWS — đã gây sự cố làm lại thật ở các xưởng Nhật. Nếu thấy 'AWS D1.1' hoặc 'ASME' trong ô tiêu đề, báo giám sát ngay trước khi hàn bất cứ gì.",
+    },
+    id: {
+      q: "Apa perbedaan KRITIS antara konvensi simbol las JIS dan AWS yang bisa menyebabkan kesalahan serius jika tertukar?",
+      opts: [
+        "Tak ada beda — simbol JIS dan AWS identik",
+        "JIS memakai dimensi metrik, AWS imperial — tak ada beda lain",
+        "JIS memakai garis solid, AWS garis putus untuk garis referensi",
+        "Dalam JIS: di bawah garis = sisi PANAH. Dalam AWS: di bawah garis juga sisi panah — TAPI logika penempatan simbol 'sisi lain' terbalik dalam interpretasi historis. Selalu pastikan proyek mengikuti standar mana",
+      ],
+      exp: "Ini poin kritis. JIS/ISO dan AWS memakai konvensi berbeda untuk penempatan simbol sisi-panah vs sisi-lain. Di Jepang, SEMUA gambar memakai JIS (atau ISO) — jika Anda terbiasa gambar AWS (dipakai di AS, Australia...), pastikan standar di awal tiap proyek. Salah membaca simbol = mengelas di sisi salah = rework atau kegagalan struktur. 🇯🇵 TIPS: Galangan Korea (Hyundai, Samsung, DSME) yang bekerja dengan perusahaan Jepang kadang mengirim gambar standar AWS — ini pernah menyebabkan insiden rework nyata di galangan Jepang. Jika Anda melihat 'AWS D1.1' atau 'ASME' di blok judul, segera beri tahu supervisor sebelum mengelas apa pun.",
+    },
+  },
+  316: {
+    vi: {
+      q: "'T-keite' (T継手) là gì và thường dùng ở đâu?",
+      opts: [
+        "Mối chữ T — một tấm gặp tấm khác ở 90°, tạo hình chữ T. Thường hàn bằng mối góc (すみ肉) cả hai phía",
+        "Hai ống nối cùng đường kính",
+        "Mối nơi hai tấm chồng lên nhau",
+        "Hai tấm hàn đối đầu thành đường thẳng",
+      ],
+      exp: "T-keite (T継手) = Mối chữ T. Một tấm hàn vuông góc với mặt tấm kia, tạo hình chữ T. Mối kết cấu phổ biến nhất trong chế tạo thép. Thường dùng hai mối góc (すみ肉溶接) hai phía. Với ứng dụng ứng suất cao, có thể cần mối rãnh ngấu hoàn toàn. 🇯🇵 MẸO: Trên bản vẽ Nhật, khi mối chữ T ghi 'K形開先' (rãnh chữ K), nghĩa là cần ngấu hoàn toàn — không phải mối góc thường. Phân biệt này ảnh hưởng lớn đến độ bền. Nếu không chắc mối chữ T cần vát rãnh hay chỉ mối góc, luôn hỏi giám sát thay vì đoán.",
+    },
+    id: {
+      q: "Apa itu 'T-keite' (T継手) dan di mana umumnya dipakai?",
+      opts: [
+        "Sambungan T — satu pelat bertemu pelat lain pada 90°, membentuk huruf T. Biasanya dilas dengan las sudut (すみ肉) di kedua sisi",
+        "Dua pipa terhubung diameter sama",
+        "Sambungan di mana dua pelat saling tumpang",
+        "Dua pelat dilas ujung-ke-ujung dalam garis lurus",
+      ],
+      exp: "T-keite (T継手) = Sambungan T. Satu pelat dilas tegak lurus terhadap permukaan pelat lain, membentuk huruf T. Sambungan struktur paling umum dalam fabrikasi baja. Biasanya memakai dua las sudut (すみ肉溶接) di kedua sisi. Untuk aplikasi tegangan tinggi, mungkin diperlukan las alur penetrasi penuh. 🇯🇵 TIPS: Pada gambar Jepang, saat sambungan T menunjukkan 'K形開先' (K-groove), artinya penetrasi penuh diperlukan — bukan fillet biasa. Perbedaan ini sangat penting untuk kekuatan. Jika ragu apakah sambungan T butuh persiapan alur atau hanya fillet, selalu tanya supervisor alih-alih menebak.",
+    },
+  },
+  317: {
+    vi: {
+      q: "Mã tư thế hàn ISO 'PA' là gì và tiếng Nhật gọi là gì?",
+      opts: [
+        "PA = Tư thế ngang = 横向き姿勢 (Yokomuki-shisei)",
+        "PA = Tư thế bằng = 下向き姿勢 (Shitamuki-shisei)",
+        "PA = Tư thế trần = 上向き姿勢 (Uwamuki-shisei)",
+        "PA = Tư thế đứng = 立向き姿勢 (Tatemuki-shisei)",
+      ],
+      exp: "Mã tư thế ISO 6947: PA = Bằng (下向き / PA), PB = Góc ngang (水平すみ肉 / PB), PC = Rãnh ngang (横向き / PC), PE = Trần (上向き / PE), PF = Đứng-lên (立向上進 / PF), PG = Đứng-xuống (立向下進 / PG). Các mã này xuất hiện trên chứng chỉ hàn quốc tế. 🇯🇵 MẸO: Mã tư thế IIW/ISO xuất hiện trên chứng chỉ quốc tế như IW (International Welder). Nếu bạn định làm dự án ngoài khơi, LNG hoặc hạt nhân ở Nhật, biết mã ISO là thiết yếu — các dự án này dùng chuẩn ISO song song JIS. Mang cả chứng chỉ JIS lẫn ISO/IIW nếu có.",
+    },
+    id: {
+      q: "Apa kode posisi las ISO 'PA' dan disebut apa dalam bahasa Jepang?",
+      opts: [
+        "PA = Posisi mendatar = 横向き姿勢 (Yokomuki-shisei)",
+        "PA = Posisi datar = 下向き姿勢 (Shitamuki-shisei)",
+        "PA = Posisi overhead = 上向き姿勢 (Uwamuki-shisei)",
+        "PA = Posisi tegak = 立向き姿勢 (Tatemuki-shisei)",
+      ],
+      exp: "Kode posisi ISO 6947: PA = Datar (下向き / PA), PB = Fillet horizontal (水平すみ肉 / PB), PC = Alur mendatar (横向き / PC), PE = Overhead (上向き / PE), PF = Tegak-naik (立向上進 / PF), PG = Tegak-turun (立向下進 / PG). Kode ini muncul pada sertifikat kualifikasi las internasional. 🇯🇵 TIPS: Kode posisi IIW/ISO muncul pada sertifikasi internasional seperti IW (International Welder). Jika Anda berencana mengerjakan proyek lepas pantai, LNG, atau nuklir di Jepang, mengetahui kode ISO itu esensial — proyek ini memakai standar ISO bersama JIS. Bawa sertifikat JIS dan ISO/IIW jika Anda punya.",
+    },
+  },
+  318: {
+    vi: {
+      q: "Mã tư thế ISO 'PF' nghĩa là gì, và tên tiếng Nhật là gì?",
+      opts: [
+        "PF = Tư thế bằng = 下向き",
+        "PF = Tư thế trần = 上向き姿勢",
+        "PF = Hàn đứng-lên = 立向上進 (Tatemuki-joshin) — hàn hướng lên trên tấm đứng",
+        "PF = Góc ngang = 水平すみ肉",
+      ],
+      exp: "ISO PF = Hàn đứng-lên (立向上進 / Tatemuki-joshin). Đây là hướng hàn đứng tiêu chuẩn trong chế tạo Nhật — hàn hướng lên cho hòa nhập và ngấu tốt hơn so với đứng-xuống. ISO PG = đứng-xuống. Các mã này xuất hiện trên chứng chỉ JIS và IIW quốc tế. 🇯🇵 MẸO: Khi gia hạn chứng chỉ JIS, hồ sơ thi ghi các tư thế bạn được cấp. Chứng chỉ PF (đứng-lên) bao hàn đứng — PG là chứng chỉ riêng. Ở Nhật, hầu hết việc cần PF nhưng hiếm khi cần PG — kiểm kỹ phạm vi chứng chỉ khi nhận việc mới.",
+    },
+    id: {
+      q: "Apa arti kode posisi ISO 'PF', dan apa nama Jepangnya?",
+      opts: [
+        "PF = Posisi datar = 下向き",
+        "PF = Posisi overhead = 上向き姿勢",
+        "PF = Las tegak-naik = 立向上進 (Tatemuki-joshin) — mengelas ke atas pada pelat tegak",
+        "PF = Fillet horizontal = 水平すみ肉",
+      ],
+      exp: "ISO PF = Las tegak-naik (立向上進 / Tatemuki-joshin). Ini arah las tegak standar dalam fabrikasi Jepang — mengelas ke atas menghasilkan fusi dan penetrasi lebih baik dibanding tegak-turun. ISO PG = tegak-turun. Kode ini muncul pada sertifikat kualifikasi JIS dan IIW internasional. 🇯🇵 TIPS: Saat memperbarui kualifikasi JIS, catatan uji menunjukkan posisi apa saja yang Anda kualifikasi. Kualifikasi PF (tegak-naik) mencakup las tegak — PG kualifikasi terpisah. Di Jepang, kebanyakan pekerjaan butuh PF tapi jarang butuh PG — periksa cakupan sertifikat Anda dengan teliti saat menawar pekerjaan baru.",
+    },
+  },
+  319: {
+    vi: {
+      q: "Bản vẽ ghi mối hàn góc với 'Kyakucho 8mm' (脚長8mm). Chiều dày cổ lý thuyết (のど厚) là bao nhiêu?",
+      opts: [
+        "8.0mm — cổ bằng chiều dài chân",
+        "4.0mm — cổ bằng nửa chiều dài chân",
+        "11.3mm — cổ lớn hơn chiều dài chân",
+        "5.66mm — cổ = 8mm × 0.707",
+      ],
+      exp: "Cổ lý thuyết (理論のど厚) = chiều dài chân × 0.707 (= cos 45°). Với chân 8mm: 8 × 0.707 = 5.66mm cổ. Phép tính này cơ bản cho thiết kế độ bền kết cấu. Kích thước cổ dùng trong mọi công thức độ bền mối hàn. Luôn kiểm: bản vẽ thường ghi chiều dài chân (脚長), nhưng độ bền tính từ cổ (のど厚). 🇯🇵 MẸO: Ở Nhật, tài liệu tính kết cấu (構造計算書) cho tòa nhà phải thể hiện nodo-atsu và tính đủ cho tải thiết kế. Nếu bị bảo làm mối góc nhỏ hơn quy định để 'tiết kiệm dây', hãy từ chối — chiều dài chân do kỹ sư tính có lý do. Giảm nó có thể là vi phạm an toàn kết cấu.",
+    },
+    id: {
+      q: "Gambar menetapkan las sudut dengan 'Kyakucho 8mm' (脚長8mm). Berapa tebal leher teoretis (のど厚)?",
+      opts: [
+        "8.0mm — leher sama dengan panjang kaki",
+        "4.0mm — leher setengah panjang kaki",
+        "11.3mm — leher lebih besar dari panjang kaki",
+        "5.66mm — leher = 8mm × 0.707",
+      ],
+      exp: "Leher teoretis (理論のど厚) = panjang kaki × 0.707 (= cos 45°). Untuk kaki 8mm: 8 × 0.707 = 5.66mm leher. Perhitungan ini fundamental untuk desain kekuatan struktur. Dimensi leher dipakai dalam semua rumus kekuatan las. Selalu periksa: gambar biasanya menetapkan panjang kaki (脚長), tapi kekuatan dihitung dari leher (のど厚). 🇯🇵 TIPS: Di Jepang, dokumen perhitungan struktur (構造計算書) untuk bangunan harus menunjukkan nodo-atsu dan kecukupannya untuk beban desain. Jika Anda diminta membuat fillet lebih kecil dari spesifikasi untuk 'menghemat kawat', tolak — panjang kaki dihitung insinyur karena suatu alasan. Menguranginya bisa jadi pelanggaran keselamatan struktur.",
+    },
+  },
+  320: {
+    vi: {
+      q: "'Kanzen-tokekomi-yosetsu' (完全溶込み溶接 / CJP) là gì và khi nào cần?",
+      opts: [
+        "Mối ngấu hoàn toàn — kim loại hàn ngấu xuyên toàn bộ chiều dày mối nối. Cần cho nối chịu ứng suất cao (ví dụ cột-dầm, bình áp lực)",
+        "Mối dùng cài đặt dòng tối đa",
+        "Mối phủ cả hai mặt tấm",
+        "Mối được đánh bóng phẳng mặt",
+      ],
+      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Mối ngấu hoàn toàn (CJP). Vùng nóng chảy kéo dài qua TOÀN BỘ chiều dày tấm. Cần cho: nối tòa nhà chịu địa chấn (ダイアフラム), thân bình áp lực và mối kết cấu quan trọng. Kiểm bằng RT hoặc UT. Trái với mối ngấu một phần (部分溶込み / PJP). 🇯🇵 MẸO: Ở Nhật, mối CJP tại nối tòa nhà quan trọng về địa chấn (柱梁接合部) cần chi tiết mối được tiền phê duyệt theo Luật Tiêu chuẩn Xây dựng (建築基準法). Nếu người kiểm tra đánh dấu CJP của bạn 不合格 (trượt), bạn phải khoét ra, hàn lại và kiểm lại — không có chấp nhận một phần. Làm đúng ngay lần đầu không chỉ là hiệu quả; đó là niềm tự hào nghề nghiệp.",
+    },
+    id: {
+      q: "Apa itu 'Kanzen-tokekomi-yosetsu' (完全溶込み溶接 / CJP) dan kapan diperlukan?",
+      opts: [
+        "Las penetrasi penuh — logam las menembus seluruh tebal sambungan. Diperlukan untuk sambungan bertegangan tinggi (mis. kolom-balok, bejana tekan)",
+        "Las yang memakai setelan arus maksimum",
+        "Las yang menutup kedua sisi pelat",
+        "Las yang dipoles rata dengan permukaan",
+      ],
+      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP). Zona fusi meluas ke SELURUH tebal pelat. Diperlukan untuk: sambungan bangunan tahan gempa (ダイアフラム), cangkang bejana tekan, dan sambungan struktur kritis. Diverifikasi dengan inspeksi RT atau UT. Berbeda dengan las penetrasi parsial (部分溶込み / PJP). 🇯🇵 TIPS: Di Jepang, las CJP pada sambungan bangunan kritis gempa (柱梁接合部) memerlukan detail sambungan pra-kualifikasi sesuai Undang-Undang Standar Bangunan (建築基準法). Jika inspektor menandai CJP Anda 不合格 (ditolak), Anda harus mengorek keluar, mengelas ulang, dan menginspeksi ulang — tak ada penerimaan sebagian. Melakukannya benar sejak awal bukan hanya efisiensi; itu kebanggaan profesional.",
+    },
+  },
 };
