@@ -10,7 +10,7 @@ import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStu
 import { MockScreen } from './Mock_en.jsx'
 import { LearnTab } from './Learn_en.jsx'
 import { loadLang, saveLang, LANGS } from './i18n_en.js'
-import { localizeQ } from './localize_en.js'
+import { localizeQ, ensureTranslations } from './localize_en.js'
 
 // ── CONSTANTS ───────────────────────────────────────────────
 const P_HP   = 100   // player max HP
@@ -2886,7 +2886,13 @@ export default function App() {
   const [history,       setHistory]       = useState([])
   const [stageProgress, setStageProgress] = useState(() => loadProgress())
   const [lang,          setLang]          = useState(() => loadLang())
-  function pickLang(l) { setLang(l); saveLang(l) }
+  const [, setI18nTick] = useState(0)
+  // Preload the translation chunk if a non-English language is already saved.
+  useEffect(() => { if (lang !== 'en') ensureTranslations().then(() => setI18nTick(t => t + 1)) }, [])
+  function pickLang(l) {
+    setLang(l); saveLang(l)
+    if (l !== 'en') ensureTranslations().then(() => setI18nTick(t => t + 1))
+  }
 
   function startStage(idx) {
     setSi(idx)
