@@ -27,6 +27,13 @@ export const UI = {
     id: "Dasar yang menyelamatkan nyawa. Ketahui sebelum menyentuh mesin.",
   },
   why:   { en: "Why", vi: "Vì sao", id: "Alasan" },
+  checklist: { en: "✅ Checklist", vi: "✅ Danh mục", id: "✅ Ceklis" },
+  checkHint: {
+    en: "Run through this before you strike the arc and after you finish — the daily 作業前点検 (pre-work check) discipline of Japanese sites. Taps are saved; reset each day.",
+    vi: "Kiểm qua trước khi bật hồ quang và sau khi xong — nếp 作業前点検 (kiểm tra trước làm việc) của công trường Nhật. Đánh dấu được lưu; đặt lại mỗi ngày.",
+    id: "Periksa ini sebelum menyalakan busur dan setelah selesai — disiplin 作業前点検 (cek pra-kerja) lokasi Jepang. Centang tersimpan; reset tiap hari.",
+  },
+  reset: { en: "reset checklist", vi: "đặt lại danh mục", id: "reset ceklis" },
 };
 
 // ── Jobsite vocabulary ──────────────────────────────────────
@@ -189,14 +196,56 @@ export const SAFETY = [
   },
 ];
 
+// ── Pre-weld / post-weld checklist ──────────────────────────
+export const CHECKLIST = [
+  {
+    phase: { en: "🔧 BEFORE welding", vi: "🔧 TRƯỚC khi hàn", id: "🔧 SEBELUM mengelas" },
+    ja: "溶接前点検 (sagyou-mae tenken)",
+    items: [
+      { en: "Groove / joint prepared & clean — no rust, oil, paint (開先・清掃)", vi: "Rãnh / mối nối chuẩn bị & sạch — không gỉ, dầu, sơn (開先・清掃)", id: "Alur / sambungan disiapkan & bersih — tanpa karat, minyak, cat (開先・清掃)" },
+      { en: "Root gap & bevel match the drawing / WPS (ルートギャップ)", vi: "Khe chân & vát khớp bản vẽ / WPS (ルートギャップ)", id: "Root gap & bevel sesuai gambar / WPS (ルートギャップ)" },
+      { en: "Correct filler / wire & shielding gas for the material (溶接材料)", vi: "Vật liệu bù / dây & khí bảo vệ đúng cho vật liệu (溶接材料)", id: "Filler / kawat & gas pelindung yang benar untuk material (溶接材料)" },
+      { en: "Preheat done if required; temperature checked (予熱・温度チョーク)", vi: "Nung trước nếu cần; đã kiểm nhiệt độ (予熱・温度チョーク)", id: "Preheat bila perlu; suhu diperiksa (予熱・温度チョーク)" },
+      { en: "Earth / ground clamp secure & close to the weld (アース)", vi: "Kẹp mát chắc & gần mối hàn (アース)", id: "Ground clamp kuat & dekat las (アース)" },
+      { en: "Torch consumables OK — chip / nozzle / liner (チップ・ノズル)", vi: "Phụ tùng súng OK — chip / chụp khí / ống lót (チップ・ノズル)", id: "Konsumabel gun OK — chip / nozzle / liner (チップ・ノズル)" },
+      { en: "PPE on: shield (correct shade), gloves, jacket, boots, respirator (保護具)", vi: "Mặc PPE: mặt nạ (đúng số che), găng, áo, giày, khẩu trang (保護具)", id: "APD dipakai: topeng (shade benar), sarung tangan, jaket, sepatu, respirator (保護具)" },
+      { en: "Ventilation / fume extraction running (換気・局所排気)", vi: "Thông gió / hút khói đang chạy (換気・局所排気)", id: "Ventilasi / penyedot asap menyala (換気・局所排気)" },
+      { en: "Flammables cleared; fire extinguisher nearby (火気養生)", vi: "Đã dọn vật dễ cháy; bình chữa cháy gần (火気養生)", id: "Bahan mudah terbakar disingkirkan; APAR di dekat (火気養生)" },
+      { en: "Confined space: O₂ & gas measured, watcher outside (酸欠・監視人)", vi: "Không gian kín: đã đo O₂ & khí, có người canh ngoài (酸欠・監視人)", id: "Ruang tertutup: O₂ & gas diukur, pengawas di luar (酸欠・監視人)" },
+    ],
+  },
+  {
+    phase: { en: "✔️ AFTER welding", vi: "✔️ SAU khi hàn", id: "✔️ SETELAH mengelas" },
+    ja: "溶接後点検 (sagyou-go tenken)",
+    items: [
+      { en: "Slag removed & wire-brushed between/after passes (スラグ除去)", vi: "Đã bỏ xỉ & chải sắt giữa/sau các lượt (スラグ除去)", id: "Terak dibuang & disikat kawat antar/setelah pass (スラグ除去)" },
+      { en: "Visual check: no cracks, undercut, overlap, pits (外観・VT)", vi: "Kiểm ngoại quan: không nứt, lẹm, chồng mép, pit (外観・VT)", id: "Cek visual: tanpa retak, undercut, overlap, pit (外観・VT)" },
+      { en: "Leg length / throat meets spec — checked with gauge (脚長・のど厚)", vi: "Chiều dài chân / cổ đạt quy định — kiểm bằng thước (脚長・のど厚)", id: "Panjang kaki / leher sesuai spek — diperiksa gauge (脚長・のど厚)" },
+      { en: "Craters filled; start/stop points staggered (クレーター処理)", vi: "Đã lấp hố; điểm khởi/dừng so le (クレーター処理)", id: "Kawah diisi; titik mulai/berhenti diselang-seling (クレーター処理)" },
+      { en: "Back bead / penetration OK where required (裏波・溶込み)", vi: "Bọng ngược / độ ngấu OK ở nơi yêu cầu (裏波・溶込み)", id: "Back bead / penetrasi OK di tempat yang disyaratkan (裏波・溶込み)" },
+      { en: "Distortion checked; within tolerance (歪み)", vi: "Đã kiểm biến dạng; trong dung sai (歪み)", id: "Distorsi diperiksa; dalam toleransi (歪み)" },
+      { en: "Self-inspection recorded before calling the inspector (自主検査・記録)", vi: "Ghi tự kiểm trước khi gọi người kiểm tra (自主検査・記録)", id: "Inspeksi mandiri dicatat sebelum memanggil inspektor (自主検査・記録)" },
+      { en: "Area cleaned; fire watch after hot work (火の始末)", vi: "Đã dọn khu vực; canh lửa sau việc nóng (火の始末)", id: "Area dibersihkan; jaga api setelah kerja panas (火の始末)" },
+    ],
+  },
+];
+
 const orb = "'Orbitron',monospace";
 const mono = "'Share Tech Mono',monospace";
 
+const CHK_KEY = "wf_en_checklist_v1";
+function loadChecks() { try { return JSON.parse(localStorage.getItem(CHK_KEY)) || {}; } catch { return {}; } }
+
 export function LearnTab({ lang: langProp, onPickLang }) {
-  const [mode, setMode] = useState("terms"); // terms | safety
+  const [mode, setMode] = useState("terms"); // terms | safety | check
   const [langLocal, setLangLocal] = useState(loadLang());
+  const [checks, setChecks] = useState(loadChecks);
   const lang = langProp || langLocal;
   function pickLang(l) { if (onPickLang) onPickLang(l); else { setLangLocal(l); saveLang(l); } }
+  function toggleCheck(k) {
+    setChecks(prev => { const n = { ...prev, [k]: !prev[k] }; try { localStorage.setItem(CHK_KEY, JSON.stringify(n)); } catch {} return n; });
+  }
+  function resetChecks() { setChecks({}); try { localStorage.removeItem(CHK_KEY); } catch {} }
 
   return (
     <div style={{ padding: 16, fontFamily: mono, background: "#0d0d0d", minHeight: "100vh", paddingBottom: 90 }}>
@@ -216,7 +265,7 @@ export function LearnTab({ lang: langProp, onPickLang }) {
 
       {/* mode toggle */}
       <div style={{ display: "flex", gap: 6, background: "#141414", border: "1px solid #2a2a2a", borderRadius: 8, padding: 4, marginBottom: 14 }}>
-        {[["terms", tr(UI.terms, lang)], ["safety", tr(UI.safety, lang)]].map(([id, l]) => (
+        {[["terms", tr(UI.terms, lang)], ["safety", tr(UI.safety, lang)], ["check", tr(UI.checklist, lang)]].map(([id, l]) => (
           <button key={id} onClick={() => setMode(id)} style={{
             flex: 1, padding: "8px 4px", border: "none", borderRadius: 6, cursor: "pointer", fontFamily: mono,
             fontSize: "0.72rem", fontWeight: "bold",
@@ -248,7 +297,7 @@ export function LearnTab({ lang: langProp, onPickLang }) {
             </div>
           ))}
         </>
-      ) : (
+      ) : mode === "safety" ? (
         <>
           <div style={{ color: "#666", fontSize: "0.6rem", lineHeight: 1.6, marginBottom: 14 }}>{tr(UI.safetyHint, lang)}</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -274,6 +323,44 @@ export function LearnTab({ lang: langProp, onPickLang }) {
               </div>
             ))}
           </div>
+        </>
+      ) : (
+        <>
+          <div style={{ color: "#666", fontSize: "0.6rem", lineHeight: 1.6, marginBottom: 14 }}>{tr(UI.checkHint, lang)}</div>
+          {CHECKLIST.map((sec, si) => {
+            const done = sec.items.filter((_, ii) => checks[si + "-" + ii]).length;
+            return (
+              <div key={si} style={{ marginBottom: 18 }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
+                  <span style={{ color: "#FF6600", fontFamily: orb, fontWeight: 900, fontSize: "0.72rem" }}>{tr(sec.phase, lang)}</span>
+                  <span style={{ color: "#666", fontSize: "0.58rem" }}>{sec.ja} · {done}/{sec.items.length}</span>
+                </div>
+                <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                  {sec.items.map((it, ii) => {
+                    const k = si + "-" + ii, on = !!checks[k];
+                    return (
+                      <button key={ii} onClick={() => toggleCheck(k)} style={{
+                        display: "flex", alignItems: "flex-start", gap: 9, textAlign: "left", width: "100%",
+                        background: on ? "#0a200a" : "#141414", border: "1px solid " + (on ? "#22c55e55" : "#1e1e1e"),
+                        borderRadius: 8, padding: "10px 11px", cursor: "pointer", fontFamily: mono,
+                      }}>
+                        <span style={{
+                          flexShrink: 0, width: 18, height: 18, borderRadius: 4, marginTop: 1,
+                          border: "2px solid " + (on ? "#22c55e" : "#3a3a3a"), background: on ? "#22c55e" : "transparent",
+                          color: "#04140a", fontWeight: 900, fontSize: "0.8rem", lineHeight: "14px", textAlign: "center",
+                        }}>{on ? "✓" : ""}</span>
+                        <span style={{ fontSize: "0.68rem", lineHeight: 1.5, color: on ? "#8fce8f" : "#ddd", textDecoration: on ? "line-through" : "none" }}>{tr(it, lang)}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+          <button onClick={resetChecks} style={{
+            marginTop: 4, width: "100%", padding: "9px", borderRadius: 8, border: "1px solid #2a2a2a",
+            background: "transparent", color: "#666", fontFamily: mono, fontSize: "0.62rem", cursor: "pointer",
+          }}>↺ {tr(UI.reset, lang)}</button>
         </>
       )}
     </div>
