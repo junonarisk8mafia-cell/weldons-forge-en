@@ -2756,4 +2756,334 @@ export const Q_I18N = {
       exp: "Pengetahuan adalah Langkah 1. Sekarang: 1) Ikuti uji praktik JIS 専門級 untuk FCAW atau SMAW. 2) Bangun 実務経験 (jitsumukeiken = pengalaman kerja praktik) — mutu lebih penting dari kuantitas. 3) Tuju N-2P (pipa semua posisi) — uji JIS paling dihormati. 4) Kumpulkan: Tamakake + Crane + Forklift. 5) Pertimbangkan AW atau Tukang Las Boiler tergantung bidang kerja Anda. Karier Anda = sertifikasi Anda + rekam mutu Anda. Gambatte! (頑張れ！) 🇯🇵 TIPS: Para master las Jepang sering berkata 'Shokunin ni naru no wa, issho no shigoto da' (職人になるのは、一生の仕事だ / Menjadi pengrajin adalah pekerjaan seumur hidup). Tak ada jalan pintas menuju penguasaan — tapi tiap sertifikat yang Anda raih, tiap las bermutu yang Anda buat, dan tiap kata Jepang yang Anda pelajari adalah bata bagi karier yang akan membawa Anda ke mana pun di dunia. Anda memulai gim ini. Sekarang bangunlah yang nyata.",
     },
   },
+  601: {
+    vi: {
+      q: "AWS 'CWI' (Certified Welding Inspector) là gì, và ai cấp?",
+      opts: [
+        "Chứng chỉ thanh tra hàn do Hiệp hội Hàn Mỹ (AWS) cấp, được công nhận toàn cầu để kiểm tra mối hàn theo quy chuẩn",
+        "Giấy phép hàn quốc gia Nhật do JWES cấp",
+        "Chứng chỉ đào tạo an toàn cho hàn hồ quang",
+        "Giấy phép vận hành máy cho hàn tự động",
+      ],
+      exp: "AWS CWI = Thanh tra Hàn được Chứng nhận, do Hiệp hội Hàn Mỹ (AWS, Hoa Kỳ) cấp. Chứng chỉ được công nhận toàn cầu để kiểm tra mối hàn theo các quy chuẩn như AWS D1.1, ASME, API. Cần kinh nghiệm được ghi nhận cộng đậu kỳ thi 3 phần. 🌍 MẸO: Ở Nhật, CWI được coi trọng trong các dự án LNG/ngoài khơi quốc tế theo quy chuẩn Mỹ; với việc JIS trong nước thì chứng chỉ JWES là chuẩn — nhiều thanh tra kỳ cựu giữ CẢ HAI để di chuyển giữa việc trong nước và quốc tế.",
+    },
+    id: {
+      q: "Apa itu AWS 'CWI' (Certified Welding Inspector), dan siapa yang menerbitkannya?",
+      opts: [
+        "Sertifikasi inspektor las yang diterbitkan American Welding Society (AWS), diakui di seluruh dunia untuk inspeksi las sesuai kode",
+        "Lisensi las nasional Jepang yang diterbitkan JWES",
+        "Sertifikat pelatihan keselamatan untuk las busur",
+        "Lisensi operator mesin untuk las otomatis",
+      ],
+      exp: "AWS CWI = Certified Welding Inspector, diterbitkan American Welding Society (AWS, AS). Kredensial yang diakui global untuk menginspeksi las sesuai kode seperti AWS D1.1, ASME, dan API. Membutuhkan pengalaman terdokumentasi plus lulus ujian 3-bagian. 🌍 TIPS: Di Jepang, CWI berharga pada proyek LNG/lepas pantai internasional yang mengikuti kode AS; untuk pekerjaan JIS domestik, sertifikasi JWES adalah norma — banyak inspektor senior memegang KEDUANYA agar bisa berpindah antara pekerjaan domestik dan internasional.",
+    },
+  },
+  602: {
+    vi: {
+      q: "Kỳ thi AWS CWI có ba phần. Phần A, B và C kiểm tra gì?",
+      opts: [
+        "Phần A = Hàn, Phần B = Mài, Phần C = Cắt",
+        "Cả ba phần chỉ là lý thuyết viết",
+        "Phần A = Cơ bản (đóng sách), Phần B = Thực hành kiểm tra thực tế với thước và mẫu hàn, Phần C = Áp dụng quy chuẩn (mở sách)",
+        "Phần A = Tiếng Nhật, Phần B = Tiếng Anh, Phần C = thi tiếng Trung",
+      ],
+      exp: "Kỳ thi CWI: Phần A Cơ bản (kiến thức hàn, đóng sách), Phần B Thực hành (đo mẫu hàn bằng thước + đọc 'Book of Specifications'), Phần C Áp dụng Quy chuẩn (mở sách, ví dụ AWS D1.1 hoặc API 1104). Phải đậu cả ba. 🌍 MẸO: Kỹ năng thước ở Phần B — đo lẹm, chiều dài chân, chiều dày cổ — chính là kỹ năng 溶接ゲージ dùng để tự kiểm (自主検査) trên công trường Nhật. Thói quen đó chuyển thẳng sang phần thực hành CWI.",
+    },
+    id: {
+      q: "Ujian AWS CWI memiliki tiga bagian. Apa yang diuji Bagian A, B, dan C?",
+      opts: [
+        "Bagian A = Mengelas, Bagian B = Menggerinda, Bagian C = Memotong",
+        "Ketiga bagian hanya teori tertulis",
+        "Bagian A = Fundamental (buku tertutup), Bagian B = Praktik inspeksi langsung dengan gauge dan replika las, Bagian C = Penerapan kode (buku terbuka)",
+        "Bagian A = Jepang, Bagian B = Inggris, Bagian C = uji bahasa Mandarin",
+      ],
+      exp: "Ujian CWI: Bagian A Fundamental (pengetahuan las, buku tertutup), Bagian B Praktik (mengukur replika las dengan gauge + membaca 'Book of Specifications'), Bagian C Penerapan Kode (buku terbuka seperti AWS D1.1 atau API 1104). Harus lulus ketiganya. 🌍 TIPS: Keterampilan gauge di Bagian B — mengukur undercut, panjang kaki, tebal leher — adalah keterampilan 溶接ゲージ yang sama untuk inspeksi mandiri (自主検査) di lokasi Jepang. Kebiasaan itu langsung berpindah ke praktik CWI.",
+    },
+  },
+  603: {
+    vi: {
+      q: "'AWS D1.1' là gì?",
+      opts: [
+        "Quy chuẩn Hàn Kết cấu — Thép của AWS: quy chuẩn chủ đạo cho hàn thép nhà và cầu ở Mỹ và nhiều dự án quốc tế",
+        "Một loại que hàn",
+        "Tiêu chuẩn mũ bảo hộ Mỹ",
+        "Luật xây dựng Nhật",
+      ],
+      exp: "AWS D1.1 = Quy chuẩn Hàn Kết cấu — Thép. Quy định thiết kế, chứng nhận WPS/thợ hàn, tay nghề và kiểm tra cho thép kết cấu ở Mỹ và rộng rãi quốc tế. Ở Nhật lĩnh vực tương đương do JIS + Luật Tiêu chuẩn Xây dựng + AW Kentei bao. 🌍 MẸO: Nếu ô tiêu đề bản vẽ ghi 'AWS D1.1', ký hiệu hàn và tiêu chí nghiệm thu theo quy ước Mỹ — xác nhận với QC trước khi hàn, vì logic ký hiệu phía mũi tên khác JIS/ISO.",
+    },
+    id: {
+      q: "Apa itu 'AWS D1.1'?",
+      opts: [
+        "AWS Structural Welding Code — Steel: kode dominan untuk las baja bangunan dan jembatan di AS dan banyak proyek internasional",
+        "Sejenis elektroda las",
+        "Standar helm keselamatan Amerika",
+        "Undang-undang bangunan Jepang",
+      ],
+      exp: "AWS D1.1 = Structural Welding Code — Steel. Mengatur desain, kualifikasi WPS/tukang las, mutu pengerjaan, dan inspeksi untuk baja struktur di AS dan luas secara internasional. Domain setara di Jepang dicakup JIS + Undang-Undang Standar Bangunan + AW Kentei. 🌍 TIPS: Jika blok judul gambar menyebut 'AWS D1.1', simbol las dan kriteria penerimaan mengikuti konvensi AS — konfirmasi dengan QC sebelum mengelas, karena logika simbol sisi-panah berbeda dari JIS/ISO.",
+    },
+  },
+  604: {
+    vi: {
+      q: "'CSWIP 3.1' là gì và ai quản lý?",
+      opts: [
+        "Một quy chuẩn hàn kết cấu Mỹ",
+        "Chứng chỉ thanh tra hàn do TWI (The Welding Institute, Anh) quản lý, được yêu cầu rộng rãi ở châu Âu, Trung Đông và dầu khí/ngoài khơi châu Á",
+        "Một luật bình áp lực Nhật",
+        "Một hãng dây hàn",
+      ],
+      exp: "CSWIP 3.1 = Chứng chỉ Thanh tra Hàn của TWI (Anh). Là bản đối ứng châu Âu/Anh của AWS CWI, được yêu cầu nhiều trong dầu khí và ngoài khơi. 🌍 MẸO: Với thợ nhắm việc ngoài khơi Trung Đông hay Đông Nam Á (nơi nhiều công ty Nhật hoạt động), CSWIP thường là 'vé' thanh tra bắt buộc, còn AWS CWI chiếm ưu thế ở dự án do Mỹ dẫn dắt. Biết dự án dùng họ quy chuẩn nào cho biết chứng chỉ thanh tra nào quan trọng.",
+    },
+    id: {
+      q: "Apa itu 'CSWIP 3.1' dan siapa yang mengelolanya?",
+      opts: [
+        "Kode las struktur AS",
+        "Kualifikasi inspektor las yang dikelola TWI (The Welding Institute, Inggris), luas diwajibkan di Eropa, Timur Tengah, dan migas/lepas pantai Asia",
+        "Undang-undang bejana tekan Jepang",
+        "Merek kawat las",
+      ],
+      exp: "CSWIP 3.1 = sertifikasi Inspektor Las dari TWI (Inggris). Ini padanan Inggris/Eropa dari AWS CWI, banyak diwajibkan di pekerjaan migas dan lepas pantai. 🌍 TIPS: Bagi tukang yang mengincar proyek lepas pantai Timur Tengah atau Asia Tenggara (tempat banyak firma Jepang beroperasi), CSWIP sering menjadi tiket inspektor yang diwajibkan, sementara AWS CWI dominan di proyek pimpinan AS. Mengetahui keluarga kode mana yang dipakai proyek memberi tahu sertifikat inspektor mana yang penting.",
+    },
+  },
+  605: {
+    vi: {
+      q: "'ISO 9606-1' bao gồm gì, và liên quan thế nào đến chứng chỉ thợ hàn JIS?",
+      opts: [
+        "Là tiêu chuẩn lớp phủ sơn",
+        "Là tiêu chuẩn vận hành cẩu",
+        "Là tiêu chuẩn quốc tế về thi chứng nhận thợ hàn (hàn nóng chảy thép) — bản đối ứng toàn cầu của chứng chỉ thợ hàn JIS Nhật",
+        "Giống hệt AWS D1.1 với số khác",
+      ],
+      exp: "ISO 9606-1 = tiêu chuẩn quốc tế chứng nhận thợ hàn cho thép. Song song với chứng chỉ JIS 溶接技能者 — chứng minh kỹ năng thợ bằng thi thực hành. Dự án quốc tế ở Nhật (LNG, ngoài khơi) thường yêu cầu chứng nhận ISO 9606 cùng hoặc thay JIS. 🌍 MẸO: Các mã tư thế bạn đã biết (PA/PC/PF/PG, và 1G/2G/6G) đến từ ISO 6947 và xuất hiện trên chứng chỉ ISO 9606 — nên kiến thức tư thế của bạn đã mang tính quốc tế.",
+    },
+    id: {
+      q: "Apa yang dicakup 'ISO 9606-1', dan bagaimana kaitannya dengan sertifikasi tukang las JIS?",
+      opts: [
+        "Standar pelapisan cat",
+        "Standar pengoperasian crane",
+        "Standar internasional untuk uji kualifikasi tukang las (las lebur baja) — padanan global dari sertifikasi tukang las JIS Jepang",
+        "Identik dengan AWS D1.1 dengan nomor berbeda",
+      ],
+      exp: "ISO 9606-1 = standar kualifikasi tukang las internasional untuk baja. Sejajar dengan sertifikasi JIS 溶接技能者 — membuktikan keterampilan tukang lewat uji praktik. Proyek internasional di Jepang (LNG, lepas pantai) sering mensyaratkan kualifikasi ISO 9606 bersama atau alih-alih JIS. 🌍 TIPS: Kode posisi yang sudah Anda ketahui (PA/PC/PF/PG, dan 1G/2G/6G) berasal dari ISO 6947 dan muncul pada sertifikat ISO 9606 — jadi pengetahuan posisi Anda sudah internasional.",
+    },
+  },
+  606: {
+    vi: {
+      q: "'ISO 3834' là gì?",
+      opts: [
+        "Yêu cầu chất lượng cho hàn nóng chảy vật liệu kim loại — tiêu chuẩn quản lý chất lượng hàn cấp công ty/xưởng",
+        "Bài thi kỹ năng cá nhân của thợ hàn",
+        "Một loại kiểm tra không phá hủy",
+        "Tiêu chuẩn độ tinh khiết khí bảo vệ",
+      ],
+      exp: "ISO 3834 đặt yêu cầu chất lượng cho một TỔ CHỨC hàn (không phải cá nhân) — bao gồm quản lý WPS, chứng nhận thợ hàn, thiết bị, kiểm tra và lưu hồ sơ. Coi như 'hệ chất lượng cấp xưởng cho hàn'. 🌍 MẸO: Nhà chế tạo Nhật đấu thầu dự án quốc tế/châu Âu thường chứng nhận ISO 3834 để chứng minh quản lý chất lượng hàn. Về tinh thần tương tự kỷ luật 品質計画書 và 記録 vốn đã chuẩn ở Nhật.",
+    },
+    id: {
+      q: "Apa itu 'ISO 3834'?",
+      opts: [
+        "Persyaratan mutu untuk las lebur material logam — standar manajemen mutu las tingkat perusahaan/bengkel",
+        "Uji keterampilan pribadi tukang las",
+        "Sejenis uji tak merusak",
+        "Standar kemurnian gas pelindung",
+      ],
+      exp: "ISO 3834 menetapkan persyaratan mutu untuk ORGANISASI las (bukan individu) — mencakup kontrol WPS, kualifikasi tukang, peralatan, inspeksi, dan pencatatan. Anggap 'sistem mutu tingkat bengkel untuk las'. 🌍 TIPS: Fabrikator Jepang yang menawar proyek internasional atau Eropa sering bersertifikat ISO 3834 untuk membuktikan manajemen mutu lasnya. Semangatnya mirip disiplin 品質計画書 dan 記録 yang sudah standar di Jepang.",
+    },
+  },
+  607: {
+    vi: {
+      q: "'ASME Section IX' quy định gì?",
+      opts: [
+        "An toàn thang máy",
+        "Thiết kế vòi phun chữa cháy",
+        "Quy tắc đi dây điện",
+        "Chứng nhận hàn và hàn vảy — quy tắc chứng nhận WPS, PQR và thợ hàn cho nồi hơi và bình áp lực (ASME BPVC)",
+      ],
+      exp: "ASME Boiler & Pressure Vessel Code, Section IX = chứng nhận trình tự hàn/hàn vảy (WPS/PQR) và nhân sự. Là xương sống Mỹ/quốc tế cho hàn thiết bị áp lực. Lĩnh vực tương đương trong nước Nhật do JIS cộng quy tắc nồi hơi/bình áp lực (ボイラー溶接士) bao. 🌍 MẸO: Ở dự án nhà máy quốc tế tại Nhật bạn có thể hàn theo WPS ASME IX — hiểu 'biến số then chốt' (thay đổi nào buộc chứng nhận lại) là điều thiết yếu để giữ đủ điều kiện.",
+    },
+    id: {
+      q: "Apa yang diatur 'ASME Section IX'?",
+      opts: [
+        "Keselamatan lift",
+        "Desain sprinkler kebakaran",
+        "Kode pengkabelan listrik",
+        "Kualifikasi las dan braze — aturan untuk mengualifikasi WPS, PQR, dan tukang las untuk boiler dan bejana tekan (ASME BPVC)",
+      ],
+      exp: "ASME Boiler & Pressure Vessel Code, Section IX = kualifikasi prosedur las/braze (WPS/PQR) dan personel. Ini tulang punggung AS/internasional untuk las peralatan bertekanan. Domain setara domestik Jepang dicakup JIS plus aturan boiler/bejana tekan (ボイラー溶接士). 🌍 TIPS: Pada proyek pabrik internasional di Jepang Anda mungkin mengelas ke WPS ASME IX — memahami 'essential variables' (perubahan mana yang memaksa kualifikasi ulang) krusial untuk tetap terkualifikasi.",
+    },
+  },
+  608: {
+    vi: {
+      q: "Khác biệt chính giữa ký hiệu hàn AWS và JIS/ISO gây lỗi thực sự là gì?",
+      opts: [
+        "Bản vẽ AWS không bao giờ dùng ký hiệu hàn",
+        "Quy ước đặt ký hiệu phía mũi tên so với phía đối diện khác nhau — ký hiệu dưới đường chuẩn không cùng nghĩa ở hai hệ, nên luôn xác nhận bản vẽ theo tiêu chuẩn nào",
+        "JIS chỉ dùng đơn vị inch",
+        "Không có khác biệt gì",
+      ],
+      exp: "JIS/ISO (ISO 2553, JIS B 0021) và AWS (A2.4) xử lý vị trí ký hiệu phía mũi tên/phía đối diện khác nhau; đọc sai nghĩa là hàn sai phía. Luôn kiểm ô tiêu đề bản vẽ để biết tiêu chuẩn. 🌍 MẸO: Dự án do Hàn và Mỹ dẫn dắt cung cấp bản vẽ cho xưởng Nhật đã gây làm lại thật từ đúng sự nhầm này — báo giám sát mọi bản vẽ không phải JIS ngay ngày đầu, trước khi hàn bất cứ gì.",
+    },
+    id: {
+      q: "Apa perbedaan utama antara simbol las AWS dan JIS/ISO yang menyebabkan kesalahan nyata?",
+      opts: [
+        "Gambar AWS tak pernah memakai simbol las",
+        "Konvensi penempatan simbol sisi-panah vs sisi-lain berbeda — simbol di bawah garis referensi tak bermakna sama di kedua sistem, jadi selalu pastikan gambar mengikuti standar mana",
+        "JIS hanya memakai satuan imperial",
+        "Tak ada perbedaan sama sekali",
+      ],
+      exp: "JIS/ISO (ISO 2553, JIS B 0021) dan AWS (A2.4) menangani penempatan simbol sisi-panah/sisi-lain secara berbeda; salah membacanya berarti mengelas di sisi salah. Selalu periksa blok judul gambar untuk standarnya. 🌍 TIPS: Proyek pimpinan Korea dan AS yang memasok gambar ke galangan Jepang pernah menyebabkan rework nyata dari kebingungan ini — laporkan gambar non-JIS apa pun ke supervisor di hari pertama, sebelum mengelas apa pun.",
+    },
+  },
+  609: {
+    vi: {
+      q: "Chứng chỉ nhân sự hàn quốc tế IIW gồm IWE, IWT và IWS. Chúng đại diện gì (cao đến thấp)?",
+      opts: [
+        "Ba phương pháp hàn khác nhau",
+        "Ba cấp dây hàn",
+        "IWE = Kỹ sư Hàn Quốc tế (cao nhất), IWT = Kỹ thuật viên, IWS = Chuyên gia — hệ điều phối hàn quốc tế phân tầng",
+        "Ba loại khí bảo vệ",
+      ],
+      exp: "Nhân sự điều phối hàn IIW: IWE (Kỹ sư, cao nhất), IWT (Kỹ thuật viên), IWS (Chuyên gia), cộng IWP (Người thực hành). Được công nhận toàn cầu. WES 8103 Cấp Đặc biệt của Nhật tương thích IWE. 🌍 MẸO: Nếu bạn nhắm thành điều phối viên hàn hoặc kỹ sư QC ở dự án quốc tế, thang IWS → IWT → IWE là lộ trình toàn cầu — người có WES ở Nhật thường có thể bắc cầu sang công nhận IIW qua JWES.",
+    },
+    id: {
+      q: "Kualifikasi personel las internasional IIW mencakup IWE, IWT, dan IWS. Apa yang mereka wakili (tertinggi ke terendah)?",
+      opts: [
+        "Tiga proses las berbeda",
+        "Tiga tingkat kawat las",
+        "IWE = International Welding Engineer (tertinggi), IWT = Technologist, IWS = Specialist — skema koordinasi las internasional berjenjang",
+        "Tiga jenis gas pelindung",
+      ],
+      exp: "Personel koordinasi las IIW: IWE (Engineer, tertinggi), IWT (Technologist), IWS (Specialist), plus IWP (Practitioner). Diakui di seluruh dunia. WES 8103 Grade Khusus Jepang selaras dengan IWE. 🌍 TIPS: Jika Anda ingin menjadi koordinator las atau insinyur QC di proyek internasional, tangga IWS → IWT → IWE adalah jalur global — pemegang WES di Jepang sering bisa menjembatani ke pengakuan IIW melalui JWES.",
+    },
+  },
+  610: {
+    vi: {
+      q: "Trong quy chuẩn quốc tế (ASME IX, ISO 15614), quan hệ giữa WPS và PQR là gì?",
+      opts: [
+        "PQR ghi kết quả một mối thi chứng nhận thực chứng minh WPS hoạt động; WPS là chỉ dẫn sản xuất được PQR chống lưng",
+        "Chúng là cùng một tài liệu",
+        "WPS được viết sau khi sản xuất xong",
+        "PQR là hồ sơ lương của thợ hàn",
+      ],
+      exp: "PQR (Procedure Qualification Record) ghi một mối thi chứng nhận và kết quả thử của nó (kéo, uốn, va đập). WPS (Welding Procedure Specification) là 'công thức' sản xuất được PQR chống lưng. Cùng logic với 溶接施工要領書 của Nhật được chứng nhận bằng thi. 🌍 MẸO: Khi việc dùng WPS ASME/ISO, học biến nào là 'biến số then chốt' — thay đổi một biến quá dải (ví dụ nhiệt đầu vào hay nung trước) có thể vô hiệu chứng nhận và cần PQR mới.",
+    },
+    id: {
+      q: "Dalam kode internasional (ASME IX, ISO 15614), apa hubungan WPS dan PQR?",
+      opts: [
+        "PQR mencatat hasil las uji kualifikasi nyata yang membuktikan WPS bekerja; WPS adalah instruksi produksi yang didukung PQR itu",
+        "Keduanya dokumen yang sama",
+        "WPS ditulis setelah produksi selesai",
+        "PQR adalah catatan gaji tukang las",
+      ],
+      exp: "PQR (Procedure Qualification Record) mendokumentasikan las uji kualifikasi dan hasil ujinya (tarik, tekuk, impak). WPS (Welding Procedure Specification) adalah 'resep' produksi yang didukung PQR itu. Logika sama dengan 溶接施工要領書 Jepang yang didukung uji kualifikasi. 🌍 TIPS: Saat pekerjaan memakai WPS ASME/ISO, pelajari parameter mana yang 'essential variable' — mengubah satu di luar rentangnya (mis. masukan panas atau preheat) bisa membatalkan kualifikasi dan memerlukan PQR baru.",
+    },
+  },
+  611: {
+    vi: {
+      q: "'Thử va đập Charpy V-notch (CVN)' đo gì, và vì sao quan trọng cho khí hậu lạnh?",
+      opts: [
+        "Đo bề rộng đường hàn",
+        "Đo lưu lượng khí bảo vệ",
+        "Đo độ dai của vật liệu (năng lượng hấp thụ khi gãy) ở một nhiệt độ — then chốt để tránh gãy giòn khi làm việc lạnh",
+        "Đo điện trở",
+      ],
+      exp: "Trong thử Charpy V-notch, một mẫu có khía bị đập và năng lượng hấp thụ (Joule) cho biết độ dai. Độ dai thấp ở nhiệt độ thấp nghĩa là nguy cơ gãy giòn. Quy chuẩn quy định giá trị CVN tối thiểu ở nhiệt độ thử cho kết cấu làm việc lạnh hay chịu địa chấn. 🌍 MẸO: Khi hàn mùa đông Hokkaido/Tohoku hay nước lạnh ngoài khơi, WPS thường yêu cầu vật liệu bù đã thử va đập và kiểm soát nhiệt đầu vào để giữ độ dai HAZ — cùng kỷ luật 入熱管理 bạn đã luyện.",
+    },
+    id: {
+      q: "Apa yang diukur 'uji impak Charpy V-notch (CVN)', dan mengapa penting untuk iklim dingin?",
+      opts: [
+        "Mengukur lebar jalur las",
+        "Mengukur aliran gas pelindung",
+        "Mengukur ketangguhan material (energi terserap saat patah) pada suhu tertentu — krusial untuk menghindari patah getas pada layanan dingin",
+        "Mengukur resistansi listrik",
+      ],
+      exp: "Dalam uji Charpy V-notch, spesimen bertakik dipukul dan energi terserap (Joule) menunjukkan ketangguhan. Ketangguhan rendah pada suhu rendah berarti risiko patah getas. Kode menetapkan nilai CVN minimum pada suhu uji untuk struktur layanan dingin atau gempa. 🌍 TIPS: Untuk mengelas musim dingin Hokkaido/Tohoku atau air lepas pantai dingin, WPS sering mensyaratkan konsumabel yang diuji impak dan kontrol masukan panas untuk menjaga ketangguhan HAZ — disiplin 入熱管理 yang sama yang sudah Anda latih.",
+    },
+  },
+  612: {
+    vi: {
+      q: "Trong thi hàn ống ISO/AWS, tư thế '6G' là gì, và tương đương bài thi JIS nào?",
+      opts: [
+        "6G = ống cố định nghiêng 45°, hàn qua mọi tư thế trong một bài thi — bài thi ống khó nhất; tương đương thi ống mọi tư thế N-2P của Nhật",
+        "6G = tấm phẳng, tư thế dễ nhất",
+        "6G = một loại khí bảo vệ",
+        "6G = robot hàn thế hệ thứ sáu",
+      ],
+      exp: "6G = ống cố định nghiêng 45°, hàn qua bằng, đứng và trần trong một bài thi — tư thế khó nhất, chứng nhận dải rộng nhất. Về danh giá và độ khó, tương đương JIS N-2P. Đậu 6G là cột mốc được nể toàn cầu. 🌍 MẸO: Một 'vé' 6G (ISO 9606 hoặc ASME IX) cộng JIS N-2P làm bạn đủ điều kiện cả việc ống trong nước lẫn quốc tế — và kỹ năng bọng ngược 裏波 lượt chân ống chuyển thẳng giữa hai bên.",
+    },
+    id: {
+      q: "Dalam uji las pipa ISO/AWS, apa itu posisi '6G', dan sebanding dengan uji JIS mana?",
+      opts: [
+        "6G = pipa tetap miring 45°, dilas melalui semua posisi dalam satu uji — uji pipa paling menantang; sebanding dengan uji pipa semua posisi N-2P Jepang",
+        "6G = pelat datar, posisi termudah",
+        "6G = sejenis gas pelindung",
+        "6G = robot las generasi keenam",
+      ],
+      exp: "6G = pipa tetap pada kemiringan 45°, dilas melalui datar, tegak, dan overhead dalam satu uji — posisi tersulit, mengualifikasi rentang terluas. Dalam gengsi dan kesulitan sebanding dengan JIS N-2P. Lulus 6G adalah tonggak yang dihormati global. 🌍 TIPS: Tiket 6G (ISO 9606 atau ASME IX) plus JIS N-2P membuat Anda layak untuk pekerjaan pipa domestik maupun internasional — dan keterampilan root-pass back bead 裏波 pipa berpindah langsung di antara keduanya.",
+    },
+  },
+  613: {
+    vi: {
+      q: "Thép không gỉ duplex (ví dụ 2205) đòi hỏi kiểm soát cẩn thận cân bằng tổ chức vi mô nào khi hàn?",
+      opts: [
+        "Tỷ lệ đồng/kẽm",
+        "Chỉ tỷ lệ carbon/lưu huỳnh",
+        "Cân bằng pha ferrit/austenit — quá nhiều ferrit (do nguội nhanh / nhiệt đầu vào thấp) giảm độ dai và chống ăn mòn",
+        "Không cần kiểm soát đặc biệt",
+      ],
+      exp: "Duplex (~50% ferrit / 50% austenit) cho độ bền cao cộng chống ăn mòn. Hàn phải kiểm soát nhiệt đầu vào và nhiệt độ giữa lượt để chỉ số ferrit trong dải: nguội quá nhanh để lại ferrit giòn quá nhiều, quá chậm gây pha có hại. Phổ biến ngoài khơi và nhà máy hóa chất. 🌍 MẸO: Duplex ngày càng dùng ở dự án ngoài khơi và LNG — thổi khí mặt sau bằng nitơ và kiểm soát nhiệt đầu vào là yêu cầu WPS điển hình, và hàm lượng ferrit được kiểm bằng máy đo ferrit.",
+    },
+    id: {
+      q: "Baja tahan karat duplex (mis. 2205) memerlukan kontrol cermat atas keseimbangan mikrostruktur mana saat mengelas?",
+      opts: [
+        "Rasio tembaga/seng",
+        "Hanya rasio karbon/sulfur",
+        "Keseimbangan fase ferit/austenit — terlalu banyak ferit (dari pendinginan cepat / masukan panas rendah) menurunkan ketangguhan dan ketahanan korosi",
+        "Tak perlu kontrol khusus",
+      ],
+      exp: "Duplex (~50% ferit / 50% austenit) memberi kekuatan tinggi plus ketahanan korosi. Pengelasan harus mengontrol masukan panas dan suhu antar-pass agar ferrite number tetap dalam rentang: pendinginan terlalu cepat meninggalkan ferit getas berlebih, terlalu lambat berisiko fase berbahaya. Umum di lepas pantai dan pabrik kimia. 🌍 TIPS: Duplex makin banyak dipakai pada proyek lepas pantai dan LNG — back-purge nitrogen dan kontrol masukan panas adalah persyaratan WPS umum, dan kandungan ferit diperiksa dengan ferrite meter.",
+    },
+  },
+  614: {
+    vi: {
+      q: "Trên khắp các quy chuẩn quốc tế, thực hành 'ít hydro' được yêu cầu cho thép cường độ cao/dày chủ yếu để ngăn gì?",
+      opts: [
+        "Chỉ gỉ bề mặt",
+        "Nứt do hydro (nứt nguội) — bằng cách giảm hydro khuếch tán qua vật liệu ít hydro đã sấy, nung trước và kiểm soát giữa lượt",
+        "Đường hàn quá rộng",
+        "Lãng phí khí bảo vệ",
+      ],
+      exp: "Vật liệu bù ít hydro (sấy và bảo quản đúng), nung trước và kiểm soát giữa lượt giảm hydro khuếch tán — tác nhân gây nứt nguội ở thép cứng hay dày. Yêu cầu này phổ quát trên AWS, ASME, ISO và JIS. 🌍 MẸO: Kỷ luật lò sấy que (乾燥炉) bạn học cho việc JIS chính là điều quy chuẩn quốc tế yêu cầu — que đã sấy, tủ giữ và giới hạn thời gian ngoài lò đều áp dụng như nhau.",
+    },
+    id: {
+      q: "Di berbagai kode internasional, praktik 'rendah hidrogen' diwajibkan untuk baja kekuatan tinggi/tebal terutama untuk mencegah apa?",
+      opts: [
+        "Hanya karat permukaan",
+        "Retak akibat hidrogen (retak dingin) — dengan meminimalkan hidrogen difusi lewat konsumabel rendah hidrogen yang dikeringkan, preheat, dan kontrol antar-pass",
+        "Jalur las terlalu lebar",
+        "Pemborosan gas pelindung",
+      ],
+      exp: "Konsumabel rendah hidrogen (dikeringkan dan disimpan benar), preheat, dan kontrol antar-pass mengurangi hidrogen difusi — pemicu retak dingin pada baja yang dapat dikeraskan atau tebal. Persyaratan ini universal di AWS, ASME, ISO, dan JIS. 🌍 TIPS: Disiplin oven elektroda (乾燥炉) yang Anda pelajari untuk pekerjaan JIS persis yang diminta kode internasional — elektroda kering, oven penyimpan, dan waktu terbatas di luar oven semua berlaku sama.",
+    },
+  },
+  615: {
+    vi: {
+      q: "Theo quy chuẩn thiết bị áp lực, khi nào PWHT (xử lý nhiệt sau hàn) thường bắt buộc?",
+      opts: [
+        "Với tiết diện dày và một số vật liệu, để giảm ứng suất dư và ram HAZ — ngưỡng do quy chuẩn và vật liệu đặt",
+        "Với mọi mối hàn bất kể chiều dày",
+        "Chỉ với nhôm",
+        "Không bao giờ — PWHT chỉ là trang trí tùy chọn",
+      ],
+      exp: "Quy chuẩn (ASME, JIS, EN) bắt buộc PWHT trên ngưỡng chiều dày nhất định hoặc với vật liệu cụ thể (ví dụ thép Cr-Mo) để giảm ứng suất dư, giảm độ cứng và hydro, và phục hồi độ dai. Chu trình — tốc độ nung, nhiệt độ/thời gian giữ, nguội — được ghi trên biểu đồ. 🌍 MẸO: Biết kế hoạch PWHT TRƯỚC khi hàn: thêm mối đính hay sửa sau chu trình PWHT làm vô hiệu xử lý — một lỗi tốn kém và phổ biến ở quốc tế cũng như ở Nhật.",
+    },
+    id: {
+      q: "Menurut kode peralatan bertekanan, kapan PWHT (post-weld heat treatment) biasanya diwajibkan?",
+      opts: [
+        "Untuk penampang tebal dan material tertentu, untuk melepas tegangan sisa dan menemper HAZ — ambang ditetapkan oleh kode dan material",
+        "Untuk setiap las tanpa memandang tebal",
+        "Hanya untuk aluminium",
+        "Tak pernah — PWHT hanya hiasan opsional",
+      ],
+      exp: "Kode (ASME, JIS, EN) mewajibkan PWHT di atas ambang tebal tertentu atau untuk material spesifik (mis. baja Cr-Mo) untuk melepas tegangan sisa, mengurangi kekerasan dan hidrogen, serta memulihkan ketangguhan. Siklusnya — laju pemanasan, suhu/waktu tahan, pendinginan — direkam pada grafik. 🌍 TIPS: Ketahui rencana PWHT SEBELUM mengelas: menambah tack atau perbaikan setelah siklus PWHT membatalkan perlakuan — kesalahan mahal dan umum secara internasional maupun di Jepang.",
+    },
+  },
 };
