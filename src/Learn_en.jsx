@@ -12,7 +12,7 @@ import { useState } from "react";
 import { LANGS, loadLang, saveLang, tr } from "./i18n_en.js";
 
 // ── UI strings ──
-const UI = {
+export const UI = {
   learn:   { en: "LEARN", vi: "HỌC", id: "BELAJAR" },
   terms:   { en: "🗣️ Jobsite Terms", vi: "🗣️ Từ hiện trường", id: "🗣️ Istilah Kerja" },
   safety:  { en: "🦺 Safety", vi: "🦺 An toàn", id: "🦺 Keselamatan" },
@@ -30,7 +30,7 @@ const UI = {
 };
 
 // ── Jobsite vocabulary ──────────────────────────────────────
-const VOCAB = [
+export const VOCAB = [
   {
     cat: { en: "🔧 Tools & Machines", vi: "🔧 Dụng cụ & Máy", id: "🔧 Alat & Mesin" }, items: [
       { en: "Welding machine", ja: "溶接機", rj: "yōsetsu-ki", note: { en: "The power source.", vi: "Nguồn điện hàn.", id: "Sumber listrik las." } },
@@ -82,7 +82,7 @@ const VOCAB = [
 ];
 
 // ── Safety topics ───────────────────────────────────────────
-const SAFETY = [
+export const SAFETY = [
   {
     icon: "🫁", title: "Welding Fume", ja: "ヒューム / 溶接煙 (hyūmu)",
     why: {

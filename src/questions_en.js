@@ -1585,6 +1585,199 @@ export const QUIZ_STAGES = [
         exp: "Knowledge is Step 1. Now: 1) Sit the JIS 専門級 practical test for FCAW or SMAW. 2) Build 実務経験 (jitsumukeiken = practical work experience) — quality matters more than quantity. 3) Aim for N-2P (pipe all-positions) — the most respected JIS test. 4) Accumulate: Tamakake + Crane + Forklift. 5) Consider AW or Boiler Welder depending on your work field. Your career = your certifications + your quality record. Gambatte! (頑張れ！) 🇯🇵 TIP: Japanese welding masters often say 'Shokunin ni naru no wa, issho no shigoto da' (職人になるのは、一生の仕事だ / Becoming a craftsman is the work of a lifetime). There is no shortcut to mastery — but every certificate you earn, every quality weld you make, and every Japanese word you learn is a brick in a career that will carry you anywhere in the world. You started this game. Now go build the real thing."
       }
     ]
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // STAGE 7 — International Certs & Global Mobility
+  // ──────────────────────────────────────────────────────────
+  {
+    stageId: 7,
+    label: "STAGE 7 — International Certs & Global Mobility",
+    color: "#0EA5E9",
+    icon: "🌍",
+    unlockXP: 1200,
+    questions: [
+      {
+        id: 601, cat: "International Certs",
+        q: "What is the AWS 'CWI' (Certified Welding Inspector), and who issues it?",
+        opts: [
+          "A welding inspector certification issued by the American Welding Society (AWS), recognized worldwide for inspecting welds to codes",
+          "A Japanese national welding license issued by JWES",
+          "A safety training certificate for arc welding",
+          "A machine operator license for automated welding"
+        ],
+        a: 0, xp: 25,
+        exp: "AWS CWI = Certified Welding Inspector, issued by the American Welding Society (USA). A globally recognized credential for inspecting welds to codes such as AWS D1.1, ASME, and API. Requires documented experience plus passing a 3-part exam. 🌍 TIP: In Japan, CWI is valued on international LNG/offshore projects that follow US codes; for domestic JIS work, JWES certification is the norm — many senior inspectors hold BOTH so they can move between domestic and international jobs."
+      },
+      {
+        id: 602, cat: "International Certs",
+        q: "The AWS CWI exam has three parts. What do Parts A, B, and C test?",
+        opts: [
+          "Part A = Welding, Part B = Grinding, Part C = Cutting",
+          "All three parts are written theory only",
+          "Part A = Fundamentals (closed book), Part B = Practical hands-on inspection with gauges and weld replicas, Part C = Code application (open-book)",
+          "Part A = Japanese, Part B = English, Part C = Chinese language tests"
+        ],
+        a: 2, xp: 25,
+        exp: "CWI exam: Part A Fundamentals (welding knowledge, closed book), Part B Practical (hands-on measuring of weld replicas with gauges + reading a 'Book of Specifications'), Part C Code Application (open-book code such as AWS D1.1 or API 1104). You must pass all three. 🌍 TIP: Part B's gauge skills — measuring undercut, leg length, throat — are the same 溶接ゲージ skills used for self-inspection (自主検査) on Japanese sites. That habit transfers directly to the CWI practical."
+      },
+      {
+        id: 603, cat: "International Codes",
+        q: "What is 'AWS D1.1'?",
+        opts: [
+          "The AWS Structural Welding Code — Steel: the dominant code for building and bridge steel welding in the USA and many international projects",
+          "A type of welding electrode",
+          "An American safety helmet standard",
+          "A Japanese building law"
+        ],
+        a: 0, xp: 25,
+        exp: "AWS D1.1 = Structural Welding Code — Steel. Governs design, WPS/welder qualification, workmanship, and inspection for structural steel in the US and widely internationally. Japan's equivalent domain is covered by JIS + the Building Standard Law + AW Kentei. 🌍 TIP: If a drawing's title block says 'AWS D1.1', the welding symbols and acceptance criteria follow US conventions — confirm with QC before welding, because the arrow-side symbol logic differs from JIS/ISO."
+      },
+      {
+        id: 604, cat: "International Certs",
+        q: "What is 'CSWIP 3.1' and who administers it?",
+        opts: [
+          "A US structural welding code",
+          "A welding inspector qualification administered by TWI (The Welding Institute, UK), widely required in Europe, the Middle East, and Asian offshore/oil & gas",
+          "A Japanese pressure vessel law",
+          "A brand of welding wire"
+        ],
+        a: 1, xp: 25,
+        exp: "CSWIP 3.1 = Welding Inspector certification from TWI (UK). It is the British/European counterpart to AWS CWI, heavily required in oil & gas and offshore work. 🌍 TIP: For welders eyeing Middle East or Southeast Asia offshore projects (where many Japanese firms operate), CSWIP is often the required inspector ticket, while AWS CWI dominates US-led projects. Knowing which code family a project uses tells you which inspector cert matters."
+      },
+      {
+        id: 605, cat: "International Codes",
+        q: "What does 'ISO 9606-1' cover, and how does it relate to JIS welder certification?",
+        opts: [
+          "It is a paint coating standard",
+          "It is a crane operation standard",
+          "It is the international standard for qualification testing of welders (fusion welding of steels) — the global counterpart to Japan's JIS welder certification",
+          "It is identical to AWS D1.1 with a different number"
+        ],
+        a: 2, xp: 25,
+        exp: "ISO 9606-1 = international welder qualification standard for steels. It parallels JIS 溶接技能者 certification — proving a welder's skill by practical test. International projects in Japan (LNG, offshore) often require ISO 9606 qualification alongside or instead of JIS. 🌍 TIP: The position codes you already know (PA/PC/PF/PG, and 1G/2G/6G) come from ISO 6947 and appear on ISO 9606 certificates — so your position knowledge is already international."
+      },
+      {
+        id: 606, cat: "International Codes",
+        q: "What is 'ISO 3834'?",
+        opts: [
+          "Quality requirements for fusion welding of metallic materials — a company/shop-level welding quality management standard",
+          "A welder's personal skill test",
+          "A type of non-destructive test",
+          "A shielding gas purity standard"
+        ],
+        a: 0, xp: 25,
+        exp: "ISO 3834 sets quality requirements for a welding ORGANIZATION (not an individual) — covering WPS control, welder qualification, equipment, inspection, and record keeping. Think 'a shop-level quality system for welding.' 🌍 TIP: Japanese fabricators bidding on international or European projects often certify to ISO 3834 to prove their welding quality management. It is similar in spirit to the 品質計画書 and 記録 discipline already standard in Japan."
+      },
+      {
+        id: 607, cat: "International Codes",
+        q: "What does 'ASME Section IX' govern?",
+        opts: [
+          "Elevator safety",
+          "Fire sprinkler design",
+          "Electrical wiring codes",
+          "Welding and brazing qualification — the rules for qualifying WPS, PQR, and welders for boilers and pressure vessels (ASME BPVC)"
+        ],
+        a: 3, xp: 25,
+        exp: "ASME Boiler & Pressure Vessel Code, Section IX = qualification of welding/brazing procedures (WPS/PQR) and personnel. It is the US/international backbone for pressure-equipment welding. Japan's domestic equivalent domain is covered by JIS plus the boiler/pressure-vessel rules (ボイラー溶接士). 🌍 TIP: On international plant projects in Japan you may weld to ASME IX WPSs — understanding 'essential variables' (which changes force re-qualification) is critical to staying qualified."
+      },
+      {
+        id: 608, cat: "International Codes",
+        q: "A key difference between AWS and JIS/ISO welding symbols that causes real errors is what?",
+        opts: [
+          "AWS drawings never use welding symbols",
+          "The arrow-side vs other-side symbol placement convention differs — a symbol below the reference line does not mean the same thing in both systems, so always confirm which standard a drawing uses",
+          "JIS only uses imperial units",
+          "There is no difference at all"
+        ],
+        a: 1, xp: 30,
+        exp: "JIS/ISO (ISO 2553, JIS B 0021) and AWS (A2.4) handle arrow-side / other-side symbol placement differently; misreading it means welding on the wrong side. Always check the drawing's title block for the standard. 🌍 TIP: Korean- and US-led projects supplying drawings to Japanese yards have caused real rework from exactly this confusion — flag any non-JIS drawing to your supervisor on day one, before welding anything."
+      },
+      {
+        id: 609, cat: "International Certs",
+        q: "The IIW international welding personnel qualifications include IWE, IWT, and IWS. What do they represent (highest to lowest)?",
+        opts: [
+          "Three different welding processes",
+          "Three grades of welding wire",
+          "IWE = International Welding Engineer (highest), IWT = Technologist, IWS = Specialist — a tiered international welding-coordination scheme",
+          "Three types of shielding gas"
+        ],
+        a: 2, xp: 30,
+        exp: "IIW welding-coordination personnel: IWE (Engineer, highest), IWT (Technologist), IWS (Specialist), plus IWP (Practitioner). These are recognized worldwide. Japan's WES 8103 Special Grade aligns with IWE. 🌍 TIP: If you aim to become a welding coordinator or QC engineer on international projects, the IWS → IWT → IWE ladder is the global track — WES holders in Japan can often bridge to IIW recognition through JWES."
+      },
+      {
+        id: 610, cat: "Quality",
+        q: "In international codes (ASME IX, ISO 15614), what is the relationship between a WPS and a PQR?",
+        opts: [
+          "The PQR records the results of an actual qualification test weld that proves the WPS works; the WPS is the production instruction backed by that PQR",
+          "They are the same document",
+          "The WPS is written after production is finished",
+          "The PQR is a welder's pay record"
+        ],
+        a: 0, xp: 25,
+        exp: "PQR (Procedure Qualification Record) documents a qualification test weld and its test results (tensile, bend, impact). The WPS (Welding Procedure Specification) is the production 'recipe' supported by that PQR. This is the same logic as Japan's 溶接施工要領書 backed by qualification testing. 🌍 TIP: When a job uses ASME/ISO WPSs, learn which parameters are 'essential variables' — changing one beyond its range (e.g. heat input or preheat) can invalidate the qualification and require a new PQR."
+      },
+      {
+        id: 611, cat: "Metallurgy",
+        q: "What does a 'Charpy V-notch (CVN) impact test' measure, and why does it matter for cold climates?",
+        opts: [
+          "It measures weld bead width",
+          "It measures shielding gas flow",
+          "It measures a material's toughness (energy absorbed in fracture) at a given temperature — critical for avoiding brittle fracture in cold service",
+          "It measures electrical resistance"
+        ],
+        a: 2, xp: 25,
+        exp: "In the Charpy V-notch test, a notched specimen is struck and the absorbed energy (Joules) indicates toughness. Low toughness at low temperature means brittle-fracture risk. Codes specify a minimum CVN value at a test temperature for cold-service or seismic structures. 🌍 TIP: For welding in Hokkaido/Tohoku winters or cold offshore water, WPSs often require impact-tested consumables and controlled heat input to keep HAZ toughness — the same 入熱管理 discipline you already practiced."
+      },
+      {
+        id: 612, cat: "Positions",
+        q: "In ISO/AWS pipe welding tests, what is the '6G' position, and what JIS test is it comparable to?",
+        opts: [
+          "6G = a fixed pipe inclined at 45°, welded through all positions in one test — the most demanding pipe test; comparable to Japan's N-2P all-position pipe test",
+          "6G = flat plate, the easiest position",
+          "6G = a type of shielding gas",
+          "6G = a sixth-generation welding robot"
+        ],
+        a: 0, xp: 30,
+        exp: "6G = pipe fixed at a 45° inclination, welded through flat, vertical, and overhead in a single test — the toughest position, qualifying the widest range. In prestige and difficulty it is comparable to JIS N-2P. Passing 6G is a globally respected milestone. 🌍 TIP: A 6G ticket (ISO 9606 or ASME IX) plus JIS N-2P makes you employable on both domestic and international pipe work — and the pipe root-pass 裏波 (back bead) skills transfer directly between them."
+      },
+      {
+        id: 613, cat: "Metallurgy",
+        q: "Duplex stainless steel (e.g. 2205) requires careful welding control of which microstructural balance?",
+        opts: [
+          "The copper/zinc ratio",
+          "The carbon/sulfur ratio only",
+          "The ferrite/austenite phase balance — too much ferrite (from fast cooling / low heat input) reduces toughness and corrosion resistance",
+          "It requires no special control"
+        ],
+        a: 2, xp: 30,
+        exp: "Duplex stainless (~50% ferrite / 50% austenite) offers high strength plus corrosion resistance. Welding must control heat input and interpass temperature so the ferrite number stays in range: too-fast cooling leaves excess brittle ferrite, too-slow risks harmful phases. Common offshore and in chemical plants. 🌍 TIP: Duplex is increasingly used on offshore and LNG projects — nitrogen back-purge and controlled heat input are typical WPS requirements, and ferrite content is checked with a ferrite meter."
+      },
+      {
+        id: 614, cat: "Metallurgy",
+        q: "Across international codes, 'low-hydrogen' practice is required for high-strength/thick steel primarily to prevent what?",
+        opts: [
+          "Surface rust only",
+          "Hydrogen-induced (cold) cracking — by minimizing diffusible hydrogen via dried low-hydrogen consumables, preheat, and interpass control",
+          "Excessive bead width",
+          "Shielding gas waste"
+        ],
+        a: 1, xp: 25,
+        exp: "Low-hydrogen consumables (properly dried and stored), preheat, and interpass control reduce diffusible hydrogen — the driver of cold cracking in hardenable or thick steels. This requirement is universal across AWS, ASME, ISO, and JIS. 🌍 TIP: The rod-oven (乾燥炉) discipline you learned for JIS work is exactly what international codes require — dried electrodes, holding ovens, and limited time out of the oven all carry over."
+      },
+      {
+        id: 615, cat: "Quality",
+        q: "Under pressure-equipment codes, when is PWHT (post-weld heat treatment) typically mandated?",
+        opts: [
+          "For thick sections and certain materials, to relieve residual stress and temper the HAZ — thresholds are set by the code and material",
+          "For every weld regardless of thickness",
+          "Only for aluminum",
+          "Never — PWHT is optional decoration"
+        ],
+        a: 0, xp: 25,
+        exp: "Codes (ASME, JIS, EN) mandate PWHT above certain thickness thresholds or for specific materials (e.g. Cr-Mo steels) to relieve residual stress, reduce hardness and hydrogen, and restore toughness. The cycle — heating rate, hold temperature/time, cooling — is recorded on a chart. 🌍 TIP: Know the PWHT plan BEFORE welding: adding tack welds or repairs after the PWHT cycle invalidates the treatment — a costly and common mistake internationally as well as in Japan."
+      }
+    ]
   }
 
 ]

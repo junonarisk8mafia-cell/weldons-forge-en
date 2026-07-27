@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WELDON EN — Translation Review Sheet</title>
+<style>
+  :root { --bg:#0f172a; --card:#fff; --line:#e2e8f0; --acc:#E85D04; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    background:#f1f5f9; color:#1e293b; }
+  header { position:sticky; top:0; z-index:10; background:var(--bg); color:#fff; padding:12px 16px;
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center; box-shadow:0 2px 10px rgba(0,0,0,.15); }
+  header h1 { font-size:15px; margin:0; margin-right:8px; }
+  header .sub { font-size:11px; color:#94a3b8; }
+  header select, header button, header input { font-size:12px; padding:6px 10px; border-radius:6px;
+    border:1px solid #334155; background:#1e293b; color:#fff; cursor:pointer; }
+  header button.primary { background:var(--acc); border-color:var(--acc); font-weight:700; }
+  .wrap { padding:14px; max-width:1400px; margin:0 auto; }
+  .qcard { background:var(--card); border:1px solid var(--line); border-radius:10px; margin-bottom:14px;
+    overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,.05); }
+  .qhead { background:#f8fafc; padding:8px 12px; font-size:11px; font-weight:700; color:#475569;
+    border-bottom:1px solid var(--line); display:flex; gap:10px; align-items:center; }
+  .qhead .badge { background:var(--acc); color:#fff; border-radius:4px; padding:2px 7px; font-size:10px; }
+  .qhead .cat { color:#0891B2; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { border:1px solid var(--line); padding:8px 10px; font-size:12px; vertical-align:top; text-align:left; }
+  th { background:#f1f5f9; font-size:10px; letter-spacing:.04em; color:#64748b; width:16%; }
+  td.field { background:#f8fafc; font-weight:700; color:#475569; width:6%; white-space:nowrap; }
+  td.en { width:30%; }
+  td.vi, td.id { width:29%; }
+  td.en { color:#0f172a; }
+  .lang-jp { color:#b45309; }
+  textarea.note { width:100%; min-height:34px; border:1px dashed #cbd5e1; border-radius:5px;
+    font-family:inherit; font-size:11px; padding:5px; resize:vertical; background:#fffbeb; }
+  .notecol { width:15%; }
+  .hidecol .vi, .hidecol .vih { display:none; }
+  .hint { background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:10px 14px;
+    font-size:12px; color:#9a3412; margin-bottom:14px; line-height:1.6; }
+  .count { font-size:11px; color:#94a3b8; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🔍 WELDON EN — Translation Review</h1>
+  <span class="sub">EN vs VI vs ID · edit notes inline · export CSV</span>
+  <select id="stageSel"><option value="all">All stages</option></select>
+  <select id="langSel">
+    <option value="both">Show VI + ID</option>
+    <option value="vi">VI only</option>
+    <option value="id">ID only</option>
+  </select>
+  <button id="csvBtn" class="primary">⬇ Download CSV (with notes)</button>
+  <span class="count" id="count"></span>
+</header>
+<div class="wrap">
+  <div class="hint">
+    <b>How to use:</b> Each row shows English (source) next to the Vietnamese and Indonesian translations.
+    Type corrections/comments in the <b>Note</b> columns — they are saved in your browser automatically.
+    When done, click <b>Download CSV</b> and send the file back. Focus on technical terms, safety wording, and natural phrasing.
+    Japanese terms (e.g. 開先, かいさき) are intentionally kept in all languages.
+  </div>
+  <div id="root"></div>
+</div>
+
+<script type="module">
+import { QUIZ_STAGES } from './src/questions_en.js';
+import { Q_I18N } from './src/questions_i18n.js';
+import { UI, VOCAB, SAFETY } from './src/Learn_en.jsx';
+
+const NOTE_KEY = 'weldon_review_notes_v1';
+const notes = JSON.parse(localStorage.getItem(NOTE_KEY) || '{}');
+function saveNote(k, v){ notes[k] = v; localStorage.setItem(NOTE_KEY, JSON.stringify(notes)); }
+
+const OPT = ['A','B','C','D'];
+const root = document.getElementById('root');
+const stageSel = document.getElementById('stageSel');
+const langSel = document.getElementById('langSel');
+const countEl = document.getElementById('count');
+
+QUIZ_STAGES.forEach((s,i)=>{
+  const o = document.createElement('option');
+  o.value = i; o.textContent = s.label;
+  stageSel.appendChild(o);
+});
+{ const o=document.createElement('option'); o.value='learn'; o.textContent='📚 LEARN (terms & safety)'; stageSel.appendChild(o); }
+
+// ── LEARN rows (terms notes, safety why/rules, UI strings) ──
+const LEARN_ROWS = [];
+Object.keys(UI).forEach(k=> LEARN_ROWS.push({ group:'UI strings', key:k, field:'ui', en:UI[k].en, vi:UI[k].vi, id:UI[k].id }));
+VOCAB.forEach(g=>{
+  LEARN_ROWS.push({ group:'Terms', key:g.cat.en, field:'category', en:g.cat.en, vi:g.cat.vi, id:g.cat.id });
+  g.items.forEach(it=> LEARN_ROWS.push({ group:'Terms', key:it.en, field:'note ('+it.ja+')', en:it.note.en, vi:it.note.vi, id:it.note.id }));
+});
+SAFETY.forEach(s=>{
+  LEARN_ROWS.push({ group:'Safety', key:s.title, field:'why ('+s.ja+')', en:s.why.en, vi:s.why.vi, id:s.why.id });
+  (s.rules.en||[]).forEach((r,k)=> LEARN_ROWS.push({ group:'Safety', key:s.title, field:'rule '+(k+1), en:s.rules.en[k], vi:(s.rules.vi||[])[k], id:(s.rules.id||[])[k] }));
+});
+
+function esc(t){ return (t==null?'':String(t)); }
+
+// Build flat list of {stageLabel, qid, field, en, vi, id}
+function buildRows(){
+  const rows = [];
+  QUIZ_STAGES.forEach(st => {
+    st.questions.forEach(q => {
+      const t = Q_I18N[q.id] || {};
+      const vi = t.vi || {}, id = t.id || {};
+      rows.push({ st, qid:q.id, cat:q.cat, field:'Q',   en:q.q, vi:vi.q, id:id.q });
+      q.opts.forEach((o,k)=> rows.push({ st, qid:q.id, cat:q.cat, field:OPT[k], en:o, vi:(vi.opts||[])[k], id:(id.opts||[])[k] }));
+      rows.push({ st, qid:q.id, cat:q.cat, field:'EXP', en:q.exp, vi:vi.exp, id:id.exp });
+    });
+  });
+  return rows;
+}
+const ALL = buildRows();
+
+function renderLearn(){
+  const lang = langSel.value;
+  const showVI = lang!=='id', showID = lang!=='vi';
+  root.innerHTML = '';
+  let cur = null, body='', card=null;
+  function flush(){ if(card){ card.querySelector('tbody').innerHTML = body; root.appendChild(card); } }
+  const groups = {};
+  LEARN_ROWS.forEach(r=> (groups[r.group]=groups[r.group]||[]).push(r));
+  Object.keys(groups).forEach(gname=>{
+    const c = document.createElement('div'); c.className='qcard';
+    let headCols = '<th>Item</th><th>Field</th><th>English (source)</th>';
+    if(showVI) headCols += '<th>Vietnamese</th><th>VI note</th>';
+    if(showID) headCols += '<th>Indonesian</th><th>ID note</th>';
+    let b='';
+    groups[gname].forEach((r,idx)=>{
+      const base='L|'+gname+'|'+idx;
+      const kVI=base+'|vi', kID=base+'|id';
+      b += '<tr><td class="field">'+esc(r.key)+'</td><td class="field">'+esc(r.field)+'</td><td class="en">'+esc(r.en)+'</td>';
+      if(showVI) b += '<td class="vi">'+esc(r.vi)+'</td><td class="notecol"><textarea class="note" data-k="'+kVI+'" placeholder="VI note...">'+esc(notes[kVI]||'')+'</textarea></td>';
+      if(showID) b += '<td class="id">'+esc(r.id)+'</td><td class="notecol"><textarea class="note" data-k="'+kID+'" placeholder="ID note...">'+esc(notes[kID]||'')+'</textarea></td>';
+      b += '</tr>';
+    });
+    c.innerHTML = '<div class="qhead"><span class="badge">LEARN</span><span>'+gname+'</span></div><table><thead><tr>'+headCols+'</tr></thead><tbody>'+b+'</tbody></table>';
+    root.appendChild(c);
+  });
+  countEl.textContent = LEARN_ROWS.length + ' LEARN rows';
+  root.querySelectorAll('textarea.note').forEach(ta=> ta.addEventListener('input', e=> saveNote(e.target.dataset.k, e.target.value)));
+}
+
+function render(){
+  const stageIdx = stageSel.value;
+  const lang = langSel.value;
+  root.className = '';
+  root.innerHTML = '';
+  if(stageIdx==='learn'){ renderLearn(); return; }
+  const stages = stageIdx==='all' ? QUIZ_STAGES : [QUIZ_STAGES[+stageIdx]];
+  let shown = 0;
+  stages.forEach(st => {
+    st.questions.forEach(q => {
+      shown++;
+      const card = document.createElement('div');
+      card.className = 'qcard' + (lang!=='both' ? ' onlyone' : '');
+      const t = Q_I18N[q.id] || {}; const vi=t.vi||{}, id=t.id||{};
+      const showVI = lang!=='id', showID = lang!=='vi';
+      const rowsData = [
+        {f:'Q', en:q.q, vi:vi.q, id:id.q},
+        ...q.opts.map((o,k)=>({f:OPT[k], en:o, vi:(vi.opts||[])[k], id:(id.opts||[])[k]})),
+        {f:'EXP', en:q.exp, vi:vi.exp, id:id.exp},
+      ];
+      let body = '';
+      rowsData.forEach(r=>{
+        const kVI = q.id+'|'+r.f+'|vi', kID = q.id+'|'+r.f+'|id';
+        body += '<tr>';
+        body += '<td class="field">'+r.f+'</td>';
+        body += '<td class="en">'+esc(r.en)+'</td>';
+        if(showVI){
+          body += '<td class="vi">'+esc(r.vi)+'</td>';
+          body += '<td class="notecol"><textarea class="note" data-k="'+kVI+'" placeholder="VI note...">'+esc(notes[kVI]||'')+'</textarea></td>';
+        }
+        if(showID){
+          body += '<td class="id">'+esc(r.id)+'</td>';
+          body += '<td class="notecol"><textarea class="note" data-k="'+kID+'" placeholder="ID note...">'+esc(notes[kID]||'')+'</textarea></td>';
+        }
+        body += '</tr>';
+      });
+      let headCols = '<th>Field</th><th>English (source)</th>';
+      if(showVI) headCols += '<th>Vietnamese</th><th>VI note</th>';
+      if(showID) headCols += '<th>Indonesian</th><th>ID note</th>';
+      card.innerHTML =
+        '<div class="qhead"><span class="badge">ID '+q.id+'</span><span class="cat">['+q.cat+']</span>'+
+        '<span>'+st.label+'</span></div>'+
+        '<table><thead><tr>'+headCols+'</tr></thead><tbody>'+body+'</tbody></table>';
+      root.appendChild(card);
+    });
+  });
+  countEl.textContent = shown + ' questions shown';
+  root.querySelectorAll('textarea.note').forEach(ta=>{
+    ta.addEventListener('input', e=> saveNote(e.target.dataset.k, e.target.value));
+  });
+}
+
+function toCSV(){
+  const head = ['Stage','QID','Category','Field','English','Vietnamese','VI_note','Indonesian','ID_note'];
+  const q = s => '"'+String(s==null?'':s).replace(/"/g,'""')+'"';
+  const lines = [head.map(q).join(',')];
+  ALL.forEach(r=>{
+    const kVI = r.qid+'|'+r.field+'|vi', kID = r.qid+'|'+r.field+'|id';
+    lines.push([r.st.label, r.qid, r.cat, r.field, r.en, r.vi, notes[kVI]||'', r.id, notes[kID]||''].map(q).join(','));
+  });
+  // LEARN rows
+  const groups = {};
+  LEARN_ROWS.forEach(r=> (groups[r.group]=groups[r.group]||[]).push(r));
+  Object.keys(groups).forEach(gname=>{
+    groups[gname].forEach((r,idx)=>{
+      const base='L|'+gname+'|'+idx, kVI=base+'|vi', kID=base+'|id';
+      lines.push(['LEARN/'+gname, r.key, gname, r.field, r.en, r.vi, notes[kVI]||'', r.id, notes[kID]||''].map(q).join(','));
+    });
+  });
+  return lines.join('\r\n');
+}
+
+document.getElementById('csvBtn').addEventListener('click', ()=>{
+  const blob = new Blob(['﻿'+toCSV()], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'weldon_en_translation_review.csv';
+  a.click();
+});
+
+stageSel.addEventListener('change', render);
+langSel.addEventListener('change', render);
+render();
+</script>
+</body>
+</html>
