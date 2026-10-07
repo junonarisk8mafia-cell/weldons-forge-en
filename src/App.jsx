@@ -1705,7 +1705,7 @@ function SymbolTab() {
         {syms.map(s => (
           <div key={s.sym} style={{ background:'#141414', border:'1px solid #1e1e1e',
             borderRadius:8, padding:'10px', textAlign:'center' }}>
-            <div style={{ fontSize:'1.6rem', marginBottom:4 }}>{s.sym}</div>
+            <div style={{ fontSize:'1.6rem', marginBottom:4, color:'#fff' }}>{s.sym}</div>
             <div style={{ color:'#FF6600', fontSize:'0.68rem', fontWeight:'bold' }}>{s.name}</div>
             <div style={{ color:'#777', fontSize:'0.6rem' }}><JaText text={s.jp}/></div>
             <div style={{ color:'#555', fontSize:'0.58rem', fontStyle:'italic' }}>{s.rom}</div>
