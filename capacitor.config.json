@@ -1,5 +1,11 @@
 {
   "appId": "com.onaricreations.weldonsforge.en",
   "appName": "WELDON'S FORGE",
-  "webDir": "dist"
+  "webDir": "dist",
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_wf",
+      "iconColor": "#FF6600"
+    }
+  }
 }

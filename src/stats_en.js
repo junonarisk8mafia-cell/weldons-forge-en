@@ -50,7 +50,10 @@ export function clearStats() { save({ cats: {}, wrong: {} }); }
 
 // ── Daily streak ────────────────────────────────────────────
 const SKEY = "wf_en_streak_v1";
-const today = () => new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+// Local calendar date (YYYY-MM-DD); toISOString() is UTC, which in Japan rolls the day at 9:00.
+const localDay = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+const today = () => localDay(new Date());
+const yesterday = () => { const d = new Date(); d.setDate(d.getDate() - 1); return localDay(d); };
 function loadStreak() {
   try { return JSON.parse(localStorage.getItem(SKEY)) || { last: null, streak: 0, best: 0 }; }
   catch { return { last: null, streak: 0, best: 0 }; }
@@ -60,18 +63,19 @@ export function markStudiedToday() {
   const s = loadStreak();
   const t = today();
   if (s.last === t) return s.streak;
-  const y = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const y = yesterday();
   s.streak = s.last === y ? s.streak + 1 : 1;
   s.last = t;
   s.best = Math.max(s.best || 0, s.streak);
   try { localStorage.setItem(SKEY, JSON.stringify(s)); } catch {}
+  window.dispatchEvent(new Event("wf-studied"));
   return s.streak;
 }
 // { streak, best, studiedToday } — streak breaks if a full day was skipped.
 export function getStreak() {
   const s = loadStreak();
   const t = today();
-  const y = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+  const y = yesterday();
   const alive = s.last === t || s.last === y;
   return { streak: alive ? s.streak : 0, best: s.best || 0, studiedToday: s.last === t };
 }

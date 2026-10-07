@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from 'react'
 import { QUIZ_STAGES } from './questions_en.js'
 import { CalcDrill } from './CalcDrill.jsx'
 import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStudiedToday, getStreak } from './stats_en.js'
+import { loadReminder, enableReminder, disableReminder } from './reminder.js'
 import { MockScreen } from './Mock_en.jsx'
 import { LearnTab } from './Learn_en.jsx'
 import { loadLang, saveLang, LANGS } from './i18n_en.js'
@@ -387,6 +388,43 @@ const EMBER_CONFIGS = [
 
 const SUBTITLE_FULL = 'Japanese Welding RPG Quiz · Foreign Trainees in Japan'
 
+const REMINDER_HOURS = [6, 7, 8, 12, 17, 18, 19, 20, 21, 22]
+
+function ReminderToggle() {
+  const [r, setR] = useState(loadReminder)
+  const [note, setNote] = useState('')
+  async function turnOn(hour) {
+    const res = await enableReminder(hour, 0)
+    if (res === 'on') { setR(loadReminder()); setNote('') }
+    else setNote(res === 'denied'
+      ? 'Notifications are blocked. Allow them in Android Settings → Apps → WELDON\'S FORGE.'
+      : 'Reminders work in the Android app.')
+  }
+  async function turnOff() { await disableReminder(); setR(loadReminder()) }
+  return (
+    <div style={{ marginTop:12, fontFamily:"'Share Tech Mono',monospace" }}>
+      <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#141414',
+        border:`1px solid ${r.on ? '#FF660066' : '#2a2a2a'}`, borderRadius:20, padding:'5px 6px 5px 14px' }}>
+        <span style={{ color: r.on ? '#FF6600' : '#777', fontSize:'0.62rem' }}>🔔 Daily reminder</span>
+        {r.on && (
+          <select value={r.hour} onChange={e => turnOn(Number(e.target.value))} aria-label="Reminder time" style={{
+            background:'#0d0d0d', color:'#FFB800', border:'1px solid #2a2a2a', borderRadius:6,
+            fontFamily:'inherit', fontSize:'0.62rem', padding:'3px 4px' }}>
+            {REMINDER_HOURS.map(h => <option key={h} value={h}>{String(h).padStart(2,'0')}:00</option>)}
+          </select>
+        )}
+        <button onClick={() => r.on ? turnOff() : turnOn(r.hour)} style={{
+          border:'none', borderRadius:14, padding:'4px 10px', cursor:'pointer', fontFamily:'inherit',
+          fontSize:'0.6rem', fontWeight:'bold',
+          background: r.on ? '#FF6600' : '#2a2a2a', color: r.on ? '#fff' : '#999' }}>
+          {r.on ? 'ON' : 'OFF'}
+        </button>
+      </div>
+      {note && <div style={{ color:'#f59e0b', fontSize:'0.58rem', marginTop:6, maxWidth:260, marginInline:'auto', lineHeight:1.5 }}>{note}</div>}
+    </div>
+  )
+}
+
 function TitleScreen({ onStart, totalXP }) {
   const S = styles
   const [typed, setTyped] = useState('')
@@ -498,6 +536,8 @@ function TitleScreen({ onStart, totalXP }) {
             </span>
           </div>
         )}
+
+        <ReminderToggle/>
 
         {totalXP > 0 && (
           <div style={{ color:'#444', fontSize:'0.68rem', marginTop:16,
