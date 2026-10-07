@@ -6,11 +6,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { QUIZ_STAGES } from './questions_en.js'
 import { CalcDrill } from './CalcDrill.jsx'
-import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStudiedToday, getStreak } from './stats_en.js'
+import { recordAnswer, getCatStats, getSummary, getWrongIds, clearStats, markStudiedToday, getStreak, getDueIds } from './stats_en.js'
 import { loadReminder, enableReminder, disableReminder } from './reminder.js'
 import { MockScreen } from './Mock_en.jsx'
 import { LearnTab } from './Learn_en.jsx'
-import { loadLang, saveLang, LANGS } from './i18n_en.js'
+import { loadLang, saveLang, LANGS, tr } from './i18n_en.js'
+import { ReviewDrill, REVIEW_UI } from './ReviewDrill.jsx'
+import { JaText, JaHint, NoVoiceBanner } from './JaText.jsx'
 import { localizeQ, ensureTranslations } from './localize_en.js'
 
 // ── CONSTANTS ───────────────────────────────────────────────
@@ -390,22 +392,30 @@ const SUBTITLE_FULL = 'Japanese Welding RPG Quiz · Foreign Trainees in Japan'
 
 const REMINDER_HOURS = [6, 7, 8, 12, 17, 18, 19, 20, 21, 22]
 
-function ReminderToggle() {
+const REMINDER_UI = {
+  label: { en:'🔔 Daily reminder', vi:'🔔 Nhắc học hằng ngày', id:'🔔 Pengingat harian' },
+  denied: {
+    en:"Notifications are blocked. Allow them in Android Settings → Apps → WELDON'S FORGE.",
+    vi:"Thông báo đang bị chặn. Hãy cho phép trong Cài đặt Android → Ứng dụng → WELDON'S FORGE.",
+    id:"Notifikasi diblokir. Izinkan di Setelan Android → Aplikasi → WELDON'S FORGE.",
+  },
+  unsupported: { en:'Reminders work in the Android app.', vi:'Nhắc nhở chỉ hoạt động trong ứng dụng Android.', id:'Pengingat hanya berfungsi di aplikasi Android.' },
+}
+
+function ReminderToggle({ lang }) {
   const [r, setR] = useState(loadReminder)
   const [note, setNote] = useState('')
   async function turnOn(hour) {
     const res = await enableReminder(hour, 0)
     if (res === 'on') { setR(loadReminder()); setNote('') }
-    else setNote(res === 'denied'
-      ? 'Notifications are blocked. Allow them in Android Settings → Apps → WELDON\'S FORGE.'
-      : 'Reminders work in the Android app.')
+    else setNote(tr(res === 'denied' ? REMINDER_UI.denied : REMINDER_UI.unsupported, lang))
   }
   async function turnOff() { await disableReminder(); setR(loadReminder()) }
   return (
     <div style={{ marginTop:12, fontFamily:"'Share Tech Mono',monospace" }}>
       <div style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#141414',
         border:`1px solid ${r.on ? '#FF660066' : '#2a2a2a'}`, borderRadius:20, padding:'5px 6px 5px 14px' }}>
-        <span style={{ color: r.on ? '#FF6600' : '#777', fontSize:'0.62rem' }}>🔔 Daily reminder</span>
+        <span style={{ color: r.on ? '#FF6600' : '#777', fontSize:'0.62rem' }}>{tr(REMINDER_UI.label, lang)}</span>
         {r.on && (
           <select value={r.hour} onChange={e => turnOn(Number(e.target.value))} aria-label="Reminder time" style={{
             background:'#0d0d0d', color:'#FFB800', border:'1px solid #2a2a2a', borderRadius:6,
@@ -425,8 +435,9 @@ function ReminderToggle() {
   )
 }
 
-function TitleScreen({ onStart, totalXP }) {
+function TitleScreen({ onStart, onReview, totalXP, lang }) {
   const S = styles
+  const due = getDueIds().length
   const [typed, setTyped] = useState('')
   const [btnHover, setBtnHover] = useState(false)
   const streak = getStreak()
@@ -523,6 +534,18 @@ function TitleScreen({ onStart, totalXP }) {
           ⚡ START BATTLE
         </button>
 
+        {/* Today's spaced review */}
+        {due > 0 && (
+          <div>
+            <button onClick={onReview} style={{
+              marginTop:14, background:'#141414', border:'1px solid #FFB80088', borderRadius:10,
+              padding:'10px 22px', cursor:'pointer', color:'#FFB800', fontWeight:'bold',
+              fontFamily:"'Share Tech Mono',monospace", fontSize:'0.78rem' }}>
+              {tr(REVIEW_UI.button, lang)} · {tr(REVIEW_UI.count, lang).replace('{n}', due)}
+            </button>
+          </div>
+        )}
+
         {/* Daily streak */}
         {streak.streak > 0 && (
           <div style={{ marginTop:18, display:'inline-flex', alignItems:'center', gap:8,
@@ -537,7 +560,7 @@ function TitleScreen({ onStart, totalXP }) {
           </div>
         )}
 
-        <ReminderToggle/>
+        <ReminderToggle lang={lang}/>
 
         {totalXP > 0 && (
           <div style={{ color:'#444', fontSize:'0.68rem', marginTop:16,
@@ -1217,7 +1240,7 @@ function Battle({
   pHP, mHP, correct, miss,
   sel, done, bgFlash,
   monsterAnim, playerShake, floatMonster, floatPlayer, pending,
-  onAnswer, onNext, onQuit,
+  onAnswer, onNext, onQuit, lang,
 }) {
   const q   = qs[qi]
   const mon = MONSTERS[si] || MONSTERS[0]
@@ -1381,7 +1404,8 @@ function Battle({
           </div>
           <div style={{ color:'#f0f0f0', fontSize:'clamp(0.8rem, 3.5vw, 0.9rem)', lineHeight:1.6, marginBottom:14,
             fontFamily:"'Share Tech Mono',monospace" }}>
-            {q.q}
+            <JaText text={q.q}/>
+            <JaHint lang={lang}/>
           </div>
           {q.opts.map((opt, i) => (
             <button key={i}
@@ -1389,7 +1413,7 @@ function Battle({
               onClick={() => !done && onAnswer(i)} style={optStyle(i)}>
               <span style={{ color:'#FF6600', fontWeight:'bold', marginRight:8,
                 fontFamily:"'Orbitron',monospace", fontSize:'0.7rem' }}>{OPTS[i]}.</span>
-              {opt}
+              <JaText text={opt} active={done}/>
             </button>
           ))}
         </div>
@@ -1410,7 +1434,7 @@ function Battle({
             </div>
             <div style={{ color:'#ccc', fontSize:'0.72rem', lineHeight:1.55, marginBottom:10,
               fontFamily:"'Share Tech Mono',monospace" }}>
-              {q.exp}
+              <JaText text={q.exp}/>
             </div>
             <button onClick={() => { playSound('click'); onNext() }}
               style={{ ...styles.btnPrimary, width:'100%' }}>
@@ -1683,7 +1707,7 @@ function SymbolTab() {
             borderRadius:8, padding:'10px', textAlign:'center' }}>
             <div style={{ fontSize:'1.6rem', marginBottom:4 }}>{s.sym}</div>
             <div style={{ color:'#FF6600', fontSize:'0.68rem', fontWeight:'bold' }}>{s.name}</div>
-            <div style={{ color:'#777', fontSize:'0.6rem' }}>{s.jp}</div>
+            <div style={{ color:'#777', fontSize:'0.6rem' }}><JaText text={s.jp}/></div>
             <div style={{ color:'#555', fontSize:'0.58rem', fontStyle:'italic' }}>{s.rom}</div>
             <div style={{ color:'#999', fontSize:'0.6rem', marginTop:4, lineHeight:1.3 }}>{s.note}</div>
           </div>
@@ -1905,11 +1929,11 @@ function CareerTab() {
             <div style={{ flex:1 }}>
               <div style={{ display:'flex', alignItems:'center', gap:6, flexWrap:'wrap' }}>
                 <span style={{ color:s.c, fontSize:'0.54rem', fontWeight:'bold', background:`${s.c}22`, padding:'1px 6px', borderRadius:4 }}>{s.tag}</span>
-                <span style={{ color:'#eee', fontSize:'0.74rem', fontWeight:'bold' }}>{s.jp}</span>
+                <span style={{ color:'#eee', fontSize:'0.74rem', fontWeight:'bold' }}><JaText text={s.jp}/></span>
                 <span style={{ color:'#22c55e', fontSize:'0.58rem', fontStyle:'italic' }}>{s.rj}</span>
               </div>
               <div style={{ color:'#888', fontSize:'0.58rem', marginTop:1 }}>{s.en}</div>
-              <div style={{ color:'#9aa', fontSize:'0.62rem', lineHeight:1.5, marginTop:4 }}>{s.d}</div>
+              <div style={{ color:'#9aa', fontSize:'0.62rem', lineHeight:1.5, marginTop:4 }}><JaText text={s.d}/></div>
             </div>
           </div>
         ))}
@@ -1933,11 +1957,11 @@ function CareerTab() {
                   </span>
                   <span style={{ color:s.color, fontSize:'0.88rem', fontWeight:'bold' }}>{s.title}</span>
                 </div>
-                <div style={{ color:'#555', fontSize:'0.62rem' }}>{s.jp}</div>
+                <div style={{ color:'#555', fontSize:'0.62rem' }}><JaText text={s.jp}/></div>
               </div>
             </div>
             {s.items.map((it,j)=>(
-              <div key={j} style={{ color:'#aaa', fontSize:'0.66rem', lineHeight:1.55 }}>• {it}</div>
+              <div key={j} style={{ color:'#aaa', fontSize:'0.66rem', lineHeight:1.55 }}>• <JaText text={it}/></div>
             ))}
             <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between',
               background:`${s.color}11`, border:`1px solid ${s.color}33`,
@@ -2499,7 +2523,7 @@ function ReviewScreen({ history, onBack }) {
                 <span style={{ color:'#555', fontSize:'0.62rem', marginRight:6 }}>
                   [{q.cat}]
                 </span>
-                {q.q}
+                <JaText text={q.q}/>
               </div>
             </div>
 
@@ -2536,7 +2560,7 @@ function ReviewScreen({ history, onBack }) {
                     }}>
                       {OPTS[oi]}.
                     </span>
-                    <span>{opt}</span>
+                    <span><JaText text={opt}/></span>
                     {isCorrect && (
                       <span style={{ marginLeft:'auto', flexShrink:0, color:'#22c55e', fontSize:'0.65rem' }}>
                         ✓ correct
@@ -2559,7 +2583,7 @@ function ReviewScreen({ history, onBack }) {
               color:'#999', lineHeight:1.55,
             }}>
               <span style={{ color:'#FFB800', fontWeight:'bold', marginRight:6 }}>EXP:</span>
-              {q.exp}
+              <JaText text={q.exp}/>
             </div>
           </div>
         )
@@ -3052,11 +3076,13 @@ export default function App() {
 
   function battleContent() {
     if (screen==='title')
-      return <TitleScreen onStart={()=>setScreen('stage-select')} totalXP={totalXP}/>
+      return <TitleScreen onStart={()=>setScreen('stage-select')} onReview={()=>setScreen('daily-review')} totalXP={totalXP} lang={lang}/>
     if (screen==='stage-select')
       return <StageSelect stages={QUIZ_STAGES} totalXP={totalXP} stageProgress={stageProgress}
                onSelect={startStage} onBack={()=>setScreen('title')}
                onMock={()=>setScreen('mock')} lang={lang} onPickLang={pickLang}/>
+    if (screen==='daily-review')
+      return <ReviewDrill lang={lang} onExit={()=>setScreen('title')}/>
     if (screen==='mock')
       return <MockScreen onExit={()=>setScreen('stage-select')} lang={lang}/>
     if (screen==='battle' && qs.length)
@@ -3066,7 +3092,7 @@ export default function App() {
                monsterAnim={monsterAnim} playerShake={playerShake}
                floatMonster={floatMonster} floatPlayer={floatPlayer}
                onAnswer={handleAnswer} onNext={handleNext}
-               onQuit={()=>setScreen('stage-select')}/>
+               onQuit={()=>setScreen('stage-select')} lang={lang}/>
     if (screen==='victory')
       return <Victory stage={QUIZ_STAGES[si]} si={si} sessionXP={sessionXP}
                correct={correct} miss={miss}
@@ -3095,6 +3121,8 @@ export default function App() {
         {tab==='career'  && <CareerTab/>}
         {tab==='history' && <HistoryTab onPractice={(idx)=>{ setTab('battle'); startStage(idx) }}/>}
       </div>
+
+      <NoVoiceBanner lang={lang}/>
 
       {/* Bottom Nav */}
       <div className="wf-nav-safe" style={{

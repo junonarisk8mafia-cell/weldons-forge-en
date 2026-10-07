@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 import { QUIZ_STAGES } from "./questions_en.js";
 import { recordAnswer } from "./stats_en.js";
 import { localizeQ } from "./localize_en.js";
+import { JaText } from "./JaText.jsx";
 
 const PASS = 0.6;
 
@@ -96,7 +97,7 @@ export function MockScreen({ onExit, lang }) {
 
         <div style={{ background: "#141414", border: "1px solid #1e1e1e", borderRadius: 10, padding: "12px 14px", marginBottom: 12 }}>
           <div style={{ fontSize: "0.55rem", color: "#FF660099", fontWeight: "bold", marginBottom: 6 }}>[{q.cat}]</div>
-          <div style={{ fontSize: "0.82rem", color: "#eee", lineHeight: 1.6 }}>{q.q}</div>
+          <div style={{ fontSize: "0.82rem", color: "#eee", lineHeight: 1.6 }}><JaText text={q.q} /></div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
@@ -170,9 +171,9 @@ export function MockScreen({ onExit, lang }) {
             {missed.map((m, i) => (
               <div key={i} style={{ background: "#141414", border: "1px solid #3a1a1a", borderRadius: 8, padding: "10px 12px" }}>
                 <div style={{ fontSize: "0.52rem", color: "#FF660099", fontWeight: "bold", marginBottom: 3 }}>[{m.q.cat}]</div>
-                <div style={{ fontSize: "0.7rem", color: "#ddd", lineHeight: 1.5, marginBottom: 5 }}>{m.q.q}</div>
+                <div style={{ fontSize: "0.7rem", color: "#ddd", lineHeight: 1.5, marginBottom: 5 }}><JaText text={m.q.q} /></div>
                 <div style={{ fontSize: "0.66rem", color: "#22c55e", fontWeight: "bold", marginBottom: 4 }}>✓ {m.q.opts[m.q.a]}</div>
-                {m.q.exp && <div style={{ fontSize: "0.62rem", color: "#888", lineHeight: 1.5 }}>{m.q.exp}</div>}
+                {m.q.exp && <div style={{ fontSize: "0.62rem", color: "#888", lineHeight: 1.5 }}><JaText text={m.q.exp} /></div>}
               </div>
             ))}
           </div>

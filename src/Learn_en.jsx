@@ -10,7 +10,7 @@
 // ============================================================
 import { useState } from "react";
 import { LANGS, loadLang, saveLang, tr } from "./i18n_en.js";
-import { speakJa, openVoiceInstall } from "./speak.js";
+import { speakJa } from "./speak.js";
 
 // ── UI strings ──
 export const UI = {
@@ -29,11 +29,6 @@ export const UI = {
   },
   why:   { en: "Why", vi: "Vì sao", id: "Alasan" },
   listen: { en: "Listen", vi: "Nghe", id: "Dengar" },
-  noVoice: {
-    en: "Japanese voice is not installed on this phone. Tap here to install it (Settings → Text-to-speech → Japanese).",
-    vi: "Điện thoại chưa cài giọng đọc tiếng Nhật. Chạm vào đây để cài (Cài đặt → Chuyển văn bản thành giọng nói → Tiếng Nhật).",
-    id: "Suara bahasa Jepang belum terpasang di ponsel ini. Ketuk di sini untuk memasang (Setelan → Teks-ke-ucapan → Jepang).",
-  },
   checklist: { en: "✅ Checklist", vi: "✅ Danh mục", id: "✅ Ceklis" },
   checkHint: {
     en: "Run through this before you strike the arc and after you finish — the daily 作業前点検 (pre-work check) discipline of Japanese sites. Taps are saved; reset each day.",
@@ -240,11 +235,9 @@ export const CHECKLIST = [
 const orb = "'Orbitron',monospace";
 const mono = "'Share Tech Mono',monospace";
 
-function SpeakBtn({ text, lang, onNoVoice }) {
+function SpeakBtn({ text, lang }) {
   return (
-    <button aria-label={`${tr(UI.listen, lang)}: ${text}`} onClick={async () => {
-      if (await speakJa(text) === "no-voice") onNoVoice();
-    }} style={{
+    <button aria-label={`${tr(UI.listen, lang)}: ${text}`} onClick={() => speakJa(text)} style={{
       flexShrink: 0, width: 28, height: 28, borderRadius: 14, cursor: "pointer", padding: 0,
       border: "1px solid #FF660066", background: "#1a1005", color: "#FF6600", fontSize: "0.8rem", lineHeight: 1,
     }}>🔊</button>
@@ -258,9 +251,7 @@ export function LearnTab({ lang: langProp, onPickLang }) {
   const [mode, setMode] = useState("terms"); // terms | safety | check
   const [langLocal, setLangLocal] = useState(loadLang());
   const [checks, setChecks] = useState(loadChecks);
-  const [noVoice, setNoVoice] = useState(false);
   const lang = langProp || langLocal;
-  const showNoVoice = () => setNoVoice(true);
   function pickLang(l) { if (onPickLang) onPickLang(l); else { setLangLocal(l); saveLang(l); } }
   function toggleCheck(k) {
     setChecks(prev => { const n = { ...prev, [k]: !prev[k] }; try { localStorage.setItem(CHK_KEY, JSON.stringify(n)); } catch {} return n; });
@@ -294,14 +285,6 @@ export function LearnTab({ lang: langProp, onPickLang }) {
         ))}
       </div>
 
-      {noVoice && (
-        <button onClick={() => { openVoiceInstall(); setNoVoice(false); }} style={{
-          display: "block", width: "100%", textAlign: "left", cursor: "pointer", fontFamily: mono,
-          background: "#1a1005", border: "1px solid #FF660066", borderRadius: 8, padding: "9px 11px",
-          color: "#f59e0b", fontSize: "0.62rem", lineHeight: 1.5, marginBottom: 12,
-        }}>🔇 {tr(UI.noVoice, lang)}</button>
-      )}
-
       {mode === "terms" ? (
         <>
           <div style={{ color: "#666", fontSize: "0.6rem", lineHeight: 1.6, marginBottom: 14 }}>{tr(UI.termsHint, lang)}</div>
@@ -321,7 +304,7 @@ export function LearnTab({ lang: langProp, onPickLang }) {
                         <span style={{ color: "#22c55e", fontSize: "0.6rem", fontStyle: "italic", whiteSpace: "nowrap" }}>{it.rj}</span>
                       </div>
                     </div>
-                    <SpeakBtn text={it.ja} lang={lang} onNoVoice={showNoVoice} />
+                    <SpeakBtn text={it.ja} lang={lang} />
                   </div>
                 ))}
               </div>
@@ -340,7 +323,7 @@ export function LearnTab({ lang: langProp, onPickLang }) {
                     <span style={{ display: "block", color: "#FF6600", fontFamily: orb, fontWeight: 900, fontSize: "0.72rem" }}>{s.title}</span>
                     <span style={{ display: "block", color: "#777", fontSize: "0.58rem", marginTop: 1 }}>{s.ja}</span>
                   </span>
-                  <SpeakBtn text={s.ja} lang={lang} onNoVoice={showNoVoice} />
+                  <SpeakBtn text={s.ja} lang={lang} />
                 </div>
                 <div style={{ color: "#aaa", fontSize: "0.64rem", lineHeight: 1.6, marginBottom: 8 }}>
                   <span style={{ color: "#f59e0b", fontWeight: "bold" }}>{tr(UI.why, lang)}: </span>{tr(s.why, lang)}

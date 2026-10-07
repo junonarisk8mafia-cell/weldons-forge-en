@@ -12,8 +12,15 @@ const LANG = "ja-JP";
 // drop romaji in parentheses ("感電 (kanden)") so only Japanese is spoken.
 const clean = t => t.replace(/\s*[(（][^)）]*[)）]/g, "").replace(/\s*[/／・]\s*/g, "、").trim();
 
-// Resolves to "ok" | "no-voice" | "error".
+// Resolves to "ok" | "no-voice" | "error". "no-voice" also fires a
+// "wf-no-voice" window event so the app-level banner can offer the install.
 export async function speakJa(text) {
+  const res = await speak(text);
+  if (res === "no-voice") window.dispatchEvent(new Event("wf-no-voice"));
+  return res;
+}
+
+async function speak(text) {
   const t = clean(text);
   if (Capacitor.isNativePlatform()) {
     try {

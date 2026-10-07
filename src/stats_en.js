@@ -19,6 +19,47 @@ export function recordAnswer({ id, cat, ok }) {
   if (ok) { delete s.wrong[id]; }
   else { s.wrong[id] = { n: (s.wrong[id]?.n || 0) + 1, ts: Date.now() }; }
   save(s);
+  scheduleReview(id, ok);
+}
+
+// ── Spaced review ───────────────────────────────────────────
+// A missed question comes back tomorrow; each correct answer on its due
+// day pushes it further out (1 → 3 → 7 → 14 → 30 days), then it's mastered.
+const RKEY = "wf_en_srs_v1";
+const INTERVALS = [1, 3, 7, 14, 30];
+
+function loadSrs() {
+  try {
+    const raw = localStorage.getItem(RKEY);
+    if (raw) return JSON.parse(raw);
+  } catch {}
+  // First run: questions already missed before this feature existed are due now.
+  const srs = {};
+  Object.keys(load().wrong).forEach(id => { srs[id] = { box: 0, due: today() }; });
+  return srs;
+}
+function saveSrs(srs) { try { localStorage.setItem(RKEY, JSON.stringify(srs)); } catch {} }
+
+function scheduleReview(id, ok) {
+  const srs = loadSrs();
+  const t = today();
+  if (!ok) srs[id] = { box: 0, due: addDays(INTERVALS[0]) };
+  else if (srs[id] && srs[id].due <= t) {
+    const box = srs[id].box + 1;
+    if (box >= INTERVALS.length) delete srs[id];
+    else srs[id] = { box, due: addDays(INTERVALS[box]) };
+  }
+  saveSrs(srs);
+}
+
+// Question ids due for review today, most overdue first.
+export function getDueIds() {
+  const srs = loadSrs();
+  const t = today();
+  return Object.keys(srs)
+    .filter(id => srs[id].due <= t)
+    .sort((a, b) => srs[a].due.localeCompare(srs[b].due))
+    .map(id => (isNaN(+id) ? id : +id));
 }
 
 // Category stats, weakest first (lowest accuracy, then most attempts).
@@ -46,7 +87,7 @@ export function getWrongIds() {
     .map(x => x.id);
 }
 
-export function clearStats() { save({ cats: {}, wrong: {} }); }
+export function clearStats() { save({ cats: {}, wrong: {} }); saveSrs({}); }
 
 // ── Daily streak ────────────────────────────────────────────
 const SKEY = "wf_en_streak_v1";
@@ -54,6 +95,7 @@ const SKEY = "wf_en_streak_v1";
 const localDay = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 const today = () => localDay(new Date());
 const yesterday = () => { const d = new Date(); d.setDate(d.getDate() - 1); return localDay(d); };
+const addDays = n => { const d = new Date(); d.setDate(d.getDate() + n); return localDay(d); };
 function loadStreak() {
   try { return JSON.parse(localStorage.getItem(SKEY)) || { last: null, streak: 0, best: 0 }; }
   catch { return { last: null, streak: 0, best: 0 }; }
