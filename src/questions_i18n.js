@@ -2367,9 +2367,9 @@ export const Q_I18N = {
         "N = Không rãnh, 2 = tấm dày 2mm, F = chỉ lượt cuối",
         "N = Kim loại màu, 2 = mối hai lượt, F = phương pháp FCAW",
         "N = Thép hợp kim niken, 2 = mối rãnh tấm, F = tư thế bằng",
-        "N = Thép mềm (軟鋼), 2 = mối rãnh tấm (厚板突合せ), F = tư thế bằng (下向き). Mối rãnh tư thế bằng cơ bản trên tấm thép mềm",
+        "N = Không có tấm lót (裏当て金なし), 2 = tấm trung bình 9mm (中板), F = tư thế bằng (下向き). Mối rãnh tư thế bằng không dùng tấm lót",
       ],
-      exp: "Mã thi JIS N-2F: N = 軟鋼 (Nankoo = thép mềm), 2 = 厚板突合せ (mối rãnh tấm), F = 下向き (tư thế bằng). Các mã phổ biến khác: N-2H (ngang), N-2V (đứng), N-2O (trần), N-2P (ống, mọi tư thế — khó nhất). Mã cho biết chính xác bạn đã đậu thi gì. 🇯🇵 MẸO: Khi thợ Nhật giới thiệu chuyên môn, họ thường nói mã JIS: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Tôi có N-2F và N-2V). Điều này lập tức truyền đạt năng lực cho bất kỳ giám sát Nhật nào. Hãy nhớ mã của mình và dùng tự tin — nó cho thấy bạn hiểu hệ thống chứng chỉ Nhật.",
+      exp: "Mã thi JIS N-2F (JIS Z 3801, hàn hồ quang tay): N = 裏当て金なし (không có tấm lót — A = có tấm lót), 2 = 中板 (tấm trung bình 9mm — 1 = mỏng, 3 = dày), F = 下向き (tư thế bằng). Các mã phổ biến khác: N-2H (ngang), N-2V (đứng), N-2O (trần), N-2P (ống, mọi tư thế — khó nhất). Mã cho biết chính xác bạn đã đậu thi gì. 🇯🇵 MẸO: Khi thợ Nhật giới thiệu chuyên môn, họ thường nói mã JIS: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Tôi có N-2F và N-2V). Điều này lập tức truyền đạt năng lực cho bất kỳ giám sát Nhật nào. Hãy nhớ mã của mình và dùng tự tin — nó cho thấy bạn hiểu hệ thống chứng chỉ Nhật.",
     },
     id: {
       q: "Apa arti kode uji 'N-2F' dalam sertifikasi las JIS?",
@@ -2377,31 +2377,31 @@ export const Q_I18N = {
         "N = Tanpa alur, 2 = tebal pelat 2mm, F = hanya pass final",
         "N = Non-ferro, 2 = las dua pass, F = proses FCAW",
         "N = Baja paduan nikel, 2 = las alur pelat, F = posisi datar",
-        "N = Baja lunak (軟鋼), 2 = las alur pelat (厚板突合せ), F = posisi datar (下向き). Las alur posisi datar dasar pada pelat baja lunak",
+        "N = Tanpa pelat penahan (裏当て金なし), 2 = pelat sedang 9mm (中板), F = posisi datar (下向き). Las alur posisi datar tanpa pelat penahan",
       ],
-      exp: "Kode uji JIS N-2F: N = 軟鋼 (Nankoo = baja lunak), 2 = 厚板突合せ (las alur pelat), F = 下向き (posisi datar). Kode umum lain: N-2H (mendatar), N-2V (tegak), N-2O (overhead), N-2P (pipa, semua posisi — tersulit). Kode memberi tahu persis uji apa yang Anda lulus. 🇯🇵 TIPS: Saat tukang las Jepang memperkenalkan diri secara profesional, mereka sering menyebut kode JIS-nya: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Saya memegang N-2F dan N-2V). Ini langsung mengomunikasikan kemampuan Anda ke supervisor Jepang mana pun. Hafalkan kode Anda dan gunakan dengan percaya diri — itu menunjukkan Anda memahami sistem kualifikasi Jepang.",
+      exp: "Kode uji JIS N-2F (JIS Z 3801, las busur manual): N = 裏当て金なし (tanpa pelat penahan — A = dengan pelat penahan), 2 = 中板 (pelat sedang 9mm — 1 = tipis, 3 = tebal), F = 下向き (posisi datar). Kode umum lain: N-2H (mendatar), N-2V (tegak), N-2O (overhead), N-2P (pipa, semua posisi — tersulit). Kode memberi tahu persis uji apa yang Anda lulus. 🇯🇵 TIPS: Saat tukang las Jepang memperkenalkan diri secara profesional, mereka sering menyebut kode JIS-nya: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / Saya memegang N-2F dan N-2V). Ini langsung mengomunikasikan kemampuan Anda ke supervisor Jepang mana pun. Hafalkan kode Anda dan gunakan dengan percaya diri — itu menunjukkan Anda memahami sistem kualifikasi Jepang.",
     },
   },
   504: {
     vi: {
       q: "'N-2P' trong chứng chỉ JIS là gì và vì sao được coi là danh giá nhất?",
       opts: [
-        "N-2P = Thép mềm, ống, mọi tư thế — hàn ống cố định nằm ngang ở mọi tư thế (bằng + đứng + trần) trong một bài thi. Tỷ lệ đậu ~30%. Chuẩn vàng cho thợ Nhật",
+        "N-2P = Không tấm lót, ống thành trung bình, ống cố định — ống được cố định nằm ngang và thẳng đứng nên phải hàn ở mọi tư thế (bằng + đứng + trần). Chuẩn vàng cho thợ Nhật",
         "N-2P = Thi 2 tư thế thường — hơi khó hơn cơ bản",
         "N-2P = Không phá hủy, kiểm tra 2 điểm",
         "N-2P = Khe hẹp, quy trình 2 lượt — kỹ thuật hàn nhanh",
       ],
-      exp: "N-2P = thép mềm (N) ống (P) mọi tư thế. Một ống cố định nằm ngang được hàn liên tục qua cả bốn tư thế: bằng ở đỉnh, đứng ở cạnh, trần ở đáy — tất cả trong một lượt. Lượt chân (初層) phải hoàn hảo để bọng ngược ngấu hoàn toàn (裏波). Được coi là chứng chỉ JIS khó và danh giá nhất. Được nể trọng rộng rãi trong ngành Nhật. 🇯🇵 MẸO: Ở Nhật, thợ có N-2P được nể thật sự trên công trường. Đàn anh có thể nói 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / người đó có N-2P) như một dấu hiệu ưu tú. Nếu đậu N-2P, ghi nó vào lịch sử làm việc (職歴) là phù hợp — nó lập tức làm bạn nổi bật trong thị trường việc hàn cạnh tranh của Nhật.",
+      exp: "N-2P = không tấm lót (N), ống thành trung bình (2), ống (P). Ống được cố định nằm ngang và thẳng đứng nên mối hàn đi qua mọi tư thế: bằng ở đỉnh, đứng ở cạnh, trần ở đáy. Lượt chân (初層) phải hoàn hảo để bọng ngược ngấu hoàn toàn (裏波). Được coi là chứng chỉ JIS khó và danh giá nhất. Được nể trọng rộng rãi trong ngành Nhật. 🇯🇵 MẸO: Ở Nhật, thợ có N-2P được nể thật sự trên công trường. Đàn anh có thể nói 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / người đó có N-2P) như một dấu hiệu ưu tú. Nếu đậu N-2P, ghi nó vào lịch sử làm việc (職歴) là phù hợp — nó lập tức làm bạn nổi bật trong thị trường việc hàn cạnh tranh của Nhật.",
     },
     id: {
       q: "Apa itu 'N-2P' dalam sertifikasi JIS dan mengapa dianggap paling bergengsi?",
       opts: [
-        "N-2P = Baja lunak, pipa, semua posisi — mengelas pipa tetap horizontal di semua posisi (datar + tegak + overhead) dalam satu uji. Tingkat lulus ~30%. Standar emas tukang las Jepang",
+        "N-2P = Tanpa pelat penahan, pipa dinding sedang, pipa tetap — pipa dipasang tetap horizontal dan vertikal sehingga dilas di semua posisi (datar + tegak + overhead). Standar emas tukang las Jepang",
         "N-2P = Uji 2-posisi biasa — sedikit lebih sulit dari dasar",
         "N-2P = Non-destruktif, inspeksi 2-titik",
         "N-2P = Celah sempit, proses 2-pass — teknik las cepat",
       ],
-      exp: "N-2P = baja lunak (N) pipa (P) semua posisi. Pipa tetap horizontal dilas menerus melalui keempat posisi: datar di atas, tegak di sisi, overhead di bawah — semua dalam satu jalur. Root pass (初層) harus dieksekusi sempurna untuk penetrasi back bead lengkap (裏波). Dianggap sertifikasi JIS tersulit dan paling bergengsi. Dihormati luas di industri Jepang. 🇯🇵 TIPS: Di Jepang, tukang yang memegang N-2P diperlakukan dengan hormat tulus di lokasi. Pekerja senior mungkin berkata 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / orang itu memegang N-2P) sebagai tanda kehormatan. Jika Anda lulus N-2P, pantas mencantumkannya di riwayat kerja (職歴) — itu langsung membuat Anda menonjol di pasar kerja las Jepang yang kompetitif.",
+      exp: "N-2P = tanpa pelat penahan (N), pipa dinding sedang (2), pipa (P). Pipa dipasang tetap horizontal dan vertikal sehingga las melewati semua posisi: datar di atas, tegak di sisi, overhead di bawah. Root pass (初層) harus dieksekusi sempurna untuk penetrasi back bead lengkap (裏波). Dianggap sertifikasi JIS tersulit dan paling bergengsi. Dihormati luas di industri Jepang. 🇯🇵 TIPS: Di Jepang, tukang yang memegang N-2P diperlakukan dengan hormat tulus di lokasi. Pekerja senior mungkin berkata 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / orang itu memegang N-2P) sebagai tanda kehormatan. Jika Anda lulus N-2P, pantas mencantumkannya di riwayat kerja (職歴) — itu langsung membuat Anda menonjol di pasar kerja las Jepang yang kompetitif.",
     },
   },
   505: {
@@ -2432,20 +2432,20 @@ export const Q_I18N = {
       opts: [
         "AW = Hàn tự động — cho người vận hành robot hàn",
         "AW = Hàn hồ quang — chứng chỉ hàn chung cho mọi ngành",
-        "AW = Hàn kết cấu kiến trúc (建築鉄骨溶接技量検定) — chứng chỉ hàn thép kết cấu trong tòa nhà. Chỉ có hiệu lực 1 năm — phải gia hạn hằng năm",
+        "AW = Hàn kết cấu kiến trúc (建築鉄骨溶接技量検定) — chứng chỉ hàn thép kết cấu trong tòa nhà. Hiệu lực 1 năm từ 1/4, có thể gia hạn tối đa 2 lần bằng đơn đăng ký",
         "AW = Hàn nhôm — cho ứng dụng hàng không",
       ],
-      exp: "AW Kentei (AW検定) = Chứng chỉ Hàn Kiến trúc (建築鉄骨溶接技量検定). Chuyên cho chế tạo thép kết cấu trong tòa nhà. Do Hiệp hội AW Kentei quản lý. Thi mỗi năm một lần (tháng 6–9). Hiệu lực: chỉ 1 năm — phải gia hạn mỗi năm. Gồm: hàn nhà máy, hàn hiện trường, hàn ống và người vận hành robot hàn. 🇯🇵 MẸO: AW Kentei là chuẩn cho ai xây nhà khung thép (鉄骨造) ở Nhật. Vì chỉ hiệu lực 1 năm và thi mỗi năm một lần, bỏ lỡ cửa sổ gia hạn có thể mất cả năm đủ điều kiện. Nhà thầu xây dựng Nhật giữ danh sách nghiêm ngặt thợ có AW cho mỗi dự án — thẻ AW của bạn bị kiểm trước mỗi mối quan trọng. Nếu làm xây dựng, AW Kentei quan trọng ngang JIS.",
+      exp: "AW Kentei (AW検定) = Chứng chỉ Hàn Kiến trúc (建築鉄骨溶接技量検定). Chuyên cho chế tạo thép kết cấu trong tòa nhà. Do Hiệp hội AW Kentei quản lý. Hiệu lực: 1 năm từ 1/4; nếu đủ điều kiện có thể gia hạn bằng đơn tối đa 2 lần (tối đa 3 năm). Hàn nhà máy gồm: S (ngấu hoàn toàn, tab thép), A (mối hàn góc), S-C (ngấu hoàn toàn, tab thay thế — cần có S). Ngoài ra: hàn hiện trường, hàn ống, vận hành robot hàn. 🇯🇵 MẸO: AW Kentei là chuẩn cho ai xây nhà khung thép (鉄骨造) ở Nhật. Hãy theo dõi hạn gia hạn — khi đã dùng hết số lần gia hạn thì phải thi lại. Nhà thầu xây dựng Nhật giữ danh sách nghiêm ngặt thợ có AW cho mỗi dự án — thẻ AW của bạn bị kiểm trước mỗi mối quan trọng. Nếu làm xây dựng, AW Kentei quan trọng ngang JIS.",
     },
     id: {
       q: "Apa itu 'AW Kentei' (AW検定) dan untuk industri apa?",
       opts: [
         "AW = Las Otomatis — untuk operator las robotik",
         "AW = Las Busur — sertifikasi las umum untuk semua industri",
-        "AW = Las Arsitektur (建築鉄骨溶接技量検定) — sertifikasi untuk las baja struktur pada bangunan. Hanya berlaku 1 tahun — harus diperbarui tiap tahun",
+        "AW = Las Arsitektur (建築鉄骨溶接技量検定) — sertifikasi untuk las baja struktur pada bangunan. Berlaku 1 tahun sejak 1 April, bisa diperpanjang maksimal 2 kali dengan permohonan",
         "AW = Las Aluminium — untuk aplikasi kedirgantaraan",
       ],
-      exp: "AW Kentei (AW検定) = Sertifikasi Las Arsitektur (建築鉄骨溶接技量検定). Khusus untuk fabrikasi baja struktur pada bangunan. Dikelola oleh Asosiasi AW Kentei. Uji sekali per tahun (Juni–September). Berlaku: hanya 1 tahun — harus diperbarui tiap tahun. Mencakup: las pabrik, las lapangan, las pipa, dan kategori operator las robot. 🇯🇵 TIPS: AW Kentei adalah standar bagi siapa pun yang membangun gedung rangka baja (鉄骨造) di Jepang. Karena hanya berlaku 1 tahun dan diuji setahun sekali, melewatkan jendela pembaruan bisa membuat Anda kehilangan kelayakan satu tahun penuh. Kontraktor bangunan Jepang menyimpan daftar ketat tukang bersertifikat AW untuk tiap proyek — kartu AW Anda diperiksa sebelum tiap penugasan sambungan kritis. Jika Anda bekerja di konstruksi, AW Kentei sama pentingnya dengan JIS.",
+      exp: "AW Kentei (AW検定) = Sertifikasi Las Arsitektur (建築鉄骨溶接技量検定). Khusus untuk fabrikasi baja struktur pada bangunan. Dikelola oleh Asosiasi AW Kentei. Berlaku: 1 tahun sejak 1 April; jika memenuhi syarat bisa diperpanjang dengan permohonan maksimal 2 kali (maks. 3 tahun). Las pabrik: S (penetrasi penuh, end tab baja), A (las sudut), S-C (penetrasi penuh, end tab pengganti — perlu S). Lainnya: las lapangan, las pipa, operator las robot. 🇯🇵 TIPS: AW Kentei adalah standar bagi siapa pun yang membangun gedung rangka baja (鉄骨造) di Jepang. Pantau batas waktu perpanjangan — setelah jatah perpanjangan habis, Anda harus ujian lagi. Kontraktor bangunan Jepang menyimpan daftar ketat tukang bersertifikat AW untuk tiap proyek — kartu AW Anda diperiksa sebelum tiap penugasan sambungan kritis. Jika Anda bekerja di konstruksi, AW Kentei sama pentingnya dengan JIS.",
     },
   },
   507: {
@@ -2457,7 +2457,7 @@ export const Q_I18N = {
         "Chỉ hàn ống — không hàn tấm phẳng",
         "Chỉ hàn bộ phận nồi hơi và bình áp lực đến tấm dày 25mm. Với 25mm+ = phải có Tokubetsu-Boilaa (特別ボイラー溶接士)",
       ],
-      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Thợ hàn nồi hơi thường. Có thể hàn bộ phận nồi hơi và bình áp lực đến tấm dày 25mm. Với tấm TRÊN 25mm, cần cấp Đặc biệt (特別). Giấy phép nhà nước — bắt buộc theo luật. Thi thực hành: mối rãnh ngang, 60 phút. NDT: cần RT + thử uốn. 🇯🇵 MẸO: Giấy phép nhà nước Thợ hàn nồi hơi (ボイラー溶接士 / thi quốc gia, không phải JWES) do Bộ Y tế, Lao động và Phúc lợi cấp và quản lý qua JISHA (中央労働災害防止協会). Là chứng chỉ quốc gia — không giống JIS. Nếu làm nồi hơi, bình áp lực hay ống nhà máy hóa chất ở Nhật, bạn sẽ cần giấy phép này. Thi cần đậu cả bài lý thuyết LẪN thực hành — bắt đầu học luật (ボイラー及び圧力容器安全規則) song song với kỹ năng thực hành.",
+      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Thợ hàn nồi hơi thường. Có thể hàn bộ phận nồi hơi và bình áp lực đến tấm dày 25mm. Với tấm TRÊN 25mm, cần cấp Đặc biệt (特別). Giấy phép nhà nước — bắt buộc theo luật. Thi thực hành: mối giáp mép tư thế bằng (下向き) và đứng (立向き) trên tấm 9mm, 1 giờ. Đậu/rớt dựa vào thử uốn mặt sau — mọi mẫu phải đạt. (Tư thế ngang, tấm 25mm, uốn cạnh là bài thi cấp Đặc biệt — đừng nhầm.) 🇯🇵 MẸO: Giấy phép nhà nước Thợ hàn nồi hơi (ボイラー溶接士 / thi quốc gia, không phải JWES) do Bộ Y tế, Lao động và Phúc lợi cấp; kỳ thi do Hiệp hội Thi An toàn và Vệ sinh Lao động (安全衛生技術試験協会) tổ chức. Là chứng chỉ quốc gia — không giống JIS. Nếu làm nồi hơi, bình áp lực hay ống nhà máy hóa chất ở Nhật, bạn sẽ cần giấy phép này. Thi cần đậu cả bài lý thuyết LẪN thực hành — bắt đầu học luật (ボイラー及び圧力容器安全規則) song song với kỹ năng thực hành.",
     },
     id: {
       q: "Apa yang bisa dilas 'Futsuu-Boilaa-Yosetsu-shi' (普通ボイラー溶接士) — dan apa batasan tebal pelat kuncinya?",
@@ -2467,7 +2467,7 @@ export const Q_I18N = {
         "Hanya bisa mengelas pipa — bukan pelat datar",
         "Bisa mengelas bagian boiler dan bejana tekan hingga tebal pelat 25mm saja. Untuk 25mm+ = harus punya Tokubetsu-Boilaa (特別ボイラー溶接士)",
       ],
-      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Tukang Las Boiler Standar. Bisa mengelas komponen boiler dan bejana tekan hingga tebal pelat 25mm. Untuk pelat DI ATAS 25mm, diperlukan grade Tokubetsu (特別). Lisensi nasional — wajib hukum. Uji praktik: las alur mendatar, 60 menit. NDT: RT + uji tekuk diperlukan. 🇯🇵 TIPS: Lisensi nasional Tukang Las Boiler (ボイラー溶接士 / ujian nasional, bukan JWES) diterbitkan Kementerian Kesehatan, Tenaga Kerja, dan Kesejahteraan serta dikelola melalui JISHA (中央労働災害防止協会). Ini kualifikasi nasional — tak sama dengan JIS. Jika Anda bekerja pada boiler, bejana tekan, atau pipa pabrik kimia di Jepang, Anda akan membutuhkan lisensi ini. Ujian mensyaratkan lulus uji pengetahuan tertulis DAN uji praktik — mulailah belajar hukum (ボイラー及び圧力容器安全規則) bersama keterampilan praktik Anda.",
+      exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Tukang Las Boiler Standar. Bisa mengelas komponen boiler dan bejana tekan hingga tebal pelat 25mm. Untuk pelat DI ATAS 25mm, diperlukan grade Tokubetsu (特別). Lisensi nasional — wajib hukum. Uji praktik: las tumpul posisi datar (下向き) dan tegak (立向き) pada pelat 9mm, 1 jam. Lulus/gagal dinilai dengan uji tekuk sisi akar — semua spesimen harus lulus. (Posisi mendatar, pelat 25mm, dan tekuk sisi adalah uji grade Tokubetsu — jangan tertukar.) 🇯🇵 TIPS: Lisensi nasional Tukang Las Boiler (ボイラー溶接士 / ujian nasional, bukan JWES) diterbitkan di bawah Kementerian Kesehatan, Tenaga Kerja, dan Kesejahteraan; ujiannya diselenggarakan oleh Asosiasi Ujian Keselamatan dan Kesehatan Kerja Jepang (安全衛生技術試験協会). Ini kualifikasi nasional — tak sama dengan JIS. Jika Anda bekerja pada boiler, bejana tekan, atau pipa pabrik kimia di Jepang, Anda akan membutuhkan lisensi ini. Ujian mensyaratkan lulus uji pengetahuan tertulis DAN uji praktik — mulailah belajar hukum (ボイラー及び圧力容器安全規則) bersama keterampilan praktik Anda.",
     },
   },
   508: {

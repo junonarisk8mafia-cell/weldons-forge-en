@@ -896,7 +896,7 @@ export const QUIZ_STAGES = [
           "F = Forward (direction of welding)"
         ],
         a: 1, xp: 20,
-        exp: "In JIS certification test codes: F = Flat (下向き), H = Horizontal (横向き), V = Vertical (立向き), O = Overhead (上向き). Example: N-2F = mild steel (N), plate groove weld (2), flat position (F). N-2P = mild steel (N), pipe weld (P in all positions). These codes appear on your qualification certificate. 🇯🇵 TIP: When applying for work in Japan, bring your actual JIS certificate card (資格証 / shikaku-sho) — not just a photocopy. Employers want to see the original and will check the expiry date. If yours is about to expire, renew BEFORE applying — an expired certificate is treated the same as no certificate."
+        exp: "In JIS certification test codes: F = Flat (下向き), H = Horizontal (横向き), V = Vertical (立向き), O = Overhead (上向き). Example: N-2F = no backing plate (N), medium plate 9mm (2), flat position (F). N-2P = no backing plate (N), medium-wall fixed pipe (P — all positions). These codes appear on your qualification certificate. 🇯🇵 TIP: When applying for work in Japan, bring your actual JIS certificate card (資格証 / shikaku-sho) — not just a photocopy. Employers want to see the original and will check the expiry date. If yours is about to expire, renew BEFORE applying — an expired certificate is treated the same as no certificate."
       },
       {
         id: 306, cat: "Joint Types",
@@ -1375,22 +1375,22 @@ export const QUIZ_STAGES = [
           "N = No groove, 2 = 2mm plate thickness, F = Final pass only",
           "N = Non-ferrous, 2 = Two-pass weld, F = FCAW process",
           "N = Nickel-alloy steel, 2 = Plate groove weld, F = Flat position",
-          "N = Mild steel (軟鋼), 2 = Plate groove weld (厚板突合せ), F = Flat position (下向き). A basic flat position groove weld on mild steel plate"
+          "N = No backing plate (裏当て金なし), 2 = Medium plate, 9mm (中板), F = Flat position (下向き). A flat-position groove weld without a backing plate"
         ],
         a: 3, xp: 25,
-        exp: "JIS test code N-2F: N = 軟鋼 (Nankoo = mild steel), 2 = 厚板突合せ (plate groove weld), F = 下向き (flat position). Other common codes: N-2H (horizontal), N-2V (vertical), N-2O (overhead), N-2P (pipe, all positions — the hardest). The code tells you exactly what test you passed. 🇯🇵 TIP: When Japanese welders introduce themselves professionally, they often state their JIS codes: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / I hold N-2F and N-2V). This immediately communicates your capability to any Japanese supervisor. Memorize your own codes and use them confidently — it shows you understand the Japanese qualification system."
+        exp: "JIS test code N-2F (JIS Z 3801, manual arc welding): N = 裏当て金なし (no backing plate — A = with backing), 2 = 中板 (medium plate, 9mm — 1 = thin, 3 = thick), F = 下向き (flat position). Other common codes: N-2H (horizontal), N-2V (vertical), N-2O (overhead), N-2P (pipe, all positions — the hardest). The code tells you exactly what test you passed. 🇯🇵 TIP: When Japanese welders introduce themselves professionally, they often state their JIS codes: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / I hold N-2F and N-2V). This immediately communicates your capability to any Japanese supervisor. Memorize your own codes and use them confidently — it shows you understand the Japanese qualification system."
       },
       {
         id: 504, cat: "Certifications",
         q: "What is 'N-2P' in JIS certification and why is it considered the most prestigious?",
         opts: [
-          "N-2P = Mild steel, pipe, all positions — welding a horizontal fixed pipe in all positions (flat + vertical + overhead) in one test. Pass rate ~30%. The gold standard for Japanese welders",
+          "N-2P = No backing plate, medium-wall pipe, fixed pipe — the pipe is fixed horizontally and vertically, so you weld in all positions (flat + vertical + overhead). The gold standard for Japanese welders",
           "N-2P = Normal 2-position test — slightly harder than basic",
           "N-2P = Non-destructive, 2-point inspection",
           "N-2P = Narrow gap, 2-pass process — a fast welding technique"
         ],
         a: 0, xp: 30,
-        exp: "N-2P = mild steel (N) pipe (P) in all positions. A horizontal fixed pipe is welded continuously through all four positions: flat at top, vertical on sides, overhead at bottom — all in one pass. The root pass (初層) must be perfectly executed for complete back bead penetration (裏波). Considered the most difficult and prestigious JIS certification. Widely respected in Japanese industry. 🇯🇵 TIP: In Japan, a welder who holds N-2P is treated with genuine respect on site. Senior workers may say 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / that person holds N-2P) as a mark of distinction. If you pass N-2P, it is appropriate to mention it on your work history (職歴 / shokureki) — it will immediately set you apart from other applicants in Japan's competitive welding job market."
+        exp: "N-2P = no backing plate (N), medium-wall pipe (2), pipe (P). The pipe is fixed horizontally and vertically, so the weld goes through every position: flat at top, vertical on the sides, overhead at the bottom. The root pass (初層) must be perfectly executed for complete back bead penetration (裏波). Considered the most difficult and prestigious JIS certification. Widely respected in Japanese industry. 🇯🇵 TIP: In Japan, a welder who holds N-2P is treated with genuine respect on site. Senior workers may say 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / that person holds N-2P) as a mark of distinction. If you pass N-2P, it is appropriate to mention it on your work history (職歴 / shokureki) — it will immediately set you apart from other applicants in Japan's competitive welding job market."
       },
       {
         id: 505, cat: "Certifications",
@@ -1410,11 +1410,11 @@ export const QUIZ_STAGES = [
         opts: [
           "AW = Automated Welding — for robotic welding operators",
           "AW = Arc Welding — a general welding certification for all industries",
-          "AW = Architectural Welding (建築鉄骨溶接技量検定) — the certification for structural steel welding in buildings. Only valid for 1 year — must be renewed annually",
+          "AW = Architectural Welding (建築鉄骨溶接技量検定) — the certification for structural steel welding in buildings. Valid 1 year from April 1, renewable up to 2 times by application",
           "AW = Aluminum Welding — for aerospace applications"
         ],
         a: 2, xp: 25,
-        exp: "AW Kentei (AW検定) = Architectural Welding certification (建築鉄骨溶接技量検定). Specifically for structural steel fabrication in buildings. Managed by the AW Kentei Association. Test once per year (June–September). Validity: 1 year only — must renew every year. Includes: factory welding, field welding, pipe welding, and robot welding operator categories. 🇯🇵 TIP: AW Kentei is the standard for anyone building steel-frame buildings (鉄骨造 / teppukutsukuri) in Japan. Because it is only valid 1 year and tested once annually, missing the renewal window can cost you an entire year of eligibility. Japanese building contractors keep a strict roster of AW-certified welders for each project — your AW card is checked before every critical joint assignment. If you work in construction, AW Kentei is just as important as JIS."
+        exp: "AW Kentei (AW検定) = Architectural Welding certification (建築鉄骨溶接技量検定). Specifically for structural steel fabrication in buildings. Managed by the AW Kentei Association. Validity: 1 year from April 1; if you meet the requirements you can renew by application up to 2 times (max 3 years). Factory welding categories: S (complete penetration, steel end tabs), A (fillet weld), S-C (complete penetration, substitute end tabs — requires S). Other categories: field welding, pipe welding, robot welding operator. 🇯🇵 TIP: AW Kentei is the standard for anyone building steel-frame buildings (鉄骨造 / teppukutsukuri) in Japan. Track your renewal deadline — after the renewals are used up you must take the test again. Japanese building contractors keep a strict roster of AW-certified welders for each project — your AW card is checked before every critical joint assignment. If you work in construction, AW Kentei is just as important as JIS."
       },
       {
         id: 507, cat: "Certifications",
@@ -1426,7 +1426,7 @@ export const QUIZ_STAGES = [
           "Can weld boiler and pressure vessel parts up to 25mm plate thickness only. For 25mm+ = must have Tokubetsu-Boilaa (特別ボイラー溶接士)"
         ],
         a: 3, xp: 25,
-        exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Standard Boiler Welder. Can weld boiler and pressure vessel components up to 25mm plate thickness. For plates OVER 25mm, the Tokubetsu (特別) grade is required. National license — legally mandatory. Practical test: horizontal groove weld, 60 minutes. NDT: RT + bend test required. 🇯🇵 TIP: The Boiler Welder national license (ボイラー溶接士 / national exam, not JWES) is issued by the Ministry of Health, Labour and Welfare and managed through JISHA (中央労働災害防止協会). It is a national qualification — not the same as JIS. If you work on boilers, pressure vessels, or chemical plant piping in Japan, you will need this license. The exam requires passing both a written knowledge test AND a practical test — start studying the law (ボイラー及び圧力容器安全規則) alongside your practical skills."
+        exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Standard Boiler Welder. Can weld boiler and pressure vessel components up to 25mm plate thickness. For plates OVER 25mm, the Tokubetsu (特別) grade is required. National license — legally mandatory. Practical test: flat (下向き) and vertical (立向き) butt welds on 9mm plate, 1 hour. Pass/fail is judged by root-bend tests — every specimen must pass. (Horizontal, 25mm plate and side-bend is the Tokubetsu test — don't mix them up.) 🇯🇵 TIP: The Boiler Welder national license (ボイラー溶接士 / national exam, not JWES) is issued under the Ministry of Health, Labour and Welfare; the exam is run by the Japan Safety and Health Examination Association (安全衛生技術試験協会). It is a national qualification — not the same as JIS. If you work on boilers, pressure vessels, or chemical plant piping in Japan, you will need this license. The exam requires passing both a written knowledge test AND a practical test — start studying the law (ボイラー及び圧力容器安全規則) alongside your practical skills."
       },
       {
         id: 508, cat: "Certifications",
