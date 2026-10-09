@@ -1394,7 +1394,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 505, cat: "Certifications",
-        q: "JIS welding certification expires every 2 years. What happens if you do NOT renew before expiration?",
+        q: "A JIS welder certificate is valid for 1 year at a time. What happens if you do NOT renew it before it expires?",
         opts: [
           "You pay a small fine but continue working",
           "Your certification becomes INVALID. You cannot claim JIS certification for work. You must re-test to regain it. Japanese employers check certification dates regularly",
@@ -1402,7 +1402,7 @@ export const QUIZ_STAGES = [
           "Nothing — the certification is valid for life once obtained"
         ],
         a: 1, xp: 20,
-        exp: "JIS welding certification (JIS溶接技能者認証) has a 2-year validity. Before expiry, you must complete renewal testing (更新試験). If expired, the certification is no longer valid — you cannot represent yourself as JIS certified. In Japan, employers and inspectors check certification expiry dates. Renewal is straightforward but must be done on time. 🇯🇵 TIP: Set a calendar reminder 3 months before your JIS expiry date (有効期限 / yuukou-kigen). The renewal test is held periodically — if you miss the renewal window and let your certificate expire, you must re-sit the full test, not just the renewal. JWES publishes test dates on their website. Many Japanese companies will place you on a 'can't work on critical welds' list the moment your certificate expires — even one day matters."
+        exp: "A JIS welder certificate (適格性証明書) is valid for 1 year. To keep it, you apply for surveillance (サーベイランス) within 3 months before it expires — this is done twice (years 2 and 3). After 3 years, you must pass a re-evaluation test (再評価) between 8 and 2 months before expiry. If it expires, the certificate is no longer valid and you cannot claim JIS certification for work. 🇯🇵 TIP: Set a calendar reminder 3 months before your expiry date (有効期限 / yuukou-kigen). Japanese employers and inspectors check expiry dates — even one day late matters. The Japan Welding Engineering Society (JWES) publishes the schedule and online applications (e-Weld)."
       },
       {
         id: 506, cat: "Certifications",

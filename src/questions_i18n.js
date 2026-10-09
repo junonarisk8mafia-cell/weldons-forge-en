@@ -2406,24 +2406,24 @@ export const Q_I18N = {
   },
   505: {
     vi: {
-      q: "Chứng chỉ hàn JIS hết hạn mỗi 2 năm. Điều gì xảy ra nếu bạn KHÔNG gia hạn trước khi hết hạn?",
+      q: "Chứng chỉ thợ hàn JIS có hiệu lực 1 năm mỗi lần. Điều gì xảy ra nếu bạn KHÔNG gia hạn trước khi hết hạn?",
       opts: [
         "Bạn nộp phạt nhỏ nhưng vẫn làm việc tiếp",
         "Chứng chỉ trở nên VÔ HIỆU. Bạn không thể xưng có chứng chỉ JIS cho công việc. Phải thi lại để lấy lại. Chủ Nhật kiểm ngày chứng chỉ thường xuyên",
         "Bạn tự động được ân hạn 6 tháng",
         "Không gì cả — chứng chỉ có hiệu lực suốt đời một khi đã lấy",
       ],
-      exp: "Chứng chỉ hàn JIS (JIS溶接技能者認証) có hiệu lực 2 năm. Trước khi hết hạn, phải hoàn thành thi gia hạn (更新試験). Nếu hết hạn, chứng chỉ không còn hiệu lực — không thể tự xưng là có chứng chỉ JIS. Ở Nhật, chủ và người kiểm tra kiểm ngày hết hạn. Gia hạn đơn giản nhưng phải làm đúng hạn. 🇯🇵 MẸO: Đặt nhắc lịch 3 tháng trước ngày hết hạn JIS (有効期限). Thi gia hạn tổ chức định kỳ — nếu bỏ lỡ cửa sổ gia hạn và để hết hạn, phải thi lại toàn bộ, không chỉ gia hạn. JWES đăng lịch thi trên website. Nhiều công ty Nhật xếp bạn vào danh sách 'không được làm mối quan trọng' ngay khi chứng chỉ hết hạn — kể cả trễ một ngày cũng quan trọng.",
+      exp: "Giấy chứng nhận thợ hàn JIS (適格性証明書) có hiệu lực 1 năm. Để duy trì, bạn nộp đơn kiểm tra giám sát (サーベイランス) trong vòng 3 tháng trước khi hết hạn — làm 2 lần (năm thứ 2 và 3). Sau 3 năm, phải thi đánh giá lại (再評価) trong khoảng 8 đến 2 tháng trước khi hết hạn. Nếu hết hạn, chứng chỉ không còn hiệu lực và bạn không thể xưng là có chứng chỉ JIS. 🇯🇵 MẸO: Đặt nhắc lịch 3 tháng trước ngày hết hạn (有効期限). Chủ và người kiểm tra ở Nhật kiểm ngày hết hạn — trễ một ngày cũng quan trọng. Hiệp hội Kỹ thuật Hàn Nhật Bản (JWES) đăng lịch và nhận đơn trực tuyến (e-Weld).",
     },
     id: {
-      q: "Sertifikasi las JIS kedaluwarsa tiap 2 tahun. Apa yang terjadi jika Anda TIDAK memperbaruinya sebelum kedaluwarsa?",
+      q: "Sertifikat tukang las JIS berlaku 1 tahun per periode. Apa yang terjadi jika Anda TIDAK memperbaruinya sebelum kedaluwarsa?",
       opts: [
         "Anda membayar denda kecil tapi terus bekerja",
         "Sertifikasi Anda menjadi TIDAK BERLAKU. Anda tak bisa mengklaim sertifikasi JIS untuk pekerjaan. Anda harus uji ulang untuk mendapatkannya kembali. Pemberi kerja Jepang memeriksa tanggal sertifikasi secara rutin",
         "Anda otomatis dapat masa tenggang 6 bulan",
         "Tak ada — sertifikasi berlaku seumur hidup begitu diperoleh",
       ],
-      exp: "Sertifikasi las JIS (JIS溶接技能者認証) berlaku 2 tahun. Sebelum kedaluwarsa, Anda harus menyelesaikan uji pembaruan (更新試験). Jika kedaluwarsa, sertifikasi tak lagi berlaku — Anda tak bisa menyatakan diri bersertifikat JIS. Di Jepang, pemberi kerja dan inspektor memeriksa tanggal kedaluwarsa. Pembaruan mudah tapi harus tepat waktu. 🇯🇵 TIPS: Pasang pengingat kalender 3 bulan sebelum tanggal kedaluwarsa JIS (有効期限). Uji pembaruan diadakan berkala — jika Anda melewatkan jendela pembaruan dan membiarkan kedaluwarsa, Anda harus mengikuti uji penuh lagi, bukan hanya pembaruan. JWES menerbitkan tanggal uji di situs mereka. Banyak perusahaan Jepang menempatkan Anda pada daftar 'tak bisa mengerjakan las kritis' begitu sertifikat kedaluwarsa — bahkan satu hari pun penting.",
+      exp: "Sertifikat tukang las JIS (適格性証明書) berlaku 1 tahun. Untuk mempertahankannya, ajukan surveilans (サーベイランス) dalam 3 bulan sebelum kedaluwarsa — dilakukan 2 kali (tahun ke-2 dan ke-3). Setelah 3 tahun, Anda harus lulus uji evaluasi ulang (再評価) antara 8 hingga 2 bulan sebelum kedaluwarsa. Jika kedaluwarsa, sertifikat tidak berlaku dan Anda tidak bisa mengklaim bersertifikat JIS. 🇯🇵 TIPS: Pasang pengingat kalender 3 bulan sebelum tanggal kedaluwarsa (有効期限). Pemberi kerja dan inspektor di Jepang memeriksa tanggal kedaluwarsa — terlambat sehari pun penting. Japan Welding Engineering Society (JWES) menerbitkan jadwal dan pendaftaran online (e-Weld).",
     },
   },
   506: {
