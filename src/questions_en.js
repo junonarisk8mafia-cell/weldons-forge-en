@@ -968,7 +968,7 @@ export const QUIZ_STAGES = [
           "The weld is on the ARROW SIDE — the side the arrow is pointing to"
         ],
         a: 3, xp: 25,
-        exp: "JIS welding symbol rule: Below the reference line = ARROW SIDE (矢側 / やがわ). Above the reference line = OTHER SIDE (反矢側 / はんやがわ). This is the JIS/ISO convention. WARNING: AWS (American) symbols use the OPPOSITE convention — AWS puts arrow-side symbol BELOW too, but definitions can confuse. Always confirm which standard the drawing uses. 🇯🇵 TIP: When you start at a new Japanese company, check the title block of the first drawing you receive — it should state 'JIS' or show 'JIS B 0021.' If the drawing came from an international client (Korean, American shipbuilder), confirm the standard with your QC manager on day one. Wrong side = rework."
+        exp: "JIS welding symbol rule (JIS Z 3021): Below the reference line = ARROW SIDE (矢側 / やがわ). Above the reference line = OTHER SIDE (反矢側 / はんやがわ). AWS A2.4 (USA) uses the same rule — below = arrow side. 🇯🇵 TIP: Some drawings made to ISO 2553 (common in Europe) add a dashed second line under the solid reference line. On those, the side is decided by the line, not by above/below: symbol on the solid line = arrow side, on the dashed line = other side. If you see a dashed line next to the reference line, check with your QC manager before welding."
       },
       {
         id: 312, cat: "JIS Symbols",
@@ -1008,15 +1008,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 315, cat: "JIS Symbols",
-        q: "What is the CRITICAL difference between JIS and AWS welding symbol conventions that can cause serious errors if confused?",
+        q: "Which difference in welding symbol rules can really cause you to weld on the wrong side?",
         opts: [
-          "There is no difference — JIS and AWS symbols are identical",
+          "JIS and AWS put the arrow-side symbol on opposite sides of the reference line",
           "JIS uses metric dimensions, AWS uses imperial — no other difference",
-          "JIS uses solid lines, AWS uses dashed lines for the reference line",
-          "In JIS: below the line = ARROW side. In AWS: below the line = ARROW side too — BUT the 'other side' symbol placement logic is reversed in historical interpretations. Always verify which standard the project follows"
+          "Drawings to ISO 2553 may add a dashed line: a symbol on the solid line = arrow side, on the dashed line = other side. JIS and AWS both use 'below the line = arrow side'",
+          "There is no difference between any welding symbol standards"
         ],
-        a: 3, xp: 30,
-        exp: "This is a critical point. JIS/ISO and AWS use different conventions for arrow-side vs. other-side symbol placement. In Japan, ALL drawings use JIS (or ISO) — if you are used to AWS drawings (used in USA, Australia, etc.), verify the standard at the start of every project. Mis-reading a symbol = welding on the wrong side = rework or structural failure. 🇯🇵 TIP: Korean shipyards (Hyundai, Samsung, DSME) working with Japanese companies sometimes submit AWS-standard drawings — this has caused real rework incidents in Japanese yards. If you see 'AWS D1.1' or 'ASME' in the drawing title block, alert your supervisor immediately before welding anything."
+        a: 2, xp: 30,
+        exp: "JIS Z 3021 and AWS A2.4 use the same rule: symbol below the reference line = arrow side, above = other side. The real trap is ISO 2553 drawings (common in Europe) that use a dashed second line: there, the solid line = arrow side and the dashed line = other side, whatever is on top. Misreading it = welding on the wrong side = rework. 🇯🇵 TIP: Check the standard in the drawing's title block. If you see a dashed line beside the reference line, confirm with your supervisor before welding."
       },
       {
         id: 316, cat: "Joint Types",
@@ -1683,15 +1683,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 608, cat: "International Codes",
-        q: "A key difference between AWS and JIS/ISO welding symbols that causes real errors is what?",
+        q: "On AWS (A2.4) welding symbols, what does a symbol placed BELOW the reference line mean — and is it the same in JIS?",
         opts: [
           "AWS drawings never use welding symbols",
-          "The arrow-side vs other-side symbol placement convention differs — a symbol below the reference line does not mean the same thing in both systems, so always confirm which standard a drawing uses",
-          "JIS only uses imperial units",
-          "There is no difference at all"
+          "Below the line = arrow side in AWS, and JIS uses the same rule — so the real thing to watch for is ISO 2553 drawings with a dashed second line",
+          "Below the line = other side in AWS, the opposite of JIS",
+          "Below the line means a field weld in AWS"
         ],
         a: 1, xp: 30,
-        exp: "JIS/ISO (ISO 2553, JIS B 0021) and AWS (A2.4) handle arrow-side / other-side symbol placement differently; misreading it means welding on the wrong side. Always check the drawing's title block for the standard. 🌍 TIP: Korean- and US-led projects supplying drawings to Japanese yards have caused real rework from exactly this confusion — flag any non-JIS drawing to your supervisor on day one, before welding anything."
+        exp: "AWS A2.4 and JIS Z 3021 agree: below the reference line = arrow side, above = other side. Drawings to ISO 2553 may use a dashed second line, where the solid line = arrow side and the dashed line = other side. 🌍 TIP: On international projects, check the drawing standard in the title block before welding, and ask if you see a dashed line beside the reference line."
       },
       {
         id: 609, cat: "International Certs",

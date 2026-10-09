@@ -1656,7 +1656,7 @@ export const Q_I18N = {
       exp: "Ruuto-gyappu (ルートギャップ) = Root gap / bukaan akar. Ruang terkendali antara tepi pelat di akar alur. Terlalu sempit (< spek): busur tak mencapai akar, menyebabkan kurang penetrasi (溶込不良). Terlalu lebar (> spek): tembus bakar (溶落ち). Ditetapkan pada gambar — ukur dengan gap gauge sebelum mengelas. 🇯🇵 TIPS: Lokasi Jepang memakai 隙間ゲージ (sukima-geeji / set feeler gauge) atau gap gauge khusus untuk memeriksanya sebelum tiap las. Rentang yang dapat diterima biasanya ±0.5mm dari spek. Jangan mengira-ngira — celah yang tampak benar sering tidak, dan biaya menyesuaikan sebelum mengelas jauh lebih rendah daripada hatsuri dan mengulang setelahnya.",
     },
   },
-  311: {
+311: {
     vi: {
       q: "Trên bản vẽ JIS, ký hiệu hàn đặt DƯỚI đường chuẩn. Điều này chỉ gì?",
       opts: [
@@ -1665,7 +1665,7 @@ export const Q_I18N = {
         "Mối hàn ở CẢ HAI phía",
         "Mối hàn ở PHÍA MŨI TÊN — phía mũi tên đang chỉ tới",
       ],
-      exp: "Quy tắc ký hiệu hàn JIS: Dưới đường chuẩn = PHÍA MŨI TÊN (矢側 / yagawa). Trên đường chuẩn = PHÍA ĐỐI DIỆN (反矢側 / hanyagawa). Đây là quy ước JIS/ISO. CẢNH BÁO: Ký hiệu AWS (Mỹ) dùng quy ước NGƯỢC lại — luôn xác nhận bản vẽ theo tiêu chuẩn nào. 🇯🇵 MẸO: Khi vào công ty Nhật mới, kiểm ô tiêu đề của bản vẽ đầu tiên bạn nhận — nó phải ghi 'JIS' hoặc 'JIS B 0021'. Nếu bản vẽ từ khách quốc tế (đóng tàu Hàn, Mỹ), xác nhận tiêu chuẩn với quản lý QC ngày đầu. Sai phía = làm lại.",
+      exp: "Quy tắc ký hiệu hàn JIS (JIS Z 3021): Dưới đường chuẩn = PHÍA MŨI TÊN (矢側 / yagawa). Trên đường chuẩn = PHÍA ĐỐI DIỆN (反矢側 / hanyagawa). AWS A2.4 (Mỹ) cũng dùng cùng quy tắc — dưới = phía mũi tên. 🇯🇵 MẸO: Một số bản vẽ theo ISO 2553 (phổ biến ở châu Âu) có thêm một đường nét đứt dưới đường chuẩn nét liền. Khi đó phía hàn được xác định theo đường, không theo trên/dưới: ký hiệu trên đường nét liền = phía mũi tên, trên đường nét đứt = phía đối diện. Nếu thấy đường nét đứt, hãy hỏi quản lý QC trước khi hàn.",
     },
     id: {
       q: "Pada gambar JIS, simbol las diletakkan DI BAWAH garis referensi. Apa artinya?",
@@ -1675,7 +1675,7 @@ export const Q_I18N = {
         "Las berada di KEDUA sisi",
         "Las di SISI PANAH — sisi yang ditunjuk panah",
       ],
-      exp: "Aturan simbol las JIS: Di bawah garis referensi = SISI PANAH (矢側 / yagawa). Di atas garis referensi = SISI LAIN (反矢側 / hanyagawa). Ini konvensi JIS/ISO. PERINGATAN: Simbol AWS (Amerika) memakai konvensi BERLAWANAN — selalu pastikan gambar mengikuti standar mana. 🇯🇵 TIPS: Saat masuk perusahaan Jepang baru, periksa blok judul gambar pertama yang Anda terima — harus tertera 'JIS' atau 'JIS B 0021'. Jika gambar dari klien internasional (galangan Korea, Amerika), konfirmasi standar dengan manajer QC di hari pertama. Salah sisi = rework.",
+      exp: "Aturan simbol las JIS (JIS Z 3021): Di bawah garis referensi = SISI PANAH (矢側 / yagawa). Di atas garis referensi = SISI LAIN (反矢側 / hanyagawa). AWS A2.4 (Amerika) memakai aturan yang sama — di bawah = sisi panah. 🇯🇵 TIPS: Sebagian gambar menurut ISO 2553 (umum di Eropa) menambahkan garis putus-putus di bawah garis referensi solid. Pada gambar itu, sisi ditentukan oleh garisnya, bukan atas/bawah: simbol di garis solid = sisi panah, di garis putus-putus = sisi lain. Jika melihat garis putus-putus, tanyakan manajer QC sebelum mengelas.",
     },
   },
   312: {
@@ -1744,26 +1744,26 @@ export const Q_I18N = {
       exp: "Tanda bendera (旗マーク) = Simbol las lapangan (現場溶接記号). Las ini TIDAK dikerjakan di pabrik — dilakukan di lokasi konstruksi/pemasangan nyata setelah bagian prafabrikasi dirakit di tempat. Penting untuk perencanaan: las lapangan berkondisi lebih menantang (cuaca, posisi, akses) daripada las pabrik. 🇯🇵 TIPS: Las lapangan (現場溶接) di Jepang memerlukan dokumen perencanaan tambahan (施工計画書 / shiko-keikakusho). Angin, kelembapan, dan suhu semua memengaruhi mutu — hujan atau angin kencang (風速10m/s以上) secara hukum mewajibkan menghentikan las luar ruangan. Selalu periksa prakiraan cuaca dan kondisi lokasi sebelum berangkat kerja las lapangan.",
     },
   },
-  315: {
+315: {
     vi: {
-      q: "Khác biệt QUAN TRỌNG giữa quy ước ký hiệu hàn JIS và AWS có thể gây lỗi nghiêm trọng nếu nhầm là gì?",
+      q: "Khác biệt nào trong quy tắc ký hiệu hàn thực sự có thể khiến bạn hàn sai phía?",
       opts: [
-        "Không có khác biệt — ký hiệu JIS và AWS giống hệt",
+        "JIS và AWS đặt ký hiệu phía mũi tên ở hai phía ngược nhau của đường chuẩn",
         "JIS dùng hệ mét, AWS dùng hệ inch — không khác gì thêm",
-        "JIS dùng nét liền, AWS dùng nét đứt cho đường chuẩn",
-        "Trong JIS: dưới đường = phía MŨI TÊN. Trong AWS: dưới đường cũng là phía mũi tên — NHƯNG logic đặt ký hiệu 'phía đối diện' bị đảo trong các diễn giải lịch sử. Luôn xác nhận dự án theo tiêu chuẩn nào",
+        "Bản vẽ theo ISO 2553 có thể thêm đường nét đứt: ký hiệu trên đường nét liền = phía mũi tên, trên đường nét đứt = phía đối diện. JIS và AWS đều dùng 'dưới đường = phía mũi tên'",
+        "Không có khác biệt nào giữa các tiêu chuẩn ký hiệu hàn",
       ],
-      exp: "Đây là điểm then chốt. JIS/ISO và AWS dùng quy ước khác nhau cho vị trí ký hiệu phía mũi tên so với phía đối diện. Ở Nhật, MỌI bản vẽ dùng JIS (hoặc ISO) — nếu bạn quen bản vẽ AWS (dùng ở Mỹ, Úc...), xác nhận tiêu chuẩn ở đầu mỗi dự án. Đọc sai ký hiệu = hàn sai phía = làm lại hoặc hỏng kết cấu. 🇯🇵 MẸO: Xưởng đóng tàu Hàn (Hyundai, Samsung, DSME) làm việc với công ty Nhật đôi khi nộp bản vẽ chuẩn AWS — đã gây sự cố làm lại thật ở các xưởng Nhật. Nếu thấy 'AWS D1.1' hoặc 'ASME' trong ô tiêu đề, báo giám sát ngay trước khi hàn bất cứ gì.",
+      exp: "JIS Z 3021 và AWS A2.4 dùng cùng quy tắc: ký hiệu dưới đường chuẩn = phía mũi tên, trên = phía đối diện. Cái bẫy thật là bản vẽ ISO 2553 (phổ biến ở châu Âu) có đường nét đứt thứ hai: đường nét liền = phía mũi tên, đường nét đứt = phía đối diện, bất kể cái nào ở trên. Đọc sai = hàn sai phía = làm lại. 🇯🇵 MẸO: Kiểm tiêu chuẩn trong ô tiêu đề bản vẽ. Nếu thấy đường nét đứt cạnh đường chuẩn, xác nhận với giám sát trước khi hàn.",
     },
     id: {
-      q: "Apa perbedaan KRITIS antara konvensi simbol las JIS dan AWS yang bisa menyebabkan kesalahan serius jika tertukar?",
+      q: "Perbedaan aturan simbol las mana yang benar-benar bisa membuat Anda mengelas di sisi yang salah?",
       opts: [
-        "Tak ada beda — simbol JIS dan AWS identik",
+        "JIS dan AWS menaruh simbol sisi panah di sisi berlawanan dari garis referensi",
         "JIS memakai dimensi metrik, AWS imperial — tak ada beda lain",
-        "JIS memakai garis solid, AWS garis putus untuk garis referensi",
-        "Dalam JIS: di bawah garis = sisi PANAH. Dalam AWS: di bawah garis juga sisi panah — TAPI logika penempatan simbol 'sisi lain' terbalik dalam interpretasi historis. Selalu pastikan proyek mengikuti standar mana",
+        "Gambar menurut ISO 2553 bisa menambah garis putus-putus: simbol di garis solid = sisi panah, di garis putus-putus = sisi lain. JIS dan AWS sama-sama memakai 'di bawah garis = sisi panah'",
+        "Tak ada perbedaan antara standar simbol las mana pun",
       ],
-      exp: "Ini poin kritis. JIS/ISO dan AWS memakai konvensi berbeda untuk penempatan simbol sisi-panah vs sisi-lain. Di Jepang, SEMUA gambar memakai JIS (atau ISO) — jika Anda terbiasa gambar AWS (dipakai di AS, Australia...), pastikan standar di awal tiap proyek. Salah membaca simbol = mengelas di sisi salah = rework atau kegagalan struktur. 🇯🇵 TIPS: Galangan Korea (Hyundai, Samsung, DSME) yang bekerja dengan perusahaan Jepang kadang mengirim gambar standar AWS — ini pernah menyebabkan insiden rework nyata di galangan Jepang. Jika Anda melihat 'AWS D1.1' atau 'ASME' di blok judul, segera beri tahu supervisor sebelum mengelas apa pun.",
+      exp: "JIS Z 3021 dan AWS A2.4 memakai aturan yang sama: simbol di bawah garis referensi = sisi panah, di atas = sisi lain. Jebakan sebenarnya adalah gambar ISO 2553 (umum di Eropa) yang memakai garis putus-putus kedua: garis solid = sisi panah, garis putus-putus = sisi lain, mana pun yang di atas. Salah membaca = mengelas di sisi salah = rework. 🇯🇵 TIPS: Periksa standar di blok judul gambar. Jika ada garis putus-putus di samping garis referensi, konfirmasi ke supervisor sebelum mengelas.",
     },
   },
   316: {
@@ -2910,26 +2910,26 @@ export const Q_I18N = {
       exp: "ASME Boiler & Pressure Vessel Code, Section IX = kualifikasi prosedur las/braze (WPS/PQR) dan personel. Ini tulang punggung AS/internasional untuk las peralatan bertekanan. Domain setara domestik Jepang dicakup JIS plus aturan boiler/bejana tekan (ボイラー溶接士). 🌍 TIPS: Pada proyek pabrik internasional di Jepang Anda mungkin mengelas ke WPS ASME IX — memahami 'essential variables' (perubahan mana yang memaksa kualifikasi ulang) krusial untuk tetap terkualifikasi.",
     },
   },
-  608: {
+608: {
     vi: {
-      q: "Khác biệt chính giữa ký hiệu hàn AWS và JIS/ISO gây lỗi thực sự là gì?",
+      q: "Trên ký hiệu hàn AWS (A2.4), ký hiệu đặt DƯỚI đường chuẩn nghĩa là gì — và JIS có giống không?",
       opts: [
         "Bản vẽ AWS không bao giờ dùng ký hiệu hàn",
-        "Quy ước đặt ký hiệu phía mũi tên so với phía đối diện khác nhau — ký hiệu dưới đường chuẩn không cùng nghĩa ở hai hệ, nên luôn xác nhận bản vẽ theo tiêu chuẩn nào",
-        "JIS chỉ dùng đơn vị inch",
-        "Không có khác biệt gì",
+        "Dưới đường = phía mũi tên trong AWS, và JIS cũng dùng cùng quy tắc — điều cần chú ý thật là bản vẽ ISO 2553 có đường nét đứt thứ hai",
+        "Dưới đường = phía đối diện trong AWS, ngược với JIS",
+        "Dưới đường nghĩa là hàn hiện trường trong AWS",
       ],
-      exp: "JIS/ISO (ISO 2553, JIS B 0021) và AWS (A2.4) xử lý vị trí ký hiệu phía mũi tên/phía đối diện khác nhau; đọc sai nghĩa là hàn sai phía. Luôn kiểm ô tiêu đề bản vẽ để biết tiêu chuẩn. 🌍 MẸO: Dự án do Hàn và Mỹ dẫn dắt cung cấp bản vẽ cho xưởng Nhật đã gây làm lại thật từ đúng sự nhầm này — báo giám sát mọi bản vẽ không phải JIS ngay ngày đầu, trước khi hàn bất cứ gì.",
+      exp: "AWS A2.4 và JIS Z 3021 giống nhau: dưới đường chuẩn = phía mũi tên, trên = phía đối diện. Bản vẽ theo ISO 2553 có thể dùng đường nét đứt thứ hai: đường nét liền = phía mũi tên, đường nét đứt = phía đối diện. 🌍 MẸO: Ở dự án quốc tế, kiểm tiêu chuẩn trong ô tiêu đề bản vẽ trước khi hàn, và hỏi lại nếu thấy đường nét đứt cạnh đường chuẩn.",
     },
     id: {
-      q: "Apa perbedaan utama antara simbol las AWS dan JIS/ISO yang menyebabkan kesalahan nyata?",
+      q: "Pada simbol las AWS (A2.4), apa arti simbol yang diletakkan DI BAWAH garis referensi — dan apakah sama dengan JIS?",
       opts: [
         "Gambar AWS tak pernah memakai simbol las",
-        "Konvensi penempatan simbol sisi-panah vs sisi-lain berbeda — simbol di bawah garis referensi tak bermakna sama di kedua sistem, jadi selalu pastikan gambar mengikuti standar mana",
-        "JIS hanya memakai satuan imperial",
-        "Tak ada perbedaan sama sekali",
+        "Di bawah garis = sisi panah di AWS, dan JIS memakai aturan yang sama — yang perlu diwaspadai adalah gambar ISO 2553 dengan garis putus-putus kedua",
+        "Di bawah garis = sisi lain di AWS, kebalikan JIS",
+        "Di bawah garis berarti las lapangan di AWS",
       ],
-      exp: "JIS/ISO (ISO 2553, JIS B 0021) dan AWS (A2.4) menangani penempatan simbol sisi-panah/sisi-lain secara berbeda; salah membacanya berarti mengelas di sisi salah. Selalu periksa blok judul gambar untuk standarnya. 🌍 TIPS: Proyek pimpinan Korea dan AS yang memasok gambar ke galangan Jepang pernah menyebabkan rework nyata dari kebingungan ini — laporkan gambar non-JIS apa pun ke supervisor di hari pertama, sebelum mengelas apa pun.",
+      exp: "AWS A2.4 dan JIS Z 3021 sama: di bawah garis referensi = sisi panah, di atas = sisi lain. Gambar menurut ISO 2553 bisa memakai garis putus-putus kedua: garis solid = sisi panah, garis putus-putus = sisi lain. 🌍 TIPS: Di proyek internasional, periksa standar gambar di blok judul sebelum mengelas, dan tanyakan jika ada garis putus-putus di samping garis referensi.",
     },
   },
   609: {

@@ -1686,8 +1686,8 @@ function SymbolTab() {
   ]
   const rules = [
     {
-      title:'⚠️ CRITICAL: JIS vs AWS Arrow Side',
-      body:'JIS / ISO:  symbol BELOW line = ARROW SIDE (矢側)\nAWS (USA): symbol BELOW line = ARROW SIDE too\n\n→ In Japan ALL drawings use JIS standard.\n  Verify the standard at the START of every project.',
+      title:'⚠️ CRITICAL: Arrow Side vs Other Side',
+      body:'JIS (Z 3021): symbol BELOW line = ARROW SIDE (矢側)\nAWS (A2.4):   symbol BELOW line = ARROW SIDE too\n\n⚠ ISO 2553 drawings may add a DASHED line:\n  solid line = arrow side, dashed line = other side\n→ Check the standard in the title block before welding.',
     },
     {
       title:'📏 Fillet Weld Dimensions',
