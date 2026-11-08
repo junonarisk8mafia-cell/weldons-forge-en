@@ -33,27 +33,27 @@ export const QUIZ_STAGES = [
       },
       {
         id: 2, cat: "Legal Permits",
-        q: "Your supervisor hands you a grinder. What certificate allows you to use it legally in Japan?",
+        q: "Your supervisor asks you to change the disc on a grinder and test-run it. Which training is LEGALLY required for this job in Japan?",
         opts: [
           "Forklift License",
           "Grinding Wheel Safety Training — 'Jiyu-kensakutoishi tokubetsu-kyoiku' (自由研削といし特別教育)",
           "Arc Welding Safety Training is enough",
-          "Low-Voltage Electrical Safety Training covers grinder use too"
+          "Low-Voltage Electrical Safety Training covers grinder discs too"
         ],
         a: 1, xp: 15,
-        exp: "The Grinding Wheel Safety Training (自由研削といし特別教育) is a separate 1-day course (~¥10,000) required by law before using angle grinders or disc grinders. Many trainees forget this one — don't. 🇯🇵 TIP: This certificate is often called 'グラインダーの資格' on site. If a supervisor hands you a grinder and asks 'shikaku aru?' (資格ある？ / do you have the cert?), this is the one they mean."
+        exp: "By law (労働安全衛生規則), changing a grinding wheel and test-running it after the change requires the Grinding Wheel Safety Training (自由研削といし特別教育) — usually a 1-day course. In practice, most Japanese sites require this certificate from anyone who uses a grinder at all. 🇯🇵 TIP: On site it is often called 'グラインダーの資格'. If a supervisor hands you a grinder and asks 'shikaku aru?' (資格ある？ / do you have the cert?), this is the one they mean."
       },
       {
         id: 3, cat: "Legal Permits",
-        q: "You need to switch on the welding machine's power panel. Which additional certificate is legally required for this in Japan?",
+        q: "You need to connect a welding machine's power cable to terminals inside a distribution board where live parts are exposed. Which training is legally required?",
         opts: [
-          "Grinding Wheel Safety Training is sufficient since both involve the same panel",
+          "Grinding Wheel Safety Training is sufficient",
           "Arc Welding Safety Training already covers this",
           "Low-Voltage Electrical Safety Training — 'Teiatsu-denki toriatsukai tokubetsu-kyoiku' (低圧電気取扱特別教育)",
           "Forklift License"
         ],
         a: 2, xp: 15,
-        exp: "Low-Voltage Electrical Safety Training (低圧電気取扱特別教育) is required to operate or touch electrical panels of welding machines (AC 600V or below, DC 750V or below). 1–2 days, approx ¥12,000–22,000. 🇯🇵 TIP: This training recently (2023) expanded to require hands-on practical training for live panel work — confirm with your training center that the course includes 実技 (jitsugi / practical) as well as 学科 (gakka / classroom) components."
+        exp: "Low-Voltage Electrical Safety Training (低圧電気取扱特別教育) is required for work on low-voltage live circuits (AC 600V or below, DC 750V or below) — such as wiring or connecting cables where live parts are exposed. Simply turning on a welding machine's switch does not need it, but connecting cables to a distribution board does. 🇯🇵 TIP: Many welding companies send new staff to this course so they can handle welding-machine power connections themselves. Never open a live distribution board without it."
       },
       {
         id: 4, cat: "Legal Permits",
@@ -81,7 +81,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 6, cat: "Legal Permits",
-        q: "Since 2022, working at heights above 2 meters in Japan requires what safety training?",
+        q: "Since February 2019, workers who use a full-body harness at heights of 2 m or more (where a work floor cannot be installed) must complete what safety training?",
         opts: [
           "Aerial Work Platform License only",
           "Full Harness Safety Training — 'Furu-hanesu tokubetsu-kyoiku' (フルハーネス特別教育)",
@@ -89,7 +89,7 @@ export const QUIZ_STAGES = [
           "Body Belt Safety Training — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)"
         ],
         a: 1, xp: 15,
-        exp: "Since January 2022, Japanese law requires Full Harness Safety Training (フルハーネス特別教育) for working at heights of 2 meters or more. 1-day course, approx ¥10,000. Traditional body belts (胴ベルト) are now restricted — full harness is mandatory. 🇯🇵 TIP: Japanese sites do a daily 'KY' (危険予知 / kiken-yochi / hazard identification) activity every morning. Height work is always flagged in KY — showing you understand フルハーネス demonstrates safety awareness that supervisors respect."
+        exp: "The rules changed in February 2019: work at 2 m or more using a full-body harness, where a work floor is hard to install, requires Full Harness Safety Training (フルハーネス特別教育, about 1 day). The transition period ended on January 2, 2022 — old-standard belts can no longer be used, and the full harness is now the standard fall-arrest equipment (body belts are allowed only at low heights). 🇯🇵 TIP: Japanese sites do 'KY' (危険予知 / kiken-yochi / hazard prediction) every morning. Height work is always flagged in KY."
       },
       {
         id: 7, cat: "Legal Permits",
@@ -113,7 +113,7 @@ export const QUIZ_STAGES = [
           "Forklift Skills Training — 'Fokku-rifuto gino-koshu' (フォークリフト運転技能講習) — covers 1t and above"
         ],
         a: 3, xp: 20,
-        exp: "For forklifts of 1 ton or more, you need the Forklift Skills Training (技能講習), which takes 3 days (~¥40,000–60,000). The tokubetsu-kyoiku (特別教育) only covers under 1 ton. A 2-ton forklift = gino-koshu required. 🇯🇵 TIP: Forklift certification (フォークリフト免許) is one of the most in-demand practical skills on Japanese fabrication sites. Having it alongside welding certs can increase your daily rate significantly and makes you usable for material handling between welds."
+        exp: "For forklifts of 1 ton or more, you need the Forklift Skills Training (技能講習). For people with a regular car driving license it is about 31 hours — usually 4 days. The tokubetsu-kyoiku (特別教育) only covers forklifts under 1 ton. A 2-ton forklift = gino-koshu required. 🇯🇵 TIP: Forklift certification (often called フォークリフト免許 on site) is one of the most useful extra skills on Japanese fabrication sites — it makes you usable for material handling between welds."
       },
       {
         id: 9, cat: "Safety",
@@ -153,15 +153,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 12, cat: "Safety",
-        q: "What shade number (遮光番号 / しゃこうばんごう) welding helmet lens is recommended for semi-auto welding at around 150A?",
+        q: "What shade number (遮光度番号 / しゃこうどばんごう) does the JIS guide (JIS T 8141) give for stick welding (被覆アーク溶接) at around 150A?",
         opts: [
-          "Shade #3–4 — standard sunglasses level",
+          "Shade #3–4 — sunglasses level",
           "Shade #16 or higher — maximum protection",
           "Shade #1 — nearly clear lens",
-          "Shade #10–11 — standard for 100–200A arc welding"
+          "Shade #9–11 — the JIS guide range for 75–200A stick welding"
         ],
         a: 3, xp: 20,
-        exp: "For arc welding at 100–200A, JIS recommends shade #10–11 (遮光番号10〜11). Higher current = higher shade number. A normal welding helmet without the correct shade glass can cause serious eye damage (arc eye / 電気性眼炎 / でんきせいがんえん). Never look at an arc without proper protection. 🇯🇵 TIP: 電気性眼炎 (arc eye) symptoms appear 6–12 hours AFTER exposure — it is often called '目がやける' (me ga yakeru / eyes burning) on site. If your eyes feel gritty or painful the morning after welding, go to an ophthalmologist immediately. Treatment is simple if caught early."
+        exp: "The usage guide in JIS T 8141 gives shade #9–11 for stick welding at 75–200A (as explained by the Japan Welding Engineering Society). Higher current = higher shade number; too dark a lens makes it hard to see the pool. Without the correct shade you risk arc eye (電気性眼炎 / でんきせいがんえん). 🇯🇵 TIP: Arc eye symptoms appear several hours AFTER exposure — often at night. If your eyes feel gritty or painful after welding, see an eye doctor."
       },
       {
         id: 13, cat: "Safety",
@@ -216,12 +216,12 @@ export const QUIZ_STAGES = [
         q: "Which of the following statements about welding ventilation in Japan is NOT correct?",
         opts: [
           "Opening a window nearby is always sufficient ventilation for any indoor welding work, regardless of room size",
-          "Since the 2021 law revision, fume extraction equipment is no longer optional in enclosed areas",
-          "Local exhaust ventilation (局所排気装置) captures fumes at the source and is the most effective method",
-          "In confined spaces, forced ventilation is legally mandatory before and during welding"
+          "Since the 2021 rule change, indoor arc welding requires general ventilation (全体換気) and measuring the welding-fume concentration to choose suitable respirators",
+          "Local exhaust ventilation (局所排気装置) captures fumes at the source and is a very effective method",
+          "In confined spaces, ventilation must keep the oxygen level at 18% or more"
         ],
         a: 0, xp: 25,
-        exp: "Opening a window is NOT automatically sufficient — ventilation adequacy depends on room size, airflow direction, the amount of welding fumes generated, and whether the space is enclosed. A single window may do nothing in a large hangar with no cross-breeze, or in a sealed tank with no window at all. Japanese law requires actual measured ventilation performance (local exhaust or forced ventilation), not just 'a window is open.' 🇯🇵 TIP: On Japanese sites, the portable fume extractor attached directly to the welding gun is called '溶接ヒューム対策' equipment. Since the 2021 law changes, using it is no longer optional in enclosed areas — supervisors will stop you from welding without it."
+        exp: "Opening a window is NOT automatically sufficient — it depends on room size, airflow and the amount of fume. Since April 2021, welding fume is regulated as a specified chemical substance: for indoor continuous arc welding, employers must provide general ventilation (全体換気), measure the fume concentration, and supply respirators chosen from that measurement (with fit checks). In confined spaces, oxygen must be kept at 18% or more. 🇯🇵 TIP: If your company measures fume concentration, the result decides which respirator you must wear — follow it exactly."
       },
       {
         id: 18, cat: "Safety",
@@ -269,7 +269,7 @@ export const QUIZ_STAGES = [
           "Two welders inside the confined space only"
         ],
         a: 0, xp: 25,
-        exp: "Japanese law (労働安全衛生規則 第585条) requires a 監視人 (Kanshi-nin) stationed OUTSIDE the confined space at all times during oxygen deficiency hazard work. The monitor watches the worker, tracks time, holds emergency contact information, and is ready to call 119. NEVER enter a confined space alone — this is a non-negotiable rule. 🇯🇵 TIP: The 監視人 must stay at their post and cannot leave to do other work — this is a strict legal requirement, not just a recommendation."
+        exp: "The Ordinance on Prevention of Oxygen Deficiency (酸素欠乏症等防止規則, Article 13) requires a person who constantly watches the work and immediately reports any abnormality — the 監視人 (Kanshi-nin / standby monitor) stationed outside the confined space. A chief for oxygen-deficiency hazard work (酸素欠乏危険作業主任者) must also be appointed. NEVER enter a confined space alone. 🇯🇵 TIP: The 監視人 must stay at their post and must not leave to do other work."
       },
       {
         id: 23, cat: "Confined Space Safety",
@@ -442,15 +442,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 110, cat: "Tools",
-        q: "You borrow a 'Yosetsu-men' (溶接面) welding helmet for MAG welding at 180A, but its lens is marked Shade #8 — which is correctly rated for TIG welding at low amperage. What should you do?",
+        q: "You borrow a 'Yosetsu-men' (溶接面) welding helmet for stick welding at 150A, but its lens is marked Shade #5 — a level used for gas cutting, not arc welding. What should you do?",
         opts: [
           "Use it anyway — shade number only matters for color perception, not eye safety",
           "Use it, but only for short tack welds under 10 seconds",
-          "Do not use it for this job — Shade #8 is too light for 180A MAG welding and risks arc eye (電気性眼炎); borrow a helmet rated Shade #10–11 instead",
+          "Do not use it — Shade #5 is far too light for 150A arc welding; use a lens in the JIS guide range of #9–11",
           "Use it, but compensate by standing further from the arc"
         ],
         a: 2, xp: 25,
-        exp: "Yosetsu-men (溶接面) = Welding helmet. The shade number (遮光番号) indicates lens darkness and must match the amperage and process: Shade #8 may suit low-amperage TIG, but for 100–200A MAG/semi-auto welding, JIS recommends Shade #10–11. Using too light a lens lets through more harmful UV/IR radiation, risking 電気性眼炎 (arc eye) even with short exposure or extra distance — neither workaround is safe. 🇯🇵 TIP: When borrowing a welding helmet on a Japanese site, always check the shade number written on the lens holder — never assume. Japanese sites often have multiple helmets at different shades for different processes; mixing them up is a common and dangerous mistake."
+        exp: "The shade number (遮光度番号) must match the process and current. For stick welding at 75–200A, the JIS T 8141 guide is #9–11. A #5 lens lets through far too much harmful UV/IR radiation for arc welding — short welds or extra distance do not make it safe. 🇯🇵 TIP: When borrowing a helmet on site, always check the shade number on the lens holder — never assume."
       },
       {
         id: 111, cat: "Tools",
@@ -599,15 +599,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 202, cat: "Slang",
-        q: "Your supervisor says you'll be doing 'Moriage' (盛り上げ) work today, in either '立向上進' (Tatemuki-joshin / vertical-up) or '立向下進' (Tatemuki-kashin / vertical-down) style. Which direction does Japan generally prefer, and why?",
+        q: "Your supervisor says today's vertical (立向き / tatemuki) welds must be done '上進' (joshin, vertical-up) and not '下進' (kashin, vertical-down). Why does Japan generally prefer vertical-up for structural work?",
         opts: [
           "Vertical-down (下進) is preferred exclusively because it eliminates the need for crater fill technique",
           "Vertical-down (下進) is preferred because it is faster and gives deeper penetration than vertical-up",
           "Vertical-up (上進) is preferred because it generally gives better fusion and penetration, even though it is slower than vertical-down",
-          "Neither is preferred — Japan only uses vertical-down for all moriage work"
+          "Neither is preferred — Japan uses only vertical-down for all vertical work"
         ],
         a: 2, xp: 25,
-        exp: "Moriage (盛り上げ) = Vertical welding position, officially 立向き姿勢 (Tatemuki-shisei). Within vertical welding there are two directions: 立向上進 (Tatemuki-joshin, vertical-UP) and 立向下進 (Tatemuki-kashin, vertical-DOWN). Vertical-down is faster but leaves shallower penetration; Japan generally prefers vertical-up because it gives better fusion and penetration despite being slower, especially for structural welds. 🇯🇵 TIP: 'Moriage' is site slang, not standard Japanese — using it shows you're picking up the culture. But in formal documentation (safety meetings, inspection reports), always use the official term 立向き (tatemuki). Mixing slang into formal QC paperwork is frowned upon."
+        exp: "Within vertical welding there are two directions: 立向上進 (Tatemuki-joshin, vertical-UP) and 立向下進 (Tatemuki-kashin, vertical-DOWN). Vertical-down is faster but gives shallower penetration and a higher risk of lack of fusion; vertical-up is slower but gives better fusion and penetration, so it is generally preferred for structural welds. 🇯🇵 TIP: In formal documents (WPS, inspection reports) always use the official terms 立向上進 / 立向下進 — avoid site slang in QC paperwork."
       },
       {
         id: 203, cat: "Slang",
@@ -779,7 +779,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 217, cat: "Slang",
-        q: "A welder says a job requires 'Genga' (現合 / げんか). What does this mean?",
+        q: "A welder says a job requires 'Gen-awase' (現合 / げんあわせ). What does this mean?",
         opts: [
           "Using computer drawings only",
           "On-site custom fitting — measuring and cutting parts directly at the actual structure because drawings are insufficient or gaps have changed",
@@ -787,7 +787,7 @@ export const QUIZ_STAGES = [
           "Working overtime on weekends"
         ],
         a: 1, xp: 25,
-        exp: "Genga (現合) = on-site fitting / field fitting. When parts don't match the drawing exactly due to fabrication tolerances or structural changes, workers measure the actual gap on-site and custom-cut or fabricate the piece to fit. Common in shipbuilding and civil construction. 🇯🇵 TIP: When doing genga work, ALWAYS record the actual dimensions you measured and what modification you made. Japanese site documentation (施工記録 / shiko-kiroku) requires that field modifications are tracked. An undocumented field modification discovered during inspection creates serious paperwork problems and may require re-inspection of related joints."
+        exp: "Gen-awase (現合 / げんあわせ) = on-site fitting / field fitting. When parts don't match the drawing exactly because of fabrication tolerances or changes in the structure, workers measure the actual gap on site and custom-cut or fabricate the piece to fit. Common in shipbuilding and construction. 🇯🇵 TIP: When doing gen-awase work, record the actual dimensions you measured and what you changed. Undocumented field changes cause serious problems at inspection."
       },
       {
         id: 218, cat: "Slang",
@@ -811,7 +811,7 @@ export const QUIZ_STAGES = [
           "Change the electrode / welding stick — relevant to SMAW (stick welding / 被覆アーク溶接) only. NOT used in semi-auto welding"
         ],
         a: 3, xp: 25,
-        exp: "Bokae (棒替え) = electrode change. In stick welding (SMAW / 被覆アーク溶接), you use a short stick electrode that burns down and must be replaced. This word is ONLY relevant to stick welding. In shipyards and factories using semi-auto FCAW/MAG welding, the wire comes from a spool — no 'bokae' needed. Using this word on the wrong site will confuse people! 🇯🇵 TIP: Stick welding electrodes must be stored in a dry cabinet (乾燥庫 / kanso-ko) at 40–50°C to prevent moisture absorption. Wet electrodes cause hydrogen cracking and porosity. Before using stored electrodes, Japanese sites require re-drying (再乾燥 / sai-kanso) at specified temperatures — check the electrode manufacturer's data sheet for times and temperatures."
+        exp: "Bokae (棒替え) = electrode change. In stick welding (SMAW / 被覆アーク溶接) the electrode burns down and must be replaced — so this word only applies to stick welding. Semi-auto FCAW/MAG uses wire from a spool, so there is no 'bokae'. 🇯🇵 TIP: Low-hydrogen electrodes absorb moisture. They are re-dried (typically 300–400°C, as the manufacturer specifies) and then kept in a holding oven (around 100–150°C) until use. Wet electrodes cause hydrogen cracking and porosity."
       },
       {
         id: 220, cat: "Slang",
@@ -1221,7 +1221,7 @@ export const QUIZ_STAGES = [
           "UT excels at detecting PLANAR defects — cracks, lack of fusion (融合不良), lack of penetration. These planar defects reflect sound waves strongly even when RT misses them"
         ],
         a: 3, xp: 25,
-        exp: "UT (Ultrasonic Testing) sends high-frequency sound waves into the metal. Planar defects (cracks, fusion lines, laminations) reflect sound strongly back to the probe — excellent detection. RT (X-ray) is better for volumetric defects (round pores, slag). For critical welds in Japanese shipyards and buildings, BOTH UT and RT are often required. 🇯🇵 TIP: In Japan, the UT operator (超音波探傷士 / chooonpa-tanshoshi) is a specialized, nationally licensed professional. Their judgment is authoritative — if they say 'yokogiri no echo ga aru' (横切りのエコーがある / there's a transverse crack echo), the work stops. Do not argue with the UT operator. Their certification took years to earn."
+        exp: "UT (Ultrasonic Testing) sends high-frequency sound waves into the metal. Planar defects (cracks, lack of fusion, laminations) reflect sound strongly back to the probe, so UT detects them well. RT (X-ray) is better for volumetric defects (round pores, slag). For critical welds, both may be required. 🇯🇵 TIP: In Japan, UT technicians are certified under JIS Z 2305 by the Japanese Society for Non-Destructive Inspection (日本非破壊検査協会). Their judgment decides acceptance — if they find an indication, fix it rather than argue."
       },
       {
         id: 412, cat: "NDT",
@@ -1233,7 +1233,7 @@ export const QUIZ_STAGES = [
           "There are no safety concerns with RT — the radiation levels are very low"
         ],
         a: 0, xp: 25,
-        exp: "RT is called Rentogen (レントゲン) on Japanese job sites — slang for X-ray from the German physicist Röntgen. During RT: mandatory radiation management zone (放射線管理区域) is established. ALL workers must evacuate before shooting. Special safety officers (放射線取扱主任者) manage the process. RT results are permanently recorded on film — unlike UT, the film serves as a permanent quality record. 🇯🇵 TIP: When the announcement 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / We are shooting X-ray — please stand by) is made on site, EVERYONE stops immediately and moves to the designated waiting area. Continuing work in the radiation zone is a serious criminal violation. This is non-negotiable."
+        exp: "RT is called Rentogen (レントゲン) on Japanese sites — after the German physicist Röntgen. During RT a radiation-controlled area (管理区域) is set up and everyone must leave before shooting. For X-ray equipment, an X-ray work chief (エックス線作業主任者) must be appointed to manage the work. RT results remain on film as a permanent quality record. 🇯🇵 TIP: When you hear 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / We are shooting X-ray — please stand by), stop immediately and move to the designated waiting area."
       },
       {
         id: 413, cat: "NDT",
@@ -1293,7 +1293,7 @@ export const QUIZ_STAGES = [
           "High current + fast travel + wrong wire"
         ],
         a: 1, xp: 30,
-        exp: "Cold crack (低温割れ) requires ALL THREE: 1) Diffusible hydrogen (from moisture, contaminated materials, or non-low-hydrogen electrodes). 2) Susceptible hard microstructure (martensite in the HAZ — from high carbon equivalent steel or rapid cooling). 3) Tensile stress (residual or applied). Remove ANY one of these and the crack cannot form. Solution: preheat + low-hydrogen materials + PWHT. 🇯🇵 TIP: In Japan, welding rods for critical structural work are stored in a rod oven (乾燥炉 / kansou-ro) at 300–350°C before use, and each welder draws only what they need for one session. Leaving rods out on a humid day means they absorb moisture — and that moisture becomes diffusible hydrogen in your weld. Japanese foremen take rod storage very seriously. 'Kan-iro-ni irete okure' (乾燥炉に入れておくれ / please keep them in the drying oven) is a common phrase."
+        exp: "A cold crack (低温割れ) needs ALL THREE: 1) diffusible hydrogen (from moisture, contamination, or non-low-hydrogen consumables), 2) a hard, susceptible microstructure (e.g. martensite in the HAZ from high carbon equivalent or fast cooling), and 3) tensile stress (residual or applied). Remove any one and the crack is prevented — hence preheat, low-hydrogen consumables and, where specified, PWHT. 🇯🇵 TIP: Low-hydrogen electrodes are re-dried in a drying oven (乾燥炉 / kansou-ro) and kept warm in a holding oven; take out only what you need for one session."
       },
       {
         id: 418, cat: "Defects",
@@ -1366,7 +1366,7 @@ export const QUIZ_STAGES = [
           "Yes, but only if he has at least 2 years of work experience to compensate"
         ],
         a: 2, xp: 25,
-        exp: "Kihon-kyu (基本級) = Basic Grade, the entry point for JIS certification, covering flat position (下向き / 1G) ONLY. Senmon-kyu (専門級) = Specialist Grade, which covers additional positions: horizontal (2G), vertical (3G), overhead (4G), and pipe (P). Work experience does not substitute for the certification scope — a 2G job legally requires Specialist Grade testing, regardless of how experienced the welder feels. 🇯🇵 TIP: Many foreign workers start with JIS Basic Grade because the flat-position test is the most approachable, but Japanese worksites quickly ask 'tate-muki dekiru?' (立向きできる？ / can you do vertical?) — Specialist grade opens far more job opportunities."
+        exp: "Kihon-kyu (基本級) = Basic Grade, the entry point for JIS certification, covering the flat position (下向き / 1G) only. Senmon-kyu (専門級) = Specialist Grade covers the other positions: horizontal (2G), vertical (3G), overhead (4G) and pipe (P). JIS certification is not a legal license, but when a job's specification calls for horizontal-position qualification, employers and clients require the matching Specialist Grade — experience alone does not replace it. 🇯🇵 TIP: Japanese sites quickly ask 'tate-muki dekiru?' (立向きできる？ / can you do vertical?) — Specialist Grade opens far more work."
       },
       {
         id: 503, cat: "Certifications",
@@ -1430,27 +1430,27 @@ export const QUIZ_STAGES = [
       },
       {
         id: 508, cat: "Certifications",
-        q: "What TWO licenses are required to work as an 'Underwater Welder' (水中溶接士 / すいちゅうようせつし) in Japan?",
+        q: "To work as an 'Underwater Welder' (水中溶接士 / すいちゅうようせつし) in Japan, which combination is needed?",
         opts: [
-          "Diving License (潜水士 / Sensui-shi) + Welding qualification (JIS or equivalent). Both are mandatory — you cannot legally dive AND weld without both",
+          "Diving License (潜水士 / Sensui-shi, legally required for diving work) + welding training and skill (Arc Welding Safety Training by law; JIS qualification expected by employers)",
           "Any two safety training certificates",
           "JIS Certification + Driver's License",
           "Boiler Welder + Arc Welding Safety Training only"
         ],
         a: 0, xp: 25,
-        exp: "Underwater Welder = Sensui-shi (潜水士) national diving license + welding qualification (JIS specialist grade recommended). The diving license requires written exam only (no practical) — pass rate ~75%. The welding skill must then be applied in a completely different environment. Very rare combination. Annual income: ¥7–10 million. Top saturation divers: ¥10–15 million. 🇯🇵 TIP: In Japan, underwater welding work (水中溶接 / suichuu-yosetsu) is concentrated in ports (港湾 / kouwan), offshore structures, and dam repairs. Employers who hire underwater welders typically pay relocation and living expenses, plus hazard pay. The community of qualified underwater welders in Japan is very small — once known, you will be called. Building a reputation for reliability and safety-consciousness is more valuable than any single credential in this field."
+        exp: "Diving work in Japan legally requires the Diving License (潜水士), a national license with a written exam only. For the welding side, the Arc Welding Safety Training (アーク溶接特別教育) is the legal minimum, and employers normally expect a JIS welder qualification (all-position Specialist Grade is preferred). 🇯🇵 TIP: Underwater welding work in Japan is concentrated in ports (港湾 / kouwan), offshore structures and dam repairs. The community is small — a reputation for reliability and safety matters a lot."
       },
       {
         id: 509, cat: "Certifications",
         q: "What is 'WES' in Japanese welding, and what level of qualification does it represent?",
         opts: [
           "WES = Welding Equipment Standard — a certification for welding machines",
-          "WES = Welding Engineering Standard — the Japan Welding Engineering Society's qualification for welding management engineers (WES 8103). Levels: Grade 3 → 2 → 1 → Special Grade",
+          "WES = Welding Engineering Standard — the Japan Welding Engineering Society's standards; WES 8103 certifies welding coordination personnel at Grade 2, Grade 1 and Special Grade",
           "WES = Western Engineering System — an American certification used in Japan",
           "WES = Welding Examination System — a basic safety training program"
         ],
         a: 1, xp: 25,
-        exp: "WES (Welding Engineering Standard) = Japan Welding Engineering Society's qualification for welding managers and engineers. WES 8103 levels: Grade 3 (基礎), Grade 2 (監督レベル), Grade 1 (管理者レベル), Special Grade (特別級 — ISO-aligned, international equivalent). WES is for engineers who MANAGE and SUPERVISE welding, not necessarily do the welding. High salary: ¥700,000–900,000+/year. 🇯🇵 TIP: Many experienced Japanese welders who move into supervision roles pursue WES Grade 2 or Grade 1. Being a skilled welder AND a WES-qualified engineer is extremely rare and highly valued — it means you understand the work from both the hands-on and engineering perspectives. The Japanese phrase 'Genba ga wakaru enjinia' (現場が分かるエンジニア / an engineer who understands the worksite) is the highest compliment in manufacturing industries."
+        exp: "WES (Welding Engineering Standard) = standards of the Japan Welding Engineering Society (日本溶接協会). WES 8103 certifies welding coordination personnel (溶接管理技術者) in three levels: Grade 2 (2級), Grade 1 (1級) and Special Grade (特別級). These are for people who MANAGE and SUPERVISE welding. 🇯🇵 TIP: Many experienced Japanese welders who move into supervision pursue WES Grade 2 or Grade 1. 'Genba ga wakaru enjinia' (現場が分かるエンジニア / an engineer who understands the worksite) is a high compliment."
       },
       {
         id: 510, cat: "Career",
@@ -1483,10 +1483,10 @@ export const QUIZ_STAGES = [
           "4 atmospheres — 1 atm (surface) + 3 atm (from 30m = 3 × 10m)",
           "1 atmosphere (just atmospheric pressure)",
           "2 atmospheres",
-          "3 atmospheres — 1 atm (surface) + 3 atm (from 30m water)"
+          "3 atmospheres — 30m ÷ 10m (forgetting the 1 atm of air at the surface)"
         ],
         a: 0, xp: 25,
-        exp: "Water pressure: Every 10m depth adds ~1 atmosphere. At 30m: 1 atm (atmospheric pressure at surface) + 3 atm (from 30m of water) = 4 atm absolute. This pressure affects diving: gas consumption increases, nitrogen narcosis risk increases, decompression stops become mandatory. Underwater welders must understand this math. 🇯🇵 TIP: Japan has very specific diving operations safety regulations (高気圧作業安全衛生規則 / Koukiatsu-sagyou-anzen-eisei-kisoku) that cover decompression tables, air supply rates, and supervisor responsibilities. The diving supervisor (潜水監督員 / sensui-kantoku-in) is legally responsible for every diver's safety. Unlike some countries, Japanese law takes 'bend' (減圧症 / gengenchou) prevention extremely seriously — no shortcuts."
+        exp: "Every 10m of depth adds about 1 atmosphere. At 30m: 1 atm (air at the surface) + 3 atm (30m of water) = 4 atm absolute. Forgetting the surface atmosphere gives the wrong answer of 3. Higher pressure means faster gas consumption, more risk of nitrogen narcosis, and required decompression stops. 🇯🇵 TIP: Diving work in Japan is regulated by the Ordinance on Safety and Health of Work under High Pressure (高気圧作業安全衛生規則), including decompression. Decompression sickness (減圧症 / genatsushou) prevention is taken very seriously — no shortcuts."
       },
       {
         id: 513, cat: "Physics",
@@ -1631,7 +1631,7 @@ export const QUIZ_STAGES = [
           "A Japanese building law"
         ],
         a: 0, xp: 25,
-        exp: "AWS D1.1 = Structural Welding Code — Steel. Governs design, WPS/welder qualification, workmanship, and inspection for structural steel in the US and widely internationally. Japan's equivalent domain is covered by JIS + the Building Standard Law + AW Kentei. 🌍 TIP: If a drawing's title block says 'AWS D1.1', the welding symbols and acceptance criteria follow US conventions — confirm with QC before welding, because the arrow-side symbol logic differs from JIS/ISO."
+        exp: "AWS D1.1 = Structural Welding Code — Steel. It governs design, WPS/welder qualification, workmanship and inspection for structural steel in the US and on many international projects. In Japan the same field is covered by JIS, the Building Standard Law and AW Kentei. 🌍 TIP: If a drawing's title block says 'AWS D1.1', the acceptance criteria and procedures follow that code — confirm the WPS and inspection rules with QC before welding. (The arrow-side rule for weld symbols is the same as JIS: below the line = arrow side.)"
       },
       {
         id: 604, cat: "International Certs",

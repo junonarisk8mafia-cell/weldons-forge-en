@@ -30,46 +30,46 @@ export const Q_I18N = {
   },
   2: {
     vi: {
-      q: "Người giám sát đưa bạn một máy mài. Chứng chỉ nào cho phép bạn dùng nó hợp pháp ở Nhật?",
+      q: "Người giám sát bảo bạn thay đá mài cho máy mài và chạy thử. Khóa đào tạo nào là BẮT BUỘC theo luật Nhật cho việc này?",
       opts: [
         "Giấy phép Xe nâng",
         "An toàn Đá mài — 'Jiyu-kensakutoishi tokubetsu-kyoiku' (自由研削といし特別教育)",
         "Chỉ cần An toàn Hàn hồ quang là đủ",
-        "An toàn Điện hạ áp cũng bao gồm máy mài",
+        "An toàn Điện hạ áp cũng bao gồm việc thay đá mài",
       ],
-      exp: "Chứng chỉ An toàn Đá mài (自由研削といし特別教育) là khóa riêng 1 ngày (~¥10.000), luật yêu cầu trước khi dùng máy mài góc/đĩa. Nhiều thực tập sinh quên cái này — đừng quên. 🇯🇵 MẸO: Trên công trường thường gọi là 'グラインダーの資格'. Khi giám sát hỏi 'shikaku aru?' (資格ある？ / có chứng chỉ không?), họ đang nói đến cái này.",
+      exp: "Theo luật (労働安全衛生規則), việc thay đá mài và chạy thử sau khi thay cần khóa An toàn Đá mài (自由研削といし特別教育) — thường học 1 ngày. Trên thực tế, đa số công trường Nhật yêu cầu chứng chỉ này với bất kỳ ai dùng máy mài. 🇯🇵 MẸO: Ở công trường thường gọi là 'グラインダーの資格'. Nếu giám sát đưa máy mài và hỏi 'shikaku aru?' (資格ある？ / có chứng chỉ không?), họ đang hỏi chứng chỉ này.",
     },
     id: {
-      q: "Supervisor memberi Anda gerinda. Sertifikat apa yang membolehkan pemakaiannya secara legal di Jepang?",
+      q: "Supervisor meminta Anda mengganti piringan gerinda dan menguji-jalankannya. Pelatihan apa yang WAJIB menurut hukum Jepang untuk pekerjaan ini?",
       opts: [
         "Lisensi Forklift",
-        "Keselamatan Batu Gerinda — 'Jiyu-kensakutoishi tokubetsu-kyoiku' (自由研削といし特別教育)",
-        "Cukup dengan Keselamatan Las Busur",
-        "Keselamatan Listrik Tegangan Rendah juga mencakup gerinda",
+        "Pelatihan Keselamatan Batu Gerinda — 'Jiyu-kensakutoishi tokubetsu-kyoiku' (自由研削といし特別教育)",
+        "Pelatihan Keselamatan Las Busur sudah cukup",
+        "Pelatihan Listrik Tegangan Rendah juga mencakup penggantian piringan",
       ],
-      exp: "Pelatihan Keselamatan Batu Gerinda (自由研削といし特別教育) adalah kursus terpisah 1 hari (~¥10.000), diwajibkan hukum sebelum memakai gerinda sudut/cakram. Banyak peserta magang lupa yang ini — jangan. 🇯🇵 TIPS: Di lokasi sering disebut 'グラインダーの資格'. Jika supervisor bertanya 'shikaku aru?' (資格ある？ / punya sertifikat?), inilah yang dimaksud.",
+      exp: "Menurut hukum (労働安全衛生規則), mengganti batu gerinda dan uji-jalan setelah penggantian memerlukan Pelatihan Keselamatan Batu Gerinda (自由研削といし特別教育) — biasanya kursus 1 hari. Dalam praktik, sebagian besar lokasi kerja di Jepang meminta sertifikat ini dari siapa pun yang memakai gerinda. 🇯🇵 TIPS: Di lokasi sering disebut 'グラインダーの資格'. Jika supervisor memberi gerinda dan bertanya 'shikaku aru?' (資格ある？ / punya sertifikat?), inilah yang dimaksud.",
     },
   },
   3: {
     vi: {
-      q: "Bạn cần bật bảng điện của máy hàn. Ở Nhật, chứng chỉ bổ sung nào là bắt buộc theo luật cho việc này?",
+      q: "Bạn cần nối cáp nguồn của máy hàn vào cầu đấu bên trong tủ điện có phần mang điện lộ ra. Khóa đào tạo nào là bắt buộc theo luật?",
       opts: [
-        "An toàn Đá mài là đủ vì cùng bảng điều khiển",
+        "Chỉ cần An toàn Đá mài",
         "An toàn Hàn hồ quang đã bao gồm việc này",
         "An toàn Điện hạ áp — 'Teiatsu-denki toriatsukai tokubetsu-kyoiku' (低圧電気取扱特別教育)",
         "Giấy phép Xe nâng",
       ],
-      exp: "An toàn Điện hạ áp (低圧電気取扱特別教育) là bắt buộc để thao tác/chạm bảng điện máy hàn (AC ≤600V, DC ≤750V). 1–2 ngày, khoảng ¥12.000–22.000. 🇯🇵 MẸO: Từ 2023 khóa này bổ sung phần thực hành (実技) cho bảng điện có điện — hãy xác nhận trung tâm có cả 実技 lẫn 学科 (lý thuyết).",
+      exp: "Khóa An toàn Điện hạ áp (低圧電気取扱特別教育) bắt buộc cho công việc trên mạch điện hạ áp đang có điện (AC từ 600V trở xuống, DC từ 750V trở xuống) — ví dụ đấu dây, nối cáp nơi phần mang điện lộ ra. Chỉ bật công tắc máy hàn thì không cần, nhưng nối cáp vào tủ điện thì cần. 🇯🇵 MẸO: Nhiều công ty hàn cho nhân viên mới học khóa này để tự nối nguồn máy hàn. Đừng bao giờ mở tủ điện đang có điện nếu chưa có chứng chỉ này.",
     },
     id: {
-      q: "Anda perlu menyalakan panel daya mesin las. Di Jepang, sertifikat tambahan apa yang diwajibkan hukum untuk ini?",
+      q: "Anda perlu menyambungkan kabel daya mesin las ke terminal di dalam panel distribusi yang bagian bertegangannya terbuka. Pelatihan apa yang wajib menurut hukum?",
       opts: [
-        "Keselamatan Batu Gerinda sudah cukup karena panel sama",
-        "Keselamatan Las Busur sudah mencakup ini",
-        "Keselamatan Listrik Tegangan Rendah — 'Teiatsu-denki toriatsukai tokubetsu-kyoiku' (低圧電気取扱特別教育)",
+        "Pelatihan Batu Gerinda sudah cukup",
+        "Pelatihan Las Busur sudah mencakup ini",
+        "Pelatihan Keselamatan Listrik Tegangan Rendah — 'Teiatsu-denki toriatsukai tokubetsu-kyoiku' (低圧電気取扱特別教育)",
         "Lisensi Forklift",
       ],
-      exp: "Keselamatan Listrik Tegangan Rendah (低圧電気取扱特別教育) wajib untuk mengoperasikan/menyentuh panel listrik mesin las (AC ≤600V, DC ≤750V). 1–2 hari, sekitar ¥12.000–22.000. 🇯🇵 TIPS: Sejak 2023 kursus ini menambah praktik (実技) untuk panel bertegangan — pastikan pusat pelatihan memuat 実技 dan 学科 (teori).",
+      exp: "Pelatihan Listrik Tegangan Rendah (低圧電気取扱特別教育) wajib untuk pekerjaan pada sirkuit tegangan rendah yang bertegangan (AC 600V ke bawah, DC 750V ke bawah) — misalnya memasang kabel di tempat bagian bertegangan terbuka. Sekadar menyalakan sakelar mesin las tidak memerlukannya, tetapi menyambung kabel ke panel distribusi memerlukannya. 🇯🇵 TIPS: Banyak perusahaan las mengirim pegawai baru ke kursus ini agar bisa menangani sambungan daya mesin las sendiri. Jangan pernah membuka panel bertegangan tanpa sertifikat ini.",
     },
   },
   4: {
@@ -118,24 +118,24 @@ export const Q_I18N = {
   },
   6: {
     vi: {
-      q: "Từ 2022, làm việc trên cao trên 2 mét ở Nhật yêu cầu khóa đào tạo an toàn nào?",
+      q: "Từ tháng 2/2019, người dùng dây an toàn toàn thân ở độ cao từ 2 m trở lên (nơi không thể lắp sàn thao tác) phải hoàn thành khóa đào tạo nào?",
       opts: [
-        "Chỉ Giấy phép Xe nâng người",
-        "An toàn Dây đai Toàn thân — 'Furu-hanesu tokubetsu-kyoiku' (フルハーネス特別教育)",
+        "Chỉ cần Giấy phép Xe nâng người",
+        "An toàn Dây toàn thân — 'Furu-hanesu tokubetsu-kyoiku' (フルハーネス特別教育)",
         "Giấy phép Vận hành Cẩu",
-        "An toàn Dây đai Bụng — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)",
+        "An toàn Dây đai lưng — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)",
       ],
-      exp: "Từ tháng 1/2022, luật Nhật yêu cầu An toàn Dây đai Toàn thân (フルハーネス特別教育) khi làm việc trên cao từ 2 mét trở lên. Khóa 1 ngày, khoảng ¥10.000. Dây đai bụng (胴ベルト) truyền thống nay bị hạn chế — dây toàn thân là bắt buộc. 🇯🇵 MẸO: Công trường Nhật làm 'KY' (危険予知 / dự báo nguy hiểm) mỗi sáng. Việc trên cao luôn được nêu trong KY — hiểu フルハーネス thể hiện ý thức an toàn được giám sát tôn trọng.",
+      exp: "Quy định thay đổi từ tháng 2/2019: làm việc ở độ cao từ 2 m trở lên dùng dây an toàn toàn thân, nơi khó lắp sàn thao tác, phải học An toàn Dây toàn thân (フルハーネス特別教育, khoảng 1 ngày). Thời gian chuyển tiếp kết thúc ngày 2/1/2022 — không còn dùng loại dây tiêu chuẩn cũ, và dây toàn thân là thiết bị chống rơi tiêu chuẩn (dây đai lưng chỉ được dùng ở độ cao thấp). 🇯🇵 MẸO: Công trường Nhật làm 'KY' (危険予知 / dự đoán nguy hiểm) mỗi sáng. Công việc trên cao luôn được nêu trong KY.",
     },
     id: {
-      q: "Sejak 2022, bekerja di ketinggian di atas 2 meter di Jepang memerlukan pelatihan keselamatan apa?",
+      q: "Sejak Februari 2019, pekerja yang memakai harness seluruh tubuh pada ketinggian 2 m atau lebih (di mana lantai kerja tidak bisa dipasang) wajib mengikuti pelatihan apa?",
       opts: [
-        "Hanya Lisensi Aerial Work Platform",
+        "Hanya Lisensi Platform Kerja Udara",
         "Pelatihan Keselamatan Full Harness — 'Furu-hanesu tokubetsu-kyoiku' (フルハーネス特別教育)",
         "Lisensi Operator Crane",
-        "Pelatihan Sabuk Badan — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)",
+        "Pelatihan Sabuk Pinggang — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)",
       ],
-      exp: "Sejak Januari 2022, hukum Jepang mewajibkan Pelatihan Full Harness (フルハーネス特別教育) untuk bekerja di ketinggian 2 meter ke atas. Kursus 1 hari, sekitar ¥10.000. Sabuk badan (胴ベルト) tradisional kini dibatasi — full harness wajib. 🇯🇵 TIPS: Lokasi Jepang melakukan 'KY' (危険予知 / prediksi bahaya) tiap pagi. Kerja ketinggian selalu ditandai di KY — memahami フルハーネス menunjukkan kesadaran keselamatan yang dihargai supervisor.",
+      exp: "Aturan berubah pada Februari 2019: bekerja di ketinggian 2 m atau lebih dengan harness seluruh tubuh, di mana lantai kerja sulit dipasang, memerlukan Pelatihan Full Harness (フルハーネス特別教育, sekitar 1 hari). Masa transisi berakhir 2 Januari 2022 — sabuk standar lama tidak boleh dipakai lagi, dan full harness kini menjadi alat penahan jatuh standar (sabuk pinggang hanya boleh di ketinggian rendah). 🇯🇵 TIPS: Lokasi kerja di Jepang melakukan 'KY' (危険予知 / prediksi bahaya) setiap pagi. Pekerjaan di ketinggian selalu dibahas dalam KY.",
     },
   },
   7: {
@@ -169,7 +169,7 @@ export const Q_I18N = {
         "Giấy phép Vận hành Cẩu — cũng bao gồm xe nâng mọi tải trọng",
         "Kỹ năng Xe nâng — 'Fokku-rifuto gino-koshu' (フォークリフト運転技能講習) — bao gồm từ 1t trở lên",
       ],
-      exp: "Với xe nâng từ 1 tấn trở lên, bạn cần Kỹ năng Xe nâng (技能講習), mất 3 ngày (~¥40.000–60.000). Tokubetsu-kyoiku (特別教育) chỉ bao dưới 1 tấn. Xe nâng 2 tấn = phải có gino-koshu. 🇯🇵 MẸO: Chứng chỉ xe nâng (フォークリフト免許) là kỹ năng thực dụng được săn đón nhất trên công trường Nhật. Có nó cùng chứng chỉ hàn có thể tăng đáng kể đơn giá ngày công.",
+      exp: "Với xe nâng từ 1 tấn trở lên, bạn cần khóa Kỹ năng Xe nâng (技能講習). Với người có bằng lái ô tô thông thường, khóa học khoảng 31 giờ — thường 4 ngày. Khóa tokubetsu-kyoiku (特別教育) chỉ áp dụng cho xe nâng dưới 1 tấn. Xe nâng 2 tấn = cần gino-koshu. 🇯🇵 MẸO: Chứng chỉ xe nâng (công trường thường gọi là フォークリフト免許) là một trong những kỹ năng thêm hữu ích nhất ở xưởng Nhật — giúp bạn vận chuyển vật liệu giữa các mối hàn.",
     },
     id: {
       q: "Forklift di pabrik berkapasitas maksimum 2 ton. Sertifikat apa yang Anda butuhkan untuk mengoperasikannya?",
@@ -179,7 +179,7 @@ export const Q_I18N = {
         "Lisensi Operator Crane — juga mencakup forklift segala tonase",
         "Pelatihan Keterampilan Forklift — 'Fokku-rifuto gino-koshu' (フォークリフト運転技能講習) — mencakup 1t ke atas",
       ],
-      exp: "Untuk forklift 1 ton ke atas, Anda perlu Pelatihan Keterampilan Forklift (技能講習), 3 hari (~¥40.000–60.000). Tokubetsu-kyoiku (特別教育) hanya mencakup di bawah 1 ton. Forklift 2 ton = wajib gino-koshu. 🇯🇵 TIPS: Sertifikat forklift (フォークリフト免許) adalah salah satu keterampilan praktis paling dicari di lokasi Jepang. Memilikinya bersama sertifikat las bisa menaikkan tarif harian secara signifikan.",
+      exp: "Untuk forklift 1 ton atau lebih, Anda perlu Pelatihan Keterampilan Forklift (技能講習). Bagi pemegang SIM mobil biasa, durasinya sekitar 31 jam — biasanya 4 hari. Tokubetsu-kyoiku (特別教育) hanya untuk forklift di bawah 1 ton. Forklift 2 ton = wajib gino-koshu. 🇯🇵 TIPS: Sertifikat forklift (di lokasi sering disebut フォークリフト免許) adalah salah satu keterampilan tambahan paling berguna di pabrik Jepang — Anda bisa membantu memindahkan material di antara pekerjaan las.",
     },
   },
   9: {
@@ -250,24 +250,24 @@ export const Q_I18N = {
   },
   12: {
     vi: {
-      q: "Kính mũ hàn số che sáng (遮光番号) nào được khuyến nghị cho hàn bán tự động khoảng 150A?",
+      q: "Theo hướng dẫn JIS (JIS T 8141), hàn que (被覆アーク溶接) ở khoảng 150A nên dùng kính số mấy (遮光度番号)?",
       opts: [
-        "Số #3–4 — mức kính râm thường",
-        "Số #16 trở lên — bảo vệ tối đa",
-        "Số #1 — kính gần như trong suốt",
-        "Số #10–11 — chuẩn cho hàn hồ quang 100–200A",
+        "Số 3–4 — mức kính râm",
+        "Số 16 trở lên — bảo vệ tối đa",
+        "Số 1 — kính gần như trong suốt",
+        "Số 9–11 — dải hướng dẫn JIS cho hàn que 75–200A",
       ],
-      exp: "Với hàn hồ quang 100–200A, JIS khuyến nghị số che sáng #10–11 (遮光番号10〜11). Dòng càng cao, số càng lớn. Mũ hàn không có kính che đúng có thể gây tổn thương mắt nghiêm trọng (đau mắt hàn / 電気性眼炎). Không bao giờ nhìn hồ quang mà không bảo vệ đúng. 🇯🇵 MẸO: Triệu chứng đau mắt hàn (電気性眼炎) xuất hiện 6–12 giờ SAU khi phơi nhiễm — trên công trường gọi là '目がやける'. Nếu sáng hôm sau mắt cộm hoặc đau, đi khám mắt ngay. Chữa sớm rất đơn giản.",
+      exp: "Hướng dẫn sử dụng trong JIS T 8141 cho hàn que 75–200A là kính số 9–11 (theo giải thích của Hiệp hội Kỹ thuật Hàn Nhật Bản). Dòng điện càng cao, số càng lớn; kính quá tối sẽ khó nhìn vũng hàn. Không đúng số kính có nguy cơ bỏng mắt do hồ quang (電気性眼炎). 🇯🇵 MẸO: Triệu chứng bỏng mắt xuất hiện vài giờ SAU khi tiếp xúc — thường vào ban đêm. Nếu mắt cộm hoặc đau sau khi hàn, hãy đi khám mắt.",
     },
     id: {
-      q: "Nomor shade lensa topeng las (遮光番号) berapa yang disarankan untuk las semi-otomatis sekitar 150A?",
+      q: "Berapa nomor kegelapan lensa (遮光度番号) menurut panduan JIS (JIS T 8141) untuk las elektroda terbungkus (被覆アーク溶接) sekitar 150A?",
       opts: [
-        "Shade #3–4 — setara kacamata hitam biasa",
-        "Shade #16 atau lebih — perlindungan maksimum",
-        "Shade #1 — lensa hampir bening",
-        "Shade #10–11 — standar untuk las busur 100–200A",
+        "Nomor 3–4 — setingkat kacamata hitam",
+        "Nomor 16 atau lebih — perlindungan maksimum",
+        "Nomor 1 — lensa hampir bening",
+        "Nomor 9–11 — rentang panduan JIS untuk las elektroda 75–200A",
       ],
-      exp: "Untuk las busur 100–200A, JIS menyarankan shade #10–11 (遮光番号10〜11). Semakin tinggi arus, semakin tinggi shade. Topeng las tanpa kaca shade yang benar bisa merusak mata serius (mata las / 電気性眼炎). Jangan pernah melihat busur tanpa pelindung tepat. 🇯🇵 TIPS: Gejala mata las (電気性眼炎) muncul 6–12 jam SETELAH paparan — di lokasi disebut '目がやける'. Jika pagi berikutnya mata terasa berpasir atau nyeri, segera ke dokter mata. Pengobatan mudah bila cepat ditangani.",
+      exp: "Panduan penggunaan dalam JIS T 8141 memberi nomor 9–11 untuk las elektroda terbungkus 75–200A (seperti dijelaskan Japan Welding Engineering Society). Arus lebih tinggi = nomor lebih besar; lensa terlalu gelap membuat kolam las sulit terlihat. Tanpa lensa yang tepat ada risiko mata terbakar busur (電気性眼炎). 🇯🇵 TIPS: Gejala mata terbakar busur muncul beberapa jam SETELAH paparan — sering malam hari. Jika mata terasa berpasir atau sakit setelah mengelas, periksakan ke dokter mata.",
     },
   },
   13: {
@@ -362,22 +362,22 @@ export const Q_I18N = {
     vi: {
       q: "Phát biểu nào về thông gió khi hàn ở Nhật là KHÔNG đúng?",
       opts: [
-        "Mở một cửa sổ gần đó luôn đủ để thông gió cho mọi việc hàn trong nhà, bất kể kích thước phòng",
-        "Từ sửa đổi luật 2021, thiết bị hút khói không còn là tùy chọn ở khu vực kín",
-        "Hút cục bộ (局所排気装置) thu khói tại nguồn và là cách hiệu quả nhất",
-        "Trong không gian kín, thông gió cưỡng bức là bắt buộc theo luật trước và trong khi hàn",
+        "Mở một cửa sổ gần đó luôn đủ thông gió cho mọi công việc hàn trong nhà, bất kể diện tích phòng",
+        "Từ khi đổi quy định năm 2021, hàn hồ quang trong nhà phải có thông gió chung (全体換気) và đo nồng độ khói hàn để chọn mặt nạ phù hợp",
+        "Thông gió cục bộ (局所排気装置) hút khói tại nguồn và là cách rất hiệu quả",
+        "Trong không gian kín, thông gió phải giữ nồng độ oxy từ 18% trở lên",
       ],
-      exp: "Mở cửa sổ KHÔNG tự động là đủ — mức thông gió tùy vào kích thước phòng, hướng gió, lượng khói hàn và mức độ kín. Một cửa sổ có thể vô dụng trong nhà xưởng lớn không có gió lùa, hoặc trong bồn kín không có cửa sổ. Luật Nhật yêu cầu hiệu suất thông gió đo được thực tế (hút cục bộ hoặc cưỡng bức), không chỉ 'có mở cửa sổ'. 🇯🇵 MẸO: Bộ hút khói gắn ngay súng hàn gọi là thiết bị '溶接ヒューム対策'. Từ thay đổi luật 2021, dùng nó không còn là tùy chọn ở khu kín — giám sát sẽ ngăn bạn hàn nếu thiếu.",
+      exp: "Mở cửa sổ KHÔNG tự động đủ — còn tùy diện tích phòng, luồng gió và lượng khói. Từ tháng 4/2021, khói hàn được quản lý như hóa chất đặc định: với hàn hồ quang liên tục trong nhà, chủ phải bố trí thông gió chung (全体換気), đo nồng độ khói hàn và cấp mặt nạ chọn theo kết quả đo (có kiểm tra độ kín). Trong không gian kín phải giữ oxy từ 18% trở lên. 🇯🇵 MẸO: Nếu công ty đo nồng độ khói, kết quả sẽ quyết định bạn phải đeo loại mặt nạ nào — hãy làm đúng.",
     },
     id: {
       q: "Pernyataan mana tentang ventilasi las di Jepang yang TIDAK benar?",
       opts: [
-        "Membuka jendela di dekatnya selalu cukup untuk ventilasi kerja las dalam ruangan apa pun, tanpa memandang ukuran ruang",
-        "Sejak revisi hukum 2021, alat penyedot asap tidak lagi opsional di area tertutup",
-        "Ventilasi buang lokal (局所排気装置) menangkap asap di sumbernya dan paling efektif",
-        "Di ruang tertutup, ventilasi paksa wajib secara hukum sebelum dan selama pengelasan",
+        "Membuka jendela di dekatnya selalu cukup untuk ventilasi semua pekerjaan las di dalam ruangan, berapa pun luas ruangannya",
+        "Sejak perubahan aturan 2021, las busur di dalam ruangan wajib memakai ventilasi umum (全体換気) dan mengukur konsentrasi asap las untuk memilih masker yang sesuai",
+        "Ventilasi lokal (局所排気装置) menangkap asap di sumbernya dan merupakan cara yang sangat efektif",
+        "Di ruang terbatas, ventilasi harus menjaga kadar oksigen 18% atau lebih",
       ],
-      exp: "Membuka jendela TIDAK otomatis cukup — kecukupan ventilasi bergantung pada ukuran ruang, arah aliran udara, jumlah asap las, dan apakah ruang tertutup. Satu jendela bisa tak berguna di hanggar besar tanpa angin silang, atau di tangki tertutup tanpa jendela. Hukum Jepang mensyaratkan kinerja ventilasi terukur nyata (buang lokal atau paksa), bukan sekadar 'jendela terbuka'. 🇯🇵 TIPS: Penyedot asap yang menempel langsung pada gun las disebut alat '溶接ヒューム対策'. Sejak perubahan hukum 2021, pemakaiannya tidak lagi opsional di area tertutup — supervisor akan menghentikan Anda mengelas tanpanya.",
+      exp: "Membuka jendela TIDAK otomatis cukup — tergantung luas ruangan, aliran udara, dan jumlah asap. Sejak April 2021, asap las diatur sebagai zat kimia khusus: untuk las busur kontinu di dalam ruangan, pemberi kerja wajib menyediakan ventilasi umum (全体換気), mengukur konsentrasi asap, dan memberi masker yang dipilih dari hasil pengukuran (dengan uji kerapatan). Di ruang terbatas, oksigen harus dijaga 18% atau lebih. 🇯🇵 TIPS: Jika perusahaan mengukur konsentrasi asap, hasilnya menentukan masker yang harus Anda pakai — ikuti dengan tepat.",
     },
   },
   18: {
@@ -477,7 +477,7 @@ export const Q_I18N = {
         "Một thợ hàn làm một mình là ổn — tiết kiệm thời gian",
         "Chỉ hai thợ hàn bên trong không gian kín",
       ],
-      exp: "Luật Nhật (労働安全衛生規則 第585条) yêu cầu một 監視人 (Kanshi-nin) đứng BÊN NGOÀI không gian kín suốt thời gian làm công việc thiếu oxy. Người giám sát theo dõi thợ, canh giờ, giữ thông tin liên lạc khẩn cấp và sẵn sàng gọi 119. KHÔNG BAO GIỜ vào không gian kín một mình — đây là quy tắc bất di bất dịch. 🇯🇵 MẸO: 監視人 phải ở vị trí và không được rời đi làm việc khác — đây là yêu cầu pháp lý nghiêm ngặt, không chỉ là khuyến nghị.",
+      exp: "Quy tắc Phòng ngừa Thiếu oxy (酸素欠乏症等防止規則, Điều 13) yêu cầu có người luôn theo dõi công việc và báo ngay khi có bất thường — 監視人 (Kanshi-nin / người giám sát) đứng bên ngoài không gian kín. Cũng phải chỉ định trưởng nhóm công việc nguy hiểm thiếu oxy (酸素欠乏危険作業主任者). KHÔNG BAO GIỜ vào không gian kín một mình. 🇯🇵 MẸO: 監視人 phải ở đúng vị trí và không được rời đi làm việc khác.",
     },
     id: {
       q: "Anda ditugaskan 酸素欠乏危険作業 (kerja bahaya kekurangan oksigen). Susunan tim minimum yang diwajibkan hukum?",
@@ -487,7 +487,7 @@ export const Q_I18N = {
         "Satu tukang las bekerja sendiri boleh — menghemat waktu",
         "Dua tukang las di dalam ruang tertutup saja",
       ],
-      exp: "Hukum Jepang (労働安全衛生規則 第585条) mewajibkan seorang 監視人 (Kanshi-nin) ditempatkan DI LUAR ruang tertutup setiap saat selama kerja bahaya kekurangan oksigen. Pemantau mengawasi pekerja, memantau waktu, memegang informasi kontak darurat, dan siap menelepon 119. JANGAN PERNAH masuk ruang tertutup sendirian — ini aturan mutlak. 🇯🇵 TIPS: 監視人 harus tetap di posnya dan tidak boleh pergi mengerjakan hal lain — ini syarat hukum ketat, bukan sekadar anjuran.",
+      exp: "Peraturan Pencegahan Kekurangan Oksigen (酸素欠乏症等防止規則, Pasal 13) mewajibkan orang yang terus mengawasi pekerjaan dan segera melapor jika ada kelainan — 監視人 (Kanshi-nin / pengawas siaga) yang berjaga di luar ruang terbatas. Kepala kerja bahaya kekurangan oksigen (酸素欠乏危険作業主任者) juga harus ditunjuk. JANGAN PERNAH masuk ruang terbatas sendirian. 🇯🇵 TIPS: 監視人 harus tetap di posnya dan tidak boleh pergi untuk pekerjaan lain.",
     },
   },
   23: {
@@ -756,24 +756,24 @@ export const Q_I18N = {
   },
   110: {
     vi: {
-      q: "Bạn mượn một 'Yosetsu-men' (溶接面) cho hàn MAG 180A, nhưng kính ghi Số #8 — vốn đúng cho hàn TIG dòng thấp. Bạn nên làm gì?",
+      q: "Bạn mượn mặt nạ hàn 'Yosetsu-men' (溶接面) để hàn que ở 150A, nhưng kính ghi số 5 — mức dùng cho cắt khí, không phải hàn hồ quang. Bạn nên làm gì?",
       opts: [
-        "Cứ dùng — số che sáng chỉ ảnh hưởng nhận màu, không phải an toàn mắt",
-        "Dùng, nhưng chỉ cho mối đính ngắn dưới 10 giây",
-        "Không dùng cho việc này — Số #8 quá sáng cho hàn MAG 180A và có nguy cơ đau mắt hàn (電気性眼炎); mượn mũ có kính Số #10–11",
-        "Dùng, nhưng bù bằng cách đứng xa hồ quang hơn",
+        "Cứ dùng — số kính chỉ ảnh hưởng màu sắc, không liên quan an toàn mắt",
+        "Dùng, nhưng chỉ cho mối hàn đính dưới 10 giây",
+        "Không dùng — số 5 quá sáng cho hàn hồ quang 150A; hãy dùng kính trong dải hướng dẫn JIS số 9–11",
+        "Dùng, nhưng đứng xa hồ quang hơn để bù",
       ],
-      exp: "Yosetsu-men (溶接面) = Mũ hàn. Số che sáng (遮光番号) chỉ độ tối của kính và phải khớp dòng điện và phương pháp: Số #8 có thể hợp TIG dòng thấp, nhưng cho MAG/bán tự động 100–200A, JIS khuyến nghị Số #10–11. Kính quá sáng cho lọt nhiều tia UV/IR có hại, gây đau mắt hàn (電気性眼炎) dù phơi nhiễm ngắn hay đứng xa — cả hai cách chữa cháy đều không an toàn. 🇯🇵 MẸO: Khi mượn mũ hàn ở Nhật, luôn kiểm tra số che sáng ghi trên khung kính — đừng đoán. Công trường Nhật thường có nhiều mũ với độ che khác nhau cho các phương pháp khác nhau; lẫn lộn là lỗi phổ biến và nguy hiểm.",
+      exp: "Số kính (遮光度番号) phải phù hợp với phương pháp và dòng điện. Với hàn que 75–200A, hướng dẫn JIS T 8141 là số 9–11. Kính số 5 cho quá nhiều tia UV/IR có hại lọt qua khi hàn hồ quang — hàn ngắn hay đứng xa đều không an toàn. 🇯🇵 MẸO: Khi mượn mặt nạ ở công trường, luôn kiểm tra số kính trên khung kính — đừng đoán.",
     },
     id: {
-      q: "Anda meminjam 'Yosetsu-men' (溶接面) untuk las MAG 180A, tapi lensanya bertanda Shade #8 — yang tepat untuk las TIG amper rendah. Apa yang harus dilakukan?",
+      q: "Anda meminjam helm las 'Yosetsu-men' (溶接面) untuk las elektroda 150A, tetapi lensanya bernomor 5 — tingkat untuk potong gas, bukan las busur. Apa yang harus dilakukan?",
       opts: [
-        "Pakai saja — nomor shade hanya soal persepsi warna, bukan keselamatan mata",
-        "Pakai, tapi hanya untuk las titik pendek di bawah 10 detik",
-        "Jangan pakai untuk pekerjaan ini — Shade #8 terlalu terang untuk las MAG 180A dan berisiko mata las (電気性眼炎); pinjam topeng ber-Shade #10–11",
-        "Pakai, tapi kompensasi dengan berdiri lebih jauh dari busur",
+        "Tetap pakai — nomor lensa hanya soal warna, bukan keselamatan mata",
+        "Pakai, tapi hanya untuk las titik di bawah 10 detik",
+        "Jangan dipakai — nomor 5 terlalu terang untuk las busur 150A; pakai lensa dalam rentang panduan JIS nomor 9–11",
+        "Pakai, tapi berdiri lebih jauh dari busur",
       ],
-      exp: "Yosetsu-men (溶接面) = Topeng las. Nomor shade (遮光番号) menunjukkan kegelapan lensa dan harus cocok dengan amper serta proses: Shade #8 mungkin cocok untuk TIG amper rendah, tapi untuk MAG/semi-otomatis 100–200A, JIS menyarankan Shade #10–11. Lensa terlalu terang meloloskan lebih banyak radiasi UV/IR berbahaya, berisiko mata las (電気性眼炎) meski paparan singkat atau jarak jauh — kedua akal-akalan itu tak aman. 🇯🇵 TIPS: Saat meminjam topeng las di lokasi Jepang, selalu periksa nomor shade tertulis di pemegang lensa — jangan menebak. Lokasi Jepang sering punya beberapa topeng dengan shade berbeda untuk proses berbeda; tertukar adalah kesalahan umum dan berbahaya.",
+      exp: "Nomor lensa (遮光度番号) harus sesuai proses dan arus. Untuk las elektroda 75–200A, panduan JIS T 8141 adalah nomor 9–11. Lensa nomor 5 meloloskan terlalu banyak radiasi UV/IR berbahaya untuk las busur — las singkat atau jarak lebih jauh tidak membuatnya aman. 🇯🇵 TIPS: Saat meminjam helm di lokasi, selalu periksa nomor di dudukan lensa — jangan menebak.",
     },
   },
   111: {
@@ -1020,24 +1020,24 @@ export const Q_I18N = {
   },
   202: {
     vi: {
-      q: "Giám sát nói hôm nay bạn làm việc 'Moriage' (盛り上げ), theo kiểu '立向上進' (Tatemuki-joshin / đứng-lên) hoặc '立向下進' (Tatemuki-kashin / đứng-xuống). Nhật thường ưa hướng nào và vì sao?",
+      q: "Giám sát nói các mối hàn đứng (立向き / tatemuki) hôm nay phải hàn '上進' (joshin, hàn đứng lên) chứ không phải '下進' (kashin, hàn đứng xuống). Vì sao Nhật thường ưu tiên hàn đứng lên cho kết cấu?",
       opts: [
         "Đứng-xuống (下進) được ưa duy nhất vì loại bỏ nhu cầu kỹ thuật lấp hố",
         "Đứng-xuống (下進) được ưa vì nhanh hơn và ngấu sâu hơn đứng-lên",
         "Đứng-lên (上進) được ưa vì thường cho hòa nhập và ngấu tốt hơn, dù chậm hơn đứng-xuống",
-        "Không hướng nào được ưa — Nhật chỉ dùng đứng-xuống cho mọi việc moriage",
+        "Không hướng nào được ưa — Nhật chỉ dùng hàn đứng xuống cho mọi mối hàn đứng",
       ],
-      exp: "Moriage (盛り上げ) = tư thế hàn đứng, chính thức là 立向き姿勢 (Tatemuki-shisei). Trong hàn đứng có hai hướng: 立向上進 (đứng-LÊN) và 立向下進 (đứng-XUỐNG). Đứng-xuống nhanh hơn nhưng ngấu nông hơn; Nhật thường ưa đứng-lên vì hòa nhập và ngấu tốt hơn dù chậm hơn, nhất là mối hàn kết cấu. 🇯🇵 MẸO: 'Moriage' là lóng công trường, không phải tiếng Nhật chuẩn — dùng nó cho thấy bạn thấm văn hóa. Nhưng trong tài liệu chính thức (họp an toàn, báo cáo kiểm tra), luôn dùng thuật ngữ chuẩn 立向き (tatemuki). Trộn lóng vào giấy tờ QC chính thức bị chê.",
+      exp: "Hàn đứng có hai hướng: 立向上進 (hàn đứng LÊN) và 立向下進 (hàn đứng XUỐNG). Hàn xuống nhanh hơn nhưng ngấu nông hơn và dễ không ngấu; hàn lên chậm hơn nhưng ngấu và nóng chảy tốt hơn, nên thường được ưu tiên cho mối hàn kết cấu. 🇯🇵 MẸO: Trong tài liệu chính thức (WPS, biên bản kiểm tra) luôn dùng thuật ngữ chính thức 立向上進 / 立向下進 — tránh tiếng lóng công trường.",
     },
     id: {
-      q: "Supervisor mengatakan hari ini Anda mengerjakan 'Moriage' (盛り上げ), gaya '立向上進' (Tatemuki-joshin / tegak-naik) atau '立向下進' (Tatemuki-kashin / tegak-turun). Arah mana yang umumnya disukai Jepang, dan mengapa?",
+      q: "Supervisor mengatakan las vertikal (立向き / tatemuki) hari ini harus '上進' (joshin, vertikal naik), bukan '下進' (kashin, vertikal turun). Mengapa Jepang umumnya lebih memilih vertikal naik untuk pekerjaan struktur?",
       opts: [
         "Tegak-turun (下進) disukai secara eksklusif karena meniadakan teknik pengisian kawah",
         "Tegak-turun (下進) disukai karena lebih cepat dan penetrasi lebih dalam dari tegak-naik",
         "Tegak-naik (上進) disukai karena umumnya memberi fusi dan penetrasi lebih baik, meski lebih lambat dari tegak-turun",
-        "Tak ada yang disukai — Jepang hanya memakai tegak-turun untuk semua kerja moriage",
+        "Tak ada yang disukai — Jepang hanya memakai vertikal turun untuk semua las vertikal",
       ],
-      exp: "Moriage (盛り上げ) = posisi las tegak, resminya 立向き姿勢 (Tatemuki-shisei). Dalam las tegak ada dua arah: 立向上進 (tegak-NAIK) dan 立向下進 (tegak-TURUN). Tegak-turun lebih cepat tapi penetrasi lebih dangkal; Jepang umumnya menyukai tegak-naik karena fusi dan penetrasi lebih baik meski lebih lambat, terutama untuk las struktur. 🇯🇵 TIPS: 'Moriage' adalah slang lokasi, bukan bahasa Jepang standar — memakainya menunjukkan Anda menyerap budaya. Namun dalam dokumentasi resmi (rapat keselamatan, laporan inspeksi), selalu pakai istilah resmi 立向き (tatemuki). Mencampur slang ke dokumen QC resmi tidak disukai.",
+      exp: "Las vertikal punya dua arah: 立向上進 (vertikal NAIK) dan 立向下進 (vertikal TURUN). Vertikal turun lebih cepat tetapi penetrasinya dangkal dan berisiko kurang fusi; vertikal naik lebih lambat tetapi fusi dan penetrasinya lebih baik, sehingga umumnya dipilih untuk las struktur. 🇯🇵 TIPS: Dalam dokumen resmi (WPS, laporan inspeksi) selalu gunakan istilah resmi 立向上進 / 立向下進 — hindari bahasa gaul lokasi di dokumen QC.",
     },
   },
   203: {
@@ -1350,24 +1350,24 @@ export const Q_I18N = {
   },
   217: {
     vi: {
-      q: "Một thợ nói công việc cần 'Genga' (現合). Điều này nghĩa là gì?",
+      q: "Một thợ nói công việc cần 'Gen-awase' (現合 / げんあわせ). Điều này nghĩa là gì?",
       opts: [
         "Chỉ dùng bản vẽ máy tính",
         "Lắp khớp tại hiện trường — đo và cắt chi tiết ngay tại kết cấu thực vì bản vẽ không đủ hoặc khe hở đã thay đổi",
         "Một loại giấy chứng nhận kiểm tra",
         "Làm thêm giờ cuối tuần",
       ],
-      exp: "Genga (現合) = lắp khớp tại hiện trường / lắp thực địa. Khi chi tiết không khớp bản vẽ chính xác do dung sai chế tạo hoặc thay đổi kết cấu, thợ đo khe thực tế tại chỗ và cắt/chế tạo chi tiết cho vừa. Phổ biến trong đóng tàu và xây dựng dân dụng. 🇯🇵 MẸO: Khi làm genga, LUÔN ghi lại kích thước thực đo và sửa đổi bạn đã làm. Tài liệu công trường Nhật (施工記録 / shiko-kiroku) yêu cầu theo dõi các sửa đổi tại hiện trường. Sửa đổi không ghi chép bị phát hiện khi kiểm tra gây rắc rối giấy tờ nghiêm trọng và có thể phải kiểm tra lại các mối nối liên quan.",
+      exp: "Gen-awase (現合 / げんあわせ) = lắp khớp tại hiện trường. Khi chi tiết không khớp đúng bản vẽ do sai số chế tạo hoặc kết cấu thay đổi, thợ đo khe hở thực tế tại chỗ rồi cắt hoặc chế tạo chi tiết cho vừa. Phổ biến trong đóng tàu và xây dựng. 🇯🇵 MẸO: Khi làm gen-awase, hãy ghi lại kích thước thực đo được và những gì đã thay đổi. Thay đổi tại hiện trường không ghi chép sẽ gây rắc rối lớn khi kiểm tra.",
     },
     id: {
-      q: "Seorang tukang mengatakan pekerjaan butuh 'Genga' (現合). Apa artinya?",
+      q: "Seorang tukang mengatakan pekerjaan butuh 'Gen-awase' (現合 / げんあわせ). Apa artinya?",
       opts: [
         "Memakai gambar komputer saja",
         "Fitting kustom di lokasi — mengukur dan memotong bagian langsung di struktur nyata karena gambar tak cukup atau celah berubah",
         "Sejenis sertifikat inspeksi",
         "Lembur di akhir pekan",
       ],
-      exp: "Genga (現合) = fitting di lokasi / field fitting. Saat bagian tak cocok persis dengan gambar akibat toleransi fabrikasi atau perubahan struktur, pekerja mengukur celah aktual di lokasi dan memotong/membuat bagian agar pas. Umum di pembuatan kapal dan konstruksi sipil. 🇯🇵 TIPS: Saat mengerjakan genga, SELALU catat dimensi aktual yang Anda ukur dan modifikasi yang Anda buat. Dokumentasi lokasi Jepang (施工記録 / shiko-kiroku) mensyaratkan modifikasi lapangan dilacak. Modifikasi lapangan tak terdokumentasi yang ditemukan saat inspeksi menimbulkan masalah dokumen serius dan mungkin memerlukan inspeksi ulang sambungan terkait.",
+      exp: "Gen-awase (現合 / げんあわせ) = penyesuaian di lokasi. Jika komponen tidak persis sesuai gambar karena toleransi fabrikasi atau perubahan struktur, pekerja mengukur celah sebenarnya di lokasi lalu memotong atau membuat komponen agar pas. Umum di galangan kapal dan konstruksi. 🇯🇵 TIPS: Saat melakukan gen-awase, catat ukuran aktual yang Anda ukur dan apa yang diubah. Perubahan di lokasi yang tidak dicatat menimbulkan masalah serius saat inspeksi.",
     },
   },
   218: {
@@ -1401,7 +1401,7 @@ export const Q_I18N = {
         "Thay đầu tiếp điện — dùng trong mọi hàn bán tự động",
         "Đổi que hàn / thanh hàn — chỉ liên quan hàn que (SMAW / 被覆アーク溶接). KHÔNG dùng trong hàn bán tự động",
       ],
-      exp: "Bokae (棒替え) = đổi que hàn. Trong hàn que (SMAW / 被覆アーク溶接), bạn dùng que ngắn cháy hết và phải thay. Từ này CHỈ liên quan hàn que. Ở xưởng đóng tàu và nhà máy dùng FCAW/MAG bán tự động, dây từ cuộn — không cần 'bokae'. Dùng từ này sai chỗ sẽ làm người ta bối rối! 🇯🇵 MẸO: Que hàn phải cất trong tủ khô (乾燥庫 / kanso-ko) ở 40–50°C để tránh hút ẩm. Que ẩm gây nứt hydro và rỗ khí. Trước khi dùng que đã cất, công trường Nhật yêu cầu sấy lại (再乾燥 / sai-kanso) ở nhiệt độ quy định — xem bảng dữ liệu của nhà sản xuất que về thời gian và nhiệt độ.",
+      exp: "Bokae (棒替え) = thay que hàn. Trong hàn que (SMAW / 被覆アーク溶接), que cháy ngắn dần và phải thay — nên từ này chỉ dùng cho hàn que. Hàn bán tự động FCAW/MAG dùng dây từ cuộn nên không có 'bokae'. 🇯🇵 MẸO: Que hàn hydro thấp dễ hút ẩm. Chúng được sấy lại (thường 300–400°C theo hướng dẫn nhà sản xuất) rồi giữ trong tủ giữ nhiệt (khoảng 100–150°C) đến khi dùng. Que ẩm gây nứt do hydro và rỗ khí.",
     },
     id: {
       q: "Senior berkata Anda perlu 'Bokae' (棒替え) segera. Apa artinya — dan relevan untuk proses las mana?",
@@ -1411,7 +1411,7 @@ export const Q_I18N = {
         "Ganti contact tip — dipakai di semua las semi-otomatis",
         "Ganti elektroda / batang las — relevan untuk SMAW (las busur/被覆アーク溶接) saja. TIDAK dipakai di las semi-otomatis",
       ],
-      exp: "Bokae (棒替え) = ganti elektroda. Pada las busur (SMAW / 被覆アーク溶接), Anda memakai batang elektroda pendek yang habis terbakar dan harus diganti. Kata ini HANYA relevan untuk las busur. Di galangan dan pabrik yang memakai FCAW/MAG semi-otomatis, kawat dari gulungan — tak perlu 'bokae'. Memakai kata ini di lokasi yang salah akan membingungkan orang! 🇯🇵 TIPS: Elektroda las harus disimpan dalam lemari kering (乾燥庫 / kanso-ko) pada 40–50°C untuk mencegah penyerapan lembap. Elektroda basah menyebabkan retak hidrogen dan porositas. Sebelum memakai elektroda simpanan, lokasi Jepang mensyaratkan pengeringan ulang (再乾燥 / sai-kanso) pada suhu tertentu — periksa lembar data pabrikan elektroda untuk waktu dan suhu.",
+      exp: "Bokae (棒替え) = ganti elektroda. Pada las elektroda terbungkus (SMAW / 被覆アーク溶接), elektroda terbakar habis dan harus diganti — jadi kata ini hanya untuk las elektroda. Las semi-otomatis FCAW/MAG memakai kawat dari gulungan, jadi tidak ada 'bokae'. 🇯🇵 TIPS: Elektroda hidrogen rendah menyerap kelembapan. Elektroda dikeringkan ulang (biasanya 300–400°C sesuai petunjuk pabrik) lalu disimpan di oven penahan (sekitar 100–150°C) sampai dipakai. Elektroda lembap menyebabkan retak hidrogen dan porositas.",
     },
   },
   220: {
@@ -2105,7 +2105,7 @@ export const Q_I18N = {
         "UT tốt hơn để phát hiện nứt bề mặt thấy được bằng mắt",
         "UT giỏi phát hiện khuyết tật DẠNG PHẲNG — nứt, thiếu hòa nhập (融合不良), thiếu ngấu. Các khuyết tật phẳng này phản xạ sóng âm mạnh ngay cả khi RT bỏ sót",
       ],
-      exp: "UT (Kiểm tra siêu âm) phát sóng âm tần số cao vào kim loại. Khuyết tật phẳng (nứt, đường hòa nhập, tách lớp) phản xạ âm mạnh về đầu dò — phát hiện tuyệt vời. RT (tia X) tốt hơn cho khuyết tật thể tích (rỗ tròn, xỉ). Với mối hàn quan trọng ở xưởng đóng tàu và tòa nhà Nhật, thường cần CẢ UT lẫn RT. 🇯🇵 MẸO: Ở Nhật, người vận hành UT (超音波探傷士) là chuyên gia có giấy phép quốc gia. Phán đoán của họ có thẩm quyền — nếu họ nói 'yokogiri no echo ga aru' (横切りのエコーがある / có tiếng vọng nứt ngang), công việc dừng. Đừng tranh cãi với người vận hành UT. Chứng chỉ của họ tốn nhiều năm để đạt.",
+      exp: "UT (Siêu âm) truyền sóng âm tần số cao vào kim loại. Khuyết tật dạng phẳng (nứt, không ngấu, tách lớp) phản xạ âm mạnh về đầu dò nên UT phát hiện tốt. RT (tia X) tốt hơn cho khuyết tật dạng khối (rỗ tròn, xỉ). Với mối hàn quan trọng có thể cần cả hai. 🇯🇵 MẸO: Ở Nhật, kỹ thuật viên UT được chứng nhận theo JIS Z 2305 bởi Hiệp hội Kiểm tra Không phá hủy Nhật Bản (日本非破壊検査協会). Đánh giá của họ quyết định đạt hay không — nếu họ thấy chỉ thị, hãy sửa thay vì tranh cãi.",
     },
     id: {
       q: "'UT' (Cho-onpa-tansho / 超音波探傷試験) unggul mendeteksi apa dibanding RT?",
@@ -2115,7 +2115,7 @@ export const Q_I18N = {
         "UT lebih baik mendeteksi retak permukaan yang terlihat mata",
         "UT unggul mendeteksi cacat PLANAR — retak, lack of fusion (融合不良), lack of penetration. Cacat planar ini memantulkan gelombang suara kuat bahkan saat RT melewatkannya",
       ],
-      exp: "UT (Ultrasonic Testing) mengirim gelombang suara frekuensi tinggi ke logam. Cacat planar (retak, garis fusi, laminasi) memantulkan suara kuat kembali ke probe — deteksi sangat baik. RT (sinar-X) lebih baik untuk cacat volumetrik (pori bulat, terak). Untuk las kritis di galangan dan bangunan Jepang, sering diperlukan UT DAN RT. 🇯🇵 TIPS: Di Jepang, operator UT (超音波探傷士) adalah profesional berlisensi nasional khusus. Penilaian mereka otoritatif — jika mereka berkata 'yokogiri no echo ga aru' (横切りのエコーがある / ada eko retak melintang), pekerjaan berhenti. Jangan berdebat dengan operator UT. Sertifikasi mereka butuh bertahun-tahun untuk diraih.",
+      exp: "UT (Uji Ultrasonik) mengirim gelombang suara frekuensi tinggi ke logam. Cacat planar (retak, kurang fusi, laminasi) memantulkan suara kuat ke probe, sehingga UT mendeteksinya dengan baik. RT (sinar X) lebih baik untuk cacat volumetrik (pori bulat, terak). Untuk las kritis, keduanya bisa diwajibkan. 🇯🇵 TIPS: Di Jepang, teknisi UT disertifikasi menurut JIS Z 2305 oleh Japanese Society for Non-Destructive Inspection (日本非破壊検査協会). Penilaian mereka menentukan diterima atau tidak — jika mereka menemukan indikasi, perbaiki, jangan berdebat.",
     },
   },
   412: {
@@ -2127,7 +2127,7 @@ export const Q_I18N = {
         "Gọi là 'Cho-onpa' — giống kiểm tra siêu âm",
         "Không có lo ngại an toàn với RT — mức phóng xạ rất thấp",
       ],
-      exp: "RT được gọi là Rentogen (レントゲン) trên công trường Nhật — lóng cho tia X từ nhà vật lý Đức Röntgen. Khi làm RT: thiết lập vùng quản lý phóng xạ bắt buộc (放射線管理区域). TẤT CẢ công nhân phải sơ tán trước khi chụp. Cán bộ an toàn đặc biệt (放射線取扱主任者) quản lý quy trình. Kết quả RT được ghi vĩnh viễn lên phim — khác UT, phim là hồ sơ chất lượng vĩnh viễn. 🇯🇵 MẸO: Khi thông báo 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Chúng tôi chụp X-quang — vui lòng chờ) vang lên, MỌI người dừng ngay và di chuyển đến khu chờ chỉ định. Tiếp tục làm việc trong vùng phóng xạ là vi phạm hình sự nghiêm trọng. Điều này không thương lượng.",
+      exp: "RT ở công trường Nhật được gọi là Rentogen (レントゲン) — theo tên nhà vật lý người Đức Röntgen. Khi chụp RT, khu vực kiểm soát bức xạ (管理区域) được thiết lập và mọi người phải rời đi trước khi chụp. Với thiết bị tia X phải chỉ định trưởng nhóm công việc tia X (エックス線作業主任者). Kết quả RT lưu trên phim làm hồ sơ chất lượng lâu dài. 🇯🇵 MẸO: Khi nghe 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Chuẩn bị chụp X-quang — xin chờ), hãy dừng ngay và đến khu vực chờ.",
     },
     id: {
       q: "'RT' (Hoshasen-toka-shiken / 放射線透過試験) biasa disebut apa di lokasi Jepang, dan apa implikasi keselamatannya?",
@@ -2137,7 +2137,7 @@ export const Q_I18N = {
         "Disebut 'Cho-onpa' — sama dengan uji ultrasonik",
         "Tak ada masalah keselamatan dengan RT — tingkat radiasi sangat rendah",
       ],
-      exp: "RT disebut Rentogen (レントゲン) di lokasi Jepang — slang untuk sinar-X dari fisikawan Jerman Röntgen. Saat RT: zona pengelolaan radiasi wajib (放射線管理区域) ditetapkan. SEMUA pekerja harus evakuasi sebelum penembakan. Petugas keselamatan khusus (放射線取扱主任者) mengelola prosesnya. Hasil RT dicatat permanen pada film — tidak seperti UT, film berfungsi sebagai rekaman mutu permanen. 🇯🇵 TIPS: Saat pengumuman 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Kami menembak X-ray — harap menunggu) dibuat di lokasi, SEMUA ORANG langsung berhenti dan pindah ke area tunggu yang ditentukan. Melanjutkan kerja di zona radiasi adalah pelanggaran pidana serius. Ini tak bisa ditawar.",
+      exp: "RT disebut Rentogen (レントゲン) di lokasi Jepang — dari nama fisikawan Jerman Röntgen. Saat RT, area kendali radiasi (管理区域) dibuat dan semua orang harus keluar sebelum pemotretan. Untuk peralatan sinar X, kepala kerja sinar X (エックス線作業主任者) harus ditunjuk. Hasil RT tersimpan di film sebagai catatan mutu permanen. 🇯🇵 TIPS: Saat mendengar 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / Akan memotret sinar X — harap menunggu), segera berhenti dan pindah ke area tunggu.",
     },
   },
   413: {
@@ -2237,7 +2237,7 @@ export const Q_I18N = {
         "Nung trước thấp + tấm dày + chỉ phương pháp FCAW",
         "Dòng cao + tốc độ nhanh + sai dây",
       ],
-      exp: "Nứt nguội (低温割れ) cần CẢ BA: 1) Hydro khuếch tán (từ ẩm, vật liệu nhiễm bẩn, hoặc que không phải loại ít hydro). 2) Tổ chức cứng nhạy cảm (mactenxit ở HAZ — từ thép carbon đương lượng cao hoặc nguội nhanh). 3) Ứng suất kéo (dư hoặc tác dụng). Loại bỏ BẤT KỲ một điều là nứt không thể hình thành. Giải pháp: nung trước + vật liệu ít hydro + PWHT. 🇯🇵 MẸO: Ở Nhật, que hàn cho việc kết cấu quan trọng được cất trong lò sấy que (乾燥炉 / kansou-ro) ở 300–350°C trước khi dùng, mỗi thợ chỉ lấy đủ cho một ca. Để que ngoài trời ẩm là chúng hút ẩm — và ẩm đó thành hydro khuếch tán trong mối hàn. Tổ trưởng Nhật coi việc cất que rất nghiêm túc.",
+      exp: "Nứt nguội (低温割れ) cần ĐỦ CẢ BA: 1) hydro khuếch tán (từ hơi ẩm, bẩn, hoặc vật liệu hàn không phải loại hydro thấp), 2) tổ chức cứng dễ nứt (ví dụ martensite ở vùng HAZ do đương lượng carbon cao hoặc nguội nhanh), và 3) ứng suất kéo (dư hoặc tác dụng). Loại bỏ một yếu tố là ngăn được nứt — vì vậy cần gia nhiệt trước, vật liệu hydro thấp và PWHT khi có quy định. 🇯🇵 MẸO: Que hydro thấp được sấy lại trong lò sấy (乾燥炉 / kansou-ro) và giữ ấm trong tủ giữ nhiệt; chỉ lấy ra lượng đủ dùng cho một ca.",
     },
     id: {
       q: "Retak dingin (低温割れ / Teion-ware) disebut 'retak akibat hidrogen'. TIGA kondisi apa yang harus SEMUA ada agar retak dingin terbentuk?",
@@ -2247,7 +2247,7 @@ export const Q_I18N = {
         "Preheat rendah + pelat tebal + hanya proses FCAW",
         "Arus tinggi + jalan cepat + kawat salah",
       ],
-      exp: "Retak dingin (低温割れ) membutuhkan KETIGANYA: 1) Hidrogen difusi (dari kelembapan, material terkontaminasi, atau elektroda bukan rendah hidrogen). 2) Mikrostruktur keras rentan (martensit di HAZ — dari baja karbon ekuivalen tinggi atau pendinginan cepat). 3) Tegangan tarik (sisa atau terapan). Hilangkan SALAH SATU maka retak tak bisa terbentuk. Solusi: preheat + material rendah hidrogen + PWHT. 🇯🇵 TIPS: Di Jepang, elektroda las untuk pekerjaan struktur kritis disimpan dalam oven elektroda (乾燥炉 / kansou-ro) pada 300–350°C sebelum dipakai, dan tiap tukang mengambil hanya sesuai kebutuhan satu sesi. Membiarkan elektroda di luar pada hari lembap berarti menyerap kelembapan — dan kelembapan itu menjadi hidrogen difusi di las Anda. Mandor Jepang menanggapi penyimpanan elektroda dengan sangat serius.",
+      exp: "Retak dingin (低温割れ) membutuhkan KETIGANYA: 1) hidrogen difusi (dari kelembapan, kontaminasi, atau bahan las non-hidrogen rendah), 2) struktur mikro keras yang rentan (mis. martensit di HAZ karena karbon ekuivalen tinggi atau pendinginan cepat), dan 3) tegangan tarik (sisa atau beban). Hilangkan salah satunya maka retak tercegah — karena itu pemanasan awal, bahan las hidrogen rendah, dan PWHT bila disyaratkan. 🇯🇵 TIPS: Elektroda hidrogen rendah dikeringkan ulang di oven pengering (乾燥炉 / kansou-ro) dan disimpan hangat di oven penahan; ambil hanya sebanyak yang dibutuhkan untuk satu sesi.",
     },
   },
   418: {
@@ -2347,7 +2347,7 @@ export const Q_I18N = {
         "Không — Cấp cơ bản (基本級) CHỈ bao tư thế bằng (下向き / 1G); ngang, đứng, trần và ống cần chứng chỉ Senmon-kyu (専門級 / Cấp chuyên môn)",
         "Được, nhưng chỉ khi có ít nhất 2 năm kinh nghiệm để bù",
       ],
-      exp: "Kihon-kyu (基本級) = Cấp cơ bản, điểm khởi đầu chứng chỉ JIS, CHỈ bao tư thế bằng (下向き / 1G). Senmon-kyu (専門級) = Cấp chuyên môn, bao thêm các tư thế: ngang (2G), đứng (3G), trần (4G) và ống (P). Kinh nghiệm không thay được phạm vi chứng chỉ — việc 2G theo luật cần thi Cấp chuyên môn, bất kể thợ tự thấy kinh nghiệm thế nào. 🇯🇵 MẸO: Nhiều lao động nước ngoài bắt đầu với JIS Cấp cơ bản vì thi tư thế bằng dễ tiếp cận nhất, nhưng công trường Nhật nhanh chóng hỏi 'tate-muki dekiru?' (立向きできる？ / hàn đứng được không?) — Cấp chuyên môn mở ra nhiều cơ hội việc hơn.",
+      exp: "Kihon-kyu (基本級) = Cấp Cơ bản, cấp đầu tiên của chứng chỉ JIS, chỉ bao gồm tư thế bằng (下向き / 1G). Senmon-kyu (専門級) = Cấp Chuyên môn bao gồm các tư thế khác: ngang (2G), đứng (3G), trần (4G) và ống (P). Chứng chỉ JIS không phải giấy phép theo luật, nhưng khi tiêu chuẩn công việc yêu cầu chứng chỉ tư thế ngang, chủ và khách hàng sẽ yêu cầu Cấp Chuyên môn tương ứng — kinh nghiệm không thay thế được. 🇯🇵 MẸO: Công trường Nhật hay hỏi 'tate-muki dekiru?' (立向きできる？ / hàn đứng được không?) — Cấp Chuyên môn mở ra nhiều việc hơn.",
     },
     id: {
       q: "Seorang tukang hanya memegang sertifikasi JIS 'Kihon-kyu' (基本級 / Grade Dasar). Supervisor bertanya apakah ia bisa mengambil pekerjaan yang butuh las 2G (posisi mendatar). Bisakah ia, hanya berdasarkan Grade Dasar?",
@@ -2357,7 +2357,7 @@ export const Q_I18N = {
         "Tidak — Grade Dasar (基本級) HANYA mencakup posisi datar (下向き / 1G); mendatar, tegak, overhead, dan pipa memerlukan sertifikasi Senmon-kyu (専門級 / Grade Spesialis)",
         "Ya, tapi hanya jika ia punya minimal 2 tahun pengalaman untuk mengompensasi",
       ],
-      exp: "Kihon-kyu (基本級) = Grade Dasar, titik masuk sertifikasi JIS, HANYA mencakup posisi datar (下向き / 1G). Senmon-kyu (専門級) = Grade Spesialis, yang mencakup posisi tambahan: mendatar (2G), tegak (3G), overhead (4G), dan pipa (P). Pengalaman kerja tak menggantikan cakupan sertifikasi — pekerjaan 2G secara hukum butuh uji Grade Spesialis, tak peduli seberapa berpengalaman tukang merasa. 🇯🇵 TIPS: Banyak pekerja asing mulai dengan JIS Grade Dasar karena uji posisi datar paling mudah dijangkau, tapi lokasi Jepang cepat bertanya 'tate-muki dekiru?' (立向きできる？ / bisa tegak?) — Grade Spesialis membuka jauh lebih banyak peluang kerja.",
+      exp: "Kihon-kyu (基本級) = Grade Dasar, titik awal sertifikasi JIS, hanya mencakup posisi datar (下向き / 1G). Senmon-kyu (専門級) = Grade Spesialis mencakup posisi lain: mendatar (2G), tegak (3G), overhead (4G), dan pipa (P). Sertifikasi JIS bukan lisensi hukum, tetapi jika spesifikasi pekerjaan meminta kualifikasi posisi mendatar, pemberi kerja dan klien mewajibkan Grade Spesialis yang sesuai — pengalaman saja tidak menggantikannya. 🇯🇵 TIPS: Lokasi kerja Jepang cepat bertanya 'tate-muki dekiru?' (立向きできる？ / bisa las tegak?) — Grade Spesialis membuka lebih banyak pekerjaan.",
     },
   },
   503: {
@@ -2472,24 +2472,24 @@ export const Q_I18N = {
   },
   508: {
     vi: {
-      q: "Cần HAI giấy phép nào để làm 'Thợ hàn dưới nước' (水中溶接士) ở Nhật?",
+      q: "Để làm 'Thợ hàn dưới nước' (水中溶接士) ở Nhật, cần tổ hợp nào?",
       opts: [
-        "Giấy phép Lặn (潜水士 / Sensui-shi) + Chứng chỉ hàn (JIS hoặc tương đương). Cả hai bắt buộc — không được lặn VÀ hàn hợp pháp nếu thiếu một",
-        "Bất kỳ hai chứng chỉ an toàn nào",
+        "Giấy phép Lặn (潜水士 / Sensui-shi, bắt buộc theo luật cho công việc lặn) + đào tạo và kỹ năng hàn (An toàn Hàn hồ quang theo luật; chủ thường yêu cầu chứng chỉ JIS)",
+        "Hai chứng chỉ an toàn bất kỳ",
         "Chứng chỉ JIS + Bằng lái xe",
-        "Chỉ Thợ hàn nồi hơi + An toàn Hàn hồ quang",
+        "Chỉ cần Thợ hàn nồi hơi + An toàn Hàn hồ quang",
       ],
-      exp: "Thợ hàn dưới nước = Giấy phép lặn quốc gia Sensui-shi (潜水士) + chứng chỉ hàn (khuyến nghị JIS cấp chuyên môn). Giấy phép lặn chỉ cần thi viết (không thực hành) — tỷ lệ đậu ~75%. Kỹ năng hàn rồi phải áp dụng trong môi trường hoàn toàn khác. Kết hợp rất hiếm. Thu nhập năm: 700–1.000 vạn yên. Thợ lặn bão hòa hàng đầu: 1.000–1.500 vạn yên. 🇯🇵 MẸO: Ở Nhật, việc hàn dưới nước (水中溶接) tập trung ở cảng (港湾), kết cấu ngoài khơi và sửa đập. Chủ thuê thợ hàn dưới nước thường trả chi phí di chuyển và sinh hoạt, cộng phụ cấp nguy hiểm. Cộng đồng thợ hàn dưới nước đủ điều kiện ở Nhật rất nhỏ — một khi được biết, bạn sẽ được gọi. Xây dựng uy tín về độ tin cậy và ý thức an toàn còn giá trị hơn bất kỳ bằng cấp đơn lẻ nào trong lĩnh vực này.",
+      exp: "Công việc lặn ở Nhật bắt buộc theo luật phải có Giấy phép Lặn (潜水士), giấy phép quốc gia chỉ thi viết. Về phần hàn, khóa An toàn Hàn hồ quang (アーク溶接特別教育) là mức tối thiểu theo luật, và chủ thường yêu cầu chứng chỉ thợ hàn JIS (ưu tiên Cấp Chuyên môn mọi tư thế). 🇯🇵 MẸO: Công việc hàn dưới nước ở Nhật tập trung ở cảng (港湾), công trình ngoài khơi và sửa đập. Cộng đồng nhỏ — uy tín về độ tin cậy và an toàn rất quan trọng.",
     },
     id: {
-      q: "DUA lisensi apa yang diperlukan untuk bekerja sebagai 'Tukang Las Bawah Air' (水中溶接士) di Jepang?",
+      q: "Untuk bekerja sebagai 'Tukang Las Bawah Air' (水中溶接士) di Jepang, kombinasi apa yang diperlukan?",
       opts: [
-        "Lisensi Menyelam (潜水士 / Sensui-shi) + kualifikasi las (JIS atau setara). Keduanya wajib — Anda tak bisa menyelam DAN mengelas secara legal tanpa keduanya",
-        "Dua sertifikat pelatihan keselamatan apa saja",
+        "Lisensi Selam (潜水士 / Sensui-shi, wajib menurut hukum untuk pekerjaan selam) + pelatihan dan keterampilan las (Pelatihan Las Busur menurut hukum; sertifikasi JIS diharapkan pemberi kerja)",
+        "Dua sertifikat keselamatan apa saja",
         "Sertifikasi JIS + SIM",
-        "Tukang Las Boiler + Pelatihan Keselamatan Las Busur saja",
+        "Hanya Tukang Las Boiler + Pelatihan Las Busur",
       ],
-      exp: "Tukang Las Bawah Air = Lisensi menyelam nasional Sensui-shi (潜水士) + kualifikasi las (disarankan JIS grade spesialis). Lisensi menyelam hanya butuh ujian tertulis (tanpa praktik) — tingkat lulus ~75%. Keterampilan las lalu harus diterapkan di lingkungan yang sama sekali berbeda. Kombinasi sangat langka. Pendapatan tahunan: ¥7–10 juta. Penyelam saturasi teratas: ¥10–15 juta. 🇯🇵 TIPS: Di Jepang, pekerjaan las bawah air (水中溶接) terpusat di pelabuhan (港湾), struktur lepas pantai, dan perbaikan bendungan. Pemberi kerja yang merekrut tukang las bawah air biasanya membayar relokasi dan biaya hidup, plus tunjangan bahaya. Komunitas tukang las bawah air berkualifikasi di Jepang sangat kecil — begitu dikenal, Anda akan dipanggil. Membangun reputasi keandalan dan kesadaran keselamatan lebih berharga daripada kredensial tunggal mana pun di bidang ini.",
+      exp: "Pekerjaan selam di Jepang secara hukum mewajibkan Lisensi Selam (潜水士), lisensi nasional dengan ujian tertulis saja. Untuk bagian las, Pelatihan Keselamatan Las Busur (アーク溶接特別教育) adalah minimum menurut hukum, dan pemberi kerja biasanya mengharapkan sertifikasi tukang las JIS (diutamakan Grade Spesialis semua posisi). 🇯🇵 TIPS: Pekerjaan las bawah air di Jepang terpusat di pelabuhan (港湾), struktur lepas pantai, dan perbaikan bendungan. Komunitasnya kecil — reputasi andal dan sadar keselamatan sangat penting.",
     },
   },
   509: {
@@ -2497,21 +2497,21 @@ export const Q_I18N = {
       q: "'WES' trong hàn Nhật là gì, và đại diện cho cấp chứng chỉ nào?",
       opts: [
         "WES = Tiêu chuẩn Thiết bị Hàn — chứng chỉ cho máy hàn",
-        "WES = Welding Engineering Standard — chứng chỉ của Hiệp hội Kỹ thuật Hàn Nhật cho kỹ sư quản lý hàn (WES 8103). Cấp: 3 → 2 → 1 → Đặc biệt",
+        "WES = Welding Engineering Standard — tiêu chuẩn của Hiệp hội Kỹ thuật Hàn Nhật Bản; WES 8103 chứng nhận người quản lý hàn ở Cấp 2, Cấp 1 và Cấp Đặc biệt",
         "WES = Western Engineering System — chứng chỉ Mỹ dùng ở Nhật",
         "WES = Welding Examination System — chương trình đào tạo an toàn cơ bản",
       ],
-      exp: "WES (Welding Engineering Standard) = chứng chỉ của Hiệp hội Kỹ thuật Hàn Nhật cho quản lý và kỹ sư hàn. Cấp WES 8103: Cấp 3 (基礎), Cấp 2 (giám sát), Cấp 1 (quản lý), Đặc biệt (特別級 — tương thích ISO, tương đương quốc tế). WES dành cho kỹ sư QUẢN LÝ và GIÁM SÁT hàn, không nhất thiết trực tiếp hàn. Lương cao: 70–90+ vạn yên/năm. 🇯🇵 MẸO: Nhiều thợ Nhật kinh nghiệm chuyển sang vai trò giám sát theo đuổi WES Cấp 2 hoặc 1. Vừa là thợ giỏi VỪA là kỹ sư có WES cực hiếm và được đánh giá rất cao — nghĩa là bạn hiểu công việc cả từ góc thực hành lẫn kỹ thuật. Câu 'Genba ga wakaru enjinia' (現場が分かるエンジニア / kỹ sư hiểu hiện trường) là lời khen cao nhất trong ngành chế tạo.",
+      exp: "WES (Welding Engineering Standard) = tiêu chuẩn của Hiệp hội Kỹ thuật Hàn Nhật Bản (日本溶接協会). WES 8103 chứng nhận người quản lý hàn (溶接管理技術者) ở ba cấp: Cấp 2 (2級), Cấp 1 (1級) và Cấp Đặc biệt (特別級). Đây là chứng chỉ cho người QUẢN LÝ và GIÁM SÁT việc hàn. 🇯🇵 MẸO: Nhiều thợ hàn Nhật giàu kinh nghiệm khi chuyển sang giám sát sẽ thi WES Cấp 2 hoặc Cấp 1. 'Genba ga wakaru enjinia' (現場が分かるエンジニア / kỹ sư hiểu công trường) là lời khen rất cao.",
     },
     id: {
       q: "Apa itu 'WES' dalam las Jepang, dan tingkat kualifikasi apa yang diwakilinya?",
       opts: [
-        "WES = Standar Peralatan Las — sertifikasi untuk mesin las",
-        "WES = Welding Engineering Standard — kualifikasi Japan Welding Engineering Society untuk insinyur manajemen las (WES 8103). Tingkat: Grade 3 → 2 → 1 → Grade Khusus",
+        "WES = Welding Equipment Standard — sertifikasi untuk mesin las",
+        "WES = Welding Engineering Standard — standar Japan Welding Engineering Society; WES 8103 mensertifikasi personel koordinasi las di Grade 2, Grade 1, dan Grade Khusus",
         "WES = Western Engineering System — sertifikasi Amerika yang dipakai di Jepang",
         "WES = Welding Examination System — program pelatihan keselamatan dasar",
       ],
-      exp: "WES (Welding Engineering Standard) = kualifikasi Japan Welding Engineering Society untuk manajer dan insinyur las. Tingkat WES 8103: Grade 3 (基礎), Grade 2 (level pengawas), Grade 1 (level manajer), Grade Khusus (特別級 — selaras ISO, setara internasional). WES untuk insinyur yang MENGELOLA dan MENGAWASI las, tak harus melakukan pengelasan. Gaji tinggi: ¥700.000–900.000+/tahun. 🇯🇵 TIPS: Banyak tukang las Jepang berpengalaman yang pindah ke peran pengawasan mengejar WES Grade 2 atau 1. Menjadi tukang las mahir DAN insinyur berkualifikasi WES sangat langka dan sangat dihargai — artinya Anda memahami pekerjaan dari perspektif praktik maupun rekayasa. Frasa Jepang 'Genba ga wakaru enjinia' (現場が分かるエンジニア / insinyur yang memahami lokasi kerja) adalah pujian tertinggi di industri manufaktur.",
+      exp: "WES (Welding Engineering Standard) = standar Japan Welding Engineering Society (日本溶接協会). WES 8103 mensertifikasi personel koordinasi las (溶接管理技術者) dalam tiga tingkat: Grade 2 (2級), Grade 1 (1級), dan Grade Khusus (特別級). Ini untuk orang yang MENGELOLA dan MENGAWASI pengelasan. 🇯🇵 TIPS: Banyak tukang las Jepang berpengalaman yang pindah ke pengawasan mengambil WES Grade 2 atau Grade 1. 'Genba ga wakaru enjinia' (現場が分かるエンジニア / insinyur yang paham lapangan) adalah pujian tinggi.",
     },
   },
   510: {
@@ -2565,19 +2565,19 @@ export const Q_I18N = {
         "4 atmosphere — 1 atm (mặt nước) + 3 atm (từ 30m = 3 × 10m)",
         "1 atmosphere (chỉ áp suất khí quyển)",
         "2 atmosphere",
-        "3 atmosphere — 1 atm (mặt nước) + 3 atm (từ 30m nước)",
+        "3 atmosphere — 30m ÷ 10m (quên 1 atm của không khí trên mặt nước)",
       ],
-      exp: "Áp suất nước: Mỗi 10m độ sâu thêm ~1 atmosphere. Ở 30m: 1 atm (áp khí quyển ở mặt) + 3 atm (từ 30m nước) = 4 atm tuyệt đối. Áp này ảnh hưởng lặn: tiêu thụ khí tăng, nguy cơ say nitơ tăng, dừng giảm áp thành bắt buộc. Thợ hàn dưới nước phải hiểu phép tính này. 🇯🇵 MẸO: Nhật có quy định an toàn thao tác lặn rất cụ thể (高気圧作業安全衛生規則) bao gồm bảng giảm áp, tốc độ cấp khí và trách nhiệm giám sát. Người giám sát lặn (潜水監督員) chịu trách nhiệm pháp lý cho an toàn mỗi thợ lặn. Khác một số nước, luật Nhật rất nghiêm túc phòng 'bệnh giảm áp' (減圧症) — không đi tắt.",
+      exp: "Mỗi 10m độ sâu tăng khoảng 1 atmosphere. Ở 30m: 1 atm (không khí trên mặt nước) + 3 atm (30m nước) = 4 atm tuyệt đối. Quên áp suất khí quyển sẽ ra đáp án sai là 3. Áp suất cao làm tiêu hao khí nhanh hơn, tăng nguy cơ say nitơ và bắt buộc dừng giảm áp. 🇯🇵 MẸO: Công việc lặn ở Nhật được quản lý bởi Quy tắc An toàn Vệ sinh Công việc Áp suất cao (高気圧作業安全衛生規則), bao gồm giảm áp. Phòng ngừa bệnh giảm áp (減圧症 / genatsushou) được coi trọng — không đi tắt.",
     },
     id: {
       q: "Tekanan air naik sekitar 1 atmosfer tiap 10 meter kedalaman. Berapa tekanan absolut pada kedalaman 30 meter?",
       opts: [
         "4 atmosfer — 1 atm (permukaan) + 3 atm (dari 30m = 3 × 10m)",
-        "1 atmosfer (hanya tekanan atmosfer)",
+        "1 atmosfer (hanya tekanan udara)",
         "2 atmosfer",
-        "3 atmosfer — 1 atm (permukaan) + 3 atm (dari 30m air)",
+        "3 atmosfer — 30m ÷ 10m (lupa 1 atm udara di permukaan)",
       ],
-      exp: "Tekanan air: Tiap 10m kedalaman menambah ~1 atmosfer. Pada 30m: 1 atm (tekanan atmosfer di permukaan) + 3 atm (dari 30m air) = 4 atm absolut. Tekanan ini memengaruhi penyelaman: konsumsi gas naik, risiko narkosis nitrogen naik, henti dekompresi menjadi wajib. Tukang las bawah air harus memahami perhitungan ini. 🇯🇵 TIPS: Jepang punya regulasi keselamatan operasi penyelaman yang sangat spesifik (高気圧作業安全衛生規則) yang mencakup tabel dekompresi, laju pasokan udara, dan tanggung jawab pengawas. Pengawas penyelaman (潜水監督員 / sensui-kantoku-in) bertanggung jawab secara hukum atas keselamatan tiap penyelam. Tak seperti beberapa negara, hukum Jepang sangat serius mencegah 'penyakit dekompresi' (減圧症 / genatsushou) — tanpa jalan pintas.",
+      exp: "Setiap 10m kedalaman menambah sekitar 1 atmosfer. Pada 30m: 1 atm (udara di permukaan) + 3 atm (30m air) = 4 atm absolut. Lupa tekanan udara di permukaan menghasilkan jawaban salah 3. Tekanan tinggi berarti konsumsi gas lebih cepat, risiko narkosis nitrogen lebih besar, dan wajib berhenti dekompresi. 🇯🇵 TIPS: Pekerjaan selam di Jepang diatur oleh Peraturan K3 Kerja Bertekanan Tinggi (高気圧作業安全衛生規則), termasuk dekompresi. Pencegahan penyakit dekompresi (減圧症 / genatsushou) sangat serius — tanpa jalan pintas.",
     },
   },
   513: {
@@ -2809,7 +2809,7 @@ export const Q_I18N = {
         "Tiêu chuẩn mũ bảo hộ Mỹ",
         "Luật xây dựng Nhật",
       ],
-      exp: "AWS D1.1 = Quy chuẩn Hàn Kết cấu — Thép. Quy định thiết kế, chứng nhận WPS/thợ hàn, tay nghề và kiểm tra cho thép kết cấu ở Mỹ và rộng rãi quốc tế. Ở Nhật lĩnh vực tương đương do JIS + Luật Tiêu chuẩn Xây dựng + AW Kentei bao. 🌍 MẸO: Nếu ô tiêu đề bản vẽ ghi 'AWS D1.1', ký hiệu hàn và tiêu chí nghiệm thu theo quy ước Mỹ — xác nhận với QC trước khi hàn, vì logic ký hiệu phía mũi tên khác JIS/ISO.",
+      exp: "AWS D1.1 = Quy chuẩn Hàn Kết cấu — Thép. Quy định thiết kế, chứng nhận WPS/thợ hàn, tay nghề và kiểm tra cho kết cấu thép ở Mỹ và nhiều dự án quốc tế. Ở Nhật, lĩnh vực này do JIS, Luật Tiêu chuẩn Xây dựng và AW Kentei đảm nhận. 🌍 MẸO: Nếu ô tiêu đề bản vẽ ghi 'AWS D1.1', tiêu chí chấp nhận và quy trình theo quy chuẩn đó — xác nhận WPS và quy tắc kiểm tra với QC trước khi hàn. (Quy tắc phía mũi tên của ký hiệu hàn giống JIS: dưới đường = phía mũi tên.)",
     },
     id: {
       q: "Apa itu 'AWS D1.1'?",
@@ -2819,7 +2819,7 @@ export const Q_I18N = {
         "Standar helm keselamatan Amerika",
         "Undang-undang bangunan Jepang",
       ],
-      exp: "AWS D1.1 = Structural Welding Code — Steel. Mengatur desain, kualifikasi WPS/tukang las, mutu pengerjaan, dan inspeksi untuk baja struktur di AS dan luas secara internasional. Domain setara di Jepang dicakup JIS + Undang-Undang Standar Bangunan + AW Kentei. 🌍 TIPS: Jika blok judul gambar menyebut 'AWS D1.1', simbol las dan kriteria penerimaan mengikuti konvensi AS — konfirmasi dengan QC sebelum mengelas, karena logika simbol sisi-panah berbeda dari JIS/ISO.",
+      exp: "AWS D1.1 = Structural Welding Code — Steel. Mengatur desain, kualifikasi WPS/tukang las, mutu kerja, dan inspeksi baja struktur di AS dan banyak proyek internasional. Di Jepang bidang yang sama dicakup JIS, Undang-Undang Standar Bangunan, dan AW Kentei. 🌍 TIPS: Jika blok judul gambar menulis 'AWS D1.1', kriteria penerimaan dan prosedurnya mengikuti kode itu — konfirmasi WPS dan aturan inspeksi dengan QC sebelum mengelas. (Aturan sisi panah simbol las sama dengan JIS: di bawah garis = sisi panah.)",
     },
   },
   604: {
