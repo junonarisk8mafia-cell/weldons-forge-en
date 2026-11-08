@@ -23,10 +23,10 @@ export const QUIZ_STAGES = [
         id: 1, cat: "Legal Permits",
         q: "You just arrived at a Japanese welding site. Which certificate do you LEGALLY need before touching any welding machine?",
         opts: [
-          "Arc Welding Safety Training Certificate — 'Aaku-yosetsu tokubetsu-kyoiku' (アーク溶接特別教育)",
-          "Boiler Welder License — national exam required",
-          "JIS Welder Certification — takes months of practice",
-          "Grinding Wheel Safety Training Certificate — covers grinder use only"
+          "Arc Welding Safety Training (アーク溶接特別教育)",
+          "Boiler Welder License (ボイラー溶接士免許)",
+          "JIS Welder Certification (JIS溶接技能者)",
+          "Gas Welding Skills Training (ガス溶接技能講習)"
         ],
         a: 0, xp: 15,
         exp: "Japanese law (労働安全衛生法) requires the Arc Welding Safety Training Certificate before ANY welding work. 3-day course, approx ¥20,000–40,000. No certificate = illegal to work. No exceptions. 🇯🇵 TIP: Keep your original certificate (原本) safe — many sites take a photocopy on your first day. Lost certificates can be reissued by the training center that issued them."
@@ -35,10 +35,10 @@ export const QUIZ_STAGES = [
         id: 2, cat: "Legal Permits",
         q: "Your supervisor asks you to change the disc on a grinder and test-run it. Which training is LEGALLY required for this job in Japan?",
         opts: [
-          "Forklift License",
-          "Grinding Wheel Safety Training — 'Jiyu-kensakutoishi tokubetsu-kyoiku' (自由研削といし特別教育)",
-          "Arc Welding Safety Training is enough",
-          "Low-Voltage Electrical Safety Training covers grinder discs too"
+          "Forklift Skills Training (フォークリフト技能講習)",
+          "Grinding Wheel Safety Training (自由研削といし特別教育)",
+          "Arc Welding Safety Training (アーク溶接特別教育)",
+          "Low-Voltage Electrical Training (低圧電気取扱特別教育)"
         ],
         a: 1, xp: 15,
         exp: "By law (労働安全衛生規則), changing a grinding wheel and test-running it after the change requires the Grinding Wheel Safety Training (自由研削といし特別教育) — usually a 1-day course. In practice, most Japanese sites require this certificate from anyone who uses a grinder at all. 🇯🇵 TIP: On site it is often called 'グラインダーの資格'. If a supervisor hands you a grinder and asks 'shikaku aru?' (資格ある？ / do you have the cert?), this is the one they mean."
@@ -47,22 +47,22 @@ export const QUIZ_STAGES = [
         id: 3, cat: "Legal Permits",
         q: "You need to connect a welding machine's power cable to terminals inside a distribution board where live parts are exposed. Which training is legally required?",
         opts: [
-          "Grinding Wheel Safety Training is sufficient",
-          "Arc Welding Safety Training already covers this",
-          "Low-Voltage Electrical Safety Training — 'Teiatsu-denki toriatsukai tokubetsu-kyoiku' (低圧電気取扱特別教育)",
-          "Forklift License"
+          "Grinding Wheel Safety Training (自由研削といし特別教育)",
+          "Arc Welding Safety Training (アーク溶接特別教育)",
+          "Low-Voltage Electrical Training (低圧電気取扱特別教育)",
+          "Forklift Skills Training (フォークリフト技能講習)"
         ],
         a: 2, xp: 15,
         exp: "Low-Voltage Electrical Safety Training (低圧電気取扱特別教育) is required for work on low-voltage live circuits (AC 600V or below, DC 750V or below) — such as wiring or connecting cables where live parts are exposed. Simply turning on a welding machine's switch does not need it, but connecting cables to a distribution board does. 🇯🇵 TIP: Many welding companies send new staff to this course so they can handle welding-machine power connections themselves. Never open a live distribution board without it."
       },
       {
         id: 4, cat: "Legal Permits",
-        q: "A heavy steel plate needs to be lifted by crane. You attach the wire rope to the plate. What certification do you need for this work?",
+        q: "A 3-ton steel plate needs to be lifted by crane. You attach the wire rope to the crane hook. What certification do you need for this work?",
         opts: [
-          "Forklift License",
-          "Crane Operator License only",
-          "Tamakake Tokubetsu-kyoiku (玉掛け特別教育) — sufficient for any load weight",
-          "Rigging Certification — 'Tamakake gino-koshu' (玉掛け技能講習)"
+          "Forklift Skills Training (フォークリフト技能講習)",
+          "Crane Special Training only (クレーン特別教育)",
+          "Rigging Special Training (玉掛け特別教育)",
+          "Rigging Skills Training (玉掛け技能講習)"
         ],
         a: 3, xp: 15,
         exp: "Tamakake (玉掛け) is the act of attaching loads to crane hooks for lifting. The Tamakake Gino-koshu (玉掛け技能講習) takes 3 days (~¥20,000–40,000) and legally covers loads of 1 ton or more. Without it, you cannot hook up steel for lifting. 🇯🇵 TIP: On most fabrication sites, even if you are just a welder, you will be expected to do basic tamakake to move your own steel. Getting this cert early makes you far more useful and employable."
@@ -71,10 +71,10 @@ export const QUIZ_STAGES = [
         id: 5, cat: "Legal Permits",
         q: "What is the difference between 'tokubetsu-kyoiku' (特別教育) and 'gino-koshu' (技能講習) in Japan?",
         opts: [
-          "Tokubetsu-kyoiku = safety training course (no exam). Gino-koshu = skills training with a qualification test — broader work scope",
-          "Gino-koshu is the older name for tokubetsu-kyoiku, replaced by law in 2010",
-          "They are the same thing with different names",
-          "Tokubetsu-kyoiku is for managers only"
+          "特別教育 = training with no test; 技能講習 = training with a test, for wider work",
+          "技能講習 is the old name for 特別教育, renamed by law in 2010",
+          "They are the same course — the name depends on the training center",
+          "特別教育 is only for managers; 技能講習 is for site workers"
         ],
         a: 0, xp: 20,
         exp: "Key difference: Tokubetsu-kyoiku (特別教育) is a safety lecture — attend and you pass. Gino-koshu (技能講習) involves actual skills training with a pass/fail test, and unlocks a wider range of work. Example: Tamakake tokubetsu-kyoiku = under 1t only. Tamakake gino-koshu = 1t and above. 🇯🇵 TIP: When discussing certs with Japanese supervisors, saying 'tokubetsu-kyoiku wa arimasu' (特別教育はあります) vs 'gino-koshu wa arimasu' (技能講習はあります) signals completely different capability levels — knowing the difference impresses experienced welders."
@@ -83,10 +83,10 @@ export const QUIZ_STAGES = [
         id: 6, cat: "Legal Permits",
         q: "Since February 2019, workers who use a full-body harness at heights of 2 m or more (where a work floor cannot be installed) must complete what safety training?",
         opts: [
-          "Aerial Work Platform License only",
-          "Full Harness Safety Training — 'Furu-hanesu tokubetsu-kyoiku' (フルハーネス特別教育)",
-          "Crane Operator License",
-          "Body Belt Safety Training — 'Doo-beruto tokubetsu-kyoiku' (胴ベルト特別教育)"
+          "Aerial Work Platform Training (高所作業車特別教育)",
+          "Full Harness Safety Training (フルハーネス特別教育)",
+          "Crane Special Training (クレーン特別教育)",
+          "Scaffold Assembly Training (足場の組立て等特別教育)"
         ],
         a: 1, xp: 15,
         exp: "The rules changed in February 2019: work at 2 m or more using a full-body harness, where a work floor is hard to install, requires Full Harness Safety Training (フルハーネス特別教育, about 1 day). The transition period ended on January 2, 2022 — old-standard belts can no longer be used, and the full harness is now the standard fall-arrest equipment (body belts are allowed only at low heights). 🇯🇵 TIP: Japanese sites do 'KY' (危険予知 / kiken-yochi / hazard prediction) every morning. Height work is always flagged in KY."
@@ -95,10 +95,10 @@ export const QUIZ_STAGES = [
         id: 7, cat: "Legal Permits",
         q: "You want BOTH 'Tamakake' (玉掛け) and 'Kurēn' (クレーン) operation certificates. What is the smartest approach?",
         opts: [
-          "Get Crane first — then Tamakake",
-          "Take Tamakake gino-koshu, then upgrade it later to include crane operation",
-          "Take the combo course (セット講習) — same result in 4–5 days, cheaper overall (~¥70,000–80,000)",
-          "Take them separately for more thorough training"
+          "Get the crane certificate first, then the rigging one a year later",
+          "Take rigging skills training, then upgrade it to cover crane work",
+          "Take a combined rigging + crane course (セット講習) at one center",
+          "Take them separately at different centers for better training"
         ],
         a: 2, xp: 20,
         exp: "Many training centers offer a combo course (玉掛け + クレーン運転特別教育セット). You get both certificates in 4–5 days at a discounted total price (~¥70,000–80,000). Much smarter than taking them separately. 🇯🇵 TIP: Search for '玉掛けクレーンセット講習' at local training centers (労働基準協会 / rodo-kijun-kyokai). Call ahead — some centers offer discounts for groups of 3+ from the same company."
@@ -107,10 +107,10 @@ export const QUIZ_STAGES = [
         id: 8, cat: "Legal Permits",
         q: "A forklift at the factory has a maximum load capacity of 2 tons. What certificate do you need to operate it?",
         opts: [
-          "Any driving license works",
-          "Forklift Safety Training (under 1t only — tokubetsu-kyoiku)",
-          "Crane Operator License — covers forklifts of any tonnage as well",
-          "Forklift Skills Training — 'Fokku-rifuto gino-koshu' (フォークリフト運転技能講習) — covers 1t and above"
+          "Any regular car driving license is enough",
+          "Forklift Special Training (フォークリフト特別教育)",
+          "Crane Special Training (クレーン特別教育)",
+          "Forklift Skills Training (フォークリフト技能講習)"
         ],
         a: 3, xp: 20,
         exp: "For forklifts of 1 ton or more, you need the Forklift Skills Training (技能講習). For people with a regular car driving license it is about 31 hours — usually 4 days. The tokubetsu-kyoiku (特別教育) only covers forklifts under 1 ton. A 2-ton forklift = gino-koshu required. 🇯🇵 TIP: Forklift certification (often called フォークリフト免許 on site) is one of the most useful extra skills on Japanese fabrication sites — it makes you usable for material handling between welds."
@@ -131,10 +131,10 @@ export const QUIZ_STAGES = [
         id: 10, cat: "Safety",
         q: "What is 'Sanso-ketsubo' (酸素欠乏 / さんそけつぼう) and why is it dangerous for welders?",
         opts: [
-          "Excess oxygen — causes fire risk",
-          "Oxygen deficiency — shielding gas can displace oxygen in enclosed spaces, causing loss of consciousness and death",
-          "Carbon monoxide — only dangerous outdoors",
-          "A type of welding defect"
+          "Excess oxygen — oxygen-rich air makes clothing catch fire easily",
+          "Oxygen deficiency — shielding gas pushes oxygen out of enclosed spaces",
+          "Carbon monoxide poisoning that only happens when welding outdoors",
+          "A welding defect where the weld metal lacks oxygen and cracks"
         ],
         a: 1, xp: 20,
         exp: "Sanso-ketsubo (酸素欠乏) = Oxygen Deficiency. In confined spaces (tanks, holds, enclosed rooms), shielding gas (CO₂, Argon) can push out oxygen. Below 18% O₂ = danger. Below 16% = blackout. Measure oxygen levels BEFORE entering any enclosed welding area. 🇯🇵 TIP: CO₂ is 1.5× heavier than air and Argon is 1.4× heavier — they sink and pool invisibly at the bottom. A worker who collapses inside a tank from oxygen deficiency must NOT be rescued by someone entering without breathing equipment — Japan has had multiple deaths this way. Call 119 and wait for specialist rescue."
@@ -143,10 +143,10 @@ export const QUIZ_STAGES = [
         id: 11, cat: "Safety",
         q: "What is 'Yosetsu-hyumu' (溶接ヒューム / ようせつヒューム) and what PPE do you need?",
         opts: [
-          "Welding noise — require ear protection only",
-          "Welding sparks — need leather gloves only",
-          "Welding fumes — tiny metal particles in smoke; require dust respirator (防じんマスク) rated for welding fumes",
-          "Shielding gas — only CO₂ is dangerous"
+          "Welding noise — protect your ears with earplugs",
+          "Welding sparks — protect your hands with leather gloves",
+          "Welding fumes — wear a dust respirator (防じんマスク)",
+          "Shielding gas — only CO₂ needs a gas mask"
         ],
         a: 2, xp: 20,
         exp: "Welding fumes (溶接ヒューム) contain fine metal particles including manganese, chromium, and other compounds. Long-term exposure causes lung disease (じん肺). Japanese law requires a dust respirator (防じんマスク) rated for welding fumes. Always ventilate the work area. 🇯🇵 TIP: Since 2021, Japanese law (溶接ヒューム規制) classifies welding fumes as a specified chemical substance. Employers must provide health examinations (健康診断) and maintain exposure records. If your company does not offer this, they are violating the law — you have a right to request it."
@@ -155,10 +155,10 @@ export const QUIZ_STAGES = [
         id: 12, cat: "Safety",
         q: "What shade number (遮光度番号 / しゃこうどばんごう) does the JIS guide (JIS T 8141) give for stick welding (被覆アーク溶接) at around 150A?",
         opts: [
-          "Shade #3–4 — sunglasses level",
-          "Shade #16 or higher — maximum protection",
-          "Shade #1 — nearly clear lens",
-          "Shade #9–11 — the JIS guide range for 75–200A stick welding"
+          "Shade #3–4 — like strong sunglasses",
+          "Shade #14–16 — the darker the better",
+          "Shade #5–6 — the range used for gas cutting",
+          "Shade #9–11 — the JIS guide for 75–200A"
         ],
         a: 3, xp: 20,
         exp: "The usage guide in JIS T 8141 gives shade #9–11 for stick welding at 75–200A (as explained by the Japan Welding Engineering Society). Higher current = higher shade number; too dark a lens makes it hard to see the pool. Without the correct shade you risk arc eye (電気性眼炎 / でんきせいがんえん). 🇯🇵 TIP: Arc eye symptoms appear several hours AFTER exposure — often at night. If your eyes feel gritty or painful after welding, see an eye doctor."
@@ -167,10 +167,10 @@ export const QUIZ_STAGES = [
         id: 13, cat: "Safety",
         q: "A welder receives an electric shock. What is the FIRST action to take?",
         opts: [
-          "Turn OFF the power source first — then move the victim safely — then call for help",
-          "Insulate your hands with dry rubber gloves and pull the victim away while the power stays on",
-          "Pour water on the victim immediately",
-          "Try to pull the victim away with your bare hands"
+          "Turn off the power first, then move the victim and call for help",
+          "Wear dry rubber gloves and pull the victim away while power stays on",
+          "Pour water on the victim to cool the burns before anything else",
+          "Pull the victim away with your bare hands as fast as possible"
         ],
         a: 0, xp: 25,
         exp: "Electric shock first response: 1) CUT THE POWER — turn off the machine or breaker. 2) Do NOT touch the victim while power is on — you will be shocked too. 3) Move victim to safety. 4) Call 119 (Japanese emergency). 5) Perform CPR if trained. Wet hands or wet ground dramatically increase electrocution risk. 🇯🇵 TIP: Japanese emergency number is 119 (fire/ambulance) — not 911. When calling 119 in Japanese: 'Jiko desu, hito ga taoreteimasu' (事故です、人が倒れています) = 'There is an accident, someone has collapsed.' Give the address and your phone number."
@@ -179,10 +179,10 @@ export const QUIZ_STAGES = [
         id: 14, cat: "Safety",
         q: "Before welding inside a tank or enclosed space, what must you check FIRST?",
         opts: [
-          "The wire spool size",
-          "Oxygen concentration (酸素濃度 / さんそのうど) AND harmful gas levels — then ensure ventilation",
-          "The welding machine's serial number",
-          "The brand of shielding gas"
+          "The wire spool size and the remaining wire length",
+          "Oxygen and harmful gas levels, then set up ventilation",
+          "The welding machine's serial number and inspection sticker",
+          "The brand and purity of the shielding gas cylinder"
         ],
         a: 1, xp: 25,
         exp: "Before entering any enclosed space in Japan, you MUST measure oxygen concentration (酸素濃度) — must be above 18%. Also check for CO, hydrogen, and other hazardous gases. Set up forced ventilation. In Japan, this is covered by the Oxygen Deficiency Hazard Work Certification (酸素欠乏危険作業特別教育). 🇯🇵 TIP: The 酸欠資格 (sanso-ketsubo shikaku / oxygen deficiency cert) is a 1-day course (~¥8,000–12,000) that is often overlooked by foreign workers. If you work in shipbuilding, tank fabrication, or any enclosed steel structure, this certificate is essential and expected."
@@ -191,9 +191,9 @@ export const QUIZ_STAGES = [
         id: 15, cat: "Safety",
         q: "Your 'Anzen-gutsu' (安全靴 / あんぜんぐつ) safety boots have a JIS mark inside, but it reads 'JIS T 8147' instead of 'JIS T 8101.' What should you do?",
         opts: [
-          "Ask your supervisor to re-issue a JIS T 8113 marked pair instead",
-          "Wear them as normal — both JIS T 8101 and JIS T 8147 cover steel-toe safety boots, so either is acceptable",
-          "Reject them — JIS T 8147 is the standard for protective eyewear, not footwear, so these boots are not properly certified safety boots",
+          "Ask your supervisor for a pair marked JIS T 8113 instead",
+          "Wear them — JIS T 8147 is just a newer number for safety boots",
+          "Reject them — JIS T 8147 is for eyewear, not safety boots",
           "Wear them only for grinding work, never for welding"
         ],
         a: 2, xp: 25,
@@ -215,10 +215,10 @@ export const QUIZ_STAGES = [
         id: 17, cat: "Safety",
         q: "Which of the following statements about welding ventilation in Japan is NOT correct?",
         opts: [
-          "Opening a window nearby is always sufficient ventilation for any indoor welding work, regardless of room size",
-          "Since the 2021 rule change, indoor arc welding requires general ventilation (全体換気) and measuring the welding-fume concentration to choose suitable respirators",
-          "Local exhaust ventilation (局所排気装置) captures fumes at the source and is a very effective method",
-          "In confined spaces, ventilation must keep the oxygen level at 18% or more"
+          "Opening one window is always enough ventilation for any indoor welding",
+          "Since 2021, indoor arc welding needs general ventilation and fume measurement",
+          "Local exhaust ventilation (局所排気装置) captures fumes at the source",
+          "In confined spaces, ventilation must keep oxygen at 18% or more"
         ],
         a: 0, xp: 25,
         exp: "Opening a window is NOT automatically sufficient — it depends on room size, airflow and the amount of fume. Since April 2021, welding fume is regulated as a specified chemical substance: for indoor continuous arc welding, employers must provide general ventilation (全体換気), measure the fume concentration, and supply respirators chosen from that measurement (with fit checks). In confined spaces, oxygen must be kept at 18% or more. 🇯🇵 TIP: If your company measures fume concentration, the result decides which respirator you must wear — follow it exactly."
@@ -227,10 +227,10 @@ export const QUIZ_STAGES = [
         id: 18, cat: "Safety",
         q: "You're about to do overhead (kachiage) welding and reach for your 'Maekake' (前掛け) leather apron, but it's missing. A coworker offers his 'Ude-kabaa' (腕カバー / arm sleeves) instead, saying it covers the same hazard. Is he right?",
         opts: [
-          "Yes — ude-kabaa and maekake protect identical areas, so either one alone is fully sufficient",
-          "No — ude-kabaa only covers the arms/forearms, while maekake covers the torso and legs from spatter and radiant heat. They are complementary, not interchangeable",
-          "No — ude-kabaa is only for grinding work, never for welding",
-          "Yes, but only if the ude-kabaa is made of the same leather grade as the maekake"
+          "Yes — arm sleeves and an apron protect the same body areas",
+          "No — sleeves cover only the arms; the apron covers torso and legs",
+          "No — arm sleeves are only for grinding work, never for welding",
+          "Yes, if the sleeves are made of the same leather as the apron"
         ],
         a: 1, xp: 25,
         exp: "Maekake (前掛け) = leather welding apron covering the torso and legs. Ude-kabaa (腕カバー) = arm sleeves covering the forearms only. They protect DIFFERENT body areas from the same hazards (spatter, sparks, radiant heat) — using one does not substitute for the other. For full-body protection during kachiage (overhead) welding, both are needed together. 🇯🇵 TIP: Quality leather aprons at Japanese welding supply shops (溶接用品店) last 3–5 years. When buying, check that the leather is thick (牛革 / cow leather is best) and the fastening loops are steel, not plastic — plastic melts from spatter."
@@ -239,10 +239,10 @@ export const QUIZ_STAGES = [
         id: 19, cat: "Legal Permits",
         q: "For the 'Tamakake' (玉掛け) certificate, what is the work scope difference between the 'tokubetsu-kyoiku' (特別教育) and 'gino-koshu' (技能講習) versions?",
         opts: [
-          "Gino-koshu covers under 1 ton, tokubetsu-kyoiku covers 1 ton and above",
-          "Both cover all load weights — no difference",
-          "Tokubetsu-kyoiku covers loads under 1 ton only. Gino-koshu covers 1 ton and above (all weights)",
-          "Tokubetsu-kyoiku is for permanent workers only"
+          "Gino-koshu covers under 1 ton; tokubetsu-kyoiku covers 1 ton and above",
+          "Both cover all load weights — only the course length differs",
+          "Tokubetsu-kyoiku: under 1 ton only. Gino-koshu: 1 ton and above",
+          "Tokubetsu-kyoiku is only for permanent employees, not contract staff"
         ],
         a: 2, xp: 20,
         exp: "Tamakake (玉掛け) rigging certification: Tokubetsu-kyoiku (特別教育) = loads under 1 ton only (1–2 days, ~¥12,000–15,000). Gino-koshu (技能講習) = loads of 1 ton and above, covering all weights (3 days, ~¥20,000–40,000). On most job sites, you need the Gino-koshu version. 🇯🇵 TIP: The practical exam for Tamakake Gino-koshu involves slinging a steel block and signaling the crane operator with hand signals. Learn the 4 basic hand signals (raise, lower, left, right) before the exam day — Japanese training centers expect you to demonstrate them confidently."
@@ -263,10 +263,10 @@ export const QUIZ_STAGES = [
         id: 22, cat: "Confined Space Safety",
         q: "You are assigned 酸素欠乏危険作業 (Sanso-ketsubo kiken-sagyo / oxygen deficiency hazard work). What is the legally required minimum team setup?",
         opts: [
-          "At least one worker INSIDE plus a designated 監視人 (Kanshi-nin / standby monitor) OUTSIDE who watches and can call for help",
-          "One worker inside is fine as long as a radio check-in is done every 30 minutes",
-          "One welder working alone is fine — it saves time",
-          "Two welders inside the confined space only"
+          "A worker inside plus a 監視人 (standby monitor) watching from outside",
+          "One worker inside, with a radio check-in every 30 minutes",
+          "One welder alone is fine if the job is short",
+          "Two welders inside the space, with nobody needed outside"
         ],
         a: 0, xp: 25,
         exp: "The Ordinance on Prevention of Oxygen Deficiency (酸素欠乏症等防止規則, Article 13) requires a person who constantly watches the work and immediately reports any abnormality — the 監視人 (Kanshi-nin / standby monitor) stationed outside the confined space. A chief for oxygen-deficiency hazard work (酸素欠乏危険作業主任者) must also be appointed. NEVER enter a confined space alone. 🇯🇵 TIP: The 監視人 must stay at their post and must not leave to do other work."
@@ -275,10 +275,10 @@ export const QUIZ_STAGES = [
         id: 23, cat: "Confined Space Safety",
         q: "CO₂ shielding gas was used for welding in a tank all morning. After lunch, a new welder wants to enter. What must happen FIRST?",
         opts: [
-          "Open the tank hatch and wait 5 minutes — ventilation is automatic",
-          "Re-measure oxygen concentration AND harmful gas levels with a calibrated meter, then run forced ventilation before entering",
-          "The previous welder confirms verbally that it is safe",
-          "Check the time — if it has been over 1 hour, entry is safe"
+          "Open the hatch and wait 5 minutes — the air clears by itself",
+          "Re-measure oxygen and harmful gases, and ventilate before entry",
+          "Ask the morning welder to confirm verbally that it is safe",
+          "Check the time — after more than 1 hour, entry is safe"
         ],
         a: 1, xp: 20,
         exp: "CO₂ is heavier than air (density 1.5× air) and remains pooled at the bottom of tanks even after hours. A verbal confirmation is worthless — gas levels must be re-measured with a calibrated 酸素濃度計 (oxygen meter) AND CO meter before EVERY entry. The atmosphere must be actively purged with forced ventilation fans. 🇯🇵 TIP: Japanese sites use the term '空気確認' (kuki-kakunin / air confirmation) as a formal pre-entry checklist step. Never skip it even if you think the space is 'obviously aired out.'"
@@ -287,10 +287,10 @@ export const QUIZ_STAGES = [
         id: 24, cat: "PPE Requirements",
         q: "On a Japanese job site, which PPE combination is the standard MINIMUM for arc welding?",
         opts: [
-          "Welding helmet + leather gloves + safety boots only — jacket is optional in dry conditions",
-          "Welding helmet only — face and eyes are the main hazard",
-          "Welding helmet + leather gloves (革手袋) + safety boots (安全靴 / JIS T 8101) + fire-resistant jacket or leather apron",
-          "Regular safety glasses + thin cotton gloves are sufficient for short welds"
+          "Helmet + leather gloves + safety boots — a jacket is optional when dry",
+          "Welding helmet only — the face and eyes are the main hazard",
+          "Helmet + leather gloves + safety boots + flame-resistant jacket or apron",
+          "Safety glasses + thin cotton gloves — enough for short welds"
         ],
         a: 2, xp: 20,
         exp: "Standard welding PPE on Japanese sites: 1) 溶接面 (Yosetsu-men) welding helmet with the correct shade (JIS T 8141). 2) 革手袋 (Kawa-tebukuro) leather welding gloves. 3) 安全靴 (Anzen-gutsu) safety boots (JIS T 8101). 4) Fire-resistant jacket or 前掛け (Maekake) leather apron against spatter. 5) A respirator for welding fumes. 🇯🇵 TIP: PPE is checked at the morning meeting (朝礼 / chōrei) — arriving without proper PPE can mean you cannot start work that day."
@@ -299,10 +299,10 @@ export const QUIZ_STAGES = [
         id: 25, cat: "PPE Requirements",
         q: "When welding with stainless steel wire or chrome-containing electrodes, what ADDITIONAL PPE is required beyond standard welding PPE in Japan?",
         opts: [
-          "A respirator is optional as long as ventilation fans are running",
-          "No additional PPE needed — stainless steel is safer than carbon steel",
-          "A standard DS1-grade dust respirator is always sufficient — same as carbon steel work",
-          "A well-fitting respirator chosen from the measured fume concentration — stainless and chrome-containing fumes include hexavalent chromium (六価クロム), a carcinogen"
+          "No respirator needed as long as ventilation fans are running",
+          "No extra PPE — stainless fumes are safer than carbon steel fumes",
+          "The same basic dust mask as carbon steel is always enough",
+          "A well-fitting respirator chosen from measured fume levels (Cr⁶⁺ risk)"
         ],
         a: 3, xp: 25,
         exp: "Welding stainless steel or chrome-containing materials produces fumes that include hexavalent chromium (六価クロム / Cr⁶⁺), a known human carcinogen. Since 2021, Japanese rules require employers to measure welding-fume concentration and choose respirators from that result, with fit checks — so a higher-performance respirator may be needed than for carbon steel. Good ventilation is also essential. 🇯🇵 TIP: Never weld stainless steel without the respirator your company has specified for that job."
@@ -311,10 +311,10 @@ export const QUIZ_STAGES = [
         id: 20, cat: "Legal Permits",
         q: "What is the total approximate cost and time to get the basic welding permit package in Japan? (Arc Welding + Grinding Wheel + Low-Voltage Electrical)",
         opts: [
-          "About 5 days / ¥42,000–72,000 total — then you can legally weld, grind, and operate power panels",
-          "1 year / ¥200,000 total",
-          "1 day / ¥5,000 total",
-          "3 months / ¥500,000 total"
+          "About 5 days in total — roughly ¥40,000–70,000",
+          "About 1 year in total — roughly ¥200,000",
+          "One day in total — roughly ¥5,000",
+          "About 3 months in total — roughly ¥500,000"
         ],
         a: 0, xp: 25,
         exp: "Basic welding permit package: Arc Welding (3 days, ¥20,000–40,000) + Grinding Wheel (1 day, ¥10,000) + Low-Voltage Electrical (1 day, ¥12,000–22,000) = approximately 5 days and ¥42,000–72,000 total. After this, you are legally cleared to weld, grind, and handle power panels in Japan. 🇯🇵 TIP: Some employers pay for these courses — always ask your recruiter or company 'shikaku shutoku no hiyou wa kaisha ga haraimasu ka?' (資格取得の費用は会社が払いますか？ / Does the company cover the certification costs?). In a tight labor market, many will say yes."
