@@ -285,7 +285,7 @@ export const QUIZ_STAGES = [
       },
       {
         id: 24, cat: "PPE Requirements",
-        q: "According to JIS T 8001 and Japanese law, which PPE combination is the MINIMUM required for arc welding on a Japanese job site?",
+        q: "On a Japanese job site, which PPE combination is the standard MINIMUM for arc welding?",
         opts: [
           "Welding helmet + leather gloves + safety boots only — jacket is optional in dry conditions",
           "Welding helmet only — face and eyes are the main hazard",
@@ -293,7 +293,7 @@ export const QUIZ_STAGES = [
           "Regular safety glasses + thin cotton gloves are sufficient for short welds"
         ],
         a: 2, xp: 20,
-        exp: "Japanese welding PPE minimum per JIS/law: 1) 溶接面 (Yosetsu-men) welding helmet with correct shade (JIS T 8141). 2) 革手袋 (Kawa-tebukuro) leather welding gloves (JIS T 8113). 3) 安全靴 (Anzen-gutsu) steel-toe safety boots (JIS T 8101). 4) Fire-resistant jacket or 前掛け (Maekake) leather apron for spatter. 5) 防じんマスク (Boo-jin masuku) dust respirator for welding fumes. 🇯🇵 TIP: On Japanese job sites, PPE inspection (服装点検) is done at the morning safety meeting (朝礼 / chōrei) — arriving without proper PPE means you cannot start work that day."
+        exp: "Standard welding PPE on Japanese sites: 1) 溶接面 (Yosetsu-men) welding helmet with the correct shade (JIS T 8141). 2) 革手袋 (Kawa-tebukuro) leather welding gloves. 3) 安全靴 (Anzen-gutsu) safety boots (JIS T 8101). 4) Fire-resistant jacket or 前掛け (Maekake) leather apron against spatter. 5) A respirator for welding fumes. 🇯🇵 TIP: PPE is checked at the morning meeting (朝礼 / chōrei) — arriving without proper PPE can mean you cannot start work that day."
       },
       {
         id: 25, cat: "PPE Requirements",
@@ -301,11 +301,11 @@ export const QUIZ_STAGES = [
         opts: [
           "A respirator is optional as long as ventilation fans are running",
           "No additional PPE needed — stainless steel is safer than carbon steel",
-          "A standard DS1-grade dust respirator is sufficient — same as carbon steel work",
-          "A higher-grade dust respirator rated for hexavalent chromium (六価クロム / Rokka-kuromu) — specifically DS2 or higher grade防じんマスク"
+          "A standard DS1-grade dust respirator is always sufficient — same as carbon steel work",
+          "A well-fitting respirator chosen from the measured fume concentration — stainless and chrome-containing fumes include hexavalent chromium (六価クロム), a carcinogen"
         ],
         a: 3, xp: 25,
-        exp: "Welding chromium-containing materials (stainless steel SUS304/316, chrome-moly steel) produces hexavalent chromium (六価クロム / Cr⁶⁺) fumes — a confirmed human carcinogen (発がん性物質). Japanese law (特化則 第38条の20) requires: 1) DS2-grade or higher dust respirator. 2) Local exhaust ventilation mandatory. 3) Health surveillance records must be kept. 4) Workers must be informed of the cancer risk in writing. 🇯🇵 TIP: In Japan, 六価クロム exposure records must be kept for 30 years — this is one of the most strictly regulated substances in welding work. Never weld stainless steel without a proper respirator."
+        exp: "Welding stainless steel or chrome-containing materials produces fumes that include hexavalent chromium (六価クロム / Cr⁶⁺), a known human carcinogen. Since 2021, Japanese rules require employers to measure welding-fume concentration and choose respirators from that result, with fit checks — so a higher-performance respirator may be needed than for carbon steel. Good ventilation is also essential. 🇯🇵 TIP: Never weld stainless steel without the respirator your company has specified for that job."
       },
       {
         id: 20, cat: "Legal Permits",
@@ -462,7 +462,7 @@ export const QUIZ_STAGES = [
           "An auto-darkening helmet — lens is clear until the arc strikes, then darkens automatically in milliseconds"
         ],
         a: 3, xp: 20,
-        exp: "Jido-shakko-men (自動遮光面) = Auto-darkening welding helmet (ADH). The lens is clear at rest (you can see clearly to position the torch) then darkens automatically when the arc starts — reaction time under 1/25,000 second. Reduces eye strain, improves positioning accuracy. Standard in modern Japanese workshops. 🇯🇵 TIP: Many Japanese workers own their own jido-shakko-men. Good brands available in Japan: ITOCHU (伊藤忠), Kikaiya (機械屋), or imported Lincoln Electric / 3M. Budget ¥15,000–50,000 for a quality helmet. Cheap no-brand ADHs with slow reaction times (over 1/3,200 sec) can still damage your eyes — check the spec sheet."
+        exp: "Jido-shakko-men (自動遮光面) = Auto-darkening welding helmet (ADH). The lens is clear at rest (you can see clearly to position the torch) then darkens automatically when the arc starts — reaction time under 1/25,000 second. Reduces eye strain, improves positioning accuracy. Standard in modern Japanese workshops. 🇯🇵 TIP: Many Japanese welders own their own jido-shakko-men. Before buying, check the reaction time and the shade range on the spec sheet — a slow, cheap helmet can still hurt your eyes."
       },
       {
         id: 112, cat: "Tools",
@@ -486,7 +486,7 @@ export const QUIZ_STAGES = [
           "A backing material for pipe welding only"
         ],
         a: 1, xp: 20,
-        exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Short steel plates attached at each end of the weld joint. Arc starts and ends are the most defect-prone areas (ブローホール, クレーター割れ). The end tab moves these defects outside the actual joint. After welding, end tabs are cut off and discarded. Required in JIS certification tests. 🇯🇵 TIP: In JIS welding certification tests, end tabs are required and their dimensions are specified in the test standard. Forgetting to attach them or attaching them incorrectly is an automatic test failure — review the JIS test setup diagram carefully before your exam."
+        exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Short steel plates attached at each end of the weld joint. Arc starts and ends are the most defect-prone areas (ブローホール, クレーター割れ). The end tab moves these defects outside the actual joint. After welding, end tabs are cut off and discarded. Required in JIS certification tests. 🇯🇵 TIP: End tabs are standard in building steel work, and the AW Kentei factory-welding tests are divided by end-tab type (steel end tabs or substitute end tabs). After welding, cut and finish the end-tab area as the procedure says."
       },
       {
         id: 114, cat: "Tools",
@@ -522,7 +522,7 @@ export const QUIZ_STAGES = [
           "Marking cut lines on steel plate"
         ],
         a: 0, xp: 20,
-        exp: "Ondo-chooku (温度チョーク) = Temperature crayon / Tempilstick. Each crayon melts at a specific temperature (e.g., 150°C, 200°C, 350°C). Mark the steel near the weld — if the mark melts, the temperature has been reached. Used to verify preheat temperature (予熱) before welding and interpass temperature (パス間温度) between passes. 🇯🇵 TIP: The temperature must be measured on the opposite side of the plate from the heat source, at least 75mm from the weld edge per JIS standard. Measuring directly on the heated surface gives a falsely high reading. Supervisors know this — they will check your measurement technique."
+        exp: "Ondo-chooku (温度チョーク) = Temperature crayon / Tempilstick. Each crayon melts at a specific temperature (e.g., 150°C, 200°C, 350°C). Mark the steel near the weld — if the mark melts, the temperature has been reached. Used to verify preheat temperature (予熱) before welding and interpass temperature (パス間温度) between passes. 🇯🇵 TIP: Measure where the WPS tells you to — usually on the base metal at a set distance from the joint, not on the weld itself. Supervisors check your measuring technique as well as the reading."
       },
       {
         id: 117, cat: "Tools",
@@ -538,15 +538,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 118, cat: "Tools",
-        q: "In Japan, the Panasonic welding torch is called 'Reddo-tochi' (レッドトーチ) and the Daihen torch is called 'Buruu-tochi' (ブルートーチ). Why does this matter on site?",
+        q: "Your site uses semi-auto torches from different makers (for example Panasonic and Daihen). Can you swap contact tips and nozzles between them?",
         opts: [
-          "They are identical — color is just branding",
-          "Red torches weld faster than blue ones",
-          "The torch brands use different contact tip sizes and thread standards — parts are NOT interchangeable. Using the wrong chip/nozzle causes poor welding",
-          "Blue torches require higher gas flow than red"
+          "Yes — all Japanese torch parts are one standard size",
+          "Yes, as long as the wire diameter is the same",
+          "Not without checking — parts are made for specific torch models, so sizes and threads can differ; always match the part number to your torch",
+          "No — only the nozzle can be swapped, never the tip"
         ],
         a: 2, xp: 25,
-        exp: "On Japanese job sites: Panasonic = Red torch (レッドトーチ), Daihen = Blue torch (ブルートーチ). Their contact tips (チップ), nozzles, and liners use DIFFERENT sizes and thread standards. If you put a red torch chip in a blue torch, it won't fit properly. Always match replacement parts to the correct torch brand. 🇯🇵 TIP: When ordering replacement parts, Japanese welding supply stores (溶接用品店) will always ask 'red or blue?' first. Keep a spare chip of the correct brand in your apron pocket. Running out of chips mid-shift because you grabbed the wrong bag is a frustrating and embarrassing mistake."
+        exp: "Contact tips (チップ), nozzles (ノズル), orifices and liners are designed for specific torch models. Different makers — and even different models from the same maker — can use different sizes and threads, so a part that looks similar may not fit or may fit poorly, causing gas leaks and unstable arcs. 🇯🇵 TIP: When ordering parts at a welding supply store (溶接用品店), give the torch maker and model. Keep a few spare tips of the correct type in your pocket."
       },
       {
         id: 119, cat: "Tools",
@@ -611,15 +611,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 203, cat: "Slang",
-        q: "Your senior inspects the groove and says 'Tenpai!' (テンパイ) [ten-pai]. What does this mean for your next move?",
+        q: "Your senior inspects the groove and says the next pass is the 'Shiage' (仕上げ / しあげ). What does this mean for your next move?",
         opts: [
           "Start the root pass from scratch — everything was wrong",
           "The weld is finished — pack up and go home",
           "There is a crack — stop and call the inspector",
-          "The groove is nearly full — just one more pass (the cap/cover pass) and you are done"
+          "The groove is nearly full — the next pass is the cap (cover) pass that forms the visible surface"
         ],
         a: 3, xp: 20,
-        exp: "Tenpai (テンパイ) comes from Japanese Mahjong — it means 'one tile away from winning.' On the job site, it means the groove weld is filled up to just below the final cap pass. You are one pass away from finishing. 🇯🇵 TIP: Japanese workers love Mahjong-derived expressions. Learning these shows cultural awareness. When you hear 'tenpai,' the cap pass (仕上げパス / shiage-pasu) is next — take extra care with bead appearance because this is the visible surface that inspectors will judge first."
+        exp: "Shiage (仕上げ) = finishing. In multi-pass groove welding, the 仕上げ層 (shiage-sou / cap or cover pass) is the last layer that forms the weld surface. The passes before it are the root pass (初層 / shosou) and the fill passes (中間層 / chuukan-sou). 🇯🇵 TIP: Take extra care with bead width, height and toe blending on the cap pass — this is the surface the inspector judges first in visual testing."
       },
       {
         id: 204, cat: "Slang",
@@ -715,7 +715,7 @@ export const QUIZ_STAGES = [
           "Misalignment — the two plate edges at the joint are not flush; one is higher than the other"
         ],
         a: 3, xp: 20,
-        exp: "Mechigai (目違い) = misalignment / mismatch. The two plates being welded together are not at the same height — one edge is higher than the other. This creates uneven stress distribution and can lead to defects. JIS standards specify maximum allowable misalignment depending on plate thickness. Fix with clamps before welding. 🇯🇵 TIP: JIS B 8270 specifies mechigai limits for pressure vessels. For structural steel, JIS G 3353 and building codes apply. On-site, the quick rule-of-thumb is: mechigai must not exceed 10% of plate thickness. Inspectors carry a straight edge and gap gauge — they will check this before witnessing any root pass."
+        exp: "Mechigai (目違い) = misalignment / mismatch. The two plates being welded together are not at the same height — one edge is higher than the other. This creates uneven stress distribution and can lead to defects. JIS standards specify maximum allowable misalignment depending on plate thickness. Fix with clamps before welding. 🇯🇵 TIP: The allowable misalignment depends on the code and the plate thickness — check the drawing or WPS, not a rule of thumb. Inspectors check it with a straight edge and gauge before the root pass."
       },
       {
         id: 212, cat: "Slang",
@@ -739,7 +739,7 @@ export const QUIZ_STAGES = [
           "Apply flux paste to the back of the joint"
         ],
         a: 1, xp: 25,
-        exp: "Ura-gasu (裏ガス) = back purge / back shielding. When welding stainless steel or titanium, the back of the weld must be shielded with Argon or Nitrogen to prevent oxidation. Without it, the back surface oxidizes — creating rainbow discoloration (Tenpaa-karaa / テンパーカラー) and dramatically reducing corrosion resistance. 🇯🇵 TIP: Ura-gasu flow rate and purge time are specified in the WPS. A common mistake is not purging long enough before striking the arc — the oxygen remaining in the pipe will still oxidize the first weld. Purge until the oxygen meter inside the pipe reads below 100 ppm (or 0.01%) for critical applications like food-grade or pharmaceutical piping."
+        exp: "Ura-gasu (裏ガス) = back purge / back shielding. When welding stainless steel or titanium, the back of the weld must be shielded with Argon or Nitrogen to prevent oxidation. Without it, the back surface oxidizes — creating rainbow discoloration (Tenpaa-karaa / テンパーカラー) and dramatically reducing corrosion resistance. 🇯🇵 TIP: Back-purge flow rate and purge time are specified in the WPS. A common mistake is not purging long enough before striking the arc — oxygen left in the pipe will still oxidize the root. For critical piping, the oxygen level inside is checked with a meter."
       },
       {
         id: 214, cat: "Slang",
@@ -775,7 +775,7 @@ export const QUIZ_STAGES = [
           "Stop and change welding machine settings only"
         ],
         a: 0, xp: 20,
-        exp: "Torinao-shi (取り直し) = rework / redo. The weld has been rejected and must be completely removed and re-welded. This costs time, materials, and reputation. In Japan's quality culture, rework is taken very seriously — it affects the welder's evaluation. Prevention: do it right the first time. 🇯🇵 TIP: In Japanese companies, rework (手直し / tenaoshi or 取り直し) rates are tracked per welder and reviewed in monthly quality meetings. A high rework rate will affect your contract renewal. Japanese quality culture traces defects back to the individual welder — being known for clean first-pass work is the most important reputation you can build."
+        exp: "Torinao-shi (取り直し) = rework / redo. The weld has been rejected and must be completely removed and re-welded. This costs time, materials, and reputation. In Japan's quality culture, rework is taken very seriously — it affects the welder's evaluation. Prevention: do it right the first time. 🇯🇵 TIP: Many Japanese companies track rework (手直し / tenaoshi) and trace defects back to the joint and welder. Being known for clean first-time work is one of the best reputations you can build."
       },
       {
         id: 217, cat: "Slang",
@@ -799,7 +799,7 @@ export const QUIZ_STAGES = [
           "Grinding the weld to final height"
         ],
         a: 2, xp: 15,
-        exp: "Chippingu (チッピング) = slag chipping / slag removal. Done after every single pass in multi-pass welding. Failing to remove slag between passes causes slag inclusion (スラグ巻き込み) — a serious internal defect that will fail NDT inspection. Process: chip → wire brush → inspect → weld next pass. 🇯🇵 TIP: The proper Japanese chipping workflow is called '打検' (dakken / tap and check) — after chipping, tap the bead lightly with the handle to listen for loose slag. A hollow sound means slag remains. This quick tap-test is part of the expected professional routine on Japanese sites."
+        exp: "Chippingu (チッピング) = slag chipping / slag removal. Done after every single pass in multi-pass welding. Failing to remove slag between passes causes slag inclusion (スラグ巻き込み) — a serious internal defect that will fail NDT inspection. Process: chip → wire brush → inspect → weld next pass. 🇯🇵 TIP: After chipping, brush the bead and look closely at the toes and between beads — slag often hides there. Only start the next pass when the surface is clean."
       },
       {
         id: 219, cat: "Slang",
@@ -956,7 +956,7 @@ export const QUIZ_STAGES = [
           "The reinforcement height above the plate — must be within specification"
         ],
         a: 2, xp: 20,
-        exp: "Ruuto-gyappu (ルートギャップ) = Root gap / root opening. The controlled space between plate edges at the root of the groove. Too narrow (< spec): arc can't reach the root, causing lack of penetration (溶込不良). Too wide (> spec): burn-through (溶落ち). Specified on drawings — measure with gap gauges before welding. 🇯🇵 TIP: Japanese sites use a 隙間ゲージ (sukima-geeji / feeler gauge set) or dedicated root gap gauge to check this before every weld. The acceptable range is typically ±0.5mm from spec. Don't eyeball it — a gap that looks right often isn't, and the cost of adjusting before welding is far lower than hatsuri and redo after."
+        exp: "Ruuto-gyappu (ルートギャップ) = Root gap / root opening. The controlled space between plate edges at the root of the groove. Too narrow (< spec): arc can't reach the root, causing lack of penetration (溶込不良). Too wide (> spec): burn-through (溶落ち). Specified on drawings — measure with gap gauges before welding. 🇯🇵 TIP: Check the root gap with a gap gauge before every weld and compare it with the tolerance on the drawing or WPS. Don't eyeball it — fixing the gap before welding costs far less than hatsuri and redo afterwards."
       },
       {
         id: 311, cat: "JIS Symbols",
@@ -980,7 +980,7 @@ export const QUIZ_STAGES = [
           "Weld on the arrow side only — the second symbol is decorative"
         ],
         a: 0, xp: 20,
-        exp: "When the welding symbol appears BOTH above and below the reference line, it means weld on BOTH SIDES. For fillet welds: two-sided fillet weld (両面すみ肉溶接). Each side may have different dimensions specified — read the numbers separately for each. 🇯🇵 TIP: On Japanese structural drawings, 両面すみ肉 (both-side fillet) is written as '両' before the weld symbol. Single-side only is implied when '両' is absent. New workers often miss one side because they forget to check for this — always trace the full symbol before starting."
+        exp: "When the welding symbol appears BOTH above and below the reference line, it means weld on BOTH SIDES. For fillet welds: two-sided fillet weld (両面すみ肉溶接). Each side may have different dimensions specified — read the numbers separately for each. 🇯🇵 TIP: New workers often weld only one side because they miss the second symbol. Always read the symbols on both sides of the reference line before starting."
       },
       {
         id: 313, cat: "JIS Symbols",
@@ -1004,7 +1004,7 @@ export const QUIZ_STAGES = [
           "The weld joint is under high stress — extra care required"
         ],
         a: 2, xp: 20,
-        exp: "Flag mark (旗マーク) = Field weld symbol (現場溶接記号). This weld is NOT done in the factory — it is performed at the actual construction or installation site after the prefabricated parts are assembled in place. Important for planning: field welds have more challenging conditions (weather, position, access) than factory welds. 🇯🇵 TIP: Field welds (現場溶接) in Japan require additional planning documents (施工計画書 / shiko-keikakusho). Wind, humidity, and temperature all affect field weld quality — rain or strong wind (風速10m/s以上) legally requires stopping outdoor welding. Always check the weather forecast and site conditions before mobilizing for field weld work."
+        exp: "Flag mark (旗マーク) = Field weld symbol (現場溶接記号). This weld is NOT done in the factory — it is performed at the actual construction or installation site after the prefabricated parts are assembled in place. Important for planning: field welds have more challenging conditions (weather, position, access) than factory welds. 🇯🇵 TIP: Field welds need extra planning. Wind easily blows away shielding gas, so use wind screens for gas-shielded welding, and do not weld in rain or on wet steel. Check the weather and site conditions before starting."
       },
       {
         id: 315, cat: "JIS Symbols",
@@ -1052,7 +1052,7 @@ export const QUIZ_STAGES = [
           "PF = Horizontal fillet = 水平すみ肉"
         ],
         a: 2, xp: 20,
-        exp: "ISO PF = Vertical-up welding (立向上進 / Tatemuki-joshin). This is the standard vertical welding direction in Japanese fabrication — welding upward produces better fusion and penetration compared to vertical-down. ISO PG = vertical-down. These codes appear on JIS and IIW international qualification certificates. 🇯🇵 TIP: When renewing your JIS qualification, the test record will show which positions you are qualified for. A PF (vertical-up) qualification covers vertical welding — PG is a separate qualification. In Japan, most jobs require PF but rarely require PG — check your certificate scope carefully when bidding for new work."
+        exp: "ISO PF = Vertical-up welding (立向上進 / Tatemuki-joshin). This is the standard vertical welding direction in Japanese fabrication — welding upward produces better fusion and penetration compared to vertical-down. ISO PG = vertical-down. These codes appear on JIS and IIW international qualification certificates. 🇯🇵 TIP: JIS welder certificates show positions with letters such as F, H, V and O (e.g. N-2V), while ISO 9606 certificates use PA, PC, PF, PG and so on. On ISO certificates, vertical-up (PF) and vertical-down (PG) are separate — check your certificate's scope before taking a job."
       },
       {
         id: 319, cat: "Dimensions",
@@ -1076,7 +1076,7 @@ export const QUIZ_STAGES = [
           "A weld that is polished to a flush surface finish"
         ],
         a: 0, xp: 25,
-        exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP) weld. The fusion zone extends through the ENTIRE plate thickness. Required for: seismic building connections (ダイアフラム), pressure vessel shells, and critical structural joints. Verified by RT or UT inspection. Contrast with partial penetration welds (部分溶込み / PJP). 🇯🇵 TIP: In Japan, CJP welds on seismic-critical building connections (柱梁接合部) require pre-qualified joint details per the Building Standard Law (建築基準法). If an inspector marks your CJP as 不合格 (fugoukaku / rejected), you must gouge out, re-weld, and re-inspect — there is no partial acceptance. Getting it right the first time is not just efficiency; it is professional pride."
+        exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP) weld. The fusion zone extends through the ENTIRE plate thickness. Required for: seismic building connections (ダイアフラム), pressure vessel shells, and critical structural joints. Verified by RT or UT inspection. Contrast with partial penetration welds (部分溶込み / PJP). 🇯🇵 TIP: CJP welds on seismic-critical building connections (柱梁接合部) are inspected strictly, usually with UT. If a CJP weld is rejected (不合格), it must be gouged out, re-welded and re-inspected — there is no partial acceptance."
       }
     ]
   },
@@ -1209,7 +1209,7 @@ export const QUIZ_STAGES = [
           "Neither works on stainless — use RT only"
         ],
         a: 2, xp: 25,
-        exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) uses a magnetic field to attract iron powder to defects — it ONLY works on magnetic (ferritic) materials. Austenitic stainless steel (SUS304, SUS316) is NON-MAGNETIC. For stainless steel, you MUST use PT (浸透探傷) instead. Ferrite content stainless (like SUS430) may allow MT — check material type first. 🇯🇵 TIP: Mixing up PT and MT on a stainless weld job in Japan is a serious mistake that will be noticed immediately. Before any NDT, confirm the material type (材料確認 / zairyou-kakunin) from the mill certificate (ミルシート / mirushiito). In Japan, the mill certificate is a required document for every material used in a qualified weld. Knowing how to read one sets you apart."
+        exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) uses a magnetic field to attract iron powder to defects — it ONLY works on magnetic (ferritic) materials. Austenitic stainless steel (SUS304, SUS316) is NON-MAGNETIC. For stainless steel, you MUST use PT (浸透探傷) instead. Ferrite content stainless (like SUS430) may allow MT — check material type first. 🇯🇵 TIP: Before any NDT, confirm the material type (材料確認 / zairyou-kakunin), for example from the mill certificate (ミルシート / mirushiito). Choosing MT for austenitic stainless is a mistake that will be noticed immediately."
       },
       {
         id: 411, cat: "NDT",
@@ -1281,7 +1281,7 @@ export const QUIZ_STAGES = [
           "MT and PT detect exactly the same defects"
         ],
         a: 0, xp: 25,
-        exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Applies magnetic field to the workpiece — defects interrupt the field and iron powder clusters at these points. MT detects both surface AND near-surface (slightly subsurface) defects on magnetic (carbon steel, ferritic stainless) materials. PT only detects defects OPEN to the surface. MT is more sensitive for magnetic materials — preferred in Japanese shipyards for carbon steel welds. 🇯🇵 TIP: In Japanese shipyards (造船所 / zousenjo), MT is done routinely after each weld pass on hull frames and structural members. The fluorescent wet MT method (蛍光磁粉探傷 / keikoo-jifun-tansho) under UV light is used for maximum sensitivity. If you work in a shipyard and see someone carrying a UV lamp and white spray can, it's MT time — make sure your weld area is accessible and clean."
+        exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Applies magnetic field to the workpiece — defects interrupt the field and iron powder clusters at these points. MT detects both surface AND near-surface (slightly subsurface) defects on magnetic (carbon steel, ferritic stainless) materials. PT only detects defects OPEN to the surface. MT is more sensitive for magnetic materials — preferred in Japanese shipyards for carbon steel welds. 🇯🇵 TIP: Fluorescent wet MT (蛍光磁粉探傷) under UV light gives high sensitivity. If you see someone with a UV lamp and spray cans near your weld, it is probably MT — keep the weld area clean and accessible."
       },
       {
         id: 417, cat: "Defects",
@@ -1305,7 +1305,7 @@ export const QUIZ_STAGES = [
           "The metal was struck and cracked by accident after welding"
         ],
         a: 2, xp: 30,
-        exp: "Cold cracks are also called 'delayed cracks' because diffusible hydrogen in the weld metal migrates slowly to high-stress zones (HAZ, hard microstructure areas) and accumulates. The crack may not form until hours — or even days — after welding. This is why Japanese codes specify post-weld inspection timing: often 24–48 hours after completion for critical welds. 🇯🇵 TIP: On Japanese construction sites, the quality plan (品質計画書 / hinshitsu-keikaku-sho) for high-strength steel welds may state 'weld completion → wait 48 hours → MT/PT inspection.' This means no surface grinding or next-step work can proceed until the inspection window is complete. If you complete a weld on a Thursday evening, inspection may not happen until Saturday morning. Planning around this is a real skill in Japanese production management."
+        exp: "Cold cracks are also called 'delayed cracks' because diffusible hydrogen slowly moves to high-stress, hard areas (HAZ) and builds up there. The crack may not form until hours — or even days — after welding. That is why some specifications require a waiting time before final inspection: for example, AWS D1.1 requires waiting 48 hours for certain high-strength steels. 🇯🇵 TIP: For high-strength steel, the quality plan (品質計画書 / hinshitsu-keikaku-sho) states when inspection may be done. Plan your work around that waiting time."
       },
       {
         id: 419, cat: "NDT",
@@ -1466,15 +1466,15 @@ export const QUIZ_STAGES = [
       },
       {
         id: 511, cat: "Certifications",
-        q: "What is the approximate annual income range for each level of Japanese welding career?",
+        q: "How does income generally change as you gain welding qualifications in Japan?",
         opts: [
-          "Japanese welders earn ¥1–2M per year regardless of certification",
-          "All welders earn the same in Japan — no variation",
-          "Arc Safety (¥8M) → JIS Basic (¥6M) → Underwater Welder (¥2M)",
-          "Arc Safety / JIS Basic: ¥3–4M → JIS Specialist / AW: ¥4–6M → Boiler Welder: ¥5–8M → Underwater Welder: ¥7–15M"
+          "Japanese welders earn the same regardless of certification",
+          "Income only depends on age — certifications make no difference",
+          "Arc Safety Training alone gives the highest pay, and higher certifications lower your pay",
+          "Higher and rarer qualifications (Specialist Grade, AW, Boiler Welder, underwater work) generally open higher-paying jobs — actual pay varies by company, region and experience"
         ],
         a: 3, xp: 20,
-        exp: "Approximate annual income in Japanese welding (万円/year): JIS Basic 300–400万, JIS Specialist 400–600万, AW Kentei 500–700万, Boiler Welder Standard 450–650万, Boiler Welder Special 600–800万, Underwater Welder 700–1,000万, Saturation Diver + Underwater 1,000–1,500万. Rare specialized skills = premium pay. 🇯🇵 TIP: Income differences between certification levels are real, but Japanese companies also reward loyalty (勤続年数 / kinzoku-nensuu) and daily reliability. A welder with average certifications who shows up every day, never causes quality problems, and communicates well will often out-earn a highly certified welder who is difficult to manage. In Japan, character and consistency matter as much as qualifications on your paycheck."
+        exp: "In general, each step up — JIS Specialist Grade, AW Kentei, Boiler Welder, and rare skills such as underwater welding — opens work that pays more. But real pay varies a lot by company, region, industry and experience, so treat any 'average salary' figure as a rough guide only. 🇯🇵 TIP: Japanese companies also value reliability: showing up every day, making few quality problems and communicating well often matters as much as your certificates."
       },
       {
         id: 512, cat: "Physics",
@@ -1567,10 +1567,10 @@ export const QUIZ_STAGES = [
           "Japanese companies never hire foreign welders — it is not possible",
           "Japan uses completely different welding techniques not found anywhere else",
           "Japanese welders work longer hours but earn less",
-          "Japan has a very strict certificate-based qualification system — even simple tasks (grinding, crane operation) require specific legal certificates. Safety culture is deeply embedded. Quality standards are extremely high. Rework (取り直し) is costly to reputation"
+          "Japan has a strict certificate-based system — many tasks (crane rigging, changing grinding wheels, electrical work) need specific legal training. Safety culture is deep, quality standards are very high, and rework (取り直し) hurts your reputation"
         ],
         a: 3, xp: 20,
-        exp: "Key differences in Japan: 1) Certificate culture — every tool/task has a legal qualification requirement. 2) Quality focus — NDT inspection is thorough and rework damages your reputation significantly. 3) Team communication — learning key Japanese terms (like the ones in this game) is essential for safety and efficiency. 4) Respect for process — following WPS and work instructions exactly is non-negotiable. 🇯🇵 TIP: One of the most powerful phrases you can learn as a foreign welder in Japan is 'Wakaranai toki wa, sumimasen, shitsumon shite mo ii desu ka?' (分からない時は、すみません、質問してもいいですか？ / When I don't understand, may I ask a question?). In Japan's high-safety manufacturing culture, asking questions before starting a task is respected — making assumptions and causing a quality problem is not. Never be afraid to ask. The welding community in Japan genuinely respects people who try hard and ask smart questions."
+        exp: "Key differences in Japan: 1) Certificate culture — many tasks need specific safety training or licenses by law, and sites often require more than the legal minimum. 2) Quality focus — NDT is thorough and rework damages your reputation. 3) Team communication — learning key Japanese terms is essential for safety. 4) Respect for process — follow the WPS and work instructions exactly. 🇯🇵 TIP: A powerful phrase: 'Wakaranai toki wa, shitsumon shite mo ii desu ka?' (分からない時は、質問してもいいですか？ / When I don't understand, may I ask?). Asking before starting is respected; guessing and causing a quality problem is not."
       },
       {
         id: 520, cat: "Career",

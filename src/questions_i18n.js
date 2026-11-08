@@ -514,24 +514,24 @@ export const Q_I18N = {
   },
   24: {
     vi: {
-      q: "Theo JIS T 8001 và luật Nhật, tổ hợp PPE nào là TỐI THIỂU bắt buộc để hàn hồ quang trên công trường Nhật?",
+      q: "Ở công trường Nhật, tổ hợp PPE nào là mức TỐI THIỂU tiêu chuẩn khi hàn hồ quang?",
       opts: [
         "Chỉ mũ hàn + găng da + giày an toàn — áo khoác là tùy chọn khi khô ráo",
         "Chỉ mũ hàn — mặt và mắt là mối nguy chính",
         "Mũ hàn + găng da (革手袋) + giày an toàn (安全靴 / JIS T 8101) + áo chống cháy hoặc tạp dề da",
         "Kính an toàn thường + găng cotton mỏng là đủ cho mối hàn ngắn",
       ],
-      exp: "PPE hàn tối thiểu theo JIS/luật Nhật: 1) Mũ hàn 溶接面 với số che sáng đúng (JIS T 8141). 2) Găng da hàn 革手袋 (JIS T 8113). 3) Giày mũi thép 安全靴 (JIS T 8101). 4) Áo chống cháy hoặc tạp dề da 前掛け chống văng. 5) Khẩu trang chống bụi 防じんマスク cho khói hàn. 🇯🇵 MẸO: Trên công trường Nhật, kiểm tra trang phục (服装点検) làm ở buổi họp an toàn sáng (朝礼 / chōrei) — đến mà thiếu PPE đúng thì không được bắt đầu làm việc hôm đó.",
+      exp: "PPE hàn tiêu chuẩn ở công trường Nhật: 1) Mặt nạ hàn 溶接面 với số kính đúng (JIS T 8141). 2) Găng da hàn 革手袋. 3) Giày an toàn 安全靴 (JIS T 8101). 4) Áo chống cháy hoặc tạp dề da 前掛け chống bắn tóe. 5) Khẩu trang chống khói hàn. 🇯🇵 MẸO: PPE được kiểm tra ở buổi họp sáng (朝礼 / chōrei) — đến mà thiếu PPE có thể không được bắt đầu làm việc hôm đó.",
     },
     id: {
-      q: "Menurut JIS T 8001 dan hukum Jepang, kombinasi APD mana yang MINIMUM wajib untuk las busur di lokasi kerja Jepang?",
+      q: "Di lokasi kerja Jepang, kombinasi APD mana yang menjadi MINIMUM standar untuk las busur?",
       opts: [
         "Hanya topeng las + sarung tangan kulit + sepatu safety — jaket opsional saat kondisi kering",
         "Hanya topeng las — wajah dan mata adalah bahaya utama",
         "Topeng las + sarung tangan kulit (革手袋) + sepatu safety (安全靴 / JIS T 8101) + jaket tahan api atau celemek kulit",
         "Kacamata pengaman biasa + sarung tangan katun tipis cukup untuk las pendek",
       ],
-      exp: "APD las minimum menurut JIS/hukum Jepang: 1) Topeng las 溶接面 dengan shade tepat (JIS T 8141). 2) Sarung tangan las kulit 革手袋 (JIS T 8113). 3) Sepatu ujung baja 安全靴 (JIS T 8101). 4) Jaket tahan api atau celemek kulit 前掛け untuk percikan. 5) Respirator debu 防じんマスク untuk asap las. 🇯🇵 TIPS: Di lokasi Jepang, inspeksi pakaian (服装点検) dilakukan pada rapat keselamatan pagi (朝礼 / chōrei) — datang tanpa APD yang benar berarti tidak boleh mulai bekerja hari itu.",
+      exp: "APD las standar di lokasi kerja Jepang: 1) Helm las 溶接面 dengan nomor lensa yang tepat (JIS T 8141). 2) Sarung tangan las kulit 革手袋. 3) Sepatu safety 安全靴 (JIS T 8101). 4) Jaket tahan api atau celemek kulit 前掛け untuk percikan. 5) Respirator untuk asap las. 🇯🇵 TIPS: APD diperiksa saat apel pagi (朝礼 / chōrei) — datang tanpa APD yang benar bisa berarti tidak boleh mulai bekerja hari itu.",
     },
   },
   25: {
@@ -540,20 +540,20 @@ export const Q_I18N = {
       opts: [
         "Khẩu trang là tùy chọn miễn là quạt thông gió đang chạy",
         "Không cần thêm PPE — thép không gỉ an toàn hơn thép carbon",
-        "Khẩu trang chống bụi loại DS1 tiêu chuẩn là đủ — giống thép carbon",
-        "Khẩu trang cấp cao hơn cho crom hóa trị sáu (六価クロム) — cụ thể là 防じんマスク cấp DS2 trở lên",
+        "Khẩu trang chống bụi DS1 tiêu chuẩn luôn đủ — giống thép carbon",
+        "Khẩu trang vừa khít, chọn theo nồng độ khói đã đo — khói inox và vật liệu chứa crom có crom hóa trị sáu (六価クロム), chất gây ung thư",
       ],
-      exp: "Hàn vật liệu chứa crom (thép không gỉ SUS304/316, thép crom-molypden) tạo khói crom hóa trị sáu (六価クロム / Cr⁶⁺) — chất gây ung thư đã xác nhận (発がん性物質). Luật Nhật (特化則 第38条の20) yêu cầu: 1) Khẩu trang chống bụi cấp DS2 trở lên. 2) Bắt buộc hút cục bộ. 3) Phải lưu hồ sơ theo dõi sức khỏe. 4) Phải thông báo bằng văn bản cho công nhân về nguy cơ ung thư. 🇯🇵 MẸO: Ở Nhật, hồ sơ phơi nhiễm 六価クロム phải lưu 30 năm — một trong những chất bị quản lý nghiêm nhất trong nghề hàn. Không bao giờ hàn thép không gỉ mà thiếu khẩu trang đúng.",
+      exp: "Hàn thép không gỉ hoặc vật liệu chứa crom tạo khói có crom hóa trị sáu (六価クロム / Cr⁶⁺), chất đã được xác nhận gây ung thư. Từ 2021, quy định Nhật yêu cầu chủ đo nồng độ khói hàn và chọn khẩu trang theo kết quả đó, có kiểm tra độ kín — nên có thể cần khẩu trang hiệu suất cao hơn so với hàn thép carbon. Thông gió tốt cũng rất cần. 🇯🇵 MẸO: Đừng bao giờ hàn inox mà không đeo loại khẩu trang công ty đã chỉ định cho công việc đó.",
     },
     id: {
       q: "Saat mengelas baja tahan karat (kawat/elektroda mengandung krom), APD TAMBAHAN apa yang diperlukan di luar APD las standar di Jepang?",
       opts: [
         "Respirator opsional asalkan kipas ventilasi menyala",
         "Tidak perlu APD tambahan — baja tahan karat lebih aman dari baja karbon",
-        "Respirator debu kelas DS1 standar cukup — sama seperti baja karbon",
-        "Respirator kelas lebih tinggi untuk krom heksavalen (六価クロム) — khususnya 防じんマスク kelas DS2 atau lebih tinggi",
+        "Respirator debu DS1 standar selalu cukup — sama seperti baja karbon",
+        "Respirator yang pas, dipilih dari konsentrasi asap yang diukur — asap baja tahan karat dan bahan berkrom mengandung krom heksavalen (六価クロム), zat karsinogen",
       ],
-      exp: "Mengelas material mengandung krom (baja tahan karat SUS304/316, baja krom-moli) menghasilkan asap krom heksavalen (六価クロム / Cr⁶⁺) — karsinogen manusia yang terkonfirmasi (発がん性物質). Hukum Jepang (特化則 第38条の20) mewajibkan: 1) Respirator debu kelas DS2 atau lebih tinggi. 2) Ventilasi buang lokal wajib. 3) Catatan pengawasan kesehatan harus disimpan. 4) Pekerja harus diberi tahu risiko kanker secara tertulis. 🇯🇵 TIPS: Di Jepang, catatan paparan 六価クロム harus disimpan 30 tahun — salah satu zat paling ketat diatur dalam pekerjaan las. Jangan pernah mengelas baja tahan karat tanpa respirator yang benar.",
+      exp: "Mengelas baja tahan karat atau bahan yang mengandung krom menghasilkan asap berisi krom heksavalen (六価クロム / Cr⁶⁺), karsinogen bagi manusia. Sejak 2021, aturan Jepang mewajibkan pemberi kerja mengukur konsentrasi asap las dan memilih respirator dari hasil itu, dengan uji kerapatan — sehingga mungkin perlu respirator berkinerja lebih tinggi daripada untuk baja karbon. Ventilasi yang baik juga penting. 🇯🇵 TIPS: Jangan pernah mengelas baja tahan karat tanpa respirator yang ditentukan perusahaan untuk pekerjaan itu.",
     },
   },
   101: {
@@ -785,7 +785,7 @@ export const Q_I18N = {
         "Mũ điều khiển từ xa có camera",
         "Mũ tự động tối — kính trong cho đến khi hồ quang bật, rồi tối tự động trong vài phần nghìn giây",
       ],
-      exp: "Jido-shakko-men (自動遮光面) = Mũ hàn tự động tối (ADH). Kính trong khi nghỉ (thấy rõ để đặt súng) rồi tối tự động khi hồ quang bật — thời gian phản ứng dưới 1/25.000 giây. Giảm mỏi mắt, tăng độ chính xác định vị. Tiêu chuẩn ở xưởng Nhật hiện đại. 🇯🇵 MẸO: Nhiều thợ Nhật tự sắm jido-shakko-men. Hãng tốt ở Nhật: ITOCHU (伊藤忠), Kikaiya (機械屋), hoặc nhập Lincoln Electric / 3M. Dự trù ¥15.000–50.000 cho mũ chất lượng. Mũ không thương hiệu rẻ với phản ứng chậm (trên 1/3.200 giây) vẫn có thể hại mắt — hãy xem thông số.",
+      exp: "Jido-shakko-men (自動遮光面) = Mũ hàn tự động tối (ADH). Kính trong khi nghỉ (thấy rõ để đặt súng) rồi tối tự động khi hồ quang bật — thời gian phản ứng dưới 1/25.000 giây. Giảm mỏi mắt, tăng độ chính xác định vị. Tiêu chuẩn ở xưởng Nhật hiện đại. 🇯🇵 MẸO: Nhiều thợ hàn Nhật có mặt nạ tự động tối riêng. Trước khi mua, hãy xem thời gian phản ứng và dải số kính trên thông số — mặt nạ rẻ, phản ứng chậm vẫn có thể hại mắt.",
     },
     id: {
       q: "Apa itu 'Jido-shakko-men' (自動遮光面) dan mengapa banyak tukang las Jepang menyukainya?",
@@ -795,7 +795,7 @@ export const Q_I18N = {
         "Topeng kendali jarak jauh dengan kamera",
         "Topeng auto-darkening — lensa bening sampai busur menyala, lalu menggelap otomatis dalam milidetik",
       ],
-      exp: "Jido-shakko-men (自動遮光面) = Topeng las auto-darkening (ADH). Lensa bening saat diam (Anda bisa melihat jelas untuk memosisikan gun) lalu menggelap otomatis saat busur mulai — waktu reaksi di bawah 1/25.000 detik. Mengurangi lelah mata, meningkatkan akurasi posisi. Standar di bengkel Jepang modern. 🇯🇵 TIPS: Banyak pekerja Jepang punya jido-shakko-men sendiri. Merek bagus di Jepang: ITOCHU (伊藤忠), Kikaiya (機械屋), atau impor Lincoln Electric / 3M. Anggarkan ¥15.000–50.000 untuk topeng berkualitas. ADH tanpa merek murah dengan reaksi lambat (di atas 1/3.200 detik) tetap bisa merusak mata — periksa spesifikasinya.",
+      exp: "Jido-shakko-men (自動遮光面) = Topeng las auto-darkening (ADH). Lensa bening saat diam (Anda bisa melihat jelas untuk memosisikan gun) lalu menggelap otomatis saat busur mulai — waktu reaksi di bawah 1/25.000 detik. Mengurangi lelah mata, meningkatkan akurasi posisi. Standar di bengkel Jepang modern. 🇯🇵 TIPS: Banyak tukang las Jepang punya helm auto-gelap sendiri. Sebelum membeli, periksa waktu reaksi dan rentang nomor lensa di lembar spesifikasi — helm murah yang lambat tetap bisa merusak mata.",
     },
   },
   112: {
@@ -829,7 +829,7 @@ export const Q_I18N = {
         "Một loại dây hàn lõi thuốc",
         "Vật liệu lót chỉ cho hàn ống",
       ],
-      exp: "Endo-tabu (エンドタブ) = Tấm chạy ra / tấm đầu cuối. Tấm thép ngắn gắn ở mỗi đầu mối nối. Điểm khởi và kết thúc hồ quang là vùng dễ khuyết tật nhất (ブローホール, クレーター割れ). Tấm đầu cuối đưa các khuyết tật này ra ngoài mối nối thực. Sau khi hàn, cắt bỏ. Bắt buộc trong thi chứng chỉ JIS. 🇯🇵 MẸO: Trong thi chứng chỉ hàn JIS, tấm đầu cuối là bắt buộc và kích thước được quy định trong tiêu chuẩn thi. Quên gắn hoặc gắn sai là trượt tự động — xem kỹ sơ đồ bố trí bài thi JIS trước kỳ thi.",
+      exp: "Endo-tabu (エンドタブ) = Tấm chạy ra / tấm đầu cuối. Tấm thép ngắn gắn ở mỗi đầu mối nối. Điểm khởi và kết thúc hồ quang là vùng dễ khuyết tật nhất (ブローホール, クレーター割れ). Tấm đầu cuối đưa các khuyết tật này ra ngoài mối nối thực. Sau khi hàn, cắt bỏ. Bắt buộc trong thi chứng chỉ JIS. 🇯🇵 MẸO: Tấm chặn đầu (end tab) là tiêu chuẩn trong kết cấu thép xây dựng, và bài thi hàn nhà máy AW Kentei được chia theo loại tab (tab thép hoặc tab thay thế). Sau khi hàn, cắt và hoàn thiện vùng tab đúng quy trình.",
     },
     id: {
       q: "Apa itu 'Endo-tabu' (エンドタブ) dan mengapa dipakai dalam ujian sertifikasi dan las produksi?",
@@ -839,7 +839,7 @@ export const Q_I18N = {
         "Sejenis kawat berinti fluks",
         "Material backing hanya untuk las pipa",
       ],
-      exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Pelat baja pendek yang dipasang di tiap ujung sambungan las. Awal dan akhir busur adalah area paling rawan cacat (ブローホール, クレーター割れ). End tab memindahkan cacat ini ke luar sambungan sebenarnya. Setelah mengelas, end tab dipotong dan dibuang. Wajib dalam ujian sertifikasi JIS. 🇯🇵 TIPS: Dalam ujian sertifikasi las JIS, end tab wajib dan dimensinya ditentukan dalam standar uji. Lupa memasang atau memasang salah adalah kegagalan otomatis — pelajari diagram setup uji JIS dengan teliti sebelum ujian.",
+      exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Pelat baja pendek yang dipasang di tiap ujung sambungan las. Awal dan akhir busur adalah area paling rawan cacat (ブローホール, クレーター割れ). End tab memindahkan cacat ini ke luar sambungan sebenarnya. Setelah mengelas, end tab dipotong dan dibuang. Wajib dalam ujian sertifikasi JIS. 🇯🇵 TIPS: End tab adalah standar dalam pekerjaan baja bangunan, dan ujian las pabrik AW Kentei dibagi menurut jenis end tab (end tab baja atau end tab pengganti). Setelah mengelas, potong dan rapikan area end tab sesuai prosedur.",
     },
   },
   114: {
@@ -895,7 +895,7 @@ export const Q_I18N = {
         "Lớp phủ chống ăn mòn",
         "Đánh dấu đường cắt trên tấm thép",
       ],
-      exp: "Ondo-chooku (温度チョーク) = Bút sáp nhiệt độ / Tempilstick. Mỗi bút chảy ở một nhiệt độ nhất định (ví dụ 150°C, 200°C, 350°C). Đánh dấu lên thép gần mối hàn — nếu vết chảy, đã đạt nhiệt độ. Dùng để kiểm tra nhiệt độ nung trước (予熱) trước khi hàn và nhiệt độ giữa các lượt (パス間温度). 🇯🇵 MẸO: Phải đo ở mặt đối diện của tấm so với nguồn nhiệt, cách mép hàn ít nhất 75mm theo tiêu chuẩn JIS. Đo trực tiếp trên mặt bị nung cho số cao sai. Giám sát biết điều này — họ sẽ kiểm tra kỹ thuật đo của bạn.",
+      exp: "Ondo-chooku (温度チョーク) = Bút sáp nhiệt độ / Tempilstick. Mỗi bút chảy ở một nhiệt độ nhất định (ví dụ 150°C, 200°C, 350°C). Đánh dấu lên thép gần mối hàn — nếu vết chảy, đã đạt nhiệt độ. Dùng để kiểm tra nhiệt độ nung trước (予熱) trước khi hàn và nhiệt độ giữa các lượt (パス間温度). 🇯🇵 MẸO: Đo đúng vị trí WPS quy định — thường trên kim loại cơ bản cách mối nối một khoảng nhất định, không đo trên mối hàn. Giám sát kiểm tra cả cách đo lẫn kết quả.",
     },
     id: {
       q: "Untuk apa 'Ondo-chooku' (温度チョーク) atau 'Tempu-sutikku' (テンプスティック) dipakai?",
@@ -905,7 +905,7 @@ export const Q_I18N = {
         "Pelapis anti-korosi",
         "Menandai garis potong pada pelat baja",
       ],
-      exp: "Ondo-chooku (温度チョーク) = Krayon suhu / Tempilstick. Tiap krayon meleleh pada suhu tertentu (mis. 150°C, 200°C, 350°C). Tandai baja dekat las — jika tanda meleleh, suhu telah tercapai. Dipakai untuk memverifikasi suhu preheat (予熱) sebelum mengelas dan suhu antar-pass (パス間温度) di antara pass. 🇯🇵 TIPS: Suhu harus diukur di sisi pelat yang berlawanan dari sumber panas, minimal 75mm dari tepi las sesuai standar JIS. Mengukur langsung di permukaan panas memberi bacaan yang keliru tinggi. Supervisor tahu ini — mereka akan memeriksa teknik pengukuran Anda.",
+      exp: "Ondo-chooku (温度チョーク) = Krayon suhu / Tempilstick. Tiap krayon meleleh pada suhu tertentu (mis. 150°C, 200°C, 350°C). Tandai baja dekat las — jika tanda meleleh, suhu telah tercapai. Dipakai untuk memverifikasi suhu preheat (予熱) sebelum mengelas dan suhu antar-pass (パス間温度) di antara pass. 🇯🇵 TIPS: Ukur di tempat yang ditentukan WPS — biasanya di logam induk pada jarak tertentu dari sambungan, bukan di las itu sendiri. Supervisor memeriksa cara mengukur maupun hasilnya.",
     },
   },
   117: {
@@ -932,24 +932,24 @@ export const Q_I18N = {
   },
   118: {
     vi: {
-      q: "Ở Nhật, súng hàn Panasonic gọi là 'Reddo-tochi' (レッドトーチ) và súng Daihen gọi là 'Buruu-tochi' (ブルートーチ). Vì sao điều này quan trọng trên công trường?",
+      q: "Công trường dùng mỏ hàn bán tự động của nhiều hãng (ví dụ Panasonic và Daihen). Bạn có thể đổi bép và chụp khí giữa chúng không?",
       opts: [
-        "Chúng giống hệt — màu chỉ là thương hiệu",
-        "Súng đỏ hàn nhanh hơn súng xanh",
-        "Các hãng súng dùng cỡ đầu tip và chuẩn ren khác nhau — phụ tùng KHÔNG thay lẫn được. Dùng sai chip/nozzle gây hàn kém",
-        "Súng xanh cần lưu lượng khí cao hơn súng đỏ",
+        "Được — mọi phụ tùng mỏ hàn Nhật cùng một kích cỡ chuẩn",
+        "Được, miễn là cùng đường kính dây",
+        "Không nên khi chưa kiểm tra — phụ tùng được làm cho từng model mỏ hàn, kích cỡ và ren có thể khác; luôn khớp mã phụ tùng với mỏ hàn",
+        "Không — chỉ đổi được chụp khí, bép thì không bao giờ",
       ],
-      exp: "Trên công trường Nhật: Panasonic = súng đỏ (レッドトーチ), Daihen = súng xanh (ブルートーチ). Đầu tip (チップ), chụp khí và ống lót của chúng dùng cỡ và chuẩn ren KHÁC nhau. Lắp chip súng đỏ vào súng xanh sẽ không vừa. Luôn khớp phụ tùng thay thế đúng hãng súng. 🇯🇵 MẸO: Khi đặt phụ tùng, cửa hàng vật tư hàn Nhật (溶接用品店) luôn hỏi 'đỏ hay xanh?' trước. Giữ sẵn một chip đúng hãng trong túi tạp dề. Hết chip giữa ca vì lấy nhầm túi là lỗi bực mình và ngượng.",
+      exp: "Bép (チップ), chụp khí (ノズル), bộ chia khí và ruột dẫn được thiết kế cho từng model mỏ hàn. Hãng khác — thậm chí model khác cùng hãng — có thể khác kích cỡ và ren, nên phụ tùng trông giống vẫn có thể không vừa hoặc lắp lỏng, gây rò khí và hồ quang không ổn định. 🇯🇵 MẸO: Khi đặt phụ tùng ở cửa hàng vật tư hàn (溶接用品店), hãy nói hãng và model mỏ hàn. Mang theo vài bép dự phòng đúng loại trong túi.",
     },
     id: {
-      q: "Di Jepang, gun las Panasonic disebut 'Reddo-tochi' (レッドトーチ) dan gun Daihen disebut 'Buruu-tochi' (ブルートーチ). Mengapa ini penting di lokasi?",
+      q: "Lokasi kerja memakai torch semi-otomatis dari beberapa merek (misalnya Panasonic dan Daihen). Bisakah tip kontak dan nozzle ditukar di antara keduanya?",
       opts: [
-        "Keduanya identik — warna hanya branding",
-        "Gun merah mengelas lebih cepat dari yang biru",
-        "Merek gun memakai ukuran contact tip dan standar ulir berbeda — suku cadang TIDAK bisa dipertukarkan. Memakai chip/nozzle salah menyebabkan las buruk",
-        "Gun biru butuh aliran gas lebih tinggi dari merah",
+        "Bisa — semua suku cadang torch Jepang ukurannya standar sama",
+        "Bisa, asalkan diameter kawatnya sama",
+        "Jangan tanpa memeriksa — suku cadang dibuat untuk model torch tertentu, ukuran dan uliran bisa berbeda; selalu cocokkan nomor suku cadang dengan torch Anda",
+        "Tidak — hanya nozzle yang bisa ditukar, tip tidak pernah",
       ],
-      exp: "Di lokasi kerja Jepang: Panasonic = gun merah (レッドトーチ), Daihen = gun biru (ブルートーチ). Contact tip (チップ), nozzle, dan liner-nya memakai ukuran dan standar ulir BERBEDA. Jika memasang chip gun merah ke gun biru, tak akan pas. Selalu cocokkan suku cadang pengganti dengan merek gun yang benar. 🇯🇵 TIPS: Saat memesan suku cadang, toko perlengkapan las Jepang (溶接用品店) selalu bertanya 'merah atau biru?' dulu. Simpan cadangan chip merek yang benar di saku celemek. Kehabisan chip di tengah shift karena salah ambil kantong adalah kesalahan yang menjengkelkan dan memalukan.",
+      exp: "Tip kontak (チップ), nozzle (ノズル), orifice, dan liner dirancang untuk model torch tertentu. Merek berbeda — bahkan model berbeda dari merek yang sama — bisa memakai ukuran dan uliran berbeda, sehingga suku cadang yang mirip mungkin tidak pas atau longgar, menyebabkan kebocoran gas dan busur tidak stabil. 🇯🇵 TIPS: Saat memesan di toko perlengkapan las (溶接用品店), sebutkan merek dan model torch. Simpan beberapa tip cadangan jenis yang benar di saku.",
     },
   },
   119: {
@@ -1042,24 +1042,24 @@ export const Q_I18N = {
   },
   203: {
     vi: {
-      q: "Đàn anh xem rãnh và nói 'Tenpai!' (テンパイ). Nước đi tiếp theo của bạn là gì?",
+      q: "Đàn anh kiểm tra rãnh hàn và nói lượt tiếp theo là 'Shiage' (仕上げ / しあげ). Điều này nghĩa là bạn làm gì tiếp?",
       opts: [
-        "Làm lại lượt chân từ đầu — mọi thứ đều sai",
-        "Mối hàn xong rồi — dọn đồ về nhà",
-        "Có vết nứt — dừng và gọi người kiểm tra",
-        "Rãnh gần đầy — chỉ một lượt nữa (lượt phủ/mặt) là xong",
+        "Hàn lại lượt chân từ đầu — mọi thứ đều sai",
+        "Mối hàn đã xong — dọn đồ về",
+        "Có vết nứt — dừng lại và gọi người kiểm tra",
+        "Rãnh gần đầy — lượt tiếp theo là lượt phủ (lớp mặt) tạo nên bề mặt nhìn thấy",
       ],
-      exp: "Tenpai (テンパイ) đến từ Mạt chược Nhật — nghĩa là 'còn một quân là thắng'. Trên công trường, nghĩa là mối hàn rãnh đã đầy đến ngay dưới lượt phủ cuối. Bạn còn một lượt là xong. 🇯🇵 MẸO: Thợ Nhật thích các cách nói từ Mạt chược. Học chúng cho thấy hiểu văn hóa. Khi nghe 'tenpai', lượt phủ (仕上げパス / shiage-pasu) là tiếp theo — cẩn thận với ngoại quan đường hàn vì đây là mặt lộ mà người kiểm tra nhìn đầu tiên.",
+      exp: "Shiage (仕上げ) = hoàn thiện. Trong hàn rãnh nhiều lượt, 仕上げ層 (shiage-sou / lớp phủ) là lớp cuối tạo bề mặt mối hàn. Các lượt trước đó là lượt chân (初層 / shosou) và các lượt điền đầy (中間層 / chuukan-sou). 🇯🇵 MẸO: Cẩn thận hơn với độ rộng, độ cao và chân đường hàn ở lớp phủ — đây là bề mặt người kiểm tra đánh giá đầu tiên khi kiểm tra bằng mắt.",
     },
     id: {
-      q: "Senior memeriksa alur dan berkata 'Tenpai!' (テンパイ). Apa langkah Anda berikutnya?",
+      q: "Senior memeriksa alur dan mengatakan pass berikutnya adalah 'Shiage' (仕上げ / しあげ). Apa artinya untuk langkah Anda selanjutnya?",
       opts: [
         "Mulai root pass dari awal — semuanya salah",
-        "Las selesai — berkemas dan pulang",
-        "Ada retak — berhenti dan panggil inspektor",
-        "Alur hampir penuh — tinggal satu pass lagi (cap/cover pass) dan Anda selesai",
+        "Las sudah selesai — beres-beres dan pulang",
+        "Ada retak — berhenti dan panggil inspektur",
+        "Alur hampir penuh — pass berikutnya adalah cap pass (lapisan penutup) yang membentuk permukaan yang terlihat",
       ],
-      exp: "Tenpai (テンパイ) berasal dari Mahjong Jepang — artinya 'tinggal satu ubin untuk menang'. Di lokasi, artinya las alur sudah terisi sampai tepat di bawah cap pass terakhir. Anda tinggal satu pass lagi. 🇯🇵 TIPS: Pekerja Jepang suka ungkapan dari Mahjong. Mempelajarinya menunjukkan kesadaran budaya. Saat mendengar 'tenpai', cap pass (仕上げパス / shiage-pasu) berikutnya — ekstra hati-hati dengan tampilan jalur karena ini permukaan terlihat yang dinilai inspektor lebih dulu.",
+      exp: "Shiage (仕上げ) = penyelesaian. Pada las alur multi-pass, 仕上げ層 (shiage-sou / cap pass) adalah lapisan terakhir yang membentuk permukaan las. Pass sebelumnya adalah root pass (初層 / shosou) dan pass pengisi (中間層 / chuukan-sou). 🇯🇵 TIPS: Lebih teliti pada lebar, tinggi, dan kaki manik di cap pass — inilah permukaan yang pertama dinilai inspektur dalam uji visual.",
     },
   },
   204: {
@@ -1225,7 +1225,7 @@ export const Q_I18N = {
         "Đường hàn quá cao",
         "Lệch mép — hai mép tấm ở mối nối không bằng nhau; một bên cao hơn bên kia",
       ],
-      exp: "Mechigai (目違い) = lệch mép / không khớp. Hai tấm hàn với nhau không cùng độ cao — một mép cao hơn. Điều này tạo phân bố ứng suất không đều và có thể dẫn đến khuyết tật. Tiêu chuẩn JIS quy định độ lệch tối đa cho phép tùy chiều dày tấm. Khắc phục bằng kẹp trước khi hàn. 🇯🇵 MẸO: JIS B 8270 quy định giới hạn mechigai cho bình áp lực. Với kết cấu thép, áp dụng JIS G 3353 và quy chuẩn xây dựng. Trên công trường, quy tắc nhanh: mechigai không vượt 10% chiều dày tấm. Người kiểm tra mang thước thẳng và thước khe — họ sẽ kiểm trước khi chứng kiến bất kỳ lượt chân nào.",
+      exp: "Mechigai (目違い) = lệch mép / không khớp. Hai tấm hàn với nhau không cùng độ cao — một mép cao hơn. Điều này tạo phân bố ứng suất không đều và có thể dẫn đến khuyết tật. Tiêu chuẩn JIS quy định độ lệch tối đa cho phép tùy chiều dày tấm. Khắc phục bằng kẹp trước khi hàn. 🇯🇵 MẸO: Độ lệch cho phép tùy theo quy chuẩn và chiều dày tấm — hãy xem bản vẽ hoặc WPS, đừng dựa vào kinh nghiệm truyền miệng. Người kiểm tra dùng thước thẳng và dưỡng để kiểm trước lượt hàn chân.",
     },
     id: {
       q: "Saat kunjungan lokasi, inspektor menunjuk sambungan dan berkata 'Mechigai ga aru!' (目違いがある！). Apa masalahnya?",
@@ -1235,7 +1235,7 @@ export const Q_I18N = {
         "Jalur las terlalu tinggi",
         "Misalignment — kedua tepi pelat di sambungan tidak rata; satu lebih tinggi dari yang lain",
       ],
-      exp: "Mechigai (目違い) = misalignment / tidak sejajar. Kedua pelat yang dilas tidak sama tinggi — satu tepi lebih tinggi. Ini menciptakan distribusi tegangan tak merata dan bisa menimbulkan cacat. Standar JIS menentukan misalignment maksimum sesuai tebal pelat. Perbaiki dengan klem sebelum mengelas. 🇯🇵 TIPS: JIS B 8270 menetapkan batas mechigai untuk bejana tekan. Untuk baja struktur, berlaku JIS G 3353 dan kode bangunan. Di lokasi, aturan cepat: mechigai tak boleh melebihi 10% tebal pelat. Inspektor membawa penggaris lurus dan gap gauge — mereka memeriksanya sebelum menyaksikan root pass mana pun.",
+      exp: "Mechigai (目違い) = misalignment / tidak sejajar. Kedua pelat yang dilas tidak sama tinggi — satu tepi lebih tinggi. Ini menciptakan distribusi tegangan tak merata dan bisa menimbulkan cacat. Standar JIS menentukan misalignment maksimum sesuai tebal pelat. Perbaiki dengan klem sebelum mengelas. 🇯🇵 TIPS: Ketidaksejajaran yang diizinkan tergantung kode dan tebal pelat — periksa gambar atau WPS, bukan aturan kira-kira. Inspektur memeriksanya dengan mistar lurus dan pengukur sebelum root pass.",
     },
   },
   212: {
@@ -1269,7 +1269,7 @@ export const Q_I18N = {
         "Dùng khí CO₂ thay Argon",
         "Bôi hồ thuốc lên mặt sau mối nối",
       ],
-      exp: "Ura-gasu (裏ガス) = thổi khí mặt sau / che mặt sau. Khi hàn inox hoặc titan, mặt sau mối hàn phải được che bằng Argon hoặc Nitơ để ngăn ôxy hóa. Thiếu nó, mặt sau ôxy hóa — tạo màu cầu vồng (Tenpaa-karaa / テンパーカラー) và giảm mạnh khả năng chống ăn mòn. 🇯🇵 MẸO: Lưu lượng ura-gasu và thời gian thổi được quy định trong WPS. Lỗi thường gặp là không thổi đủ lâu trước khi bật hồ quang — oxy còn lại trong ống vẫn làm ôxy hóa mối đầu. Thổi đến khi máy đo oxy trong ống dưới 100 ppm (0,01%) cho các ứng dụng quan trọng như ống thực phẩm hoặc dược.",
+      exp: "Ura-gasu (裏ガス) = thổi khí mặt sau / che mặt sau. Khi hàn inox hoặc titan, mặt sau mối hàn phải được che bằng Argon hoặc Nitơ để ngăn ôxy hóa. Thiếu nó, mặt sau ôxy hóa — tạo màu cầu vồng (Tenpaa-karaa / テンパーカラー) và giảm mạnh khả năng chống ăn mòn. 🇯🇵 MẸO: Lưu lượng và thời gian thổi khí mặt sau được quy định trong WPS. Lỗi thường gặp là thổi chưa đủ lâu trước khi mồi hồ quang — oxy còn trong ống vẫn làm oxy hóa lớp chân. Với đường ống quan trọng, nồng độ oxy bên trong được kiểm bằng máy đo.",
     },
     id: {
       q: "Saat mengelas baja tahan karat, supervisor berkata 'Ura-gasu wo shiro!' (裏ガスをしろ！). Apa yang perlu Anda siapkan?",
@@ -1279,7 +1279,7 @@ export const Q_I18N = {
         "Memakai gas CO₂ alih-alih Argon",
         "Mengoleskan pasta fluks ke belakang sambungan",
       ],
-      exp: "Ura-gasu (裏ガス) = back purge / pelindung belakang. Saat mengelas stainless atau titanium, sisi belakang las harus dilindungi dengan Argon atau Nitrogen untuk mencegah oksidasi. Tanpanya, permukaan belakang teroksidasi — menimbulkan warna pelangi (Tenpaa-karaa / テンパーカラー) dan sangat menurunkan ketahanan korosi. 🇯🇵 TIPS: Laju ura-gasu dan waktu purge ditentukan dalam WPS. Kesalahan umum adalah purge kurang lama sebelum menyalakan busur — oksigen yang tersisa di pipa tetap mengoksidasi las pertama. Purge sampai meter oksigen dalam pipa membaca di bawah 100 ppm (0,01%) untuk aplikasi kritis seperti pipa food-grade atau farmasi.",
+      exp: "Ura-gasu (裏ガス) = back purge / pelindung belakang. Saat mengelas stainless atau titanium, sisi belakang las harus dilindungi dengan Argon atau Nitrogen untuk mencegah oksidasi. Tanpanya, permukaan belakang teroksidasi — menimbulkan warna pelangi (Tenpaa-karaa / テンパーカラー) dan sangat menurunkan ketahanan korosi. 🇯🇵 TIPS: Laju aliran dan waktu purge sisi belakang ditentukan di WPS. Kesalahan umum adalah purge kurang lama sebelum menyalakan busur — oksigen yang tersisa di pipa tetap mengoksidasi akar las. Untuk pipa kritis, kadar oksigen di dalam diperiksa dengan alat ukur.",
     },
   },
   214: {
@@ -1335,7 +1335,7 @@ export const Q_I18N = {
         "Mối hàn hoàn hảo — được duyệt",
         "Chỉ dừng và đổi cài đặt máy hàn",
       ],
-      exp: "Torinao-shi (取り直し) = làm lại / làm mới. Mối hàn bị từ chối và phải loại bỏ hoàn toàn rồi hàn lại. Tốn thời gian, vật liệu và uy tín. Trong văn hóa chất lượng Nhật, làm lại được xem rất nghiêm túc — nó ảnh hưởng đánh giá thợ. Phòng ngừa: làm đúng ngay lần đầu. 🇯🇵 MẸO: Ở công ty Nhật, tỷ lệ làm lại (手直し / tenaoshi hoặc 取り直し) được theo dõi theo từng thợ và xem xét trong họp chất lượng hằng tháng. Tỷ lệ làm lại cao sẽ ảnh hưởng gia hạn hợp đồng. Văn hóa chất lượng Nhật truy khuyết tật về từng thợ — nổi tiếng làm sạch ngay lần đầu là uy tín quan trọng nhất bạn có thể xây.",
+      exp: "Torinao-shi (取り直し) = làm lại / làm mới. Mối hàn bị từ chối và phải loại bỏ hoàn toàn rồi hàn lại. Tốn thời gian, vật liệu và uy tín. Trong văn hóa chất lượng Nhật, làm lại được xem rất nghiêm túc — nó ảnh hưởng đánh giá thợ. Phòng ngừa: làm đúng ngay lần đầu. 🇯🇵 MẸO: Nhiều công ty Nhật theo dõi việc làm lại (手直し / tenaoshi) và truy khuyết tật về mối hàn và thợ hàn. Được biết đến là người làm sạch đẹp ngay lần đầu là uy tín tốt nhất bạn có thể xây dựng.",
     },
     id: {
       q: "Inspektor berkata 'Torinao-shi da!' (取り直しだ！). Apa artinya bagi tukang las?",
@@ -1345,7 +1345,7 @@ export const Q_I18N = {
         "Las sempurna — disetujui",
         "Berhenti dan ubah setelan mesin las saja",
       ],
-      exp: "Torinao-shi (取り直し) = rework / ulang. Las ditolak dan harus dibuang sepenuhnya lalu dilas ulang. Ini memakan waktu, material, dan reputasi. Dalam budaya mutu Jepang, rework dianggap sangat serius — memengaruhi evaluasi tukang. Pencegahan: kerjakan benar sejak awal. 🇯🇵 TIPS: Di perusahaan Jepang, tingkat rework (手直し / tenaoshi atau 取り直し) dilacak per tukang dan ditinjau dalam rapat mutu bulanan. Tingkat rework tinggi akan memengaruhi perpanjangan kontrak. Budaya mutu Jepang menelusuri cacat ke individu tukang — dikenal sebagai kerja bersih sekali jadi adalah reputasi terpenting yang bisa Anda bangun.",
+      exp: "Torinao-shi (取り直し) = rework / ulang. Las ditolak dan harus dibuang sepenuhnya lalu dilas ulang. Ini memakan waktu, material, dan reputasi. Dalam budaya mutu Jepang, rework dianggap sangat serius — memengaruhi evaluasi tukang. Pencegahan: kerjakan benar sejak awal. 🇯🇵 TIPS: Banyak perusahaan Jepang mencatat rework (手直し / tenaoshi) dan menelusuri cacat sampai ke sambungan dan tukang lasnya. Dikenal sebagai orang yang hasilnya bagus sejak pertama adalah reputasi terbaik yang bisa Anda bangun.",
     },
   },
   217: {
@@ -1379,7 +1379,7 @@ export const Q_I18N = {
         "Bỏ xỉ sau mỗi lượt bằng búa đục hoặc máy đục hơi — làm giữa MỖI lớp trong hàn nhiều lượt",
         "Mài mối hàn đến chiều cao cuối",
       ],
-      exp: "Chippingu (チッピング) = đục xỉ / bỏ xỉ. Làm sau mỗi lượt trong hàn nhiều lượt. Không bỏ xỉ giữa các lượt gây lẫn xỉ (スラグ巻き込み) — khuyết tật bên trong nghiêm trọng sẽ trượt kiểm tra NDT. Quy trình: đục → chải sắt → kiểm → hàn lượt tiếp. 🇯🇵 MẸO: Quy trình đục đúng của Nhật gọi là '打検' (dakken / gõ và kiểm) — sau khi đục, gõ nhẹ đường hàn bằng cán để nghe xỉ còn sót. Tiếng rỗng nghĩa là còn xỉ. Kiểm tra gõ nhanh này là phần thói quen chuyên nghiệp được kỳ vọng trên công trường Nhật.",
+      exp: "Chippingu (チッピング) = đục xỉ / bỏ xỉ. Làm sau mỗi lượt trong hàn nhiều lượt. Không bỏ xỉ giữa các lượt gây lẫn xỉ (スラグ巻き込み) — khuyết tật bên trong nghiêm trọng sẽ trượt kiểm tra NDT. Quy trình: đục → chải sắt → kiểm → hàn lượt tiếp. 🇯🇵 MẸO: Sau khi gõ xỉ, chải sạch đường hàn và nhìn kỹ chân đường hàn và giữa các đường — xỉ thường nằm ở đó. Chỉ hàn lượt tiếp khi bề mặt đã sạch.",
     },
     id: {
       q: "Apa itu 'Chippingu' (チッピング) dalam alur kerja las, dan kapan tepatnya dilakukan?",
@@ -1389,7 +1389,7 @@ export const Q_I18N = {
         "Membuang terak setelah tiap pass memakai palu ketuk atau air chipper — dilakukan di antara SETIAP lapisan pada las multi-pass",
         "Menggerinda las ke tinggi akhir",
       ],
-      exp: "Chippingu (チッピング) = pengetukan terak / pembuangan terak. Dilakukan setelah tiap pass pada las multi-pass. Gagal membuang terak antar-pass menyebabkan inklusi terak (スラグ巻き込み) — cacat internal serius yang akan gagal inspeksi NDT. Proses: ketuk → sikat kawat → periksa → las pass berikutnya. 🇯🇵 TIPS: Alur pengetukan Jepang yang benar disebut '打検' (dakken / ketuk dan periksa) — setelah mengetuk, ketuk ringan jalur dengan gagang untuk mendengar terak yang longgar. Bunyi berongga berarti masih ada terak. Uji ketuk cepat ini bagian dari rutinitas profesional yang diharapkan di lokasi Jepang.",
+      exp: "Chippingu (チッピング) = pengetukan terak / pembuangan terak. Dilakukan setelah tiap pass pada las multi-pass. Gagal membuang terak antar-pass menyebabkan inklusi terak (スラグ巻き込み) — cacat internal serius yang akan gagal inspeksi NDT. Proses: ketuk → sikat kawat → periksa → las pass berikutnya. 🇯🇵 TIPS: Setelah chipping, sikat manik las dan lihat teliti di kaki las dan di antara manik — terak sering tersembunyi di sana. Mulai pass berikutnya hanya jika permukaan sudah bersih.",
     },
   },
   219: {
@@ -1643,7 +1643,7 @@ export const Q_I18N = {
         "Khe chân — khoảng trống giữa các mép tấm ở đáy rãnh. Quá hẹp = ngấu kém. Quá rộng = thủng",
         "Chiều cao đắp trên tấm — phải trong quy định",
       ],
-      exp: "Ruuto-gyappu (ルートギャップ) = Khe chân / khe mở chân. Khoảng trống được kiểm soát giữa các mép tấm ở chân rãnh. Quá hẹp (< quy định): hồ quang không tới chân, gây thiếu ngấu (溶込不良). Quá rộng (> quy định): thủng (溶落ち). Ghi trên bản vẽ — đo bằng thước khe trước khi hàn. 🇯🇵 MẸO: Công trường Nhật dùng 隙間ゲージ (sukima-geeji / bộ căn lá) hoặc thước khe chân chuyên dụng để kiểm trước mỗi mối. Dải chấp nhận thường ±0.5mm so với quy định. Đừng ước lượng bằng mắt — khe nhìn đúng thường không đúng, và chi phí chỉnh trước khi hàn thấp hơn nhiều so với hatsuri và làm lại sau.",
+      exp: "Ruuto-gyappu (ルートギャップ) = Khe chân / khe mở chân. Khoảng trống được kiểm soát giữa các mép tấm ở chân rãnh. Quá hẹp (< quy định): hồ quang không tới chân, gây thiếu ngấu (溶込不良). Quá rộng (> quy định): thủng (溶落ち). Ghi trên bản vẽ — đo bằng thước khe trước khi hàn. 🇯🇵 MẸO: Kiểm tra khe hở chân bằng dưỡng trước mỗi mối hàn và so với dung sai trên bản vẽ hoặc WPS. Đừng ước lượng bằng mắt — chỉnh khe hở trước khi hàn rẻ hơn nhiều so với đục bỏ và hàn lại.",
     },
     id: {
       q: "Apa itu 'Ruuto-gyappu' (ルートギャップ) — dan apa yang terjadi jika terlalu lebar atau terlalu sempit?",
@@ -1653,10 +1653,10 @@ export const Q_I18N = {
         "Root gap — ruang antara tepi pelat di dasar alur. Terlalu sempit = penetrasi buruk. Terlalu lebar = tembus bakar",
         "Tinggi penguatan di atas pelat — harus sesuai spesifikasi",
       ],
-      exp: "Ruuto-gyappu (ルートギャップ) = Root gap / bukaan akar. Ruang terkendali antara tepi pelat di akar alur. Terlalu sempit (< spek): busur tak mencapai akar, menyebabkan kurang penetrasi (溶込不良). Terlalu lebar (> spek): tembus bakar (溶落ち). Ditetapkan pada gambar — ukur dengan gap gauge sebelum mengelas. 🇯🇵 TIPS: Lokasi Jepang memakai 隙間ゲージ (sukima-geeji / set feeler gauge) atau gap gauge khusus untuk memeriksanya sebelum tiap las. Rentang yang dapat diterima biasanya ±0.5mm dari spek. Jangan mengira-ngira — celah yang tampak benar sering tidak, dan biaya menyesuaikan sebelum mengelas jauh lebih rendah daripada hatsuri dan mengulang setelahnya.",
+      exp: "Ruuto-gyappu (ルートギャップ) = Root gap / bukaan akar. Ruang terkendali antara tepi pelat di akar alur. Terlalu sempit (< spek): busur tak mencapai akar, menyebabkan kurang penetrasi (溶込不良). Terlalu lebar (> spek): tembus bakar (溶落ち). Ditetapkan pada gambar — ukur dengan gap gauge sebelum mengelas. 🇯🇵 TIPS: Periksa celah akar dengan pengukur celah sebelum setiap pengelasan dan bandingkan dengan toleransi di gambar atau WPS. Jangan hanya mengira-ngira — memperbaiki celah sebelum mengelas jauh lebih murah daripada hatsuri dan las ulang.",
     },
   },
-311: {
+  311: {
     vi: {
       q: "Trên bản vẽ JIS, ký hiệu hàn đặt DƯỚI đường chuẩn. Điều này chỉ gì?",
       opts: [
@@ -1687,7 +1687,7 @@ export const Q_I18N = {
         "Ký hiệu vẽ sai — bỏ qua một cái",
         "Chỉ hàn phía mũi tên — ký hiệu thứ hai chỉ để trang trí",
       ],
-      exp: "Khi ký hiệu hàn xuất hiện CẢ trên và dưới đường chuẩn, nghĩa là hàn CẢ HAI PHÍA. Với mối góc: mối góc hai mặt (両面すみ肉溶接). Mỗi phía có thể quy định kích thước khác nhau — đọc số riêng cho từng phía. 🇯🇵 MẸO: Trên bản vẽ kết cấu Nhật, 両面すみ肉 (mối góc hai mặt) được viết '両' trước ký hiệu hàn. Chỉ một mặt được ngầm hiểu khi không có '両'. Người mới hay bỏ sót một mặt vì quên kiểm — luôn dò toàn bộ ký hiệu trước khi bắt đầu.",
+      exp: "Khi ký hiệu hàn xuất hiện CẢ trên và dưới đường chuẩn, nghĩa là hàn CẢ HAI PHÍA. Với mối góc: mối góc hai mặt (両面すみ肉溶接). Mỗi phía có thể quy định kích thước khác nhau — đọc số riêng cho từng phía. 🇯🇵 MẸO: Thợ mới hay chỉ hàn một phía vì bỏ sót ký hiệu thứ hai. Luôn đọc ký hiệu ở cả hai phía của đường chuẩn trước khi bắt đầu.",
     },
     id: {
       q: "Gambar JIS memiliki simbol las sudut (△) di ATAS DAN DI BAWAH garis referensi. Apa artinya?",
@@ -1697,7 +1697,7 @@ export const Q_I18N = {
         "Simbol digambar salah — abaikan salah satunya",
         "Las di sisi panah saja — simbol kedua hanya dekoratif",
       ],
-      exp: "Saat simbol las muncul di ATAS dan DI BAWAH garis referensi, artinya las di KEDUA SISI. Untuk las sudut: las sudut dua sisi (両面すみ肉溶接). Tiap sisi bisa memiliki dimensi berbeda — baca angkanya terpisah untuk tiap sisi. 🇯🇵 TIPS: Pada gambar struktur Jepang, 両面すみ肉 (fillet dua sisi) ditulis '両' sebelum simbol las. Satu sisi saja tersirat bila '両' tak ada. Pekerja baru sering melewatkan satu sisi karena lupa memeriksanya — selalu telusuri simbol lengkap sebelum mulai.",
+      exp: "Saat simbol las muncul di ATAS dan DI BAWAH garis referensi, artinya las di KEDUA SISI. Untuk las sudut: las sudut dua sisi (両面すみ肉溶接). Tiap sisi bisa memiliki dimensi berbeda — baca angkanya terpisah untuk tiap sisi. 🇯🇵 TIPS: Pekerja baru sering hanya mengelas satu sisi karena terlewat simbol kedua. Selalu baca simbol di kedua sisi garis referensi sebelum mulai.",
     },
   },
   313: {
@@ -1731,7 +1731,7 @@ export const Q_I18N = {
         "Hàn hiện trường (現場溶接) — mối này thực hiện tại công trường lắp đặt, không phải trong nhà máy",
         "Mối nối chịu ứng suất cao — cần cẩn thận thêm",
       ],
-      exp: "Ký hiệu cờ (旗マーク) = Ký hiệu hàn hiện trường (現場溶接記号). Mối này KHÔNG làm trong nhà máy — nó thực hiện tại công trường xây dựng/lắp đặt thực sau khi các chi tiết chế sẵn được lắp vào vị trí. Quan trọng khi lập kế hoạch: hàn hiện trường có điều kiện khó hơn (thời tiết, tư thế, tiếp cận) so với hàn nhà máy. 🇯🇵 MẸO: Hàn hiện trường (現場溶接) ở Nhật cần tài liệu kế hoạch bổ sung (施工計画書 / shiko-keikakusho). Gió, độ ẩm và nhiệt độ đều ảnh hưởng chất lượng — mưa hoặc gió mạnh (風速10m/s以上) theo luật phải dừng hàn ngoài trời. Luôn kiểm dự báo thời tiết và điều kiện công trường trước khi ra làm hàn hiện trường.",
+      exp: "Ký hiệu cờ (旗マーク) = Ký hiệu hàn hiện trường (現場溶接記号). Mối này KHÔNG làm trong nhà máy — nó thực hiện tại công trường xây dựng/lắp đặt thực sau khi các chi tiết chế sẵn được lắp vào vị trí. Quan trọng khi lập kế hoạch: hàn hiện trường có điều kiện khó hơn (thời tiết, tư thế, tiếp cận) so với hàn nhà máy. 🇯🇵 MẸO: Hàn hiện trường cần lên kế hoạch kỹ hơn. Gió dễ thổi bay khí bảo vệ, nên dùng tấm chắn gió khi hàn có khí bảo vệ, và không hàn khi mưa hoặc thép bị ướt. Kiểm tra thời tiết và điều kiện công trường trước khi bắt đầu.",
     },
     id: {
       q: "Gambar JIS memiliki simbol bendera (旗マーク) di garis referensi. Apa artinya?",
@@ -1741,10 +1741,10 @@ export const Q_I18N = {
         "Las lapangan (現場溶接) — las ini dikerjakan di lokasi konstruksi/pemasangan, bukan di pabrik",
         "Sambungan las bertegangan tinggi — perlu perhatian ekstra",
       ],
-      exp: "Tanda bendera (旗マーク) = Simbol las lapangan (現場溶接記号). Las ini TIDAK dikerjakan di pabrik — dilakukan di lokasi konstruksi/pemasangan nyata setelah bagian prafabrikasi dirakit di tempat. Penting untuk perencanaan: las lapangan berkondisi lebih menantang (cuaca, posisi, akses) daripada las pabrik. 🇯🇵 TIPS: Las lapangan (現場溶接) di Jepang memerlukan dokumen perencanaan tambahan (施工計画書 / shiko-keikakusho). Angin, kelembapan, dan suhu semua memengaruhi mutu — hujan atau angin kencang (風速10m/s以上) secara hukum mewajibkan menghentikan las luar ruangan. Selalu periksa prakiraan cuaca dan kondisi lokasi sebelum berangkat kerja las lapangan.",
+      exp: "Tanda bendera (旗マーク) = Simbol las lapangan (現場溶接記号). Las ini TIDAK dikerjakan di pabrik — dilakukan di lokasi konstruksi/pemasangan nyata setelah bagian prafabrikasi dirakit di tempat. Penting untuk perencanaan: las lapangan berkondisi lebih menantang (cuaca, posisi, akses) daripada las pabrik. 🇯🇵 TIPS: Las lapangan perlu perencanaan lebih. Angin mudah meniup gas pelindung, jadi pakai penahan angin untuk las berpelindung gas, dan jangan mengelas saat hujan atau baja basah. Periksa cuaca dan kondisi lokasi sebelum mulai.",
     },
   },
-315: {
+  315: {
     vi: {
       q: "Khác biệt nào trong quy tắc ký hiệu hàn thực sự có thể khiến bạn hàn sai phía?",
       opts: [
@@ -1819,7 +1819,7 @@ export const Q_I18N = {
         "PF = Hàn đứng-lên = 立向上進 (Tatemuki-joshin) — hàn hướng lên trên tấm đứng",
         "PF = Góc ngang = 水平すみ肉",
       ],
-      exp: "ISO PF = Hàn đứng-lên (立向上進 / Tatemuki-joshin). Đây là hướng hàn đứng tiêu chuẩn trong chế tạo Nhật — hàn hướng lên cho hòa nhập và ngấu tốt hơn so với đứng-xuống. ISO PG = đứng-xuống. Các mã này xuất hiện trên chứng chỉ JIS và IIW quốc tế. 🇯🇵 MẸO: Khi gia hạn chứng chỉ JIS, hồ sơ thi ghi các tư thế bạn được cấp. Chứng chỉ PF (đứng-lên) bao hàn đứng — PG là chứng chỉ riêng. Ở Nhật, hầu hết việc cần PF nhưng hiếm khi cần PG — kiểm kỹ phạm vi chứng chỉ khi nhận việc mới.",
+      exp: "ISO PF = Hàn đứng-lên (立向上進 / Tatemuki-joshin). Đây là hướng hàn đứng tiêu chuẩn trong chế tạo Nhật — hàn hướng lên cho hòa nhập và ngấu tốt hơn so với đứng-xuống. ISO PG = đứng-xuống. Các mã này xuất hiện trên chứng chỉ JIS và IIW quốc tế. 🇯🇵 MẸO: Chứng chỉ thợ hàn JIS ghi tư thế bằng các chữ F, H, V, O (ví dụ N-2V), còn chứng chỉ ISO 9606 dùng PA, PC, PF, PG... Trên chứng chỉ ISO, hàn đứng lên (PF) và đứng xuống (PG) là riêng biệt — kiểm tra phạm vi chứng chỉ trước khi nhận việc.",
     },
     id: {
       q: "Apa arti kode posisi ISO 'PF', dan apa nama Jepangnya?",
@@ -1829,7 +1829,7 @@ export const Q_I18N = {
         "PF = Las tegak-naik = 立向上進 (Tatemuki-joshin) — mengelas ke atas pada pelat tegak",
         "PF = Fillet horizontal = 水平すみ肉",
       ],
-      exp: "ISO PF = Las tegak-naik (立向上進 / Tatemuki-joshin). Ini arah las tegak standar dalam fabrikasi Jepang — mengelas ke atas menghasilkan fusi dan penetrasi lebih baik dibanding tegak-turun. ISO PG = tegak-turun. Kode ini muncul pada sertifikat kualifikasi JIS dan IIW internasional. 🇯🇵 TIPS: Saat memperbarui kualifikasi JIS, catatan uji menunjukkan posisi apa saja yang Anda kualifikasi. Kualifikasi PF (tegak-naik) mencakup las tegak — PG kualifikasi terpisah. Di Jepang, kebanyakan pekerjaan butuh PF tapi jarang butuh PG — periksa cakupan sertifikat Anda dengan teliti saat menawar pekerjaan baru.",
+      exp: "ISO PF = Las tegak-naik (立向上進 / Tatemuki-joshin). Ini arah las tegak standar dalam fabrikasi Jepang — mengelas ke atas menghasilkan fusi dan penetrasi lebih baik dibanding tegak-turun. ISO PG = tegak-turun. Kode ini muncul pada sertifikat kualifikasi JIS dan IIW internasional. 🇯🇵 TIPS: Sertifikat tukang las JIS menuliskan posisi dengan huruf F, H, V, O (mis. N-2V), sedangkan sertifikat ISO 9606 memakai PA, PC, PF, PG, dll. Pada sertifikat ISO, vertikal naik (PF) dan vertikal turun (PG) terpisah — periksa cakupan sertifikat sebelum menerima pekerjaan.",
     },
   },
   319: {
@@ -1863,7 +1863,7 @@ export const Q_I18N = {
         "Mối phủ cả hai mặt tấm",
         "Mối được đánh bóng phẳng mặt",
       ],
-      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Mối ngấu hoàn toàn (CJP). Vùng nóng chảy kéo dài qua TOÀN BỘ chiều dày tấm. Cần cho: nối tòa nhà chịu địa chấn (ダイアフラム), thân bình áp lực và mối kết cấu quan trọng. Kiểm bằng RT hoặc UT. Trái với mối ngấu một phần (部分溶込み / PJP). 🇯🇵 MẸO: Ở Nhật, mối CJP tại nối tòa nhà quan trọng về địa chấn (柱梁接合部) cần chi tiết mối được tiền phê duyệt theo Luật Tiêu chuẩn Xây dựng (建築基準法). Nếu người kiểm tra đánh dấu CJP của bạn 不合格 (trượt), bạn phải khoét ra, hàn lại và kiểm lại — không có chấp nhận một phần. Làm đúng ngay lần đầu không chỉ là hiệu quả; đó là niềm tự hào nghề nghiệp.",
+      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Mối ngấu hoàn toàn (CJP). Vùng nóng chảy kéo dài qua TOÀN BỘ chiều dày tấm. Cần cho: nối tòa nhà chịu địa chấn (ダイアフラム), thân bình áp lực và mối kết cấu quan trọng. Kiểm bằng RT hoặc UT. Trái với mối ngấu một phần (部分溶込み / PJP). 🇯🇵 MẸO: Mối hàn ngấu hoàn toàn ở liên kết cột-dầm chịu động đất (柱梁接合部) được kiểm tra nghiêm, thường bằng UT. Nếu bị loại (不合格), phải đục bỏ, hàn lại và kiểm tra lại — không có chấp nhận một phần.",
     },
     id: {
       q: "Apa itu 'Kanzen-tokekomi-yosetsu' (完全溶込み溶接 / CJP) dan kapan diperlukan?",
@@ -1873,7 +1873,7 @@ export const Q_I18N = {
         "Las yang menutup kedua sisi pelat",
         "Las yang dipoles rata dengan permukaan",
       ],
-      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP). Zona fusi meluas ke SELURUH tebal pelat. Diperlukan untuk: sambungan bangunan tahan gempa (ダイアフラム), cangkang bejana tekan, dan sambungan struktur kritis. Diverifikasi dengan inspeksi RT atau UT. Berbeda dengan las penetrasi parsial (部分溶込み / PJP). 🇯🇵 TIPS: Di Jepang, las CJP pada sambungan bangunan kritis gempa (柱梁接合部) memerlukan detail sambungan pra-kualifikasi sesuai Undang-Undang Standar Bangunan (建築基準法). Jika inspektor menandai CJP Anda 不合格 (ditolak), Anda harus mengorek keluar, mengelas ulang, dan menginspeksi ulang — tak ada penerimaan sebagian. Melakukannya benar sejak awal bukan hanya efisiensi; itu kebanggaan profesional.",
+      exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP). Zona fusi meluas ke SELURUH tebal pelat. Diperlukan untuk: sambungan bangunan tahan gempa (ダイアフラム), cangkang bejana tekan, dan sambungan struktur kritis. Diverifikasi dengan inspeksi RT atau UT. Berbeda dengan las penetrasi parsial (部分溶込み / PJP). 🇯🇵 TIPS: Las CJP pada sambungan kolom-balok yang kritis terhadap gempa (柱梁接合部) diperiksa ketat, biasanya dengan UT. Jika ditolak (不合格), harus digerinda/dikeruk, dilas ulang, dan diperiksa ulang — tidak ada penerimaan sebagian.",
     },
   },
   401: {
@@ -2083,7 +2083,7 @@ export const Q_I18N = {
         "PT phải dùng cho inox (SUS304 v.v.) vì inox austenit KHÔNG TỪ TÍNH — MT cần vật liệu từ tính mới hoạt động. PT không bị giới hạn từ tính",
         "Không cái nào dùng được cho inox — chỉ dùng RT",
       ],
-      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験) dùng từ trường hút bột sắt vào khuyết tật — CHỈ hoạt động trên vật liệu từ tính (ferrit). Inox austenit (SUS304, SUS316) KHÔNG TỪ TÍNH. Với inox, bạn PHẢI dùng PT (浸透探傷). Inox có hàm lượng ferrit (như SUS430) có thể cho phép MT — kiểm loại vật liệu trước. 🇯🇵 MẸO: Nhầm PT và MT trên việc hàn inox ở Nhật là lỗi nghiêm trọng sẽ bị chú ý ngay. Trước bất kỳ NDT nào, xác nhận loại vật liệu (材料確認 / zairyou-kakunin) từ chứng chỉ nhà máy (ミルシート / mirushiito). Ở Nhật, chứng chỉ nhà máy là tài liệu bắt buộc cho mọi vật liệu dùng trong mối hàn có chứng nhận. Biết đọc nó làm bạn nổi bật.",
+      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験) dùng từ trường hút bột sắt vào khuyết tật — CHỈ hoạt động trên vật liệu từ tính (ferrit). Inox austenit (SUS304, SUS316) KHÔNG TỪ TÍNH. Với inox, bạn PHẢI dùng PT (浸透探傷). Inox có hàm lượng ferrit (như SUS430) có thể cho phép MT — kiểm loại vật liệu trước. 🇯🇵 MẸO: Trước khi làm NDT, xác nhận loại vật liệu (材料確認), ví dụ từ chứng chỉ vật liệu (ミルシート / mirushiito). Chọn MT cho inox austenit là lỗi sẽ bị phát hiện ngay.",
     },
     id: {
       q: "Kapan Anda memakai 'PT' (浸透探傷) alih-alih 'MT' (磁粉探傷) untuk baja tahan karat?",
@@ -2093,7 +2093,7 @@ export const Q_I18N = {
         "PT harus dipakai untuk stainless (SUS304 dll.) karena stainless austenitik NON-MAGNETIK — MT butuh material magnetik agar bekerja. PT tak punya batasan magnetik",
         "Tak satu pun bekerja pada stainless — pakai RT saja",
       ],
-      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) memakai medan magnet untuk menarik bubuk besi ke cacat — HANYA bekerja pada material magnetik (feritik). Stainless austenitik (SUS304, SUS316) NON-MAGNETIK. Untuk stainless, Anda HARUS memakai PT (浸透探傷). Stainless berkandungan ferit (seperti SUS430) mungkin memungkinkan MT — periksa jenis material dulu. 🇯🇵 TIPS: Tertukar PT dan MT pada pekerjaan las stainless di Jepang adalah kesalahan serius yang akan segera diketahui. Sebelum NDT apa pun, pastikan jenis material (材料確認 / zairyou-kakunin) dari sertifikat pabrik (ミルシート / mirushiito). Di Jepang, sertifikat pabrik adalah dokumen wajib untuk tiap material yang dipakai dalam las terkualifikasi. Bisa membacanya membuat Anda menonjol.",
+      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験) memakai medan magnet untuk menarik bubuk besi ke cacat — HANYA bekerja pada material magnetik (feritik). Stainless austenitik (SUS304, SUS316) NON-MAGNETIK. Untuk stainless, Anda HARUS memakai PT (浸透探傷). Stainless berkandungan ferit (seperti SUS430) mungkin memungkinkan MT — periksa jenis material dulu. 🇯🇵 TIPS: Sebelum NDT apa pun, pastikan jenis material (材料確認), misalnya dari sertifikat pabrik (ミルシート / mirushiito). Memilih MT untuk baja tahan karat austenitik adalah kesalahan yang langsung ketahuan.",
     },
   },
   411: {
@@ -2215,7 +2215,7 @@ export const Q_I18N = {
         "MT hoạt động trên vật liệu không từ tính — PT không làm được",
         "MT và PT phát hiện đúng cùng khuyết tật",
       ],
-      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験): Tạo từ trường lên vật — khuyết tật làm gián đoạn từ trường và bột sắt tụ tại các điểm này. MT phát hiện cả khuyết tật bề mặt LẪN gần bề mặt (hơi dưới bề mặt) trên vật liệu từ tính (thép carbon, inox ferrit). PT chỉ phát hiện khuyết tật MỞ ra bề mặt. MT nhạy hơn với vật liệu từ tính — được ưa dùng ở xưởng đóng tàu Nhật cho mối thép carbon. 🇯🇵 MẸO: Ở xưởng đóng tàu Nhật (造船所), MT được làm thường quy sau mỗi lượt hàn trên khung sườn và cấu kiện kết cấu. Phương pháp MT ướt huỳnh quang (蛍光磁粉探傷) dưới đèn UV được dùng để nhạy tối đa. Nếu bạn làm ở xưởng đóng tàu và thấy ai mang đèn UV và bình xịt trắng, đến giờ MT rồi — đảm bảo vùng hàn của bạn tiếp cận được và sạch.",
+      exp: "MT (Kiểm tra hạt từ / 磁粉探傷試験): Tạo từ trường lên vật — khuyết tật làm gián đoạn từ trường và bột sắt tụ tại các điểm này. MT phát hiện cả khuyết tật bề mặt LẪN gần bề mặt (hơi dưới bề mặt) trên vật liệu từ tính (thép carbon, inox ferrit). PT chỉ phát hiện khuyết tật MỞ ra bề mặt. MT nhạy hơn với vật liệu từ tính — được ưa dùng ở xưởng đóng tàu Nhật cho mối thép carbon. 🇯🇵 MẸO: MT ướt huỳnh quang (蛍光磁粉探傷) dưới đèn UV cho độ nhạy cao. Nếu thấy người cầm đèn UV và bình xịt gần mối hàn của bạn, có lẽ là đang làm MT — giữ khu vực hàn sạch và dễ tiếp cận.",
     },
     id: {
       q: "Kapan 'MT' (Jifun-tansho / 磁粉探傷試験) dipakai alih-alih PT, dan apa yang bisa dideteksinya yang PT tak bisa?",
@@ -2225,7 +2225,7 @@ export const Q_I18N = {
         "MT bekerja pada material non-magnetik — PT tak bisa",
         "MT dan PT mendeteksi cacat yang persis sama",
       ],
-      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Menerapkan medan magnet ke benda kerja — cacat mengganggu medan dan bubuk besi menggerombol di titik-titik ini. MT mendeteksi cacat permukaan DAN dekat-permukaan (sedikit di bawah permukaan) pada material magnetik (baja karbon, stainless feritik). PT hanya mendeteksi cacat yang TERBUKA ke permukaan. MT lebih sensitif untuk material magnetik — disukai di galangan Jepang untuk las baja karbon. 🇯🇵 TIPS: Di galangan Jepang (造船所), MT dilakukan rutin setelah tiap pass las pada rangka lambung dan member struktur. Metode MT basah fluoresen (蛍光磁粉探傷) di bawah lampu UV dipakai untuk sensitivitas maksimum. Jika Anda bekerja di galangan dan melihat seseorang membawa lampu UV dan kaleng semprot putih, saatnya MT — pastikan area las Anda dapat diakses dan bersih.",
+      exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Menerapkan medan magnet ke benda kerja — cacat mengganggu medan dan bubuk besi menggerombol di titik-titik ini. MT mendeteksi cacat permukaan DAN dekat-permukaan (sedikit di bawah permukaan) pada material magnetik (baja karbon, stainless feritik). PT hanya mendeteksi cacat yang TERBUKA ke permukaan. MT lebih sensitif untuk material magnetik — disukai di galangan Jepang untuk las baja karbon. 🇯🇵 TIPS: MT basah fluoresen (蛍光磁粉探傷) di bawah lampu UV memberi sensitivitas tinggi. Jika Anda melihat orang membawa lampu UV dan kaleng semprot di dekat las Anda, kemungkinan itu MT — jaga area las tetap bersih dan mudah dijangkau.",
     },
   },
   417: {
@@ -2259,7 +2259,7 @@ export const Q_I18N = {
         "Nứt nguội bị 'trì hoãn' — hydro khuếch tán từ từ di chuyển và tập trung ở điểm ứng suất, và nứt hình thành dần trong hàng giờ đến hàng ngày sau khi hàn. Đây là lý do thời điểm kiểm tra sau hàn quan trọng",
         "Kim loại bị va đập và nứt do tai nạn sau khi hàn",
       ],
-      exp: "Nứt nguội còn gọi là 'nứt trì hoãn' vì hydro khuếch tán trong kim loại hàn di chuyển chậm đến vùng ứng suất cao (HAZ, vùng tổ chức cứng) và tích tụ. Vết nứt có thể không hình thành cho đến hàng giờ — hoặc thậm chí hàng ngày — sau khi hàn. Đây là lý do quy chuẩn Nhật quy định thời điểm kiểm tra sau hàn: thường 24–48 giờ sau khi hoàn thành với mối hàn quan trọng. 🇯🇵 MẸO: Trên công trường Nhật, kế hoạch chất lượng (品質計画書) cho mối hàn thép cường độ cao có thể ghi 'hàn xong → chờ 48 giờ → kiểm MT/PT'. Nghĩa là không mài bề mặt hay bước tiếp theo cho đến khi cửa sổ kiểm tra hoàn tất. Nếu bạn hàn xong chiều thứ Năm, kiểm tra có thể đến sáng thứ Bảy mới làm. Lập kế hoạch quanh điều này là kỹ năng thực sự trong quản lý sản xuất Nhật.",
+      exp: "Nứt nguội còn gọi là 'nứt chậm' vì hydro khuếch tán di chuyển chậm đến vùng cứng, ứng suất cao (HAZ) và tích tụ ở đó. Vết nứt có thể chỉ xuất hiện vài giờ — thậm chí vài ngày — sau khi hàn. Vì vậy một số tiêu chuẩn yêu cầu chờ một thời gian trước khi kiểm tra cuối: ví dụ AWS D1.1 yêu cầu chờ 48 giờ với một số loại thép cường độ cao. 🇯🇵 MẸO: Với thép cường độ cao, kế hoạch chất lượng (品質計画書) ghi rõ khi nào được kiểm tra. Hãy sắp xếp công việc theo thời gian chờ đó.",
     },
     id: {
       q: "Retak dingin ditemukan 24 jam SETELAH mengelas — las tampak baik segera setelah selesai. Bagaimana ini mungkin?",
@@ -2269,7 +2269,7 @@ export const Q_I18N = {
         "Retak dingin bersifat 'tertunda' — hidrogen difusi perlahan bermigrasi dan terkonsentrasi di titik tegangan, dan retak terbentuk bertahap dalam berjam-jam hingga berhari-hari setelah mengelas. Inilah mengapa waktu inspeksi pasca-las penting",
         "Logam terbentur dan retak secara tak sengaja setelah mengelas",
       ],
-      exp: "Retak dingin juga disebut 'retak tertunda' karena hidrogen difusi dalam logam las bermigrasi perlahan ke zona tegangan tinggi (HAZ, area mikrostruktur keras) dan menumpuk. Retak mungkin baru terbentuk berjam-jam — bahkan berhari-hari — setelah mengelas. Inilah mengapa kode Jepang menetapkan waktu inspeksi pasca-las: sering 24–48 jam setelah selesai untuk las kritis. 🇯🇵 TIPS: Di lokasi konstruksi Jepang, rencana mutu (品質計画書) untuk las baja kekuatan tinggi bisa menyatakan 'las selesai → tunggu 48 jam → inspeksi MT/PT'. Artinya tak ada penggerindaan permukaan atau pekerjaan langkah berikutnya sampai jendela inspeksi selesai. Jika Anda menyelesaikan las Kamis sore, inspeksi mungkin baru Sabtu pagi. Merencanakan seputar ini adalah keterampilan nyata dalam manajemen produksi Jepang.",
+      exp: "Retak dingin juga disebut 'retak tertunda' karena hidrogen difusi perlahan berpindah ke area keras bertegangan tinggi (HAZ) dan menumpuk di sana. Retak bisa baru terbentuk beberapa jam — bahkan beberapa hari — setelah pengelasan. Karena itu beberapa spesifikasi mewajibkan waktu tunggu sebelum inspeksi akhir: misalnya AWS D1.1 mewajibkan menunggu 48 jam untuk baja kekuatan tinggi tertentu. 🇯🇵 TIPS: Untuk baja kekuatan tinggi, rencana mutu (品質計画書) menyatakan kapan inspeksi boleh dilakukan. Atur pekerjaan Anda sesuai waktu tunggu itu.",
     },
   },
   419: {
@@ -2538,24 +2538,24 @@ export const Q_I18N = {
   },
   511: {
     vi: {
-      q: "Khoảng thu nhập năm gần đúng cho mỗi cấp sự nghiệp hàn Nhật là bao nhiêu?",
+      q: "Ở Nhật, thu nhập thường thay đổi thế nào khi bạn có thêm chứng chỉ hàn?",
       opts: [
-        "Thợ Nhật kiếm 100–200 vạn yên/năm bất kể chứng chỉ",
-        "Mọi thợ kiếm như nhau ở Nhật — không chênh lệch",
-        "An toàn Hồ quang (800 vạn) → JIS Cơ bản (600 vạn) → Thợ hàn dưới nước (200 vạn)",
-        "An toàn Hồ quang / JIS Cơ bản: 300–400 vạn → JIS Chuyên môn / AW: 400–600 vạn → Thợ hàn nồi hơi: 500–800 vạn → Thợ hàn dưới nước: 700–1.500 vạn",
+        "Thợ hàn Nhật có thu nhập như nhau bất kể chứng chỉ",
+        "Thu nhập chỉ phụ thuộc tuổi — chứng chỉ không ảnh hưởng",
+        "Chỉ cần An toàn Hàn hồ quang là lương cao nhất, chứng chỉ cao hơn làm lương thấp đi",
+        "Chứng chỉ cao và hiếm hơn (Cấp Chuyên môn, AW, Thợ hàn nồi hơi, hàn dưới nước) thường mở ra việc lương cao hơn — lương thực tế tùy công ty, vùng và kinh nghiệm",
       ],
-      exp: "Thu nhập năm gần đúng trong hàn Nhật (vạn yên/năm): JIS Cơ bản 300–400, JIS Chuyên môn 400–600, AW Kentei 500–700, Thợ hàn nồi hơi thường 450–650, Thợ hàn nồi hơi Đặc biệt 600–800, Thợ hàn dưới nước 700–1.000, Lặn bão hòa + dưới nước 1.000–1.500. Kỹ năng chuyên biệt hiếm = lương cao. 🇯🇵 MẸO: Chênh lệch thu nhập giữa các cấp là thật, nhưng công ty Nhật cũng thưởng lòng trung thành (勤続年数) và độ tin cậy hằng ngày. Một thợ chứng chỉ trung bình nhưng đi làm đều, không gây lỗi chất lượng, giao tiếp tốt thường kiếm hơn thợ nhiều chứng chỉ mà khó quản. Ở Nhật, tính cách và sự nhất quán quan trọng ngang chứng chỉ trên bảng lương.",
+      exp: "Nhìn chung, mỗi bậc cao hơn — Cấp Chuyên môn JIS, AW Kentei, Thợ hàn nồi hơi, và kỹ năng hiếm như hàn dưới nước — mở ra công việc trả lương cao hơn. Nhưng lương thực tế khác nhau nhiều theo công ty, vùng, ngành và kinh nghiệm, nên mọi con số 'lương trung bình' chỉ để tham khảo. 🇯🇵 MẸO: Công ty Nhật cũng coi trọng sự tin cậy: đi làm đều đặn, ít lỗi chất lượng và giao tiếp tốt thường quan trọng không kém chứng chỉ.",
     },
     id: {
-      q: "Berapa perkiraan rentang pendapatan tahunan untuk tiap tingkat karier las Jepang?",
+      q: "Bagaimana penghasilan umumnya berubah saat Anda menambah kualifikasi las di Jepang?",
       opts: [
-        "Tukang las Jepang berpenghasilan ¥1–2 juta per tahun tanpa memandang sertifikasi",
-        "Semua tukang berpenghasilan sama di Jepang — tanpa variasi",
-        "Keselamatan Busur (¥8jt) → JIS Dasar (¥6jt) → Tukang Las Bawah Air (¥2jt)",
-        "Keselamatan Busur / JIS Dasar: ¥3–4jt → JIS Spesialis / AW: ¥4–6jt → Tukang Las Boiler: ¥5–8jt → Tukang Las Bawah Air: ¥7–15jt",
+        "Tukang las Jepang berpenghasilan sama apa pun sertifikatnya",
+        "Penghasilan hanya tergantung usia — sertifikat tidak berpengaruh",
+        "Pelatihan Las Busur saja memberi gaji tertinggi, dan sertifikat lebih tinggi menurunkan gaji",
+        "Kualifikasi lebih tinggi dan langka (Grade Spesialis, AW, Tukang Las Boiler, las bawah air) umumnya membuka pekerjaan bergaji lebih tinggi — gaji nyata tergantung perusahaan, daerah, dan pengalaman",
       ],
-      exp: "Perkiraan pendapatan tahunan dalam las Jepang (万円/tahun): JIS Dasar 300–400万, JIS Spesialis 400–600万, AW Kentei 500–700万, Tukang Las Boiler Standar 450–650万, Tukang Las Boiler Khusus 600–800万, Tukang Las Bawah Air 700–1.000万, Penyelam Saturasi + Bawah Air 1.000–1.500万. Keterampilan khusus langka = bayaran premium. 🇯🇵 TIPS: Perbedaan pendapatan antar tingkat sertifikasi nyata, tapi perusahaan Jepang juga menghargai loyalitas (勤続年数 / kinzoku-nensuu) dan keandalan harian. Tukang dengan sertifikasi rata-rata yang datang tiap hari, tak pernah menimbulkan masalah mutu, dan berkomunikasi baik sering berpenghasilan lebih dari tukang bersertifikasi tinggi yang sulit dikelola. Di Jepang, karakter dan konsistensi sama pentingnya dengan kualifikasi pada slip gaji Anda.",
+      exp: "Secara umum, setiap langkah naik — Grade Spesialis JIS, AW Kentei, Tukang Las Boiler, dan keterampilan langka seperti las bawah air — membuka pekerjaan dengan bayaran lebih tinggi. Namun gaji nyata sangat bervariasi menurut perusahaan, daerah, industri, dan pengalaman, jadi angka 'gaji rata-rata' hanyalah gambaran kasar. 🇯🇵 TIPS: Perusahaan Jepang juga menghargai keandalan: hadir setiap hari, jarang ada masalah mutu, dan berkomunikasi dengan baik sering sama pentingnya dengan sertifikat.",
     },
   },
   512: {
@@ -2719,9 +2719,9 @@ export const Q_I18N = {
         "Công ty Nhật không bao giờ thuê thợ hàn nước ngoài — điều đó không thể",
         "Nhật dùng kỹ thuật hàn hoàn toàn khác không thấy ở đâu khác",
         "Thợ Nhật làm giờ dài hơn nhưng kiếm ít hơn",
-        "Nhật có hệ chứng chỉ rất nghiêm — cả việc đơn giản (mài, vận hành cẩu) cũng cần chứng chỉ pháp lý cụ thể. Văn hóa an toàn ăn sâu. Tiêu chuẩn chất lượng cực cao. Làm lại (取り直し) tốn kém uy tín",
+        "Nhật có hệ thống chứng chỉ nghiêm ngặt — nhiều việc (móc cẩu, thay đá mài, làm điện) cần đào tạo pháp lý cụ thể. Văn hóa an toàn sâu sắc, tiêu chuẩn chất lượng rất cao, và làm lại (取り直し) làm mất uy tín",
       ],
-      exp: "Khác biệt chính ở Nhật: 1) Văn hóa chứng chỉ — mỗi dụng cụ/việc có yêu cầu chứng chỉ pháp lý. 2) Chú trọng chất lượng — kiểm NDT kỹ lưỡng và làm lại làm tổn hại uy tín đáng kể. 3) Giao tiếp đội — học các từ Nhật then chốt (như trong game này) là thiết yếu cho an toàn và hiệu quả. 4) Tôn trọng quy trình — tuân WPS và hướng dẫn công việc chính xác là không thương lượng. 🇯🇵 MẸO: Một trong những câu mạnh nhất bạn có thể học là 'Wakaranai toki wa, sumimasen, shitsumon shite mo ii desu ka?' (分からない時は、すみません、質問してもいいですか？ / Khi không hiểu, xin lỗi, tôi hỏi được không?). Trong văn hóa chế tạo an toàn cao của Nhật, hỏi trước khi bắt đầu được nể — giả định và gây lỗi chất lượng thì không. Đừng ngại hỏi. Cộng đồng hàn Nhật thực sự nể người cố gắng và hỏi thông minh.",
+      exp: "Khác biệt chính ở Nhật: 1) Văn hóa chứng chỉ — nhiều việc cần đào tạo an toàn hoặc giấy phép theo luật, và công trường thường yêu cầu nhiều hơn mức tối thiểu. 2) Chú trọng chất lượng — NDT kỹ lưỡng và làm lại ảnh hưởng uy tín. 3) Giao tiếp nhóm — học thuật ngữ tiếng Nhật chính là cần thiết cho an toàn. 4) Tôn trọng quy trình — làm đúng WPS và hướng dẫn công việc. 🇯🇵 MẸO: Câu nói hữu ích: 'Wakaranai toki wa, shitsumon shite mo ii desu ka?' (分からない時は、質問してもいいですか？ / Khi không hiểu, tôi hỏi được không?). Hỏi trước khi làm được tôn trọng; đoán bừa rồi gây lỗi chất lượng thì không.",
     },
     id: {
       q: "Apa perbedaan utama bekerja sebagai tukang las di Jepang vs negara lain yang harus diketahui pekerja asing?",
@@ -2729,9 +2729,9 @@ export const Q_I18N = {
         "Perusahaan Jepang tak pernah merekrut tukang las asing — itu tak mungkin",
         "Jepang memakai teknik las yang sama sekali berbeda dan tak ada di tempat lain",
         "Tukang Jepang bekerja lebih lama tapi berpenghasilan lebih sedikit",
-        "Jepang punya sistem kualifikasi berbasis sertifikat yang sangat ketat — bahkan tugas sederhana (menggerinda, mengoperasikan crane) memerlukan sertifikat legal tertentu. Budaya keselamatan tertanam dalam. Standar mutu sangat tinggi. Rework (取り直し) mahal bagi reputasi",
+        "Jepang punya sistem berbasis sertifikat yang ketat — banyak tugas (rigging crane, mengganti batu gerinda, pekerjaan listrik) memerlukan pelatihan legal tertentu. Budaya keselamatan kuat, standar mutu sangat tinggi, dan rework (取り直し) merusak reputasi",
       ],
-      exp: "Perbedaan utama di Jepang: 1) Budaya sertifikat — tiap alat/tugas punya syarat kualifikasi legal. 2) Fokus mutu — inspeksi NDT menyeluruh dan rework merusak reputasi Anda secara signifikan. 3) Komunikasi tim — mempelajari istilah Jepang kunci (seperti dalam gim ini) esensial untuk keselamatan dan efisiensi. 4) Menghormati proses — mengikuti WPS dan instruksi kerja dengan persis tak bisa ditawar. 🇯🇵 TIPS: Salah satu frasa paling ampuh yang bisa Anda pelajari sebagai tukang las asing di Jepang adalah 'Wakaranai toki wa, sumimasen, shitsumon shite mo ii desu ka?' (分からない時は、すみません、質問してもいいですか？ / Saat saya tak paham, maaf, boleh saya bertanya?). Dalam budaya manufaktur berkeselamatan tinggi Jepang, bertanya sebelum memulai tugas dihormati — membuat asumsi dan menimbulkan masalah mutu tidak. Jangan pernah takut bertanya. Komunitas las di Jepang benar-benar menghormati orang yang berusaha keras dan bertanya cerdas.",
+      exp: "Perbedaan utama di Jepang: 1) Budaya sertifikat — banyak tugas memerlukan pelatihan keselamatan atau lisensi menurut hukum, dan lokasi kerja sering meminta lebih dari minimum hukum. 2) Fokus mutu — NDT teliti dan rework merusak reputasi. 3) Komunikasi tim — mempelajari istilah Jepang penting untuk keselamatan. 4) Menghormati proses — ikuti WPS dan instruksi kerja dengan tepat. 🇯🇵 TIPS: Kalimat berguna: 'Wakaranai toki wa, shitsumon shite mo ii desu ka?' (分からない時は、質問してもいいですか？ / Kalau tidak paham, boleh saya bertanya?). Bertanya sebelum mulai dihargai; menebak lalu menimbulkan masalah mutu tidak.",
     },
   },
   520: {
@@ -2910,7 +2910,7 @@ export const Q_I18N = {
       exp: "ASME Boiler & Pressure Vessel Code, Section IX = kualifikasi prosedur las/braze (WPS/PQR) dan personel. Ini tulang punggung AS/internasional untuk las peralatan bertekanan. Domain setara domestik Jepang dicakup JIS plus aturan boiler/bejana tekan (ボイラー溶接士). 🌍 TIPS: Pada proyek pabrik internasional di Jepang Anda mungkin mengelas ke WPS ASME IX — memahami 'essential variables' (perubahan mana yang memaksa kualifikasi ulang) krusial untuk tetap terkualifikasi.",
     },
   },
-608: {
+  608: {
     vi: {
       q: "Trên ký hiệu hàn AWS (A2.4), ký hiệu đặt DƯỚI đường chuẩn nghĩa là gì — và JIS có giống không?",
       opts: [
