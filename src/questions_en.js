@@ -1095,10 +1095,10 @@ export const QUIZ_STAGES = [
         id: 401, cat: "Defects",
         q: "Your JIS test weld shows an undercut measuring exactly 0.3mm deep. Will this automatically fail a JIS certification VT inspection?",
         opts: [
-          "No — 0.3mm is always within the universal JIS tolerance for undercut on any plate thickness",
-          "It depends — JIS undercut tolerance is tied to plate thickness and test code, so 0.3mm could pass on thicker material but fail on thin material or stricter test codes; there is no single universal number",
-          "Yes — any undercut depth over 0mm is an automatic fail under all JIS codes",
-          "No — undercut depth is never checked during VT, only during RT/UT"
+          "No — 0.3mm is within the JIS limit for any plate thickness",
+          "It depends on the plate thickness and the test's criteria",
+          "Yes — any undercut at all is an automatic fail under JIS",
+          "No — undercut is only checked by RT/UT, never in VT"
         ],
         a: 1, xp: 25,
         exp: "Andaakatto (アンダーカット) = Undercut, a groove melted at the base metal toe of the weld from excessive current, too-high travel speed, or improper torch angle. Allowable depth is NOT a single universal number — JIS and other codes specify maximum undercut depth relative to plate/member thickness and the specific test or inspection code, so a 0.3mm undercut might pass on one job and fail on a stricter one. 🇯🇵 TIP: Experienced Japanese welders do a self-VT before calling the inspector, checking the actual allowable tolerance for their specific test code rather than assuming a fixed number — never call the inspector over unless you've confirmed it against the spec."
@@ -1107,10 +1107,10 @@ export const QUIZ_STAGES = [
         id: 402, cat: "Defects",
         q: "Andaakatto (アンダーカット / undercut) and Oobaraappu (オーバーラップ / overlap) are often confused by new welders because both appear at the weld toe. What is the KEY difference between their root causes?",
         opts: [
-          "Undercut is a root-side defect; overlap is exclusively a back-bead defect",
-          "There is no difference — both are caused by exactly the same too-high current and too-fast travel speed",
-          "Undercut is caused by current/travel speed TOO HIGH (arc gouges the base metal); overlap is caused by current/travel speed TOO LOW (cold metal rolls over the surface without fusing) — essentially opposite causes",
-          "Undercut only occurs on stainless steel; overlap only occurs on carbon steel"
+          "Undercut forms at the root; overlap only on the back bead",
+          "No difference — both come from current that is too high",
+          "Undercut: too much heat/speed; overlap: too little heat/speed",
+          "Undercut only on stainless; overlap only on carbon steel"
         ],
         a: 2, xp: 25,
         exp: "Andaakatto (アンダーカット) = Undercut: caused by current or travel speed TOO HIGH — the arc gouges a groove into the base metal at the toe before the pool can fill it. Oobaraappu (オーバーラップ) = Overlap: caused by current or travel speed TOO LOW — molten metal flows over the cold base metal surface without fusing into it. They sit at opposite ends of the heat-input spectrum, both creating a stress riser at the toe but from essentially opposite welding errors. 🇯🇵 TIP: Senior welders say 'Denryuu wa tekisetsu ni' (電流は適切に / use appropriate current) — too low is just as problematic as too high; both directions of error create toe defects, just different ones."
@@ -1119,10 +1119,10 @@ export const QUIZ_STAGES = [
         id: 403, cat: "Defects",
         q: "After welding, RT inspection shows round dark spots inside the weld. Your supervisor says 'Buroohoru ga aru!' (ブローホールがある！). What caused these?",
         opts: [
-          "Wrong filler metal for the base material",
-          "Excessive current — too much heat in the weld",
-          "Travel speed too slow — over-deposited metal",
-          "Trapped gas (from moisture, rust, oil, contamination, or poor shielding) that couldn't escape from the solidifying weld metal"
+          "The wrong filler metal for the base material",
+          "Too much current putting too much heat in the weld",
+          "Travel speed so slow that too much metal piled up",
+          "Gas trapped from moisture, rust, oil or poor shielding"
         ],
         a: 3, xp: 20,
         exp: "Buroohoru (ブローホール) = Blowhole / Porosity. Gas trapped inside the solidified weld metal, appearing as round dark spots on RT film. Causes: moisture on base metal, rust, oil, paint, inadequate shielding gas, arc too long, contaminated filler. Prevention: clean the base metal, check gas flow, maintain proper arc length. 🇯🇵 TIP: In Japanese shipyards and construction sites, base metal preparation (下地処理 / shitaji-shori) before welding is taken very seriously. Workers are expected to grind off rust, wipe with acetone, and confirm zero contamination before striking the arc. If a blowhole appears on RT and traces back to your poor prep work, you will be asked to re-weld at your own time — and you will remember it."
@@ -1131,10 +1131,10 @@ export const QUIZ_STAGES = [
         id: 404, cat: "Defects",
         q: "An RT film shows elongated dark shadows in a line along the weld. What type of defect is this?",
         opts: [
-          "Suragu-makikomi (スラグ巻き込み) — slag inclusion — slag trapped inside the weld from incomplete removal between passes",
-          "Oobaraappu (オーバーラップ) — surface overlap",
-          "Buroohoru (ブローホール) — round gas pores",
-          "Andaakatto (アンダーカット) — surface groove"
+          "Slag inclusion (スラグ巻き込み) left between passes",
+          "Overlap (オーバーラップ) at the weld surface",
+          "Round gas pores (ブローホール) in the weld",
+          "Undercut (アンダーカット) groove at the toe"
         ],
         a: 0, xp: 20,
         exp: "Suragu-makikomi (スラグ巻き込み) = Slag inclusion. Slag (ノロ) from a previous pass was not completely removed before the next pass — it got trapped inside the weld. Appears on RT as irregular dark elongated shapes. Prevention: thorough chipping and wire brushing between EVERY pass. This is why 'Chippingu' is so important in Japan. 🇯🇵 TIP: In Japan, the chipping hammer (チッピングハンマー) is swung with full intention — not a gentle tap. Senior welders say 'Noro wa shikkari tore' (ノロはしっかり取れ / remove the slag completely). If you skip it because you're in a hurry, and the RT comes back with suragu-makikomi, the shop foreman (職長 / shokuchoo) will be having a very direct conversation with you."
@@ -1143,10 +1143,10 @@ export const QUIZ_STAGES = [
         id: 405, cat: "Defects",
         q: "What is 'Yuugou-furyou' (融合不良 / ゆうごうふりょう) — abbreviated LOF — and why is it dangerous?",
         opts: [
-          "The weld bead is too narrow",
-          "Lack of Fusion — weld metal deposited alongside but NOT fused to the base metal or previous pass. Creates a planar unbonded interface that acts like a crack",
-          "Surface oxidation from insufficient shielding",
-          "Too much weld metal deposited — over-reinforcement"
+          "The weld bead is too narrow for the joint",
+          "Weld metal not bonded to the base metal — acts like a crack",
+          "Surface oxidation caused by poor gas shielding",
+          "Too much weld metal — excessive reinforcement"
         ],
         a: 1, xp: 25,
         exp: "Yuugou-furyou (融合不良) = Lack of Fusion (LOF). The weld metal sits next to but is NOT metallurgically bonded to the base metal or previous pass. Causes: insufficient current, wrong technique, contamination. LOF is planar (like a crack) and is NOT detected by RT as easily as rounded defects. UT is better for detecting LOF. Very dangerous in structural welds. 🇯🇵 TIP: Yuugou-furyou is especially feared in Japanese nuclear and LNG facilities because it can be invisible on RT film and may not leak during initial pressure tests — only to fail catastrophically under cyclic stress years later. When Japanese inspectors say 'UT de kite' (UTで来て / come back with UT results), they suspect LOF. Take the UT very seriously."
@@ -1155,10 +1155,10 @@ export const QUIZ_STAGES = [
         id: 406, cat: "Defects",
         q: "What is the difference between 'Teion-ware' (低温割れ / ていおんわれ) and 'Kouon-ware' (高温割れ / こうおんわれ)?",
         opts: [
-          "Teion-ware = above 500°C, Kouon-ware = below 0°C",
-          "They are the same defect with different names depending on the company",
-          "Teion-ware (cold crack / hydrogen crack) = forms HOURS or DAYS after welding at room temperature. Kouon-ware (hot crack) = forms immediately during solidification at high temperature",
-          "Teion-ware only occurs in stainless steel, Kouon-ware only in carbon steel"
+          "Teion-ware forms above 500°C; kouon-ware below 0°C",
+          "Same defect — the name just depends on the company",
+          "Cold cracks form hours later; hot cracks during solidification",
+          "Cold cracks only in stainless; hot cracks only in carbon steel"
         ],
         a: 2, xp: 25,
         exp: "Teion-ware (低温割れ) = Cold crack / Hydrogen-induced crack. Forms AFTER welding (hours to days later) at room temperature. Requires: hard HAZ + diffusible hydrogen + tensile stress. Prevention: preheating, low-hydrogen electrodes, PWHT. Kouon-ware (高温割れ) = Hot crack. Forms IMMEDIATELY during solidification. Caused by low-melting-point impurities. Two very different problems requiring different solutions. 🇯🇵 TIP: In Japan, the phrase '低温割れに注意' (teion-ware ni chuui / watch out for cold cracks) appears in the WPS for any high-strength or thick steel. If you're welding SM490 or stronger in cold outdoor conditions (winter construction sites in Tohoku or Hokkaido), preheat is not optional — it's a serious safety obligation. Never skip the preheat check."
@@ -1167,10 +1167,10 @@ export const QUIZ_STAGES = [
         id: 407, cat: "Defects",
         q: "At the end of a weld bead, the arc was cut off suddenly without proper crater fill. What defect is likely to form?",
         opts: [
-          "Andaakatto (アンダーカット)",
-          "Oobaraappu (オーバーラップ)",
-          "Buroohoru (ブローホール)",
-          "Kureetaa-ware (クレーター割れ) — a crack forming in the crater hollow at the weld end due to rapid shrinkage"
+          "Undercut (アンダーカット) along the toe",
+          "Overlap (オーバーラップ) at the bead end",
+          "Blowholes (ブローホール) in the bead",
+          "Crater crack (クレーター割れ) at the weld end"
         ],
         a: 3, xp: 20,
         exp: "Kureetaa-ware (クレーター割れ) = Crater crack. When you abruptly stop the arc, a hollow crater remains. As this solidifies and shrinks faster than the surrounding weld, cracks form from the center outward. Prevention: use crater fill technique — reduce current gradually and fill the crater before breaking the arc. Never just stop mid-weld. 🇯🇵 TIP: On Japanese job sites, a supervisor may watch the end of your weld specifically to check your crater fill technique. The phrase 'Owari wa shikkari' (終わりはしっかり / finish it properly) is common. A crater crack at the weld end is seen as a sign of careless rushing — it reflects on your professionalism as much as the weld itself."
@@ -1179,10 +1179,10 @@ export const QUIZ_STAGES = [
         id: 408, cat: "NDT",
         q: "A weld passes VT (Mokushi-shiken / 目視試験) with a perfectly smooth surface. Does passing VT guarantee the weld has no porosity (ブローホール) or slag inclusions (スラグ巻き込み) inside it?",
         opts: [
-          "No — VT only detects SURFACE defects; internal defects like porosity and slag inclusions are completely invisible to the eye and require RT or UT to detect, even with a flawless-looking surface",
-          "Yes, but only for fillet welds, not for groove welds",
-          "No, but only because VT inspectors are not trained to look for porosity at all",
-          "Yes — if the surface looks perfect, the inside is guaranteed to be defect-free too"
+          "No — VT sees only the surface; inside needs RT or UT",
+          "Yes, but only for fillet welds, not groove welds",
+          "No, but only because VT inspectors ignore porosity",
+          "Yes — a perfect surface means a perfect inside too"
         ],
         a: 0, xp: 25,
         exp: "VT (Visual Testing / 目視試験) is the first and most fundamental check — fast, free, and catches obvious surface defects like cracks, undercut, overlap, and geometry issues. But VT can NEVER detect internal defects: porosity (ブローホール) and slag inclusions (スラグ巻き込み) form completely inside the weld metal and are invisible to the eye no matter how smooth the surface looks. This is exactly why RT and UT exist as separate, mandatory steps for critical welds. 🇯🇵 TIP: Japanese inspectors say 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Even if the outside is beautiful, we can't see inside) — a perfect-looking bead is not proof of internal soundness."
@@ -1192,9 +1192,9 @@ export const QUIZ_STAGES = [
         q: "How does 'PT' (Shinto-tansho / 浸透探傷試験 / しんとうたんしょうしけん) work?",
         opts: [
           "Sound waves bounce back from internal defects",
-          "Red penetrant liquid is applied to the surface, drawn into cracks, then developer (white powder) is applied — defects appear as red indications on white background",
-          "Magnetic iron powder clusters at defect locations",
-          "X-rays pass through the weld and expose a film"
+          "Red dye seeps into cracks and shows on white developer",
+          "Magnetic iron powder gathers at the defects",
+          "X-rays pass through the weld onto a film"
         ],
         a: 1, xp: 20,
         exp: "PT (Penetrant Testing / 浸透探傷試験): 1) Apply red penetrant liquid. 2) Wait (dwell time). 3) Remove excess. 4) Apply white developer powder. 5) Cracks that absorbed the penetrant will 'bleed out' as red marks on white background. Detects: SURFACE OPEN cracks and pits only. Works on NON-MAGNETIC materials (stainless steel, aluminum). Can't detect internal defects. 🇯🇵 TIP: In Japanese food, pharmaceutical, and semiconductor facilities where stainless steel is heavily used, PT is performed after every weld repair. The 'dwell time' (浸透時間 / shintou-jikan) is critical — rushing it by wiping too soon means you miss fine cracks. Inspectors often use a timer and will reject results if the dwell time was not observed. Patience and process discipline are everything in Japanese inspection work."
@@ -1203,9 +1203,9 @@ export const QUIZ_STAGES = [
         id: 410, cat: "NDT",
         q: "When would you use 'PT' (浸透探傷 / PT) instead of 'MT' (磁粉探傷 / MT) for stainless steel?",
         opts: [
-          "PT and MT are interchangeable — use either",
-          "MT is better for stainless — always prefer MT",
-          "PT must be used for stainless steel (SUS304 etc.) because austenitic stainless is NON-MAGNETIC — MT requires a magnetic material to work. PT has no magnetic limitation",
+          "PT and MT are interchangeable — either is fine",
+          "MT is better for stainless — always choose MT",
+          "Austenitic stainless is non-magnetic, so MT won't work",
           "Neither works on stainless — use RT only"
         ],
         a: 2, xp: 25,
@@ -1215,10 +1215,10 @@ export const QUIZ_STAGES = [
         id: 411, cat: "NDT",
         q: "What does 'UT' (Cho-onpa-tansho / 超音波探傷試験 / ちょうおんぱたんしょう) excel at detecting compared to RT?",
         opts: [
-          "UT is better for checking shielding gas purity",
-          "UT is better at detecting round gas pores (ブローホール)",
-          "UT is better at detecting surface cracks visible to the eye",
-          "UT excels at detecting PLANAR defects — cracks, lack of fusion (融合不良), lack of penetration. These planar defects reflect sound waves strongly even when RT misses them"
+          "Checking the purity of the shielding gas",
+          "Finding round gas pores (ブローホール)",
+          "Finding surface cracks you can see by eye",
+          "Finding planar defects like cracks and lack of fusion"
         ],
         a: 3, xp: 25,
         exp: "UT (Ultrasonic Testing) sends high-frequency sound waves into the metal. Planar defects (cracks, lack of fusion, laminations) reflect sound strongly back to the probe, so UT detects them well. RT (X-ray) is better for volumetric defects (round pores, slag). For critical welds, both may be required. 🇯🇵 TIP: In Japan, UT technicians are certified under JIS Z 2305 by the Japanese Society for Non-Destructive Inspection (日本非破壊検査協会). Their judgment decides acceptance — if they find an indication, fix it rather than argue."
@@ -1227,10 +1227,10 @@ export const QUIZ_STAGES = [
         id: 412, cat: "NDT",
         q: "What is 'RT' (Hoshasen-toka-shiken / 放射線透過試験 / ほうしゃせんとうかしけん) commonly called on Japanese job sites, and what are the safety implications?",
         opts: [
-          "Called 'Rentogen' (レントゲン) — Japanese slang for X-ray. During RT: the area becomes a RADIATION HAZARD ZONE (放射線管理区域) and ALL personnel must leave the area",
-          "Called 'Rentogen' but it is completely safe — no evacuation needed",
-          "Called 'Cho-onpa' — the same as ultrasonic testing",
-          "There are no safety concerns with RT — the radiation levels are very low"
+          "'Rentogen' — everyone must leave the controlled area",
+          "'Rentogen' — it is completely safe, no need to move",
+          "'Cho-onpa' — the same thing as ultrasonic testing",
+          "No nickname — and radiation levels are always harmless"
         ],
         a: 0, xp: 25,
         exp: "RT is called Rentogen (レントゲン) on Japanese sites — after the German physicist Röntgen. During RT a radiation-controlled area (管理区域) is set up and everyone must leave before shooting. For X-ray equipment, an X-ray work chief (エックス線作業主任者) must be appointed to manage the work. RT results remain on film as a permanent quality record. 🇯🇵 TIP: When you hear 'Rentogen wo torimasu — taiki shite kudasai' (レントゲンを撮ります — 待機してください / We are shooting X-ray — please stand by), stop immediately and move to the designated waiting area."
@@ -1239,10 +1239,10 @@ export const QUIZ_STAGES = [
         id: 413, cat: "NDT",
         q: "A weld passed VT inspection but failed RT. The RT film shows internal round dark spots. What defect type is this and why didn't VT catch it?",
         opts: [
-          "Weld reinforcement too high — visible from outside",
-          "Internal porosity (ブローホール) — VT only sees the SURFACE. Internal gas pores are invisible to the eye and can only be detected by RT, UT, or other volumetric methods",
-          "Overlap at the weld toe — visible from outside",
-          "Surface undercut — VT should have caught this"
+          "Reinforcement too high — VT should have seen it",
+          "Internal porosity — VT can only see the surface",
+          "Overlap at the toe — VT should have seen it",
+          "Surface undercut — VT should have seen it"
         ],
         a: 1, xp: 25,
         exp: "VT (Visual Testing) only detects SURFACE defects. Internal defects — like porosity (ブローホール), slag inclusions (スラグ巻き込み), and fusion defects — are completely invisible to the eye. This is why RT (X-ray) and UT are mandatory for critical welds in Japan: VT passing does NOT guarantee an internally sound weld. 🇯🇵 TIP: A beautifully smooth weld bead that passes VT perfectly is called 'kirei na bead' (きれいなビード) and earns respect. But Japanese inspectors also say 'Soto wa kirei demo, naka wa mienai' (外はきれいでも、中は見えない / Even if the outside is beautiful, we can't see inside). This is why RT and UT exist — the inner quality matters just as much."
@@ -1251,10 +1251,10 @@ export const QUIZ_STAGES = [
         id: 414, cat: "Defects",
         q: "What is 'Lamellar Tearing' (ラメラテア) and in which joint configuration is it most common?",
         opts: [
-          "A surface crack from excessive grinding",
-          "A hot crack forming immediately after welding",
-          "A layer-like crack through the base metal thickness caused by tensile stress pulling on non-metallic inclusions in rolled steel. Most common in T-joints and cruciform joints where stress acts through the plate thickness",
-          "A type of weld porosity unique to pipe welding"
+          "A surface crack caused by heavy grinding",
+          "A hot crack that forms right after welding",
+          "Layered cracking through plate thickness, e.g. T-joints",
+          "A type of porosity found only in pipe welds"
         ],
         a: 2, xp: 30,
         exp: "Ramera-tea (ラメラテア) = Lamellar tearing. Steel is rolled in the mill — non-metallic inclusions become flat layers parallel to the plate surface. When welding creates tensile stress THROUGH the plate thickness (common in T-joints, column connections), these layers can split apart. Prevention: use low-sulfur steel (低硫黄鋼), pre-heat, or redesign the joint. 🇯🇵 TIP: Lamellar tearing is particularly a concern in Japanese high-rise building column connections (ダイアフラム接合部 / diaphragm joints). When engineers specify Z-direction property steel (Z方向特性鋼 / Z-houkou-tokusei-kou) in the drawings, it means they are specifically preventing lamellar tearing. As a welder, if you see this material spec, know that it was chosen for a reason — handle it with care and follow the WPS exactly."
@@ -1263,10 +1263,10 @@ export const QUIZ_STAGES = [
         id: 415, cat: "Defects",
         q: "Your weld failed the RT inspection for 'Tokekomi-furyou' (溶込不良 / とけこみふりょう). What is LOP and what caused it?",
         opts: [
-          "Too much penetration — the weld burned through the back",
-          "Excessive weld reinforcement on top of the joint",
-          "Porosity at the root of the weld",
-          "Lack of Penetration — the weld metal did NOT penetrate to the root of the joint. Caused by: too low current, too fast travel, incorrect root gap, wrong torch angle"
+          "Too much penetration — the root burned through",
+          "Too much reinforcement on top of the joint",
+          "Porosity collected at the root of the weld",
+          "The weld didn't reach the root — low current, fast travel"
         ],
         a: 3, xp: 25,
         exp: "Tokekomi-furyou (溶込不良) = Lack of Penetration (LOP). The arc did not reach the root of the joint — leaving an unfused gap at the bottom. Causes: insufficient current, too fast travel speed, root gap too small, incorrect electrode angle. In Japan's JIS certification tests, incomplete root penetration is an automatic fail. 🇯🇵 TIP: In Japan's JIS practical test for groove welding, the inspector grinds and bends the test piece — an LOP at the root will crack open immediately during the bend test (曲げ試験 / mage-shiken). There is no hiding it. This is why Japanese welders practice the root pass obsessively. The phrase 'Shosou ga inochi' (初層が命 / the first pass is life) reflects how much respect the root pass commands."
@@ -1275,10 +1275,10 @@ export const QUIZ_STAGES = [
         id: 416, cat: "NDT",
         q: "When is 'MT' (Jifun-tansho / 磁粉探傷試験 / じふんたんしょうしけん) used rather than PT, and what can it detect that PT cannot?",
         opts: [
-          "MT can detect NEAR-SURFACE cracks (slightly below the surface, not just open to the surface) on MAGNETIC materials. PT only detects surface-open defects",
-          "MT is only used for aluminum welding",
-          "MT works on non-magnetic materials — PT cannot do this",
-          "MT and PT detect exactly the same defects"
+          "MT also finds near-surface cracks in magnetic steel",
+          "MT is used only for aluminum welds",
+          "MT works on non-magnetic metals, unlike PT",
+          "MT and PT find exactly the same defects"
         ],
         a: 0, xp: 25,
         exp: "MT (Magnetic Particle Testing / 磁粉探傷試験): Applies magnetic field to the workpiece — defects interrupt the field and iron powder clusters at these points. MT detects both surface AND near-surface (slightly subsurface) defects on magnetic (carbon steel, ferritic stainless) materials. PT only detects defects OPEN to the surface. MT is more sensitive for magnetic materials — preferred in Japanese shipyards for carbon steel welds. 🇯🇵 TIP: Fluorescent wet MT (蛍光磁粉探傷) under UV light gives high sensitivity. If you see someone with a UV lamp and spray cans near your weld, it is probably MT — keep the weld area clean and accessible."
@@ -1287,10 +1287,10 @@ export const QUIZ_STAGES = [
         id: 417, cat: "Defects",
         q: "Cold cracks (低温割れ / Teion-ware) are called 'hydrogen-induced cracks.' What are the THREE conditions that must ALL be present for a cold crack to form?",
         opts: [
-          "Hot weather + stainless steel + excess shielding gas",
-          "Diffusible hydrogen in the weld + hardened/susceptible microstructure + tensile stress",
-          "Low preheat + thick plate + FCAW process only",
-          "High current + fast travel + wrong wire"
+          "Hot weather + stainless steel + too much shielding gas",
+          "Hydrogen + a hard microstructure + tensile stress",
+          "Low preheat + thick plate + the FCAW process only",
+          "High current + fast travel + the wrong wire"
         ],
         a: 1, xp: 30,
         exp: "A cold crack (低温割れ) needs ALL THREE: 1) diffusible hydrogen (from moisture, contamination, or non-low-hydrogen consumables), 2) a hard, susceptible microstructure (e.g. martensite in the HAZ from high carbon equivalent or fast cooling), and 3) tensile stress (residual or applied). Remove any one and the crack is prevented — hence preheat, low-hydrogen consumables and, where specified, PWHT. 🇯🇵 TIP: Low-hydrogen electrodes are re-dried in a drying oven (乾燥炉 / kansou-ro) and kept warm in a holding oven; take out only what you need for one session."
@@ -1299,10 +1299,10 @@ export const QUIZ_STAGES = [
         id: 418, cat: "Defects",
         q: "A cold crack is found 24 hours AFTER welding — the weld looked fine immediately after completion. How is this possible?",
         opts: [
-          "This is impossible — cracks form immediately or not at all",
-          "The crack was there from the start but the inspector missed it",
-          "Cold cracks are 'delayed' — diffusible hydrogen slowly migrates and concentrates at stress points, and the crack forms gradually over hours to days after welding. This is why post-weld inspection timing matters",
-          "The metal was struck and cracked by accident after welding"
+          "Impossible — cracks either form at once or never",
+          "The crack was there all along; the inspector missed it",
+          "Hydrogen slowly gathers at stress points — a delayed crack",
+          "Someone hit the weld by accident after it cooled"
         ],
         a: 2, xp: 30,
         exp: "Cold cracks are also called 'delayed cracks' because diffusible hydrogen slowly moves to high-stress, hard areas (HAZ) and builds up there. The crack may not form until hours — or even days — after welding. That is why some specifications require a waiting time before final inspection: for example, AWS D1.1 requires waiting 48 hours for certain high-strength steels. 🇯🇵 TIP: For high-strength steel, the quality plan (品質計画書 / hinshitsu-keikaku-sho) states when inspection may be done. Plan your work around that waiting time."
@@ -1311,10 +1311,10 @@ export const QUIZ_STAGES = [
         id: 419, cat: "NDT",
         q: "What is the correct NDT sequence for a critical structural weld in Japan, from first to last?",
         opts: [
-          "Do all tests simultaneously to save time",
+          "Do all the tests at the same time to save time",
           "RT → VT → PT/MT → UT",
           "UT → MT → RT → VT",
-          "VT first → then PT or MT (surface) → then RT or UT (internal) — always surface methods first, then volumetric"
+          "VT → PT/MT (surface) → RT/UT (internal)"
         ],
         a: 3, xp: 25,
         exp: "Standard NDT sequence: 1) VT (目視) — visual first, always free and fast. 2) PT or MT (浸透 / 磁粉) — surface defects. 3) RT (放射線) or UT (超音波) — internal defects. Logic: if VT or PT/MT finds a serious defect, no need to proceed to expensive RT/UT. In Japan, the inspection order is controlled by the quality plan (品質計画書). 🇯🇵 TIP: When a Japanese QC engineer hands you a 品質計画書 (hinshitsu-keikaku-sho / quality plan), read it carefully. It specifies exactly which NDT method, at what stage, and by whom, for every weld joint. On major projects (bridges, buildings, ships), the quality plan is a legal document. Deviating from it without written approval is not allowed — and the paperwork trail (記録 / kiroku) must be complete."
@@ -1323,10 +1323,10 @@ export const QUIZ_STAGES = [
         id: 420, cat: "Defects",
         q: "A weld shows a 'Pit' (ピット) on its surface, and a separate weld shows a 'Buroohoru' (ブローホール) confirmed by RT with no surface opening. Both defects were caused by trapped gas. Which inspection method would catch BOTH defects, and which would catch only ONE?",
         opts: [
-          "VT catches the pit (surface-open) but misses the blowhole (fully internal); RT can detect the blowhole, and may also reveal pits depending on geometry — so RT is the more complete check of the two",
-          "RT catches neither defect — RT can only detect cracks, never gas-related defects",
-          "VT and RT are equally blind to both defects; only UT can detect gas pores",
-          "VT alone catches both — surface and internal gas pores both deform the surface eventually"
+          "VT finds only the pit; RT finds the blowhole too",
+          "RT finds neither — RT only shows cracks",
+          "Both are invisible to VT and RT; only UT finds pores",
+          "VT alone finds both, since pores always reach the surface"
         ],
         a: 0, xp: 25,
         exp: "Pitto (ピット) = surface-open gas pore, visible during VT as a small crater on the weld face. Buroohoru (ブローホール) = internal gas pore, completely enclosed inside the weld and invisible to the eye — VT will miss it entirely. RT can reveal internal blowholes as round dark spots on film, and depending on geometry may also show evidence of surface pits. Both defects share the same root causes (moisture, contamination, shielding failure) but differ in WHERE the gas got trapped during solidification. 🇯🇵 TIP: Pits (ピット) on the final weld surface are an automatic VT fail in Japanese JIS tests. After completing the final pass, Japanese welders visually scan the bead surface carefully before calling the inspector — prevention means ensuring no paint, oil, rust, or moisture on the base metal before the final pass."
