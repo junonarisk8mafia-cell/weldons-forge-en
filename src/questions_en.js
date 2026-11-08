@@ -842,10 +842,10 @@ export const QUIZ_STAGES = [
         id: 301, cat: "Positions",
         q: "Which of the following statements about 'Shitamuki-shisei' (下向き姿勢 / flat position) is NOT correct?",
         opts: [
-          "Its ISO code is PA and its JIS code is F",
-          "Because it is the easiest position, JIS inspectors apply more relaxed bead-quality standards to flat-position test welds",
-          "All beginners typically start their welding training in this position",
-          "Gravity pulls the molten pool down into the joint, helping penetration and fusion"
+          "Its ISO code is PA and its JIS position letter is F",
+          "JIS inspectors judge flat-position test welds more leniently",
+          "Beginners usually start their training in this position",
+          "Gravity helps the molten pool settle into the joint"
         ],
         a: 1, xp: 25,
         exp: "Shitamuki-shisei (下向き姿勢) = Flat position, 1G (groove) / 1F (fillet), ISO code PA. Gravity helps the molten pool settle into the joint, making it the easiest position to learn — but JIS inspectors do NOT relax their standards for flat-position welds. Bead width uniformity, toe blend, and crater fill are scrutinized just as strictly. 🇯🇵 TIP: Never assume easy position = low standards. A sloppy flat-position weld on a JIS test is still a fail — 'easy' only refers to physical difficulty, not the quality bar."
@@ -854,10 +854,10 @@ export const QUIZ_STAGES = [
         id: 302, cat: "Positions",
         q: "A drawing specifies 'Tatemuki-shisei' (立向き姿勢) with ISO code 'PF.' A coworker says this means vertical-down welding. Is he correct?",
         opts: [
-          "No — PF is actually the code for horizontal welding, not vertical at all",
-          "Yes — PF always refers to vertical-down (立向下進)",
-          "No — PF refers to vertical-UP welding (立向上進 / Tatemuki-joshin); vertical-down uses code PG instead",
-          "Yes, but only for pipe welds; for plate welds PF means vertical-up"
+          "No — PF is actually the code for horizontal welding",
+          "Yes — PF always means vertical-down (立向下進)",
+          "No — PF is vertical-up; vertical-down is PG",
+          "Yes for pipe, but for plate PF means vertical-up"
         ],
         a: 2, xp: 25,
         exp: "Tatemuki-shisei (立向き姿勢) = Vertical position, 3G (groove) / 3F (fillet). Within vertical welding, ISO PF = vertical-UP (立向上進 / Tatemuki-joshin, better fusion and penetration), while ISO PG = vertical-DOWN (立向下進, faster but shallower penetration). The two codes are NOT interchangeable and the distinction matters for certification scope. 🇯🇵 TIP: Japanese sites default to vertical-UP (上進) because it gives better fusion and penetration. Vertical-DOWN (下進) is sometimes used for thin sheet in production but is generally discouraged for structural welds in Japan."
@@ -866,10 +866,10 @@ export const QUIZ_STAGES = [
         id: 303, cat: "Positions",
         q: "What is 'Yokomuki-shisei' (横向き姿勢 / よこむきしせい)?",
         opts: [
-          "Vertical position — on a vertical wall",
-          "Flat position — on top of the joint",
-          "Overhead position — arms up",
-          "Horizontal position (2G / 2F) — welding on the side face of a vertical plate, the joint runs horizontally"
+          "Vertical position — welding up a vertical wall",
+          "Flat position — welding on top of the joint",
+          "Overhead position — welding above your head",
+          "Horizontal position — a horizontal joint on a vertical plate"
         ],
         a: 3, xp: 15,
         exp: "Yokomuki-shisei (横向き姿勢) = Horizontal position. 2G (groove) / 2F (fillet). The weld joint runs horizontally on a vertical surface. Gravity pulls the molten pool downward (toward the lower plate). Technique: angle torch slightly upward to compensate. ISO code: PC. 🇯🇵 TIP: Horizontal groove (横向き突合せ) is common in Japanese shipbuilding for side shell plating. The challenge is preventing underbead overlap on the lower plate. Japanese trainers say 'ue o miro' (上を見ろ / look at the upper edge) — keep the arc focused on the upper plate to let metal flow naturally down and fill the lower toe."
@@ -890,10 +890,10 @@ export const QUIZ_STAGES = [
         id: 305, cat: "Positions",
         q: "In Japanese JIS certification tests, which position code 'F' refers to?",
         opts: [
-          "F = Fillet weld type",
-          "F = Flat (下向き / Shitamuki) — used in test codes like N-2F meaning flat position groove weld",
-          "F = Finish pass",
-          "F = Forward (direction of welding)"
+          "F = Fillet — the weld type is a fillet weld",
+          "F = Flat — the 下向き position, as in N-2F",
+          "F = Finish — only the final pass is tested",
+          "F = Forward — the direction you weld in"
         ],
         a: 1, xp: 20,
         exp: "In JIS certification test codes: F = Flat (下向き), H = Horizontal (横向き), V = Vertical (立向き), O = Overhead (上向き). Example: N-2F = no backing plate (N), medium plate 9mm (2), flat position (F). N-2P = no backing plate (N), medium-wall fixed pipe (P — all positions). These codes appear on your qualification certificate. 🇯🇵 TIP: When applying for work in Japan, bring your actual JIS certificate card (資格証 / shikaku-sho) — not just a photocopy. Employers want to see the original and will check the expiry date. If yours is about to expire, renew BEFORE applying — an expired certificate is treated the same as no certificate."
@@ -902,10 +902,10 @@ export const QUIZ_STAGES = [
         id: 306, cat: "Joint Types",
         q: "For thin sheet metal (e.g. 2mm), is groove preparation (開先 / kaisaki) always required before performing a 'Tsukiawase-yosetsu' (突き合わせ溶接 / butt weld)?",
         opts: [
-          "Yes, but only for stainless steel sheet, never for carbon steel sheet",
-          "Yes — JIS requires beveled groove preparation on every butt weld regardless of plate thickness",
-          "No — for thin plates, a simple square-edge (I-groove / I形) butt joint with no bevel is often sufficient since full penetration is achievable without one; groove prep becomes necessary mainly for THICK plates",
-          "No — thin sheet metal should never use a butt weld at all, only fillet welds"
+          "Yes, but only for stainless sheet, not carbon steel",
+          "Yes — JIS requires a bevel on every butt weld",
+          "No — a square-edge (I形) joint is often enough for thin plate",
+          "No — thin sheet should only ever be fillet welded"
         ],
         a: 2, xp: 25,
         exp: "Tsukiawase-yosetsu (突き合わせ溶接) = Butt weld / groove weld — two plate edges placed end-to-end and welded. For THICK plates, beveled groove preparation (開先 / kaisaki, e.g. V-groove) is needed so the arc and filler can reach the root for full penetration. But for THIN sheet, a simple square-edge I-groove (I形) butt joint often achieves full penetration without any bevel at all — groove prep requirements scale with thickness, they are not a blanket rule for every butt weld. 🇯🇵 TIP: In JIS certification for butt welds, the test plate size, groove angle, root gap, and root face dimensions are all standardized per test code — memorize the standard dimensions for your specific test code (N-2F etc.) before the test day."
@@ -914,10 +914,10 @@ export const QUIZ_STAGES = [
         id: 307, cat: "Joint Types",
         q: "On a Japanese fillet weld drawing, you see 'Suminiku-yosetsu' (すみ肉溶接) specified as '脚長 S=6.' Is the inspector going to verify this with a throat thickness (のど厚) measurement, or a leg length measurement?",
         opts: [
-          "Neither — fillet welds are only inspected visually, no gauge measurement is taken",
-          "Throat thickness — because leg length cannot be physically measured with a welding gauge",
-          "Throat thickness — because that's what's written on the drawing",
-          "Leg length — because drawings specify fillet size as leg length (脚長), even though structural strength calculations actually use throat thickness"
+          "Neither — fillet welds are only checked by eye",
+          "Throat — leg length can't be measured with a gauge",
+          "Throat — because the drawing number means throat",
+          "Leg length — the drawing size is the leg (脚長)"
         ],
         a: 3, xp: 25,
         exp: "Suminiku-yosetsu (すみ肉溶接) = Fillet weld, the most common weld type in structural fabrication. On Japanese drawings, fillet weld size is specified as leg length (脚長 / Kyakucho, e.g. S=6), NOT throat thickness — even though structural strength calculations use throat (のど厚 / Nodo-atsu) internally. Japanese QC inspectors measure LEG LENGTH directly with a welding gauge; if your fillet is 5.3mm when 6mm is specified, that's a defect even if it looks fine visually. 🇯🇵 TIP: Always check the drawing's leg-length callout before welding, and self-check with a gauge before calling the inspector over."
@@ -926,8 +926,8 @@ export const QUIZ_STAGES = [
         id: 308, cat: "Dimensions",
         q: "What is 'Kyakucho' (脚長 / きゃくちょう) in a fillet weld?",
         opts: [
-          "The leg length — the distance from the weld root to the weld toe, measured along the face of each plate",
-          "The height of the weld reinforcement above the plate surface",
+          "The distance from the weld root to the toe on each plate",
+          "The height of the reinforcement above the plate",
           "The length of the weld bead from start to finish",
           "The depth of penetration into the base metal"
         ],
@@ -939,9 +939,9 @@ export const QUIZ_STAGES = [
         q: "What is 'Nodo-atsu' (のど厚 / のどあつ) and how does it relate to fillet weld leg length?",
         opts: [
           "The width of the weld bead on the surface",
-          "The throat thickness — the shortest distance through the triangular cross-section. For equal-leg fillet: throat = leg × 0.707",
+          "The shortest distance through the weld — leg × 0.707",
           "The depth of the groove before welding",
-          "The distance from one toe to the other"
+          "The distance from one weld toe to the other"
         ],
         a: 1, xp: 25,
         exp: "Nodo-atsu (のど厚) = Throat thickness. The shortest distance from the weld root to the weld face — this is the load-bearing dimension used in strength calculations. Formula: throat = leg length × cos45° = leg × 0.707. Example: 6mm leg → throat = 6 × 0.707 ≈ 4.24mm. Critical for structural design. 🇯🇵 TIP: 'Theoretical throat' (理論のど厚) assumes a perfectly flat face. 'Actual throat' (実際のど厚) accounts for convexity or concavity. A concave fillet (凹形 / ogata) has LESS than theoretical throat and is a defect. A slightly convex fillet is acceptable but excessive convexity wastes material."
@@ -950,10 +950,10 @@ export const QUIZ_STAGES = [
         id: 310, cat: "Dimensions",
         q: "What is 'Ruuto-gyappu' (ルートギャップ) — and what happens if it is too wide or too narrow?",
         opts: [
-          "The distance between tack welds along the joint",
-          "The angle of the groove opening — too wide causes burn-through",
-          "The root gap — the space between plate edges at the bottom of the groove. Too narrow = poor penetration. Too wide = burn-through",
-          "The reinforcement height above the plate — must be within specification"
+          "The spacing between tack welds along the joint",
+          "The groove angle — too wide causes burn-through",
+          "The gap at the root: too narrow = poor penetration",
+          "The reinforcement height above the plate surface"
         ],
         a: 2, xp: 20,
         exp: "Ruuto-gyappu (ルートギャップ) = Root gap / root opening. The controlled space between plate edges at the root of the groove. Too narrow (< spec): arc can't reach the root, causing lack of penetration (溶込不良). Too wide (> spec): burn-through (溶落ち). Specified on drawings — measure with gap gauges before welding. 🇯🇵 TIP: Check the root gap with a gap gauge before every weld and compare it with the tolerance on the drawing or WPS. Don't eyeball it — fixing the gap before welding costs far less than hatsuri and redo afterwards."
@@ -962,10 +962,10 @@ export const QUIZ_STAGES = [
         id: 311, cat: "JIS Symbols",
         q: "On a JIS drawing, a welding symbol is placed BELOW the reference line. What does this indicate?",
         opts: [
-          "The symbol below the line means overhead welding is required",
-          "The weld is on the opposite side from the arrow",
-          "The weld is on BOTH sides",
-          "The weld is on the ARROW SIDE — the side the arrow is pointing to"
+          "The weld must be made in the overhead position",
+          "The weld is on the side opposite the arrow",
+          "The weld is made on both sides of the joint",
+          "The weld is on the arrow side of the joint"
         ],
         a: 3, xp: 25,
         exp: "JIS welding symbol rule (JIS Z 3021): Below the reference line = ARROW SIDE (矢側 / やがわ). Above the reference line = OTHER SIDE (反矢側 / はんやがわ). AWS A2.4 (USA) uses the same rule — below = arrow side. 🇯🇵 TIP: Some drawings made to ISO 2553 (common in Europe) add a dashed second line under the solid reference line. On those, the side is decided by the line, not by above/below: symbol on the solid line = arrow side, on the dashed line = other side. If you see a dashed line next to the reference line, check with your QC manager before welding."
@@ -974,10 +974,10 @@ export const QUIZ_STAGES = [
         id: 312, cat: "JIS Symbols",
         q: "A JIS drawing has a fillet weld symbol (△) above AND below the reference line. What does this mean?",
         opts: [
-          "Weld on both sides — fillet welds on both the arrow side and the other side of the joint",
-          "Apply fillet weld to a different joint nearby",
-          "The symbol is drawn incorrectly — ignore one of them",
-          "Weld on the arrow side only — the second symbol is decorative"
+          "Fillet welds on both the arrow side and the other side",
+          "Apply the fillet weld to a different joint nearby",
+          "The symbol is drawn wrongly — ignore one of them",
+          "Arrow side only — the second symbol is decoration"
         ],
         a: 0, xp: 20,
         exp: "When the welding symbol appears BOTH above and below the reference line, it means weld on BOTH SIDES. For fillet welds: two-sided fillet weld (両面すみ肉溶接). Each side may have different dimensions specified — read the numbers separately for each. 🇯🇵 TIP: New workers often weld only one side because they miss the second symbol. Always read the symbols on both sides of the reference line before starting."
@@ -986,10 +986,10 @@ export const QUIZ_STAGES = [
         id: 313, cat: "JIS Symbols",
         q: "What does the circle (○) at the intersection of the reference line and arrow mean in a JIS welding symbol?",
         opts: [
-          "Zero welds — do not weld this joint",
-          "All-around weld (全周溶接 / ぜんしゅうようせつ) — weld continuously around the entire joint perimeter",
-          "Overhead welding required at this location",
-          "The weld has been inspected and approved"
+          "No welding — leave this joint unwelded",
+          "Weld all the way around the joint (全周溶接)",
+          "Overhead welding is required at this spot",
+          "The weld has already been inspected and approved"
         ],
         a: 1, xp: 20,
         exp: "The circle symbol (○) at the arrow/reference line junction = All-around weld (全周溶接). The specified weld must be made continuously around the complete perimeter of the joint. Common on pipe connections, column base plates, and hollow structural sections. 🇯🇵 TIP: When welding 全周溶接, the arc start/stop locations must be staggered and not all at the same point — concentrating stop/start defects at one location creates a weak point. Japanese supervisors will note your stop/start positions. Plan your sequence before starting."
@@ -998,10 +998,10 @@ export const QUIZ_STAGES = [
         id: 314, cat: "JIS Symbols",
         q: "A JIS drawing has a flag symbol (旗マーク / はたまーく) at the reference line. What does this indicate?",
         opts: [
-          "The welder has passed quality inspection",
-          "The weld requires post-weld heat treatment",
-          "Field weld (現場溶接 / げんばようせつ) — this weld is performed at the construction/installation site, not in the factory",
-          "The weld joint is under high stress — extra care required"
+          "The welder has passed the quality inspection",
+          "The weld needs post-weld heat treatment",
+          "A field weld (現場溶接) made on site, not in the shop",
+          "The joint is highly stressed — take extra care"
         ],
         a: 2, xp: 20,
         exp: "Flag mark (旗マーク) = Field weld symbol (現場溶接記号). This weld is NOT done in the factory — it is performed at the actual construction or installation site after the prefabricated parts are assembled in place. Important for planning: field welds have more challenging conditions (weather, position, access) than factory welds. 🇯🇵 TIP: Field welds need extra planning. Wind easily blows away shielding gas, so use wind screens for gas-shielded welding, and do not weld in rain or on wet steel. Check the weather and site conditions before starting."
@@ -1010,10 +1010,10 @@ export const QUIZ_STAGES = [
         id: 315, cat: "JIS Symbols",
         q: "Which difference in welding symbol rules can really cause you to weld on the wrong side?",
         opts: [
-          "JIS and AWS put the arrow-side symbol on opposite sides of the reference line",
-          "JIS uses metric dimensions, AWS uses imperial — no other difference",
-          "Drawings to ISO 2553 may add a dashed line: a symbol on the solid line = arrow side, on the dashed line = other side. JIS and AWS both use 'below the line = arrow side'",
-          "There is no difference between any welding symbol standards"
+          "JIS and AWS put the arrow-side symbol on opposite sides",
+          "Only units differ — JIS is metric, AWS is imperial",
+          "ISO 2553 dashed lines: solid = arrow side, dashed = other",
+          "There is no difference between any symbol standards"
         ],
         a: 2, xp: 30,
         exp: "JIS Z 3021 and AWS A2.4 use the same rule: symbol below the reference line = arrow side, above = other side. The real trap is ISO 2553 drawings (common in Europe) that use a dashed second line: there, the solid line = arrow side and the dashed line = other side, whatever is on top. Misreading it = welding on the wrong side = rework. 🇯🇵 TIP: Check the standard in the drawing's title block. If you see a dashed line beside the reference line, confirm with your supervisor before welding."
@@ -1022,9 +1022,9 @@ export const QUIZ_STAGES = [
         id: 316, cat: "Joint Types",
         q: "What is 'T-keite' (T継手 / ティーけいて) and where is it commonly used?",
         opts: [
-          "A T-joint — one plate meets another at 90°, forming a T-shape. Usually welded with fillet welds (すみ肉) on both sides",
-          "Two pipes connected at the same diameter",
-          "A joint where two plates overlap each other",
+          "One plate meets another at 90°, forming a T",
+          "Two pipes of the same diameter joined end to end",
+          "Two plates that overlap each other",
           "Two plates welded end-to-end in a straight line"
         ],
         a: 0, xp: 15,
@@ -1046,9 +1046,9 @@ export const QUIZ_STAGES = [
         id: 318, cat: "Positions",
         q: "What ISO position code 'PF' stands for, and what is the Japanese name?",
         opts: [
-          "PF = Flat position (PA in Japanese) = 下向き",
+          "PF = Flat position = 下向き姿勢",
           "PF = Overhead position = 上向き姿勢",
-          "PF = Vertical-up welding = 立向上進 (Tatemuki-joshin) — welding upward on a vertical plate",
+          "PF = Vertical-up = 立向上進",
           "PF = Horizontal fillet = 水平すみ肉"
         ],
         a: 2, xp: 20,
@@ -1070,10 +1070,10 @@ export const QUIZ_STAGES = [
         id: 320, cat: "Joint Types",
         q: "What is 'Kanzen-tokekomi-yosetsu' (完全溶込み溶接 / かんぜんとけこみようせつ / CJP) and when is it required?",
         opts: [
-          "A complete joint penetration weld — the weld metal fully penetrates the entire thickness of the joint. Required for high-stress connections (e.g., column-to-beam, pressure vessels)",
-          "A weld that uses maximum current settings",
-          "A weld that covers both sides of the plate",
-          "A weld that is polished to a flush surface finish"
+          "Weld metal through the full joint thickness — for high-stress joints",
+          "A weld made with the welding machine at maximum current",
+          "A weld that covers both surfaces of the plate",
+          "A weld that is ground flush with the plate surface"
         ],
         a: 0, xp: 25,
         exp: "Kanzen-tokekomi-yosetsu (完全溶込み溶接) = Complete Joint Penetration (CJP) weld. The fusion zone extends through the ENTIRE plate thickness. Required for: seismic building connections (ダイアフラム), pressure vessel shells, and critical structural joints. Verified by RT or UT inspection. Contrast with partial penetration welds (部分溶込み / PJP). 🇯🇵 TIP: CJP welds on seismic-critical building connections (柱梁接合部) are inspected strictly, usually with UT. If a CJP weld is rejected (不合格), it must be gouged out, re-welded and re-inspected — there is no partial acceptance."
