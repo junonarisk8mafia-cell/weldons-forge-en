@@ -1348,10 +1348,10 @@ export const QUIZ_STAGES = [
         id: 501, cat: "Certifications",
         q: "A new trainee claims that without a 'JIS Yosetsu-gino-sha' (JIS溶接技能者) qualification, it is illegal to weld in Japan, just like welding without the Arc Welding Safety Training certificate. Is this correct?",
         opts: [
-          "Yes — both are legally mandatory government licenses with identical legal weight",
-          "No — JIS Yosetsu-gino-sha is a JWES (日本溶接協会) skill certification, not a legally mandatory license; it is widely REQUIRED BY EMPLOYERS but you can legally weld without it as long as you hold the legally mandatory safety training (Arc Welding Safety Training)",
-          "No — JIS Yosetsu-gino-sha is mandatory, but Arc Welding Safety Training is optional",
-          "Yes, but only for pressure vessel and boiler work, not general fabrication"
+          "Yes — both are government licenses with the same legal weight",
+          "No — JIS is an employer-required skill cert, not a legal license",
+          "No — JIS is mandatory, but Arc Welding Safety Training is optional",
+          "Yes, but only for pressure vessel and boiler work"
         ],
         a: 1, xp: 25,
         exp: "JIS Yosetsu-gino-sha (JIS溶接技能者) is issued by JWES (日本溶接協会 / Japan Welding Engineering Society) and proves welding SKILL through practical tests — but it is NOT a legally mandatory government license. The Arc Welding Safety Training Certificate (アーク溶接特別教育), by contrast, IS legally mandatory under labor law before touching any welding machine. Confusing the two — assuming JIS certification is a legal requirement like the safety training — is a common misunderstanding among new trainees. 🇯🇵 TIP: When applying for jobs, your JIS certification card (認定証 / nintei-sho) is still the first thing employers ask for, even though it's not a legal requirement — it's an industry-standard expectation, not a law."
@@ -1360,10 +1360,10 @@ export const QUIZ_STAGES = [
         id: 502, cat: "Certifications",
         q: "A welder holds only 'Kihon-kyu' (基本級 / Basic Grade) JIS certification. A site supervisor asks if he can take on a job requiring 2G (horizontal position) welding. Can he, based on his Basic Grade alone?",
         opts: [
-          "No — Basic Grade does not qualify him for ANY welding work at all, including flat position",
-          "Yes — Basic Grade automatically covers all positions once you pass the initial flat-position test",
-          "No — Basic Grade (基本級) covers flat position (下向き / 1G) ONLY; horizontal, vertical, overhead, and pipe positions require Senmon-kyu (専門級 / Specialist Grade) certification instead",
-          "Yes, but only if he has at least 2 years of work experience to compensate"
+          "No — Basic Grade doesn't cover any welding, not even flat",
+          "Yes — Basic Grade covers all positions after the flat test",
+          "No — Basic Grade is flat only; 2G needs Specialist Grade",
+          "Yes, if he has at least 2 years of work experience"
         ],
         a: 2, xp: 25,
         exp: "Kihon-kyu (基本級) = Basic Grade, the entry point for JIS certification, covering the flat position (下向き / 1G) only. Senmon-kyu (専門級) = Specialist Grade covers the other positions: horizontal (2G), vertical (3G), overhead (4G) and pipe (P). JIS certification is not a legal license, but when a job's specification calls for horizontal-position qualification, employers and clients require the matching Specialist Grade — experience alone does not replace it. 🇯🇵 TIP: Japanese sites quickly ask 'tate-muki dekiru?' (立向きできる？ / can you do vertical?) — Specialist Grade opens far more work."
@@ -1372,10 +1372,10 @@ export const QUIZ_STAGES = [
         id: 503, cat: "Certifications",
         q: "What does test code 'N-2F' mean in JIS welding certification?",
         opts: [
-          "N = No groove, 2 = 2mm plate thickness, F = Final pass only",
+          "N = No groove, 2 = 2mm plate, F = Final pass only",
           "N = Non-ferrous, 2 = Two-pass weld, F = FCAW process",
-          "N = Nickel-alloy steel, 2 = Plate groove weld, F = Flat position",
-          "N = No backing plate (裏当て金なし), 2 = Medium plate, 9mm (中板), F = Flat position (下向き). A flat-position groove weld without a backing plate"
+          "N = Nickel-alloy steel, 2 = Plate groove, F = Flat",
+          "N = No backing, 2 = Medium plate (9mm), F = Flat"
         ],
         a: 3, xp: 25,
         exp: "JIS test code N-2F (JIS Z 3801, manual arc welding): N = 裏当て金なし (no backing plate — A = with backing), 2 = 中板 (medium plate, 9mm — 1 = thin, 3 = thick), F = 下向き (flat position). Other common codes: N-2H (horizontal), N-2V (vertical), N-2O (overhead), N-2P (pipe, all positions — the hardest). The code tells you exactly what test you passed. 🇯🇵 TIP: When Japanese welders introduce themselves professionally, they often state their JIS codes: 'N-2F to N-2V wo motte imasu' (N-2FとN-2Vを持っています / I hold N-2F and N-2V). This immediately communicates your capability to any Japanese supervisor. Memorize your own codes and use them confidently — it shows you understand the Japanese qualification system."
@@ -1384,10 +1384,10 @@ export const QUIZ_STAGES = [
         id: 504, cat: "Certifications",
         q: "What is 'N-2P' in JIS certification and why is it considered the most prestigious?",
         opts: [
-          "N-2P = No backing plate, medium-wall pipe, fixed pipe — the pipe is fixed horizontally and vertically, so you weld in all positions (flat + vertical + overhead). The gold standard for Japanese welders",
-          "N-2P = Normal 2-position test — slightly harder than basic",
-          "N-2P = Non-destructive, 2-point inspection",
-          "N-2P = Narrow gap, 2-pass process — a fast welding technique"
+          "No backing, medium-wall fixed pipe — welded in all positions",
+          "Normal 2-position test — only slightly harder than basic",
+          "Non-destructive 2-point inspection of a pipe weld",
+          "Narrow-gap 2-pass process — a fast pipe welding method"
         ],
         a: 0, xp: 30,
         exp: "N-2P = no backing plate (N), medium-wall pipe (2), pipe (P). The pipe is fixed horizontally and vertically, so the weld goes through every position: flat at top, vertical on the sides, overhead at the bottom. The root pass (初層) must be perfectly executed for complete back bead penetration (裏波). Considered the most difficult and prestigious JIS certification. Widely respected in Japanese industry. 🇯🇵 TIP: In Japan, a welder who holds N-2P is treated with genuine respect on site. Senior workers may say 'Ano hito wa N-ni-P wo motteru' (あの人はN-2Pを持ってる / that person holds N-2P) as a mark of distinction. If you pass N-2P, it is appropriate to mention it on your work history (職歴 / shokureki) — it will immediately set you apart from other applicants in Japan's competitive welding job market."
@@ -1396,10 +1396,10 @@ export const QUIZ_STAGES = [
         id: 505, cat: "Certifications",
         q: "A JIS welder certificate is valid for 1 year at a time. What happens if you do NOT renew it before it expires?",
         opts: [
-          "You pay a small fine but continue working",
-          "Your certification becomes INVALID. You cannot claim JIS certification for work. You must re-test to regain it. Japanese employers check certification dates regularly",
-          "You get a 6-month grace period automatically",
-          "Nothing — the certification is valid for life once obtained"
+          "You pay a small fine but can keep working as before",
+          "It becomes invalid — you can no longer claim JIS certification",
+          "You automatically get a 6-month grace period",
+          "Nothing — the certificate is valid for life once obtained"
         ],
         a: 1, xp: 20,
         exp: "A JIS welder certificate (適格性証明書) is valid for 1 year. To keep it, you apply for surveillance (サーベイランス) within 3 months before it expires — this is done twice (years 2 and 3). After 3 years, you must pass a re-evaluation test (再評価) between 8 and 2 months before expiry. If it expires, the certificate is no longer valid and you cannot claim JIS certification for work. 🇯🇵 TIP: Set a calendar reminder 3 months before your expiry date (有効期限 / yuukou-kigen). Japanese employers and inspectors check expiry dates — even one day late matters. The Japan Welding Engineering Society (JWES) publishes the schedule and online applications (e-Weld)."
@@ -1408,10 +1408,10 @@ export const QUIZ_STAGES = [
         id: 506, cat: "Certifications",
         q: "What is 'AW Kentei' (AW検定 / AWけんてい) and which industry is it for?",
         opts: [
-          "AW = Automated Welding — for robotic welding operators",
-          "AW = Arc Welding — a general welding certification for all industries",
-          "AW = Architectural Welding (建築鉄骨溶接技量検定) — the certification for structural steel welding in buildings. Valid 1 year from April 1, renewable up to 2 times by application",
-          "AW = Aluminum Welding — for aerospace applications"
+          "Automated Welding — a test for robotic welding operators",
+          "Arc Welding — a general certification for all industries",
+          "Architectural Welding — structural steel for buildings",
+          "Aluminum Welding — a test for aerospace applications"
         ],
         a: 2, xp: 25,
         exp: "AW Kentei (AW検定) = Architectural Welding certification (建築鉄骨溶接技量検定). Specifically for structural steel fabrication in buildings. Managed by the AW Kentei Association. Validity: 1 year from April 1; if you meet the requirements you can renew by application up to 2 times (max 3 years). Factory welding categories: S (complete penetration, steel end tabs), A (fillet weld), S-C (complete penetration, substitute end tabs — requires S). Other categories: field welding, pipe welding, robot welding operator. 🇯🇵 TIP: AW Kentei is the standard for anyone building steel-frame buildings (鉄骨造 / teppukutsukuri) in Japan. Track your renewal deadline — after the renewals are used up you must take the test again. Japanese building contractors keep a strict roster of AW-certified welders for each project — your AW card is checked before every critical joint assignment. If you work in construction, AW Kentei is just as important as JIS."
@@ -1420,10 +1420,10 @@ export const QUIZ_STAGES = [
         id: 507, cat: "Certifications",
         q: "What can a 'Futsuu-Boilaa-Yosetsu-shi' (普通ボイラー溶接士 / ふつうボイラーようせつし) weld — and what is the key plate thickness restriction?",
         opts: [
-          "Can only weld low-pressure systems under 0.1 MPa",
-          "Can weld all boiler and pressure vessel parts without restriction",
-          "Can only weld pipes — no flat plates",
-          "Can weld boiler and pressure vessel parts up to 25mm plate thickness only. For 25mm+ = must have Tokubetsu-Boilaa (特別ボイラー溶接士)"
+          "Only low-pressure systems below 0.1 MPa",
+          "All boiler and pressure vessel parts with no limit",
+          "Only pipes — never flat plates",
+          "Boiler and vessel parts up to 25mm plate thickness"
         ],
         a: 3, xp: 25,
         exp: "Futsuu-Boilaa-Yosetsu-shi (普通ボイラー溶接士) = Standard Boiler Welder. Can weld boiler and pressure vessel components up to 25mm plate thickness. For plates OVER 25mm, the Tokubetsu (特別) grade is required. National license — legally mandatory. Practical test: flat (下向き) and vertical (立向き) butt welds on 9mm plate, 1 hour. Pass/fail is judged by root-bend tests — every specimen must pass. (Horizontal, 25mm plate and side-bend is the Tokubetsu test — don't mix them up.) 🇯🇵 TIP: The Boiler Welder national license (ボイラー溶接士 / national exam, not JWES) is issued under the Ministry of Health, Labour and Welfare; the exam is run by the Japan Safety and Health Examination Association (安全衛生技術試験協会). It is a national qualification — not the same as JIS. If you work on boilers, pressure vessels, or chemical plant piping in Japan, you will need this license. The exam requires passing both a written knowledge test AND a practical test — start studying the law (ボイラー及び圧力容器安全規則) alongside your practical skills."
@@ -1432,10 +1432,10 @@ export const QUIZ_STAGES = [
         id: 508, cat: "Certifications",
         q: "To work as an 'Underwater Welder' (水中溶接士 / すいちゅうようせつし) in Japan, which combination is needed?",
         opts: [
-          "Diving License (潜水士 / Sensui-shi, legally required for diving work) + welding training and skill (Arc Welding Safety Training by law; JIS qualification expected by employers)",
+          "Diving License (潜水士) + welding training and skill",
           "Any two safety training certificates",
-          "JIS Certification + Driver's License",
-          "Boiler Welder + Arc Welding Safety Training only"
+          "JIS certification + a car driving license",
+          "Boiler Welder License + Arc Welding Safety Training"
         ],
         a: 0, xp: 25,
         exp: "Diving work in Japan legally requires the Diving License (潜水士), a national license with a written exam only. For the welding side, the Arc Welding Safety Training (アーク溶接特別教育) is the legal minimum, and employers normally expect a JIS welder qualification (all-position Specialist Grade is preferred). 🇯🇵 TIP: Underwater welding work in Japan is concentrated in ports (港湾 / kouwan), offshore structures and dam repairs. The community is small — a reputation for reliability and safety matters a lot."
@@ -1444,10 +1444,10 @@ export const QUIZ_STAGES = [
         id: 509, cat: "Certifications",
         q: "What is 'WES' in Japanese welding, and what level of qualification does it represent?",
         opts: [
-          "WES = Welding Equipment Standard — a certification for welding machines",
-          "WES = Welding Engineering Standard — the Japan Welding Engineering Society's standards; WES 8103 certifies welding coordination personnel at Grade 2, Grade 1 and Special Grade",
-          "WES = Western Engineering System — an American certification used in Japan",
-          "WES = Welding Examination System — a basic safety training program"
+          "Welding Equipment Standard — a certification for machines",
+          "Welding Engineering Standard — WES 8103 for welding coordinators",
+          "Western Engineering System — an American certification",
+          "Welding Examination System — a basic safety course"
         ],
         a: 1, xp: 25,
         exp: "WES (Welding Engineering Standard) = standards of the Japan Welding Engineering Society (日本溶接協会). WES 8103 certifies welding coordination personnel (溶接管理技術者) in three levels: Grade 2 (2級), Grade 1 (1級) and Special Grade (特別級). These are for people who MANAGE and SUPERVISE welding. 🇯🇵 TIP: Many experienced Japanese welders who move into supervision pursue WES Grade 2 or Grade 1. 'Genba ga wakaru enjinia' (現場が分かるエンジニア / an engineer who understands the worksite) is a high compliment."
@@ -1456,9 +1456,9 @@ export const QUIZ_STAGES = [
         id: 510, cat: "Career",
         q: "What is the correct career path order from entry-level to expert in Japanese welding?",
         opts: [
-          "All certifications are obtained simultaneously in the first week",
-          "WES Special → Underwater Welder → Boiler Welder → JIS Basic → Arc Safety Training",
-          "Arc Safety Training (Day 1) → JIS Basic Grade → JIS Specialist Grade → AW / Boiler Welder → WES → Underwater Welder (top)",
+          "Get every certification at once in the first week",
+          "WES → Underwater → Boiler → JIS Basic → Arc Safety",
+          "Arc Safety → JIS Basic → JIS Specialist → AW/Boiler → WES",
           "Underwater Welder first — then everything else is easy"
         ],
         a: 2, xp: 20,
@@ -1468,10 +1468,10 @@ export const QUIZ_STAGES = [
         id: 511, cat: "Certifications",
         q: "How does income generally change as you gain welding qualifications in Japan?",
         opts: [
-          "Japanese welders earn the same regardless of certification",
-          "Income only depends on age — certifications make no difference",
-          "Arc Safety Training alone gives the highest pay, and higher certifications lower your pay",
-          "Higher and rarer qualifications (Specialist Grade, AW, Boiler Welder, underwater work) generally open higher-paying jobs — actual pay varies by company, region and experience"
+          "Welders earn the same no matter which certificates they hold",
+          "Income depends only on age — certificates make no difference",
+          "Arc Safety Training alone pays most; higher certs lower your pay",
+          "Higher, rarer qualifications generally open better-paid jobs"
         ],
         a: 3, xp: 20,
         exp: "In general, each step up — JIS Specialist Grade, AW Kentei, Boiler Welder, and rare skills such as underwater welding — opens work that pays more. But real pay varies a lot by company, region, industry and experience, so treat any 'average salary' figure as a rough guide only. 🇯🇵 TIP: Japanese companies also value reliability: showing up every day, making few quality problems and communicating well often matters as much as your certificates."
@@ -1480,10 +1480,10 @@ export const QUIZ_STAGES = [
         id: 512, cat: "Physics",
         q: "Water pressure increases by approximately 1 atmosphere every 10 meters of depth. What is the absolute pressure at 30 meters depth?",
         opts: [
-          "4 atmospheres — 1 atm (surface) + 3 atm (from 30m = 3 × 10m)",
-          "1 atmosphere (just atmospheric pressure)",
-          "2 atmospheres",
-          "3 atmospheres — 30m ÷ 10m (forgetting the 1 atm of air at the surface)"
+          "4 atmospheres — 1 atm of air + 3 atm of water",
+          "1 atmosphere — only the air pressure counts",
+          "2 atmospheres — water pressure doubles at 30m",
+          "3 atmospheres — 30m ÷ 10m, with no air pressure"
         ],
         a: 0, xp: 25,
         exp: "Every 10m of depth adds about 1 atmosphere. At 30m: 1 atm (air at the surface) + 3 atm (30m of water) = 4 atm absolute. Forgetting the surface atmosphere gives the wrong answer of 3. Higher pressure means faster gas consumption, more risk of nitrogen narcosis, and required decompression stops. 🇯🇵 TIP: Diving work in Japan is regulated by the Ordinance on Safety and Health of Work under High Pressure (高気圧作業安全衛生規則), including decompression. Decompression sickness (減圧症 / genatsushou) prevention is taken very seriously — no shortcuts."
@@ -1493,9 +1493,9 @@ export const QUIZ_STAGES = [
         q: "Heat Input formula: Q = 60 × E × I / v. What do E, I, and v represent in welding?",
         opts: [
           "E = efficiency, I = insulation, v = volume",
-          "E = arc voltage (V), I = welding current (A), v = travel speed (cm/min). Result Q = heat input (J/cm or kJ/cm)",
-          "E = electrode diameter, I = interpass temperature, v = ventilation rate",
-          "E = elongation, I = impact strength, v = viscosity of weld pool"
+          "E = voltage, I = current, v = travel speed",
+          "E = electrode size, I = interpass temp, v = ventilation",
+          "E = elongation, I = impact energy, v = pool viscosity"
         ],
         a: 1, xp: 25,
         exp: "Heat Input Q = 60 × E × I / v. E = Voltage (V), I = Current (A), v = Travel speed (cm/min). Result in J/cm (divide by 1000 for kJ/cm). Example: E=28V, I=180A, v=30cm/min → Q = 60×28×180/30 = 10,080 J/cm = 10.1 kJ/cm. Heat input controls HAZ toughness, cooling rate, and distortion. Managed in WPS. 🇯🇵 TIP: In Japanese pressure vessel and nuclear work, heat input limits (入熱量制限 / nyuunetsu-ryou-seigen) are written into the WPS and the welding inspector may ask 'Nyuunetsu wa WPS-nai desu ka?' (入熱はWPS内ですか？ / Is your heat input within the WPS?). Welders who track their voltage, current, and travel speed during welding — not just at the start — are the ones who consistently pass inspection. Many Japanese welders use a small notepad to log parameters by pass."
@@ -1504,10 +1504,10 @@ export const QUIZ_STAGES = [
         id: 514, cat: "Certifications",
         q: "What is a 'WPS' (Welding Procedure Specification / 溶接施工要領書) and why does every qualified welding job in Japan require one?",
         opts: [
-          "WPS = a weekly work schedule for welding crews",
-          "WPS = Worker Protection System — a safety plan for the site",
-          "WPS = a document specifying all welding parameters (process, materials, current, voltage, speed, preheat, PWHT) that a welder must follow to produce a qualified weld. Required by codes for all critical welded structures",
-          "WPS = a record of past welds done on the project"
+          "A weekly work schedule for the welding crew",
+          "Worker Protection System — the site safety plan",
+          "The procedure that sets how a qualified weld must be made",
+          "A record of the past welds done on the project"
         ],
         a: 2, xp: 25,
         exp: "WPS (溶接施工要領書 / Yosetsu-shiko-yoryosho) = Welding Procedure Specification. The 'recipe' for a weld: defines process, base metal, filler metal, preheat, current, voltage, speed, post-weld heat treatment, and more. Backed by a PQR (procedure qualification test record). Every qualified weld in Japanese pressure vessels, buildings, and ships must follow an approved WPS. 🇯🇵 TIP: On Japanese sites, the WPS is kept in the quality binder (品質書類 / hinshitsu-shorui) at the workstation. Before starting a critical weld, point to the WPS and confirm with your supervisor: 'Kore no WPS de yoroshii desu ka?' (これのWPSでよろしいですか？ / Is this the correct WPS to follow?). This simple step protects you legally if there's ever a quality dispute later. Paper trails in Japan are everything."
@@ -1516,10 +1516,10 @@ export const QUIZ_STAGES = [
         id: 515, cat: "Certifications",
         q: "What is 'Yonetsu' (予熱 / よねつ / preheat) and why is it required for high-strength steel?",
         opts: [
-          "A type of annealing process for stainless steel only",
-          "Warming the shielding gas to improve flow rate",
-          "Heating the weld after completion — post-weld heat treatment",
-          "Preheating the base metal before welding to slow cooling rate — prevents cold cracking in high carbon equivalent steels, reduces hardening in HAZ, promotes hydrogen escape"
+          "An annealing process used only for stainless steel",
+          "Warming the shielding gas so that it flows better",
+          "Heating the weld after welding — the same as PWHT",
+          "Heating the base metal before welding to slow cooling"
         ],
         a: 3, xp: 25,
         exp: "Yonetsu (予熱) = Preheat. Heating the base metal (and surrounding area) to a specified temperature BEFORE starting to weld. Why: slows cooling rate → less hardening in HAZ → less cold crack risk. Also helps diffusible hydrogen escape. Required for: high carbon equivalent steels (Ceq > ~0.40), thick plates, highly restrained joints. Temperature checked with ondo-chooku (温度チョーク). 🇯🇵 TIP: Japanese welders use temperature-indicating crayons (温度チョーク / ondo-chooku, also called サーモクレヨン / thermo-crayon) to verify preheat temperature before striking the arc. The crayon melts at a specific temperature — if it melts on the steel, the surface has reached that temperature. Always check BOTH sides of the joint, not just the top surface. In cold winter months on outdoor sites, preheat maintenance between passes (パス間温度管理 / pasu-kan-ondo-kanri) must also be checked regularly."
@@ -1528,10 +1528,10 @@ export const QUIZ_STAGES = [
         id: 516, cat: "Career",
         q: "As a foreign welder in Japan, what is the MOST IMPORTANT certificate combination to get in your first month to become fully functional on any job site?",
         opts: [
-          "Arc Welding Safety Training + Grinding Wheel Safety Training + Low-Voltage Electrical Training + Full Harness Safety Training — the basic operational package (~¥52,000–82,000, about 6–7 days total)",
-          "WES Grade 2 only — covers everything",
-          "Driver's License + Boiler Welder License",
-          "JIS Specialist Grade only — everything else is optional"
+          "Arc Welding + Grinding Wheel + Low-Voltage + Full Harness",
+          "WES Grade 2 only — it covers everything",
+          "A car driving license + the Boiler Welder License",
+          "JIS Specialist Grade only — the rest is optional"
         ],
         a: 0, xp: 25,
         exp: "First-month priority package: 1) Arc Welding Safety Training (3 days, ¥20–40k) → can weld. 2) Grinding Wheel Safety Training (1 day, ¥10k) → can grind. 3) Low-Voltage Electrical Safety Training (1 day, ¥12–22k) → can operate power panels. 4) Full Harness Safety Training (1 day, ¥10k) → can work at height. Total: ~6–7 days, ¥52,000–82,000. Now you are legally operational on virtually any Japanese job site. 🇯🇵 TIP: In Japan, safety training certificates (特別教育修了証 / tokubetsu-kyouiku-shuryo-sho) must be kept by BOTH the worker AND the employer. If a labor inspector (労働基準監督官 / rodo-kijun-kantokukan) visits the site and asks a worker to produce their certificate, the worker must have it. Many experienced workers keep all their certificates in a clear plastic folder in their work bag. This is normal professional practice in Japan — not unusual or excessive."
@@ -1540,10 +1540,10 @@ export const QUIZ_STAGES = [
         id: 517, cat: "Certifications",
         q: "What is 'IIW' and how does it relate to Japanese welding qualifications?",
         opts: [
-          "IIW = a brand of Japanese welding machines",
-          "IIW = International Institute of Welding — issues internationally recognized certifications (IW, IWT, IWE) that align with Japan's WES system. WES Special Grade ≈ IWE (International Welding Engineer)",
-          "IIW = an American industry association with no connection to Japan",
-          "IIW = a Japanese acronym for the welding safety law"
+          "A brand of Japanese welding machines",
+          "International Institute of Welding — global diplomas (IWE etc.)",
+          "An American industry group with no link to Japan",
+          "A Japanese abbreviation for the welding safety law"
         ],
         a: 1, xp: 30,
         exp: "IIW (International Institute of Welding) = the global body for welding standards. Issues: IW (International Welder), IWT (International Welding Technologist), IWE (International Welding Engineer). Japan's WES 8103 Special Grade (特別級) is aligned with IWE standards — holders can apply for IIW international recognition. Valuable for Japanese welders working on international projects (offshore, LNG, nuclear). 🇯🇵 TIP: Japan is an active member of IIW (through JWES). If you ever want to work on Japan's international LNG projects in Australia, Southeast Asia, or the Middle East, IIW certification (especially IW or IWE) signals your qualifications cross borders. The Japanese welding industry takes international standards seriously — and a welder who can speak both JIS and IIW fluently is genuinely rare and valued."
@@ -1552,10 +1552,10 @@ export const QUIZ_STAGES = [
         id: 518, cat: "Career",
         q: "What does 'PWHT' (Post-Weld Heat Treatment / 溶接後熱処理 / ようせつごねつしょり) do and when is it required in Japan?",
         opts: [
-          "PWHT = a final visual inspection required before shipment",
-          "PWHT = cleaning the weld bead with a wire brush after cooling",
-          "PWHT = heating the entire weldment to a specific temperature (e.g. 600°C) and holding, then slow cooling — removes residual stress, softens hard HAZ, releases hydrogen. Required for pressure vessels, boilers, and critical structures by JIS/ASME codes",
-          "PWHT = applying anti-rust paint after welding"
+          "A final visual inspection required before shipment",
+          "Wire-brushing the weld bead after it cools",
+          "Heating and slow cooling to relieve residual stress",
+          "Applying anti-rust paint after welding"
         ],
         a: 2, xp: 30,
         exp: "PWHT (Post-Weld Heat Treatment / 溶接後熱処理) = stress-relief heat treatment. The completed weldment is heated to ~600–700°C (for carbon steel), held for a specified time, then slowly cooled. Effects: residual stress removed (↓ distortion, ↓ stress corrosion risk), hard HAZ softened (↓ cold crack risk), hydrogen released. Mandatory for boiler vessels (ボイラー), pressure equipment, and specified structural connections. 🇯🇵 TIP: PWHT in Japan is performed by specialized heat treatment companies (熱処理業者 / netsushori-gyosha) using temperature-controlled electric resistance blankets or furnaces. The entire heating and cooling cycle is recorded on a temperature chart recorder (温度記録計 / ondo-kiroku-kei) — this chart becomes a permanent quality document. As a welder, you should know the PWHT requirements before welding so you don't apply weld repairs or tack welds after the PWHT cycle — those would invalidate the treatment."
@@ -1564,10 +1564,10 @@ export const QUIZ_STAGES = [
         id: 519, cat: "Career",
         q: "What is the main difference between working as a welder in Japan vs other countries that foreign workers should know?",
         opts: [
-          "Japanese companies never hire foreign welders — it is not possible",
-          "Japan uses completely different welding techniques not found anywhere else",
+          "Japanese companies never hire foreign welders",
+          "Japan uses welding techniques found nowhere else",
           "Japanese welders work longer hours but earn less",
-          "Japan has a strict certificate-based system — many tasks (crane rigging, changing grinding wheels, electrical work) need specific legal training. Safety culture is deep, quality standards are very high, and rework (取り直し) hurts your reputation"
+          "Strict certificate system, deep safety culture, high quality bar"
         ],
         a: 3, xp: 20,
         exp: "Key differences in Japan: 1) Certificate culture — many tasks need specific safety training or licenses by law, and sites often require more than the legal minimum. 2) Quality focus — NDT is thorough and rework damages your reputation. 3) Team communication — learning key Japanese terms is essential for safety. 4) Respect for process — follow the WPS and work instructions exactly. 🇯🇵 TIP: A powerful phrase: 'Wakaranai toki wa, shitsumon shite mo ii desu ka?' (分からない時は、質問してもいいですか？ / When I don't understand, may I ask?). Asking before starting is respected; guessing and causing a quality problem is not."
@@ -1576,10 +1576,10 @@ export const QUIZ_STAGES = [
         id: 520, cat: "Career",
         q: "You have mastered all the content in this game. What should your NEXT step be to advance your welding career in Japan?",
         opts: [
-          "Sit the JIS 専門級 (Specialist Grade) practical test for your main welding process, accumulate 実務経験 (practical experience on the job), then aim for N-2P (pipe all-positions) and eventually Boiler Welder or AW certification",
-          "Immediately apply for the WES Special Grade exam",
-          "Apply for underwater welding jobs without any further preparation",
-          "Nothing more to learn — you are now an expert"
+          "Take the JIS Specialist Grade test and build work experience",
+          "Apply for the WES Special Grade exam right away",
+          "Apply for underwater welding jobs with no more preparation",
+          "Nothing — you are now an expert with nothing left to learn"
         ],
         a: 0, xp: 25,
         exp: "Knowledge is Step 1. Now: 1) Sit the JIS 専門級 practical test for FCAW or SMAW. 2) Build 実務経験 (jitsumukeiken = practical work experience) — quality matters more than quantity. 3) Aim for N-2P (pipe all-positions) — the most respected JIS test. 4) Accumulate: Tamakake + Crane + Forklift. 5) Consider AW or Boiler Welder depending on your work field. Your career = your certifications + your quality record. Gambatte! (頑張れ！) 🇯🇵 TIP: Japanese welding masters often say 'Shokunin ni naru no wa, issho no shigoto da' (職人になるのは、一生の仕事だ / Becoming a craftsman is the work of a lifetime). There is no shortcut to mastery — but every certificate you earn, every quality weld you make, and every Japanese word you learn is a brick in a career that will carry you anywhere in the world. You started this game. Now go build the real thing."
@@ -1601,10 +1601,10 @@ export const QUIZ_STAGES = [
         id: 601, cat: "International Certs",
         q: "What is the AWS 'CWI' (Certified Welding Inspector), and who issues it?",
         opts: [
-          "A welding inspector certification issued by the American Welding Society (AWS), recognized worldwide for inspecting welds to codes",
+          "An inspector certification issued by the American Welding Society",
           "A Japanese national welding license issued by JWES",
-          "A safety training certificate for arc welding",
-          "A machine operator license for automated welding"
+          "A safety training certificate for arc welding work",
+          "An operator license for automated welding machines"
         ],
         a: 0, xp: 25,
         exp: "AWS CWI = Certified Welding Inspector, issued by the American Welding Society (USA). A globally recognized credential for inspecting welds to codes such as AWS D1.1, ASME, and API. Requires documented experience plus passing a 3-part exam. 🌍 TIP: In Japan, CWI is valued on international LNG/offshore projects that follow US codes; for domestic JIS work, JWES certification is the norm — many senior inspectors hold BOTH so they can move between domestic and international jobs."
@@ -1613,10 +1613,10 @@ export const QUIZ_STAGES = [
         id: 602, cat: "International Certs",
         q: "The AWS CWI exam has three parts. What do Parts A, B, and C test?",
         opts: [
-          "Part A = Welding, Part B = Grinding, Part C = Cutting",
-          "All three parts are written theory only",
-          "Part A = Fundamentals (closed book), Part B = Practical hands-on inspection with gauges and weld replicas, Part C = Code application (open-book)",
-          "Part A = Japanese, Part B = English, Part C = Chinese language tests"
+          "Part A welding, Part B grinding, Part C cutting",
+          "All three parts are written theory exams",
+          "Fundamentals, hands-on practical, and code application",
+          "Japanese, English and Chinese language tests"
         ],
         a: 2, xp: 25,
         exp: "CWI exam: Part A Fundamentals (welding knowledge, closed book), Part B Practical (hands-on measuring of weld replicas with gauges + reading a 'Book of Specifications'), Part C Code Application (open-book code such as AWS D1.1 or API 1104). You must pass all three. 🌍 TIP: Part B's gauge skills — measuring undercut, leg length, throat — are the same 溶接ゲージ skills used for self-inspection (自主検査) on Japanese sites. That habit transfers directly to the CWI practical."
@@ -1625,10 +1625,10 @@ export const QUIZ_STAGES = [
         id: 603, cat: "International Codes",
         q: "What is 'AWS D1.1'?",
         opts: [
-          "The AWS Structural Welding Code — Steel: the dominant code for building and bridge steel welding in the USA and many international projects",
-          "A type of welding electrode",
+          "The AWS Structural Welding Code for steel",
+          "A type of AWS welding electrode",
           "An American safety helmet standard",
-          "A Japanese building law"
+          "A section of the Japanese Building Standard Law"
         ],
         a: 0, xp: 25,
         exp: "AWS D1.1 = Structural Welding Code — Steel. It governs design, WPS/welder qualification, workmanship and inspection for structural steel in the US and on many international projects. In Japan the same field is covered by JIS, the Building Standard Law and AW Kentei. 🌍 TIP: If a drawing's title block says 'AWS D1.1', the acceptance criteria and procedures follow that code — confirm the WPS and inspection rules with QC before welding. (The arrow-side rule for weld symbols is the same as JIS: below the line = arrow side.)"
@@ -1637,10 +1637,10 @@ export const QUIZ_STAGES = [
         id: 604, cat: "International Certs",
         q: "What is 'CSWIP 3.1' and who administers it?",
         opts: [
-          "A US structural welding code",
-          "A welding inspector qualification administered by TWI (The Welding Institute, UK), widely required in Europe, the Middle East, and Asian offshore/oil & gas",
-          "A Japanese pressure vessel law",
-          "A brand of welding wire"
+          "A US structural welding code for steel",
+          "A welding inspector qualification from TWI (UK)",
+          "A Japanese law for pressure vessels",
+          "A brand of flux-cored welding wire"
         ],
         a: 1, xp: 25,
         exp: "CSWIP 3.1 = Welding Inspector certification from TWI (UK). It is the British/European counterpart to AWS CWI, heavily required in oil & gas and offshore work. 🌍 TIP: For welders eyeing Middle East or Southeast Asia offshore projects (where many Japanese firms operate), CSWIP is often the required inspector ticket, while AWS CWI dominates US-led projects. Knowing which code family a project uses tells you which inspector cert matters."
@@ -1649,10 +1649,10 @@ export const QUIZ_STAGES = [
         id: 605, cat: "International Codes",
         q: "What does 'ISO 9606-1' cover, and how does it relate to JIS welder certification?",
         opts: [
-          "It is a paint coating standard",
-          "It is a crane operation standard",
-          "It is the international standard for qualification testing of welders (fusion welding of steels) — the global counterpart to Japan's JIS welder certification",
-          "It is identical to AWS D1.1 with a different number"
+          "A standard for paint coatings on steel",
+          "A standard for crane operation",
+          "The international standard for welder qualification tests",
+          "The same as AWS D1.1 under a different number"
         ],
         a: 2, xp: 25,
         exp: "ISO 9606-1 = international welder qualification standard for steels. It parallels JIS 溶接技能者 certification — proving a welder's skill by practical test. International projects in Japan (LNG, offshore) often require ISO 9606 qualification alongside or instead of JIS. 🌍 TIP: The position codes you already know (PA/PC/PF/PG, and 1G/2G/6G) come from ISO 6947 and appear on ISO 9606 certificates — so your position knowledge is already international."
@@ -1661,10 +1661,10 @@ export const QUIZ_STAGES = [
         id: 606, cat: "International Codes",
         q: "What is 'ISO 3834'?",
         opts: [
-          "Quality requirements for fusion welding of metallic materials — a company/shop-level welding quality management standard",
-          "A welder's personal skill test",
-          "A type of non-destructive test",
-          "A shielding gas purity standard"
+          "A company-level welding quality management standard",
+          "A personal skill test for individual welders",
+          "A type of non-destructive testing method",
+          "A purity standard for shielding gases"
         ],
         a: 0, xp: 25,
         exp: "ISO 3834 sets quality requirements for a welding ORGANIZATION (not an individual) — covering WPS control, welder qualification, equipment, inspection, and record keeping. Think 'a shop-level quality system for welding.' 🌍 TIP: Japanese fabricators bidding on international or European projects often certify to ISO 3834 to prove their welding quality management. It is similar in spirit to the 品質計画書 and 記録 discipline already standard in Japan."
@@ -1673,10 +1673,10 @@ export const QUIZ_STAGES = [
         id: 607, cat: "International Codes",
         q: "What does 'ASME Section IX' govern?",
         opts: [
-          "Elevator safety",
-          "Fire sprinkler design",
-          "Electrical wiring codes",
-          "Welding and brazing qualification — the rules for qualifying WPS, PQR, and welders for boilers and pressure vessels (ASME BPVC)"
+          "Safety rules for elevators and lifts",
+          "Design rules for fire sprinkler systems",
+          "Electrical wiring rules for buildings",
+          "Qualification of welding procedures and welders"
         ],
         a: 3, xp: 25,
         exp: "ASME Boiler & Pressure Vessel Code, Section IX = qualification of welding/brazing procedures (WPS/PQR) and personnel. It is the US/international backbone for pressure-equipment welding. Japan's domestic equivalent domain is covered by JIS plus the boiler/pressure-vessel rules (ボイラー溶接士). 🌍 TIP: On international plant projects in Japan you may weld to ASME IX WPSs — understanding 'essential variables' (which changes force re-qualification) is critical to staying qualified."
@@ -1685,10 +1685,10 @@ export const QUIZ_STAGES = [
         id: 608, cat: "International Codes",
         q: "On AWS (A2.4) welding symbols, what does a symbol placed BELOW the reference line mean — and is it the same in JIS?",
         opts: [
-          "AWS drawings never use welding symbols",
-          "Below the line = arrow side in AWS, and JIS uses the same rule — so the real thing to watch for is ISO 2553 drawings with a dashed second line",
-          "Below the line = other side in AWS, the opposite of JIS",
-          "Below the line means a field weld in AWS"
+          "AWS drawings never use welding symbols at all",
+          "Arrow side — the same rule as JIS",
+          "Other side — the opposite of JIS",
+          "It means a field weld in AWS"
         ],
         a: 1, xp: 30,
         exp: "AWS A2.4 and JIS Z 3021 agree: below the reference line = arrow side, above = other side. Drawings to ISO 2553 may use a dashed second line, where the solid line = arrow side and the dashed line = other side. 🌍 TIP: On international projects, check the drawing standard in the title block before welding, and ask if you see a dashed line beside the reference line."
@@ -1699,7 +1699,7 @@ export const QUIZ_STAGES = [
         opts: [
           "Three different welding processes",
           "Three grades of welding wire",
-          "IWE = International Welding Engineer (highest), IWT = Technologist, IWS = Specialist — a tiered international welding-coordination scheme",
+          "Engineer, Technologist and Specialist levels",
           "Three types of shielding gas"
         ],
         a: 2, xp: 30,
@@ -1709,10 +1709,10 @@ export const QUIZ_STAGES = [
         id: 610, cat: "Quality",
         q: "In international codes (ASME IX, ISO 15614), what is the relationship between a WPS and a PQR?",
         opts: [
-          "The PQR records the results of an actual qualification test weld that proves the WPS works; the WPS is the production instruction backed by that PQR",
-          "They are the same document",
+          "The PQR records the test weld that proves the WPS works",
+          "They are two names for the same document",
           "The WPS is written after production is finished",
-          "The PQR is a welder's pay record"
+          "The PQR is a record of each welder's pay"
         ],
         a: 0, xp: 25,
         exp: "PQR (Procedure Qualification Record) documents a qualification test weld and its test results (tensile, bend, impact). The WPS (Welding Procedure Specification) is the production 'recipe' supported by that PQR. This is the same logic as Japan's 溶接施工要領書 backed by qualification testing. 🌍 TIP: When a job uses ASME/ISO WPSs, learn which parameters are 'essential variables' — changing one beyond its range (e.g. heat input or preheat) can invalidate the qualification and require a new PQR."
@@ -1721,10 +1721,10 @@ export const QUIZ_STAGES = [
         id: 611, cat: "Metallurgy",
         q: "What does a 'Charpy V-notch (CVN) impact test' measure, and why does it matter for cold climates?",
         opts: [
-          "It measures weld bead width",
-          "It measures shielding gas flow",
-          "It measures a material's toughness (energy absorbed in fracture) at a given temperature — critical for avoiding brittle fracture in cold service",
-          "It measures electrical resistance"
+          "The width of the finished weld bead",
+          "The flow rate of the shielding gas",
+          "Toughness — the energy absorbed when it breaks",
+          "The electrical resistance of the weld"
         ],
         a: 2, xp: 25,
         exp: "In the Charpy V-notch test, a notched specimen is struck and the absorbed energy (Joules) indicates toughness. Low toughness at low temperature means brittle-fracture risk. Codes specify a minimum CVN value at a test temperature for cold-service or seismic structures. 🌍 TIP: For welding in Hokkaido/Tohoku winters or cold offshore water, WPSs often require impact-tested consumables and controlled heat input to keep HAZ toughness — the same 入熱管理 discipline you already practiced."
@@ -1733,10 +1733,10 @@ export const QUIZ_STAGES = [
         id: 612, cat: "Positions",
         q: "In ISO/AWS pipe welding tests, what is the '6G' position, and what JIS test is it comparable to?",
         opts: [
-          "6G = a fixed pipe inclined at 45°, welded through all positions in one test — the most demanding pipe test; comparable to Japan's N-2P all-position pipe test",
-          "6G = flat plate, the easiest position",
-          "6G = a type of shielding gas",
-          "6G = a sixth-generation welding robot"
+          "A fixed pipe at 45°, all positions — like JIS N-2P",
+          "A flat plate test — the easiest position",
+          "A type of shielding gas mixture",
+          "A sixth-generation welding robot"
         ],
         a: 0, xp: 30,
         exp: "6G = pipe fixed at a 45° inclination, welded through flat, vertical, and overhead in a single test — the toughest position, qualifying the widest range. In prestige and difficulty it is comparable to JIS N-2P. Passing 6G is a globally respected milestone. 🌍 TIP: A 6G ticket (ISO 9606 or ASME IX) plus JIS N-2P makes you employable on both domestic and international pipe work — and the pipe root-pass 裏波 (back bead) skills transfer directly between them."
@@ -1745,10 +1745,10 @@ export const QUIZ_STAGES = [
         id: 613, cat: "Metallurgy",
         q: "Duplex stainless steel (e.g. 2205) requires careful welding control of which microstructural balance?",
         opts: [
-          "The copper/zinc ratio",
-          "The carbon/sulfur ratio only",
-          "The ferrite/austenite phase balance — too much ferrite (from fast cooling / low heat input) reduces toughness and corrosion resistance",
-          "It requires no special control"
+          "The copper-to-zinc ratio",
+          "Only the carbon-to-sulfur ratio",
+          "The ferrite/austenite phase balance",
+          "Nothing — it needs no special control"
         ],
         a: 2, xp: 30,
         exp: "Duplex stainless (~50% ferrite / 50% austenite) offers high strength plus corrosion resistance. Welding must control heat input and interpass temperature so the ferrite number stays in range: too-fast cooling leaves excess brittle ferrite, too-slow risks harmful phases. Common offshore and in chemical plants. 🌍 TIP: Duplex is increasingly used on offshore and LNG projects — nitrogen back-purge and controlled heat input are typical WPS requirements, and ferrite content is checked with a ferrite meter."
@@ -1757,10 +1757,10 @@ export const QUIZ_STAGES = [
         id: 614, cat: "Metallurgy",
         q: "Across international codes, 'low-hydrogen' practice is required for high-strength/thick steel primarily to prevent what?",
         opts: [
-          "Surface rust only",
-          "Hydrogen-induced (cold) cracking — by minimizing diffusible hydrogen via dried low-hydrogen consumables, preheat, and interpass control",
-          "Excessive bead width",
-          "Shielding gas waste"
+          "Surface rust on the finished weld",
+          "Hydrogen-induced (cold) cracking",
+          "Beads that come out too wide",
+          "Wasting shielding gas"
         ],
         a: 1, xp: 25,
         exp: "Low-hydrogen consumables (properly dried and stored), preheat, and interpass control reduce diffusible hydrogen — the driver of cold cracking in hardenable or thick steels. This requirement is universal across AWS, ASME, ISO, and JIS. 🌍 TIP: The rod-oven (乾燥炉) discipline you learned for JIS work is exactly what international codes require — dried electrodes, holding ovens, and limited time out of the oven all carry over."
@@ -1769,10 +1769,10 @@ export const QUIZ_STAGES = [
         id: 615, cat: "Quality",
         q: "Under pressure-equipment codes, when is PWHT (post-weld heat treatment) typically mandated?",
         opts: [
-          "For thick sections and certain materials, to relieve residual stress and temper the HAZ — thresholds are set by the code and material",
-          "For every weld regardless of thickness",
-          "Only for aluminum",
-          "Never — PWHT is optional decoration"
+          "For thick sections and certain materials, as the code sets",
+          "For every weld, no matter how thin",
+          "Only for aluminum welds",
+          "Never — PWHT is just optional decoration"
         ],
         a: 0, xp: 25,
         exp: "Codes (ASME, JIS, EN) mandate PWHT above certain thickness thresholds or for specific materials (e.g. Cr-Mo steels) to relieve residual stress, reduce hardness and hydrogen, and restore toughness. The cycle — heating rate, hold temperature/time, cooling — is recorded on a chart. 🌍 TIP: Know the PWHT plan BEFORE welding: adding tack welds or repairs after the PWHT cycle invalidates the treatment — a costly and common mistake internationally as well as in Japan."
