@@ -336,10 +336,10 @@ export const QUIZ_STAGES = [
         id: 101, cat: "Tools",
         q: "Your senior says 'Guraindaa kakete' (グラインダーかけて) and 'Kaatto shite' (カットして) about the same disc-shaped power tool, the 'Guraindaa' (グラインダー). What is the key difference between these two instructions?",
         opts: [
-          "There is no difference — both mean exactly the same action with the grinder",
-          "'Kakete' means grind/smooth the surface using a grinding disc; 'kaatto shite' means cut through material using a cut-off disc — different discs, different jobs on the same tool body",
-          "'Kakete' is only used for stainless steel work, 'kaatto shite' only for carbon steel",
-          "'Kakete' means turn the grinder on, 'kaatto shite' means turn it off"
+          "No difference — both mean grind the surface with the same disc",
+          "Kakete = grind with a grinding disc; kaatto = cut with a cut-off disc",
+          "Kakete is for stainless only; kaatto shite is for carbon steel only",
+          "Kakete = switch the grinder on; kaatto shite = switch it off"
         ],
         a: 1, xp: 25,
         exp: "Guraindaa (グラインダー) = Angle grinder, the most common tool on any Japanese welding site — but the SAME tool body takes different discs for different jobs. 'Kakete' (かけて) means smooth/grind down using a grinding or flap disc. 'Kaatto shite' (カットして) means slice through using a cut-off disc. Using the wrong disc for the requested task (e.g. trying to grind with a thin cut-off disc) is dangerous and can shatter the disc. 🇯🇵 TIP: On Japanese sites, always confirm which disc is mounted before starting — 'guraindaa kakete' never means cutting. Remember: you need the Grinding Wheel Safety Training (自由研削といし特別教育) before using either type of disc."
@@ -348,10 +348,10 @@ export const QUIZ_STAGES = [
         id: 102, cat: "Tools",
         q: "Before welding, you need to clean a very narrow groove. Your supervisor hands you a 'Bo-gura' (棒グラ). What is it?",
         opts: [
-          "A metal measuring rod",
+          "A metal rod used to measure the groove depth",
           "A large angle grinder for flat surfaces",
-          "A die grinder / pencil grinder — rod-shaped, used for tight spaces and groove finishing where a disc grinder won't fit",
-          "A welding torch extension"
+          "A rod-shaped die grinder for narrow grooves and tight spots",
+          "A torch extension for reaching deep grooves"
         ],
         a: 2, xp: 15,
         exp: "Bo-gura (棒グラ) = 棒式グラインダー = die grinder or pencil grinder. The 棒 (bo) means 'rod-shaped.' Perfect for cleaning grooves (開先 / kaisaki), tight corners, and narrow joints where a large disc grinder cannot reach. Used daily in shipyards and factories. 🇯🇵 TIP: When a supervisor hands you a Bo-gura and points to a groove and says 'kaisaki kirei ni shite' (開先きれいにして / clean up the groove nicely), they expect a smooth, scale-free surface. Take time to do it properly — a dirty kaisaki = porosity later."
@@ -360,10 +360,10 @@ export const QUIZ_STAGES = [
         id: 103, cat: "Tools",
         q: "After stick welding, the foreman says 'Chippaa!' (チッパー) and points at the weld. What should you grab?",
         opts: [
-          "The welding torch — to add more metal",
-          "A wire brush only",
-          "The angle grinder",
-          "The air chipper — to knock off the slag from the weld bead before the next pass"
+          "The welding torch — to add one more pass of metal",
+          "A stainless wire brush — to polish the bead",
+          "The angle grinder — to grind the bead flat",
+          "The air chipper — to knock off the slag before the next pass"
         ],
         a: 3, xp: 15,
         exp: "Chippaa (チッパー) = Air chipper or chipping gun. Pneumatic tool that rapidly strikes the weld surface to remove slag (ノロ / Noro). Much faster than a manual chipping hammer. In Japanese shipyards and factories, removing slag before the next pass is MANDATORY — skipping it causes slag inclusion defects. 🇯🇵 TIP: Always wear safety glasses when chipping — hot slag fragments fly at high speed. In Japan, 'chipping = eyes closed' is not allowed. Flying slag in the eye is one of the most common welding injuries reported at Japanese factories."
@@ -372,10 +372,10 @@ export const QUIZ_STAGES = [
         id: 104, cat: "Tools",
         q: "What is the difference between a 'Chippaa' (チッパー) and a 'Chippingu-hanmaa' (チッピングハンマー)?",
         opts: [
-          "Chippaa = air-powered pneumatic tool. Chippingu-hanmaa = manual hammer. Both remove slag, but the air chipper is faster",
-          "Chippingu-hanmaa is for cutting steel, Chippaa is for polishing",
-          "Chippaa is for TIG welding only",
-          "They are exactly the same tool"
+          "Chippaa is air-powered; chipping hammer is manual — both remove slag",
+          "Chipping hammer cuts steel; chippaa polishes the bead",
+          "Chippaa is used only for TIG welding; the hammer for stick",
+          "They are the same tool — the names differ by region only"
         ],
         a: 0, xp: 20,
         exp: "Chippaa (チッパー) = Air chipper — pneumatic, fast, used for heavy slag removal in production welding. Chippingu-hanmaa (チッピングハンマー) = manual chipping hammer — used when air tools are not available or for small amounts of slag. Both tools require technique to avoid damaging the weld bead. 🇯🇵 TIP: A sharp, precise chipping stroke at 30–45° to the bead surface removes slag efficiently without gouging the metal. New workers tend to hammer too hard and too perpendicular — practice on scrap first."
@@ -384,10 +384,10 @@ export const QUIZ_STAGES = [
         id: 105, cat: "Torch Parts",
         q: "Your supervisor says the 'Chippu' (チップ) in the torch needs replacing. What does the contact tip do?",
         opts: [
-          "Cools the torch during heavy welding",
-          "Feeds electrical current to the welding wire AND guides the wire to the weld point",
-          "Connects the torch to the wire feeder",
-          "Controls the shielding gas flow"
+          "It cools the torch during heavy welding",
+          "It passes current to the wire and guides it",
+          "It connects the torch cable to the wire feeder",
+          "It controls how much shielding gas flows"
         ],
         a: 1, xp: 20,
         exp: "Chippu (チップ) = Contact tip. TWO jobs: 1) Transfers electrical current from the torch to the welding wire. 2) Guides the wire through the correct path to the arc. A worn or spatter-clogged tip causes arc instability, poor bead shape, and wire feeding problems. Replace regularly — they are cheap and critical. 🇯🇵 TIP: Japanese welders say 'chippu ga buru-buru shiteru' (チップがぶるぶるしてる / the tip is shaking/unstable) to describe an arc with an erratic, flickering sound. This usually means a worn tip — replace immediately. Carrying spare chips (チップ) in your apron pocket is standard practice."
@@ -398,8 +398,8 @@ export const QUIZ_STAGES = [
         opts: [
           "It guides the welding wire to the work",
           "It connects the torch to the power cable",
-          "It directs and shapes the shielding gas flow around the weld pool — the outermost part of the torch",
-          "It cools the contact tip"
+          "It directs the shielding gas around the weld pool",
+          "It cools the contact tip with water"
         ],
         a: 2, xp: 20,
         exp: "Nozuru (ノズル) = Nozzle. The outermost part of the torch. It channels shielding gas (CO₂, Argon, or mixed gas) from the torch body around the arc and weld pool. A clogged or spatter-coated nozzle restricts gas flow and causes porosity (ブローホール). Clean it regularly with anti-spatter spray. 🇯🇵 TIP: The correct way to clean a clogged nozzle on a Japanese site: spray anti-spatter spray first, then knock the nozzle firmly against a hard surface (not the weld!). Experienced welders do this automatically every few meters of welding — make it a habit."
@@ -408,10 +408,10 @@ export const QUIZ_STAGES = [
         id: 107, cat: "Torch Parts",
         q: "You notice lots of porosity in your welds. Your senior checks the torch and removes a blocked 'Orifisu' (オリフィス). Why does a blocked orifice cause porosity?",
         opts: [
-          "It causes the liner to clog with wire debris",
-          "It overheats the contact tip",
-          "It slows down the wire feed speed",
-          "Without a working orifice, shielding gas becomes turbulent and pulls in surrounding air — the nitrogen and oxygen contaminate the weld pool"
+          "It clogs the liner with wire shavings",
+          "It overheats the contact tip and melts it",
+          "It slows the wire feed and makes the arc long",
+          "Gas flow becomes turbulent and pulls in air"
         ],
         a: 3, xp: 25,
         exp: "Orifisu (オリフィス) = Gas diffuser / orifice. Located between the torch body and the nozzle. It spreads the shielding gas evenly for a smooth, laminar flow. If blocked, gas turbulence sucks in atmospheric air (nitrogen + oxygen), causing gas pores (ブローホール) in the weld. A common cause of mysterious porosity that beginners overlook. 🇯🇵 TIP: When porosity suddenly appears and you cannot identify the cause, experienced Japanese welders disassemble the torch completely (chippu → nozuru → orifisu) and clean every part. The orifice is often the hidden culprit — a tiny spatter ball blocking one of its holes."
@@ -420,10 +420,10 @@ export const QUIZ_STAGES = [
         id: 108, cat: "Torch Parts",
         q: "What is the 'Rainaa' (ライナー) inside a semi-auto welding torch?",
         opts: [
-          "The internal tube that guides welding wire AND shielding gas from the feeder through the torch cable to the contact tip",
-          "The cooling water channel inside the torch",
+          "The tube that guides the wire from feeder to contact tip",
+          "The cooling-water channel inside the torch",
           "The rubber outer sleeve protecting the torch cable",
-          "The insulating sleeve that separates the nozzle from the body"
+          "The insulator between the nozzle and torch body"
         ],
         a: 0, xp: 20,
         exp: "Rainaa (ライナー) = Liner / conduit tube. Runs the full length of the torch cable. It guides the welding wire smoothly from the feeder to the contact tip AND carries shielding gas. A kinked, dirty, or worn liner causes wire jamming (バードネスティング), inconsistent feeding, and arc instability. Replace when wire feeding becomes rough. 🇯🇵 TIP: 'Baadonesutingu' (バードネスティング / bird's nest) is the Japanese term for wire tangled in a ball at the drive rolls due to liner blockage. When it happens mid-weld, the arc stops suddenly with a loud pop. Learn to clear it quickly: release the drive roll pressure, pull the wire back, clear the tangle, re-feed."
@@ -432,10 +432,10 @@ export const QUIZ_STAGES = [
         id: 109, cat: "Tools",
         q: "In a Japanese shipyard, a 'Sokyuki' (走行機 / そうきゅうき) or 'Kyarijji' (キャリッジ) is set up on a long joint. What does it do?",
         opts: [
-          "A crane for lifting steel plates",
-          "A motorized welding carriage that moves the welding torch automatically along the joint at a constant speed",
-          "A grinding machine for weld cleanup",
-          "A gas cutting torch system"
+          "A small crane that lifts steel plates along the joint",
+          "A motorized carriage that moves the torch at a set speed",
+          "A grinding machine that cleans the weld after welding",
+          "A gas cutting machine for straight bevel cuts"
         ],
         a: 1, xp: 20,
         exp: "Sokyuki (走行機) / Kyarijji (キャリッジ) = Welding carriage. A motorized trolley that carries the semi-auto welding torch along a straight joint at a set, constant speed. The welder sets the parameters (voltage, wire speed, travel speed) and monitors. Common for long straight welds on ship hulls, steel structures, and tank walls. 🇯🇵 TIP: Shipyard welders using the sokyuki are expected to watch the arc continuously and manually correct torch angle if the carriage drifts. Falling asleep while 'monitoring' a sokyuki is a common new-worker mistake — defects over several meters will require full hatsuri (ハツリ / gouge out and redo)."
@@ -444,10 +444,10 @@ export const QUIZ_STAGES = [
         id: 110, cat: "Tools",
         q: "You borrow a 'Yosetsu-men' (溶接面) welding helmet for stick welding at 150A, but its lens is marked Shade #5 — a level used for gas cutting, not arc welding. What should you do?",
         opts: [
-          "Use it anyway — shade number only matters for color perception, not eye safety",
-          "Use it, but only for short tack welds under 10 seconds",
-          "Do not use it — Shade #5 is far too light for 150A arc welding; use a lens in the JIS guide range of #9–11",
-          "Use it, but compensate by standing further from the arc"
+          "Use it — shade number only affects color, not eye safety",
+          "Use it, but only for tack welds under 10 seconds",
+          "Don't use it — #5 is too light; use a #9–11 lens for 150A",
+          "Use it, but stand further away from the arc"
         ],
         a: 2, xp: 25,
         exp: "The shade number (遮光度番号) must match the process and current. For stick welding at 75–200A, the JIS T 8141 guide is #9–11. A #5 lens lets through far too much harmful UV/IR radiation for arc welding — short welds or extra distance do not make it safe. 🇯🇵 TIP: When borrowing a helmet on site, always check the shade number on the lens holder — never assume."
@@ -456,10 +456,10 @@ export const QUIZ_STAGES = [
         id: 111, cat: "Tools",
         q: "What is a 'Jido-shakko-men' (自動遮光面 / じどうしゃこうめん) and why do many Japanese welders prefer it?",
         opts: [
-          "A face shield for grinding only",
-          "A standard fixed-shade welding mask — lens is always dark",
-          "A remote-controlled helmet with camera",
-          "An auto-darkening helmet — lens is clear until the arc strikes, then darkens automatically in milliseconds"
+          "A clear face shield used for grinding work only",
+          "A fixed-shade mask whose lens is always dark",
+          "A remote-controlled helmet with a built-in camera",
+          "An auto-darkening helmet that darkens when the arc starts"
         ],
         a: 3, xp: 20,
         exp: "Jido-shakko-men (自動遮光面) = Auto-darkening welding helmet (ADH). The lens is clear at rest (you can see clearly to position the torch) then darkens automatically when the arc starts — reaction time under 1/25,000 second. Reduces eye strain, improves positioning accuracy. Standard in modern Japanese workshops. 🇯🇵 TIP: Many Japanese welders own their own jido-shakko-men. Before buying, check the reaction time and the shade range on the spec sheet — a slow, cheap helmet can still hurt your eyes."
@@ -468,10 +468,10 @@ export const QUIZ_STAGES = [
         id: 112, cat: "Tools",
         q: "What is 'Ura-atekin' (裏当て金 / うらあてきん) used for in welding?",
         opts: [
-          "A backing bar / backing strip — placed on the back of a joint to support the molten root pass and ensure complete penetration without burn-through",
-          "A filler metal for gap filling only",
-          "A clamping device for holding plates together",
-          "A grounding device for the welding circuit"
+          "A backing strip that supports the root pass from behind",
+          "Extra filler metal used to fill wide gaps",
+          "A clamp that holds the plates together",
+          "A grounding plate for the welding circuit"
         ],
         a: 0, xp: 20,
         exp: "Ura-atekin (裏当て金) = Backing strip / backing bar. Placed behind the groove root to support the molten weld pool on the first (root) pass. Prevents burn-through (溶落ち / yoochi) and helps achieve full root penetration (完全溶込み). Common in shipbuilding, structural steel, and pressure vessel fabrication. 🇯🇵 TIP: In Japanese shipbuilding, steel backing bars are often tack-welded in place permanently (永久裏当て). In structural work requiring clean back surfaces, ceramic backing tape (セラミック裏当て) is used instead — it falls off after the weld cools and leaves no permanent attachment."
@@ -480,10 +480,10 @@ export const QUIZ_STAGES = [
         id: 113, cat: "Tools",
         q: "What is 'Endo-tabu' (エンドタブ) and why is it used in certification tests and production welding?",
         opts: [
-          "A test report form filled after welding",
-          "An auxiliary plate attached at the weld start and end — moves defect-prone zones (arc starts, crater cracks) outside the actual joint",
-          "A type of flux-cored wire",
-          "A backing material for pipe welding only"
+          "A test report form filled in after welding",
+          "A tab that moves weld start/end defects off the joint",
+          "A type of flux-cored wire for thick plates",
+          "A ceramic backing used only for pipe welding"
         ],
         a: 1, xp: 20,
         exp: "Endo-tabu (エンドタブ) = Run-off tab / end tab. Short steel plates attached at each end of the weld joint. Arc starts and ends are the most defect-prone areas (ブローホール, クレーター割れ). The end tab moves these defects outside the actual joint. After welding, end tabs are cut off and discarded. Required in JIS certification tests. 🇯🇵 TIP: End tabs are standard in building steel work, and the AW Kentei factory-welding tests are divided by end-tab type (steel end tabs or substitute end tabs). After welding, cut and finish the end-tab area as the procedure says."
@@ -492,10 +492,10 @@ export const QUIZ_STAGES = [
         id: 114, cat: "Tools",
         q: "What is 'Aasuクリップ' (アースクリップ) also called 'ground clamp' and why is it critical?",
         opts: [
-          "A clip for attaching the welding electrode",
-          "A clip that holds the welding wire spool",
-          "The earth/ground clamp that connects the welding return circuit to the workpiece — without it, the welding circuit is incomplete and the current finds other paths (causing damage or fire)",
-          "A safety clip for securing the power cable"
+          "A clip that holds the electrode in the holder",
+          "A clip that locks the wire spool in the feeder",
+          "It connects the return current path to the workpiece",
+          "A safety clip that secures the power cable"
         ],
         a: 2, xp: 20,
         exp: "Aasu-kurippu (アースクリップ) = Earth clamp / ground clamp. Completes the welding electrical circuit by connecting to the workpiece. Poor ground contact causes arc instability, spatter, and electrical current finding dangerous alternative paths through machinery, frameworks, or structures. Always clamp as close to the weld as possible. 🇯🇵 TIP: 'Aasu ga warui' (アースが悪い / bad ground) is a common reason for mysterious arc instability on Japanese sites. If your arc sounds rough and spatter is excessive despite correct voltage/current, check the earth clamp first — rusty clamp jaws or an indirect ground path through steel structures is the culprit more often than any machine setting."
@@ -504,10 +504,10 @@ export const QUIZ_STAGES = [
         id: 115, cat: "Tools",
         q: "Your supervisor tells you to spray 'Supatta-boshi-zai' (スパッタ防止剤) before welding. Where is it safe and effective to apply it, and where should you NEVER spray it?",
         opts: [
-          "Spray only on the workpiece surface that will be welded — never on the torch itself",
-          "Spray it on the contact tip's electrical contact surface for best conductivity",
-          "Spray liberally everywhere including directly into the gas channel and orifice for maximum protection",
-          "Spray on the nozzle exterior and torch body; NEVER spray it inside the gas channel/orifice or onto hot metal near an active arc"
+          "Only on the joint surface to be welded, never on the torch",
+          "On the contact tip's contact surface for better current flow",
+          "Everywhere, including inside the gas channel and orifice",
+          "On the nozzle outside — never inside the gas channel"
         ],
         a: 3, xp: 25,
         exp: "Supatta-boshi-zai (スパッタ防止剤) = Anti-spatter spray, applied to the nozzle exterior and torch body so spatter falls off easily instead of sticking. Spraying INSIDE the gas channel or orifice can clog the gas passage and cause turbulence (leading to porosity), and spraying near an active arc or on hot metal is a fire/fume risk. A small amount on the nozzle exterior is sufficient. 🇯🇵 TIP: Water-based anti-spatter sprays are preferred on Japanese sites because they're less flammable. Spray before welding, wipe clean after — small investment, big time saving."
@@ -516,10 +516,10 @@ export const QUIZ_STAGES = [
         id: 116, cat: "Tools",
         q: "What is 'Ondo-chooku' (温度チョーク / おんどチョーク) or 'Tempu-sutikku' (テンプスティック) used for?",
         opts: [
-          "A temperature indicator crayon — melts at a specific temperature to verify preheat or interpass temperature on the steel",
-          "Marking welding positions on drawings",
-          "Anti-corrosion coating",
-          "Marking cut lines on steel plate"
+          "A crayon that melts at a set temperature to check preheat",
+          "A marker for writing weld positions on drawings",
+          "An anti-corrosion coating for finished welds",
+          "A chalk for marking cut lines on steel plate"
         ],
         a: 0, xp: 20,
         exp: "Ondo-chooku (温度チョーク) = Temperature crayon / Tempilstick. Each crayon melts at a specific temperature (e.g., 150°C, 200°C, 350°C). Mark the steel near the weld — if the mark melts, the temperature has been reached. Used to verify preheat temperature (予熱) before welding and interpass temperature (パス間温度) between passes. 🇯🇵 TIP: Measure where the WPS tells you to — usually on the base metal at a set distance from the joint, not on the weld itself. Supervisors check your measuring technique as well as the reading."
@@ -528,10 +528,10 @@ export const QUIZ_STAGES = [
         id: 117, cat: "Tools",
         q: "What is a 'Yosetsu-geeji' (溶接ゲージ / ようせつゲージ) used for on a Japanese job site?",
         opts: [
-          "Checking the gas cylinder pressure",
-          "A multi-function welding gauge that measures bead size, leg length, throat thickness, undercut depth, and weld reinforcement height",
-          "Setting the welding machine amperage",
-          "Measuring the length of welding wire used"
+          "To check the gas cylinder pressure",
+          "To measure leg length, throat, undercut and reinforcement",
+          "To set the welding machine's current",
+          "To measure how much welding wire was used"
         ],
         a: 1, xp: 20,
         exp: "Yosetsu-geeji (溶接ゲージ) = Welding gauge. An essential inspection tool with multiple functions: measures fillet weld leg length (脚長), throat thickness (のど厚), weld reinforcement height (余盛), undercut depth (アンダーカット), and more. Used during visual inspection (VT) by welders and inspectors. 🇯🇵 TIP: In Japan, welders are expected to self-inspect (自主検査 / jishu-kensa) their own welds with the welding gauge BEFORE the quality inspector arrives. Showing your inspection results proactively earns respect — waiting for the inspector to find problems does not."
@@ -542,7 +542,7 @@ export const QUIZ_STAGES = [
         opts: [
           "Yes — all Japanese torch parts are one standard size",
           "Yes, as long as the wire diameter is the same",
-          "Not without checking — parts are made for specific torch models, so sizes and threads can differ; always match the part number to your torch",
+          "Not without checking — match the part number to the torch",
           "No — only the nozzle can be swapped, never the tip"
         ],
         a: 2, xp: 25,
@@ -552,10 +552,10 @@ export const QUIZ_STAGES = [
         id: 119, cat: "Tools",
         q: "What is 'Furappu-disuku' (フラップディスク) and when is it used instead of a standard grinding disc?",
         opts: [
-          "A safety guard for angle grinders",
-          "A wire brush wheel for rust removal",
-          "A cutting disc for slicing steel plate",
-          "A flap disc — overlapping abrasive flaps that smooth weld surfaces more gently than a grinding disc, leaving a better finish"
+          "A safety guard that fits over an angle grinder",
+          "A wire wheel used to remove rust",
+          "A thin disc for cutting through steel plate",
+          "Overlapping abrasive flaps that blend welds smoothly"
         ],
         a: 3, xp: 20,
         exp: "Furappu-disuku (フラップディスク) = Flap disc. Overlapping abrasive flaps attached to a backing plate. Used to blend and smooth weld surfaces, remove light spatter, and feather weld toes — gentler than a flat grinding disc. Leaves a smoother surface finish. Common in finish welding work and stainless steel applications. 🇯🇵 TIP: For stainless steel (SUS), always use a stainless-dedicated flap disc or grinding disc marked 'SUS用' or 'ステン用.' Using a disc that has touched carbon steel before will contaminate the stainless surface with iron particles, causing rust spots — this is a serious quality defect called '鉄汚染' (tetsu-osen / iron contamination)."
@@ -564,10 +564,10 @@ export const QUIZ_STAGES = [
         id: 120, cat: "Tools",
         q: "You need to wire-brush a stainless steel (SUS) weld, but only a carbon-steel-rated 'Waiyaa-burashi' (ワイヤーブラシ) is available. Is it acceptable to use it just this once?",
         opts: [
-          "No — carbon steel bristles left on the stainless surface cause '鉄汚染' (tetsu-osen / iron contamination), leading to future rust spots; always use a dedicated SUS-rated brush",
+          "No — carbon bristles cause iron contamination and rust spots",
           "Yes, as long as you rinse the brush with water first",
-          "No, but only because the carbon brush will scratch the SUS surface cosmetically — there is no corrosion risk",
-          "Yes — wire brushes are universal; the bristle material doesn't transfer between metals"
+          "No, but only because it scratches the surface cosmetically",
+          "Yes — bristle material does not transfer between metals"
         ],
         a: 0, xp: 25,
         exp: "Waiyaa-burashi (ワイヤーブラシ) = Wire brush, used after welding to remove light slag, oxidation, and fine spatter. Carbon steel bristles embed microscopic iron particles into a stainless surface, which later rust and create visible rust spots — a real corrosion defect, not just cosmetic. Rinsing does not remove embedded particles. Many Japanese sites keep separate, color-coded brush sets for carbon steel and stainless to prevent this cross-contamination. 🇯🇵 TIP: For heavy slag after stick welding, use the chipping hammer (チッピングハンマー) or air chipper (チッパー) first, then follow with the correct wire brush — never substitute brush types to save time."
