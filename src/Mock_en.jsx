@@ -14,7 +14,20 @@ const PASS = 0.6;
 const ALL_Q = [];
 QUIZ_STAGES.forEach(s => s.questions.forEach(q => ALL_Q.push(q)));
 
-const shuffle = a => [...a].sort(() => Math.random() - 0.5);
+// Fisher–Yates (sort(() => Math.random() - 0.5) is biased)
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+// Shuffle the options too, remapping `a` to the correct option's new position
+function shuffleOpts(q) {
+  const order = shuffle(q.opts.map((_, i) => i));
+  return { ...q, opts: order.map(i => q.opts[i]), a: order.indexOf(q.a) };
+}
 const fmt = sec => `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`;
 
 export function MockScreen({ onExit, lang }) {
@@ -31,7 +44,7 @@ export function MockScreen({ onExit, lang }) {
   useEffect(() => () => clearInterval(timer.current), []);
 
   function start(n, minutes) {
-    const pool = shuffle(ALL_Q).slice(0, Math.min(n, ALL_Q.length)).map(q => localizeQ(q, lang));
+    const pool = shuffle(ALL_Q).slice(0, Math.min(n, ALL_Q.length)).map(q => shuffleOpts(localizeQ(q, lang)));
     setQs(pool); setAns(new Array(pool.length).fill(null));
     setCur(0); setLimit(minutes * 60); setLeft(minutes * 60); setPhase("exam");
     clearInterval(timer.current);
