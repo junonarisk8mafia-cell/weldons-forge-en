@@ -589,9 +589,9 @@ export const QUIZ_STAGES = [
         id: 201, cat: "Slang",
         q: "A senior welder groans 'Kachiage...' (かちあげ) and a trainee assumes this means the official term 'Tatemuki-shisei' (立向き姿勢 / vertical position) since both involve fighting gravity. Is the trainee correct?",
         opts: [
-          "Yes — kachiage and tatemuki-shisei refer to the same position, just slang vs formal terms",
-          "No — kachiage is slang for 上向き姿勢 (Uwamuki-shisei / overhead position), where you weld ABOVE your head; tatemuki-shisei is a different position, welding on a vertical surface",
-          "No — kachiage actually refers to the flat position, which is the easiest, not the hardest",
+          "Yes — kachiage is just the slang word for vertical position",
+          "No — kachiage means overhead; vertical is a different position",
+          "No — kachiage actually means the easy flat position",
           "Yes, but only when welding pipe joints, not plate joints"
         ],
         a: 1, xp: 25,
@@ -601,10 +601,10 @@ export const QUIZ_STAGES = [
         id: 202, cat: "Slang",
         q: "Your supervisor says today's vertical (立向き / tatemuki) welds must be done '上進' (joshin, vertical-up) and not '下進' (kashin, vertical-down). Why does Japan generally prefer vertical-up for structural work?",
         opts: [
-          "Vertical-down (下進) is preferred exclusively because it eliminates the need for crater fill technique",
-          "Vertical-down (下進) is preferred because it is faster and gives deeper penetration than vertical-up",
-          "Vertical-up (上進) is preferred because it generally gives better fusion and penetration, even though it is slower than vertical-down",
-          "Neither is preferred — Japan uses only vertical-down for all vertical work"
+          "Vertical-down, because it needs no crater-fill technique",
+          "Vertical-down, because it is faster and penetrates deeper",
+          "Vertical-up, because it gives better fusion and penetration",
+          "Neither — Japan uses only vertical-down for vertical welds"
         ],
         a: 2, xp: 25,
         exp: "Within vertical welding there are two directions: 立向上進 (Tatemuki-joshin, vertical-UP) and 立向下進 (Tatemuki-kashin, vertical-DOWN). Vertical-down is faster but gives shallower penetration and a higher risk of lack of fusion; vertical-up is slower but gives better fusion and penetration, so it is generally preferred for structural welds. 🇯🇵 TIP: In formal documents (WPS, inspection reports) always use the official terms 立向上進 / 立向下進 — avoid site slang in QC paperwork."
@@ -613,10 +613,10 @@ export const QUIZ_STAGES = [
         id: 203, cat: "Slang",
         q: "Your senior inspects the groove and says the next pass is the 'Shiage' (仕上げ / しあげ). What does this mean for your next move?",
         opts: [
-          "Start the root pass from scratch — everything was wrong",
-          "The weld is finished — pack up and go home",
+          "Grind everything out and start the root pass again",
+          "The weld is finished — no more passes are needed",
           "There is a crack — stop and call the inspector",
-          "The groove is nearly full — the next pass is the cap (cover) pass that forms the visible surface"
+          "The next pass is the cap pass that forms the surface"
         ],
         a: 3, xp: 20,
         exp: "Shiage (仕上げ) = finishing. In multi-pass groove welding, the 仕上げ層 (shiage-sou / cap or cover pass) is the last layer that forms the weld surface. The passes before it are the root pass (初層 / shosou) and the fill passes (中間層 / chuukan-sou). 🇯🇵 TIP: Take extra care with bead width, height and toe blending on the cap pass — this is the surface the inspector judges first in visual testing."
@@ -625,10 +625,10 @@ export const QUIZ_STAGES = [
         id: 204, cat: "Slang",
         q: "Your supervisor looks at your practice weld and shouts 'Mimizu!' (ミミズ) [mi-mi-zu]. What went wrong?",
         opts: [
-          "Your bead is wobbly and uneven — like a worm crawling across the plate",
-          "The gas flow is too high",
-          "You used the wrong wire",
-          "The weld is too deep — you burned through"
+          "The bead wanders left and right like a worm",
+          "The gas flow is too high and blows the pool",
+          "You used the wrong wire for this base metal",
+          "The weld went too deep and burned through"
         ],
         a: 0, xp: 15,
         exp: "Mimizu (ミミズ) = earthworm. Used to describe a wobbly, uneven, inconsistent bead that winds left and right like a worm. Caused by unsteady torch movement, inconsistent travel speed, or shaking hands. Fix: practice straight stringer beads until they are perfectly straight before attempting weave beads. 🇯🇵 TIP: Japanese welding trainers often say 'ashi o tsukae' (足を使え / use your feet/legs) — it means don't just move your arms; stabilize your whole body and move your body smoothly for long runs. Bracing your elbow against your body improves bead straightness dramatically."
@@ -637,10 +637,10 @@ export const QUIZ_STAGES = [
         id: 205, cat: "Slang",
         q: "A senior welder looks at your bead, shakes his head, and says 'Gatagata!' (ガタガタ) [ga-ta-ga-ta]. What does he mean?",
         opts: [
-          "Your travel speed was too fast — the bead is too thin",
-          "Your bead has no consistency — rough, uneven, no rhythm, not controlled",
-          "The welding machine is broken",
-          "The base metal has a crack"
+          "Travel speed was too fast, so the bead is too thin",
+          "The bead is rough and uneven, with no steady rhythm",
+          "The welding machine is broken and needs repair",
+          "The base metal has a crack next to the bead"
         ],
         a: 1, xp: 15,
         exp: "Gatagata (ガタガタ) = rough, rattling, inconsistent. Used to describe a bead with irregular width, height, and ripple pattern — no consistent rhythm or control. Different from Mimizu (which is straight but wobbly) — Gatagata means the whole bead is messy. Both are feedback you need to hear and improve from. 🇯🇵 TIP: Japanese welding culture values 職人気質 (shokunin-kishitsu / craftsman spirit) — a true shokunin lays perfectly uniform beads every time. When a senior says 'gatagata,' take it seriously. Ask 'doko ga warui desu ka?' (どこが悪いですか？ / where specifically is the problem?) — Japanese seniors respect workers who want to understand and improve."
@@ -649,10 +649,10 @@ export const QUIZ_STAGES = [
         id: 206, cat: "Slang",
         q: "After welding a large plate, your supervisor says 'Hizumi ga deta!' (歪みが出た！) [hi-zu-mi ga de-ta]. What happened?",
         opts: [
-          "The weld passed inspection — great work",
+          "The weld passed inspection — good work",
           "The shielding gas ran out during welding",
-          "Distortion / warping — the heat from welding caused the metal plate to bend or curve out of shape",
-          "A crack appeared in the weld"
+          "Welding heat made the plate bend out of shape",
+          "A crack appeared along the weld centerline"
         ],
         a: 2, xp: 20,
         exp: "Hizumi (歪み) = distortion / warping. When you weld, intense heat causes the metal to expand then contract unevenly as it cools — this warps the plate. More passes = more heat = more distortion. Solutions: proper tack weld sequence, back-step welding (後退法), pre-setting (逆ひずみ法), and minimizing heat input. 🇯🇵 TIP: In Japanese fabrication, controlling hizumi is considered a mark of an advanced welder. The 'tack sequence' (仮付け順序) is decided by the supervisor and must be followed exactly — random tacking by new workers is the #1 cause of large plate distortion on Japanese job sites."
@@ -661,10 +661,10 @@ export const QUIZ_STAGES = [
         id: 207, cat: "Slang",
         q: "After TIG welding a stainless steel joint with no flux involved, your senior still says 'Noro tore!' (ノロとれ！). Does this make sense, and what should you actually check?",
         opts: [
-          "Yes, because 'noro' in this context means 'check the gas flow,' not slag",
-          "No, because 'noro tore' can only ever apply to FCAW welding, never any other process",
-          "Yes, it makes sense — TIG welding always produces heavy slag just like stick welding, so chip it off the same way",
-          "No, it doesn't apply directly — TIG welding produces no slag (no flux is used); the senior likely misspoke, or meant to check for oxide/heat-tint discoloration instead"
+          "Yes — here 'noro' means check the gas flow, not slag",
+          "No — 'noro tore' is used only for FCAW welding",
+          "Yes — TIG leaves heavy slag, so chip it like stick welds",
+          "Not literally — TIG has no slag; check oxide/heat tint"
         ],
         a: 3, xp: 25,
         exp: "Noro (ノロ) = slag, the crusty residue from FLUX-based processes like stick welding (SMAW) or flux-cored welding (FCAW). TIG welding (GTAW) uses no flux and produces no slag — so 'noro tore' literally does not apply. If a senior says this during TIG work, they may be using the phrase loosely to mean 'clean the surface,' likely referring to oxide scale or heat tint, which needs different treatment (e.g., stainless steel brush or pickling), not chipping. 🇯🇵 TIP: In some Japanese regions, workers say 'kasu' (カス) instead of 'noro' for slag — same thing, different site dialect. But always confirm what's actually on the surface before reaching for a chipping hammer."
@@ -673,10 +673,10 @@ export const QUIZ_STAGES = [
         id: 208, cat: "Slang",
         q: "What is 'Karitsuke' (仮付け / かりつけ) [ka-ri-tsu-ke] or 'Tenzuke' (点付け / てんづけ) [ten-zu-ke] and why is it important?",
         opts: [
-          "Tack weld — short temporary welds that hold parts in position before full welding. Quality matters because defects in tack welds contaminate the final weld",
-          "A type of fillet weld used in corners only",
+          "Short tack welds that hold parts in place before welding",
+          "A type of fillet weld used only in corners",
           "The final cover pass that completes the weld",
-          "A weld defect caused by incorrect positioning"
+          "A defect caused by welding in the wrong position"
         ],
         a: 0, xp: 20,
         exp: "Karitsuke (仮付け) / Tenzuke (点付け) = Tack weld. Short welds at intervals to hold parts in correct position before full welding. CRITICAL: tack weld defects (cracks, porosity) get absorbed into the final weld and become serious problems. Treat tack welds with the same care as full welds. In Japan, this is strictly enforced. 🇯🇵 TIP: Japanese supervisors sometimes test new workers by watching how they do their karitsuke — sloppy, quick tacks with obvious craters and porosity signal a careless worker. Minimum tack length, proper crater fill, and correct spacing (指定ピッチ) are all checked. Tack quality = work quality in Japan."
@@ -685,10 +685,10 @@ export const QUIZ_STAGES = [
         id: 209, cat: "Slang",
         q: "Your supervisor says 'Kaisaki wo tsukure!' (開先を作れ！ / かいさきをつくれ！) [kai-sa-ki wo tsu-ku-re]. What are you being asked to do?",
         opts: [
-          "Make a welding wire",
-          "Prepare the groove / joint preparation — cutting or grinding the plate edges to a specific angle for proper penetration",
-          "Apply anti-spatter spray",
-          "Draw a weld symbol on the drawing"
+          "Cut a new length of welding wire",
+          "Bevel the plate edges to the angle on the drawing",
+          "Spray anti-spatter on the joint",
+          "Draw the weld symbol on the drawing"
         ],
         a: 1, xp: 20,
         exp: "Kaisaki (開先) = Groove / joint preparation. The beveled or shaped edge of a plate prepared before welding to ensure the arc and filler metal can reach the root for full penetration. Common types: I-groove (I形), V-groove (V形), X-groove (X形), U-groove (U形). Kaisaki shape and dimensions are specified on the drawing. 🇯🇵 TIP: The kaisaki angle and root face (ルートフェース) must match the WPS exactly. In Japan, groove preparation is checked with a 角度ゲージ (kakudo-geeji / angle gauge) and the root face is measured with calipers — deviation beyond tolerance will require re-grinding before welding starts."
@@ -697,10 +697,10 @@ export const QUIZ_STAGES = [
         id: 210, cat: "Slang",
         q: "Your senior compliments your root pass: 'Uranami kirei da na!' (裏波きれいだな！ / うらなみきれいだな！) [u-ra-na-mi ki-rei da na]. What did you achieve?",
         opts: [
-          "A clean surface on top of the weld",
-          "A perfectly straight bead line",
-          "Back bead — the root weld penetrated completely through and formed a clean, even bead visible on the back side of the joint",
-          "Correct slag removal after welding"
+          "A smooth, clean surface on top of the weld",
+          "A perfectly straight bead from start to end",
+          "An even back bead showing full root penetration",
+          "All slag removed cleanly after the root pass"
         ],
         a: 2, xp: 25,
         exp: "Uranami (裏波) = back bead / root penetration bead. In complete penetration groove welding (完全溶込み), the root pass must penetrate fully and form a visible, even bead on the back side of the joint. A beautiful Uranami shows mastery of root pass control — it is the proof of a skilled welder in Japan. 🇯🇵 TIP: When a Japanese senior says 'uranami kirei da na,' this is a genuine compliment — not often given lightly. The correct response is a humble 'arigatou gozaimasu' (ありがとうございます). Showing pride or saying 'of course' would be considered arrogant. Humility is a key part of Japanese craftsman culture."
@@ -709,10 +709,10 @@ export const QUIZ_STAGES = [
         id: 211, cat: "Slang",
         q: "During a site visit, an inspector points at the joint and says 'Mechigai ga aru!' (目違いがある！ / めちがいがある！) [me-chi-ga-i ga a-ru]. What is the problem?",
         opts: [
-          "The shielding gas mixture is incorrect",
-          "The wrong welding process was used",
-          "The weld bead is too high",
-          "Misalignment — the two plate edges at the joint are not flush; one is higher than the other"
+          "The shielding gas mixture is wrong for the job",
+          "The wrong welding process was used on this joint",
+          "The weld reinforcement is too high",
+          "The plate edges are not flush — one is higher"
         ],
         a: 3, xp: 20,
         exp: "Mechigai (目違い) = misalignment / mismatch. The two plates being welded together are not at the same height — one edge is higher than the other. This creates uneven stress distribution and can lead to defects. JIS standards specify maximum allowable misalignment depending on plate thickness. Fix with clamps before welding. 🇯🇵 TIP: The allowable misalignment depends on the code and the plate thickness — check the drawing or WPS, not a rule of thumb. Inspectors check it with a straight edge and gauge before the root pass."
@@ -721,10 +721,10 @@ export const QUIZ_STAGES = [
         id: 212, cat: "Slang",
         q: "The foreman checks a thin plate joint and says 'Yoochi shita!' (溶落ちした！ / ようおちした！) [yo-o-chi shi-ta]. What went wrong?",
         opts: [
-          "Burn-through — the arc melted completely through the base metal, creating a hole in the plate",
-          "The weld bead is too narrow",
-          "The weld is perfectly completed",
-          "The slag was not removed"
+          "The arc melted right through the plate, leaving a hole",
+          "The bead is too narrow for the joint",
+          "The weld was completed perfectly",
+          "The slag was not removed between passes"
         ],
         a: 0, xp: 20,
         exp: "Yoochi (溶落ち) = burn-through / melt-through. The arc was too hot, too slow, or the root gap too wide — the base metal melted completely through, leaving a hole. More common with thin plates or wide root gaps. Prevention: reduce current, increase travel speed, use backing bar (裏当て金), or reduce root gap. 🇯🇵 TIP: Yoochi on a root pass during a JIS certification test is an automatic failure. If you feel the pool is becoming too fluid and starting to drop, increase travel speed immediately — don't freeze. Repairing a yoochi hole requires grinding out, tacking the gap, and re-welding — a time-consuming embarrassment during tests."
@@ -733,9 +733,9 @@ export const QUIZ_STAGES = [
         id: 213, cat: "Slang",
         q: "For stainless steel welding, your supervisor says 'Ura-gasu wo shiro!' (裏ガスをしろ！) [u-ra-ga-su wo shi-ro]. What do you need to set up?",
         opts: [
-          "Double the shielding gas flow on the front",
-          "Back purging — shield the back side of the stainless steel weld with inert gas (Argon) to prevent oxidation",
-          "Use CO₂ gas instead of Argon",
+          "Double the shielding gas flow on the front side",
+          "Shield the back of the joint with argon gas",
+          "Switch from argon to CO₂ shielding gas",
           "Apply flux paste to the back of the joint"
         ],
         a: 1, xp: 25,
@@ -745,10 +745,10 @@ export const QUIZ_STAGES = [
         id: 214, cat: "Slang",
         q: "You weld stainless steel without back purging and the supervisor sees rainbow colors on the back. He says 'Tenpaa-karaa da!' (テンパーカラーだ！). What does this indicate?",
         opts: [
-          "Excellent weld quality — the rainbow shows full penetration",
-          "Normal for stainless steel — no action needed",
-          "Heat tint — the stainless surface oxidized at high temperature, reducing corrosion resistance. Severity: Gold → Blue → Violet → Grey (worst)",
-          "The backing gas is working correctly"
+          "Excellent quality — the colors prove full penetration",
+          "Normal for stainless steel — no action is needed",
+          "Oxidation that lowers corrosion resistance",
+          "Proof that the backing gas is working correctly"
         ],
         a: 2, xp: 25,
         exp: "Tenpaa-karaa (テンパーカラー) = heat tint / temper color. On stainless steel: Gold = mild (acceptable in some codes), Blue = significant oxidation, Violet/Grey = severe (very poor corrosion resistance). Cause: insufficient back gas shielding or excessive heat input. Must be mechanically or chemically removed in corrosion-critical applications. 🇯🇵 TIP: In Japanese chemical and food processing plants, tenpaa-karaa on SUS weld surfaces is a critical failure — even gold tint may be rejected. The remedy is 酸洗い (sansarai / acid pickling) with mixed acid paste or electropolishing. On construction sites, light gold tint is often acceptable — always confirm the acceptance criteria with the QC supervisor before starting stainless work."
@@ -757,10 +757,10 @@ export const QUIZ_STAGES = [
         id: 215, cat: "Slang",
         q: "Your supervisor says 'Hatsuri shiro!' (ハツリしろ！ / はつりしろ！) [ha-tsu-ri shi-ro]. What must you do?",
         opts: [
-          "Increase the wire feed speed",
-          "Apply anti-spatter spray",
-          "Apply flux to the joint",
-          "Grind out / gouge out — remove the defective weld metal by air arc gouging or grinding so it can be re-welded"
+          "Increase the wire feed speed for the next pass",
+          "Spray anti-spatter on the joint before welding",
+          "Apply flux to the joint to stop porosity",
+          "Gouge or grind out the bad weld so it can be redone"
         ],
         a: 3, xp: 20,
         exp: "Hatsuri (ハツリ) = gouging or chipping out weld metal. When a weld has failed inspection, the defective part must be completely removed before re-welding. Methods: air arc gouging (ガウジング), grinding with Bo-gura (棒グラ), or chipping. The area must be clean to bare metal before re-welding. 🇯🇵 TIP: Air arc gouging (ガウジング) leaves a carbon-contaminated surface — after gouging, you MUST grind the surface to remove the carbon layer (カーボン除去 / kabon-jokyo) before re-welding. Welding over a carbon-contaminated gouge without grinding causes porosity and inclusions. This step is often skipped by new workers and causes repeated failures."
@@ -769,10 +769,10 @@ export const QUIZ_STAGES = [
         id: 216, cat: "Slang",
         q: "The inspector says 'Torinao-shi da!' (取り直しだ！ / とりなおしだ！) [to-ri-na-o-shi da]. What does this mean for the welder?",
         opts: [
-          "Rework — the entire weld (or section) must be removed and done again from scratch. The most dreaded words on a Japanese job site",
-          "Add one more cover pass on top",
-          "The weld is perfect — approved",
-          "Stop and change welding machine settings only"
+          "The weld or section must be removed and redone",
+          "Add one more cover pass on top of the weld",
+          "The weld is perfect and has been approved",
+          "Only change the machine settings and continue"
         ],
         a: 0, xp: 20,
         exp: "Torinao-shi (取り直し) = rework / redo. The weld has been rejected and must be completely removed and re-welded. This costs time, materials, and reputation. In Japan's quality culture, rework is taken very seriously — it affects the welder's evaluation. Prevention: do it right the first time. 🇯🇵 TIP: Many Japanese companies track rework (手直し / tenaoshi) and trace defects back to the joint and welder. Being known for clean first-time work is one of the best reputations you can build."
@@ -781,10 +781,10 @@ export const QUIZ_STAGES = [
         id: 217, cat: "Slang",
         q: "A welder says a job requires 'Gen-awase' (現合 / げんあわせ). What does this mean?",
         opts: [
-          "Using computer drawings only",
-          "On-site custom fitting — measuring and cutting parts directly at the actual structure because drawings are insufficient or gaps have changed",
-          "A type of inspection certificate",
-          "Working overtime on weekends"
+          "Working only from computer drawings, no measuring",
+          "Measuring and cutting parts to fit on site",
+          "A type of inspection certificate for joints",
+          "Working overtime on weekends to finish a job"
         ],
         a: 1, xp: 25,
         exp: "Gen-awase (現合 / げんあわせ) = on-site fitting / field fitting. When parts don't match the drawing exactly because of fabrication tolerances or changes in the structure, workers measure the actual gap on site and custom-cut or fabricate the piece to fit. Common in shipbuilding and construction. 🇯🇵 TIP: When doing gen-awase work, record the actual dimensions you measured and what you changed. Undocumented field changes cause serious problems at inspection."
@@ -793,10 +793,10 @@ export const QUIZ_STAGES = [
         id: 218, cat: "Slang",
         q: "What is 'Chippingu' (チッピング) in the welding workflow, and when exactly is it done?",
         opts: [
-          "Applying anti-spatter spray before welding",
-          "Inspecting the bead for cracks after welding",
-          "Removing slag after each pass using a chipping hammer or air chipper — done between EVERY layer in multi-pass welding",
-          "Grinding the weld to final height"
+          "Spraying anti-spatter before welding starts",
+          "Checking the bead for cracks after welding",
+          "Removing slag after every pass",
+          "Grinding the weld down to its final height"
         ],
         a: 2, xp: 15,
         exp: "Chippingu (チッピング) = slag chipping / slag removal. Done after every single pass in multi-pass welding. Failing to remove slag between passes causes slag inclusion (スラグ巻き込み) — a serious internal defect that will fail NDT inspection. Process: chip → wire brush → inspect → weld next pass. 🇯🇵 TIP: After chipping, brush the bead and look closely at the toes and between beads — slag often hides there. Only start the next pass when the surface is clean."
@@ -806,9 +806,9 @@ export const QUIZ_STAGES = [
         q: "A senior says you need to do 'Bokae' (棒替え / ぼうかえ) soon. What does this mean — and which welding process is this relevant to?",
         opts: [
           "Change the wire spool — used in FCAW welding",
-          "Switch to a different shielding gas — used in MIG/MAG welding",
-          "Replace the contact tip — used in all semi-auto welding",
-          "Change the electrode / welding stick — relevant to SMAW (stick welding / 被覆アーク溶接) only. NOT used in semi-auto welding"
+          "Switch to a different shielding gas — MIG/MAG",
+          "Replace the contact tip — all semi-auto welding",
+          "Change the electrode — stick welding (SMAW) only"
         ],
         a: 3, xp: 25,
         exp: "Bokae (棒替え) = electrode change. In stick welding (SMAW / 被覆アーク溶接) the electrode burns down and must be replaced — so this word only applies to stick welding. Semi-auto FCAW/MAG uses wire from a spool, so there is no 'bokae'. 🇯🇵 TIP: Low-hydrogen electrodes absorb moisture. They are re-dried (typically 300–400°C, as the manufacturer specifies) and then kept in a holding oven (around 100–150°C) until use. Wet electrodes cause hydrogen cracking and porosity."
@@ -817,10 +817,10 @@ export const QUIZ_STAGES = [
         id: 220, cat: "Slang",
         q: "Your senior says the wire is 'Tobidashi!' (飛び出し！) for your 1.2mm wire job. Using the standard Japanese rule of thumb, what stick-out length should you be aiming for instead?",
         opts: [
-          "Approximately 12mm — using the rule of stick-out = 10× wire diameter",
-          "Approximately 25mm — the same fixed value regardless of wire diameter",
-          "Approximately 1.2mm — stick-out should equal the wire diameter exactly",
-          "Approximately 6mm — half the wire diameter rule"
+          "About 12mm — roughly 10× the wire diameter",
+          "About 25mm — the same for every wire size",
+          "About 1.2mm — equal to the wire diameter",
+          "About 6mm — half of the 10× rule"
         ],
         a: 0, xp: 25,
         exp: "Tobidashi (飛び出し) = wire stick-out / extension, the distance from the contact tip to the work surface. Too long: arc instability, poor penetration, shielding failure. Japanese welders use a simple rule: stick-out = 10× wire diameter. For 1.2mm wire, that's roughly 12mm — not a fixed 25mm regardless of wire size, and not simply equal to the wire diameter itself. 🇯🇵 TIP: For 1.6mm wire, aim for about 16mm stick-out using the same 10× rule. When welding in tight joints where you can't see the tip clearly, experienced workers develop a feel for torch weight and arc sound that tells them the distance is correct."
